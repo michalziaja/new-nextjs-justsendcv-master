@@ -1,0 +1,81 @@
+"use client"
+
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { cn } from "@/lib/utils"
+
+// Typy statusów
+export type ApplicationStatus = 'wszystkie' | 'zapisane' | 'wysłane' | 'kontakt' | 'rozmowa' | 'odmowa' | 'oferta';
+
+interface SavedTableTabsProps {
+  activeStatus: ApplicationStatus;
+  onStatusChange: (status: ApplicationStatus) => void;
+}
+
+// Konfiguracja zakładek z kolorami
+const tabConfig = [
+  { 
+    value: 'wszystkie', 
+    label: 'Wszystkie', 
+    color: 'border-t-gray-600 dark:border-t-gray-600'
+  },
+  { 
+    value: 'zapisane', 
+    label: 'Zapisane', 
+    color: 'border-t-blue-600 dark:border-t-blue-600'
+  },
+  { 
+    value: 'wysłane', 
+    label: 'Wysłane', 
+    color: 'border-t-purple-600 dark:border-t-purple-600'
+  },
+  { 
+    value: 'kontakt', 
+    label: 'Kontakt', 
+    color: 'border-t-yellow-600 dark:border-t-yellow-600'
+  },
+  { 
+    value: 'rozmowa', 
+    label: 'Rozmowa', 
+    color: 'border-t-cyan-600 dark:border-t-cyan-600'
+  },
+  { 
+    value: 'odmowa', 
+    label: 'Odmowa', 
+    color: 'border-t-red-600 dark:border-t-red-600'
+  },
+  { 
+    value: 'oferta', 
+    label: 'Oferta', 
+    color: 'border-t-green-600 dark:border-t-green-600'
+  },
+] as const;
+
+export function SavedTableTabs({ activeStatus, onStatusChange }: SavedTableTabsProps) {
+  return (
+    <Tabs value={activeStatus} onValueChange={(value) => onStatusChange(value as ApplicationStatus)}>
+      <TabsList className="grid w-full grid-cols-7 mb-0 mt-0 bg-white dark:bg-[#0A0F1C]">
+        {tabConfig.map((tab) => (
+          <TabsTrigger 
+            key={tab.value} 
+            value={tab.value}
+            className={cn(
+              "relative text-[12px] sm:text-sm md:text-md ",
+              "whitespace-nowrap overflow-hidden text-ellipsis",
+              "border border-gray-300 dark:border-gray-700",
+              "transition-all duration-200",
+              "hover:bg-gray-100 dark:hover:bg-gray-800/50",
+              "border-t-1",
+              `${tab.color}`,
+              "data-[state=active]:border-t-5",
+              "data-[state=active]:bg-white dark:data-[state=active]:bg-[#0A0F1C]",
+              "shadow-sm dark:shadow-gray-900/20",
+              "data-[state=active]:shadow-md dark:data-[state=active]:shadow-white/20"
+            )}
+          >
+            {tab.label}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+    </Tabs>
+  )
+} 
