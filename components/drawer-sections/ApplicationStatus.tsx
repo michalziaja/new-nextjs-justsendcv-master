@@ -24,12 +24,12 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
 
   const getStatusStyles = (status: ApplicationStatusType) => {
     switch (status) {
-      case 'wysłane': return 'bg-blue-600 text-white hover:bg-blue-700'
+      case 'zapisane': return 'bg-blue-600 text-white hover:bg-blue-700'
       case 'kontakt': return 'bg-yellow-600 text-white hover:bg-yellow-700'
-      case 'rozmowa': return 'bg-purple-600 text-white hover:bg-purple-700'
+      case 'rozmowa': return 'bg-cyan-600 text-white hover:bg-cyan-700'
       case 'oferta': return 'bg-green-600 text-white hover:bg-green-700'
       case 'odmowa': return 'bg-red-600 text-white hover:bg-red-700'
-      case 'zapisane': return 'bg-gray-600 text-white hover:bg-gray-700'
+      case 'wysłane': return 'bg-purple-600 text-white hover:bg-purple-700'
       default: return 'bg-gray-200 text-gray-500 hover:bg-gray-300'
     }
   }

@@ -52,8 +52,8 @@ const tabConfig = [
 
 export function SavedTableTabs({ activeStatus, onStatusChange }: SavedTableTabsProps) {
   return (
-    <Tabs value={activeStatus} onValueChange={(value) => onStatusChange(value as ApplicationStatus)}>
-      <TabsList className="grid w-full grid-cols-7 mb-0 mt-0 bg-white dark:bg-[#0A0F1C]">
+    <Tabs value={activeStatus} onValueChange={(value) => onStatusChange(value as ApplicationStatus)} className="w-full">
+      <TabsList className="grid w-full grid-cols-7 mb-0 mt-0 bg-background rounded-md dark:bg-[#0A0F1C]">
         {tabConfig.map((tab) => (
           <TabsTrigger 
             key={tab.value} 
@@ -65,11 +65,17 @@ export function SavedTableTabs({ activeStatus, onStatusChange }: SavedTableTabsP
               "transition-all duration-200",
               "hover:bg-gray-100 dark:hover:bg-gray-800/50",
               "border-t-1",
+              "rounded-md",
               `${tab.color}`,
               "data-[state=active]:border-t-5",
-              "data-[state=active]:bg-white dark:data-[state=active]:bg-[#0A0F1C]",
-              "shadow-sm dark:shadow-gray-900/20",
-              "data-[state=active]:shadow-md dark:data-[state=active]:shadow-white/20"
+              "data-[state=active]:bg-white dark:data-[state=active]:bg-sidebar",
+              "shadow-sm dark:shadow-slate-900/20",
+              "data-[state=active]:shadow-lg dark:data-[state=active]:shadow-slate-900/20",
+              `${
+                activeStatus === tab.value 
+                  ? "bg-white dark:bg-slate-900"
+                  : "bg-gray-50 dark:bg-slate-800"
+              }`
             )}
           >
             {tab.label}

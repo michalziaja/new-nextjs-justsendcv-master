@@ -21,7 +21,7 @@ export const description = "Dashboard strony głównej JustSend.cv"
 
 export default function Dashboard() {
   return (
-    <div className="[--header-height:calc(--spacing(14))]">
+    <div className="[--header-height:calc(--spacing(14))] bg-background">
       <SidebarProvider className="flex flex-col">
         <SiteHeader />
         <div className="flex flex-1">

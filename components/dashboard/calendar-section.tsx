@@ -5,9 +5,9 @@ import { CalendarDays } from "lucide-react"
 
 export function CalendarSection() {
   return (
-    <Card className="h-full border-2 border-gray-300 dark:border-gray-800
-      shadow-[3px_6px_15px_rgba(1,0,0,0.3)] 
-      dark:shadow-gray-800/50
+    <Card className="h-full rounded-md border-1 border-gray-300 dark:border-gray-800
+      shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
+      dark:shadow-slate-900/20
       bg-white dark:bg-slate-900">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 pt-2">

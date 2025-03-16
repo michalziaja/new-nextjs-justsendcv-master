@@ -10,7 +10,7 @@ interface SavedTableSearchProps {
 
 export function SavedTableSearch({ searchQuery, onSearchChange }: SavedTableSearchProps) {
   return (
-    <div className="relative w-60 ml-1 border-1 border-gray-300 dark:border-gray-700 rounded-md">
+    <div className="relative w-55 sm:w-55 md:w-50 lg:w-50 xl:w-57 ml-1 border-0 bg-white dark:bg-sidebar shadow-[2px_4px_10px_rgba(0,0,0,0.3)] border-gray-100 dark:border-gray-700 rounded-md">
       <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground " />
       <Input
         placeholder="Wyszukaj aplikacje..."

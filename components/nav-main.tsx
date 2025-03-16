@@ -2,7 +2,7 @@
 
 import { ChevronRight, type LucideIcon } from "lucide-react"
 import { usePathname } from "next/navigation"
-import { GlowEffect } from '@/components/motion-primitives/glow-effect'
+
 
 import {
   Collapsible,
@@ -46,18 +46,12 @@ export function NavMain({
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
             <SidebarMenuItem className="flex justify-center w-full">
               {isActive ? (
-                <div className="relative w-full">
-                  <GlowEffect
-                    colors={['#1E88E5', '#26C6DA']}
-                    mode='static'
-                    blur="soft"
-                    duration={3}
-                    scale={1}
-                  />
+                <div className="relative w-full border-2 border-gray-400 dark:border-gray-600 rounded-lg">
+           
                   <SidebarMenuButton 
                     asChild 
                     tooltip={item.title}
-                    className={`relative hover:bg-gray-100 dark:hover:bg-slate-800 text-lg gap-6 font-medium py-4 w-full rounded-md ${isActive ? 'bg-white dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-800' : ''}`}
+                    className={`relative hover:bg-white hover:text-cyan-600 dark:hover:bg-slate-900 dark:hover:text-cyan-400 text-lg gap-6 font-medium py-4 w-full rounded-md ${isActive ? 'bg-white dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-800 text-cyan-600 dark:text-cyan-400' : ''}`}
                   >
                     <a href={item.url} className="w-full flex items-center gap-6 pl-6">
                       <item.icon className="w-7 h-7" />
@@ -69,7 +63,7 @@ export function NavMain({
                 <SidebarMenuButton 
                   asChild 
                   tooltip={item.title}
-                  className={`hover:bg-gray-100 dark:hover:bg-slate-800 text-lg gap-6 font-medium py-4 w-full rounded-md`}
+                  className={`hover:bg-white hover:text-cyan-600 dark:hover:bg-slate-900 dark:hover:text-cyan-400 transition-colors duration-200 text-lg gap-6 font-medium py-4 w-full rounded-md hover:scale-105`}
                 >
                   <a href={item.url} className="w-full flex items-center gap-6 pl-6">
                     <item.icon className="w-7 h-7" />
@@ -88,7 +82,10 @@ export function NavMain({
                     <SidebarMenuSub>
                       {item.items?.map((subItem) => (
                         <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton asChild>
+                          <SidebarMenuSubButton 
+                            asChild
+                            className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-200"
+                          >
                             <a href={subItem.url}>
                               <span>{subItem.title}</span>
                             </a>

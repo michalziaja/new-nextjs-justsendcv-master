@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 import {
   Breadcrumb,
@@ -50,9 +51,9 @@ export function SiteHeader() {
         {/* Logo jako przycisk zwijania menu */}
         <div 
           onClick={toggleSidebar}
-          className="flex items-center gap-2 rounded-md p-1 cursor-pointer hover:scale-105 transition-transform duration-200"
+          className="flex items-center gap-2 rounded-md p-1 cursor-pointer hover:scale-105 transition-all duration-300"
         >
-          <div className="flex aspect-square size-10 items-center justify-center">
+          <div className={`flex aspect-square size-10 items-center justify-center transition-transform duration-500 ${open ? 'rotate-360' : ''}`}>
             <div className="relative w-full h-full">
               <Image
                 src="/logo.png"
@@ -96,19 +97,12 @@ export function SiteHeader() {
       </div>
       
       {/* Theme toggle */}
-      <Button
-        variant="link"
-        size="icon"
-        className="h-8 w-8 transition-transform duration-200 hover:scale-155 active:scale-90"
-        onClick={() => mounted && setTheme(theme === "dark" ? "light" : "dark")}
-      >
-        {mounted && theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-      </Button>
+      <ThemeToggle />
     </div>
   )
 
   return (
-    <header className="bg-gray-50 sticky top-2.5 z-50 flex w-[calc(100%-1rem)] border-2 border-gray-300 mx-auto items-center border-b rounded-lg shadow-[2px_0_10px_rgba(0,0,0,0.3)] dark:bg-slate-900 dark:border-slate-800 dark:shadow-[2px_0_10px_rgba(255,255,255,0.2)]">
+    <header className="bg-white sticky top-2.5 z-50 flex w-[calc(100%-1rem)] border-1 border-gray-100 mx-auto items-center rounded-md shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:shadow-[2px_4px_10px_rgba(0,0,1,0.3)] dark:bg-slate-900 dark:border-slate-800 ">
       {headerContent}
     </header>
   )

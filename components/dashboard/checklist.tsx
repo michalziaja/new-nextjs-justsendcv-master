@@ -64,9 +64,9 @@ const tasks = [
 
 export function Checklist() {
   return (
-    <Card className="col-span-1 border-2 border-gray-300 dark:border-gray-800
-    shadow-[3px_6px_15px_rgba(1,0,0,0.3)] 
-    dark:shadow-gray-800/50
+    <Card className="col-span-1 rounded-md border-1 border-gray-100 dark:border-gray-800
+    shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
+    dark:shadow-slate-900/20
     bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">

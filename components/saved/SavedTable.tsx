@@ -33,6 +33,7 @@ const COLUMN_WIDTHS = {
   status: 80,       // Status
   validUntil: 120,  // Ważna do
   priority: 100,    // Priorytet
+  site: 100,       // Portal
 } as const;
 
 type SortConfig = {
@@ -194,7 +195,7 @@ export function SavedTable() {
           searchQuery={searchQuery}
           onSearchChange={handleSearchChange}
         />
-        <Button variant="outline" className="mt-0 mr-1">
+        <Button variant="outline" className="mt-0 mr-1 rounded-md bg-gray-50 dark:bg-slate-900 border-gray-400 dark:border-gray-700">
           Dodaj aplikację
         </Button>
       </div>
@@ -204,7 +205,7 @@ export function SavedTable() {
         onStatusChange={handleStatusFilterChange}
       />
 
-      <div className="rounded-md border-2 border-gray-300 ml-1 mr-1 overflow-x-auto shadow-[0_5px_15px_rgb(0,0,0,0.2)] dark:shadow-[0_5px_15px_rgb(255,255,255,0.2)] dark:bg-gray-900 dark:border-gray-800">
+      <div className="rounded-md border-2 bg-white border-gray-300 ml-1 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
         <Table>
           <TableHeader className="sticky top-0 bg-gray-50 dark:bg-background z-10">
             <TableRow>
@@ -250,12 +251,12 @@ export function SavedTable() {
               </TableHead>
               <TableHead 
                 className="text-sm md:text-base font-bold hover:bg-accent cursor-pointer transition-colors text-center hidden min-[1300px]:table-cell"
-                style={{ width: COLUMN_WIDTHS.validUntil }}
-                onClick={() => handleSort('validUntil')}
+                style={{ width: COLUMN_WIDTHS.site }}
+                onClick={() => handleSort('site')}
               >
                 <div className="flex items-center justify-center">
-                  Ważna do
-                  {renderSortIcon('validUntil')}
+                  Portal
+                  {renderSortIcon('site')}
                 </div>
               </TableHead>
               <TableHead 
@@ -330,9 +331,9 @@ export function SavedTable() {
                 </TableCell>
                 <TableCell 
                   className="hidden min-[1300px]:table-cell text-center text-xs md:text-sm"
-                  style={{ width: COLUMN_WIDTHS.validUntil }}
+                  style={{ width: COLUMN_WIDTHS.site }}
                 >
-                  {app.validUntil}
+                  {app.site}
                 </TableCell>
                 <TableCell 
                   className="text-center hidden min-[1000px]:table-cell"
@@ -359,7 +360,7 @@ export function SavedTable() {
                 <TableCell style={{ width: COLUMN_WIDTHS.company }} />
                 <TableCell className="hidden min-[770px]:table-cell text-center" style={{ width: COLUMN_WIDTHS.date }} />
                 <TableCell style={{ width: COLUMN_WIDTHS.status }} />
-                <TableCell className="hidden min-[1300px]:table-cell" style={{ width: COLUMN_WIDTHS.validUntil }} />
+                <TableCell className="hidden min-[1300px]:table-cell" style={{ width: COLUMN_WIDTHS.site }} />
                 <TableCell className="hidden min-[1000px]:table-cell" style={{ width: COLUMN_WIDTHS.priority }} />
               </TableRow>
             ))}

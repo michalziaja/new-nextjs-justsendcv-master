@@ -16,13 +16,13 @@ interface StatCardProps {
 function StatCard({ title, value, description, icon, borderColor, darkBorderColor }: StatCardProps) {
   return (
     <Card className={`
-      border-2 border-gray-300 dark:border-gray-800 
+      border-1 border-gray-300 dark:border-gray-800 
       ${borderColor} ${darkBorderColor}
-      shadow-[3px_6px_15px_rgba(1,0,0,0.3)] 
-      dark:shadow-gray-800/50
+      shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
+      dark:shadow-slate-900/20
       bg-white dark:bg-slate-900
-      transition-all duration-200
-      gap-2
+      transition-all duration-100
+      gap-2 rounded-md
     `}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">
         <CardTitle className="text-sm font-sm md:text-base lg:text-base xl:text-base">{title}</CardTitle>

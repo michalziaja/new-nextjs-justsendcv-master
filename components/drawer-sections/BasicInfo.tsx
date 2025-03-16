@@ -44,17 +44,16 @@ export function BasicInfo({ application, isDesktop }: BasicInfoProps) {
 
       {/* Link */}
       <div className="space-y-1">
-        <h3 className="font-medium text-sm flex items-center gap-1">
-          {/* <ExternalLink className="h-4 w-4" /> */}
-          {/* Link do oferty */}
-        </h3>
-        <Button 
-          variant="ghost" 
-          className="h-auto p-0 text-primary hover:text-primary/80"
-          onClick={() => window.open(application.url, '_blank')}
-        >
-          <span className="underline truncate">{new URL(application.url).hostname}</span>
-        </Button>
+        <div className="flex items-center gap-2">
+          <ExternalLink className="h-4 w-4 text-gray-600 dark:text-gray-200" />
+          <Button 
+            variant="ghost" 
+            className="h-auto p-0 bg-transparent text-primary hover:text-primary/80"
+            onClick={() => window.open(application.url, '_blank')}
+          >
+            <span className="truncate">{application.site}</span>
+          </Button>
+        </div>
       </div>
 
       {/* Ważna do */}
