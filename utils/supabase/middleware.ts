@@ -61,7 +61,7 @@ export const updateSession = async (request: NextRequest) => {
 
     // Zalogowany użytkownik na stronach logowania -> przekierowanie do /dashboard
     if (session && ["/sign-in", "/sign-up", "/forgot-password", "/unauthorized"].includes(request.nextUrl.pathname)) {
-      return NextResponse.redirect(new URL("/dashboard", request.url));
+      return NextResponse.redirect(new URL("/home", request.url));
     }
 
     // Niezalogowany użytkownik na zabezpieczonej trasie -> przekierowanie do /unauthorized

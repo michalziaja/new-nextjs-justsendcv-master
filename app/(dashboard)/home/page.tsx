@@ -2,17 +2,17 @@
 "use client"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { StatCards } from "@/components/dashboard/stat-cards"
-import { RecentJobs } from "@/components/dashboard/recent-jobs"
-import { Checklist } from "@/components/dashboard/checklist"
-import { NewsSection } from "@/components/dashboard/news-section"
-import { CalendarSection } from "@/components/dashboard/calendar-section"
-import { WeeklyGoals } from "@/components/dashboard/weekly-goals"
+import { StatCards } from "@/components/home/stat-cards"
+import { RecentJobs } from "@/components/home/recent-jobs"
+import { Checklist } from "@/components/home/checklist"
+import { NewsSection } from "@/components/home/news-section"
+import { CalendarSection } from "@/components/home/calendar-section"
+import { WeeklyGoals } from "@/components/home/weekly-goals"
 
 export const iframeHeight = "800px"
 export const description = "Dashboard strony głównej JustSend.cv"
 
-export default function Dashboard() {
+export default function Home() {
   return (
     <div className="flex flex-1 flex-col gap-6 p-2 transition-all duration-200">
       {/* Rząd 1: Statystyki */}

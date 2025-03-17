@@ -177,7 +177,7 @@ import {
 } from "@/components/ui/sidebar";
 import { signOutAction } from "@/app/actions";
 import { useState } from "react";
-
+import Image from "next/image";
 
 type UserData = {
   id: string;
@@ -201,7 +201,13 @@ export function NavUser({ userData }: { userData: UserData }) {
                 className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
               >
                 <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage src={userData.avatar} alt={userData.name} />
+                  <Image
+                    src={userData.avatar}
+                    alt={userData.name}
+                    width={32}
+                    height={32}
+                    className="rounded-lg"
+                  />
                   <AvatarFallback className="rounded-lg">
                     {userData.name?.charAt(0) || "U"}
                   </AvatarFallback>
@@ -222,7 +228,13 @@ export function NavUser({ userData }: { userData: UserData }) {
               <DropdownMenuLabel className="p-0 font-normal">
                 <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                   <Avatar className="h-8 w-8 rounded-lg">
-                    <AvatarImage src={userData.avatar} alt={userData.name} />
+                    <Image
+                      src={userData.avatar}
+                      alt={userData.name}
+                      width={32} // Dopasuj do h-8 w Tailwind
+                      height={32} // Dopasuj do w-8 w Tailwind
+                      className="rounded-lg"
+                    />
                     <AvatarFallback className="rounded-lg">
                       {userData.name?.charAt(0) || "U"}
                     </AvatarFallback>

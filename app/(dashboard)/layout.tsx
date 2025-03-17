@@ -52,10 +52,12 @@ export default async function DashboardLayout({
   };
 
   return (
+    
     <div className="[--header-height:calc(--spacing(14))] bg-background">
       <SidebarProvider className="flex flex-col">
         <SiteHeader />
         <div className="flex flex-1">
+          
           <AppSidebar userData={userData} />
           <SidebarInset>{children}</SidebarInset>
         </div>
