@@ -1,7 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/providers/providers"
+import { ThemeProvider } from "@/providers/providers";
+import UserInitializer from "@/components/UserInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,13 +31,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gray-100 dark:bg-background`}
       >
         <ThemeProvider>
-          <div className="flex min-h-screen flex-col">
-            {/* <Header /> */}
-            <main className="flex-1">
-              {children}
-            </main>
-            {/* <Footer /> */}
-          </div>
+          {/* <UserInitializer /> */}
+          {children}
         </ThemeProvider>
       </body>
     </html>

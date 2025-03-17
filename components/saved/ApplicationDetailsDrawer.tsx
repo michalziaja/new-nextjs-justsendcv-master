@@ -102,7 +102,7 @@ export function ApplicationDetailsDrawer({
   if (isDesktop) {
     return (
       <Drawer open={isOpen} onOpenChange={onClose} direction="right">
-        <DrawerContent className="w-[900px] !max-w-[900px] bg-white dark:bg-sidebar ml-auto h-full overflow-hidden flex flex-col">
+        <DrawerContent className="w-[900px] !max-w-[900px] bg-white dark:bg-background ml-auto h-full overflow-hidden flex flex-col">
           <DrawerHeader className="border-b pb-4  z-10 flex flex-row items-center justify-between">
             <DrawerTitle className="text-2xl font-semibold ml-2">{application.position}</DrawerTitle>
             <div className="flex items-center gap-2">

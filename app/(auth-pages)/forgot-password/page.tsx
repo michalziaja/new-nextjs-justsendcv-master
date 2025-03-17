@@ -1,11 +1,12 @@
 "use client"
 
 import { forgotPasswordAction } from "@/app/actions";
-import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { useFormStatus } from "react-dom";
 
 export default function ForgotPassword() {
   return (
@@ -42,13 +43,7 @@ export default function ForgotPassword() {
             />
           </div>
 
-          <SubmitButton 
-            formAction={forgotPasswordAction}
-            pendingText="Wysyłanie..."
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:opacity-90 transition-opacity"
-          >
-            Wyślij link resetujący
-          </SubmitButton>
+          <SubmitResetButton />
         </form>
 
         <div className="text-center">
@@ -64,5 +59,21 @@ export default function ForgotPassword() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Komponent przycisku resetowania hasła
+function SubmitResetButton() {
+  const { pending } = useFormStatus();
+  
+  return (
+    <Button 
+      type="submit" 
+      aria-disabled={pending}
+      formAction={forgotPasswordAction}
+      className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:opacity-90 transition-opacity"
+    >
+      {pending ? "Wysyłanie..." : "Wyślij link resetujący"}
+    </Button>
   );
 }

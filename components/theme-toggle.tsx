@@ -1,19 +1,16 @@
+//app/components/theme-toggle.tsx
 "use client"
 
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
+
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+
       <Button
         variant="link"
         size="icon"
@@ -24,6 +21,6 @@ export function ThemeToggle() {
         <Moon className="absolute h-10 w-10 rotate-180 scale-0 transition-transform duration-500 dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Przełącz motyw</span>
       </Button>
-    </motion.div>
+  
   )
 } 

@@ -1,11 +1,12 @@
 "use client"
 
 import { signUpAction } from "@/app/actions";
-import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { useFormStatus } from "react-dom";
 
 export default function Signup() {
   return (
@@ -57,13 +58,7 @@ export default function Signup() {
             </div>
           </div>
 
-          <SubmitButton 
-            formAction={signUpAction} 
-            pendingText="Rejestracja..."
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:opacity-90 transition-opacity"
-          >
-            Zarejestruj się
-          </SubmitButton>
+          <SubmitSignupButton />
         </form>
 
         <div className="text-center">
@@ -79,5 +74,21 @@ export default function Signup() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Komponent przycisku rejestracji
+function SubmitSignupButton() {
+  const { pending } = useFormStatus();
+  
+  return (
+    <Button 
+      type="submit" 
+      aria-disabled={pending}
+      formAction={signUpAction}
+      className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:opacity-90 transition-opacity"
+    >
+      {pending ? "Rejestracja..." : "Zarejestruj się"}
+    </Button>
   );
 }

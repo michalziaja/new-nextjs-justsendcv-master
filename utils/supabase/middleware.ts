@@ -60,7 +60,7 @@ export const updateSession = async (request: NextRequest) => {
     const isPublicRoute = publicRoutes.includes(request.nextUrl.pathname);
 
     // Zalogowany użytkownik na stronach logowania -> przekierowanie do /dashboard
-    if (session && ["/sign-in", "/sign-up", "/forgot-password"].includes(request.nextUrl.pathname)) {
+    if (session && ["/sign-in", "/sign-up", "/forgot-password", "/unauthorized"].includes(request.nextUrl.pathname)) {
       return NextResponse.redirect(new URL("/dashboard", request.url));
     }
 

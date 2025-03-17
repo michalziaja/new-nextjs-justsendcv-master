@@ -1,11 +1,11 @@
 "use client"
 
 import { signInAction, signInWithGoogle } from "@/app/actions";
-import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useFormStatus } from "react-dom";
 
 export default function Login() {
   return (
@@ -56,13 +56,7 @@ export default function Login() {
             </div>
           </div>
 
-          <SubmitButton
-            pendingText="Logowanie..."
-            formAction={signInAction}
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:opacity-90 transition-opacity"
-          >
-            Zaloguj się
-          </SubmitButton>
+          <SubmitLoginButton />
         </form>
 
         <div className="relative">
@@ -113,5 +107,21 @@ export default function Login() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Komponent przycisku logowania
+function SubmitLoginButton() {
+  const { pending } = useFormStatus();
+  
+  return (
+    <Button 
+      type="submit" 
+      aria-disabled={pending}
+      formAction={signInAction}
+      className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium hover:opacity-90 transition-opacity"
+    >
+      {pending ? "Logowanie..." : "Zaloguj się"}
+    </Button>
   );
 }

@@ -98,7 +98,7 @@ export const mockApplications: Application[] = [
     validUntil: "2024-05-20",
     description: "Twój zakres obowiązków\nOpieka nad bazą i pozyskiwanie nowych Klientów\nRealizowanie celów sprzedażowych\nTworzenie ofert w odpowiedzi na potrzeby klientów oraz negocjowanie warunków współpracy\nBieżące raportowanie wyników pracy\nNasze wymagania\nZorientowanie na cel\nŁatwość nawiązywania kontaktów i budowania relacji\nEnergia i pozytywne nastawienie\nUmiejętność samodzielnej organizacji pracy i planowania w ramach ustalonych standardów\nCzynne prawo jazdy kat. B\nTo oferujemy\nCiekawą pracę w dynamicznej i rozwijającej się międzynarodowej organizacji\nSamochód służbowy, telefon komórkowy i inne niezbędne narzędzia pracy\nUmowę o pracę oraz system premiowy powiązany z osiąganymi wynikami sprzedaży\nMożliwość rozwoju zawodowego",
     priority: 1,
-    site: "KwF"
+    site: "kwf.pl"
   },
   {
     id: "20",

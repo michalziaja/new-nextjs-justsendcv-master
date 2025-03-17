@@ -24,7 +24,14 @@ export default function AuthLayout({
             </div>
             <h2 className="text-5xl font-bold mb-6">
               <span className="text-gray-900 dark:text-white">Witaj w </span>
-              <span className="text-[#00B2FF] drop-shadow-md">JustSend.cv</span>
+              <span className="text-[#00B2FF] drop-shadow-md">JustSend</span>
+              <span className="text-gray-900 dark:text-white">.</span>
+              <span className="text-[#00B2FF] drop-shadow-md">cv</span>
+
+              {/* <span className="text-gray-900 dark:text-white drop-shadow-2xl">Just</span>
+              <span className="text-[#00B2FF] drop-shadow-2xl">Send</span>
+              <span className="text-gray-900 dark:text-white drop-shadow-2xl">.</span>
+              <span className="text-[#00B2FF] drop-shadow-2xl">cv</span> */}
             </h2>
             <p className="text-lg text-muted-foreground max-w-md mx-auto">
               Twoje miejsce do efektywnego zarządzania karierą i aplikacjami o pracę
@@ -70,7 +77,9 @@ export default function AuthLayout({
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold">
               <span className="text-gray-900 dark:text-white">Witaj w </span>
-              <span className="text-[#00B2FF]">JustSend.cv</span>
+              <span className="text-[#00B2FF] drop-shadow-md">JustSend</span>
+              <span className="text-gray-900 dark:text-white">.</span>
+              <span className="text-[#00B2FF] drop-shadow-md">cv</span>
             </h2>
           </div>
 

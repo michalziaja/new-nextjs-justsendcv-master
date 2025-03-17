@@ -38,23 +38,28 @@ export function Header() {
           : "bg-white/70 dark:bg-[#0A0F1C]/80 mt-3 shadow-xl",
       )}
     >
-      <div className="container mx-auto px-2 py-2">
+      <motion.div 
+        className="container mx-auto px-2 py-2"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <Link href="/" className="flex items-center">
               <img 
                 src="/logo.png" 
                 alt="JustSend.cv Logo" 
-                className="h-8 w-auto sm:h-10 lg:h-12 max-w-[30px] sm:max-w-[40px] lg:max-w-none transition-all" 
+                className="h-8 w-auto mr-4 sm:h-10 lg:h-12 max-w-[30px] sm:max-w-[40px] lg:max-w-none transition-all" 
               />
-              <span className="ml-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground transition-all">JustSend.cv</span>
+              <div className="flex items-center">
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all text-gray-900 dark:text-white">JustSend</span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all text-[#00B2FF]">.</span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all text-gray-900 dark:text-white drop-shadow-md">cv</span>
+              </div>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Centered Navigation */}
           <div className="hidden md:flex-1 md:flex md:justify-center">
@@ -109,7 +114,7 @@ export function Header() {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile menu */}
       {isOpen && (

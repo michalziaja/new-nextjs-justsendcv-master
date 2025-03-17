@@ -1,3 +1,5 @@
+// components/nav-secondary.tsx
+"use client"
 import * as React from "react"
 import { type LucideIcon, ChevronRight, Download, Crown } from "lucide-react"
 
