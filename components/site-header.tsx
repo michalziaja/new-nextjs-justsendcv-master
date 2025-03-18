@@ -33,14 +33,14 @@ export function SiteHeader() {
   // Get current page name from pathname
   const getCurrentPageName = () => {
     switch (pathname) {
-      case "/dashboard":
-        return "Dashboard"
+      case "/home":
+        return "Home"
       case "/creator":
         return "Kreator CV"
       case "/saved":
         return "Zapisane"
       default:
-        return "Dashboard"
+        return "Home"
     }
   }
 

@@ -111,7 +111,6 @@
 //   )
 // }
 
-
 "use client";
 
 import * as React from "react";
@@ -152,12 +151,13 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 
-// Definicja typu UserData
+// Definicja typu UserData z isSubscribed
 type UserData = {
   id: string;
   name: string;
   email: string;
   avatar: string;
+  isSubscribed: boolean;
 };
 
 // Dane statyczne dla NavMain i NavSecondary
@@ -165,7 +165,7 @@ const data = {
   navMain: [
     {
       title: "Home",
-      url: "/dashboard",
+      url: "/home",
       icon: Home,
     },
     {
@@ -207,7 +207,6 @@ const data = {
   navSecondary: [],
 };
 
-// Rozszerzenie typu props o userData
 export function AppSidebar({
   userData,
   ...props
@@ -219,7 +218,7 @@ export function AppSidebar({
     >
       <SidebarContent className="p-0 mt-4 text-2xl">
         <NavMain items={data.navMain} />
-        <NavSecondary items={data.navSecondary} className="mt-8" isPremium={false} />
+        <NavSecondary userData={userData} items={data.navSecondary} className="mt-6" />
       </SidebarContent>
       <SidebarFooter className="border-t border-gray-200 dark:border-slate-800">
         <NavUser userData={userData} />

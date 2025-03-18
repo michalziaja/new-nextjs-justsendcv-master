@@ -1,47 +1,69 @@
-// components/nav-secondary.tsx
-"use client"
-import * as React from "react"
-import { type LucideIcon, ChevronRight, Download, Crown } from "lucide-react"
+"use client";
 
+import * as React from "react";
+import { type LucideIcon, ChevronRight, Download, Crown } from "lucide-react";
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-
+} from "@/components/ui/sidebar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "@/components/ui/collapsible";
 
 const browsers = [
   { name: "Chrome", url: "#" },
   { name: "Firefox", url: "#" },
   { name: "Edge", url: "#" },
-  { name: "Safari", url: "#" }
-]
+  { name: "Safari", url: "#" },
+];
+
+// Definicja typu UserData z isSubscribed
+type UserData = {
+  id: string;
+  name: string;
+  email: string;
+  avatar: string;
+  isSubscribed: boolean;
+};
 
 export function NavSecondary({
   items,
-  isPremium = false,
+  userData,
   ...props
 }: {
-  items: {
-    title: string
-    url: string
-    icon: LucideIcon
-  }[]
-  isPremium?: boolean
+  items: { title: string; url: string; icon: LucideIcon }[];
+  userData: UserData;
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>
-        <SidebarMenu>
+        <SidebarMenu className="mt-8">
+          {/* Baner subskrypcji */}
+          <SidebarMenuItem className="mt-auto pt-8">
+            <a
+              href={userData.isSubscribed ? "/subscription" : "/upgrade"}
+              className={`flex w-full items-center gap-2 rounded-lg p-3 text-white hover:opacity-90 transition-opacity text-xs ${
+                userData.isSubscribed 
+                  ? "bg-gradient-to-r from-green-500 to-emerald-500" 
+                  : "bg-gradient-to-r from-violet-500 to-purple-500"
+              }`}
+            >
+              <Crown className="h-6 w-6" />
+              <span className="font-medium">
+                {userData.isSubscribed ? "Używasz Premium" : "Przejdź na Premium"}
+              </span>
+            </a>
+          </SidebarMenuItem>
+          
+          
+          
           {/* Baner wtyczek */}
-          <SidebarMenuItem className="mb-2">
+          <SidebarMenuItem className="mb-2 pt-8">
             <Collapsible>
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-gray-100 dark:bg-slate-800 p-3 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-xs">
                 <div className="flex items-center gap-2">
@@ -78,20 +100,9 @@ export function NavSecondary({
             </SidebarMenuItem>
           ))}
 
-          {/* Baner subskrypcji */}
-          <SidebarMenuItem className="mt-auto pt-4">
-            <a
-              href={isPremium ? "/subscription" : "/upgrade"}
-              className="flex w-full items-center gap-2 rounded-lg bg-gradient-to-r from-violet-500 to-purple-500 p-3 text-white hover:opacity-90 transition-opacity text-xs"
-            >
-              <Crown className="h-6 w-6" />
-              <span className="font-medium">
-                {isPremium ? "Używasz Premium" : "Przejdź na Premium"}
-              </span>
-            </a>
-          </SidebarMenuItem>
+          
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
-  )
+  );
 }

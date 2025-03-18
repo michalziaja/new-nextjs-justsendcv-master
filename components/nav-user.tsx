@@ -147,6 +147,7 @@
 // }
 "use client";
 
+import Image from "next/image";
 import {
   BadgeCheck,
   Bell,
@@ -154,12 +155,9 @@ import {
   CreditCard,
   LogOut,
   Sparkles,
+  Crown,
 } from "lucide-react";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -177,13 +175,14 @@ import {
 } from "@/components/ui/sidebar";
 import { signOutAction } from "@/app/actions";
 import { useState } from "react";
-import Image from "next/image";
+
 
 type UserData = {
   id: string;
   name: string;
   email: string;
   avatar: string;
+  isSubscribed: boolean;
 };
 
 export function NavUser({ userData }: { userData: UserData }) {
@@ -231,8 +230,8 @@ export function NavUser({ userData }: { userData: UserData }) {
                     <Image
                       src={userData.avatar}
                       alt={userData.name}
-                      width={32} // Dopasuj do h-8 w Tailwind
-                      height={32} // Dopasuj do w-8 w Tailwind
+                      width={32}
+                      height={32}
                       className="rounded-lg"
                     />
                     <AvatarFallback className="rounded-lg">
@@ -247,10 +246,19 @@ export function NavUser({ userData }: { userData: UserData }) {
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  <Sparkles />
-                  Ulepsz do Pro
-                </DropdownMenuItem>
+                {userData.isSubscribed ? (
+                  <DropdownMenuItem>
+                    <Crown />
+                    Posiadasz Premium
+                  </DropdownMenuItem>
+                ) : (
+                  <DropdownMenuItem asChild>
+                    <a href="/upgrade">
+                      <Sparkles />
+                      Ulepsz do Pro
+                    </a>
+                  </DropdownMenuItem>
+                )}
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
@@ -279,8 +287,6 @@ export function NavUser({ userData }: { userData: UserData }) {
           </DropdownMenu>
         </SidebarMenuItem>
       </SidebarMenu>
-
-
     </>
   );
 }
