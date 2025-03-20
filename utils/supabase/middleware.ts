@@ -53,20 +53,19 @@ export const updateSession = async (request: NextRequest) => {
       }
     );
 
-    const { data: { session }, error } = await supabase.auth.getSession();
+    const { data: { user }, error } = await supabase.auth.getUser();
 
-    // Publiczne trasy dostępne dla wszystkich
     const publicRoutes = ["/", "/sign-in", "/sign-up", "/forgot-password", "/unauthorized", "/auth/callback"];
     const isPublicRoute = publicRoutes.includes(request.nextUrl.pathname);
 
-    // Zalogowany użytkownik na stronach logowania -> przekierowanie do /dashboard
-    if (session && ["/sign-in", "/sign-up", "/forgot-password", "/unauthorized"].includes(request.nextUrl.pathname)) {
-      return NextResponse.redirect(new URL("/home", request.url));
+    // Przekieruj niezalogowanych użytkowników z chronionych tras na /unauthorized
+    if (!user && !isPublicRoute) {
+      return NextResponse.redirect(new URL("/unauthorized", request.url));
     }
 
-    // Niezalogowany użytkownik na zabezpieczonej trasie -> przekierowanie do /unauthorized
-    if (!session && !isPublicRoute) {
-      return NextResponse.redirect(new URL("/unauthorized", request.url));
+    // Przekieruj zalogowanych użytkowników z tras logowania na /home
+    if (user && ["/sign-in", "/sign-up", "/forgot-password", "/unauthorized"].includes(request.nextUrl.pathname)) {
+      return NextResponse.redirect(new URL("/home", request.url));
     }
 
     return response;

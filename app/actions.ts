@@ -8,37 +8,93 @@ import { redirect } from "next/navigation";
 export const signUpAction = async (formData: FormData) => {
   const email = formData.get("email")?.toString();
   const password = formData.get("password")?.toString();
+  const firstName = formData.get("firstName")?.toString();
+  const lastName = formData.get("lastName")?.toString();
   const supabase = await createClient();
-  const origin = (await headers()).get("origin");
+  // const origin = (await headers()).get("origin");
+  const origin = process.env.NEXT_PUBLIC_URL || "https://83e2-2a01-115f-4902-7900-8d6e-e943-9c59-b01e.ngrok-free.app";
 
-  if (!email || !password) {
+  if (!email || !password || !firstName || !lastName) {
     return encodedRedirect(
       "error",
       "/sign-up",
-      "Email and password are required",
+      "Wszystkie pola są wymagane: email, hasło, imię i nazwisko",
     );
   }
 
-  const { error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
       emailRedirectTo: `${origin}/auth/callback`,
+      data: {
+        first_name: firstName,
+        last_name: lastName
+      }
     },
   });
 
   if (error) {
     console.error(error.code + " " + error.message);
     return encodedRedirect("error", "/sign-up", error.message);
-  } else {
-    return encodedRedirect(
-      "success",
-      "/sign-up",
-      "Thanks for signing up! Please check your email for a verification link.",
-    );
   }
+
+  if (data.user) {
+    const { error: profileError } = await supabase
+      .from("profiles")
+      .upsert({
+        user_id: data.user.id,
+        first_name: firstName,
+        last_name: lastName,
+        email: email
+      });
+
+    if (profileError) {
+      console.error("Błąd podczas tworzenia profilu:", profileError.message);
+    }
+
+    // Sprawdź czy użytkownik ma już subskrypcję
+    const { data: existingSubscription, error: subFetchError } = await supabase
+      .from("subscriptions")
+      .select("id")
+      .eq("user_id", data.user.id)
+      .single();
+
+    if (subFetchError && subFetchError.code !== "PGRST116") {
+      console.error("Błąd podczas sprawdzania subskrypcji:", subFetchError.message);
+    }
+
+    // Jeśli nie ma subskrypcji, utwórz darmową
+    if (!existingSubscription) {
+      const { error: subError } = await supabase.from("subscriptions").insert({
+        user_id: data.user.id,
+        plan: "free",
+        status: "active",
+        start_date: new Date().toISOString(),
+        current_limit: 10,
+        total_limit: 20,
+        cv_creator_limit: 3,
+        cv_creator_used: 0,
+        current_offers: 0,
+        total_offers: 0,
+      });
+
+      if (subError) {
+        console.error("Błąd podczas tworzenia subskrypcji:", subError.message);
+      } else {
+        console.log("Utworzono darmową subskrypcję dla użytkownika:", data.user.id);
+      }
+    }
+  }
+
+  return encodedRedirect(
+    "success",
+    "/sign-up",
+    "Dziękujemy za rejestrację! Sprawdź swoją skrzynkę email, aby zweryfikować konto.",
+  );
 };
 
+// Pozostałe akcje pozostają bez zmian
 export const signInAction = async (formData: FormData) => {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
@@ -127,30 +183,97 @@ export const resetPasswordAction = async (formData: FormData) => {
   encodedRedirect("success", "/protected/reset-password", "Password updated");
 };
 
+export async function signInWithGoogle() {
+  const supabase = await createClient();
+  const origin = (await headers()).get("origin");
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: `${origin}/auth/callback`,
+      queryParams: {
+        access_type: "offline",
+        prompt: "consent",
+      },
+    },
+  });
+
+  if (error) {
+    return encodedRedirect("error", "/sign-in", "Nie udało się uwierzytelnić użytkownika");
+  }
+
+  // Przekierowanie na URL Google do autoryzacji
+  return redirect(data.url);
+}
+
 export const signOutAction = async () => {
   const supabase = await createClient();
   await supabase.auth.signOut();
   return redirect("/");
 };
 
-export async function signInWithGoogle() {
+export async function deleteAccountAction(userId: string) {
   const supabase = await createClient();
-  const origin = (await headers()).get("origin");
-
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
-    options: {
-      redirectTo: `${origin}/auth/callback`,
-      queryParams: {
-        access_type: 'offline',
-        prompt: 'consent',
-      },
-    },
-  });
-
+  
+  const { error } = await supabase.auth.admin.deleteUser(userId);
+  
   if (error) {
-    return encodedRedirect("error", "/sign-in", "Could not authenticate user");
+    return { error: error.message };
   }
+  
+  return { success: true };
+}
 
-  return redirect(data.url);
+export async function updateUserProfileAction(userId: string, profileData: any) {
+  const supabase = await createClient();
+  
+  const { data: existingProfile, error: fetchError } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("user_id", userId)
+    .single();
+  
+  if (fetchError && fetchError.code !== 'PGRST116') {
+    return { error: "Błąd podczas pobierania profilu: " + fetchError.message };
+  }
+  
+  let result;
+  
+  if (existingProfile) {
+    const { error: updateError } = await supabase
+      .from("profiles")
+      .update(profileData)
+      .eq("user_id", userId);
+    
+    if (updateError) {
+      return { error: "Błąd podczas aktualizacji profilu: " + updateError.message };
+    }
+    
+    result = { success: true, message: "Profil został zaktualizowany" };
+  } else {
+    const { error: insertError } = await supabase
+      .from("profiles")
+      .insert([{ user_id: userId, ...profileData }]);
+    
+    if (insertError) {
+      return { error: "Błąd podczas tworzenia profilu: " + insertError.message };
+    }
+    
+    result = { success: true, message: "Profil został utworzony" };
+  }
+  
+  if (profileData.fullName) {
+    const { error: updateUserError } = await supabase.auth.updateUser({
+      data: { name: profileData.fullName }
+    });
+    
+    if (updateUserError) {
+      return { 
+        warning: "Profil zaktualizowany, ale wystąpił błąd podczas aktualizacji metadanych: " + updateUserError.message,
+        success: true 
+      };
+    }
+  }
+  
+  return result;
 }

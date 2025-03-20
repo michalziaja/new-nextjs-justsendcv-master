@@ -1,3 +1,4 @@
+
 //app/(dashboard)/layout.tsx
 import { SiteHeader } from "@/components/site-header";
 import { AppSidebar } from "@/components/app-sidebar";
@@ -14,27 +15,26 @@ export default async function DashboardLayout({
   const { data: { user }, error: authError } = await supabase.auth.getUser();
 
   if (authError || !user) {
-    redirect("/login");
+    redirect("/sign-in");
   }
 
-  // Pobierz dane subskrypcji z tabeli profiles
   const { data: profile, error: profileError } = await supabase
-    .from("profile")
-    .select("is_subscribed")
+    .from("profiles")
+    .select("subscription")
     .eq("user_id", user.id)
     .single();
 
   if (profileError) {
     console.error("Błąd pobierania profilu:", profileError);
-    // Możesz zdecydować, co zrobić w przypadku błędu, np. ustawić domyślnie false
   }
 
   const userData = {
     id: user.id,
     name: user.user_metadata?.name || "User",
     email: user.email || "",
-    avatar: user.user_metadata?.avatar_url || "",
-    isSubscribed: profile?.is_subscribed || false, // Domyślnie false, jeśli brak danych
+    avatar: user.user_metadata?.avatar_url || null,
+    isSubscribed: profile?.subscription || false,
+    createdAt: user.created_at, // Data założenia konta
   };
 
   return (

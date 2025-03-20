@@ -7,16 +7,11 @@ import { FileText, Brain, Target, BarChart3, Clock, Shield, Sparkles, Bot, Chrom
 import { useRef } from "react"
 import CountUp from "react-countup"
 import Image from "next/image"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import React from "react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 // Definicje typów
 interface Feature {
@@ -76,15 +71,45 @@ const stats: Stat[] = [
 ]
 
 const appFeatures: AppFeature[] = [
-  { id: "job-tracker", title: "Śledzenie aplikacji", icon: <ListTodo className="h-5 w-5" />, description: "Śledź aplikacje w jednym miejscu.", image: "/placeholder.svg?height=600&width=800" },
-  { id: "cv-creator", title: "Kreator CV", icon: <FileText className="h-5 w-5" />, description: "Twórz CV z AI.", image: "/placeholder.svg?height=600&width=800" },
-  { id: "statistics", title: "Statystyki", icon: <BarChart3 className="h-5 w-5" />, description: "Analizuj proces poszukiwania pracy.", image: "/placeholder.svg?height=600&width=800" },
-  { id: "ai-assistant", title: "Asystent AI", icon: <Bot className="h-5 w-5" />, description: "Porady od AI.", image: "/placeholder.svg?height=600&width=800" },
-  { id: "browser-plugin", title: "Wtyczka do przeglądarki", icon: <Chrome className="h-5 w-5" />, description: "Zapisuj oferty jednym kliknięciem.", image: "/placeholder.svg?height=600&width=800" },
+  {
+    id: "job-tracker",
+    title: "Śledzenie aplikacji",
+    icon: <ListTodo className="h-5 w-5" />,
+    description: "Śledź aplikacje w jednym miejscu.",
+    image: "/placeholder.svg?height=600&width=800",
+  },
+  {
+    id: "cv-creator",
+    title: "Kreator CV",
+    icon: <FileText className="h-5 w-5" />,
+    description: "Twórz CV z AI.",
+    image: "/placeholder.svg?height=600&width=800",
+  },
+  {
+    id: "statistics",
+    title: "Statystyki",
+    icon: <BarChart3 className="h-5 w-5" />,
+    description: "Analizuj proces poszukiwania pracy.",
+    image: "/placeholder.svg?height=600&width=800",
+  },
+  {
+    id: "ai-assistant",
+    title: "Asystent AI",
+    icon: <Bot className="h-5 w-5" />,
+    description: "Porady od AI.",
+    image: "/placeholder.svg?height=600&width=800",
+  },
+  {
+    id: "browser-plugin",
+    title: "Wtyczka do przeglądarki",
+    icon: <Chrome className="h-5 w-5" />,
+    description: "Zapisuj oferty jednym kliknięciem.",
+    image: "/placeholder.svg?height=600&width=800",
+  },
 ]
 
 const sites: Site[] = [
-  { name: "pracuj.pl", logo: "/sites/pracuj.png" },
+  { name: "pracuj.pl", logo: "/sites/pracuj.pl.png" },
   { name: "praca.pl", logo: "/sites/praca.png" },
   { name: "linkedin.com", logo: "/sites/linkedin.png" },
   { name: "nofluffjobs.com", logo: "/sites/nofluffjobs.png" },
@@ -92,67 +117,83 @@ const sites: Site[] = [
   { name: "indeed.com", logo: "/sites/indeed.jpg" },
   { name: "gowork.pl", logo: "/sites/gowork.png" },
   { name: "aplikuj.pl", logo: "/sites/aplikuj.png" },
-  { name: "rocketjobs.pl", logo: "/sites/rocketjobs.jpg" },
+  { name: "rocketjobs.pl", logo: "/sites/rocketjobs.png" },
   { name: "kwf.pl", logo: "/sites/kwf.png" },
 ]
 
 const plans: Plan[] = [
-  { name: "Darmowy", price: "0", description: "Idealny na początek", features: ["Podstawowy kreator CV", "Śledzenie do 10 aplikacji", "Ograniczone sugestie AI", "Wsparcie e-mailowe"], cta: "Wybierz Plan", popular: false },
-  { name: "Pro", price: "79", description: "Dla aktywnych", features: ["Zaawansowany kreator CV", "Nieograniczone śledzenie", "Pełny dostęp do asystenta AI", "Pełny dostęp do asystenta AI"], cta: "Wybierz Pro", popular: true },
-  { name: "Enterprise", price: "199", description: "Dla zespołów", features: ["Zaawansowany kreator CV", "Nieograniczone śledzenie", "Pełny dostęp do asystenta AI", "Pełny dostęp do asystenta AI"], cta: "Wybierz Pro+", popular: false },
+  {
+    name: "Darmowy",
+    price: "0",
+    description: "Idealny na początek",
+    features: [
+      "Podstawowy kreator CV",
+      "Śledzenie do 10 aplikacji",
+      "Ograniczone sugestie AI",
+      "Wsparcie e-mailowe",
+      "1 szablon CV",
+    ],
+    cta: "Rozpocznij za darmo",
+    popular: false,
+  },
+  {
+    name: "Pro",
+    price: "79",
+    description: "Dla aktywnych poszukujących",
+    features: [
+      "Zaawansowany kreator CV",
+      "Nieograniczone śledzenie aplikacji",
+      "Pełny dostęp do asystenta AI",
+      "Priorytetowe wsparcie",
+      "Wszystkie szablony CV",
+      "Analiza rynku pracy",
+      "Eksport danych",
+    ],
+    cta: "Wybierz Pro",
+    popular: true,
+  },
+  {
+    name: "Enterprise",
+    price: "199",
+    description: "Dla zespołów i firm",
+    features: [
+      "Wszystkie funkcje Pro",
+      "Zarządzanie wieloma użytkownikami",
+      "Dedykowany opiekun klienta",
+      "Niestandardowe integracje",
+      "Zaawansowane raportowanie",
+      "Szkolenia dla zespołu",
+      "API dostęp",
+    ],
+    cta: "Skontaktuj się",
+    popular: false,
+  },
 ]
 
 const faqs: FAQ[] = [
-  { question: "Czym jest JustSend.cv?", answer: "Platforma do zarządzania poszukiwaniem pracy." },
-  { question: "Jak działa optymalizacja CV?", answer: "AI analizuje i sugeruje zmiany." },
-  { question: "Czy mogę testować za darmo?", answer: "Tak, oferujemy darmowy plan." },
-  { question: "Czy moje dane są bezpieczne?", answer: "Tak, stosujemy szyfrowanie." },
+  {
+    question: "Czym jest JustSend.cv?",
+    answer:
+      "JustSend.cv to kompleksowa platforma do zarządzania procesem poszukiwania pracy. Łączy w sobie narzędzia do tworzenia CV, śledzenia aplikacji oraz wsparcie sztucznej inteligencji, aby zwiększyć Twoje szanse na znalezienie wymarzonej pracy.",
+  },
+  {
+    question: "Jak działa optymalizacja CV?",
+    answer:
+      "Nasza technologia AI analizuje Twoje CV pod kątem słów kluczowych, struktury i czytelności, a następnie sugeruje zmiany, które zwiększą Twoje szanse na przejście przez systemy ATS stosowane przez pracodawców. Dodatkowo, AI dostosowuje treść CV do konkretnych ofert pracy.",
+  },
+  {
+    question: "Czy mogę testować za darmo?",
+    answer:
+      "Tak, oferujemy darmowy plan, który pozwala na korzystanie z podstawowych funkcji platformy bez ograniczeń czasowych. Możesz w każdej chwili przejść na plan Pro, aby odblokować wszystkie funkcje.",
+  },
+  {
+    question: "Czy moje dane są bezpieczne?",
+    answer:
+      "Bezpieczeństwo Twoich danych jest naszym priorytetem. Stosujemy zaawansowane metody szyfrowania i przestrzegamy najwyższych standardów bezpieczeństwa. Twoje dane nigdy nie są udostępniane stronom trzecim bez Twojej wyraźnej zgody.",
+  },
 ]
 
-// Komponent InfiniteSlider (bez zmian)
-function InfiniteSlider({ children, reverse, gap = 24 }: { children: React.ReactNode; reverse?: boolean; gap?: number }) {
-  const [loopCount] = React.useState(2)
-  const speed = reverse ? 3 : -3
-  const contentRef = React.useRef<HTMLDivElement>(null)
-  const scrollerRef = React.useRef<HTMLDivElement>(null)
-  const [start, setStart] = React.useState(false)
-  const [contentWidth, setContentWidth] = React.useState(0)
 
-  React.useEffect(() => {
-    if (!contentRef.current) return
-    setContentWidth(contentRef.current.offsetWidth)
-  }, [])
-
-  React.useEffect(() => {
-    setStart(true)
-  }, [])
-
-  useAnimationFrame((time, delta) => {
-    if (!scrollerRef.current || !start || !contentWidth) return
-
-    const scrollLeft = scrollerRef.current.scrollLeft
-    let newScrollLeft = scrollLeft + (delta * speed) / 16
-    if (newScrollLeft <= 0) {
-      newScrollLeft = newScrollLeft + (contentWidth + gap)
-    } else if (newScrollLeft >= contentWidth + gap) {
-      newScrollLeft = newScrollLeft - (contentWidth + gap)
-    }
-
-    scrollerRef.current.scrollLeft = newScrollLeft
-  })
-
-  return (
-    <div className="scroller relative max-w-full overflow-hidden" ref={scrollerRef}>
-      <div ref={contentRef} className="flex min-w-full shrink-0 gap-4 py-4" style={{ gap: `${gap}px` }}>
-        {[...Array(loopCount)].map((_, i) => (
-          <div key={i} className="flex shrink-0 items-center gap-4" style={{ gap: `${gap}px` }}>
-            {children}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
 
 export default function StartPage() {
   const statsRef = useRef<HTMLDivElement>(null)
@@ -174,36 +215,36 @@ export default function StartPage() {
   // Animacje
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
   }
 
   const staggerContainer = {
     hidden: { opacity: 1 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
   }
 
   const itemFadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
   }
 
   // Animacja dla Pricing Section
   const pricingAnimation = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
-      transition: { 
-        duration: 0.6, 
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
         ease: [0.22, 1, 0.36, 1],
-        staggerChildren: 0.1 // Dzieci (karty planów) pojawią się z opóźnieniem
-      } 
-    }
+        staggerChildren: 0.1, // Dzieci (karty planów) pojawią się z opóźnieniem
+      },
+    },
   }
 
   const pricingItemAnimation = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   }
 
   return (
@@ -220,15 +261,14 @@ export default function StartPage() {
         <div className="absolute top-48 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-600/80 to-transparent dark:via-cyan-500/30" />
         {/* Linia pozioma w dolnej części - subtelny separator */}
         <div className="absolute bottom-50 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-cyan-500/80 to-transparent dark:via-cyan-500/30" />
-        
       </div>
 
       <div className="relative z-10">
         <Header />
-        
+
         <main className="flex flex-col items-center">
           {/* Hero Section - Główna sekcja powitalna z logo, nagłówkiem i przyciskami */}
-          <motion.section 
+          <motion.section
             ref={heroRef}
             initial="hidden"
             animate={isHeroInView ? "visible" : "hidden"}
@@ -243,23 +283,24 @@ export default function StartPage() {
                 className="flex items-center justify-center gap-3 mb-8"
               >
                 {/* Logo z cieniem i efektem skalowania przy najechaniu */}
-               
+
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                <span className="text-gray-900 dark:text-white">Zmień sposób, w jaki </span>
+                  <span className="text-gray-900 dark:text-white">Zmień sposób, w jaki </span>
                   {/* Tekst z cieniem dla kontrastu */}
                   <span className="text-[#00B2FF] drop-shadow-md">szukasz pracy</span>
-              </h1>
+                </h1>
               </motion.div>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8"
               >
-                Uprość swoje poszukiwanie pracy dzięki inteligentnym narzędziom do śledzenia aplikacji, tworzenia CV i wsparcia AI.
+                Uprość swoje poszukiwanie pracy dzięki inteligentnym narzędziom do śledzenia aplikacji, tworzenia CV i
+                wsparcia AI.
               </motion.p>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -276,7 +317,7 @@ export default function StartPage() {
               </motion.div>
 
               {/* Podgląd dashboardu z cieniem i gradientem w tle */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -314,7 +355,7 @@ export default function StartPage() {
           </motion.section>
 
           {/* Features Section - Sekcja prezentująca kluczowe funkcje */}
-          <motion.section 
+          <motion.section
             ref={featuresRef}
             initial="hidden"
             animate={isFeaturesInView ? "visible" : "hidden"}
@@ -323,16 +364,22 @@ export default function StartPage() {
           >
             <div className="container mx-auto px-4 mt-8 mb-16">
               <div className="text-center mb-16">
-                <motion.h2 variants={fadeInUp} className="text-5xl md:text-6xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-5xl md:text-6xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
+                >
                   Wszystko, czego potrzebujesz, aby
                 </motion.h2>
                 {/* Gradientowy tekst dla wyróżnienia */}
-                <motion.p variants={fadeInUp} className="text-5xl md:text-6xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text">
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-5xl md:text-6xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 text-transparent bg-clip-text"
+                >
                   zwiększyć swoje szanse na sukces.
                 </motion.p>
               </div>
 
-              <motion.div 
+              <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 animate={isFeaturesInView ? "visible" : "hidden"}
@@ -355,7 +402,7 @@ export default function StartPage() {
           </motion.section>
 
           {/* Stats Section - Sekcja z liczbami i statystykami */}
-          <motion.section 
+          <motion.section
             ref={statsRef}
             initial="hidden"
             animate={isStatsInView ? "visible" : "hidden"}
@@ -364,7 +411,7 @@ export default function StartPage() {
           >
             <div className="container mx-auto px-4 mb-16">
               <div className="max-w-6xl mx-auto">
-                <motion.div 
+                <motion.div
                   variants={staggerContainer}
                   initial="hidden"
                   animate={isStatsInView ? "visible" : "hidden"}
@@ -385,7 +432,8 @@ export default function StartPage() {
           </motion.section>
 
           {/* App Showcase - Sekcja prezentująca funkcje aplikacji w formie zakładek */}
-          <motion.section 
+           {/* App Showcase - Sekcja prezentująca funkcje aplikacji w formie zakładek */}
+           <motion.section 
             ref={appShowcaseRef}
             initial="hidden"
             animate={isAppShowcaseInView ? "visible" : "hidden"}
@@ -457,7 +505,7 @@ export default function StartPage() {
           </motion.section>
 
           {/* Sites Slider - Sekcja z przesuwanymi logo portali */}
-          <motion.section 
+          <motion.section
             ref={sitesRef}
             initial="hidden"
             animate={isSitesInView ? "visible" : "hidden"}
@@ -469,117 +517,163 @@ export default function StartPage() {
                 <motion.h3 variants={fadeInUp} className="text-xl text-gray-600 dark:text-gray-300 mb-8">
                   Portale z którymi współpracuje wtyczka JustSend.cv
                 </motion.h3>
-                <motion.div variants={fadeInUp} className="max-w-6xl mx-auto">
-                  <InfiniteSlider reverse gap={22}>
-                    {sites.map((site) => (
-                      <div key={site.name} className="relative h-12 w-24 transition-all">
-                        <Image src={site.logo} alt={`${site.name} logo`} fill className="object-contain" />
+
+                <motion.div
+                  variants={staggerContainer}
+                  className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8"
+                >
+                  {sites.map((site) => (
+                    <motion.div
+                      key={site.name}
+                      variants={itemFadeIn}
+                      className="flex items-center justify-center group"
+                    >
+                      <div className="relative h-12 w-24 transition-all transform group-hover:scale-110 duration-300 filter hover:drop-shadow-lg">
+                        <Image
+                          src={site.logo || "/placeholder.svg"}
+                          alt={`${site.name} logo`}
+                          fill
+                          className="object-contain"
+                        />
                       </div>
-                    ))}
-                  </InfiniteSlider>
+                    </motion.div>
+                  ))}
                 </motion.div>
               </div>
             </div>
           </motion.section>
 
-          {/* Pricing Section - Sekcja z planami cenowymi i animacją */}
-          <motion.section
+           {/* Pricing Section - Sekcja z planami cenowymi i animacją */}
+           <motion.section
+            ref={pricingRef}
             initial="hidden"
-            animate="visible" // Zakładam, że testujesz z widocznością, możesz podpiąć useInView
+            animate={isPricingInView ? "visible" : "hidden"}
             variants={pricingAnimation}
             className="w-full py-24"
+            id="pricing"
           >
             <div className="container mx-auto px-4 mb-16">
               <div className="text-center mb-16">
                 <motion.h2
                   variants={pricingItemAnimation}
-                  className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white"
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight"
                 >
-                  Proste, przejrzyste ceny
+                  Wybierz plan idealny dla Ciebie
                 </motion.h2>
                 <motion.p
                   variants={pricingItemAnimation}
                   className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
                 >
-                  Wybierz plan, który odpowiada Twoim potrzebom. Lub wypróbuj za darmo.
+                  Zacznij za darmo lub odblokuj pełne możliwości z planem Pro.
                 </motion.p>
               </div>
 
               <motion.div
-                variants={pricingItemAnimation}
+                variants={pricingAnimation}
                 initial="hidden"
-                animate="visible"
-                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+                animate={isPricingInView ? "visible" : "hidden"}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               >
                 {plans.map((plan, index) => (
                   <motion.div
                     key={index}
                     variants={pricingItemAnimation}
                     className={cn(
-                      "relative bg-white dark:bg-[#0A0F1C] rounded-xl p-8 shadow-xl group cursor-pointer transition-colors duration-300 border", // Base styles
-                      plan.popular 
-                        ? "border-blue-500 dark:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/30 scale-105"
-                        : "border-gray-200 dark:border-gray-700 hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 hover:scale-102"
+                      "relative bg-white dark:bg-[#0A0F1C] rounded-3xl shadow-lg transition-all duration-300 border h-full flex flex-col hover:-translate-y-2",
+                      plan.popular
+                        ? "border-[#00B2FF] md:scale-105 z-10 shadow-xl shadow-[#00B2FF]/20 hover:shadow-2xl hover:shadow-[#00B2FF]/30 hover:border-2"
+                        : "border-gray-200 dark:border-gray-800 hover:shadow-xl hover:shadow-blue-500/10 hover:border-gray-300 dark:hover:border-gray-700",
                     )}
                   >
+                    {/* Wyróżnienie planu popularnego */}
                     {plan.popular && (
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
-                        Najpopularniejszy
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-6 py-1.5 rounded-full text-sm font-medium shadow-md">
+                        Polecany
                       </div>
                     )}
-                    <div className="relative z-10 h-full flex flex-col">
-                      <div className="text-center mb-6">
-                        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{plan.name}</h3>
-                        <div className="flex items-center justify-center text-gray-900 dark:text-white">
-                          <span className="text-3xl font-bold">zł</span>
-                          <span className="text-5xl font-bold">{plan.price}</span>
-                          <span className="text-gray-500 dark:text-gray-400 ml-1">/mies.</span>
+
+                    <div className="flex flex-col h-full p-8">
+                      {/* Nagłówek planu */}
+                      <div className="text-center mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
+                        <h3
+                          className={cn(
+                            "text-2xl font-bold mb-2",
+                            plan.popular ? "text-[#00B2FF]" : "text-gray-900 dark:text-white",
+                          )}
+                        >
+                          {plan.name}
+                        </h3>
+                        <div className="flex items-baseline justify-center gap-1 mb-3">
+                          <span className="text-5xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
+                          <span className="text-gray-500 dark:text-gray-400 text-lg">zł/mies.</span>
                         </div>
-                        <p className="text-gray-600 dark:text-gray-400 mt-2">{plan.description}</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">{plan.description}</p>
                       </div>
 
-                      <ul className="space-y-3 mb-8 flex-grow">
+                      {/* Lista funkcji */}
+                      <ul className="space-y-4 mb-8 flex-grow">
                         {plan.features.map((feature, i) => (
-                          <li key={i} className="flex items-start">
-                            <Check className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 shrink-0 mt-0.5" />
+                          <li key={i} className="flex items-start gap-3">
+                            <div
+                              className={cn(
+                                "h-5 w-5 rounded-full flex items-center justify-center mt-0.5",
+                                plan.popular
+                                  ? "bg-[#00B2FF] text-white"
+                                  : "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
+                              )}
+                            >
+                              <Check className="h-3 w-3" />
+                            </div>
                             <span className="text-gray-600 dark:text-gray-300">{feature}</span>
                           </li>
                         ))}
                       </ul>
 
+                      {/* Przycisk CTA */}
                       <Button
                         className={cn(
-                          "w-full relative mt-auto",
+                          "w-full mt-auto rounded-full py-6 text-base font-medium transition-all duration-300",
                           plan.popular
-                            ? "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white"
-                            : "bg-blue-500 hover:bg-blue-600 text-white dark:bg-blue-600 dark:hover:bg-blue-700",
-                          "transition-all duration-300"
+                            ? "bg-gradient-to-r from-[#00B2FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg hover:shadow-[#00B2FF]/50"
+                            : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700",
                         )}
                       >
-                        <span className="relative z-10">{plan.cta}</span>
+                        {plan.cta}
                       </Button>
                     </div>
                   </motion.div>
                 ))}
               </motion.div>
+
+              {/* Dodatkowy tekst zachęcający */}
+              <motion.p
+                variants={pricingItemAnimation}
+                className="text-center text-sm text-gray-500 dark:text-gray-400 mt-8"
+              >
+                Nie jesteś pewien? Wypróbuj plan Darmowy – bez zobowiązań!
+              </motion.p>
             </div>
           </motion.section>
 
           {/* FAQ Section - Sekcja z często zadawanymi pytaniami */}
-          <motion.section 
+          <motion.section
             ref={faqRef}
             initial="hidden"
             animate={isFaqInView ? "visible" : "hidden"}
             variants={fadeInUp}
             className="w-full py-24"
+            id="faq"
           >
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 {/* Gradientowy nagłówek dla wyróżnienia */}
-                <motion.h2 variants={fadeInUp} className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#00B2FF] to-cyan-400 text-transparent bg-clip-text">
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-transparent bg-clip-text"
+                >
                   Często zadawane pytania
                 </motion.h2>
-                <motion.p variants={fadeInUp} className="text-gray-400 max-w-2xl mx-auto">
+                <motion.p variants={fadeInUp} className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                   Znajdź odpowiedzi na najczęściej zadawane pytania dotyczące JustSend.cv
                 </motion.p>
               </div>
@@ -590,14 +684,14 @@ export default function StartPage() {
                     <AccordionItem
                       key={index}
                       value={`item-${index}`}
-                      className="border border-gray-200 dark:border-gray-800 bg-card rounded-lg overflow-hidden"
+                      className="border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#0A0F1C]/80 rounded-xl overflow-hidden shadow-sm"
                     >
                       {/* Tekst z efektem hover */}
-                      <AccordionTrigger className="px-6 hover:text-[#00B2FF] border-b border-gray-200 dark:border-gray-800">
+                      <AccordionTrigger className="px-6 py-4 hover:text-[#00B2FF] font-medium text-left">
                         {faq.question}
                       </AccordionTrigger>
                       {/* Tło z efektem kontrastu */}
-                      <AccordionContent className="px-6 py-4 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-[#0A0F1C]/50">
+                      <AccordionContent className="px-6 py-4 text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-[#0A0F1C] border-t border-gray-100 dark:border-gray-800">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -613,3 +707,4 @@ export default function StartPage() {
     </div>
   )
 }
+

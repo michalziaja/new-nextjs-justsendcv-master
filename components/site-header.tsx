@@ -7,6 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { NotificationBell } from "@/components/notificationBell"
 
 import {
   Breadcrumb,
@@ -97,7 +98,10 @@ export function SiteHeader() {
       </div>
       
       {/* Theme toggle */}
-      <ThemeToggle />
+      <div className="flex items-center gap-2">
+        <NotificationBell />
+        <ThemeToggle />
+      </div>
     </div>
   )
 

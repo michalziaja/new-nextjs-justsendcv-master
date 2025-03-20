@@ -16,7 +16,7 @@ interface StatCardProps {
 function StatCard({ title, value, description, icon, borderColor, darkBorderColor }: StatCardProps) {
   return (
     <Card className={`
-      border-1 border-gray-300 dark:border-gray-800 
+      border-2 border-white dark:border-gray-800 
       ${borderColor} ${darkBorderColor}
       shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
       dark:shadow-slate-900/20
