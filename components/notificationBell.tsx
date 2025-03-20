@@ -69,7 +69,7 @@ export function NotificationBell() {
             },
             (payload: { new: Notification }) => {
               setNotifications(prev => {
-                const newNotifications = [payload.new, ...prev].slice(0, 3);
+                const newNotifications = [payload.new, ...prev].slice(0, 5);
                 return newNotifications;
               });
               
@@ -167,7 +167,7 @@ export function NotificationBell() {
           <span className="sr-only">Powiadomienia</span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-80 p-0 max-h-120 overflow-y-auto">
+      <PopoverContent className="w-80 p-0 max-h-120 mr-2 overflow-y-auto">
         <div className="p-4 border-b flex justify-between items-center">
           <h3 className="font-medium">Powiadomienia</h3>
           {unreadCount > 0 && (

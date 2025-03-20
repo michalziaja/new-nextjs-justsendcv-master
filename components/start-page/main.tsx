@@ -137,35 +137,49 @@ const plans: Plan[] = [
     popular: false,
   },
   {
-    name: "Pro",
-    price: "79",
-    description: "Dla aktywnych poszukujących",
+    name: "Tygodniowy",
+    price: "8",
+    description: "Szybki dostęp do Premium",
     features: [
-      "Zaawansowany kreator CV",
-      "Nieograniczone śledzenie aplikacji",
-      "Pełny dostęp do asystenta AI",
-      "Priorytetowe wsparcie",
-      "Wszystkie szablony CV",
-      "Analiza rynku pracy",
-      "Eksport danych",
+      "100 zapisanych ofert pracy",
+      "10 szablonów CV",
+      "Podstawowe statystyki",
+      "Dostęp do asystenta AI",
+      "Wsparcie e-mail",
+      "Wtyczka do przeglądarki",
     ],
-    cta: "Wybierz Pro",
+    cta: "Wybierz plan tygodniowy",
+    popular: false,
+  },
+  {
+    name: "Miesięczny",
+    price: "29",
+    description: "Pełny dostęp do wszystkich funkcji",
+    features: [
+      "100 zapisanych ofert pracy",
+      "50 szablonów CV",
+      "Zaawansowane statystyki",
+      "Nielimitowany dostęp do asystenta AI",
+      "Priorytetowe wsparcie",
+      "Wtyczka do przeglądarki",
+    ],
+    cta: "Wybierz plan miesięczny",
     popular: true,
   },
   {
-    name: "Enterprise",
-    price: "199",
-    description: "Dla zespołów i firm",
+    name: "Kwartalny",
+    price: "79",
+    description: "Oszczędzasz 10% w porównaniu z planem miesięcznym",
     features: [
-      "Wszystkie funkcje Pro",
-      "Zarządzanie wieloma użytkownikami",
-      "Dedykowany opiekun klienta",
-      "Niestandardowe integracje",
-      "Zaawansowane raportowanie",
-      "Szkolenia dla zespołu",
-      "API dostęp",
+      "100 zapisanych ofert pracy",
+      "50 szablonów CV",
+      "Zaawansowane statystyki",
+      "Nielimitowany dostęp do asystenta AI",
+      "Priorytetowe wsparcie",
+      "Wtyczka do przeglądarki",
+      "1 miesiąc gratis",
     ],
-    cta: "Skontaktuj się",
+    cta: "Wybierz plan kwartalny",
     popular: false,
   },
 ]
@@ -572,7 +586,7 @@ export default function StartPage() {
                 variants={pricingAnimation}
                 initial="hidden"
                 animate={isPricingInView ? "visible" : "hidden"}
-                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
               >
                 {plans.map((plan, index) => (
                   <motion.div
@@ -581,50 +595,52 @@ export default function StartPage() {
                     className={cn(
                       "relative bg-white dark:bg-[#0A0F1C] rounded-3xl shadow-lg transition-all duration-300 border h-full flex flex-col hover:-translate-y-2",
                       plan.popular
-                        ? "border-[#00B2FF] md:scale-105 z-10 shadow-xl shadow-[#00B2FF]/20 hover:shadow-2xl hover:shadow-[#00B2FF]/30 hover:border-2"
+                        ? "border-[#00B2FF] lg:scale-105 z-10 shadow-xl shadow-[#00B2FF]/20 hover:shadow-2xl hover:shadow-[#00B2FF]/30 hover:border-2"
                         : "border-gray-200 dark:border-gray-800 hover:shadow-xl hover:shadow-blue-500/10 hover:border-gray-300 dark:hover:border-gray-700",
                     )}
                   >
                     {/* Wyróżnienie planu popularnego */}
                     {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-6 py-1.5 rounded-full text-sm font-medium shadow-md">
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-4 py-1 rounded-full text-xs font-medium shadow-md">
                         Polecany
                       </div>
                     )}
 
-                    <div className="flex flex-col h-full p-8">
+                    <div className="flex flex-col h-full p-5">
                       {/* Nagłówek planu */}
-                      <div className="text-center mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
+                      <div className="text-center mb-5 pb-4 border-b border-gray-100 dark:border-gray-800">
                         <h3
                           className={cn(
-                            "text-2xl font-bold mb-2",
+                            "text-xl font-bold mb-1.5",
                             plan.popular ? "text-[#00B2FF]" : "text-gray-900 dark:text-white",
                           )}
                         >
                           {plan.name}
                         </h3>
-                        <div className="flex items-baseline justify-center gap-1 mb-3">
-                          <span className="text-5xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
-                          <span className="text-gray-500 dark:text-gray-400 text-lg">zł/mies.</span>
+                        <div className="flex items-baseline justify-center gap-1 mb-2">
+                          <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
+                          <span className="text-gray-500 dark:text-gray-400 text-sm">
+                            {plan.price === "0" ? "" : plan.name === "Tygodniowy" ? "zł/tydz." : plan.name === "Miesięczny" ? "zł/mies." : "zł/kwartał"}
+                          </span>
                         </div>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">{plan.description}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">{plan.description}</p>
                       </div>
 
                       {/* Lista funkcji */}
-                      <ul className="space-y-4 mb-8 flex-grow">
+                      <ul className="space-y-3 mb-6 flex-grow">
                         {plan.features.map((feature, i) => (
-                          <li key={i} className="flex items-start gap-3">
+                          <li key={i} className="flex items-start gap-2">
                             <div
                               className={cn(
-                                "h-5 w-5 rounded-full flex items-center justify-center mt-0.5",
+                                "h-4 w-4 rounded-full flex items-center justify-center mt-0.5",
                                 plan.popular
                                   ? "bg-[#00B2FF] text-white"
                                   : "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
                               )}
                             >
-                              <Check className="h-3 w-3" />
+                              <Check className="h-2.5 w-2.5" />
                             </div>
-                            <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -632,7 +648,7 @@ export default function StartPage() {
                       {/* Przycisk CTA */}
                       <Button
                         className={cn(
-                          "w-full mt-auto rounded-full py-6 text-base font-medium transition-all duration-300",
+                          "w-full mt-auto rounded-full py-4 text-sm font-medium transition-all duration-300",
                           plan.popular
                             ? "bg-gradient-to-r from-[#00B2FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg hover:shadow-[#00B2FF]/50"
                             : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700",

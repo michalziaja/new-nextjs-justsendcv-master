@@ -18,14 +18,14 @@ export default async function DashboardLayout({
     redirect("/sign-in");
   }
 
-  const { data: profile, error: profileError } = await supabase
-    .from("profiles")
-    .select("subscription")
+  const { data: subscription, error: subscriptionError } = await supabase
+    .from("subscriptions")
+    .select("plan")
     .eq("user_id", user.id)
     .single();
 
-  if (profileError) {
-    console.error("Błąd pobierania profilu:", profileError);
+  if (subscriptionError) {
+    console.error("Błąd pobierania subskrypcji:", subscriptionError);
   }
 
   const userData = {
@@ -33,7 +33,7 @@ export default async function DashboardLayout({
     name: user.user_metadata?.name || "User",
     email: user.email || "",
     avatar: user.user_metadata?.avatar_url || null,
-    isSubscribed: profile?.subscription || false,
+    isSubscribed: subscription?.plan === "premium" || false,
     createdAt: user.created_at, // Data założenia konta
   };
 
