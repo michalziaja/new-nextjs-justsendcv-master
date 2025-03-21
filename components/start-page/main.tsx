@@ -321,7 +321,7 @@ export default function StartPage() {
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
               >
                 {/* Przycisk z gradientem i subtelnym efektem hover */}
-                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-6 text-lg hover:opacity-90">
+                <Button className="bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white dark:text-black px-8 py-6 text-lg hover:opacity-90">
                   Rozpocznij za darmo
                 </Button>
                 {/* Przycisk z kontrastowym tłem */}
@@ -593,7 +593,7 @@ export default function StartPage() {
                     key={index}
                     variants={pricingItemAnimation}
                     className={cn(
-                      "relative bg-white dark:bg-[#0A0F1C] rounded-3xl shadow-lg transition-all duration-300 border h-full flex flex-col hover:-translate-y-2",
+                      "relative bg-white dark:bg-[#0A0F1C] rounded-xl shadow-lg transition-all duration-300 border h-full flex flex-col hover:-translate-y-2",
                       plan.popular
                         ? "border-[#00B2FF] lg:scale-105 z-10 shadow-xl shadow-[#00B2FF]/20 hover:shadow-2xl hover:shadow-[#00B2FF]/30 hover:border-2"
                         : "border-gray-200 dark:border-gray-800 hover:shadow-xl hover:shadow-blue-500/10 hover:border-gray-300 dark:hover:border-gray-700",
@@ -601,7 +601,7 @@ export default function StartPage() {
                   >
                     {/* Wyróżnienie planu popularnego */}
                     {plan.popular && (
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-4 py-1 rounded-full text-xs font-medium shadow-md">
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-4 py-1 rounded-md text-xs font-medium shadow-md">
                         Polecany
                       </div>
                     )}
@@ -648,10 +648,10 @@ export default function StartPage() {
                       {/* Przycisk CTA */}
                       <Button
                         className={cn(
-                          "w-full mt-auto rounded-full py-4 text-sm font-medium transition-all duration-300",
+                          "w-full mt-auto rounded-xl py-4 text-sm font-medium transition-all duration-300",
                           plan.popular
                             ? "bg-gradient-to-r from-[#00B2FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg hover:shadow-[#00B2FF]/50"
-                            : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700",
+                            : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700",
                         )}
                       >
                         {plan.cta}
@@ -685,7 +685,7 @@ export default function StartPage() {
                 {/* Gradientowy nagłówek dla wyróżnienia */}
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-transparent bg-clip-text"
+                  className="text-4xl md:text-5xl font-bold mb-4 text-[#00B2FF] bg-clip-text"
                 >
                   Często zadawane pytania
                 </motion.h2>

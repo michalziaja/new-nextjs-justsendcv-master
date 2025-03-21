@@ -394,7 +394,7 @@ export default function UpgradePage() {
                       "w-full mt-auto rounded-full py-4 text-sm font-medium transition-all duration-300",
                       plan.popular
                         ? "bg-gradient-to-r from-[#00B2FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg hover:shadow-[#00B2FF]/50"
-                        : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
+                        : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gradient-to-r hover:from-[#00B2FF] hover:to-blue-600 hover:text-white dark:hover:text-white"
                     )}
                     onClick={() => handleStripeCheckout(plan)}
                     disabled={loading && selectedPlan === plan.id}
@@ -433,9 +433,9 @@ export default function UpgradePage() {
             <Button
               variant="ghost"
               onClick={() => router.push("/home")}
-              className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-[#00B2FF] hover:bg-transparent dark:hover:text-[#00B2FF]"
+              className="flex items-center gap-2 text-sm hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-[#00B2FF] hover:bg-transparent dark:hover:text-[#00B2FF]"
             >
-              <ArrowLeft className="h-3 w-3" />
+              <ArrowLeft className="h-4 w-4" />
               Powrót do pulpitu
             </Button>
           </div>

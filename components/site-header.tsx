@@ -74,7 +74,7 @@ export function SiteHeader() {
         <div className="w-10" />
         
         {/* Separator */}
-        <div className="flex h-8 items-center">
+        <div className="hidden md:flex h-8 items-center">
           <Separator orientation="vertical" />
         </div>
         
@@ -82,7 +82,7 @@ export function SiteHeader() {
         <div className="w-4" />
         
         {/* Breadcrumb */}
-        <Breadcrumb className="whitespace-nowrap">
+        <Breadcrumb className="hidden md:block whitespace-nowrap">
           <BreadcrumbList className="flex items-center">
             {/* <BreadcrumbItem>
               <BreadcrumbLink href="/dashboard" className="text-sm">
@@ -98,7 +98,7 @@ export function SiteHeader() {
       </div>
       
       {/* Theme toggle */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 mr-2">
         <NotificationBell />
         <ThemeToggle />
       </div>

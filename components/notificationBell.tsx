@@ -148,7 +148,7 @@ export function NotificationBell() {
           variant="link"
           size="icon"
           className={cn(
-            "relative overflow-hidden h-10 w-10 transition-all duration-300 hover:scale-115 active:scale-105 dark:text-cyan-600",
+            "relative overflow-hidden h-10 w-10 transition-all duration-300 hover:scale-115 active:scale-105 dark:text-cyan-500",
             isAnimating && "animate-bell"
           )}
         >
