@@ -4,7 +4,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 
 // Typy statusów
-export type ApplicationStatus = 'wszystkie' | 'zapisane' | 'wysłane' | 'kontakt' | 'rozmowa' | 'odmowa' | 'oferta';
+export type ApplicationStatus = 'wszystkie' | 'zapisana' | 'wysłana' | 'kontakt' | 'rozmowa' | 'odmowa' | 'oferta';
 
 interface SavedTableTabsProps {
   activeStatus: ApplicationStatus;
@@ -19,13 +19,13 @@ const tabConfig = [
     color: 'border-t-gray-600 dark:border-t-gray-600'
   },
   { 
-    value: 'zapisane', 
-    label: 'Zapisane', 
+    value: 'zapisana', 
+    label: 'Zapisana', 
     color: 'border-t-blue-600 dark:border-t-blue-600'
   },
   { 
-    value: 'wysłane', 
-    label: 'Wysłane', 
+    value: 'wysłana', 
+    label: 'Wysłana', 
     color: 'border-t-purple-600 dark:border-t-purple-600'
   },
   { 

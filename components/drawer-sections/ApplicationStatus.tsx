@@ -4,6 +4,72 @@ import { mockApplications } from "../saved/mockData"
 import { ApplicationStatus as ApplicationStatusType } from "../saved/SavedTableTabs"
 import { cn } from "@/lib/utils"
 import * as React from 'react'
+import { createClient } from "@/utils/supabase/client"
+
+// Mapa statusów z angielskiego na polski
+const statusMapENtoPL = {
+  saved: 'zapisana',
+  send: 'wysłana',
+  contact: 'kontakt',
+  interview: 'rozmowa', 
+  offer: 'oferta',
+  rejected: 'odmowa'
+} as const;
+
+// Mapa statusów z polskiego na angielski
+const statusMapPLtoEN = {
+  zapisana: 'saved',
+  wysłana: 'send',
+  kontakt: 'contact',
+  rozmowa: 'interview',
+  oferta: 'offer',
+  odmowa: 'rejected'
+} as const;
+
+// Typ dla historii statusu
+interface StatusHistory {
+  status: ApplicationStatusType;
+  date: string;
+}
+
+// Funkcja parsująca historię statusów z Supabase
+const parseStatusHistory = (statusChanges: string[] | null): StatusHistory[] => {
+  if (!statusChanges || statusChanges.length === 0) {
+    return [];
+  }
+
+  return statusChanges.map(entry => {
+    // Podział wpisu na status i datę
+    const parts = entry.split('-');
+    
+    if (parts.length < 2) {
+      console.error("Nieprawidłowy format wpisu w historii statusów:", entry);
+      return { status: 'zapisana', date: '' };
+    }
+    
+    // Pobierz status (pierwsza część) i datę (reszta ciągu po pierwszym myślniku)
+    const status = parts[0];
+    // Łączymy resztę części w przypadku, gdyby data zawierała myślniki
+    const dateTime = parts.slice(1).join('-');
+    
+    // Przekształć status z angielskiego na polski
+    const plStatus = statusMapENtoPL[status as keyof typeof statusMapENtoPL] as ApplicationStatusType || 'zapisana';
+    
+    // Formatuj datę
+    let formattedDate = dateTime;
+    try {
+      const date = new Date(dateTime);
+      formattedDate = date.toLocaleDateString('pl-PL');
+    } catch (error) {
+      console.error("Błąd formatowania daty:", error);
+    }
+    
+    return {
+      status: plStatus,
+      date: formattedDate
+    };
+  });
+};
 
 interface ApplicationStatusProps {
   application: typeof mockApplications[0]
@@ -12,34 +78,153 @@ interface ApplicationStatusProps {
 
 export function ApplicationStatus({ application, onStatusChange }: ApplicationStatusProps) {
   const [activeStep, setActiveStep] = React.useState<ApplicationStatusType>(application.status)
+  const [statusHistory, setStatusHistory] = React.useState<StatusHistory[]>([])
+  const [isLoading, setIsLoading] = React.useState(true)
 
+  // Pobieranie historii statusów z Supabase
+  React.useEffect(() => {
+    const fetchStatusHistory = async () => {
+      setIsLoading(true);
+      try {
+        const supabase = createClient();
+        
+        // Pobieranie historii statusów dla konkretnej oferty
+        const { data, error } = await supabase
+          .from('job_offers')
+          .select('status_changes, status')
+          .eq('id', application.id)
+          .single();
+        
+        if (error) {
+          console.error("Błąd podczas pobierania historii statusów:", error);
+          setIsLoading(false);
+          return;
+        }
+        
+        console.log("Pobrane dane statusów:", data);
+        
+        // Parsowanie historii statusów
+        const history = parseStatusHistory(data.status_changes);
+        
+        // Dodanie aktualnego statusu, jeśli nie ma go w historii lub jest inny niż ostatni wpis
+        const currentStatus = statusMapENtoPL[data.status as keyof typeof statusMapENtoPL] as ApplicationStatusType || 'zapisana';
+        
+        if (history.length === 0 || history[history.length - 1].status !== currentStatus) {
+          // Aktualny status nie jest obecny w historii
+          console.log("Dodawanie brakującego statusu:", currentStatus);
+          history.push({
+            status: currentStatus,
+            date: new Date().toLocaleDateString('pl-PL')
+          });
+        }
+        
+        // Ustawienie aktualnego statusu na podstawie danych z bazy
+        setActiveStep(currentStatus);
+        
+        // Sortowanie historii według statusów zgodnie z kolejnością w statusSteps
+        const sortedHistory = [...history].sort((a, b) => {
+          const orderA = statusSteps.findIndex(step => step.status === a.status);
+          const orderB = statusSteps.findIndex(step => step.status === b.status);
+          return orderA - orderB;
+        });
+        
+        setStatusHistory(sortedHistory);
+      } catch (error) {
+        console.error("Wystąpił błąd:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchStatusHistory();
+  }, [application.id, application.status]);
+
+  // Definiowanie kroków statusu z ich odpowiednimi ikonami
   const statusSteps = [
-    { status: 'zapisane' as const, date: '12.03.2024', icon: BookmarkIcon },
-    { status: 'wysłane' as const, date: '13.03.2024', icon: SendIcon },
-    { status: 'kontakt' as const, date: '14.03.2024', icon: PhoneIcon },
-    { status: 'rozmowa' as const, date: '15.03.2024', icon: UsersIcon },
-    { status: 'oferta' as const, date: '16.03.2024', icon: CheckIcon },
-    { status: 'odmowa' as const, date: '16.03.2024', icon: XIcon }
-  ] as const
+    { status: 'zapisana' as const, icon: BookmarkIcon },
+    { status: 'wysłana' as const, icon: SendIcon },
+    { status: 'kontakt' as const, icon: PhoneIcon },
+    { status: 'rozmowa' as const, icon: UsersIcon },
+    { status: 'oferta' as const, icon: CheckIcon },
+    { status: 'odmowa' as const, icon: XIcon }
+  ] as const;
+
+  // Znajdź daty dla każdego statusu z historii
+  const getDateForStatus = (status: ApplicationStatusType): string => {
+    // Szukamy od końca, aby znaleźć najnowszy wpis dla danego statusu
+    for (let i = statusHistory.length - 1; i >= 0; i--) {
+      if (statusHistory[i].status === status) {
+        return statusHistory[i].date;
+      }
+    }
+    return '';
+  };
 
   const getStatusStyles = (status: ApplicationStatusType) => {
     switch (status) {
-      case 'zapisane': return 'bg-blue-600 text-white hover:bg-blue-700'
+      case 'zapisana': return 'bg-blue-600 text-white hover:bg-blue-700'
       case 'kontakt': return 'bg-yellow-600 text-white hover:bg-yellow-700'
       case 'rozmowa': return 'bg-cyan-600 text-white hover:bg-cyan-700'
       case 'oferta': return 'bg-green-600 text-white hover:bg-green-700'
       case 'odmowa': return 'bg-red-600 text-white hover:bg-red-700'
-      case 'wysłane': return 'bg-purple-600 text-white hover:bg-purple-700'
+      case 'wysłana': return 'bg-purple-600 text-white hover:bg-purple-700'
       default: return 'bg-gray-200 text-gray-500 hover:bg-gray-300'
     }
   }
 
   const currentStepIndex = statusSteps.findIndex(step => step.status === activeStep)
 
+  // Zapisywanie zmiany statusu w bazie danych
+  const updateStatusInDatabase = async (newStatus: ApplicationStatusType) => {
+    try {
+      const supabase = createClient();
+      
+      // Mapowanie statusu z polskiego na angielski
+      const dbStatus = statusMapPLtoEN[newStatus as keyof typeof statusMapPLtoEN];
+      
+      // Aktualizacja statusu w bazie danych
+      const { error } = await supabase
+        .from('job_offers')
+        .update({ status: dbStatus })
+        .eq('id', application.id);
+      
+      if (error) {
+        console.error("Błąd podczas aktualizacji statusu:", error);
+        return;
+      }
+      
+      // Natychmiastowa aktualizacja statusHistory po zmianie statusu
+      // Dodajemy nowy wpis do historii statusów
+      setStatusHistory(prev => {
+        // Sprawdź, czy ten status już istnieje w historii
+        const existingIndex = prev.findIndex(h => h.status === newStatus);
+        const currentDate = new Date().toLocaleDateString('pl-PL');
+        
+        if (existingIndex !== -1) {
+          // Jeśli status już istnieje, zaktualizuj jego datę
+          const updated = [...prev];
+          updated[existingIndex] = { ...updated[existingIndex], date: currentDate };
+          return updated;
+        } else {
+          // Jeśli status nie istnieje, dodaj nowy wpis
+          return [...prev, { status: newStatus, date: currentDate }];
+        }
+      });
+      
+    } catch (error) {
+      console.error("Wystąpił nieoczekiwany błąd:", error);
+    }
+  };
+
   const handleStepClick = (status: ApplicationStatusType, index: number) => {
-    setActiveStep(status)
+    setActiveStep(status);
+    
+    // Aktualizacja statusu w bazie danych
+    updateStatusInDatabase(status);
+    
+    // Wywołanie funkcji zwrotnej, jeśli została przekazana
     if (onStatusChange) {
-      onStatusChange(status)
+      onStatusChange(status);
     }
   }
 
@@ -51,7 +236,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
         
         {/* Animowana linia postępu */}
         <div 
-          className="absolute left-12 right-12 top-5 sm:top-[22px] md:top-6 h-[2px] bg-primary/100 transition-all duration-700 ease-in-out z-10"
+          className="absolute left-16 right-12 top-5 sm:top-[22px] md:top-6 h-[2px] bg-primary/100 transition-all duration-700 ease-in-out z-10"
           style={{ 
             width: currentStepIndex >= 0 
               ? `calc(${(85 / (statusSteps.length - 1)) * currentStepIndex}% - ${currentStepIndex === 0 ? 20 : 0}px)`
@@ -67,6 +252,9 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
             : currentStepIndex >= index
           const isCurrent = step.status === activeStep
           const isPrevious = currentStepIndex > index && !isCurrent
+          
+          // Pobierz datę zmiany statusu dla danego kroku (jeśli istnieje)
+          const statusDate = getDateForStatus(step.status);
 
           return (
             <div 
@@ -109,11 +297,12 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
                 )}>
                   {step.status.charAt(0).toUpperCase() + step.status.slice(1)}
                 </span>
+                {/* Wyświetlanie daty z historii statusów */}
                 <span className={cn(
                   "text-[8px] sm:text-[9px] block transition-colors duration-300",
                   isActive ? "text-primary/70" : "text-muted-foreground/70"
                 )}>
-                  {step.date}
+                  {statusDate || (isLoading ? "Ładowanie..." : "-")}
                 </span>
               </div>
             </div>

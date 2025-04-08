@@ -152,7 +152,7 @@ const data = {
   navMain: [
     { title: "Home", url: "/home", icon: Home },
     { title: "Zapisane", url: "/saved", icon: BookmarkCheck },
-    { title: "Kreator CV", url: "/cv-creator", icon: FileText },
+    { title: "Kreator CV", url: "/creator", icon: FileText },
     { title: "Asystent AI", url: "/assist", icon: Brain },
     { title: "Terminarz", url: "/calendar", icon: Calendar },
     { title: "Statystyki", url: "/stats", icon: PieChart },

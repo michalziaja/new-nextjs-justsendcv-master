@@ -23,6 +23,7 @@ import { JobDescription } from "@/components/drawer-sections/JobDescription"
 import { Notes } from "@/components/drawer-sections/Notes"
 import { Trash2 } from "lucide-react"
 import { useState } from "react"
+import { ApplicationStatus as ApplicationStatusType } from "./SavedTableTabs"
 
 interface KeywordWithCategory {
   keyword: string
@@ -35,6 +36,26 @@ interface ApplicationDetailsDrawerProps {
   application: typeof mockApplications[0] | null
   onEdit: () => void
   onDelete?: () => void
+  onStatusChange?: (newStatus: ApplicationStatusType) => void
+  onPriorityChange?: (newPriority: number) => void
+}
+
+// Typ dla oferty pracy z Supabase
+export type JobOffer = {
+  id: string;
+  user_id: string;
+  title: string;
+  company: string;
+  site: string | null;
+  url: string | null;
+  status: string;
+  full_description: string | null;
+  note: string | null;
+  salary: string | null;
+  created_at: string;
+  status_changes: string[];
+  expire: string | null;
+  priority: number;
 }
 
 export function ApplicationDetailsDrawer({
@@ -42,7 +63,9 @@ export function ApplicationDetailsDrawer({
   onClose,
   application,
   onEdit,
-  onDelete
+  onDelete,
+  onStatusChange,
+  onPriorityChange
 }: ApplicationDetailsDrawerProps) {
   const isDesktop = useMediaQuery("(min-width: 900px)")
   const [foundKeywords, setFoundKeywords] = useState<KeywordWithCategory[]>([])
@@ -55,13 +78,20 @@ export function ApplicationDetailsDrawer({
         <div className={`${isDesktop ? 'px-4' : 'px-2'} py-2 h-full`}>
           {/* Górna sekcja - podstawowe informacje */}
           <div className="mb-6">
-            <BasicInfo application={application} isDesktop={isDesktop} />
+            <BasicInfo 
+              application={application} 
+              isDesktop={isDesktop} 
+              onPriorityChange={onPriorityChange}
+            />
           </div>
           {/* Separator */}
           <div className="w-full h-px bg-border mb-6"></div>
           {/* Status aplikacji */}
           <div className="mb-6">
-            <ApplicationStatus application={application} />
+            <ApplicationStatus 
+              application={application} 
+              onStatusChange={onStatusChange}
+            />
           </div>
           <div className="w-full h-px bg-border mb-6"></div>
           
@@ -102,7 +132,7 @@ export function ApplicationDetailsDrawer({
   if (isDesktop) {
     return (
       <Drawer open={isOpen} onOpenChange={onClose} direction="right">
-        <DrawerContent className="w-[900px] !max-w-[900px] bg-white dark:bg-background ml-auto h-full overflow-hidden flex flex-col">
+        <DrawerContent className="w-[1100px] !max-w-[1100px] bg-white dark:bg-background ml-auto h-full overflow-hidden flex flex-col">
           <DrawerHeader className="border-b pb-4  z-10 flex flex-row items-center justify-between">
             <DrawerTitle className="text-2xl font-semibold ml-2">{application.position}</DrawerTitle>
             <div className="flex items-center gap-2">

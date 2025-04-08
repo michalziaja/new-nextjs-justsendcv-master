@@ -5,15 +5,23 @@ import Image from "next/image"
 import { mockApplications } from "../saved/mockData"
 import { cn } from "@/lib/utils"
 import * as React from "react"
+import { createClient } from "@/utils/supabase/client"
 
 interface BasicInfoProps {
   application: typeof mockApplications[0]
   isDesktop: boolean
+  onPriorityChange?: (newPriority: number) => void
 }
 
-export function BasicInfo({ application, isDesktop }: BasicInfoProps) {
+export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInfoProps) {
   const [priority, setPriority] = React.useState(application.priority || 0)
   const [hoverPriority, setHoverPriority] = React.useState(0)
+  const [isUpdating, setIsUpdating] = React.useState(false)
+
+  // Aktualizacja priorytetów przy zmianie aplikacji
+  React.useEffect(() => {
+    setPriority(application.priority || 0)
+  }, [application])
 
   const getPriorityColor = (value: number) => {
     switch(value) {
@@ -26,9 +34,47 @@ export function BasicInfo({ application, isDesktop }: BasicInfoProps) {
     }
   }
 
+  // Funkcja zapisująca priorytet w bazie danych Supabase
+  const updatePriorityInDatabase = async (newPriority: number) => {
+    try {
+      setIsUpdating(true)
+      const supabase = createClient()
+      
+      // Aktualizacja priorytetu w bazie danych
+      const { error } = await supabase
+        .from('job_offers')
+        .update({ priority: newPriority })
+        .eq('id', application.id)
+      
+      if (error) {
+        console.error("Błąd podczas aktualizacji priorytetu:", error)
+        // Przywracamy poprzednią wartość w przypadku błędu
+        setPriority(application.priority || 0)
+        return
+      }
+      
+      // Wywołanie funkcji przekazanej przez props, jeśli istnieje
+      if (onPriorityChange) {
+        onPriorityChange(newPriority)
+      }
+    } catch (error) {
+      console.error("Wystąpił nieoczekiwany błąd:", error)
+      // Przywracamy poprzednią wartość w przypadku błędu
+      setPriority(application.priority || 0)
+    } finally {
+      setIsUpdating(false)
+    }
+  }
+
   const handlePriorityClick = (value: number) => {
-    setPriority(value === priority ? 0 : value)
-    // Dodaj funkcję do zapisywania priorytetu w bazie danych
+    // Ustaw nową wartość priorytetu (0 jeśli kliknięto ten sam poziom)
+    const newPriority = value === priority ? 0 : value
+    
+    // Aktualizacja UI
+    setPriority(newPriority)
+    
+    // Zapisz w bazie danych
+    updatePriorityInDatabase(newPriority)
   }
 
   return (
@@ -75,11 +121,15 @@ export function BasicInfo({ application, isDesktop }: BasicInfoProps) {
           {[1, 2, 3, 4, 5].map((value) => (
             <button
               key={value}
-              onClick={() => handlePriorityClick(value)}
+              onClick={() => !isUpdating && handlePriorityClick(value)}
               onMouseEnter={() => setHoverPriority(value)}
               onMouseLeave={() => setHoverPriority(0)}
-              className="p-0.2 hover:scale-110 transition-transform relative group"
+              className={cn(
+                "p-0.2 hover:scale-110 transition-transform relative group",
+                isUpdating && "opacity-60 cursor-not-allowed"
+              )}
               title={`Priorytet ${value}`}
+              disabled={isUpdating}
             >
               <Circle
                 className={cn(

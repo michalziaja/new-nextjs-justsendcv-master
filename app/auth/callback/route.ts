@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   const redirectTo = requestUrl.searchParams.get("redirect_to")?.toString();
 
   // Sprawdź czy to adres ngrok i użyj go zamiast localhost
-  const ngrockUrl = "https://83e2-2a01-115f-4902-7900-8d6e-e943-9c59-b01e.ngrok-free.app";
+  const ngrockUrl = "https://fe42-2a01-115f-4902-7900-a5f6-1948-b1c1-becc.ngrok-free.app/";
   const finalOrigin = origin.includes("localhost") ? ngrockUrl : origin;
 
   if (code) {
