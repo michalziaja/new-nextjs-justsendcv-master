@@ -336,22 +336,23 @@ export function SavedTable() {
   }
 
   const statusOptions: ApplicationStatus[] = [
+    'zapisana',
     'wysłana',
     'kontakt',
     'rozmowa',
     'oferta',
     'odmowa',
-    'zapisana'
+    
   ]
 
   const getStatusStyles = (status: ApplicationStatus) => {
     switch (status) {
+      case 'zapisana': return 'bg-blue-600 text-white'
       case 'wysłana': return 'bg-purple-600 text-white'
       case 'kontakt': return 'bg-yellow-600 text-white'
       case 'rozmowa': return 'bg-cyan-600 text-white'
       case 'oferta': return 'bg-green-600 text-white'
       case 'odmowa': return 'bg-red-600 text-white'
-      case 'zapisana': return 'bg-blue-600 text-white'
       default: return 'bg-gray-600 text-white'
     }
   }

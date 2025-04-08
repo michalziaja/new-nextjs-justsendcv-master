@@ -5,6 +5,16 @@ import { ApplicationStatus as ApplicationStatusType } from "../saved/SavedTableT
 import { cn } from "@/lib/utils"
 import * as React from 'react'
 import { createClient } from "@/utils/supabase/client"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog"
 
 // Mapa statusów z angielskiego na polski
 const statusMapENtoPL = {
@@ -80,6 +90,10 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
   const [activeStep, setActiveStep] = React.useState<ApplicationStatusType>(application.status)
   const [statusHistory, setStatusHistory] = React.useState<StatusHistory[]>([])
   const [isLoading, setIsLoading] = React.useState(true)
+  
+  // Stan dialogu potwierdzenia
+  const [confirmDialogOpen, setConfirmDialogOpen] = React.useState(false)
+  const [statusToConfirm, setStatusToConfirm] = React.useState<{status: ApplicationStatusType, index: number} | null>(null)
 
   // Pobieranie historii statusów z Supabase
   React.useEffect(() => {
@@ -121,11 +135,11 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
         // Ustawienie aktualnego statusu na podstawie danych z bazy
         setActiveStep(currentStatus);
         
-        // Sortowanie historii według statusów zgodnie z kolejnością w statusSteps
+        // Sortowanie historii według daty (nie według kolejności statusów)
         const sortedHistory = [...history].sort((a, b) => {
-          const orderA = statusSteps.findIndex(step => step.status === a.status);
-          const orderB = statusSteps.findIndex(step => step.status === b.status);
-          return orderA - orderB;
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateA.getTime() - dateB.getTime();
         });
         
         setStatusHistory(sortedHistory);
@@ -174,18 +188,105 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
 
   const currentStepIndex = statusSteps.findIndex(step => step.status === activeStep)
 
+  // Funkcja sprawdzająca, czy jest to cofnięcie statusu
+  const isStatusReversal = (newStatus: ApplicationStatusType): boolean => {
+    const currentIndex = statusSteps.findIndex(step => step.status === activeStep);
+    const newIndex = statusSteps.findIndex(step => step.status === newStatus);
+    
+    // Jeśli nowy status ma mniejszy indeks niż aktualny, to jest to cofnięcie
+    return newIndex < currentIndex;
+  }
+
   // Zapisywanie zmiany statusu w bazie danych
-  const updateStatusInDatabase = async (newStatus: ApplicationStatusType) => {
+  const updateStatusInDatabase = async (newStatus: ApplicationStatusType, removeSubsequentStatuses: boolean = false) => {
     try {
       const supabase = createClient();
       
       // Mapowanie statusu z polskiego na angielski
       const dbStatus = statusMapPLtoEN[newStatus as keyof typeof statusMapPLtoEN];
+      const currentDateTime = new Date().toISOString().replace('T', ' ').substring(0, 19);
       
-      // Aktualizacja statusu w bazie danych
+      // Pobierz aktualną historię statusów z bazy
+      const { data, error: fetchError } = await supabase
+        .from('job_offers')
+        .select('status_changes')
+        .eq('id', application.id)
+        .single();
+      
+      if (fetchError) {
+        console.error("Błąd podczas pobierania historii statusów:", fetchError);
+        return;
+      }
+      
+      let updatedStatusChanges = data.status_changes || [];
+      
+      // Specjalne traktowanie dla statusu "zapisana" (saved)
+      const isSavedStatus = dbStatus === 'saved';
+      
+      if (removeSubsequentStatuses) {
+        // Filtrowanie historii - zachowaj tylko statusy poprzedzające nowy status
+        // lub równe nowemu statusowi (jeśli już występuje)
+        const newStatusIndex = statusSteps.findIndex(s => s.status === newStatus);
+        
+        // Jeśli cofamy się do "zapisana", chcemy zachować tylko oryginalny wpis "saved"
+        if (isSavedStatus) {
+          // Znajdź pierwszy wpis "saved"
+          const savedEntryIndex = updatedStatusChanges.findIndex((entry: string) => 
+            entry.startsWith('saved-')
+          );
+          
+          if (savedEntryIndex !== -1) {
+            // Zachowaj tylko oryginalny wpis "saved"
+            updatedStatusChanges = [updatedStatusChanges[savedEntryIndex]];
+          }
+        } else {
+          // Dla innych statusów, standardowe filtrowanie
+          const parsedHistory = parseStatusHistory(updatedStatusChanges);
+          
+          // Filtruj, zostawiając tylko statusy poprzedzające nowy status w kolejności
+          const filteredHistory = parsedHistory.filter(item => {
+            const itemIndex = statusSteps.findIndex(s => s.status === item.status);
+            return itemIndex <= newStatusIndex;
+          });
+          
+          // Konwertuj z powrotem na format bazy danych
+          updatedStatusChanges = filteredHistory.map(item => {
+            const enStatus = statusMapPLtoEN[item.status as keyof typeof statusMapPLtoEN];
+            // Używamy oryginalnej daty z parsowanej historii
+            const originalEntry = data.status_changes.find((entry: string) => 
+              entry.startsWith(enStatus + '-')
+            );
+            return originalEntry || `${enStatus}-${item.date}`;
+          });
+        }
+      }
+      
+      // Dodaj nowy wpis historii, ale tylko jeśli nie jest to "saved" lub jeszcze nie ma tego statusu
+      const newStatusEntry = `${dbStatus}-${currentDateTime}`;
+      
+      // Sprawdź, czy ten status już istnieje
+      const existingIndex = updatedStatusChanges.findIndex((entry: string) => 
+        entry.startsWith(dbStatus + '-')
+      );
+      
+      if (existingIndex !== -1) {
+        // Jeśli to status "saved", nie aktualizujemy daty - zachowujemy oryginalną
+        if (!isSavedStatus) {
+          updatedStatusChanges[existingIndex] = newStatusEntry;
+        }
+        // Dla "saved" nie zmieniamy istniejącego wpisu - zostawiamy oryginalną datę
+      } else {
+        // Status nie istnieje jeszcze w historii, dodajemy nowy wpis
+        updatedStatusChanges.push(newStatusEntry);
+      }
+      
+      // Aktualizacja statusu i historii statusów w bazie danych
       const { error } = await supabase
         .from('job_offers')
-        .update({ status: dbStatus })
+        .update({
+          status: dbStatus,
+          status_changes: updatedStatusChanges
+        })
         .eq('id', application.id);
       
       if (error) {
@@ -193,34 +294,54 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
         return;
       }
       
-      // Natychmiastowa aktualizacja statusHistory po zmianie statusu
-      // Dodajemy nowy wpis do historii statusów
-      setStatusHistory(prev => {
-        // Sprawdź, czy ten status już istnieje w historii
-        const existingIndex = prev.findIndex(h => h.status === newStatus);
-        const currentDate = new Date().toLocaleDateString('pl-PL');
-        
-        if (existingIndex !== -1) {
-          // Jeśli status już istnieje, zaktualizuj jego datę
-          const updated = [...prev];
-          updated[existingIndex] = { ...updated[existingIndex], date: currentDate };
-          return updated;
-        } else {
-          // Jeśli status nie istnieje, dodaj nowy wpis
-          return [...prev, { status: newStatus, date: currentDate }];
-        }
+      // Pobierz zaktualizowaną historię statusów
+      const { data: updatedData, error: refetchError } = await supabase
+        .from('job_offers')
+        .select('status_changes')
+        .eq('id', application.id)
+        .single();
+      
+      if (refetchError) {
+        console.error("Błąd podczas pobierania zaktualizowanej historii statusów:", refetchError);
+        return;
+      }
+      
+      // Aktualizacja lokalnego stanu historii
+      const updatedHistory = parseStatusHistory(updatedData.status_changes);
+      
+      // Sortuj historię wg daty
+      const sortedHistory = [...updatedHistory].sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateA.getTime() - dateB.getTime();
       });
+      
+      setStatusHistory(sortedHistory);
       
     } catch (error) {
       console.error("Wystąpił nieoczekiwany błąd:", error);
     }
   };
+  
+  // Obsługa próby zmiany statusu
+  const handleStatusChangeAttempt = (status: ApplicationStatusType, index: number) => {
+    // Sprawdź, czy jest to cofnięcie statusu
+    if (isStatusReversal(status)) {
+      // Otwórz dialog potwierdzenia
+      setStatusToConfirm({status, index});
+      setConfirmDialogOpen(true);
+    } else {
+      // Jeśli nie jest to cofnięcie, zmień status normalnie
+      handleConfirmedStatusChange(status, index, false);
+    }
+  }
 
-  const handleStepClick = (status: ApplicationStatusType, index: number) => {
+  // Obsługa potwierdzonej zmiany statusu
+  const handleConfirmedStatusChange = (status: ApplicationStatusType, index: number, removeSubsequentStatuses: boolean) => {
     setActiveStep(status);
     
     // Aktualizacja statusu w bazie danych
-    updateStatusInDatabase(status);
+    updateStatusInDatabase(status, removeSubsequentStatuses);
     
     // Wywołanie funkcji zwrotnej, jeśli została przekazana
     if (onStatusChange) {
@@ -229,6 +350,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
   }
 
   return (
+    <>
     <div className="py-2">
       <div className="relative flex items-center justify-between gap-x-4 sm:gap-x-4 md:gap-x-4">
         {/* Linia tła */}
@@ -252,9 +374,9 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
             : currentStepIndex >= index
           const isCurrent = step.status === activeStep
           const isPrevious = currentStepIndex > index && !isCurrent
-          
-          // Pobierz datę zmiany statusu dla danego kroku (jeśli istnieje)
-          const statusDate = getDateForStatus(step.status);
+            
+            // Pobierz datę zmiany statusu dla danego kroku (jeśli istnieje)
+            const statusDate = getDateForStatus(step.status);
 
           return (
             <div 
@@ -278,7 +400,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
                 title={step.status}
                 onClick={() => {
                   if (!(step.status === 'oferta' && activeStep === 'odmowa')) {
-                    handleStepClick(step.status, index)
+                      handleStatusChangeAttempt(step.status, index)
                   }
                 }}
               >
@@ -297,12 +419,12 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
                 )}>
                   {step.status.charAt(0).toUpperCase() + step.status.slice(1)}
                 </span>
-                {/* Wyświetlanie daty z historii statusów */}
+                  {/* Wyświetlanie daty z historii statusów */}
                 <span className={cn(
                   "text-[8px] sm:text-[9px] block transition-colors duration-300",
                   isActive ? "text-primary/70" : "text-muted-foreground/70"
                 )}>
-                  {statusDate || (isLoading ? "Ładowanie..." : "-")}
+                    {statusDate || (isLoading ? "Ładowanie..." : "-")}
                 </span>
               </div>
             </div>
@@ -310,5 +432,35 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
         })}
       </div>
     </div>
+
+      {/* Dialog potwierdzenia zmiany statusu */}
+      <AlertDialog open={confirmDialogOpen} onOpenChange={setConfirmDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Cofnięcie statusu</AlertDialogTitle>
+            <AlertDialogDescription>
+              Chcesz cofnąć status aplikacji do "{statusToConfirm?.status}". 
+              Ta operacja usunie wszystkie późniejsze statusy z historii. Czy na pewno chcesz kontynuować?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel onClick={() => setConfirmDialogOpen(false)}>
+              Anuluj
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => {
+                if (statusToConfirm) {
+                  handleConfirmedStatusChange(statusToConfirm.status, statusToConfirm.index, true);
+                  setConfirmDialogOpen(false);
+                }
+              }}
+              className="bg-red-600 hover:bg-red-700"
+            >
+              Tak, cofnij status
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </>
   )
 }
