@@ -139,15 +139,6 @@ export function ApplicationDetailsDrawer({
               <Button
                 variant="outline"
                 size="sm"
-                onClick={onEdit}
-                className="flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-                Edytuj
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
                 onClick={onDelete}
                 className="flex items-center gap-2 text-red-600 hover:text-red-700"
               >
@@ -179,29 +170,12 @@ export function ApplicationDetailsDrawer({
             <Button
               variant="outline"
               size="sm"
-              onClick={onEdit}
-              className="flex items-center gap-2"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-              Edytuj
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
               onClick={onDelete}
               className="flex items-center gap-2 text-red-600 hover:text-red-700"
             >
               <Trash2 className="h-4 w-4" />
               Usuń
             </Button>
-            {/* <Button
-              variant="outline"
-              size="sm"
-              onClick={onClose}
-              className="flex items-center gap-2"
-            >
-              Zamknij
-            </Button> */}
           </div>
         </DialogHeader>
         <div className="flex-1 overflow-hidden py-0">

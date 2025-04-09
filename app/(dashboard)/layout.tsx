@@ -29,7 +29,7 @@ export default async function DashboardLayout({
 
   const userData = {
     id: user.id,
-    name: user.user_metadata?.name || "User",
+    name: user.user_metadata?.name || user.user_metadata?.first_name + " " + user.user_metadata?.last_name || "User",
     email: user.email || "",
     avatar: user.user_metadata?.avatar_url || null,
     isSubscribed: subscription?.plan === "premium" || false,
