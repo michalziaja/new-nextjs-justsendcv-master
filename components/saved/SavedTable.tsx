@@ -646,8 +646,21 @@ export function SavedTable() {
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         application={selectedApplication ? {
-            ...selectedApplication,
-            status: applications.find(a => a.id === selectedApplication!.id)?.status || selectedApplication!.status
+            id: selectedApplication.id,
+            user_id: '', // Wypełniamy wymagane pola z JobOffer
+            title: selectedApplication.position,
+            company: selectedApplication.company,
+            url: selectedApplication.url,
+            site: selectedApplication.site,
+            status: selectedApplication.dbStatus,
+            full_description: selectedApplication.description,
+            note: null,
+            salary: null,
+            created_at: new Date(selectedApplication.date.split('.').reverse().join('-')).toISOString(),
+            status_changes: selectedApplication.status_changes,
+            expire: selectedApplication.validUntil !== '-' ? 
+                new Date(selectedApplication.validUntil.split('.').reverse().join('-')).toISOString() : null,
+            priority: selectedApplication.priority
         } : null}
         onEdit={() => {}}
         onStatusChange={(newStatus) => {

@@ -14,7 +14,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { mockApplications } from "./mockData"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { BasicInfo } from "@/components/drawer-sections/BasicInfo"
 import { ApplicationStatus } from "@/components/drawer-sections/ApplicationStatus"
@@ -33,7 +32,7 @@ interface KeywordWithCategory {
 interface ApplicationDetailsDrawerProps {
   isOpen: boolean
   onClose: () => void
-  application: typeof mockApplications[0] | null
+  application: JobOffer | null
   onEdit: () => void
   onDelete?: () => void
   onStatusChange?: (newStatus: ApplicationStatusType) => void
@@ -134,7 +133,7 @@ export function ApplicationDetailsDrawer({
       <Drawer open={isOpen} onOpenChange={onClose} direction="right">
         <DrawerContent className="w-[1100px] !max-w-[1100px] bg-white dark:bg-background ml-auto h-full overflow-hidden flex flex-col">
           <DrawerHeader className="border-b pb-4  z-10 flex flex-row items-center justify-between">
-            <DrawerTitle className="text-2xl font-semibold ml-2">{application.position}</DrawerTitle>
+            <DrawerTitle className="text-2xl font-semibold ml-2">{application.title}</DrawerTitle>
             <div className="flex items-center gap-2">
               <Button
                 variant="outline"
@@ -165,7 +164,7 @@ export function ApplicationDetailsDrawer({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="w-[95vw] h-[92vh] overflow-hidden flex flex-col sm:max-w-[95vw] max-w-[98vw]">
         <DialogHeader className="pb-0 pt-2 z-10 flex flex-row items-center justify-between">
-          <DialogTitle className="text-xl font-semibold ml-2">{application.position}</DialogTitle>
+          <DialogTitle className="text-xl font-semibold ml-2">{application.title}</DialogTitle>
           <div className="flex items-center gap-1">
             <Button
               variant="outline"

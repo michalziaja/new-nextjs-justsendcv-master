@@ -1,6 +1,6 @@
 // components/drawer-sections/JobDescription.tsx
-import { mockApplications } from "../saved/mockData"
 import { useState, useEffect } from "react"
+import { JobOffer } from "../saved/ApplicationDetailsDrawer"
 
 interface KeywordWithCategory {
   keyword: string
@@ -8,13 +8,13 @@ interface KeywordWithCategory {
 }
 
 interface JobDescriptionProps {
-  application: typeof mockApplications[0]
+  application: JobOffer
   isDesktop: boolean
   keywords?: KeywordWithCategory[]
 }
 
 export function JobDescription({ application, isDesktop, keywords = [] }: JobDescriptionProps) {
-  const [highlightedText, setHighlightedText] = useState(application?.description || '')
+  const [highlightedText, setHighlightedText] = useState(application?.full_description || '')
 
   // Funkcja zwracająca klasę CSS dla danej kategorii
   const getCategoryStyle = (category: KeywordWithCategory['category']) => {
@@ -52,8 +52,8 @@ export function JobDescription({ application, isDesktop, keywords = [] }: JobDes
   }
 
   useEffect(() => {
-    if (application?.description) {
-      const highlighted = highlightKeywords(application.description, keywords)
+    if (application?.full_description) {
+      const highlighted = highlightKeywords(application.full_description, keywords)
       setHighlightedText(highlighted)
     }
   }, [application, keywords])

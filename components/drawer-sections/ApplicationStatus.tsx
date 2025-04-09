@@ -21,16 +21,16 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
-import { mockApplications } from "../saved/mockData" // Nadal potrzebne dla typu props
+import { JobOffer } from "../saved/ApplicationDetailsDrawer"
 
 interface ApplicationStatusProps {
-  application: typeof mockApplications[0] // Lub bardziej konkretny typ, jeśli mock nie jest już używany
+  application: JobOffer
   onStatusChange?: (newStatus: ApplicationStatusType) => void
 }
 
 export function ApplicationStatus({ application, onStatusChange }: ApplicationStatusProps) {
   // Inicjalizuj activeStep na podstawie application.status (który powinien być PL)
-  const [activeStep, setActiveStep] = React.useState<ApplicationStatusType>(application.status)
+  const [activeStep, setActiveStep] = React.useState<ApplicationStatusType>(application.status as ApplicationStatusType)
   const [statusHistory, setStatusHistory] = React.useState<StatusHistory[]>([])
   const [isLoading, setIsLoading] = React.useState(true)
 
@@ -53,7 +53,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
           console.error("Błąd podczas pobierania historii statusów:", error);
            setStatusHistory([]); // Ustaw pustą historię w razie błędu
            // Ustaw activeStep na podstawie przekazanego application.status (PL) jako fallback
-           setActiveStep(application.status);
+           setActiveStep(application.status as ApplicationStatusType);
           setIsLoading(false);
           return;
         }
@@ -81,7 +81,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
               history.push({
                  status: currentStatusDB,
                  // Użyj daty utworzenia aplikacji jako przybliżonej daty pierwszego statusu
-                 date: application.date || new Date().toLocaleDateString('pl-PL')
+                 date: application.created_at ? new Date(application.created_at).toLocaleDateString('pl-PL') : new Date().toLocaleDateString('pl-PL')
              });
         }
 
@@ -108,7 +108,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
       } catch (error) {
         console.error("Wystąpił błąd:", error);
         setStatusHistory([]);
-        setActiveStep(application.status); // Fallback
+        setActiveStep(application.status as ApplicationStatusType); // Fallback
       } finally {
         setIsLoading(false);
       }

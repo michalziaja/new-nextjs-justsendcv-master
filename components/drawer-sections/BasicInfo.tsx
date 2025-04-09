@@ -2,13 +2,13 @@
 import { Button } from "@/components/ui/button"
 import { Building2, ExternalLink, Timer, ArrowUpCircle, Circle } from "lucide-react"
 import Image from "next/image"
-import { mockApplications } from "../saved/mockData"
 import { cn } from "@/lib/utils"
 import * as React from "react"
 import { createClient } from "@/utils/supabase/client"
+import { JobOffer } from "../saved/ApplicationDetailsDrawer"
 
 interface BasicInfoProps {
-  application: typeof mockApplications[0]
+  application: JobOffer
   isDesktop: boolean
   onPriorityChange?: (newPriority: number) => void
 }
@@ -89,17 +89,18 @@ export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInf
       </div>
 
       {/* Link */}
-      <div className="space-y-1">
-        <div className="flex items-center gap-2">
+      <div className="space-y-2 mt-1">
+        <h3 className="font-medium text-md text-foreground flex items-center gap-2">
           <ExternalLink className="h-4 w-4 text-gray-600 dark:text-gray-200" />
+          <span className="text-gray-600 dark:text-gray-200">Link:</span>
           <Button 
             variant="ghost" 
             className="h-auto p-0 bg-transparent text-primary hover:text-primary/80"
-            onClick={() => window.open(application.url, '_blank')}
+            onClick={() => application.url && window.open(application.url, '_blank')}
           >
             <span className="truncate">{application.site}</span>
           </Button>
-        </div>
+        </h3>
       </div>
 
       {/* Ważna do */}
@@ -107,7 +108,7 @@ export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInf
         <h3 className="font-medium text-md flex items-center gap-1">
           <Timer className="h-4 w-4 text-gray-600 dark:text-gray-200" />
           <span className="text-gray-600 dark:text-gray-200">Ważna do:</span>
-          <p className="text-sm">{application.validUntil}</p>
+          <p className="text-sm">{application.expire ? application.expire.substring(0, 10) : "-"}</p>
         </h3>
       </div>
 

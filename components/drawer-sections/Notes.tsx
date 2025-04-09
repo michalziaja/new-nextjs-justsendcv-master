@@ -1,10 +1,12 @@
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { mockApplications } from "../saved/mockData"
 import { PlusCircle, Edit2 } from "lucide-react"
+import * as React from "react"
+import { createClient } from "@/utils/supabase/client"
+import { JobOffer } from "../saved/ApplicationDetailsDrawer"
 
 interface NotesProps {
-  application: typeof mockApplications[0]
+  application: JobOffer
   isDesktop: boolean
 }
 
