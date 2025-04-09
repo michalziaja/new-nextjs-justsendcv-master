@@ -504,13 +504,12 @@ export function SavedTable() {
       </div>
 
       {/* Zakładki statusów - bez zmian */}
-      <SavedTableTabs
-        activeStatus={status}
-        onStatusChange={handleStatusFilterChange}
-      />
+      <div className="-ml-1">
+        <SavedTableTabs activeStatus={status} onStatusChange={handleStatusFilterChange} />
+      </div>
 
       {/* Tabela */}
-      <div className="rounded-md border-2 bg-white border-gray-300 ml-1 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
+      <div className="rounded-md border-2 bg-white border-gray-300 ml-0 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
         <Table>
           <TableHeader className="sticky top-0 bg-gray-50 dark:bg-background z-10">
             <TableRow>

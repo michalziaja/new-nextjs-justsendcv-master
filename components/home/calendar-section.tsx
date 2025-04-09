@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CalendarDays } from "lucide-react"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export function CalendarSection() {
   return (
@@ -9,12 +10,17 @@ export function CalendarSection() {
       shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
       dark:shadow-slate-900/20
       bg-white dark:bg-slate-900">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 pt-2">
+      <CardHeader className="flex flex-row items-center justify-between space-y-0">
+        <div className="flex items-center gap-2">
           <CalendarDays className="h-5 w-5 text-blue-500 dark:text-blue-400" />
-          Terminarz
-        </CardTitle>
-        
+          <CardTitle>Terminarz</CardTitle>
+        </div>
+        <Tabs defaultValue="tasks" className="w-[250px]">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="tasks">Zadania</TabsTrigger>
+            <TabsTrigger value="calendar">Kalendarz</TabsTrigger>
+          </TabsList>
+        </Tabs>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

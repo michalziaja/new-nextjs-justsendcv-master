@@ -30,27 +30,28 @@ interface StatCardProps {
 function StatCard({ title, value, description, icon, borderColor, darkBorderColor, isLoading = false }: StatCardProps) {
   return (
     <Card className={`
-      border-2 border-white dark:border-gray-800 
+      border border-gray-200 dark:border-gray-800
       ${borderColor} ${darkBorderColor}
       shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
       dark:shadow-slate-900/20
-      bg-white dark:bg-slate-900
-      transition-all duration-100
-      gap-2 rounded-md
+      bg-white dark:bg-sidebar
+      transition-all duration-200
+      rounded-md
+      border-t-[4px]
     `}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">
-        <CardTitle className="text-sm font-sm md:text-base lg:text-base xl:text-base">{title}</CardTitle>
+        <CardTitle className="-mt-4 text-sm font-sm md:text-base lg:text-base xl:text-base">{title}</CardTitle>
         {icon}
       </CardHeader>
       <CardContent>
-        <div className="text-md md:text-2xl lg:text-2xl xl:text-2xl font-bold flex items-center">
+        <div className="-mt-6 mb-2 text-md md:text-2xl lg:text-2xl xl:text-2xl font-bold flex items-center">
           {isLoading ? (
             <Skeleton className="h-8 w-10" />
           ) : (
             value
           )}
         </div>
-        <p className="text-xs text-muted-foreground hidden min-[700px]:block">{description}</p>
+        <p className="text-xs text-muted-foreground hidden min-[700px]:block -mb-2">{description}</p>
       </CardContent>
     </Card>
   )
@@ -128,8 +129,8 @@ export function StatCards() {
         value={statusCounts.saved}
         description="Zapisane oferty"
         icon={<FileText className="h-6 w-6 text-blue-500 dark:text-blue-400" />}
-        borderColor="border-t-blue-500"
-        darkBorderColor="dark:border-t-blue-400"
+        borderColor="border-t-blue-600"
+        darkBorderColor="dark:border-t-blue-600"
         isLoading={isLoading}
       />
       <StatCard 
@@ -137,8 +138,8 @@ export function StatCards() {
         value={statusCounts.send}
         description="Aplikacje wysłane"
         icon={<Send className="h-6 w-6 text-purple-500 dark:text-purple-400" />}
-        borderColor="border-t-purple-500"
-        darkBorderColor="dark:border-t-purple-400"
+        borderColor="border-t-purple-600"
+        darkBorderColor="dark:border-t-purple-600"
         isLoading={isLoading}
       />
       <StatCard 
@@ -146,8 +147,8 @@ export function StatCards() {
         value={statusCounts.contact}
         description="Kontakt od HR"
         icon={<Mail className="h-6 w-6 text-yellow-500 dark:text-yellow-400" />}
-        borderColor="border-t-yellow-500"
-        darkBorderColor="dark:border-t-yellow-400"
+        borderColor="border-t-yellow-600"
+        darkBorderColor="dark:border-t-yellow-600"
         isLoading={isLoading}
       />
       <StatCard 
@@ -155,8 +156,8 @@ export function StatCards() {
         value={statusCounts.interview}
         description="Umówione rozmowy"
         icon={<PhoneCall className="h-6 w-6 text-cyan-500 dark:text-cyan-400" />}
-        borderColor="border-t-cyan-500"
-        darkBorderColor="dark:border-t-cyan-400"
+        borderColor="border-t-cyan-600"
+        darkBorderColor="dark:border-t-cyan-600"
         isLoading={isLoading}
       />
       <StatCard 
@@ -164,8 +165,8 @@ export function StatCards() {
         value={statusCounts.offer}
         description="Otrzymane oferty"
         icon={<ClipboardList className="h-6 w-6 text-green-500 dark:text-green-400" />}
-        borderColor="border-t-green-500"
-        darkBorderColor="dark:border-t-green-400"
+        borderColor="border-t-green-600"
+        darkBorderColor="dark:border-t-green-600"
         isLoading={isLoading}
       />
       <StatCard 
@@ -173,8 +174,8 @@ export function StatCards() {
         value={statusCounts.rejected}
         description="Odmowy"
         icon={<X className="h-6 w-6 text-red-500 dark:text-red-400" />}
-        borderColor="border-t-red-500"
-        darkBorderColor="dark:border-t-red-400"
+        borderColor="border-t-red-600"
+        darkBorderColor="dark:border-t-red-600"
         isLoading={isLoading}
       />
     </div>

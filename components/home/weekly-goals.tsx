@@ -225,8 +225,8 @@ export function WeeklyGoals() {
                   value={newGoalValue}
                   onChange={(e) => setNewGoalValue(e.target.value)}
                 />
-              </div>
-              <Button 
+        </div>
+        <Button 
                 onClick={saveNewGoal} 
                 disabled={isSavingGoal} 
                 className="w-full"
@@ -242,14 +242,14 @@ export function WeeklyGoals() {
                     Zapisz cel
                   </span>
                 )}
-              </Button>
+        </Button>
             </div>
           </PopoverContent>
         </Popover>
       </CardHeader>
       <CardContent className="flex-1">
         {isLoadingGoal || isLoadingApplications ? (
-          <div className="space-y-4">
+        <div className="space-y-4">
             {/* Skeleton dla paska postępu */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
@@ -292,51 +292,51 @@ export function WeeklyGoals() {
           </div>
         ) : (
           <div className="space-y-4">
-            {/* Pasek postępu */}
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+          {/* Pasek postępu */}
+          <div className="space-y-2">
+            <div className="flex justify-between text-sm">
                 <span className="font-medium">{weeklyApplications} z {weeklyGoal} wysłanych aplikacji</span>
-                <span className="text-muted-foreground">{Math.round(progress)}%</span>
-              </div>
-              <div className="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full">
-                <div 
-                  className={`h-full rounded-full transition-all duration-300 ${getProgressColor(progress)}`}
-                  style={{ width: `${Math.min(100, progress)}%` }}
-                />
-              </div>
+              <span className="text-muted-foreground">{Math.round(progress)}%</span>
             </div>
+            <div className="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full">
+              <div 
+                className={`h-full rounded-full transition-all duration-300 ${getProgressColor(progress)}`}
+                  style={{ width: `${Math.min(100, progress)}%` }}
+              />
+            </div>
+          </div>
 
-            {/* Statystyki */}
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              <div>
-                <p className="text-sm font-medium flex items-center gap-1">
-                  <TrendingUp className="h-4 w-4 text-green-500" />
+          {/* Statystyki */}
+          <div className="grid grid-cols-2 gap-4 pt-2">
+            <div>
+              <p className="text-sm font-medium flex items-center gap-1">
+                <TrendingUp className="h-4 w-4 text-green-500" />
                   Średnio dziennie
-                </p>
+              </p>
                 <p className="text-2xl font-bold">{dailyAverage}</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium">Pozostało</p>
+            </div>
+            <div>
+              <p className="text-sm font-medium">Pozostało</p>
                 <p className="text-2xl font-bold">{Math.max(0, weeklyGoal - weeklyApplications)}</p>
               </div>
-            </div>
+          </div>
 
-            {/* Dni tygodnia */}
-            <div className="grid grid-cols-7 gap-1 pt-2">
+          {/* Dni tygodnia */}
+          <div className="grid grid-cols-7 gap-1 pt-2">
               {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'Sb', 'Nd'].map((day, index) => {
                 const appCount = getApplicationsForDay(index);
                 return (
-                  <div key={day} className="text-center">
-                    <div className="text-xs text-muted-foreground">{day}</div>
-                    <div className={`h-1.5 mt-1 rounded-full ${
-                      index <= adjustedCurrentDay 
-                        ? 'bg-blue-500 dark:bg-blue-400' 
-                        : 'bg-gray-200 dark:bg-gray-800'
-                    }`} />
-                    <div className="text-xs font-medium mt-1">
+              <div key={day} className="text-center">
+                <div className="text-xs text-muted-foreground">{day}</div>
+                <div className={`h-1.5 mt-1 rounded-full ${
+                  index <= adjustedCurrentDay 
+                    ? 'bg-blue-500 dark:bg-blue-400' 
+                    : 'bg-gray-200 dark:bg-gray-800'
+                }`} />
+                <div className="text-xs font-medium mt-1">
                       {index <= adjustedCurrentDay ? appCount : '-'}
-                    </div>
-                  </div>
+                </div>
+              </div>
                 );
               })}
             </div>

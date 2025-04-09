@@ -40,6 +40,8 @@ export function SiteHeader() {
         return "Kreator CV"
       case "/saved":
         return "Zapisane"
+      case "/scheduler":
+        return "Terminarz"
       default:
         return "Home"
     }

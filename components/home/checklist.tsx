@@ -21,7 +21,7 @@ const tasks = [
         completed: false
       },
       {
-        title: "Ustaw cel tygodniowy",
+        title: "Ustaw cel",
         icon: <Target className="h-4 w-4 text-indigo-500" />,
         completed: false
       },

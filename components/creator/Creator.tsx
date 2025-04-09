@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { mockApplications } from '@/components/saved/mockData';
+// import { mockApplications } from '@/components/saved/mockData';
 import { useCV } from './CVContext';
 
 // Komponent dla lewej strony - kreator
