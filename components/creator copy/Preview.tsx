@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { JobOffer } from './mockData';
 import { useCV, CVData } from './CVContext';
-import { IoIosCreate } from "react-icons/io";
 
 // Komponent dla podglądu CV w szablonie nowoczesnym
 const ModernTemplate: React.FC<{ data: CVData; selectedJob?: JobOffer | null }> = ({ data, selectedJob }) => {
@@ -128,8 +127,13 @@ const formatDate = (dateString: string) => {
   }
 };
 
+// Dodaję definicję interfejsu dla props
+interface PreviewProps {
+  toggleButton?: React.ReactNode;
+}
+
 // Komponent dla prawej strony - podgląd
-export default function Preview({ switchMode }: { switchMode?: () => void }) {
+export default function Preview({ toggleButton }: PreviewProps) {
   const { cvData, selectedJob, selectedTemplate } = useCV();
   const [zoom, setZoom] = useState(100); // Startowa wartość 90% jako nowe 100%
   const [scrollNeeded, setScrollNeeded] = useState(true);
@@ -251,17 +255,17 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
   };
 
   return (
-    <div className="h-[calc(87vh)] flex flex-col bg-transparent overflow-hidden">
-      {/* Kontener dla nagłówka z kontrolkami i przycisku przełączania obok */}
-      <div className="flex items-center gap-0">
-        {/* Nagłówek z kontrolkami */}
-        <div className="p-2 md:p-3 xl:p-4 flex-grow h-14 mr-2 ml-3 bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center flex">
+    <div className="h-[calc(90vh-4.5rem)] flex flex-col bg-transparent overflow-hidden">
+      {/* Nagłówek z kontrolkami */}
+      <div className="flex h-16 mb-1 gap-2">
+        {/* Panel z kontrolkami */}
+        <div className={`p-4 ${toggleButton ? 'flex-1' : 'w-full'} ml-2 mr-0 flex h-12 bg-white dark:bg-sidebar rounded-md shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center`}>
           {/* Lewa strona - zoom */}
           <div className="flex-1 flex justify-start">
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-2">
               <button 
                 onClick={() => setZoom(Math.max(50, zoom - 5))}
-                className="p-0 hover:bg-gray-200 rounded"
+                className="p-1 hover:bg-gray-200 rounded"
                 aria-label="Zmniejsz"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" /></svg>
@@ -269,7 +273,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
               <span className="text-sm">{Math.round(zoom)}%</span>
               <button 
                 onClick={() => setZoom(Math.min(100, zoom + 5))}
-                className="p-0 hover:bg-gray-200 rounded mr-1"
+                className="p-1 hover:bg-gray-200 rounded"
                 aria-label="Zwiększ"
                 disabled={zoom >= 110}
               >
@@ -277,11 +281,11 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
               </button>
         </div>
       </div>
-      
+        
           {/* Środek - zmiana wyglądu i języka */}
           <div className="flex-1 flex items-center justify-center gap-2 md:gap-3">
             <button 
-              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-blue-600 hover:bg-blue-700 text-white px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
+              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)]  items-center bg-blue-600 hover:bg-blue-700 text-white px-2 md:px-3 py-1 rounded-md text-sm md:text-sm whitespace-nowrap"
               onClick={() => console.log("Zmień wygląd")}
             >
               <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +296,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
             </button>
             
             <button
-              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-gray-200 hover:bg-gray-300 px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
+              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)]  items-center bg-gray-200 hover:bg-gray-300 px-2 md:px-3 py-1 rounded-md text-sm md:text-sm whitespace-nowrap"
               onClick={() => console.log("Zmień język dokumentu")}
             >
               <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" /></svg>
@@ -302,9 +306,9 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
           </div>
           
           {/* Prawa strona - pobieranie */}
-          <div className="ml-3 flex-1 flex justify-end">
+          <div className="flex-1 flex justify-end">
             <button 
-              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-green-600 hover:bg-green-700 text-white px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
+              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-green-600 hover:bg-green-700 text-white px-2 md:px-3 py-1 rounded-md text-sm md:text-sm whitespace-nowrap"
               onClick={() => console.log("Pobierz PDF")}
             >
               <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
@@ -314,32 +318,27 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
           </div>
         </div>
         
-        {/* Przycisk przełączania obok nagłówka */}
-        {switchMode && (
-          <button
-            onClick={switchMode}
-            className="h-14 w-14 bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex items-center justify-center mr-2"
-            title="Przełącz na kreator"
-          >
-            <IoIosCreate className="w-8 h-8 text-blue-600" />
-          </button>
+        {/* Przycisk przełączania (jeśli przekazany) */}
+        {toggleButton && (
+          <div className="mr-2">
+            {toggleButton}
+          </div>
         )}
               </div>
       
       {/* Kontener główny ze scrollowaniem */}
       <div 
         ref={containerRef}
-        className="flex-1 mt-4 bg-transparent flex justify-center px-0 pb-6 pt-0 relative"
-        style={{
-          overflowY: scrollNeeded ? 'auto' : 'hidden',
+        className="flex-1 ml-2 mr-2 mt-4 bg-transparent flex justify-center px-0 pb-6 pt-0 relative"
+        style={{ 
           overflowX: 'hidden',
+          overflowY: scrollNeeded ? 'auto' : 'hidden',
           alignItems: scrollNeeded ? 'flex-start' : 'center',
           justifyContent: 'center',
           display: 'flex',
           height: '100%',
           scrollbarWidth: 'thin',
           scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
-          WebkitOverflowScrolling: 'touch'
         }}
       >
         {/* Wrapper dla dokumentu z zachowaniem proporcji */}

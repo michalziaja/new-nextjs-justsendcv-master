@@ -1,12 +1,16 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { mockJobOffers } from './mockData';
 import { useCV } from './CVContext';
-import { IoMdEye } from "react-icons/io";
+
+// Dodaję definicję interfejsu dla props
+interface CreatorProps {
+  toggleButton?: React.ReactNode;
+}
 
 // Komponent dla lewej strony - kreator
-export default function Creator({ switchMode }: { switchMode?: () => void }) {
+export default function Creator({ toggleButton }: CreatorProps) {
   // Używamy kontekstu CV
   const {
     cvData,
@@ -18,28 +22,6 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
     activeSection,
     setActiveSection
   } = useCV();
-  
-  // Ref dla kontenera z plakietkami i stan do śledzenia przewijania
-  const badgeContainerRef = useRef<HTMLDivElement>(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-
-  // Sprawdzanie, czy kontener wymaga przewijania
-  useEffect(() => {
-    const checkScrolling = () => {
-      if (badgeContainerRef.current) {
-        const { scrollWidth, clientWidth } = badgeContainerRef.current;
-        setIsScrolling(scrollWidth > clientWidth);
-      }
-    };
-
-    // Sprawdź na początku i przy zmianach rozmiaru okna
-    checkScrolling();
-    window.addEventListener('resize', checkScrolling);
-    
-    return () => {
-      window.removeEventListener('resize', checkScrolling);
-    };
-  }, []);
   
   // Dostępne szablony CV
   const templates = [
@@ -193,34 +175,34 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
                 <h1 className="font-medium text-xl text-gray-900 mb-4">1. Wybierz ofertę pracy</h1>
                 <div className="max-h-48 overflow-y-auto border rounded-lg p-2">
                   {mockJobOffers.map(job => (
-                <div 
-                  key={job.id} 
-                  className={`p-3 mb-2 rounded cursor-pointer hover:bg-gray-100 transition ${selectedJob?.id === job.id ? 'bg-blue-50 border border-blue-300' : 'bg-white border'}`}
-                  onClick={() => setSelectedJob(job)}
-                >
-                  <h4 className="font-medium">{job.position}</h4>
-                  <p className="text-sm text-gray-600">{job.company}</p>
+                    <div 
+                      key={job.id} 
+                      className={`p-3 mb-2 rounded cursor-pointer hover:bg-gray-100 transition ${selectedJob?.id === job.id ? 'bg-blue-50 border border-blue-300' : 'bg-white border'}`}
+                      onClick={() => setSelectedJob(job)}
+                    >
+                      <h4 className="font-medium">{job.position}</h4>
+                      <p className="text-sm text-gray-600">{job.company}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
               
               {/* Wybór szablonu */}
               <div>
                 <h4 className="font-medium text-xl text-gray-900 mb-4">2.Wybierz szablon CV</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {templates.map(template => (
-                <div 
-                  key={template.id} 
+                  {templates.map(template => (
+                    <div 
+                      key={template.id} 
                       className={`p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition ${selectedTemplate === template.id ? 'border-blue-500 bg-blue-50' : ''}`}
-                  onClick={() => setSelectedTemplate(template.id)}
-                >
+                      onClick={() => setSelectedTemplate(template.id)}
+                    >
                       <div className="h-24 mb-2 bg-gray-200 rounded flex items-center justify-center">
-                    {/* Tutaj później dodamy podgląd szablonu */}
+                        {/* Tutaj później dodamy podgląd szablonu */}
                         <span className="text-xs text-center">Szablon {template.name}</span>
                       </div>
                       <p className="font-medium text-center text-sm">{template.name}</p>
-                  </div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -228,7 +210,7 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
             
             <div className="flex justify-end mt-4">
               <button 
-                className="px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition disabled:bg-gray-400"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition disabled:bg-gray-400"
                 disabled={!selectedJob}
                 onClick={() => setActiveSection('personalData')}
               >
@@ -305,7 +287,7 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
                 Wstecz
               </button>
               <button 
-                className="px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
                 onClick={() => setActiveSection('description')}
               >
                 Dalej
@@ -341,7 +323,7 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
                 Wstecz
               </button>
               <button 
-                className="px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
                 onClick={() => setActiveSection('experience')}
               >
                 Dalej
@@ -503,13 +485,13 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
             
             <div className="flex justify-between mt-4">
               <button 
-                className="px-4 py-2 bg-gray-300 text-gray-700 rounded-sm hover:bg-gray-400 transition"
+                className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition"
                 onClick={() => setActiveSection('experience')}
               >
                 Wstecz
               </button>
               <button 
-                className="px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
                 onClick={() => setActiveSection('courses')}
               >
                 Dalej
@@ -684,7 +666,62 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
               <p>{templates.find(t => t.id === selectedTemplate)?.name}</p>
             </div>
             
-            {/*  */}
+            <div className="border rounded-lg divide-y">
+              <div className="p-3 flex justify-between items-center">
+                <span>Dane osobowe</span>
+                <button 
+                  className="text-blue-600 hover:text-blue-800"
+                  onClick={() => setActiveSection('personalData')}
+                >
+                  Edytuj
+                </button>
+              </div>
+              <div className="p-3 flex justify-between items-center">
+                <span>Opis profilu</span>
+                <button 
+                  className="text-blue-600 hover:text-blue-800"
+                  onClick={() => setActiveSection('description')}
+                >
+                  Edytuj
+                </button>
+              </div>
+              <div className="p-3 flex justify-between items-center">
+                <span>Doświadczenie</span>
+                <button 
+                  className="text-blue-600 hover:text-blue-800"
+                  onClick={() => setActiveSection('experience')}
+                >
+                  Edytuj
+                </button>
+              </div>
+              <div className="p-3 flex justify-between items-center">
+                <span>Wykształcenie</span>
+                <button 
+                  className="text-blue-600 hover:text-blue-800"
+                  onClick={() => setActiveSection('education')}
+                >
+                  Edytuj
+                </button>
+              </div>
+              <div className="p-3 flex justify-between items-center">
+                <span>Kursy</span>
+                <button 
+                  className="text-blue-600 hover:text-blue-800"
+                  onClick={() => setActiveSection('courses')}
+                >
+                  Edytuj
+                </button>
+              </div>
+              <div className="p-3 flex justify-between items-center">
+                <span>Umiejętności</span>
+                <button 
+                  className="text-blue-600 hover:text-blue-800"
+                  onClick={() => setActiveSection('skills')}
+                >
+                  Edytuj
+                </button>
+              </div>
+            </div>
             
             <div className="mt-6">
               <h4 className="font-medium text-gray-800 mb-2">Klauzula RODO</h4>
@@ -719,150 +756,93 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
   };
 
   return (
-    <div className="flex flex-col gap-4 mb-1">
+    <div className="flex flex-col gap-4 h-[calc(90vh-4.5rem)]">
       
-      {/* Kontener dla paska postępu i przycisku przełączania */}
-      <div className="flex items-center gap-0">
-        {/* Pasek postępu w oddzielnej karcie */}
-        <div className="p-0 sm:p-2 md:p-4 h-14 mb-1 flex-grow mr-2 ml-3 bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex items-center overflow-hidden">
-          {/* Animowana linia postępu w tle kart */}
-          <div className="relative w-full">
-            {!isScrolling && (
-              <div className="absolute left-5 right-0 top-1/2 transform -translate-y-1/2 w-[calc(100%-12%)] h-1 bg-gray-200 rounded-full overflow-hidden z-0 px-2">
-                {(() => {
-                  // Definiujemy kolejność sekcji
-                  const sections = ['start', 'personalData', 'description', 'experience', 'education', 'courses', 'skills', 'summary'];
-                  const currentIndex = sections.indexOf(activeSection);
-                  
-                  // Obliczanie pozycji dla konkretnej karty
-                  const sectionWidth = 100 / sections.length;
-                  const sectionStartPos = currentIndex * sectionWidth;
-                  const sectionEndPos = sectionStartPos + sectionWidth;
-                  
-                  return (
-                    <div 
-                      className="absolute -left-5 top-0 h-full bg-green-500 transition-all duration-500 ease-in-out"
-            style={{ 
-                        width: `${sectionEndPos}%`,
-                        backgroundImage: 'linear-gradient(to right, #10b981, #2563eb)'
-                      }}
-                    />
-                  );
-                })()}
-              </div>
-            )}
-            
-            {/* Responsywne plakietki postępu */}
+      {/* Pasek postępu w jednym rzędzie z przyciskiem przełączania (jeśli istnieje) */}
+      <div className="flex h-16 mb-1 gap-2">
+        {/* Pasek postępu */}
+        <div className={`h-12 ${toggleButton ? 'flex-1' : 'w-full'} ml-2 mr-0 bg-white dark:bg-sidebar rounded-md shadow-[2px_4px_10px_rgba(0,0,0,0.3)]`}>
+          {/* Responsywne plakietki postępu */}
+          <div className="mt-2.5 ml-1 flex justify-between rounded-md mb-2 w-full overflow-x-auto"
+            style={{
+              scrollbarWidth: 'thin',
+              scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
+              msOverflowStyle: 'none',  /* IE and Edge */
+              scrollbarGutter: 'stable' /* dla nowoczesnych przeglądarek */
+            }}
+          >
             <div 
-              ref={badgeContainerRef}
-              className="flex justify-between items-center gap-x-0.5 xs:gap-x-1 sm:gap-x-2 w-full overflow-visible mb-0 relative z-10 py-2 px-2"
-              style={{
-                overflowY: 'hidden',
-                scrollbarWidth: 'thin',
-                scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
-                WebkitOverflowScrolling: 'touch',
-                margin: '4px 0'
-              }}
+              className={`px-1 xs:px-1.5 sm:px-4 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[11px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'start' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('start')}
             >
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'start' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['personalData', 'description', 'experience', 'education', 'courses', 'skills', 'summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('start')}
-              >
-                Start
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'personalData' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['description', 'experience', 'education', 'courses', 'skills', 'summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('personalData')}
-              >
-                Dane
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'description' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['experience', 'education', 'courses', 'skills', 'summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('description')}
-              >
-                Opis
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'experience' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['education', 'courses', 'skills', 'summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('experience')}
-              >
-                Doświad.
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'education' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['courses', 'skills', 'summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('education')}
-              >
-                Edukacja
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'courses' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['skills', 'summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('courses')}
-              >
-                Kursy
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'skills' ? 'bg-blue-600 text-white shadow-md' : 
-                    ['summary'].includes(activeSection) ? 
-                    'bg-green-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('skills')}
-              >
-                Umiejęt.
-              </div>
-              <div 
-                className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm cursor-pointer transition whitespace-nowrap flex-shrink-0 flex-1 text-center lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-                  ${activeSection === 'summary' ? 'bg-blue-600 text-white shadow-md' : 'bg-gray-100 hover:bg-gray-200'}`}
-                onClick={() => setActiveSection('summary')}
-              >
-                Podsum.
-              </div>
+              Start
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'personalData' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('personalData')}
+            >
+              Dane
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'description' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('description')}
+            >
+              Opis
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'experience' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('experience')}
+            >
+              Doświadczenie
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'education' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('education')}
+            >
+              Edukacja
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'courses' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('courses')}
+            >
+              Kursy
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'skills' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('skills')}
+            >
+              Umiejętności
+            </div>
+            <div 
+              className={`px-1 xs:px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[10px] xs:text-[11px] sm:text-xs cursor-pointer transition whitespace-nowrap flex-shrink-0
+                ${activeSection === 'summary' ? 'bg-blue-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setActiveSection('summary')}
+            >
+              Podsumowanie
             </div>
           </div>
-          
-          {/* Usuwamy niezależny pasek postępu, który był dodany poniżej */}
         </div>
         
-        {/* Przycisk przełączania - widoczny tylko gdy prop switchMode jest dostępny */}
-        {switchMode && (
-          <button
-            onClick={switchMode}
-            className="h-14 w-14 bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex items-center justify-center mr-2 mb-1"
-            title="Przełącz na podgląd"
-          >
-            <IoMdEye className="w-8 h-8 text-blue-600" />
-          </button>
+        {/* Przycisk przełączania (jeśli przekazany) */}
+        {toggleButton && (
+          <div className="mr-2">
+            {toggleButton}
+          </div>
         )}
       </div>
       
       {/* Główny kontener */}
-      <div className="bg-white dark:bg-sidebar mr-2 ml-3 rounded-lg shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex-1 overflow-hidden flex flex-col">
+      <div className="bg-white dark:bg-sidebar mr-2 ml-2 rounded-lg shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex-1 overflow-hidden flex flex-col">
         {/* Aktywna sekcja formularza - przewijalna */}
-        <div className="flex-1 overflow-y-auto px-6 py-6"
-          style={{
-            scrollbarWidth: 'thin',
-            scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
-            WebkitOverflowScrolling: 'touch'
-          }}
-        >
-      {renderActiveSection()}
+        <div className="flex-1 overflow-y-auto px-6 py-6">
+          {renderActiveSection()}
         </div>
       </div>
     </div>

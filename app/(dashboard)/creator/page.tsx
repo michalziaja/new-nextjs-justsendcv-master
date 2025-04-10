@@ -1,23 +1,55 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Creator from "@/components/creator/Creator";
 import Preview from '@/components/creator/Preview';
 import { CVProvider } from '@/components/creator/CVContext';
-
-
+import { IoIosCreate } from "react-icons/io";
+import { IoMdEye } from "react-icons/io";
 
 
 // Główny komponent strony
 export default function CreatorPage() {
+  const [showPreview, setShowPreview] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const isSmallScreen = windowWidth < 1175;
+
+  // Nasłuchiwanie na zmiany rozmiaru okna
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Automatyczne przełączanie widoku na kreator przy małych ekranach
+  useEffect(() => {
+    if (isSmallScreen) {
+      setShowPreview(false);
+    }
+  }, [isSmallScreen]);
+
   return (
     <CVProvider>
-      <div className="h-full p-8">
-        <div className="grid grid-cols-2 gap-8 max-w-[1800px] mx-auto">
-          <Creator />
-          <Preview />
+      <div className="pb-4 lg:mt-8 xl:mt-12 md:mt-6 mt-6 mr-1 ml-0 sm:mr-4 sm:ml-3.5 md:mr-8 md:ml-7">
+        {/* Układ siatki z responsywnością */}
+        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-2 max-w-[1800px] mx-auto h-full`}>
+          {/* Na małych ekranach pokazujemy albo kreator albo podgląd wraz z przyciskiem przełączania */}
+          {isSmallScreen ? (
+            <>
+              {showPreview ? <Preview switchMode={() => setShowPreview(false)} /> : <Creator switchMode={() => setShowPreview(true)} />}
+            </>
+          ) : (
+            // Na dużych ekranach pokazujemy oba bez przycisku przełączania
+            <>
+              <Creator />
+              <Preview />
+            </>
+          )}
         </div>
       </div>
     </CVProvider>
   );
-} 
+}
