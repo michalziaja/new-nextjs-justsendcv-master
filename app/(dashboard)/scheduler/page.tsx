@@ -45,7 +45,7 @@ export default function SchedulerPage() {
             <TabsList className="grid grid-cols-2 gap-1 max-w-[230px] bg-transparent p-1">
               <TabsTrigger 
                 value="kanban" 
-                className="flex items-center h-8 gap-2 border-1 border-gray-300 dark:border-gray-700 data-[state=active]:bg-white dark:data-[state=active]:bg-gray-700 data-[state=active]:shadow-[2px_4px_10px_rgba(0,0,0,0.3)] transition-all"
+                className="flex items-center h-8 gap-2 border-1 border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-950 data-[state=active]:bg-white dark:data-[state=active]:bg-gray-700 data-[state=active]:shadow-[2px_4px_10px_rgba(0,0,0,0.3)] transition-all"
               >
                 <Kanban className="h-4 w-4" />
                 <span>Kanban</span>

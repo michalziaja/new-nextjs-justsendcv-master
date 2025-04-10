@@ -3,6 +3,9 @@
 # dependencies
 /Chrome-Extension*
 /node_modules
+/components/creator/test
+/components/home2
+/app/(dashboard)/home2
 /.pnp
 .pnp.*
 .yarn/*
