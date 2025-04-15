@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Strzałowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-strzalowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": [
+          {
+            "title": "strzałowy"
+          },
+          {
+            "title": "górnik strzałowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10470,
+            "p25": 8990,
+            "p75": 14500
+          },
+          "net": {
+            "median": 7467,
+            "p25": 6458,
+            "p75": 10215
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

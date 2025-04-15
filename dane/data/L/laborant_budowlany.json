@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Laborant budowlany",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-budowlany",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 85,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5180,
+            "p75": 7160
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3862,
+            "p75": 5211
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 18
+            },
+            "men": {
+              "count": 70,
+              "percentage": 82
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik restauracji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-restauracji",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "menedżer restauracji"
+          },
+          {
+            "title": "kierownik restauracji"
+          },
+          {
+            "title": "menadżer restauracji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6390,
+            "p25": 5400,
+            "p75": 8340
+          },
+          "net": {
+            "median": 4686,
+            "p25": 4011,
+            "p75": 6015
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 87,
+              "percentage": 56
+            },
+            "men": {
+              "count": 67,
+              "percentage": 44
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 38
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 38
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie pracą restauracji,",
+          "nadzór nad podległym personelem i koordynowanie jego pracy,",
+          "monitorowanie zapasów i procesu zakupów,",
+          "zapewnienie wysokiej jakości obsługi klienta,",
+          "dbałość o przestrzeganie zasad BHP oraz przepisów sanitarnych w restauracji"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Laborant chemiczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-chemiczny",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 247,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5570,
+                "p25": 5000,
+                "p75": 6460
+              },
+              "net": {
+                "median": 4127,
+                "p25": 3738,
+                "p75": 4734
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 173,
+                "percentage": 76
+              },
+              "men": {
+                "count": 55,
+                "percentage": 24
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5850,
+                "p25": 5180,
+                "p75": 7130
+              },
+              "net": {
+                "median": 4318,
+                "p25": 3862,
+                "p75": 5191
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 185,
+                "percentage": 75
+              },
+              "men": {
+                "count": 62,
+                "percentage": 25
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6270,
+                "p25": 5590,
+                "p75": 7620
+              },
+              "net": {
+                "median": 4604,
+                "p25": 4140,
+                "p75": 5525
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 59,
+                "percentage": 74
+              },
+              "men": {
+                "count": 21,
+                "percentage": 26
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "wykonywanie analiz surowców, półproduktów, materiałów pomocniczych i wyrobów gotowych,",
+          "wydawanie opinii o jakości badanych materiałów pod kątem zgodności z normami,",
+          "przygotowywanie informacji na potrzeby innych działów,",
+          "wykonywanie analiz związanych z warunkami pracy."
+        ]
+      }
+    ]
+  }
+]

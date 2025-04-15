@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista inżynierii medycznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-inzynierii-medycznej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6780,
+            "p25": 4400,
+            "p75": 9750
+          },
+          "net": {
+            "median": 4952,
+            "p25": 3329,
+            "p75": 6976
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 50
+            },
+            "men": {
+              "count": 8,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

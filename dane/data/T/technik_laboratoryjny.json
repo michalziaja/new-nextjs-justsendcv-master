@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik laboratoryjny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-laboratoryjny",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 159,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6170,
+            "p25": 5360,
+            "p75": 7150
+          },
+          "net": {
+            "median": 4536,
+            "p25": 3984,
+            "p75": 5204
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 73,
+              "percentage": 46
+            },
+            "men": {
+              "count": 86,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

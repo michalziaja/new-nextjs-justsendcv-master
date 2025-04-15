@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Salowa",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-salowa",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4990,
+            "p25": 4630,
+            "p75": 6040
+          },
+          "net": {
+            "median": 3731,
+            "p25": 3487,
+            "p75": 4448
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 27,
+              "percentage": 93
+            },
+            "men": {
+              "count": 2,
+              "percentage": 7
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

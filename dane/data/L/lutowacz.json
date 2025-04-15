@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lutowacz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lutowacz",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5450,
+            "p25": 5120,
+            "p75": 5900
+          },
+          "net": {
+            "median": 4046,
+            "p25": 3820,
+            "p75": 4352
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 20
+            },
+            "men": {
+              "count": 12,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

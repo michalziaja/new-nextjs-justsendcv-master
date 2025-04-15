@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor dozoru technicznego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-dozoru-technicznego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 69,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8810,
+            "p25": 6530,
+            "p75": 11450
+          },
+          "net": {
+            "median": 6336,
+            "p25": 4782,
+            "p75": 8135
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 17,
+              "percentage": 25
+            },
+            "men": {
+              "count": 52,
+              "percentage": 75
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

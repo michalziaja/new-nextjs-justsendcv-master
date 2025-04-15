@@ -1,0 +1,130 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier budowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budowy",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 647,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6780,
+                "p25": 5930,
+                "p75": 8000
+              },
+              "net": {
+                "median": 4952,
+                "p25": 4372,
+                "p75": 5784
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 202,
+                "percentage": 38
+              },
+              "men": {
+                "count": 332,
+                "percentage": 62
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 48
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 44
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 31
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8010,
+                "p25": 6880,
+                "p75": 9210
+              },
+              "net": {
+                "median": 5791,
+                "p25": 5020,
+                "p75": 6608
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 246,
+                "percentage": 38
+              },
+              "men": {
+                "count": 401,
+                "percentage": 62
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 43
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 40
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8470,
+                "p25": 7550,
+                "p75": 9990
+              },
+              "net": {
+                "median": 6104,
+                "p25": 5477,
+                "p75": 7141
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 30,
+                "percentage": 25
+              },
+              "men": {
+                "count": 92,
+                "percentage": 75
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "planowanie i projektowanie obiektów budowlanych,",
+          "opracowywanie technologii budowy,",
+          "kontrola i nadzór nad kolejnymi etapami budowy,",
+          "kontrola i udoskonalanie konstrukcji całych budynków lub ich elementów"
+        ]
+      }
+    ]
+  }
+]

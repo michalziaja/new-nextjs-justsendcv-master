@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mistrz produkcji w budownictwie przemysłowym",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mistrz-produkcji-w-budownictwie-przemyslowym",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 27,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9040,
+            "p25": 7620,
+            "p75": 10800
+          },
+          "net": {
+            "median": 6493,
+            "p25": 5525,
+            "p75": 7693
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 27,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

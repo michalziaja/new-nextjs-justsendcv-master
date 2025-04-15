@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Doradca klienta premium",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-doradca-klienta-premium",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 342,
+        "related_positions": [
+          {
+            "title": "doradca klienta zamożnego"
+          },
+          {
+            "title": "doradca klienta premium"
+          },
+          {
+            "title": "menedżer klienta zamożnego"
+          },
+          {
+            "title": "doradca klienta VIP."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9250,
+            "p25": 7390,
+            "p75": 11400
+          },
+          "net": {
+            "median": 6635,
+            "p25": 5368,
+            "p75": 8102
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 182,
+              "percentage": 53
+            },
+            "men": {
+              "count": 160,
+              "percentage": 47
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 33
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 33
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

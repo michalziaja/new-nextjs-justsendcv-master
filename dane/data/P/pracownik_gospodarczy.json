@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik gospodarczy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-gospodarczy",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 78,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5290,
+            "p25": 4670,
+            "p75": 6460
+          },
+          "net": {
+            "median": 3936,
+            "p25": 3513,
+            "p75": 4734
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 20,
+              "percentage": 26
+            },
+            "men": {
+              "count": 58,
+              "percentage": 74
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

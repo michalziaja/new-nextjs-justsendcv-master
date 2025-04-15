@@ -1,0 +1,125 @@
+[
+  {
+    "letter": "U",
+    "positions": [
+      {
+        "title": "UI/UX Designer",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ui-ux-designer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 319,
+        "related_positions": [
+          {
+            "title": "uI/UX Designer"
+          },
+          {
+            "title": "specjalista ds. user experience"
+          },
+          {
+            "title": "user Experience Specialist"
+          },
+          {
+            "title": "specjalista do spraw user experience."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7380,
+                "p25": 6180,
+                "p75": 8980
+              },
+              "net": {
+                "median": 5361,
+                "p25": 4543,
+                "p75": 6451
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 109,
+                "percentage": 81
+              },
+              "men": {
+                "count": 25,
+                "percentage": 19
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10240,
+                "p25": 8230,
+                "p75": 12410
+              },
+              "net": {
+                "median": 7311,
+                "p25": 5941,
+                "p75": 8790
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 215,
+                "percentage": 67
+              },
+              "men": {
+                "count": 104,
+                "percentage": 33
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14780,
+                "p25": 12440,
+                "p75": 19000
+              },
+              "net": {
+                "median": 10406,
+                "p25": 8810,
+                "p75": 13283
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 67,
+                "percentage": 49
+              },
+              "men": {
+                "count": 70,
+                "percentage": 51
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

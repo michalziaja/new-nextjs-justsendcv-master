@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor ochrony przeciwpożarowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ochrony-przeciwpozarowej",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7860,
+            "p25": 6340,
+            "p75": 8960
+          },
+          "net": {
+            "median": 5688,
+            "p25": 4651,
+            "p75": 6438
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 17
+            },
+            "men": {
+              "count": 15,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opracowywanie procedur ochrony przeciwpożarowej i bieżąca kontrola ich przestrzegania,",
+          "okresowa kontrola aktualności przeglądów wyposażenia technicznego zakładu,",
+          "przeprowadzanie szkoleń i konsultacji w zakresie ochrony przeciwpożarowej,",
+          "uczestnictwo w odbiorach technicznych nowych obiektów pod kątem ochrony przeciwpożarowej,",
+          "współpraca z odpowiednimi służbami państwowymi."
+        ]
+      }
+    ]
+  }
+]

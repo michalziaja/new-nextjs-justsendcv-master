@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Administrator systemów poczty elektronicznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-administrator-systemow-poczty-elektronicznej",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 17,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8620,
+            "p25": 6510,
+            "p75": 11200
+          },
+          "net": {
+            "median": 6206,
+            "p25": 4768,
+            "p75": 7965
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 59
+            },
+            "men": {
+              "count": 7,
+              "percentage": 41
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

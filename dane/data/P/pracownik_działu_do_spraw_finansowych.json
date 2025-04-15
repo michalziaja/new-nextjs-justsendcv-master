@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik działu do spraw finansowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-dzialu-do-spraw-finansowych",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 283,
+        "related_positions": [
+          {
+            "title": "asystent ds. finansowych"
+          },
+          {
+            "title": "pracownik działu ds. finansowych"
+          },
+          {
+            "title": "asystent do spraw finansowych"
+          },
+          {
+            "title": "pracownik działu do spraw finansowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6280,
+            "p25": 5290,
+            "p75": 7710
+          },
+          "net": {
+            "median": 4611,
+            "p25": 3936,
+            "p75": 5586
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 218,
+              "percentage": 77
+            },
+            "men": {
+              "count": 65,
+              "percentage": 23
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 62
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 54
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Fizyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-fizyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 24,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6960,
+            "p25": 6070,
+            "p75": 9750
+          },
+          "net": {
+            "median": 5074,
+            "p25": 4467,
+            "p75": 6976
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 33
+            },
+            "men": {
+              "count": 16,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

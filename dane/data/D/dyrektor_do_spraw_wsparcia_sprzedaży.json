@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor do spraw wsparcia sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-do-spraw-wsparcia-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. wsparcia sprzedaży"
+          },
+          {
+            "title": "dyrektor do spraw wsparcia sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 19260,
+            "p25": 16860,
+            "p75": 25640
+          },
+          "net": {
+            "median": 13460,
+            "p25": 11823,
+            "p75": 17809
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 31
+            },
+            "men": {
+              "count": 20,
+              "percentage": 69
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

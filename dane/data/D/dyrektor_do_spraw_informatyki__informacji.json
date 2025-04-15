@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor do spraw informatyki / informacji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-do-spraw-informatyki-informacji",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 78,
+        "related_positions": [
+          {
+            "title": "dyrektor do spraw informatyki / informacji"
+          },
+          {
+            "title": "dyrektor ds. informatyki / informacji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 23860,
+            "p25": 17420,
+            "p75": 35600
+          },
+          "net": {
+            "median": 16595,
+            "p25": 12205,
+            "p75": 24599
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 9
+            },
+            "men": {
+              "count": 71,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

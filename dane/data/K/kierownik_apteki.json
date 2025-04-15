@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik apteki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-apteki",
+        "category": [
+          "służba zdrowia",
+          "apteki"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 386,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10680,
+            "p25": 9300,
+            "p75": 12200
+          },
+          "net": {
+            "median": 7610,
+            "p25": 6670,
+            "p75": 8647
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 286,
+              "percentage": 74
+            },
+            "men": {
+              "count": 100,
+              "percentage": 26
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie apteką,",
+          "nadzorowanie pracy podległego personelu,",
+          "monitorowanie zrealizowanych recept, stanu magazynu i zamówień"
+        ]
+      }
+    ]
+  }
+]

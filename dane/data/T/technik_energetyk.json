@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik energetyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-energetyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 6420,
+            "p75": 9300
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4706,
+            "p75": 6670
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 19,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

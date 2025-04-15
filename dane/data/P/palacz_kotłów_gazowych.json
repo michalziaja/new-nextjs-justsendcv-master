@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Palacz kotłów gazowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-palacz-kotlow-gazowych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": [
+          {
+            "title": "palacz kotłów centralnego ogrzewania"
+          },
+          {
+            "title": "palacz kotłów gazowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5850,
+            "p25": 5010,
+            "p75": 6590
+          },
+          "net": {
+            "median": 4318,
+            "p25": 3745,
+            "p75": 4823
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 19,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

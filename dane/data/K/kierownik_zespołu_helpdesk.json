@@ -1,0 +1,74 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik zespołu helpdesk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-zespolu-helpdesk",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 280,
+        "related_positions": [
+          {
+            "title": "kierownik zespołu helpdesk"
+          },
+          {
+            "title": "kierownik działu helpdesk"
+          },
+          {
+            "title": "koordynator działu helpdesk"
+          },
+          {
+            "title": "koordynator zespołu helpdesk."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9910,
+            "p25": 8050,
+            "p75": 12690
+          },
+          "net": {
+            "median": 7086,
+            "p25": 5817,
+            "p75": 8981
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 91,
+              "percentage": 33
+            },
+            "men": {
+              "count": 189,
+              "percentage": 67
+            }
+          },
+          "benefits": [
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 76
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 73
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 69
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "organizuje prace helpdesku,",
+          "wyznacza pracownikom zadania i kontroluje poprawność wykonywanych zleceń,",
+          "dba o przestrzeganie standardów obsługi klienta,",
+          "dba o udoskonalanie pracy helpdesku,",
+          "nadzoruje systemy informacji wewnętrznej."
+        ]
+      }
+    ]
+  }
+]

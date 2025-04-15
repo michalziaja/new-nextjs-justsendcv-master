@@ -1,0 +1,63 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw administracji sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-administracji-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 269,
+        "related_positions": [
+          {
+            "title": "specjalista ds. administracji sprzedaży"
+          },
+          {
+            "title": "specjalista do spraw administracji sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6740,
+            "p25": 5540,
+            "p75": 8620
+          },
+          "net": {
+            "median": 4925,
+            "p25": 4106,
+            "p75": 6206
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 218,
+              "percentage": 81
+            },
+            "men": {
+              "count": 51,
+              "percentage": 19
+            }
+          },
+          "benefits": [
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 56
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 46
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

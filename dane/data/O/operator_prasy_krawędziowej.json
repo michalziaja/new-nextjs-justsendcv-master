@@ -1,0 +1,53 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator prasy krawędziowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-prasy-krawedziowej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": [
+          {
+            "title": "operator pras"
+          },
+          {
+            "title": "operator prasy krawędziowej"
+          },
+          {
+            "title": "operator prasy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6150,
+            "p25": 5240,
+            "p75": 7180
+          },
+          "net": {
+            "median": 4522,
+            "p25": 3902,
+            "p75": 5224
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 7
+            },
+            "men": {
+              "count": 129,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

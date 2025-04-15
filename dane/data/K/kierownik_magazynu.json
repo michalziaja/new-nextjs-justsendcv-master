@@ -1,0 +1,75 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik magazynu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-magazynu",
+        "category": [
+          "magazyn"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1923,
+        "related_positions": [
+          {
+            "title": "kierownik magazynu"
+          },
+          {
+            "title": "koordynator magazynu"
+          },
+          {
+            "title": "kierownik magazynów"
+          },
+          {
+            "title": "lider magazynu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7010,
+            "p25": 6100,
+            "p75": 8350
+          },
+          "net": {
+            "median": 5109,
+            "p25": 4488,
+            "p75": 6022
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 247,
+              "percentage": 13
+            },
+            "men": {
+              "count": 1676,
+              "percentage": 87
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 35
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 23
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 22
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za sprawne funkcjonowanie magazynu,",
+          "organizowanie pracy personelu magazynu,",
+          "planowanie, nadzór i koordynacja przepływu towarów,",
+          "planowanie optymalnego wykorzystania przestrzeni magazynowej,",
+          "kontrola dokumentacji przepływu towarów,",
+          "przeprowadzanie inspekcji magazynu oraz jego wyposażenia"
+        ]
+      }
+    ]
+  }
+]

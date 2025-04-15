@@ -24,7 +24,7 @@ const ModernTemplate: React.FC<{ data: CVData; selectedJob?: JobOffer | null }> 
           </div>
         )}
       </div>
-        
+      
         {/* Opis profilu */}
         {data.description && (
           <div className="mt-4">
@@ -33,10 +33,34 @@ const ModernTemplate: React.FC<{ data: CVData; selectedJob?: JobOffer | null }> 
           </div>
         )}
       
-      {/* Doświadczenie */}
+      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
+      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
       <div className="mt-4">
         <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Doświadczenie zawodowe</h2>
-        {data.experience.map((exp, index) => (
+          {data.experience
+            .filter(exp => !exp.type || exp.type === 'job')
+            .map((exp, index) => (
+            <div key={index} className="mt-3">
+              <div className="flex justify-between">
+                <div className="font-medium">{exp.position}</div>
+                <div className="text-gray-600 text-xs">
+                  {exp.startDate && formatDate(exp.startDate)} - {exp.endDate && formatDate(exp.endDate)}
+                </div>
+              </div>
+              <div className="text-gray-700">{exp.company}</div>
+              <div className="mt-1 text-xs">{exp.description}</div>
+            </div>
+          ))}
+        </div>
+      )}
+      
+      {/* Projekty - nowa sekcja */}
+      {data.experience.some(exp => exp.type === 'project') && (
+        <div className="mt-4">
+          <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Projekty</h2>
+          {data.experience
+            .filter(exp => exp.type === 'project')
+            .map((exp, index) => (
           <div key={index} className="mt-3">
             <div className="flex justify-between">
               <div className="font-medium">{exp.position}</div>
@@ -49,6 +73,7 @@ const ModernTemplate: React.FC<{ data: CVData; selectedJob?: JobOffer | null }> 
           </div>
         ))}
       </div>
+      )}
       
       {/* Wykształcenie */}
       <div className="mt-4">
@@ -251,11 +276,11 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
   };
 
   return (
-    <div className="h-[calc(87vh)] flex flex-col bg-transparent overflow-hidden">
+    <div className=" flex flex-col bg-transparent overflow-hidden">
       {/* Kontener dla nagłówka z kontrolkami i przycisku przełączania obok */}
       <div className="flex items-center gap-0">
         {/* Nagłówek z kontrolkami */}
-        <div className="p-2 md:p-3 xl:p-4 flex-grow h-14 mr-2 ml-3 bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center flex">
+        <div className="p-2 md:p-3 xl:p-4 flex-grow h-14 mr-2 ml-3 bg-transparent dark:bg-transparent border-0 border-gray-300 dark:border-gray-800 rounded-md items-center flex">
           {/* Lewa strona - zoom */}
           <div className="flex-1 flex justify-start">
             <div className="flex items-center space-x-1">
@@ -281,7 +306,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
           {/* Środek - zmiana wyglądu i języka */}
           <div className="flex-1 flex items-center justify-center gap-2 md:gap-3">
             <button 
-              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-blue-600 hover:bg-blue-700 text-white px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
+              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-gradient-to-r from-[#00B2FF] to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
               onClick={() => console.log("Zmień wygląd")}
             >
               <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +317,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
             </button>
             
             <button
-              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-gray-200 hover:bg-gray-300 px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
+              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 hover:from-gray-200 hover:to-gray-300 dark:hover:from-gray-700 dark:hover:to-gray-800 px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
               onClick={() => console.log("Zmień język dokumentu")}
             >
               <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" /></svg>
@@ -304,7 +329,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
           {/* Prawa strona - pobieranie */}
           <div className="ml-3 flex-1 flex justify-end">
             <button 
-              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-green-600 hover:bg-green-700 text-white px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
+              className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap"
               onClick={() => console.log("Pobierz PDF")}
             >
               <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
@@ -318,7 +343,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
         {switchMode && (
           <button
             onClick={switchMode}
-            className="h-14 w-14 bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex items-center justify-center mr-2"
+            className="h-14 w-14 bg-transparent dark:bg-sidebar rounded-sm flex items-center justify-center mr-2"
             title="Przełącz na kreator"
           >
             <IoIosCreate className="w-8 h-8 text-blue-600" />
@@ -329,7 +354,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
       {/* Kontener główny ze scrollowaniem */}
       <div 
         ref={containerRef}
-        className="flex-1 mt-4 bg-transparent flex justify-center px-0 pb-6 pt-0 relative"
+        className="flex-1 mt-2 bg-transparent flex justify-center px-0 pb-6 pt-0 relative"
         style={{
           overflowY: scrollNeeded ? 'auto' : 'hidden',
           overflowX: 'hidden',

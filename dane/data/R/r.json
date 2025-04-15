@@ -1,0 +1,2837 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Radca prawny",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1319,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12770,
+            "p25": 9720,
+            "p75": 17610
+          },
+          "net": {
+            "median": 9036,
+            "p25": 6957,
+            "p75": 12334
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 811,
+              "percentage": 61
+            },
+            "men": {
+              "count": 508,
+              "percentage": 39
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 41
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie przed sądami i innymi organami czynności wymagających uprawnień radcowskich lub adwokackich,",
+          "identyfikowanie i rozwiązywanie problemów prawnych występujących w przedsiębiorstwie,",
+          "kontrola zgodności umów i dokumentów z aktualnymi przepisami prawnymi,",
+          "udział w negocjowaniu warunków umów,",
+          "utrzymywanie kontaktów i współpraca z instytucjami prawnymi,",
+          "współpraca z zewnętrznymi doradcami prawnymi."
+        ]
+      },
+      {
+        "title": "Ratownik górniczy",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8630,
+            "p25": 6480,
+            "p75": 11250
+          },
+          "net": {
+            "median": 6173,
+            "p25": 4657,
+            "p75": 8021
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Ratownik medyczny",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 77,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7870,
+            "p25": 6210,
+            "p75": 10120
+          },
+          "net": {
+            "median": 5695,
+            "p25": 4563,
+            "p75": 7229
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 23,
+              "percentage": 30
+            },
+            "men": {
+              "count": 54,
+              "percentage": 70
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie na zlecenie kierownika zespołu, czynności i zabiegów ratowniczych w stanach zagrożenia życia, z uwzględnieniem ich specyfiki i właściwej kolejności postępowania,",
+          "planowanie, organizowanie i nadzorowanie działań ratowniczych w miejscu zdarzenia przed przybyciem służb współdziałania,",
+          "posługiwanie się sprzętem ochrony osobistej i medycznym,",
+          "transportowanie pacjentów pod nadzorem medycznym,",
+          "prowadzenie i gromadzenie dokumentacji udzielonej pomocy, sprawozdań o stanie zdrowia, doznanych obrażeniach, zastosowanych zabiegach i czynnościach ratowniczych"
+        ]
+      },
+      {
+        "title": "Ratownik wodny",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": [
+          {
+            "title": "ratownik WOPR"
+          },
+          {
+            "title": "ratownik wodny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5510,
+            "p25": 4850,
+            "p75": 6390
+          },
+          "net": {
+            "median": 4086,
+            "p25": 3636,
+            "p75": 4686
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 16
+            },
+            "men": {
+              "count": 26,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie bezpieczeństwa użytkowników kąpielisk, pływalni i innych akwenów wodnych,",
+          "udzielanie pierwszej pomocy,",
+          "organizowanie szkoleń"
+        ]
+      },
+      {
+        "title": "Ratownik WOPR",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": [
+          {
+            "title": "ratownik WOPR"
+          },
+          {
+            "title": "ratownik wodny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5510,
+            "p25": 4850,
+            "p75": 6390
+          },
+          "net": {
+            "median": 4086,
+            "p25": 3636,
+            "p75": 4686
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 16
+            },
+            "men": {
+              "count": 26,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie bezpieczeństwa użytkowników kąpielisk, pływalni i innych akwenów wodnych,",
+          "udzielanie pierwszej pomocy,",
+          "organizowanie szkoleń"
+        ]
+      },
+      {
+        "title": "Rdzeniarz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3660,
+            "p25": 3080,
+            "p75": 4820
+          },
+          "net": {
+            "median": 2667,
+            "p25": 2258,
+            "p75": 3486
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa rdzeniarek oraz transferu piasku,",
+          "zastosowanie technologii procesu wykonywania rdzeni,",
+          "ogólna znajomość metod wykonywania wszystkich rdzeni,",
+          "sprawdzanie rdzeni i ich kwalifikacja."
+        ]
+      },
+      {
+        "title": "Realizator dźwięku",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6610,
+            "p25": 5060,
+            "p75": 8180
+          },
+          "net": {
+            "median": 4836,
+            "p25": 3779,
+            "p75": 5906
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 11
+            },
+            "men": {
+              "count": 34,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Realizator",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": [
+          {
+            "title": "realizator"
+          },
+          {
+            "title": "realizator światła."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5840,
+            "p25": 4960,
+            "p75": 8570
+          },
+          "net": {
+            "median": 4311,
+            "p25": 3711,
+            "p75": 6173
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 14
+            },
+            "men": {
+              "count": 24,
+              "percentage": 86
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Realizator światła",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": [
+          {
+            "title": "realizator"
+          },
+          {
+            "title": "realizator światła."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5840,
+            "p25": 4960,
+            "p75": 8570
+          },
+          "net": {
+            "median": 4311,
+            "p25": 3711,
+            "p75": 6173
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 14
+            },
+            "men": {
+              "count": 24,
+              "percentage": 86
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Recepcjonista",
+        "category": [
+          "usługi",
+          "hotele i kasyna"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 835,
+        "related_positions": [
+          {
+            "title": "recepcjonista"
+          },
+          {
+            "title": "recepcjonistka"
+          },
+          {
+            "title": "pracownik recepcji"
+          },
+          {
+            "title": "recepcjonista hotelowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5180,
+            "p25": 4740,
+            "p75": 5850
+          },
+          "net": {
+            "median": 3862,
+            "p25": 3561,
+            "p75": 4318
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 716,
+              "percentage": 86
+            },
+            "men": {
+              "count": 119,
+              "percentage": 14
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 29
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 26
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 26
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Recepcjonista hotelowy",
+        "category": [
+          "usługi",
+          "hotele i kasyna"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 835,
+        "related_positions": [
+          {
+            "title": "recepcjonista"
+          },
+          {
+            "title": "recepcjonistka"
+          },
+          {
+            "title": "pracownik recepcji"
+          },
+          {
+            "title": "recepcjonista hotelowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5180,
+            "p25": 4740,
+            "p75": 5850
+          },
+          "net": {
+            "median": 3862,
+            "p25": 3561,
+            "p75": 4318
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 716,
+              "percentage": 86
+            },
+            "men": {
+              "count": 119,
+              "percentage": 14
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 29
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 26
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 26
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Recepcjonistka",
+        "category": [
+          "usługi",
+          "hotele i kasyna"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 835,
+        "related_positions": [
+          {
+            "title": "recepcjonista"
+          },
+          {
+            "title": "recepcjonistka"
+          },
+          {
+            "title": "pracownik recepcji"
+          },
+          {
+            "title": "recepcjonista hotelowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5180,
+            "p25": 4740,
+            "p75": 5850
+          },
+          "net": {
+            "median": 3862,
+            "p25": 3561,
+            "p75": 4318
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 716,
+              "percentage": 86
+            },
+            "men": {
+              "count": 119,
+              "percentage": 14
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 29
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 26
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 26
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Redaktor",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 265,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7100,
+            "p25": 6000,
+            "p75": 8870
+          },
+          "net": {
+            "median": 5170,
+            "p25": 4420,
+            "p75": 6377
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 168,
+              "percentage": 63
+            },
+            "men": {
+              "count": 97,
+              "percentage": 37
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 56
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 47
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 34
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "czytanie, oglądanie lub słuchanie, ocena i redagowanie tekstów innych autorów,",
+          "opracowywanie materiałów pod względem edytorskim, merytorycznym i językowym"
+        ]
+      },
+      {
+        "title": "Redaktor naczelny",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": [
+          {
+            "title": "redaktor naczelny"
+          },
+          {
+            "title": "redaktor naczelny czasopisma."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8620,
+            "p25": 6850,
+            "p75": 11170
+          },
+          "net": {
+            "median": 6206,
+            "p25": 5000,
+            "p75": 7944
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 61
+            },
+            "men": {
+              "count": 12,
+              "percentage": 39
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie codzienną pracą redacji,",
+          "wyznaczanie kierunków rozwoju wydawnictwa,",
+          "koordynowanie pracy zespołu redaktorów, asystentów i współpracowników,",
+          "nadzór nad merytorycznym profilem wydawnictwa,",
+          "akceptowanie treści do publikacji,",
+          "pozyskiwanie materiałów do druku"
+        ]
+      },
+      {
+        "title": "Redaktor naczelny czasopisma",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": [
+          {
+            "title": "redaktor naczelny"
+          },
+          {
+            "title": "redaktor naczelny czasopisma."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8620,
+            "p25": 6850,
+            "p75": 11170
+          },
+          "net": {
+            "median": 6206,
+            "p25": 5000,
+            "p75": 7944
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 61
+            },
+            "men": {
+              "count": 12,
+              "percentage": 39
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie codzienną pracą redacji,",
+          "wyznaczanie kierunków rozwoju wydawnictwa,",
+          "koordynowanie pracy zespołu redaktorów, asystentów i współpracowników,",
+          "nadzór nad merytorycznym profilem wydawnictwa,",
+          "akceptowanie treści do publikacji,",
+          "pozyskiwanie materiałów do druku"
+        ]
+      },
+      {
+        "title": "Redaktor programowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8190,
+            "p25": 6190,
+            "p75": 9330
+          },
+          "net": {
+            "median": 5913,
+            "p25": 4550,
+            "p75": 6690
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 55
+            },
+            "men": {
+              "count": 5,
+              "percentage": 45
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Redaktor wydawniczy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 125,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7270,
+            "p25": 5850,
+            "p75": 9690
+          },
+          "net": {
+            "median": 5286,
+            "p25": 4318,
+            "p75": 6936
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 97,
+              "percentage": 78
+            },
+            "men": {
+              "count": 28,
+              "percentage": 22
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 81
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 54
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Referendarz sądowy",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12180,
+            "p25": 7650,
+            "p75": 16820
+          },
+          "net": {
+            "median": 8633,
+            "p25": 5545,
+            "p75": 11796
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 64
+            },
+            "men": {
+              "count": 8,
+              "percentage": 36
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opracowywanie, analiza, opiniowanie dokumentacji fachowej,",
+          "reprezentowanie jednostki w zakresie interpretacji zapisów w dokumentach,",
+          "obsługa przepływu informacji w jednostce."
+        ]
+      },
+      {
+        "title": "Referent (administracja państwowa)",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 229,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5210,
+                "p25": 4700,
+                "p75": 6160
+              },
+              "net": {
+                "median": 3881,
+                "p25": 3534,
+                "p75": 4529
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 428,
+                "percentage": 78
+              },
+              "men": {
+                "count": 120,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 25
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 20
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 16
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5420,
+                "p25": 4900,
+                "p75": 6330
+              },
+              "net": {
+                "median": 4025,
+                "p25": 3671,
+                "p75": 4646
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 185,
+                "percentage": 81
+              },
+              "men": {
+                "count": 44,
+                "percentage": 19
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5510,
+                "p25": 4850,
+                "p75": 6500
+              },
+              "net": {
+                "median": 4086,
+                "p25": 3636,
+                "p75": 4761
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 77,
+                "percentage": 79
+              },
+              "men": {
+                "count": 20,
+                "percentage": 21
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "zapewnienie prawidłowego obiegu dokumentacji i korespondencji,",
+          "wykonywanie prostych prac biurowych,",
+          "wspomaganie pracy działu/referatu,",
+          "wykonywanie innych czynności w zależności od działu/referatu"
+        ]
+      },
+      {
+        "title": "Refrakcjonista",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 182,
+        "related_positions": [
+          {
+            "title": "optometrysta"
+          },
+          {
+            "title": "refrakcjonista."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7640,
+            "p25": 6110,
+            "p75": 9720
+          },
+          "net": {
+            "median": 5538,
+            "p25": 4495,
+            "p75": 6957
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 158,
+              "percentage": 87
+            },
+            "men": {
+              "count": 24,
+              "percentage": 13
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Regionalny dyrektor sprzedaży",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 281,
+        "related_positions": [
+          {
+            "title": "dyrektor regionu sprzedaży"
+          },
+          {
+            "title": "regionalny dyrektor sprzedaży"
+          },
+          {
+            "title": "dyrektor regionalny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 19480,
+            "p25": 15520,
+            "p75": 26500
+          },
+          "net": {
+            "median": 13609,
+            "p25": 10910,
+            "p75": 18395
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 59,
+              "percentage": 21
+            },
+            "men": {
+              "count": 222,
+              "percentage": 79
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 81
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 81
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 62
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży tradycyjnej firmy na terenie wyznaczonego obszaru,",
+          "organizacja i zarządzanie siecią sprzedaży w regionie,",
+          "nadzór nad pracą kierowników obszaru sprzedaży,",
+          "udział w opracowywaniu planów sprzedaży na terenie podległego obszaru,",
+          "realizacja zaplanowanego obrotu,",
+          "sporządzanie raportów i analiz,",
+          "kontakty i negocjacje z kluczowymi klientami z regionu,",
+          "rozwój sieci sprzedaży."
+        ]
+      },
+      {
+        "title": "Regionalny kierownik do spraw sprzedaży",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 943,
+        "related_positions": [
+          {
+            "title": "kierownik regionu sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik sprzedaży"
+          },
+          {
+            "title": "kierownik regionalny"
+          },
+          {
+            "title": "regionalny koordynator sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik ds. sprzedaży"
+          },
+          {
+            "title": "manager regionalny"
+          },
+          {
+            "title": "kierownik regionalny sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik do spraw sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13080,
+            "p25": 9850,
+            "p75": 17210
+          },
+          "net": {
+            "median": 9247,
+            "p25": 7045,
+            "p75": 12062
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 242,
+              "percentage": 26
+            },
+            "men": {
+              "count": 701,
+              "percentage": 74
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 59
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży firmy na terenie wyznaczonego obszaru,",
+          "nawiązywanie i utrzymywanie kontaktów handlowych na danym obszarze,",
+          "kierowanie zespołem handlowców,",
+          "nadzór nad ciągłością dostaw, monitorowanie przebiegu sprzedaży i dystrybucji na danym obszarze,",
+          "organizowanie akcji promocyjnych,",
+          "poszukiwanie nowych rynków zbytu,",
+          "kontakty i negocjacje z kluczowymi klientami z obszaru,",
+          "sporządzanie raportów i analiz,",
+          "wykonanie zaplanowanego obrotu."
+        ]
+      },
+      {
+        "title": "Regionalny kierownik ds. sprzedaży",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 943,
+        "related_positions": [
+          {
+            "title": "kierownik regionu sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik sprzedaży"
+          },
+          {
+            "title": "kierownik regionalny"
+          },
+          {
+            "title": "regionalny koordynator sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik ds. sprzedaży"
+          },
+          {
+            "title": "manager regionalny"
+          },
+          {
+            "title": "kierownik regionalny sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik do spraw sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13080,
+            "p25": 9850,
+            "p75": 17210
+          },
+          "net": {
+            "median": 9247,
+            "p25": 7045,
+            "p75": 12062
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 242,
+              "percentage": 26
+            },
+            "men": {
+              "count": 701,
+              "percentage": 74
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 59
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży firmy na terenie wyznaczonego obszaru,",
+          "nawiązywanie i utrzymywanie kontaktów handlowych na danym obszarze,",
+          "kierowanie zespołem handlowców,",
+          "nadzór nad ciągłością dostaw, monitorowanie przebiegu sprzedaży i dystrybucji na danym obszarze,",
+          "organizowanie akcji promocyjnych,",
+          "poszukiwanie nowych rynków zbytu,",
+          "kontakty i negocjacje z kluczowymi klientami z obszaru,",
+          "sporządzanie raportów i analiz,",
+          "wykonanie zaplanowanego obrotu."
+        ]
+      },
+      {
+        "title": "Regionalny kierownik sprzedaży",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 943,
+        "related_positions": [
+          {
+            "title": "kierownik regionu sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik sprzedaży"
+          },
+          {
+            "title": "kierownik regionalny"
+          },
+          {
+            "title": "regionalny koordynator sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik ds. sprzedaży"
+          },
+          {
+            "title": "manager regionalny"
+          },
+          {
+            "title": "kierownik regionalny sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik do spraw sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13080,
+            "p25": 9850,
+            "p75": 17210
+          },
+          "net": {
+            "median": 9247,
+            "p25": 7045,
+            "p75": 12062
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 242,
+              "percentage": 26
+            },
+            "men": {
+              "count": 701,
+              "percentage": 74
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 59
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży firmy na terenie wyznaczonego obszaru,",
+          "nawiązywanie i utrzymywanie kontaktów handlowych na danym obszarze,",
+          "kierowanie zespołem handlowców,",
+          "nadzór nad ciągłością dostaw, monitorowanie przebiegu sprzedaży i dystrybucji na danym obszarze,",
+          "organizowanie akcji promocyjnych,",
+          "poszukiwanie nowych rynków zbytu,",
+          "kontakty i negocjacje z kluczowymi klientami z obszaru,",
+          "sporządzanie raportów i analiz,",
+          "wykonanie zaplanowanego obrotu."
+        ]
+      },
+      {
+        "title": "Regionalny koordynator sprzedaży",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 943,
+        "related_positions": [
+          {
+            "title": "kierownik regionu sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik sprzedaży"
+          },
+          {
+            "title": "kierownik regionalny"
+          },
+          {
+            "title": "regionalny koordynator sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik ds. sprzedaży"
+          },
+          {
+            "title": "manager regionalny"
+          },
+          {
+            "title": "kierownik regionalny sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik do spraw sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13080,
+            "p25": 9850,
+            "p75": 17210
+          },
+          "net": {
+            "median": 9247,
+            "p25": 7045,
+            "p75": 12062
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 242,
+              "percentage": 26
+            },
+            "men": {
+              "count": 701,
+              "percentage": 74
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 59
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży firmy na terenie wyznaczonego obszaru,",
+          "nawiązywanie i utrzymywanie kontaktów handlowych na danym obszarze,",
+          "kierowanie zespołem handlowców,",
+          "nadzór nad ciągłością dostaw, monitorowanie przebiegu sprzedaży i dystrybucji na danym obszarze,",
+          "organizowanie akcji promocyjnych,",
+          "poszukiwanie nowych rynków zbytu,",
+          "kontakty i negocjacje z kluczowymi klientami z obszaru,",
+          "sporządzanie raportów i analiz,",
+          "wykonanie zaplanowanego obrotu."
+        ]
+      },
+      {
+        "title": "Regionalny przedstawiciel handlowy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1686,
+        "related_positions": [
+          {
+            "title": "specjalista ds. handlowych"
+          },
+          {
+            "title": "przedstawiciel handlowy"
+          },
+          {
+            "title": "handlowiec"
+          },
+          {
+            "title": "regionalny przedstawiciel handlowy"
+          },
+          {
+            "title": "reprezentant handlowy"
+          },
+          {
+            "title": "specjalista do spraw handlowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6780,
+                "p25": 5610,
+                "p75": 8530
+              },
+              "net": {
+                "median": 4952,
+                "p25": 4154,
+                "p75": 6145
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 104,
+                "percentage": 33
+              },
+              "men": {
+                "count": 207,
+                "percentage": 67
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 41
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7710,
+                "p25": 6250,
+                "p75": 9850
+              },
+              "net": {
+                "median": 5586,
+                "p25": 4591,
+                "p75": 7045
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 554,
+                "percentage": 33
+              },
+              "men": {
+                "count": 1132,
+                "percentage": 67
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 45
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 31
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 31
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8810,
+                "p25": 7020,
+                "p75": 11950
+              },
+              "net": {
+                "median": 6336,
+                "p25": 5115,
+                "p75": 8477
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 232,
+                "percentage": 29
+              },
+              "men": {
+                "count": 562,
+                "percentage": 71
+              }
+            },
+            "benefits": [
+              {
+                "name": "samochód osobowy do użytku prywatnego",
+                "percentage": 43
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 41
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 39
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "realizowanie planów sprzedaży,",
+          "utrzymywanie kontaktów z klientami na swoim terenie,",
+          "realizowanie zawartych umów,",
+          "pozyskiwanie nowych klientów,",
+          "prowadzenie aktywnej działalności handlowej i promocyjnej,",
+          "sporządzanie raportów i analiz,",
+          "prezentacja aktualnych promocji i kampanii sprzedażowych"
+        ]
+      },
+      {
+        "title": "Rehabilitant",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6310,
+            "p25": 5260,
+            "p75": 11910
+          },
+          "net": {
+            "median": 4632,
+            "p25": 3915,
+            "p75": 8449
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 81
+            },
+            "men": {
+              "count": 3,
+              "percentage": 19
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rejestratorka",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 49,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5450,
+            "p25": 4730,
+            "p75": 6690
+          },
+          "net": {
+            "median": 4046,
+            "p25": 3554,
+            "p75": 4890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 94
+            },
+            "men": {
+              "count": 3,
+              "percentage": 6
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rejestratorka medyczna",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 466,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5290,
+            "p25": 4800,
+            "p75": 6110
+          },
+          "net": {
+            "median": 3936,
+            "p25": 3602,
+            "p75": 4495
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 448,
+              "percentage": 96
+            },
+            "men": {
+              "count": 18,
+              "percentage": 4
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 21
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 14
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 14
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Relase manager",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13970,
+            "p25": 9830,
+            "p75": 17710
+          },
+          "net": {
+            "median": 9388,
+            "p25": 6841,
+            "p75": 11777
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 21
+            },
+            "men": {
+              "count": 11,
+              "percentage": 79
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Reprezentant handlowy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1686,
+        "related_positions": [
+          {
+            "title": "specjalista ds. handlowych"
+          },
+          {
+            "title": "przedstawiciel handlowy"
+          },
+          {
+            "title": "handlowiec"
+          },
+          {
+            "title": "regionalny przedstawiciel handlowy"
+          },
+          {
+            "title": "reprezentant handlowy"
+          },
+          {
+            "title": "specjalista do spraw handlowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6780,
+                "p25": 5610,
+                "p75": 8530
+              },
+              "net": {
+                "median": 4952,
+                "p25": 4154,
+                "p75": 6145
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 104,
+                "percentage": 33
+              },
+              "men": {
+                "count": 207,
+                "percentage": 67
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 41
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7710,
+                "p25": 6250,
+                "p75": 9850
+              },
+              "net": {
+                "median": 5586,
+                "p25": 4591,
+                "p75": 7045
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 554,
+                "percentage": 33
+              },
+              "men": {
+                "count": 1132,
+                "percentage": 67
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 45
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 31
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 31
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8810,
+                "p25": 7020,
+                "p75": 11950
+              },
+              "net": {
+                "median": 6336,
+                "p25": 5115,
+                "p75": 8477
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 232,
+                "percentage": 29
+              },
+              "men": {
+                "count": 562,
+                "percentage": 71
+              }
+            },
+            "benefits": [
+              {
+                "name": "samochód osobowy do użytku prywatnego",
+                "percentage": 43
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 41
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 39
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "realizowanie planów sprzedaży,",
+          "utrzymywanie kontaktów z klientami na swoim terenie,",
+          "realizowanie zawartych umów,",
+          "pozyskiwanie nowych klientów,",
+          "prowadzenie aktywnej działalności handlowej i promocyjnej,",
+          "sporządzanie raportów i analiz,",
+          "prezentacja aktualnych promocji i kampanii sprzedażowych"
+        ]
+      },
+      {
+        "title": "Reprezentant medyczny",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 308,
+        "related_positions": [
+          {
+            "title": "przedstawiciel medyczny"
+          },
+          {
+            "title": "reprezentant medyczny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10240,
+            "p25": 8620,
+            "p75": 12390
+          },
+          "net": {
+            "median": 7311,
+            "p25": 6206,
+            "p75": 8776
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 195,
+              "percentage": 63
+            },
+            "men": {
+              "count": 113,
+              "percentage": 37
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "sprzedaż produktów firm z branży medycznej ,",
+          "pozyskiwanie nowych klientów oraz utrzymywanie dobrych relacji z dotychczasowymi,",
+          "negocjowanie kontraktów,",
+          "przekazywanie informacji o produkach firmy"
+        ]
+      },
+      {
+        "title": "Researcher",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 142,
+        "related_positions": [
+          {
+            "title": "broker informacji"
+          },
+          {
+            "title": "researcher"
+          },
+          {
+            "title": "broker edukacyjny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5960,
+            "p75": 11130
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4393,
+            "p75": 7918
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 107,
+              "percentage": 75
+            },
+            "men": {
+              "count": 35,
+              "percentage": 25
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 85
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 78
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rewident",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": [
+          {
+            "title": "rewident"
+          },
+          {
+            "title": "biegły rewident"
+          },
+          {
+            "title": "rewident taboru."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10100,
+            "p25": 6710,
+            "p75": 14130
+          },
+          "net": {
+            "median": 7215,
+            "p25": 4904,
+            "p75": 9962
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 33
+            },
+            "men": {
+              "count": 30,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rewident taboru",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": [
+          {
+            "title": "rewident"
+          },
+          {
+            "title": "biegły rewident"
+          },
+          {
+            "title": "rewident taboru."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10100,
+            "p25": 6710,
+            "p75": 14130
+          },
+          "net": {
+            "median": 7215,
+            "p25": 4904,
+            "p75": 9962
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 33
+            },
+            "men": {
+              "count": 30,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rezydent",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 43,
+        "related_positions": [
+          {
+            "title": "lekarz stażysta"
+          },
+          {
+            "title": "rezydent."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7910,
+            "p25": 5930,
+            "p75": 11050
+          },
+          "net": {
+            "median": 5722,
+            "p25": 4372,
+            "p75": 7863
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 44
+            },
+            "men": {
+              "count": 24,
+              "percentage": 56
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Robotnik drogowy",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": [
+          {
+            "title": "robotnik drogowy"
+          },
+          {
+            "title": "pracownik robót ziemnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5290,
+            "p75": 7450
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3936,
+            "p75": 5409
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 31,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Robotnik gospodarczy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5290,
+            "p25": 4650,
+            "p75": 6190
+          },
+          "net": {
+            "median": 3936,
+            "p25": 3500,
+            "p75": 4550
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 6
+            },
+            "men": {
+              "count": 17,
+              "percentage": 94
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Robotnik górniczy dołowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10230,
+            "p25": 8720,
+            "p75": 10710
+          },
+          "net": {
+            "median": 7304,
+            "p25": 6274,
+            "p75": 7631
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Robotnik magazynowy",
+        "category": [
+          "magazyn"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 217,
+        "related_positions": [
+          {
+            "title": "magazynier"
+          },
+          {
+            "title": "pracownik magazynu"
+          },
+          {
+            "title": "pracownik magazynowy"
+          },
+          {
+            "title": "pracownik magazynu logistycznego"
+          },
+          {
+            "title": "komisjoner"
+          },
+          {
+            "title": "robotnik magazynowy."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5540,
+                "p25": 4980,
+                "p75": 6120
+              },
+              "net": {
+                "median": 4106,
+                "p25": 3724,
+                "p75": 4502
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 16,
+                "percentage": 15
+              },
+              "men": {
+                "count": 93,
+                "percentage": 85
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6050,
+                "p25": 5290,
+                "p75": 6960
+              },
+              "net": {
+                "median": 4454,
+                "p25": 3936,
+                "p75": 5074
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 21,
+                "percentage": 10
+              },
+              "men": {
+                "count": 196,
+                "percentage": 90
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6040,
+                "p25": 5500,
+                "p75": 6920
+              },
+              "net": {
+                "median": 4448,
+                "p25": 4079,
+                "p75": 5047
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 7,
+                "percentage": 7
+              },
+              "men": {
+                "count": 95,
+                "percentage": 93
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "załadunek i rozładunek towaru,",
+          "obsługa urządzeń technicznych,",
+          "dbałość o utrzymanie porządku,",
+          "stosowanie procedur minimalizacji strat."
+        ]
+      },
+      {
+        "title": "Rozbieracz",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": [
+          {
+            "title": "wykrawacz"
+          },
+          {
+            "title": "rozbieracz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4610,
+            "p25": 3930,
+            "p75": 4920
+          },
+          "net": {
+            "median": 3473,
+            "p25": 3009,
+            "p75": 3684
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 38
+            },
+            "men": {
+              "count": 8,
+              "percentage": 62
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 15
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 15
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 15
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzecznik patentowy",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 37,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13550,
+            "p25": 11270,
+            "p75": 20930
+          },
+          "net": {
+            "median": 9567,
+            "p25": 8013,
+            "p75": 14598
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 68
+            },
+            "men": {
+              "count": 12,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "reprezentowanie spraw klientów przed Urzędem Patentowym,",
+          "weryfikowanie nowoczesnych projektów,",
+          "analiza opisu wynalazków,",
+          "organizowanie praw od strony formalnej i proceduralnej,",
+          "opiniowanie, wydawanie ekspertyz dotyczących napływających dokumentów,",
+          "raportowanie do odpowiedniej jednostki."
+        ]
+      },
+      {
+        "title": "Rzecznik prasowy",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 69,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9610,
+            "p25": 7600,
+            "p75": 12320
+          },
+          "net": {
+            "median": 6881,
+            "p25": 5511,
+            "p75": 8728
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 36,
+              "percentage": 52
+            },
+            "men": {
+              "count": 33,
+              "percentage": 48
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 45
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 36
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 36
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "reprezentowanie urzędu, instytucji czy firmy w kontaktach z środkami masowego przekazu,",
+          "odpowiedzialność za całość informacji na temat firmy lub urzędu, która przedostaje się do mediów,",
+          "realizowanie stałej strategii komunikacji z mediami"
+        ]
+      },
+      {
+        "title": "Rzeczoznawca",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": [
+          {
+            "title": "rzeczoznawca"
+          },
+          {
+            "title": "rzeczoznawca do spraw bezpieczeństwa i higieny pracy"
+          },
+          {
+            "title": "rzeczoznawca jakości handlowej artykułów rolno-spożywczych"
+          },
+          {
+            "title": "rzeczoznawca rolniczy"
+          },
+          {
+            "title": "rzeczoznawca ds. bezpieczeństwa i higieny pracy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7530,
+            "p75": 11530
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5463,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 16
+            },
+            "men": {
+              "count": 32,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeczoznawca do spraw bezpieczeństwa i higieny pracy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": [
+          {
+            "title": "rzeczoznawca"
+          },
+          {
+            "title": "rzeczoznawca do spraw bezpieczeństwa i higieny pracy"
+          },
+          {
+            "title": "rzeczoznawca jakości handlowej artykułów rolno-spożywczych"
+          },
+          {
+            "title": "rzeczoznawca rolniczy"
+          },
+          {
+            "title": "rzeczoznawca ds. bezpieczeństwa i higieny pracy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7530,
+            "p75": 11530
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5463,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 16
+            },
+            "men": {
+              "count": 32,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeczoznawca ds. bezpieczeństwa i higieny pracy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": [
+          {
+            "title": "rzeczoznawca"
+          },
+          {
+            "title": "rzeczoznawca do spraw bezpieczeństwa i higieny pracy"
+          },
+          {
+            "title": "rzeczoznawca jakości handlowej artykułów rolno-spożywczych"
+          },
+          {
+            "title": "rzeczoznawca rolniczy"
+          },
+          {
+            "title": "rzeczoznawca ds. bezpieczeństwa i higieny pracy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7530,
+            "p75": 11530
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5463,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 16
+            },
+            "men": {
+              "count": 32,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeczoznawca jakości handlowej artykułów rolno-spożywczych",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": [
+          {
+            "title": "rzeczoznawca"
+          },
+          {
+            "title": "rzeczoznawca do spraw bezpieczeństwa i higieny pracy"
+          },
+          {
+            "title": "rzeczoznawca jakości handlowej artykułów rolno-spożywczych"
+          },
+          {
+            "title": "rzeczoznawca rolniczy"
+          },
+          {
+            "title": "rzeczoznawca ds. bezpieczeństwa i higieny pracy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7530,
+            "p75": 11530
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5463,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 16
+            },
+            "men": {
+              "count": 32,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeczoznawca majątkowy",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 60,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11580,
+            "p25": 8350,
+            "p75": 13130
+          },
+          "net": {
+            "median": 8224,
+            "p25": 6022,
+            "p75": 9280
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 73
+            },
+            "men": {
+              "count": 16,
+              "percentage": 27
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeczoznawca rolniczy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": [
+          {
+            "title": "rzeczoznawca"
+          },
+          {
+            "title": "rzeczoznawca do spraw bezpieczeństwa i higieny pracy"
+          },
+          {
+            "title": "rzeczoznawca jakości handlowej artykułów rolno-spożywczych"
+          },
+          {
+            "title": "rzeczoznawca rolniczy"
+          },
+          {
+            "title": "rzeczoznawca ds. bezpieczeństwa i higieny pracy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7530,
+            "p75": 11530
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5463,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 16
+            },
+            "men": {
+              "count": 32,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeczoznawca samochodowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 27,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9540,
+            "p25": 8190,
+            "p75": 11670
+          },
+          "net": {
+            "median": 6833,
+            "p25": 5913,
+            "p75": 8286
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 27,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Rzeźnik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4540,
+            "p25": 3370,
+            "p75": 6290
+          },
+          "net": {
+            "median": 3366,
+            "p25": 2619,
+            "p75": 4524
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 13,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 30
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

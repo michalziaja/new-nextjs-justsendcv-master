@@ -1,0 +1,63 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. umów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-umow",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 204,
+        "related_positions": [
+          {
+            "title": "specjalista ds. umów"
+          },
+          {
+            "title": "specjalista do spraw umów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7740,
+            "p25": 6230,
+            "p75": 9660
+          },
+          "net": {
+            "median": 5607,
+            "p25": 4577,
+            "p75": 6915
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 163,
+              "percentage": 80
+            },
+            "men": {
+              "count": 41,
+              "percentage": 20
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 71
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 71
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

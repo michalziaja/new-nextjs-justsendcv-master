@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Detektyw",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-detektyw",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9320,
+            "p25": 7870,
+            "p75": 10130
+          },
+          "net": {
+            "median": 6683,
+            "p25": 5695,
+            "p75": 7235
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 16
+            },
+            "men": {
+              "count": 16,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

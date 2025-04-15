@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier mechatronik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-mechatronik",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 166,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10090,
+            "p25": 8210,
+            "p75": 13530
+          },
+          "net": {
+            "median": 7208,
+            "p25": 5927,
+            "p75": 9553
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 5
+            },
+            "men": {
+              "count": 157,
+              "percentage": 95
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 50
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 35
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

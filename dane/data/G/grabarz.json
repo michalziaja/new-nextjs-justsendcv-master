@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Grabarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-grabarz",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "grabarz"
+          },
+          {
+            "title": "garbarz skór."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 3560,
+            "p25": 3040,
+            "p75": 3790
+          },
+          "net": {
+            "median": 2740,
+            "p25": 2387,
+            "p75": 2888
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

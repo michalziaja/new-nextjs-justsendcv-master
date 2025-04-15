@@ -1,0 +1,45 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Nauczyciel przedmiotów zawodowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-nauczyciel-przedmiotow-zawodowych",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6760,
+            "p25": 5070,
+            "p75": 8490
+          },
+          "net": {
+            "median": 4938,
+            "p25": 3786,
+            "p75": 6118
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 22,
+              "percentage": 50
+            },
+            "men": {
+              "count": 22,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie zajęć z danego przedmiotu w celu przygotowania do zawodu,",
+          "prowadzenie dokumentacji"
+        ]
+      }
+    ]
+  }
+]

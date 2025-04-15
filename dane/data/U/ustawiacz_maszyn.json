@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "U",
+    "positions": [
+      {
+        "title": "Ustawiacz maszyn",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ustawiacz-maszyn",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 239,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6830,
+            "p25": 5720,
+            "p75": 8170
+          },
+          "net": {
+            "median": 4986,
+            "p25": 4230,
+            "p75": 5899
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 3
+            },
+            "men": {
+              "count": 233,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

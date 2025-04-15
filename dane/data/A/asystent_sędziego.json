@@ -1,0 +1,60 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent sędziego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-sedziego",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 152,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6660,
+            "p25": 6070,
+            "p75": 7470
+          },
+          "net": {
+            "median": 4870,
+            "p25": 4467,
+            "p75": 5422
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 103,
+              "percentage": 68
+            },
+            "men": {
+              "count": 49,
+              "percentage": 32
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 50
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 40
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wspomaganie pracy sędziów,",
+          "przygotowywanie projektów orzeczeń, zarządzeń i uzasadnień,",
+          "kontrola sprawności, terminowości i prawidłowości wykonywania zarządzeń sędziego przez sekretariat,",
+          "wstępna analiza akt"
+        ]
+      }
+    ]
+  }
+]

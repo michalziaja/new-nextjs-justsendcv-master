@@ -1,0 +1,58 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Wychowawca w placówkach opiekuńczych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-wychowawca-w-placowkach-opiekunczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "wychowawca w placówkach oświatowych"
+          },
+          {
+            "title": "wychowawca w placówkach wsparcia dziennego"
+          },
+          {
+            "title": "wychowawca w placówkach wychowawczych"
+          },
+          {
+            "title": "wychowawca w placówkach opiekuńczych"
+          },
+          {
+            "title": "wychowawca w instytucjach pieczy zastępczej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4720,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3547,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 88
+            },
+            "men": {
+              "count": 19,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -28,7 +28,7 @@ export default function SchedulerPage() {
   return (
     <div className="flex flex-1 flex-col p-2 
             ml-0 mr-0 mt-6 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6 md:mt-7 
-            lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-8 xl:mr-8 xl:mt-10">
+            lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-15 xl:mr-15 xl:mt-12">
       
         <div className="flex items-center justify-between w-full gap-4 mt-0">
           <div className="relative w-45 sm:w-50 md:w-50 lg:w-50 xl:w-57 ml-0 border-0 bg-white dark:bg-sidebar shadow-[2px_4px_10px_rgba(0,0,0,0.3)] border-cyan-500 dark:border-gray-700 rounded-md">

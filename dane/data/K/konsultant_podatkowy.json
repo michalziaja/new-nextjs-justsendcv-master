@@ -1,0 +1,150 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant podatkowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-podatkowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 205,
+        "related_positions": [
+          {
+            "title": "doradca podatkowy"
+          },
+          {
+            "title": "konsultant podatkowy."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7390,
+                "p25": 6500,
+                "p75": 8340
+              },
+              "net": {
+                "median": 5368,
+                "p25": 4761,
+                "p75": 6015
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 48
+              },
+              "men": {
+                "count": 94,
+                "percentage": 52
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 72
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 63
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 59
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8590,
+                "p25": 7500,
+                "p75": 10440
+              },
+              "net": {
+                "median": 6186,
+                "p25": 5442,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 105,
+                "percentage": 51
+              },
+              "men": {
+                "count": 100,
+                "percentage": 49
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 70
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 61
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 61
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12060,
+                "p25": 9850,
+                "p75": 14210
+              },
+              "net": {
+                "median": 8551,
+                "p25": 7045,
+                "p75": 10017
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 104,
+                "percentage": 54
+              },
+              "men": {
+                "count": 88,
+                "percentage": 46
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 81
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 75
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "udzielanie podatnikom, płatnikom i inkasentom porad i wyjaśnień z zakresu prawa podatkowego,",
+          "pomoc klientom w zakresie prowadzenia ksiag podatkowych i innych ewidencji do celów podatkowych,",
+          "sporządzanie deklaracji i zeznań podatkowych w imieniu i na rzecz klientów"
+        ]
+      }
+    ]
+  }
+]

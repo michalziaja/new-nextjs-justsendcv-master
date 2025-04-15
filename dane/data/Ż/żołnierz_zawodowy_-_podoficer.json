@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "Ż",
+    "positions": [
+      {
+        "title": "Żołnierz zawodowy - podoficer",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-zolnierz-zawodowy-podoficer",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7200,
+            "p25": 6200,
+            "p75": 8840
+          },
+          "net": {
+            "median": 5238,
+            "p25": 4556,
+            "p75": 6357
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 12,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 41
+            },
+            {
+              "name": "mieszkanie/dom służbowy",
+              "percentage": 25
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 16
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator CAD",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-cad",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 49,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7150,
+            "p25": 5900,
+            "p75": 8200
+          },
+          "net": {
+            "median": 5204,
+            "p25": 4352,
+            "p75": 5920
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 24
+            },
+            "men": {
+              "count": 37,
+              "percentage": 76
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

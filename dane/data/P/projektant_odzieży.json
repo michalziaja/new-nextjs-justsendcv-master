@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant odzieży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-odziezy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 133,
+        "related_positions": [
+          {
+            "title": "projektant mody"
+          },
+          {
+            "title": "projektant odzieży"
+          },
+          {
+            "title": "projektant kolekcji damskiej"
+          },
+          {
+            "title": "projektant bielizny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7810,
+            "p25": 6120,
+            "p75": 9770
+          },
+          "net": {
+            "median": 5654,
+            "p25": 4502,
+            "p75": 6990
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 112,
+              "percentage": 84
+            },
+            "men": {
+              "count": 21,
+              "percentage": 16
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw celnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-celnych",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 230,
+        "related_positions": [
+          {
+            "title": "specjalista ds. celnych"
+          },
+          {
+            "title": "agent celny"
+          },
+          {
+            "title": "specjalista do spraw celnych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6410,
+                "p25": 5570,
+                "p75": 7650
+              },
+              "net": {
+                "median": 4699,
+                "p25": 4127,
+                "p75": 5545
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 40,
+                "percentage": 80
+              },
+              "men": {
+                "count": 10,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7530,
+                "p25": 6290,
+                "p75": 8880
+              },
+              "net": {
+                "median": 5463,
+                "p25": 4618,
+                "p75": 6383
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 145,
+                "percentage": 63
+              },
+              "men": {
+                "count": 85,
+                "percentage": 37
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 46
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 43
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 43
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8570,
+                "p25": 7240,
+                "p75": 10200
+              },
+              "net": {
+                "median": 6173,
+                "p25": 5265,
+                "p75": 7283
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 47,
+                "percentage": 57
+              },
+              "men": {
+                "count": 36,
+                "percentage": 43
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 50
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 40
+              },
+              {
+                "name": "dofinansowanie nauki",
+                "percentage": 40
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "obsługa celna przedsiębiorstwa,",
+          "współpraca z Urzędem Celnym,",
+          "dostosowywanie procedur firmy do zmian w przepisach celnych"
+        ]
+      }
+    ]
+  }
+]

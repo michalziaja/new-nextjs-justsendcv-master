@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik informatyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-informatyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 219,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6000,
+            "p25": 5130,
+            "p75": 7960
+          },
+          "net": {
+            "median": 4420,
+            "p25": 3827,
+            "p75": 5757
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 4
+            },
+            "men": {
+              "count": 211,
+              "percentage": 96
+            }
+          },
+          "benefits": [
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 70
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 60
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 60
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

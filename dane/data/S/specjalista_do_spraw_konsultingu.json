@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw konsultingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-konsultingu",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 77,
+        "related_positions": [
+          {
+            "title": "specjalista do spraw konsultingu"
+          },
+          {
+            "title": "specjalista ds. konsultingu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 11010,
+            "p25": 8070,
+            "p75": 17000
+          },
+          "net": {
+            "median": 7835,
+            "p25": 5831,
+            "p75": 11919
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 45,
+              "percentage": 58
+            },
+            "men": {
+              "count": 32,
+              "percentage": 42
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 46
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 46
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 46
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

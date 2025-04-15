@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pomocnik mleczarski",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pomocnik-mleczarski",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5740,
+            "p25": 5120,
+            "p75": 6490
+          },
+          "net": {
+            "median": 4243,
+            "p25": 3820,
+            "p75": 4754
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 21
+            },
+            "men": {
+              "count": 11,
+              "percentage": 79
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

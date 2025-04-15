@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik domu spokojnej starości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-domu-spokojnej-starosci",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8130,
+            "p25": 6620,
+            "p75": 8570
+          },
+          "net": {
+            "median": 5872,
+            "p25": 4843,
+            "p75": 6173
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 80
+            },
+            "men": {
+              "count": 2,
+              "percentage": 20
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 30
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 30
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

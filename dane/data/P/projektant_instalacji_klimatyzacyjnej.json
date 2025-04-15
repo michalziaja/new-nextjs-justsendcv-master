@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant instalacji klimatyzacyjnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-instalacji-klimatyzacyjnej",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": [
+          {
+            "title": "projektant instalacji wentylacyjnej"
+          },
+          {
+            "title": "projektant instalacji klimatyzacyjnej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9130,
+            "p25": 7780,
+            "p75": 10630
+          },
+          "net": {
+            "median": 6554,
+            "p25": 5633,
+            "p75": 7576
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 32
+            },
+            "men": {
+              "count": 30,
+              "percentage": 68
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

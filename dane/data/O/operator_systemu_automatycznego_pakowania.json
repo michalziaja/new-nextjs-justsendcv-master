@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator systemu automatycznego pakowania",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-systemu-automatycznego-pakowania",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4150,
+            "p25": 3800,
+            "p75": 4660
+          },
+          "net": {
+            "median": 3118,
+            "p25": 2894,
+            "p75": 3443
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 20
+            },
+            "men": {
+              "count": 8,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "koordynacja cyklu pakowania produktów,",
+          "zmiana parametrów systemu pakowania,",
+          "nadzór i kontrola działania maszyn ważących, pakujących i etykietujących,",
+          "prowadzenie dokumentacji produkcyjnej,",
+          "przygotowywanie raportów i zarządzanie bazą danych o wytworzonej produkcji."
+        ]
+      }
+    ]
+  }
+]

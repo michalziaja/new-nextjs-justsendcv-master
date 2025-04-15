@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. przygotowania produkcji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-przygotowania-produkcji",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 251,
+        "related_positions": [
+          {
+            "title": "specjalista ds. przygotowania produkcji"
+          },
+          {
+            "title": "specjalista do spraw przygotowania produkcji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7170,
+            "p25": 6050,
+            "p75": 8760
+          },
+          "net": {
+            "median": 5218,
+            "p25": 4454,
+            "p75": 6302
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 119,
+              "percentage": 47
+            },
+            "men": {
+              "count": 132,
+              "percentage": 53
+            }
+          },
+          "benefits": [
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 23
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 23
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 15
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

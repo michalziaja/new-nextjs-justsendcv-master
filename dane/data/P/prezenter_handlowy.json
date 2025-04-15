@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Prezenter handlowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-prezenter-handlowy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4130,
+            "p25": 3830,
+            "p75": 5250
+          },
+          "net": {
+            "median": 3105,
+            "p25": 2913,
+            "p75": 3820
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 40
+            },
+            "men": {
+              "count": 6,
+              "percentage": 60
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "Reprezentowanie firmy na zewnątrz,",
+          "dokonywanie prezentacji produktów dla klientów w miejscu ich zamieszkania/pracy,",
+          "sprzedaż produktów i usług,",
+          "realizacja planów sprzedażowych."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sales Executive",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sales-executive",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 159,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10790,
+            "p25": 7470,
+            "p75": 16690
+          },
+          "net": {
+            "median": 7384,
+            "p25": 5356,
+            "p75": 11125
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 59,
+              "percentage": 37
+            },
+            "men": {
+              "count": 100,
+              "percentage": 63
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 48
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 46
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

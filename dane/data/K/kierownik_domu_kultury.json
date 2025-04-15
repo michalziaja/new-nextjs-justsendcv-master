@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik domu kultury",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-domu-kultury",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6500,
+            "p25": 5790,
+            "p75": 7550
+          },
+          "net": {
+            "median": 4761,
+            "p25": 4277,
+            "p75": 5477
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 75
+            },
+            "men": {
+              "count": 3,
+              "percentage": 25
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

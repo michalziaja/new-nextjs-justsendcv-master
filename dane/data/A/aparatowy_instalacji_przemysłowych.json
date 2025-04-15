@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Aparatowy instalacji przemysłowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-aparatowy-instalacji-przemyslowych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6960,
+            "p25": 6490,
+            "p75": 8090
+          },
+          "net": {
+            "median": 5074,
+            "p25": 4754,
+            "p75": 5845
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 22,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

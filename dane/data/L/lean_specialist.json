@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lean Specialist",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lean-specialist",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 276,
+        "related_positions": [
+          {
+            "title": "specjalista ds. Lean Manufacturing"
+          },
+          {
+            "title": "lean Specialist"
+          },
+          {
+            "title": "specjalista lean"
+          },
+          {
+            "title": "specjalista do spraw Lean Manufacturing."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8510,
+            "p25": 7100,
+            "p75": 10760
+          },
+          "net": {
+            "median": 6131,
+            "p25": 5170,
+            "p75": 7665
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 113,
+              "percentage": 41
+            },
+            "men": {
+              "count": 163,
+              "percentage": 59
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 70
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 55
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 50
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

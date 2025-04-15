@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. rekrutacji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-rekrutacji",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 114,
+        "related_positions": [
+          {
+            "title": "kierownik ds. rekrutacji"
+          },
+          {
+            "title": "kierownik do spraw rekrutacji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 12860,
+            "p25": 9640,
+            "p75": 18680
+          },
+          "net": {
+            "median": 9096,
+            "p25": 6902,
+            "p75": 13064
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 83,
+              "percentage": 73
+            },
+            "men": {
+              "count": 31,
+              "percentage": 27
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 58
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 47
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 41
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

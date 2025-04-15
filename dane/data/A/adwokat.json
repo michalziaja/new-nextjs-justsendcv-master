@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Adwokat",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-adwokat",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 34,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9800,
+            "p25": 7830,
+            "p75": 12440
+          },
+          "net": {
+            "median": 7010,
+            "p25": 5667,
+            "p75": 8810
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 53
+            },
+            "men": {
+              "count": 16,
+              "percentage": 47
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "udzielanie pomocy prawnej,",
+          "reprezentowanie stron podczas postępowania sądowego lub przed instytucjami,",
+          "analiza dokumentów pod kątem ich zgodności z obowiązującymi przepisami oraz interesami klientów"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Administrator sieci informatycznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-administrator-sieci-informatycznej",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 257,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6930,
+                "p25": 5540,
+                "p75": 8900
+              },
+              "net": {
+                "median": 5054,
+                "p25": 4106,
+                "p75": 6397
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 2,
+                "percentage": 3
+              },
+              "men": {
+                "count": 63,
+                "percentage": 97
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8990,
+                "p25": 6900,
+                "p75": 12320
+              },
+              "net": {
+                "median": 6458,
+                "p25": 5034,
+                "p75": 8728
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 5,
+                "percentage": 2
+              },
+              "men": {
+                "count": 252,
+                "percentage": 98
+              }
+            },
+            "benefits": [
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 40
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 40
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 30
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11000,
+                "p25": 8420,
+                "p75": 15610
+              },
+              "net": {
+                "median": 7829,
+                "p25": 6070,
+                "p75": 10972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 0,
+                "percentage": 0
+              },
+              "men": {
+                "count": 203,
+                "percentage": 100
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "zapewnia sprawną komunikację informatyczną w firmie,",
+          "zapewnia wsparcie techniczne wszystkim użytkownikom sieci,",
+          "współpracuje przy zakupie urządzeń sieciowych,",
+          "instaluje i konfiguruje sieć oraz rozwiązuje problemy związane z siecią komputerową firmy,",
+          "zapewnia bezpieczeństwo sieci, ustala zabezpieczenia, kody, itp.,",
+          "współpracuje z administratorem systemu,",
+          "realizuje szkolenia dla pracowników z zakresu obsługi sieci,",
+          "instaluje i konfiguruje serwery oraz stacje robocze."
+        ]
+      }
+    ]
+  }
+]

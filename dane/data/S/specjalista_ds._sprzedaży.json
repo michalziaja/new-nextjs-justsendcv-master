@@ -1,0 +1,133 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 625,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6000,
+                "p25": 5230,
+                "p75": 7610
+              },
+              "net": {
+                "median": 4420,
+                "p25": 3895,
+                "p75": 5518
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 42,
+                "percentage": 46
+              },
+              "men": {
+                "count": 49,
+                "percentage": 54
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 5750,
+                "p75": 8580
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4250,
+                "p75": 6179
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 337,
+                "percentage": 54
+              },
+              "men": {
+                "count": 288,
+                "percentage": 46
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 46
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 43
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 43
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8310,
+                "p25": 6710,
+                "p75": 10250
+              },
+              "net": {
+                "median": 5994,
+                "p25": 4904,
+                "p75": 7318
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 96,
+                "percentage": 53
+              },
+              "men": {
+                "count": 84,
+                "percentage": 47
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 71
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 64
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 57
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "pozyskiwanie nowych klientów,",
+          "przygotowywanie ofert sprzedażowych,",
+          "przeprowadzanie prezentacji,",
+          "negocjowanie umów oraz nadzór nad ich finalizacją,",
+          "sporządzanie raportów sprzedażowych,",
+          "doradzanie klientom"
+        ]
+      }
+    ]
+  }
+]

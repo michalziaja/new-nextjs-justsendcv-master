@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Brygadzista w dziale logistyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-brygadzista-w-dziale-logistyki",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 189,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7170,
+            "p25": 5990,
+            "p75": 8280
+          },
+          "net": {
+            "median": 5218,
+            "p25": 4414,
+            "p75": 5975
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 22,
+              "percentage": 12
+            },
+            "men": {
+              "count": 167,
+              "percentage": 88
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

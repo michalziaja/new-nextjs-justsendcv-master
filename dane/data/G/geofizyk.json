@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Geofizyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-geofizyk",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8090,
+            "p25": 6840,
+            "p75": 11390
+          },
+          "net": {
+            "median": 5845,
+            "p25": 4993,
+            "p75": 8095
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 22
+            },
+            "men": {
+              "count": 14,
+              "percentage": 78
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

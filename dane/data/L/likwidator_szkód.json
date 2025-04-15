@@ -1,0 +1,140 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Likwidator szkód",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-likwidator-szkod",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 180,
+        "related_positions": [
+          {
+            "title": "likwidator szkód"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód majątkowych"
+          },
+          {
+            "title": "likwidator szkód komunikacyjnych"
+          },
+          {
+            "title": "likwidator szkód majątkowych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód majątkowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6100,
+                "p25": 5280,
+                "p75": 6940
+              },
+              "net": {
+                "median": 4488,
+                "p25": 3929,
+                "p75": 5061
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 61
+              },
+              "men": {
+                "count": 25,
+                "percentage": 39
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7270,
+                "p25": 6220,
+                "p75": 8840
+              },
+              "net": {
+                "median": 5286,
+                "p25": 4570,
+                "p75": 6357
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 66
+              },
+              "men": {
+                "count": 62,
+                "percentage": 34
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 66
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8480,
+                "p25": 7030,
+                "p75": 10160
+              },
+              "net": {
+                "median": 6111,
+                "p25": 5122,
+                "p75": 7256
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 62,
+                "percentage": 58
+              },
+              "men": {
+                "count": 45,
+                "percentage": 42
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "dokonywanie oględzin szkód (majątkowych, komunikacyjnych),",
+          "wycena szkód,",
+          "sporządzanie raportów,",
+          "obsługa klientów"
+        ]
+      }
+    ]
+  }
+]

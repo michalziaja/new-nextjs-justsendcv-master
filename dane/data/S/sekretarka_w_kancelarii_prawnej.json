@@ -1,0 +1,134 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sekretarka w kancelarii prawnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sekretarka-w-kancelarii-prawnej",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 246,
+        "related_positions": [
+          {
+            "title": "sekretarka"
+          },
+          {
+            "title": "sekretarz"
+          },
+          {
+            "title": "sekretarka notarialna"
+          },
+          {
+            "title": "sekretarka w kancelarii prawnej."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5360,
+                "p25": 4760,
+                "p75": 6360
+              },
+              "net": {
+                "median": 3984,
+                "p25": 3575,
+                "p75": 4665
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 111,
+                "percentage": 96
+              },
+              "men": {
+                "count": 5,
+                "percentage": 4
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5740,
+                "p25": 4970,
+                "p75": 6780
+              },
+              "net": {
+                "median": 4243,
+                "p25": 3718,
+                "p75": 4952
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 240,
+                "percentage": 98
+              },
+              "men": {
+                "count": 6,
+                "percentage": 2
+              }
+            },
+            "benefits": [
+              {
+                "name": "ryczałt na paliwo",
+                "percentage": 30
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 30
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 10
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6050,
+                "p25": 5150,
+                "p75": 7400
+              },
+              "net": {
+                "median": 4454,
+                "p25": 3841,
+                "p75": 5375
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 79,
+                "percentage": 93
+              },
+              "men": {
+                "count": 6,
+                "percentage": 7
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "wspomaganie codziennej pracy zespołu,",
+          "prowadzenie i ewidencjonowanie korespondencji,",
+          "prowadzenie dokumentacji,",
+          "umawianie spotkań,",
+          "klasyfikowanie dokumentów,",
+          "przygotowanie dokumentów dla biura rachunkowego,",
+          "obsługa urządzeń biurowych (centrala telefoniczna, komputer, fax, ksero),",
+          "kontakty z klientami."
+        ]
+      }
+    ]
+  }
+]

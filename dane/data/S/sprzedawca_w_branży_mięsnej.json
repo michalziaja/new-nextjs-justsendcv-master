@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sprzedawca w branży mięsnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sprzedawca-w-branzy-miesnej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 60,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4840,
+            "p25": 4470,
+            "p75": 5340
+          },
+          "net": {
+            "median": 3630,
+            "p25": 3377,
+            "p75": 3970
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 57,
+              "percentage": 95
+            },
+            "men": {
+              "count": 3,
+              "percentage": 5
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

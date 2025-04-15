@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik obsługi płacowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-obslugi-placowej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 118,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6680,
+            "p25": 5470,
+            "p75": 8150
+          },
+          "net": {
+            "median": 4883,
+            "p25": 4059,
+            "p75": 5886
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 110,
+              "percentage": 93
+            },
+            "men": {
+              "count": 8,
+              "percentage": 7
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

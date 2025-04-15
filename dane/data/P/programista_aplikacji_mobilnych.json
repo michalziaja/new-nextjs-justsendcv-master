@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista aplikacji mobilnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-aplikacji-mobilnych",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 82,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11480,
+            "p25": 8720,
+            "p75": 16690
+          },
+          "net": {
+            "median": 8156,
+            "p25": 6274,
+            "p75": 11708
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 16
+            },
+            "men": {
+              "count": 69,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

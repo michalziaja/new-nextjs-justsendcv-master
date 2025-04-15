@@ -1,0 +1,109 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista kontroli jakości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-kontroli-jakosci",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 334,
+        "related_positions": [
+          {
+            "title": "specjalista ds. kontroli jakości"
+          },
+          {
+            "title": "specjalista kontroli jakości"
+          },
+          {
+            "title": "specjalista do spraw kontroli jakości."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5730,
+                "p25": 5280,
+                "p75": 6720
+              },
+              "net": {
+                "median": 4236,
+                "p25": 3929,
+                "p75": 4911
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 50,
+                "percentage": 77
+              },
+              "men": {
+                "count": 15,
+                "percentage": 23
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6530,
+                "p25": 5610,
+                "p75": 7860
+              },
+              "net": {
+                "median": 4782,
+                "p25": 4154,
+                "p75": 5688
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 208,
+                "percentage": 62
+              },
+              "men": {
+                "count": 126,
+                "percentage": 38
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7590,
+                "p25": 6590,
+                "p75": 9360
+              },
+              "net": {
+                "median": 5504,
+                "p25": 4823,
+                "p75": 6711
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 33,
+                "percentage": 47
+              },
+              "men": {
+                "count": 37,
+                "percentage": 53
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

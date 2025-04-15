@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik analityki medycznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-analityki-medycznej",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 49,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5950,
+            "p25": 5450,
+            "p75": 6960
+          },
+          "net": {
+            "median": 4386,
+            "p25": 4046,
+            "p75": 5074
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 45,
+              "percentage": 92
+            },
+            "men": {
+              "count": 4,
+              "percentage": 8
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "pobieranie materiału badawczego od pacjentów,",
+          "analiza pobranego materiału z użyciem sprzętu oraz aparatury laboratoryjnej,",
+          "opracowywanie i przedstawianie wyników badań,",
+          "prowadzenie ewidencji,",
+          "utrzymywanie porządku na stanowisku pracy i dbanie o sterylność narzędzi i pomieszczeń,",
+          "współpraca z lekarzami"
+        ]
+      }
+    ]
+  }
+]

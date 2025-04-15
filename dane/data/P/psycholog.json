@@ -1,0 +1,104 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Psycholog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-psycholog",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 227,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6630,
+                "p25": 5620,
+                "p75": 8520
+              },
+              "net": {
+                "median": 4849,
+                "p25": 4161,
+                "p75": 6138
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 73,
+                "percentage": 84
+              },
+              "men": {
+                "count": 14,
+                "percentage": 16
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6630,
+                "p25": 5290,
+                "p75": 9120
+              },
+              "net": {
+                "median": 4849,
+                "p25": 3936,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 194,
+                "percentage": 85
+              },
+              "men": {
+                "count": 33,
+                "percentage": 15
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8320,
+                "p25": 6550,
+                "p75": 12190
+              },
+              "net": {
+                "median": 6002,
+                "p25": 4795,
+                "p75": 8640
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 37,
+                "percentage": 79
+              },
+              "men": {
+                "count": 10,
+                "percentage": 21
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "pomoc klientowi lub pacjentowi w rozwiązaniu problemu,",
+          "analiza zachowania ludzi,",
+          "przeprowadzanie diagnostycznych badań psychologicznych"
+        ]
+      }
+    ]
+  }
+]

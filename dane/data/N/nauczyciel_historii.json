@@ -1,0 +1,198 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Nauczyciel historii",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-nauczyciel-historii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      }
+    ]
+  }
+]

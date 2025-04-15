@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor do spraw ryzyka kredytowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-do-spraw-ryzyka-kredytowego",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. ryzyka kredytowego"
+          },
+          {
+            "title": "dyrektor do spraw ryzyka kredytowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 24210,
+            "p25": 18920,
+            "p75": 29000
+          },
+          "net": {
+            "median": 16834,
+            "p25": 13228,
+            "p75": 20099
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 48
+            },
+            "men": {
+              "count": 13,
+              "percentage": 52
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "analizowanie ryzyka kredytowego w banku,",
+          "sprawowania kontroli nad procesem decyzyjnym,",
+          "ustalenie strategii limitów kredytowych na poziomie centrali i monitorowanie portfela kredytowego,",
+          "udział w tworzeniu projektów umów, dokumentów i rozwiązań mających na celu zapewnienie bezpieczeństwa finansowego banku oraz ograniczanie ryzyk biznesowych,",
+          "sprawdzanie poprawności dotychczas przeprowadzonych analiz,",
+          "nadzór nad sprawozdawczością kredytową na poziomie informacji zarządczej,",
+          "nadzór nad przestrzeganiem procedur i regulaminów przez pracowników,",
+          "opiniowanie wniosków kredytowych w przypadku niestandardowych sytuacji wykraczających poza ustanowione procedury,",
+          "zarządzanie podległym zespołem kadry kierowniczej odpowiedzialnej za zarządzanie ryzykiem kredytowym"
+        ]
+      }
+    ]
+  }
+]

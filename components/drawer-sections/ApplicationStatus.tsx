@@ -133,13 +133,13 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
   // Style (bez zmian)
   const getStatusStyles = (status: ApplicationStatusType) => {
     switch (status) {
-      case 'zapisana': return 'bg-blue-600 text-white hover:bg-blue-700'
-      case 'kontakt': return 'bg-yellow-600 text-white hover:bg-yellow-700'
-      case 'rozmowa': return 'bg-cyan-600 text-white hover:bg-cyan-700'
-      case 'oferta': return 'bg-green-600 text-white hover:bg-green-700'
-      case 'odmowa': return 'bg-red-600 text-white hover:bg-red-700'
-      case 'wysłana': return 'bg-purple-600 text-white hover:bg-purple-700'
-      default: return 'bg-gray-200 text-gray-500 hover:bg-gray-300'
+      case 'zapisana': return 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white'
+      case 'wysłana': return 'bg-gradient-to-r from-purple-500 to-purple-700 text-white'
+      case 'kontakt': return 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white'
+      case 'rozmowa': return 'bg-gradient-to-r from-cyan-500 to-cyan-700 text-white'
+      case 'oferta': return 'bg-gradient-to-r from-green-500 to-green-700 text-white'
+      case 'odmowa': return 'bg-gradient-to-r from-red-500 to-red-700 text-white'
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-700 text-white'
     }
   }
 
@@ -205,7 +205,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
 
         {/* Animowana linia postępu */}
         <div
-          className="absolute left-12 md:left-16 right-12 top-5 sm:top-[22px] md:top-6 h-[2px] bg-primary/100 transition-all duration-700 ease-in-out z-10"
+          className="absolute left-12 md:left-16 right-12 top-5 sm:top-[22px] md:top-6 h-[2px] bg-primary/100 dark:bg-primary/100 transition-all duration-700 ease-in-out z-10"
           style={{
             width: currentStepIndex >= 0
               // Dostosuj obliczenia, jeśli liczba kroków lub marginesy się zmienią
@@ -242,7 +242,7 @@ export function ApplicationStatus({ application, onStatusChange }: ApplicationSt
                 className={cn(
                   "w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 relative",
                   isActive ? getStatusStyles(step.status) : 'bg-gray-200 text-gray-800 hover:bg-gray-300',
-                  isCurrent && "ring-2 ring-primary ring-offset-2 scale-110 shadow-xl shadow-primary/20",
+                  isCurrent && "ring-2 ring-primary dark:ring-primary/50 ring-offset-2 scale-110 shadow-xl shadow-primary/20",
                   isPrevious && "shadow-xl", // Może być nadmiarowe z isActive
                   !isActive && "shadow-sm", // Mniejszy cień dla nieaktywnych
                   step.status === 'oferta' && isRejectedActive && "!cursor-not-allowed !bg-gray-300 !text-gray-500", // Nadpisanie styli dla oferty przy odmowie

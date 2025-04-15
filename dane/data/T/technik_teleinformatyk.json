@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik teleinformatyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-teleinformatyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 23,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6740,
+            "p25": 5400,
+            "p75": 9040
+          },
+          "net": {
+            "median": 4925,
+            "p25": 4011,
+            "p75": 6493
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 23,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

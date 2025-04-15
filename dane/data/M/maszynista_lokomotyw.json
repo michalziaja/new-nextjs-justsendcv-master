@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Maszynista lokomotyw",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-maszynista-lokomotyw",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 100,
+        "related_positions": [
+          {
+            "title": "maszynista lokomotyw"
+          },
+          {
+            "title": "maszynista lokomotywy spalinowej"
+          },
+          {
+            "title": "maszynista spalinowych pojazdów trakcyjnych"
+          },
+          {
+            "title": "maszynista pojazdów trakcyjnych kategorii b3."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8900,
+            "p25": 7430,
+            "p75": 11120
+          },
+          "net": {
+            "median": 6397,
+            "p25": 5395,
+            "p75": 7911
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 99,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługiwanie lokomotyw lub zespołów trakcyjnych w jazdach pociągowych, manewrowych i roboczych,",
+          "odpowiedzialność za bezpieczeństwo podróżnych, tabotu, ładunków i współpracowników,",
+          "odpowiedzialność za przestrzeganie nałożonych ram czasowych"
+        ]
+      }
+    ]
+  }
+]

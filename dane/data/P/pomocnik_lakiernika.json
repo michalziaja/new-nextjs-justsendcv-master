@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pomocnik lakiernika",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pomocnik-lakiernika",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 23,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5730,
+            "p25": 4970,
+            "p75": 7750
+          },
+          "net": {
+            "median": 4236,
+            "p25": 3718,
+            "p75": 5614
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 13
+            },
+            "men": {
+              "count": 20,
+              "percentage": 87
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

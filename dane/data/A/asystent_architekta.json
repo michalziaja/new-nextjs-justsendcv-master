@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent architekta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-architekta",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 629,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5980,
+            "p25": 5130,
+            "p75": 6950
+          },
+          "net": {
+            "median": 4407,
+            "p25": 3827,
+            "p75": 5067
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 482,
+              "percentage": 77
+            },
+            "men": {
+              "count": 147,
+              "percentage": 23
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 27
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 27
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 25
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "opracowywanie projektów koncepcyjnych, budowlanych i wykonawczych,",
+          "opracowywanie detalu architektonicznego i wizualizacji architektonicznych,",
+          "przygotowywanie dokumentów i procedur do pozwoleń na budowę"
+        ]
+      }
+    ]
+  }
+]

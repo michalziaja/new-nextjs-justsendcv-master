@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konserwator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konserwator",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 324,
+        "related_positions": [
+          {
+            "title": "konserwator"
+          },
+          {
+            "title": "konserwator maszyn i urządzeń."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5050,
+            "p75": 7150
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3772,
+            "p75": 5204
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 2
+            },
+            "men": {
+              "count": 319,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie przeglądów, konserwacji i napraw urządzeń produkcyjnych z wykorzystaniem uniwersalnych narzędzi i przyrządów ślusarskich, monterskich oraz specjalistycznych,",
+          "sprawdzanie stanu technicznego maszyn i urządzeń metodami diagnostycznymi,",
+          "kontrolowanie, regulowanie, przeprowadzanie prób po naprawach,",
+          "instalowanie i uruchamia nowych oraz naprawionych obiektów technicznych na stanowisku pracy"
+        ]
+      }
+    ]
+  }
+]

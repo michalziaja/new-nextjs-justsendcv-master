@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Funkcjonariusz służby ochrony",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-funkcjonariusz-sluzby-ochrony",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6100,
+            "p25": 5120,
+            "p75": 8390
+          },
+          "net": {
+            "median": 4488,
+            "p25": 3820,
+            "p75": 6049
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 11
+            },
+            "men": {
+              "count": 31,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

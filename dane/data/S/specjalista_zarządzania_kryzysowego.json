@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista zarządzania kryzysowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-zarzadzania-kryzysowego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3740,
+            "p25": 3390,
+            "p75": 4530
+          },
+          "net": {
+            "median": 2724,
+            "p25": 2477,
+            "p75": 3282
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 21
+            },
+            "men": {
+              "count": 11,
+              "percentage": 79
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

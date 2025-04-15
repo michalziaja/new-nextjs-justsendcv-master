@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ochrony informacji niejawnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ochrony-informacji-niejawnych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8250,
+            "p25": 6830,
+            "p75": 11770
+          },
+          "net": {
+            "median": 5954,
+            "p25": 4986,
+            "p75": 8353
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 40
+            },
+            "men": {
+              "count": 15,
+              "percentage": 60
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

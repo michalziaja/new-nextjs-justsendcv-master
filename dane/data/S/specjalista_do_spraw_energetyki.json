@@ -1,0 +1,117 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw energetyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-energetyki",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 159,
+        "related_positions": [
+          {
+            "title": "specjalista ds. energetyki"
+          },
+          {
+            "title": "energetyk"
+          },
+          {
+            "title": "specjalista do spraw energetyki."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6320,
+                "p25": 5450,
+                "p75": 7870
+              },
+              "net": {
+                "median": 4639,
+                "p25": 4046,
+                "p75": 5695
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 17,
+                "percentage": 41
+              },
+              "men": {
+                "count": 24,
+                "percentage": 59
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7740,
+                "p25": 6830,
+                "p75": 9830
+              },
+              "net": {
+                "median": 5607,
+                "p25": 4986,
+                "p75": 7031
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 37,
+                "percentage": 23
+              },
+              "men": {
+                "count": 122,
+                "percentage": 77
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9850,
+                "p25": 8030,
+                "p75": 11990
+              },
+              "net": {
+                "median": 7045,
+                "p25": 5804,
+                "p75": 8503
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 22,
+                "percentage": 23
+              },
+              "men": {
+                "count": 75,
+                "percentage": 77
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "kontrola pracy urządzeń na podstawie wskazań aparatury pomiarowej i sygnalizacyjnej automatyki i układów specjalnych,",
+          "dokonywanie niezbędnych przełączeń w celu dopuszczenia do pracy brygad remontowych,",
+          "wydawanie niezbędnych dyspozycji pracownikom o stanie pracy urządzeń lub konieczności kontroli i usunięcia usterki,",
+          "likwidowanie awarii i ich skutków, w celu jak najszybszego przywrócenia normalnych warunków zasilania i ruchu urządzeń,",
+          "prowadzenie książki raportów oraz niezbędnej dokumentacji,",
+          "dokonywanie odczytów wskazań aparatury kontrolno-pomiarowej."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Ekspedient pocztowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ekspedient-pocztowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3470,
+            "p25": 3440,
+            "p75": 3830
+          },
+          "net": {
+            "median": 2696,
+            "p25": 2675,
+            "p75": 2940
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 58
+            },
+            "men": {
+              "count": 5,
+              "percentage": 42
+            }
+          },
+          "benefits": [
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 16
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 16
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 16
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

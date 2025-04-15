@@ -1,0 +1,70 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor ds. technicznych i serwisu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-ds-technicznych-i-serwisu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 167,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. technicznych i serwisu"
+          },
+          {
+            "title": "dyrektor do spraw technicznych i serwisu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 16690,
+            "p25": 12480,
+            "p75": 22270
+          },
+          "net": {
+            "median": 11708,
+            "p25": 8838,
+            "p75": 15511
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 7
+            },
+            "men": {
+              "count": 155,
+              "percentage": 93
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 68
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 63
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie działalności firmy w zakresie prawidłowej eksploatacji, rozwoju i wykorzystania infrastruktury firmy,",
+          "określanie strategii w zakresie inwestycji i remontów oraz nadzór nad jej realizacją,",
+          "zatwierdzanie kluczowych decyzji co do zakupów technicznych, aprobowanie wydatków w granicach budżetu,",
+          "planowanie, koordynacja i nadzór procedur eksploatacji maszyn,",
+          "nadzór nad prowadzeniem wszystkich przeglądów i napraw,",
+          "przeprowadzanie prób oraz rozwój i implementacja nowych systemów w fabrykach"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista ERP",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-Programista-erp",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 143,
+        "related_positions": [
+          {
+            "title": "programista ERP"
+          },
+          {
+            "title": "programista systemów klasy ERP."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10480,
+            "p25": 8590,
+            "p75": 13740
+          },
+          "net": {
+            "median": 7474,
+            "p25": 6186,
+            "p75": 9696
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 7
+            },
+            "men": {
+              "count": 133,
+              "percentage": 93
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 54
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 36
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

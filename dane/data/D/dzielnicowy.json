@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dzielnicowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dzielnicowy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9510,
+            "p25": 8730,
+            "p75": 12660
+          },
+          "net": {
+            "median": 6813,
+            "p25": 6281,
+            "p75": 8960
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 12,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

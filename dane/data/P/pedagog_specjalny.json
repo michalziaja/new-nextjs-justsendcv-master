@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pedagog specjalny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pedagog-specjalny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 149,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5760,
+            "p25": 5070,
+            "p75": 6780
+          },
+          "net": {
+            "median": 4257,
+            "p25": 3786,
+            "p75": 4952
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 140,
+              "percentage": 94
+            },
+            "men": {
+              "count": 9,
+              "percentage": 6
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

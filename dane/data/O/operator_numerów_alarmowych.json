@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator numerów alarmowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-numerow-alarmowych",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9330,
+            "p25": 7580,
+            "p75": 17540
+          },
+          "net": {
+            "median": 6690,
+            "p25": 5497,
+            "p75": 12287
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 20
+            },
+            "men": {
+              "count": 8,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lakiernik tworzyw sztucznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik-tworzyw-sztucznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5920,
+            "p25": 5560,
+            "p75": 6940
+          },
+          "net": {
+            "median": 4366,
+            "p25": 4120,
+            "p75": 5061
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

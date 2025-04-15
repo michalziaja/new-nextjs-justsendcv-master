@@ -1,0 +1,60 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Account Executive",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-account-executive",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 134,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5500,
+            "p25": 4360,
+            "p75": 7060
+          },
+          "net": {
+            "median": 3980,
+            "p25": 3252,
+            "p75": 5067
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 94,
+              "percentage": 70
+            },
+            "men": {
+              "count": 40,
+              "percentage": 30
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 38
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 38
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 37
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "identyfikowanie potrzeb klientów w zakresie planowanej kampanii reklamowej,",
+          "pozyskiwanie informacji niezbędnych do przeprowadzenia kampanii,",
+          "współpraca przy ustalaniu budżetu i strategii reklamowej"
+        ]
+      }
+    ]
+  }
+]

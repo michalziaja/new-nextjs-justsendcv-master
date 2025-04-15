@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sekretarka medyczna",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sekretarka-medyczna",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 223,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4900,
+            "p75": 6270
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3671,
+            "p75": 4604
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 216,
+              "percentage": 97
+            },
+            "men": {
+              "count": 7,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wsparcie pracy pracowników kliniki,",
+          "informowanie pacjentów o kosztach świadczonych przez klinikę usług i umawianie ich na zabiegi lub konsultacje,",
+          "odbieranie telefonów i obsługa korespondencji"
+        ]
+      }
+    ]
+  }
+]

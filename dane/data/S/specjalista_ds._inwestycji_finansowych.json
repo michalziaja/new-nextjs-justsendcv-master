@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. inwestycji finansowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-inwestycji-finansowych",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 135,
+        "related_positions": [
+          {
+            "title": "specjalista ds. inwestycji finansowych"
+          },
+          {
+            "title": "specjalista do spraw inwestycji finansowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8100,
+            "p25": 6420,
+            "p75": 10520
+          },
+          "net": {
+            "median": 5851,
+            "p25": 4706,
+            "p75": 7502
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 62,
+              "percentage": 46
+            },
+            "men": {
+              "count": 73,
+              "percentage": 54
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 60
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 40
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "analiza potrzeb inwestycyjnych firmy,",
+          "śledzenie rynku kapitałowego,",
+          "planowanie inwestycji i kalkulacja ich rentowności,",
+          "przygotowanie, prowadzenie, odbiór i rozliczanie zadań inwestycyjnych,",
+          "współpraca z innymi jednostkami organizacyjnymi firmy oraz podmiotami współpracującymi z zewnątrz."
+        ]
+      }
+    ]
+  }
+]

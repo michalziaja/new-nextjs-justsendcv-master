@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Koordynator zespołu laborantów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-koordynator-zespolu-laborantow",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 36,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9320,
+            "p25": 7720,
+            "p75": 11770
+          },
+          "net": {
+            "median": 6683,
+            "p25": 5593,
+            "p75": 8353
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 17,
+              "percentage": 47
+            },
+            "men": {
+              "count": 19,
+              "percentage": 53
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

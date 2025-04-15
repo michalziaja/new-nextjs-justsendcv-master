@@ -1,0 +1,152 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Księgowa",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ksiegowa",
+        "category": [
+          "księgowość"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 4786,
+        "related_positions": [
+          {
+            "title": "księgowy"
+          },
+          {
+            "title": "księgowa"
+          },
+          {
+            "title": "accountant."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6050,
+                "p25": 5320,
+                "p75": 6960
+              },
+              "net": {
+                "median": 4454,
+                "p25": 3956,
+                "p75": 5074
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1827,
+                "percentage": 86
+              },
+              "men": {
+                "count": 299,
+                "percentage": 14
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 70
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 63
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 60
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7160,
+                "p25": 6060,
+                "p75": 8500
+              },
+              "net": {
+                "median": 5211,
+                "p25": 4462,
+                "p75": 6125
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4197,
+                "percentage": 88
+              },
+              "men": {
+                "count": 589,
+                "percentage": 12
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 74
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 65
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 57
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8500,
+                "p25": 6900,
+                "p75": 10470
+              },
+              "net": {
+                "median": 6125,
+                "p25": 5034,
+                "p75": 7467
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1280,
+                "percentage": 85
+              },
+              "men": {
+                "count": 234,
+                "percentage": 15
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 82
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 78
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 58
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "zbieranie i przechowywanie faktur i innych dokumentów,",
+          "wpisywanie ich do systemu księgowego, a następnie analizowanie danych i wyciąganie z nich informacji istotnych w procesie działalności firmy,",
+          "pilnowanie, aby spełnione zostały wszystkie obowiązki wobec urzędu skarbowego i innych instytucji."
+        ]
+      }
+    ]
+  }
+]

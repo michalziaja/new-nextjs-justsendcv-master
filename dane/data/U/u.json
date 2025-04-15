@@ -1,0 +1,627 @@
+[
+  {
+    "letter": "U",
+    "positions": [
+      {
+        "title": "UI/UX Designer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 319,
+        "related_positions": [
+          {
+            "title": "uI/UX Designer"
+          },
+          {
+            "title": "specjalista ds. user experience"
+          },
+          {
+            "title": "user Experience Specialist"
+          },
+          {
+            "title": "specjalista do spraw user experience."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7380,
+                "p25": 6180,
+                "p75": 8980
+              },
+              "net": {
+                "median": 5361,
+                "p25": 4543,
+                "p75": 6451
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 109,
+                "percentage": 81
+              },
+              "men": {
+                "count": 25,
+                "percentage": 19
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10240,
+                "p25": 8230,
+                "p75": 12410
+              },
+              "net": {
+                "median": 7311,
+                "p25": 5941,
+                "p75": 8790
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 215,
+                "percentage": 67
+              },
+              "men": {
+                "count": 104,
+                "percentage": 33
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14780,
+                "p25": 12440,
+                "p75": 19000
+              },
+              "net": {
+                "median": 10406,
+                "p25": 8810,
+                "p75": 13283
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 67,
+                "percentage": 49
+              },
+              "men": {
+                "count": 70,
+                "percentage": 51
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Underwriter",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 95,
+        "related_positions": [
+          {
+            "title": "underwriter"
+          },
+          {
+            "title": "specjalista zarządzania ryzykiem."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7500,
+                "p25": 6140,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5442,
+                "p25": 4515,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 66
+              },
+              "men": {
+                "count": 20,
+                "percentage": 34
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10090,
+                "p25": 7710,
+                "p75": 11770
+              },
+              "net": {
+                "median": 7208,
+                "p25": 5586,
+                "p75": 8353
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 45,
+                "percentage": 47
+              },
+              "men": {
+                "count": 50,
+                "percentage": 53
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 90
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 80
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 70
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12500,
+                "p25": 9850,
+                "p75": 15520
+              },
+              "net": {
+                "median": 8851,
+                "p25": 7045,
+                "p75": 10910
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 61,
+                "percentage": 51
+              },
+              "men": {
+                "count": 58,
+                "percentage": 49
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "udzielanie gwarancji ubezpieczeniowych zgodnie z procedurami,",
+          "analiza oraz szacowanie ryzyka oraz kondycji finansowo-ekonomicznej klientów,",
+          "przygotowywanie ofert oraz tworzenie programów ubezpieczeniowych dla klientów,",
+          "współpraca z brokerami i agentami, budowanie relacji,",
+          "negocjowanie szczególnych warunków umów ubezpieczenia,",
+          "tworzenie konkurencyjnych ofert,",
+          "współpraca z innymi działami przy zadaniach sprzedażowych,",
+          "cykliczna analiza całego portfela oraz poszczególnych klientów,",
+          "zabezpieczenie firmy przed zagrożeniami, które mogą wynikać z niedoszacowania ryzyka,",
+          "uszeregowanie klientów i przydzielenie ich do określonej klasy ryzyka,",
+          "przeprowadzanie szkoleń produktowych z zakresu obowiązujących przepisów prawa oraz ogólnych warunków ubezpieczeń,"
+        ]
+      },
+      {
+        "title": "Urbanista",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 84,
+        "related_positions": [
+          {
+            "title": "architekt planowania przestrzennego"
+          },
+          {
+            "title": "urbanista."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6700,
+            "p25": 5540,
+            "p75": 9560
+          },
+          "net": {
+            "median": 4897,
+            "p25": 4106,
+            "p75": 6847
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 55,
+              "percentage": 65
+            },
+            "men": {
+              "count": 29,
+              "percentage": 35
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Urzędnik podatkowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6930,
+            "p25": 5710,
+            "p75": 9560
+          },
+          "net": {
+            "median": 5054,
+            "p25": 4223,
+            "p75": 6847
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 27,
+              "percentage": 61
+            },
+            "men": {
+              "count": 17,
+              "percentage": 39
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Urzędnik ubezpieczeń społecznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6490,
+            "p25": 5440,
+            "p75": 7440
+          },
+          "net": {
+            "median": 4754,
+            "p25": 4039,
+            "p75": 5402
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 72
+            },
+            "men": {
+              "count": 5,
+              "percentage": 28
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "User Experience Specialist",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 319,
+        "related_positions": [
+          {
+            "title": "uI/UX Designer"
+          },
+          {
+            "title": "specjalista ds. user experience"
+          },
+          {
+            "title": "user Experience Specialist"
+          },
+          {
+            "title": "specjalista do spraw user experience."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7380,
+                "p25": 6180,
+                "p75": 8980
+              },
+              "net": {
+                "median": 5361,
+                "p25": 4543,
+                "p75": 6451
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 109,
+                "percentage": 81
+              },
+              "men": {
+                "count": 25,
+                "percentage": 19
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10240,
+                "p25": 8230,
+                "p75": 12410
+              },
+              "net": {
+                "median": 7311,
+                "p25": 5941,
+                "p75": 8790
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 215,
+                "percentage": 67
+              },
+              "men": {
+                "count": 104,
+                "percentage": 33
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14780,
+                "p25": 12440,
+                "p75": 19000
+              },
+              "net": {
+                "median": 10406,
+                "p25": 8810,
+                "p75": 13283
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 67,
+                "percentage": 49
+              },
+              "men": {
+                "count": 70,
+                "percentage": 51
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Ustawiacz maszyn",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 239,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6830,
+            "p25": 5720,
+            "p75": 8170
+          },
+          "net": {
+            "median": 4986,
+            "p25": 4230,
+            "p75": 5899
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 3
+            },
+            "men": {
+              "count": 233,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Ustawiacz maszyn CNC",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 360,
+        "related_positions": [
+          {
+            "title": "operator CNC"
+          },
+          {
+            "title": "operator maszyn sterowanych numerycznie"
+          },
+          {
+            "title": "frezer CNC"
+          },
+          {
+            "title": "tokarz CNC"
+          },
+          {
+            "title": "szlifierz CNC"
+          },
+          {
+            "title": "operator obrabiarek CNC"
+          },
+          {
+            "title": "operator obrabiarek sterowanych numerycznie"
+          },
+          {
+            "title": "ustawiacz maszyn CNC."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6120,
+                "p25": 5260,
+                "p75": 7460
+              },
+              "net": {
+                "median": 4502,
+                "p25": 3915,
+                "p75": 5416
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 156,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6810,
+                "p25": 5900,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4972,
+                "p25": 4352,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 354,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6210,
+                "p75": 8760
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4563,
+                "p75": 6302
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 153,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

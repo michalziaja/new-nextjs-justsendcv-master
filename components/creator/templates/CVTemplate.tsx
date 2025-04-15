@@ -16,6 +16,7 @@ export interface CVTemplateData {
     startDate: string;
     endDate: string;
     description: string;
+    type?: 'job' | 'project';
   }>;
   education: Array<{
     school: string;
@@ -49,22 +50,47 @@ export const ModernCVTemplate: React.FC<{ data: CVData }> = ({ data }) => {
         </div>
       </div>
       
-      {/* Doświadczenie */}
-      <div className="mt-4">
-        <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Doświadczenie zawodowe</h2>
-        {data.experience.map((exp, index) => (
-          <div key={index} className="mt-3">
-            <div className="flex justify-between">
-              <div className="font-medium">{exp.position}</div>
-              <div className="text-gray-600 text-xs">
-                {exp.startDate} - {exp.endDate || 'obecnie'}
+      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
+      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
+        <div className="mt-4">
+          <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Doświadczenie zawodowe</h2>
+          {data.experience
+            .filter(exp => !exp.type || exp.type === 'job')
+            .map((exp, index) => (
+            <div key={index} className="mt-3">
+              <div className="flex justify-between">
+                <div className="font-medium">{exp.position}</div>
+                <div className="text-gray-600 text-xs">
+                  {exp.startDate} - {exp.endDate || 'obecnie'}
+                </div>
               </div>
+              <div className="text-gray-700">{exp.company}</div>
+              <div className="mt-1 text-xs">{exp.description}</div>
             </div>
-            <div className="text-gray-700">{exp.company}</div>
-            <div className="mt-1 text-xs">{exp.description}</div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+      
+      {/* Projekty */}
+      {data.experience.some(exp => exp.type === 'project') && (
+        <div className="mt-4">
+          <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Projekty</h2>
+          {data.experience
+            .filter(exp => exp.type === 'project')
+            .map((exp, index) => (
+            <div key={index} className="mt-3">
+              <div className="flex justify-between">
+                <div className="font-medium">{exp.position}</div>
+                <div className="text-gray-600 text-xs">
+                  {exp.startDate} - {exp.endDate || 'obecnie'}
+                </div>
+              </div>
+              <div className="text-gray-700">{exp.company}</div>
+              <div className="mt-1 text-xs">{exp.description}</div>
+            </div>
+          ))}
+        </div>
+      )}
       
       {/* Wykształcenie */}
       <div className="mt-4">
@@ -145,21 +171,45 @@ export const ClassicCVTemplate: React.FC<{ data: CVData }> = ({ data }) => {
         </div>
       </div>
       
-      {/* Doświadczenie */}
-      <div className="mt-4">
-        <h2 className="font-bold uppercase tracking-wider text-center mb-2">Doświadczenie zawodowe</h2>
-        {data.experience.map((exp, index) => (
-          <div key={index} className="mt-3">
-            <div className="flex justify-between font-medium">
-              <div>{exp.position}, {exp.company}</div>
-              <div className="text-gray-600">
-                {exp.startDate} - {exp.endDate || 'obecnie'}
+      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
+      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
+        <div className="mt-4">
+          <h2 className="font-bold uppercase tracking-wider text-center mb-2">Doświadczenie zawodowe</h2>
+          {data.experience
+            .filter(exp => !exp.type || exp.type === 'job')
+            .map((exp, index) => (
+            <div key={index} className="mt-3">
+              <div className="flex justify-between font-medium">
+                <div>{exp.position}, {exp.company}</div>
+                <div className="text-gray-600">
+                  {exp.startDate} - {exp.endDate || 'obecnie'}
+                </div>
               </div>
+              <div className="mt-1 text-xs">{exp.description}</div>
             </div>
-            <div className="mt-1 text-xs">{exp.description}</div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+      
+      {/* Projekty */}
+      {data.experience.some(exp => exp.type === 'project') && (
+        <div className="mt-4">
+          <h2 className="font-bold uppercase tracking-wider text-center mb-2">Projekty</h2>
+          {data.experience
+            .filter(exp => exp.type === 'project')
+            .map((exp, index) => (
+            <div key={index} className="mt-3">
+              <div className="flex justify-between font-medium">
+                <div>{exp.position}, {exp.company}</div>
+                <div className="text-gray-600">
+                  {exp.startDate} - {exp.endDate || 'obecnie'}
+                </div>
+              </div>
+              <div className="mt-1 text-xs">{exp.description}</div>
+            </div>
+          ))}
+        </div>
+      )}
       
       {/* Wykształcenie */}
       <div className="mt-4">
@@ -234,28 +284,59 @@ export const CreativeCVTemplate: React.FC<{ data: CVData }> = ({ data }) => {
         </div>
       </div>
       
-      {/* Doświadczenie */}
-      <div className="mt-6">
-        <h2 className="text-lg font-semibold text-purple-800 relative">
-          <span className="relative z-10">Doświadczenie zawodowe</span>
-          <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
-        </h2>
-        
-        <div className="mt-3 space-y-4">
-          {data.experience.map((exp, index) => (
-            <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
-              <div className="flex justify-between">
-                <div className="font-medium text-blue-700">{exp.position}</div>
-                <div className="text-gray-500 text-xs">
-                  {exp.startDate} - {exp.endDate || 'obecnie'}
+      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
+      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
+        <div className="mt-6">
+          <h2 className="text-lg font-semibold text-purple-800 relative">
+            <span className="relative z-10">Doświadczenie zawodowe</span>
+            <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
+          </h2>
+          
+          <div className="mt-3 space-y-4">
+            {data.experience
+              .filter(exp => !exp.type || exp.type === 'job')
+              .map((exp, index) => (
+              <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
+                <div className="flex justify-between">
+                  <div className="font-medium text-blue-700">{exp.position}</div>
+                  <div className="text-gray-500 text-xs">
+                    {exp.startDate} - {exp.endDate || 'obecnie'}
+                  </div>
                 </div>
+                <div className="text-gray-700 font-medium">{exp.company}</div>
+                <div className="mt-2 text-xs text-gray-600">{exp.description}</div>
               </div>
-              <div className="text-gray-700 font-medium">{exp.company}</div>
-              <div className="mt-2 text-xs text-gray-600">{exp.description}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+      
+      {/* Projekty */}
+      {data.experience.some(exp => exp.type === 'project') && (
+        <div className="mt-6">
+          <h2 className="text-lg font-semibold text-purple-800 relative">
+            <span className="relative z-10">Projekty</span>
+            <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
+          </h2>
+          
+          <div className="mt-3 space-y-4">
+            {data.experience
+              .filter(exp => exp.type === 'project')
+              .map((exp, index) => (
+              <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
+                <div className="flex justify-between">
+                  <div className="font-medium text-blue-700">{exp.position}</div>
+                  <div className="text-gray-500 text-xs">
+                    {exp.startDate} - {exp.endDate || 'obecnie'}
+                  </div>
+                </div>
+                <div className="text-gray-700 font-medium">{exp.company}</div>
+                <div className="mt-2 text-xs text-gray-600">{exp.description}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       
       {/* Wykształcenie */}
       <div className="mt-6">

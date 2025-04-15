@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Audytor zewnętrzny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-audytor-zewnetrzny",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 119,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10020,
+            "p25": 8580,
+            "p75": 13960
+          },
+          "net": {
+            "median": 7160,
+            "p25": 6179,
+            "p75": 9846
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 53,
+              "percentage": 45
+            },
+            "men": {
+              "count": 66,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "branie czynnego udziału w projektach audytowych,",
+          "testowanie i opisywanie systemów kontroli wewnętrznej,",
+          "badanie poszczególnych sekcji sprawozdań finansowych"
+        ]
+      }
+    ]
+  }
+]

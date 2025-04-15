@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant telefoniczny w dziale obsługi klienta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-telefoniczny-w-dziale-obslugi-klienta",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 156,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5880,
+            "p25": 5090,
+            "p75": 7420
+          },
+          "net": {
+            "median": 4338,
+            "p25": 3800,
+            "p75": 5388
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 108,
+              "percentage": 69
+            },
+            "men": {
+              "count": 48,
+              "percentage": 31
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 52
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 47
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 47
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "przyjmowanie telefonicznych zgłoszeń klientów,",
+          "analiza problemów z wykorzystaniem określonych metod diagnostycznych,",
+          "identyfikacja problemów oraz sporządzanie ich dokumentacji,",
+          "przekazanie zgłoszenia do odpowiedniej komórki,",
+          "monitorowanie przebiegu podjętych działań,",
+          "stały kontakt z klientem i bieżące informowanie o przebiegu podjętych działań."
+        ]
+      }
+    ]
+  }
+]

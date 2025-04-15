@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik produkcji zakładu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-produkcji-zakladu",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 120,
+        "related_positions": [
+          {
+            "title": "kierownik zakładu produkcyjnego"
+          },
+          {
+            "title": "kierownik produkcji zakładu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9330,
+            "p25": 7430,
+            "p75": 13000
+          },
+          "net": {
+            "median": 6690,
+            "p25": 5395,
+            "p75": 9192
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 17,
+              "percentage": 14
+            },
+            "men": {
+              "count": 103,
+              "percentage": 86
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 38
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 38
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie i organizowanie pracy zakładu produkcyjnego,",
+          "kierowanie i nadzór nad wszystkimi procesami w zakładzie,",
+          "zapewnienie sprawnej i bezawaryjnej pracy urządzeń produkcyjnych,",
+          "odpowiedzialność za BHP w zakładzie,",
+          "nadzorowanie pracy podległego personelu"
+        ]
+      }
+    ]
+  }
+]

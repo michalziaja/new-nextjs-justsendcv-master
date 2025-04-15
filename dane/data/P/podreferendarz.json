@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Podreferendarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-podreferendarz",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6200,
+            "p25": 5730,
+            "p75": 6510
+          },
+          "net": {
+            "median": 4556,
+            "p25": 4236,
+            "p75": 4768
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 82
+            },
+            "men": {
+              "count": 4,
+              "percentage": 18
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

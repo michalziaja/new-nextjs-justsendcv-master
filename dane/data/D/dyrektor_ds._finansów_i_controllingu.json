@@ -1,0 +1,84 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor ds. finansów i controllingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-ds-finansow-i-controllingu",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1070,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. finansów i controllingu"
+          },
+          {
+            "title": "dyrektor finansowy"
+          },
+          {
+            "title": "dyrektor kontrolingu"
+          },
+          {
+            "title": "dyrektor działu controllingu"
+          },
+          {
+            "title": "dyrektor do spraw finansów i controllingu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 23840,
+            "p25": 17610,
+            "p75": 32010
+          },
+          "net": {
+            "median": 16581,
+            "p25": 12334,
+            "p75": 22150
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 525,
+              "percentage": 49
+            },
+            "men": {
+              "count": 545,
+              "percentage": 51
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 75
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 67
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 61
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie finansami firmy,",
+          "tworzenie i realizowanie polityki finansowej firmy,",
+          "planowanie budżetu i realizacja polityki budżetowej firmy,",
+          "analiza rynku finansowego i kształtowanie polityki lokacyjnej,",
+          "ocena opłacalności podejmowanych inwestycji,",
+          "opracowywanie biznes planów,",
+          "kontrola wydatkowania środków finansowych,",
+          "analiza kosztów, kreowanie i wdrażanie pomysłów poprawiających wyniki finansowe przedsiębiorstwa,",
+          "przeprowadzanie kontroli wewnętrznych,",
+          "współpraca z bankami i instytucjami finansowymi,",
+          "sporządzanie raportów i sprawozdań na potrzeby zarządu, prowadzenie dokumentacji finansowej,",
+          "kierowanie całością prac działu finansowo-księgowego."
+        ]
+      }
+    ]
+  }
+]

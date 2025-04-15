@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kurier (przesyłki kurierskie)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kurier-przesylki-kurierskie",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 100,
+        "related_positions": [
+          {
+            "title": "kurier (przesyłki kurierskie)"
+          },
+          {
+            "title": "kurier."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5170,
+            "p75": 7400
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3855,
+            "p75": 5375
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 3
+            },
+            "men": {
+              "count": 97,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "dostarczanie przesyłek do adresata przy wykorzystaniu różnych środków transportu (rower, samochód itp.)",
+          "terminowe realizowanie zleconych zadań."
+        ]
+      }
+    ]
+  }
+]

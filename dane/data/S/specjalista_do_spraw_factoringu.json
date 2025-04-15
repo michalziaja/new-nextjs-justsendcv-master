@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw factoringu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-factoringu",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 33,
+        "related_positions": [
+          {
+            "title": "specjalista do spraw factoringu"
+          },
+          {
+            "title": "specjalista ds. factoringu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8950,
+            "p25": 7930,
+            "p75": 10320
+          },
+          "net": {
+            "median": 6431,
+            "p25": 5736,
+            "p75": 7365
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 45
+            },
+            "men": {
+              "count": 18,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

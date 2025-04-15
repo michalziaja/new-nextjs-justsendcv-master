@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Trader",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-trader",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10090,
+            "p25": 7750,
+            "p75": 14850
+          },
+          "net": {
+            "median": 7208,
+            "p25": 5614,
+            "p75": 10453
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 33
+            },
+            "men": {
+              "count": 28,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

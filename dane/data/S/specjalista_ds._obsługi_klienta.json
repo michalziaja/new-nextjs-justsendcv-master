@@ -1,0 +1,152 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. obsługi klienta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-obslugi-klienta",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1819,
+        "related_positions": [
+          {
+            "title": "specjalista ds. obsługi klienta"
+          },
+          {
+            "title": "specjalista do spraw obsługi klienta."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5620,
+                "p25": 4950,
+                "p75": 6780
+              },
+              "net": {
+                "median": 4161,
+                "p25": 3704,
+                "p75": 4952
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 272,
+                "percentage": 70
+              },
+              "men": {
+                "count": 115,
+                "percentage": 30
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 66
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 63
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 50
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5390,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4611,
+                "p25": 4004,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1391,
+                "percentage": 76
+              },
+              "men": {
+                "count": 428,
+                "percentage": 24
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 54
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 45
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 44
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7230,
+                "p25": 6060,
+                "p75": 8620
+              },
+              "net": {
+                "median": 5258,
+                "p25": 4462,
+                "p75": 6206
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 424,
+                "percentage": 75
+              },
+              "men": {
+                "count": 145,
+                "percentage": 25
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 67
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 62
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 62
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "utrzymywanie kontaktów telefonicznych, mailowych i bezpośrednich z klientami - udzielanie informacji, rozwiązywanie problemów,",
+          "pośredniczenie w kontaktach między klientem, a realizatorem usługi w firmie,",
+          "prowadzenie korespondencji z klientami i potencjalnymi klientami,",
+          "przyjmowanie reklamacji od klientów,",
+          "przygotowywanie i kompletowanie danych do negocjacji z klientami,",
+          "badanie potrzeb klientów i ewentualnie proponowanie alternatywnych produktów."
+        ]
+      }
+    ]
+  }
+]

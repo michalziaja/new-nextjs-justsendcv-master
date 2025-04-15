@@ -1,0 +1,54 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Portier",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-portier",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": [
+          {
+            "title": "portier"
+          },
+          {
+            "title": "dozorca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5010,
+            "p25": 4660,
+            "p75": 7000
+          },
+          "net": {
+            "median": 3745,
+            "p25": 3506,
+            "p75": 5102
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 11
+            },
+            "men": {
+              "count": 40,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "pomaganie gościom hotelowym, szczególnie w czasie ich przybycia i wyjazdu, w przeniesieniu bagażu czy otrzymaniu kluczy, a także służenie im informacjami,",
+          "możliwe także pełnienie funkcji odźwiernego w domach mieszkalnych i innych budynkach,",
+          "nadzorowanie ruchu wchodzących osób i służenie im informacjami,",
+          "strzeżenie domów i innych obiektów, celem zapobieżenia nielegalnemu wejściu, kradzieży, pożarom czy innym zagrożeniom"
+        ]
+      }
+    ]
+  }
+]

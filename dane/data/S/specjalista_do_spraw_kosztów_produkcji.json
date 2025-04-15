@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw kosztów produkcji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-kosztow-produkcji",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 108,
+        "related_positions": [
+          {
+            "title": "specjalista ds. kosztów produkcji"
+          },
+          {
+            "title": "specjalista do spraw kosztów produkcji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8020,
+            "p25": 6150,
+            "p75": 10470
+          },
+          "net": {
+            "median": 5798,
+            "p25": 4522,
+            "p75": 7467
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 33,
+              "percentage": 31
+            },
+            "men": {
+              "count": 75,
+              "percentage": 69
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zapewnienie praktyk inżynieryjnych i procesowych prowadzących do redukcji kosztów,",
+          "zbieranie i poszukiwanie informacji w celu uzyskania dokładnych i kompletnych danych dotyczących kosztów,",
+          "szacowanie kosztów wprowadzanych produktów,",
+          "dostarczanie szczegółowych danych dotyczących kosztów w celu wsparcia działów sprzedaży i logistyki,",
+          "szacowanie kosztów materiałów, amortyzacji maszyn oraz narzędzi wykorzystywanych w procesie produkcji."
+        ]
+      }
+    ]
+  }
+]

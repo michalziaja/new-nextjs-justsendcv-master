@@ -1,0 +1,85 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. finansów i controllingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-finansow-i-controllingu",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 764,
+        "related_positions": [
+          {
+            "title": "kierownik ds. finansów i controllingu"
+          },
+          {
+            "title": "kierownik działu kontrolingu"
+          },
+          {
+            "title": "kierownik ds. kontrolingu"
+          },
+          {
+            "title": "kierownik ds. finansów"
+          },
+          {
+            "title": "kierownik do spraw finansów i controllingu"
+          },
+          {
+            "title": "kierownik do spraw kontrolingu"
+          },
+          {
+            "title": "kierownik do spraw finansów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 15300,
+            "p25": 11130,
+            "p75": 19890
+          },
+          "net": {
+            "median": 10760,
+            "p25": 7918,
+            "p75": 13888
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 414,
+              "percentage": 54
+            },
+            "men": {
+              "count": 350,
+              "percentage": 46
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 61
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizowanie polityki finansowej firmy,",
+          "tworzenie i wprowadzanie procedur operacyjnych w dziale finansowym,",
+          "analiza wyników i kosztów finansowych,",
+          "sporządzanie i analiza raportów finansowych,",
+          "obsługa bankowa oraz nadzór nad transakcjami gotówkowymi,",
+          "zapewnienie prawidłowego obrotu środkami pieniężnymi,",
+          "nadzorowanie pracy działu."
+        ]
+      }
+    ]
+  }
+]

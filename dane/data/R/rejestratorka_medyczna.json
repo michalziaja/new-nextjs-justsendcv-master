@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Rejestratorka medyczna",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-rejestratorka-medyczna",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 466,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5290,
+            "p25": 4800,
+            "p75": 6110
+          },
+          "net": {
+            "median": 3936,
+            "p25": 3602,
+            "p75": 4495
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 448,
+              "percentage": 96
+            },
+            "men": {
+              "count": 18,
+              "percentage": 4
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 21
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 14
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 14
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

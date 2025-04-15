@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw promocji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-promocji",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 200,
+        "related_positions": [
+          {
+            "title": "specjalista ds. promocji"
+          },
+          {
+            "title": "specjalista do spraw promocji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6480,
+            "p25": 5500,
+            "p75": 7850
+          },
+          "net": {
+            "median": 4747,
+            "p25": 4079,
+            "p75": 5681
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 154,
+              "percentage": 77
+            },
+            "men": {
+              "count": 46,
+              "percentage": 23
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 31
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 25
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 18
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "przeprowadzanie działań związanych z promocją marki lub firmy,",
+          "organizowanie i koordynacja akcji promocyjnych oraz eventów,",
+          "współpraca przy przygotowywaniu materiałów promocyjnych,",
+          "analiza skuteczności podejmowanych działań"
+        ]
+      }
+    ]
+  }
+]

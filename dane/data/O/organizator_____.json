@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Organizator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-organizator",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6260,
+            "p25": 5420,
+            "p75": 8150
+          },
+          "net": {
+            "median": 4598,
+            "p25": 4025,
+            "p75": 5886
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 52
+            },
+            "men": {
+              "count": 12,
+              "percentage": 48
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

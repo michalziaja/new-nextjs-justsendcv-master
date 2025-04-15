@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kustosz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kustosz",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 126,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6250,
+            "p25": 5450,
+            "p75": 7390
+          },
+          "net": {
+            "median": 4591,
+            "p25": 4046,
+            "p75": 5368
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 104,
+              "percentage": 83
+            },
+            "men": {
+              "count": 22,
+              "percentage": 17
+            }
+          },
+          "benefits": [
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 53
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 38
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za zbiory muzeum,",
+          "koordynowanie wydarzeń na terenie obiektu (np. wystaw specjalnych),",
+          "zarządzanie magazynowaniem eksponatów i ich rozłożeniem na salach wystawowych,",
+          "kontakty z dobroczyńcami,",
+          "pisanie wniosków o granty i dofinansowania,",
+          "troska o rzowój zbiorów i utrzymanie ich w odpowiednim stanie"
+        ]
+      }
+    ]
+  }
+]

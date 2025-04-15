@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik pralni chemicznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-pralni-chemicznej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4050,
+            "p25": 3480,
+            "p75": 5200
+          },
+          "net": {
+            "median": 3091,
+            "p25": 2703,
+            "p75": 3875
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 93
+            },
+            "men": {
+              "count": 1,
+              "percentage": 7
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 21
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 14
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 7
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

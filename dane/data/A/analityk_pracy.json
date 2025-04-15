@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk pracy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-pracy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 54,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9240,
+            "p25": 6960,
+            "p75": 10100
+          },
+          "net": {
+            "median": 6629,
+            "p25": 5074,
+            "p75": 7215
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 46
+            },
+            "men": {
+              "count": 29,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

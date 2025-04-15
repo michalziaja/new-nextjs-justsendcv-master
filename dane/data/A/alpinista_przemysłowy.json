@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Alpinista przemysłowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-alpinista-przemylowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4630,
+            "p25": 3590,
+            "p75": 5260
+          },
+          "net": {
+            "median": 3353,
+            "p25": 2619,
+            "p75": 3796
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 13
+            },
+            "men": {
+              "count": 13,
+              "percentage": 87
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

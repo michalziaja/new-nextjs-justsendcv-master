@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw reklamy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-reklamy",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": [
+          {
+            "title": "specjalista ds. reklamy"
+          },
+          {
+            "title": "specjalista do spraw reklamy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6650,
+            "p25": 5510,
+            "p75": 7900
+          },
+          "net": {
+            "median": 4863,
+            "p25": 4086,
+            "p75": 5715
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 51
+            },
+            "men": {
+              "count": 44,
+              "percentage": 49
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wybór odpowiednich mediów reklamowych i opracowywanie media planów,",
+          "planowanie budżetu reklamowego,",
+          "nadzór nad tworzeniem materiałów reklamowych,",
+          "współpraca z agencjami reklamowymi, grafikami itd.,",
+          "ocena efektywności działań reklamowych."
+        ]
+      }
+    ]
+  }
+]

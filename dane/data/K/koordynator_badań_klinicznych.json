@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Koordynator badań klinicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-koordynator-badan-klinicznych",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 127,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7130,
+            "p25": 6160,
+            "p75": 8910
+          },
+          "net": {
+            "median": 5191,
+            "p25": 4529,
+            "p75": 6403
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 117,
+              "percentage": 92
+            },
+            "men": {
+              "count": 10,
+              "percentage": 8
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

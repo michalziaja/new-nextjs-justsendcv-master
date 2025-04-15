@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz specjalista I stopnia",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-specjalista-i-stopnia",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 94,
+        "related_positions": [
+          {
+            "title": "lekarz specjalista I stopnia"
+          },
+          {
+            "title": "lekarz ze specjalizacją I stopnia."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7420,
+            "p25": 5960,
+            "p75": 9350
+          },
+          "net": {
+            "median": 5388,
+            "p25": 4393,
+            "p75": 6704
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 56,
+              "percentage": 60
+            },
+            "men": {
+              "count": 38,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

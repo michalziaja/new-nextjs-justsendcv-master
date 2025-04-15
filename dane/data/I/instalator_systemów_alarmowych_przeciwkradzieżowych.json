@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Instalator systemów alarmowych przeciwkradzieżowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instalator-systemow-alarmowych-przeciwkradziezowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4570,
+            "p25": 4260,
+            "p75": 4990
+          },
+          "net": {
+            "median": 3446,
+            "p25": 3234,
+            "p75": 3731
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 14,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 21
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 21
+            },
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 14
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

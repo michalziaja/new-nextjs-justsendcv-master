@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Logopeda",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-logopeda",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 68,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6900,
+            "p25": 5970,
+            "p75": 11590
+          },
+          "net": {
+            "median": 5034,
+            "p25": 4400,
+            "p75": 8231
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 67,
+              "percentage": 99
+            },
+            "men": {
+              "count": 1,
+              "percentage": 1
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "pomoc osobom z zaburzeniami mowy,",
+          "wykonywanie specjalistycznych badań i analiza ich wyników,",
+          "rozpoznawanie choroby i stanu zaburzeń,",
+          "ustalanie i przeprowadzanie terapii"
+        ]
+      }
+    ]
+  }
+]

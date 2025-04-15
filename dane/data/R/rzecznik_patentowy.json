@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Rzecznik patentowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-rzecznik-patentowy",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 37,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13550,
+            "p25": 11270,
+            "p75": 20930
+          },
+          "net": {
+            "median": 9567,
+            "p25": 8013,
+            "p75": 14598
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 68
+            },
+            "men": {
+              "count": 12,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "reprezentowanie spraw klientów przed Urzędem Patentowym,",
+          "weryfikowanie nowoczesnych projektów,",
+          "analiza opisu wynalazków,",
+          "organizowanie praw od strony formalnej i proceduralnej,",
+          "opiniowanie, wydawanie ekspertyz dotyczących napływających dokumentów,",
+          "raportowanie do odpowiedniej jednostki."
+        ]
+      }
+    ]
+  }
+]

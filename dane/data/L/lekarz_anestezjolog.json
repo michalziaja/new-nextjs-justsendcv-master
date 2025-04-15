@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz anestezjolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-anestezjolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15020,
+            "p25": 11700,
+            "p75": 18710
+          },
+          "net": {
+            "median": 10569,
+            "p25": 8305,
+            "p75": 13085
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 40
+            },
+            "men": {
+              "count": 15,
+              "percentage": 60
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

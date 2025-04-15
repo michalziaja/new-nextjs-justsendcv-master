@@ -1,0 +1,114 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant do spraw systemów wspomagania zarządzania ERP",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-do-spraw-systemow-wspomagania-zarzadzania-erp",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 135,
+        "related_positions": [
+          {
+            "title": "konsultant ds. systemów wspomagania zarządzania ERP"
+          },
+          {
+            "title": "konsultant do spraw systemów wspomagania zarządzania ERP."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7000,
+                "p25": 6000,
+                "p75": 8710
+              },
+              "net": {
+                "median": 5102,
+                "p25": 4420,
+                "p75": 6267
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 26,
+                "percentage": 40
+              },
+              "men": {
+                "count": 39,
+                "percentage": 60
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10470,
+                "p25": 7880,
+                "p75": 12960
+              },
+              "net": {
+                "median": 7467,
+                "p25": 5702,
+                "p75": 9165
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 52,
+                "percentage": 39
+              },
+              "men": {
+                "count": 83,
+                "percentage": 61
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13120,
+                "p25": 10040,
+                "p75": 17770
+              },
+              "net": {
+                "median": 9273,
+                "p25": 7174,
+                "p75": 12444
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 38,
+                "percentage": 36
+              },
+              "men": {
+                "count": 68,
+                "percentage": 64
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "koordynuje prace związane z wdrożeniem systemu ERP,",
+          "bierze udział w zarządzaniu całym projektem,",
+          "monitoruje i analizuje jakość wdrażanych systemów oraz pracuje nad ich udoskonaleniem,",
+          "opracowuje materiały szkoleniowe,",
+          "przygotowuje klientów do wdrożenia systemu ERP,",
+          "przygotowuje raporty,",
+          "testuje oprogramowanie."
+        ]
+      }
+    ]
+  }
+]

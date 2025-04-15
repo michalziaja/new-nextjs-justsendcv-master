@@ -1,0 +1,119 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator maszyn produkcyjnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-maszyn-produkcyjnych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

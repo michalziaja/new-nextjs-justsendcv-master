@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Organizator prac artystycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-organizator-prac-artystycznych",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3820,
+            "p25": 3370,
+            "p75": 4320
+          },
+          "net": {
+            "median": 2780,
+            "p25": 2463,
+            "p75": 3133
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 80
+            },
+            "men": {
+              "count": 2,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

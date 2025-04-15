@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mistrz produkcji w budownictwie kolejowym",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mistrz-produkcji-w-budownictwie-kolejowym",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7130,
+            "p25": 5790,
+            "p75": 8200
+          },
+          "net": {
+            "median": 5191,
+            "p25": 4277,
+            "p75": 5920
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 30
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 30
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

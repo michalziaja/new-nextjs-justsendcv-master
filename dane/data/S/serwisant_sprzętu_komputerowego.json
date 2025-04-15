@@ -1,0 +1,112 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Serwisant sprzętu komputerowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-serwisant-sprzetu-komputerowego",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 114,
+        "related_positions": [
+          {
+            "title": "serwisant sprzętu komputerowego"
+          },
+          {
+            "title": "serwisant IT."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5550,
+                "p25": 4960,
+                "p75": 6410
+              },
+              "net": {
+                "median": 4113,
+                "p25": 3711,
+                "p75": 4699
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 2,
+                "percentage": 3
+              },
+              "men": {
+                "count": 58,
+                "percentage": 97
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6460,
+                "p25": 5570,
+                "p75": 8270
+              },
+              "net": {
+                "median": 4734,
+                "p25": 4127,
+                "p75": 5968
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 3,
+                "percentage": 3
+              },
+              "men": {
+                "count": 111,
+                "percentage": 97
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7130,
+                "p25": 5850,
+                "p75": 9240
+              },
+              "net": {
+                "median": 5191,
+                "p25": 4318,
+                "p75": 6629
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 0,
+                "percentage": 0
+              },
+              "men": {
+                "count": 41,
+                "percentage": 100
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "sprawuje nadzór techniczny nad sprzętem komputerowym,",
+          "serwisuje, konfiguruje i konserwuje sprzęt komputerowy,",
+          "współpracuje z zespołem elektroników i programistów,",
+          "doraźnie pomaga użytkownikom sprzętu,",
+          "prowadzi podstawowe prace administracyjne w środowisku IT."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Tynkarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-tynkarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 21,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7300,
+            "p25": 5220,
+            "p75": 9690
+          },
+          "net": {
+            "median": 5306,
+            "p25": 3889,
+            "p75": 6936
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 21,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

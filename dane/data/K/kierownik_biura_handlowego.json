@@ -1,0 +1,63 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik biura handlowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-biura-handlowego",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 192,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8760,
+            "p25": 7270,
+            "p75": 12110
+          },
+          "net": {
+            "median": 6302,
+            "p25": 5286,
+            "p75": 8585
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 97,
+              "percentage": 51
+            },
+            "men": {
+              "count": 95,
+              "percentage": 49
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 41
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 33
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 33
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie prac biura handlowego,",
+          "zapewnienie realizacji planów handlowych,",
+          "nadzór nad jakością obsługi klientów,",
+          "nadzór nad procedurą obsługi reklamacji,",
+          "zapewnienie sprawozdawczości,",
+          "osobiste utrzymywanie kontaktów z klientami i sprzedaż."
+        ]
+      }
+    ]
+  }
+]

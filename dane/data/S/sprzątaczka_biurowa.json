@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sprzątaczka biurowa",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sprzataczka-biurowa",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 159,
+        "related_positions": [
+          {
+            "title": "pracownik sprzątający"
+          },
+          {
+            "title": "pracownik serwisu sprzątającego"
+          },
+          {
+            "title": "sprzątaczka"
+          },
+          {
+            "title": "sprzątacz pojazdów"
+          },
+          {
+            "title": "sprzątaczka biurowa"
+          },
+          {
+            "title": "sprzątaczka domowa."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5110,
+            "p25": 4650,
+            "p75": 7100
+          },
+          "net": {
+            "median": 3814,
+            "p25": 3500,
+            "p75": 5170
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 133,
+              "percentage": 84
+            },
+            "men": {
+              "count": 26,
+              "percentage": 16
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

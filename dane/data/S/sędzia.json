@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sędzia",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sedzia",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 18190,
+            "p25": 16420,
+            "p75": 22260
+          },
+          "net": {
+            "median": 12730,
+            "p25": 11524,
+            "p75": 15504
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 40
+            },
+            "men": {
+              "count": 15,
+              "percentage": 60
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

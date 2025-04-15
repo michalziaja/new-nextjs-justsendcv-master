@@ -42,6 +42,8 @@ export function SiteHeader() {
         return "Zapisane"
       case "/scheduler":
         return "Terminarz"
+      case "/calculator":
+        return "Kalkulator wynagrodzeń"
       default:
         return "Home"
     }
@@ -54,7 +56,7 @@ export function SiteHeader() {
         {/* Logo jako przycisk zwijania menu */}
         <div 
           onClick={toggleSidebar}
-          className="flex items-center gap-2 rounded-md p-1 cursor-pointer hover:scale-105 transition-all duration-300"
+          className="flex items-center gap-2 rounded-sm p-1 cursor-pointer hover:scale-105 transition-all duration-300"
         >
           <div className={`flex aspect-square size-10 items-center justify-center transition-transform duration-500 ${open ? 'rotate-360' : ''}`}>
             <div className="relative w-full h-full">
@@ -108,7 +110,7 @@ export function SiteHeader() {
   )
 
   return (
-    <header className="bg-white sticky top-2.5 z-50 flex w-[calc(100%-1rem)] border-1 border-gray-100 mx-auto items-center rounded-md shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:shadow-[2px_4px_10px_rgba(0,0,1,0.3)] dark:bg-slate-900 dark:border-slate-800 ">
+    <header className="bg-white sticky top-2.5 z-50 flex w-[calc(100%-1rem)] border-1 border-gray-100 mx-auto items-center rounded-sm shadow-md dark:shadow-[2px_4px_10px_rgba(0,0,1,0.3)] dark:bg-slate-900 dark:border-slate-800 ">
       {headerContent}
     </header>
   )

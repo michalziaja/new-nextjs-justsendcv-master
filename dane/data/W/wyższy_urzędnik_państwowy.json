@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Wyższy urzędnik państwowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-wyzszy-urzednik-panstwowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 59,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7880,
+            "p25": 6270,
+            "p75": 11090
+          },
+          "net": {
+            "median": 5702,
+            "p25": 4604,
+            "p75": 7890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 39,
+              "percentage": 66
+            },
+            "men": {
+              "count": 20,
+              "percentage": 34
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

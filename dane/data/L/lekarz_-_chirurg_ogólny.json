@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz - chirurg ogólny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-chirurg-ogolny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 41,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12320,
+            "p25": 9180,
+            "p75": 19000
+          },
+          "net": {
+            "median": 8728,
+            "p25": 6587,
+            "p75": 13283
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 24
+            },
+            "men": {
+              "count": 31,
+              "percentage": 76
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

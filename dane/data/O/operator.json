@@ -1,0 +1,100 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 73,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5840,
+                "p25": 5180,
+                "p75": 6630
+              },
+              "net": {
+                "median": 4311,
+                "p25": 3862,
+                "p75": 4849
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 26
+              },
+              "men": {
+                "count": 35,
+                "percentage": 74
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6720,
+                "p25": 5360,
+                "p75": 7500
+              },
+              "net": {
+                "median": 4911,
+                "p25": 3984,
+                "p75": 5442
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 14
+              },
+              "men": {
+                "count": 63,
+                "percentage": 86
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 5980,
+                "p75": 7740
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4407,
+                "p75": 5607
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 17
+              },
+              "men": {
+                "count": 39,
+                "percentage": 83
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

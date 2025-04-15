@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. marketingu produktu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-marketingu-produktu",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 59,
+        "related_positions": [
+          {
+            "title": "specjalista ds. marketingu produktu"
+          },
+          {
+            "title": "specjalista do spraw marketingu produktu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8870,
+            "p25": 6920,
+            "p75": 10460
+          },
+          "net": {
+            "median": 6377,
+            "p25": 5047,
+            "p75": 7461
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 39,
+              "percentage": 66
+            },
+            "men": {
+              "count": 20,
+              "percentage": 34
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opracowywanie strategii marketingowej w zakresie powierzonego produktu lub grupy produktów,",
+          "zarządzanie marketingiem produktu,",
+          "monitorowanie pozycji produktu na rynku,",
+          "wprowadzanie na rynek nowego produktu,",
+          "poszukiwanie nowych rynków zbytu dla produktu."
+        ]
+      }
+    ]
+  }
+]

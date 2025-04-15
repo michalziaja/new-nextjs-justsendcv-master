@@ -1,0 +1,76 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw rozwoju kanałów dystrybucji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-rozwoju-kanalow-dystrybucji",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": [
+          {
+            "title": "kierownik ds. rozwoju kanałów dystrybucji"
+          },
+          {
+            "title": "kierownik ds. rozwoju kanałów sprzedaży"
+          },
+          {
+            "title": "kierownik do spraw rozwoju kanałów dystrybucji"
+          },
+          {
+            "title": "kierownik do spraw rozwoju kanałów sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13410,
+            "p25": 9320,
+            "p75": 18500
+          },
+          "net": {
+            "median": 9471,
+            "p25": 6683,
+            "p75": 12941
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 30,
+              "percentage": 33
+            },
+            "men": {
+              "count": 60,
+              "percentage": 67
+            }
+          },
+          "benefits": [
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 61
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 53
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 46
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "rozwój i koordynacja działania sieci dystrybucji,",
+          "współtworzenie polityki cenowej i produktowej,",
+          "kreowanie wizerunku firmy,",
+          "utrzymywanie dobrych relacji z kluczowymi klientami firmy,",
+          "realizacja wyznaczonego planu sprzedaży,",
+          "nadzór nad pracą podległych pracowników"
+        ]
+      }
+    ]
+  }
+]

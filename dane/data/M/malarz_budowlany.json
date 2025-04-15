@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Malarz budowlany",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-malarz-budowlany",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 64,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5810,
+            "p25": 5060,
+            "p75": 7210
+          },
+          "net": {
+            "median": 4290,
+            "p25": 3779,
+            "p75": 5245
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 63,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "aplikowanie farb, lakierów i barwników na powierzchnie wewnątrz i/lub na zewnątrz budynków,",
+          "przygotowywanie powierzchni do malowania (usuwanie starych powłok, uzupełnianie ubytków, gruntowanie),",
+          "zabezpieczenie pomieszczenia i przedmiotów znajdujących się w nim przed malowaniem i zadbanie o jego czystość po zakończeniu prac"
+        ]
+      }
+    ]
+  }
+]

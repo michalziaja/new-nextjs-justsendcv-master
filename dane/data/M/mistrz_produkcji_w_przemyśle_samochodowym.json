@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mistrz produkcji w przemyśle samochodowym",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mistrz-produkcji-w-przemysle-samochodowym",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 62,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8660,
+            "p25": 7010,
+            "p75": 11060
+          },
+          "net": {
+            "median": 6233,
+            "p25": 5109,
+            "p75": 7870
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 11
+            },
+            "men": {
+              "count": 55,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

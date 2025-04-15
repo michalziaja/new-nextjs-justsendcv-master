@@ -1,0 +1,79 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pełnomocnik do spraw systemów jakości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pelnomocnik-do-spraw-systemow-jakosci",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 308,
+        "related_positions": [
+          {
+            "title": "pełnomocnik ds. systemów jakości"
+          },
+          {
+            "title": "pełnomocnik ds. sytemu jakości"
+          },
+          {
+            "title": "pełnomocnik do spraw systemów jakości"
+          },
+          {
+            "title": "pełnomocnik do spraw sytemu jakości."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8210,
+            "p25": 6620,
+            "p75": 10820
+          },
+          "net": {
+            "median": 5927,
+            "p25": 4843,
+            "p75": 7706
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 215,
+              "percentage": 70
+            },
+            "men": {
+              "count": 93,
+              "percentage": 30
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 47
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 28
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 23
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "przygotowanie przedsiębiorstwa do uzyskania/utrzymania odpowiednich świadectw jakości wydawanych przez uprawnione zewnętrzne organy certyfikujące,",
+          "organizacja, nadzór i koordynowanie prac wszystkich działów przedsiębiorstwa związanych z wdrażaniem, realizacją i dokumentowaniem systemu jakości,",
+          "określanie obowiązującego poziomu jakości i niezawodności produktu/usługi,",
+          "przeprowadzanie rachunku kosztów systemu jakości i ich analiza,",
+          "opracowanie harmonogramu prac wdrożeniowych,",
+          "koordynacja i zatwierdzanie metod i technik kontroli/badań w firmie,",
+          "odpowiedzialność za system wewnętrznych audytów jakości,",
+          "współpraca z zewnętrznymi instytucjami normalizacyjnymi,",
+          "przeprowadzanie audytów jakości (systemów, procesów),",
+          "przeprowadzanie szkoleń wewnętrznych, promowanie świadomości jakościowej i ekologicznej."
+        ]
+      }
+    ]
+  }
+]

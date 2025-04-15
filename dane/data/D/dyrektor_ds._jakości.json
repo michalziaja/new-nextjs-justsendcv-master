@@ -1,0 +1,71 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor ds. jakości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-ds-jakosci",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 113,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. jakości"
+          },
+          {
+            "title": "dyrektor do spraw jakości."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 18170,
+            "p25": 13670,
+            "p75": 24550
+          },
+          "net": {
+            "median": 12717,
+            "p25": 9648,
+            "p75": 17066
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 41
+            },
+            "men": {
+              "count": 67,
+              "percentage": 59
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 63
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 63
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie realizacji strategii jakości,",
+          "projektowanie i nadzorowanie wdrażania systemu zapewnienia jakości (wewnętrznego lub norm jakości ISO) we wszystkich obszarach funkcjonowania przedsiębiorstwa,",
+          "współpraca z jednostkami zewnętrznymi sporządzającymi orzeczenia o jakości,",
+          "tworzenie procedur jakości odpowiadających normom systemu jakości,",
+          "kierowanie zespołem pracowników działu jakości,",
+          "organizowanie i prowadzenie szkoleń dotyczących norm systemów jakości,",
+          "opiniowanie rozwiązań technologicznych, technicznych i organizacyjnych związanych z wdrażaniem i funkcjonowaniem systemu jakości,",
+          "nadzór nad funkcjonowaniem laboratoriów produkcyjnych/badawczych, działu kontroli jakości firmy i innych jednostek wewnętrznych w aspekcie systemu jakości."
+        ]
+      }
+    ]
+  }
+]

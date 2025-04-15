@@ -1,0 +1,80 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw jakości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-jakosci",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 625,
+        "related_positions": [
+          {
+            "title": "kierownik ds. jakości"
+          },
+          {
+            "title": "quality manager"
+          },
+          {
+            "title": "kierownik działu jakości"
+          },
+          {
+            "title": "kierownik do spraw jakości."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 11010,
+            "p25": 8760,
+            "p75": 14530
+          },
+          "net": {
+            "median": 7835,
+            "p25": 6302,
+            "p75": 10235
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 316,
+              "percentage": 51
+            },
+            "men": {
+              "count": 309,
+              "percentage": 49
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 52
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 52
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 47
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "udział we wdrażaniu systemu jakości,",
+          "kontrola laboratoriów produkcyjnych/badawczych i systemu produkcyjnego pod kątem norm systemu jakości,",
+          "koordynacja projektów dotyczących wprowadzenia, usprawnienia i utrzymania jakości,",
+          "tworzenie wymogów jakościowych dla nowych procesów, produktów czy usług,",
+          "monitorowanie parametrów jakościowych w wytwarzanych produktach czy oferowanych usługach,",
+          "współpraca z urzędami i innymi organizacjami,",
+          "przygotowywanie i wprowadzania procedur i instrukcji,",
+          "wspieranie celów firmy w zakresie osiągania kluczowych wskaźników jakości,",
+          "budowa, utrzymanie i rozwój systemu zapewnienia jakości dostaw i dostawców,",
+          "przeprowadzanie audytów systemu jakości,",
+          "nadzór nad pracą działu kontroli jakości."
+        ]
+      }
+    ]
+  }
+]

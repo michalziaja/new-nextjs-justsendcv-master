@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator urządzeń pakujących",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-urzadzen-pakujacych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6390,
+            "p25": 5140,
+            "p75": 6980
+          },
+          "net": {
+            "median": 4686,
+            "p25": 3834,
+            "p75": 5088
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 9
+            },
+            "men": {
+              "count": 10,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

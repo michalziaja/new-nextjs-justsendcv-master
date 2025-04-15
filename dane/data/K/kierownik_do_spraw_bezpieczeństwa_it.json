@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw bezpieczeństwa IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-bezpieczenstwa-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 80,
+        "related_positions": [
+          {
+            "title": "kierownik ds. bezpieczeństwa IT"
+          },
+          {
+            "title": "kierownik do spraw bezpieczeństwa IT."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 17640,
+            "p25": 13960,
+            "p75": 27190
+          },
+          "net": {
+            "median": 12355,
+            "p25": 9846,
+            "p75": 18866
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 8
+            },
+            "men": {
+              "count": 74,
+              "percentage": 92
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

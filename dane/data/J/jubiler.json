@@ -1,0 +1,60 @@
+[
+  {
+    "letter": "J",
+    "positions": [
+      {
+        "title": "Jubiler",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-jubiler",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3920,
+            "p25": 3580,
+            "p75": 4660
+          },
+          "net": {
+            "median": 3002,
+            "p25": 2770,
+            "p75": 3506
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 64
+            },
+            "men": {
+              "count": 4,
+              "percentage": 36
+            }
+          },
+          "benefits": [
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 36
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 27
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 18
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "działania produkcyjne (wykonywanie odlewów, oprawa kamienii,itp.),",
+          "wykonywanie biżuterii na zamówienie,",
+          "naprawa starej i współczesnej biżuterii"
+        ]
+      }
+    ]
+  }
+]

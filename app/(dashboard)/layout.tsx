@@ -40,7 +40,7 @@ export default async function DashboardLayout({
     <div className="[--header-height:calc(--spacing(14))] bg-background relative">
       {/* Tło z siatką */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808011_1px,transparent_1px),linear-gradient(to_bottom,#80808011_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_90%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808011_1px,transparent_1px),linear-gradient(to_bottom,#80808011_1px,transparent_2px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_90%)]" />
       </div>
       <SidebarProvider className="flex flex-col relative z-10">
         <SiteHeader />

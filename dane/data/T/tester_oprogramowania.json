@@ -1,0 +1,162 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Tester oprogramowania",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-tester-oprogramowania",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 811,
+        "related_positions": [
+          {
+            "title": "tester oprogramowania"
+          },
+          {
+            "title": "software tester"
+          },
+          {
+            "title": "tester oprogramowania wbudowanego"
+          },
+          {
+            "title": "tester manualny."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6960,
+                "p25": 5990,
+                "p75": 8530
+              },
+              "net": {
+                "median": 5074,
+                "p25": 4414,
+                "p75": 6145
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 133,
+                "percentage": 41
+              },
+              "men": {
+                "count": 195,
+                "percentage": 59
+              }
+            },
+            "benefits": [
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 57
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9490,
+                "p25": 7810,
+                "p75": 11660
+              },
+              "net": {
+                "median": 6799,
+                "p25": 5654,
+                "p75": 8279
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 309,
+                "percentage": 38
+              },
+              "men": {
+                "count": 502,
+                "percentage": 62
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 76
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 73
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 67
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12980,
+                "p25": 10470,
+                "p75": 16530
+              },
+              "net": {
+                "median": 9178,
+                "p25": 7467,
+                "p75": 11598
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 97,
+                "percentage": 32
+              },
+              "men": {
+                "count": 205,
+                "percentage": 68
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 75
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 68
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 62
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "opracowuje plan testów dla danego oprogramowania na podstawie otrzymanych specyfikacji wymagań,",
+          "decyduje o wyborze narzędzi do realizacji danych testów,",
+          "koordynuje grupę testerów oprogramowania,",
+          "pomaga w zaplanowaniu i realizacji bardziej skomplikowanych testów,",
+          "wykrywa oraz zgłasza usterki oprogramowania,",
+          "śledzi i dokumentuje błędy oraz zmiany w aplikacjach,",
+          "dokonuje naprawy prostych usterek",
+          "współpracuje z zespołem programistów - zlecając zmiany w oprogramowaniu,",
+          "projektuje i rozwija procedury testowe,",
+          "odpowiada za dopuszczenie przetestowanego oprogramowania do fazy wdrożenia."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Radca prawny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-radca-prawny",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1319,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12770,
+            "p25": 9720,
+            "p75": 17610
+          },
+          "net": {
+            "median": 9036,
+            "p25": 6957,
+            "p75": 12334
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 811,
+              "percentage": 61
+            },
+            "men": {
+              "count": 508,
+              "percentage": 39
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 41
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie przed sądami i innymi organami czynności wymagających uprawnień radcowskich lub adwokackich,",
+          "identyfikowanie i rozwiązywanie problemów prawnych występujących w przedsiębiorstwie,",
+          "kontrola zgodności umów i dokumentów z aktualnymi przepisami prawnymi,",
+          "udział w negocjowaniu warunków umów,",
+          "utrzymywanie kontaktów i współpraca z instytucjami prawnymi,",
+          "współpraca z zewnętrznymi doradcami prawnymi."
+        ]
+      }
+    ]
+  }
+]

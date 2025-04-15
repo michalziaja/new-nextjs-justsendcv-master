@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Geodeta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-geodeta",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 379,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6280,
+            "p25": 5290,
+            "p75": 7570
+          },
+          "net": {
+            "median": 4611,
+            "p25": 3936,
+            "p75": 5490
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 126,
+              "percentage": 33
+            },
+            "men": {
+              "count": 253,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wyznaczanie kształtu i rozmiarów bryły ziemi oraz sporządzanie jej modelu matematycznego,",
+          "określanie położenia wybranych punktów na powierzchni Ziemi,",
+          "dokonywanie pomiarów,",
+          "opracowywanie map na podstawie zdjęć lotniczych"
+        ]
+      }
+    ]
+  }
+]

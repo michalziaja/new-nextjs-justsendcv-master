@@ -1,0 +1,79 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent do spraw badań i rozwoju",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-do-spraw-badan-i-rozwoju",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 149,
+        "related_positions": [
+          {
+            "title": "asystent w dziale badań i rozwoju"
+          },
+          {
+            "title": "asystent ds. badań i rozwoju"
+          },
+          {
+            "title": "asystent działu badań i certyfikacji"
+          },
+          {
+            "title": "asystent ds. B+R"
+          },
+          {
+            "title": "asystent do spraw badań i rozwoju"
+          },
+          {
+            "title": "asystent do spraw B+R."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6880,
+            "p25": 5730,
+            "p75": 8710
+          },
+          "net": {
+            "median": 5020,
+            "p25": 4236,
+            "p75": 6267
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 94,
+              "percentage": 63
+            },
+            "men": {
+              "count": 55,
+              "percentage": 37
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 52
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 41
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 41
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "prace administracyjne związane z obsługą działu,",
+          "kontakty z innymi działami,",
+          "wykonywanie prac pomocniczych przy wdrażaniu nowych receptur i innowacji do procesu produkcyjnego,",
+          "wykonywanie bieżących spraw związanych z rejestracją i uzyskiwaniem zezwoleń na wprowadzanie produktów na rynek."
+        ]
+      }
+    ]
+  }
+]

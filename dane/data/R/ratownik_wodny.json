@@ -1,0 +1,54 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Ratownik wodny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ratownik-wodny",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": [
+          {
+            "title": "ratownik WOPR"
+          },
+          {
+            "title": "ratownik wodny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5510,
+            "p25": 4850,
+            "p75": 6390
+          },
+          "net": {
+            "median": 4086,
+            "p25": 3636,
+            "p75": 4686
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 16
+            },
+            "men": {
+              "count": 26,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie bezpieczeństwa użytkowników kąpielisk, pływalni i innych akwenów wodnych,",
+          "udzielanie pierwszej pomocy,",
+          "organizowanie szkoleń"
+        ]
+      }
+    ]
+  }
+]

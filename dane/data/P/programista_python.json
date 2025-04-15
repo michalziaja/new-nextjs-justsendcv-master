@@ -1,0 +1,122 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista Python",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-python",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 268,
+        "related_positions": [
+          {
+            "title": "programista Python"
+          },
+          {
+            "title": "python developer"
+          },
+          {
+            "title": "python software engineer."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8760,
+                "p25": 7120,
+                "p75": 11190
+              },
+              "net": {
+                "median": 6302,
+                "p25": 5184,
+                "p75": 7958
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 28,
+                "percentage": 16
+              },
+              "men": {
+                "count": 150,
+                "percentage": 84
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12380,
+                "p25": 10000,
+                "p75": 15670
+              },
+              "net": {
+                "median": 8769,
+                "p25": 7147,
+                "p75": 11012
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 35,
+                "percentage": 13
+              },
+              "men": {
+                "count": 233,
+                "percentage": 87
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 83
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 66
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 66
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 16200,
+                "p25": 14420,
+                "p75": 21520
+              },
+              "net": {
+                "median": 11374,
+                "p25": 10160,
+                "p75": 15000
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 125,
+                "percentage": 97
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

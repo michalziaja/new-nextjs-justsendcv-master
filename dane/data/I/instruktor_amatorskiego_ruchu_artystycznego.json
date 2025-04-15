@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Instruktor amatorskiego ruchu artystycznego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-amatorskiego-ruchu-artystycznego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5250,
+            "p25": 4780,
+            "p75": 7930
+          },
+          "net": {
+            "median": 3909,
+            "p25": 3588,
+            "p75": 5736
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 16,
+              "percentage": 80
+            },
+            "men": {
+              "count": 4,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

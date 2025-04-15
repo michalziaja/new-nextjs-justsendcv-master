@@ -1,0 +1,163 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik administracyjny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-administracyjny",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 907,
+        "related_positions": [
+          {
+            "title": "pracownik administracyjny"
+          },
+          {
+            "title": "pracownik administracyjno - biurowy"
+          },
+          {
+            "title": "pracownik administracji"
+          },
+          {
+            "title": "asystent w dziale administracji"
+          },
+          {
+            "title": "asystent ds. administracyjnych"
+          },
+          {
+            "title": "asystent do spraw administracyjnych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5500,
+                "p25": 4870,
+                "p75": 6390
+              },
+              "net": {
+                "median": 4079,
+                "p25": 3650,
+                "p75": 4686
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 710,
+                "percentage": 88
+              },
+              "men": {
+                "count": 98,
+                "percentage": 12
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 41
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 34
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 27
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5810,
+                "p25": 5100,
+                "p75": 6880
+              },
+              "net": {
+                "median": 4290,
+                "p25": 3807,
+                "p75": 5020
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 790,
+                "percentage": 87
+              },
+              "men": {
+                "count": 117,
+                "percentage": 13
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 28
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 23
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 17
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6550,
+                "p25": 5570,
+                "p75": 8110
+              },
+              "net": {
+                "median": 4795,
+                "p25": 4127,
+                "p75": 5858
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 351,
+                "percentage": 82
+              },
+              "men": {
+                "count": 78,
+                "percentage": 18
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 41
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 35
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 35
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "zapewnienie sprawnego funkcjonowania biura,",
+          "bieżace kontakty z klientami firmy,",
+          "przygotowywanie umów,",
+          "fakturowanie i prowadzenie rozliczeń z klientami,",
+          "archiwizacja domkumentów"
+        ]
+      }
+    ]
+  }
+]

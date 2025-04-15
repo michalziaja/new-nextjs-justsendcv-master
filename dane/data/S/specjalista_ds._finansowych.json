@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. finansowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-finansowych",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 504,
+        "related_positions": [
+          {
+            "title": "specjalista ds. finansowych"
+          },
+          {
+            "title": "specjalista do spraw finansowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6140,
+                "p25": 5240,
+                "p75": 7080
+              },
+              "net": {
+                "median": 4515,
+                "p25": 3902,
+                "p75": 5156
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 70,
+                "percentage": 65
+              },
+              "men": {
+                "count": 37,
+                "percentage": 35
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 76
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 76
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 61
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7270,
+                "p25": 6140,
+                "p75": 8600
+              },
+              "net": {
+                "median": 5286,
+                "p25": 4515,
+                "p75": 6192
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 415,
+                "percentage": 82
+              },
+              "men": {
+                "count": 89,
+                "percentage": 18
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 57
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 42
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8770,
+                "p25": 7240,
+                "p75": 11010
+              },
+              "net": {
+                "median": 6309,
+                "p25": 5265,
+                "p75": 7835
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 160,
+                "percentage": 75
+              },
+              "men": {
+                "count": 53,
+                "percentage": 25
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 65
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 56
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 52
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

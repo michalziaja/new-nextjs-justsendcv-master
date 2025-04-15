@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. bezpieczeństwa informatycznego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-bezpieczenstwa-informatycznego",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 37,
+        "related_positions": [
+          {
+            "title": "kierownik ds. bezpieczeństwa informatycznego"
+          },
+          {
+            "title": "kierownik do spraw bezpieczeństwa informatycznego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 17980,
+            "p25": 13640,
+            "p75": 25860
+          },
+          "net": {
+            "median": 12587,
+            "p25": 9629,
+            "p75": 17958
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 11
+            },
+            "men": {
+              "count": 33,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "określa i egzekwuje politykę bezpieczeństwa systemów informatycznych,",
+          "nadzoruje projektowanie i implementację systemów zabezpieczających przed atakami z Internetu, z sieci wewnętrznej, atakiem fizycznym oraz przed skutkami awarii."
+        ]
+      }
+    ]
+  }
+]

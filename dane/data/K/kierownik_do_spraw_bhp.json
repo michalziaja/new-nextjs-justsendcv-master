@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw BHP",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-bhp",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 270,
+        "related_positions": [
+          {
+            "title": "kierownik ds. BHP"
+          },
+          {
+            "title": "kierownik do spraw BHP."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13670,
+            "p25": 10460,
+            "p75": 17820
+          },
+          "net": {
+            "median": 9648,
+            "p25": 7461,
+            "p75": 12478
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 106,
+              "percentage": 39
+            },
+            "men": {
+              "count": 164,
+              "percentage": 61
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

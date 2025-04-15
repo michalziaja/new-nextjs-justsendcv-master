@@ -1,0 +1,61 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant w dziale audytu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-w-dziale-audytu",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 159,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9530,
+            "p25": 7250,
+            "p75": 13140
+          },
+          "net": {
+            "median": 6826,
+            "p25": 5272,
+            "p75": 9287
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 87,
+              "percentage": 55
+            },
+            "men": {
+              "count": 72,
+              "percentage": 45
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 84
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 68
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 64
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za badanie konkretnych elementów sprawozdania finansowego,",
+          "udział w inwentaryzacji przeprowadzanej przez klienta,",
+          "opisywanie procesów pod kątem identyfikacji kontroli wewnętrznych i rodzajów ryzyka,",
+          "testowanie kontroli wewnętrznych,",
+          "sprawdzanie poprawności rachunkowej sporządzonych sprawzdań finansowych i raportu/opinii z badania"
+        ]
+      }
+    ]
+  }
+]

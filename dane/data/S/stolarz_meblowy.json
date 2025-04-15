@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Stolarz meblowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-stolarz-meblowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 273,
+        "related_positions": [
+          {
+            "title": "stolarz"
+          },
+          {
+            "title": "stolarz meblowy"
+          },
+          {
+            "title": "stolarz galanterii drzewnej"
+          },
+          {
+            "title": "stolarz mebli artystycznych i wzorcowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5120,
+            "p75": 6930
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3820,
+            "p75": 5054
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 2
+            },
+            "men": {
+              "count": 268,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "składanie elementów meblowych,",
+          "montaż mebli i elementów meblowych,",
+          "obsługa maszyn i narzędzi stolarskich oraz czytania projektów,",
+          "wykonywanie wykończeń meblowych,",
+          "składanie i stawianie konstrukcji drewnianych."
+        ]
+      }
+    ]
+  }
+]

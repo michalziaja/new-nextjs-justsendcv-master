@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik sieci informatycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-sieci-informatycznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10380,
+            "p25": 6620,
+            "p75": 19040
+          },
+          "net": {
+            "median": 7152,
+            "p25": 4756,
+            "p75": 12625
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 40
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 30
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent projektanta (budownictwo)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-projektanta-budownictwo",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 708,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6500,
+                "p25": 5540,
+                "p75": 7540
+              },
+              "net": {
+                "median": 4761,
+                "p25": 4106,
+                "p75": 5470
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 522,
+                "percentage": 47
+              },
+              "men": {
+                "count": 584,
+                "percentage": 53
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 43
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 43
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 38
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7020,
+                "p25": 6040,
+                "p75": 8070
+              },
+              "net": {
+                "median": 5115,
+                "p25": 4448,
+                "p75": 5831
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 323,
+                "percentage": 46
+              },
+              "men": {
+                "count": 385,
+                "percentage": 54
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 44
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 40
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 38
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8130,
+                "p25": 6790,
+                "p75": 9130
+              },
+              "net": {
+                "median": 5872,
+                "p25": 4959,
+                "p75": 6554
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 98,
+                "percentage": 49
+              },
+              "men": {
+                "count": 101,
+                "percentage": 51
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 50
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "współpraca z projektantem, członkami zespołu projektowego i podwykonawcami,",
+          "czynne uczestnictwo w realizacji projektów,",
+          "kontrolowanie terminowego pozyskania wymaganych opinii, uzgodnień i decyzji"
+        ]
+      }
+    ]
+  }
+]

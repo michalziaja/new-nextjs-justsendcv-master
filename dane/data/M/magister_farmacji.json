@@ -1,0 +1,111 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Magister farmacji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-magister-farmacji",
+        "category": [
+          "służba zdrowia",
+          "apteki"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 403,
+        "related_positions": [
+          {
+            "title": "magister farmacji"
+          },
+          {
+            "title": "farmaceuta."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7360,
+                "p25": 6460,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5347,
+                "p25": 4734,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 71,
+                "percentage": 76
+              },
+              "men": {
+                "count": 22,
+                "percentage": 24
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7870,
+                "p25": 6980,
+                "p75": 9060
+              },
+              "net": {
+                "median": 5695,
+                "p25": 5088,
+                "p75": 6506
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 312,
+                "percentage": 77
+              },
+              "men": {
+                "count": 91,
+                "percentage": 23
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8940,
+                "p25": 7640,
+                "p75": 9920
+              },
+              "net": {
+                "median": 6424,
+                "p25": 5538,
+                "p75": 7093
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 105,
+                "percentage": 79
+              },
+              "men": {
+                "count": 28,
+                "percentage": 21
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "praca w aptece lub firmie farmaceutycznej,",
+          "w przypadku pracy w aptece: sporządzanie, analizowanie, klasyfikowanie, przechowywanie i wydawanie leków,",
+          "w przypadku pracy w firmie farmaceutycznej: prace badawcze nad tworzeniem i rozwojem leków, może także wykonywać czynności związane z produkcją, kontrolą jakości i marketingiem"
+        ]
+      }
+    ]
+  }
+]

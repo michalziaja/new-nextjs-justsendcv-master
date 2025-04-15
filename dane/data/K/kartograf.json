@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kartograf",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kartograf",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3950,
+            "p25": 3190,
+            "p75": 4290
+          },
+          "net": {
+            "median": 2819,
+            "p25": 2289,
+            "p75": 3056
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 54
+            },
+            "men": {
+              "count": 6,
+              "percentage": 46
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "przygotowywanie graficznych i opisowych projektów map lub planów,",
+          "opracowywanie makiety nazewniczej map, legendy i rozmieszczenia znaków"
+        ]
+      }
+    ]
+  }
+]

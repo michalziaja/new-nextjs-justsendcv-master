@@ -1,0 +1,113 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent do spraw technicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-do-spraw-technicznych",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 118,
+        "related_positions": [
+          {
+            "title": "asystent ds. technicznych"
+          },
+          {
+            "title": "pracownik ds. technicznych"
+          },
+          {
+            "title": "asystent do spraw technicznych"
+          },
+          {
+            "title": "pracownik do spraw technicznych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6160,
+                "p25": 5390,
+                "p75": 7290
+              },
+              "net": {
+                "median": 4529,
+                "p25": 4004,
+                "p75": 5299
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 39
+              },
+              "men": {
+                "count": 62,
+                "percentage": 61
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6720,
+                "p25": 5750,
+                "p75": 8230
+              },
+              "net": {
+                "median": 4911,
+                "p25": 4250,
+                "p75": 5941
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 33,
+                "percentage": 28
+              },
+              "men": {
+                "count": 85,
+                "percentage": 72
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7590,
+                "p25": 6230,
+                "p75": 11190
+              },
+              "net": {
+                "median": 5504,
+                "p25": 4577,
+                "p75": 7958
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 16
+              },
+              "men": {
+                "count": 42,
+                "percentage": 84
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

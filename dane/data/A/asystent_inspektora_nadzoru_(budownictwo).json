@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent inspektora nadzoru (budownictwo)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-inspektora-nadzoru-budownictwo",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6280,
+            "p25": 5540,
+            "p75": 7720
+          },
+          "net": {
+            "median": 4611,
+            "p25": 4106,
+            "p75": 5593
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 48
+            },
+            "men": {
+              "count": 15,
+              "percentage": 52
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

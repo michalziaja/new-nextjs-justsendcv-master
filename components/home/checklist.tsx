@@ -12,22 +12,22 @@ const tasks = [
     tasks: [
       {
         title: "Zainstaluj wtyczkę",
-        icon: <Download className="h-4 w-4 text-blue-500" />,
+        icon: <Download className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600" />,
         completed: true
       },
       {
         title: "Uzupełnij profil",
-        icon: <User className="h-4 w-4 text-yellow-500" />,
+        icon: <User className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600" />,
         completed: false
       },
       {
         title: "Ustaw cel",
-        icon: <Target className="h-4 w-4 text-indigo-500" />,
+        icon: <Target className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600" />,
         completed: false
       },
       {
         title: "Trenuj do rozmowy",
-        icon: <BookOpen className="h-4 w-4 text-orange-500" />,
+        icon: <BookOpen className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600" />,
         completed: false
       }
     ]
@@ -38,24 +38,24 @@ const tasks = [
     tasks: [
       {
         title: "Zapisz 5 ofert",
-        icon: <FileText className="h-4 w-4 text-purple-500" />,
+        icon: <FileText className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600" />,
         completed: false,
         progress: "2/5"
       },
       {
         title: "Stwórz CV",
-        icon: <Settings className="h-4 w-4 text-green-500" />,
+        icon: <Settings className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />,
         completed: false
       },
       {
         title: "Wyślij 2 oferty",
-        icon: <Send className="h-4 w-4 text-cyan-500" />,
+        icon: <Send className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600" />,
         completed: false,
         progress: "0/2"
       },
       {
         title: "Oceń wtyczkę",
-        icon: <Star className="h-4 w-4 text-amber-500" />,
+        icon: <Star className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600" />,
         completed: false
       }
     ]
@@ -64,13 +64,13 @@ const tasks = [
 
 export function Checklist() {
   return (
-    <Card className="col-span-1 rounded-md border-1 border-gray-100 dark:border-gray-800
+    <Card className="col-span-1 rounded-sm border-1 border-gray-100 dark:border-gray-800
     shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
     dark:shadow-slate-900/20
     bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">
-          <CheckSquare className="h-5 w-5 text-blue-500 dark:text-blue-400" />
+          <CheckSquare className="h-5 w-5 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500" />
           <CardTitle>Checklista</CardTitle>
         </div>
         <Button 
@@ -88,7 +88,7 @@ export function Checklist() {
                 <div 
                   key={taskIndex} 
                   className={`
-                    flex items-center gap-3 p-2 rounded-lg
+                    flex items-center gap-3 p-2 rounded-sm
                     hover:bg-gray-50 dark:hover:bg-gray-800/50
                     transition-colors duration-200
                     ${task.completed ? 'opacity-50' : ''}
@@ -97,7 +97,7 @@ export function Checklist() {
                   <div className={`
                     h-5 w-5 rounded border-2 
                     ${task.completed 
-                      ? 'border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400' 
+                      ? 'border-gradient-to-r from-[#00B2FF] to-blue-600 dark:border-gradient-to-r dark:from-[#00B2FF] dark:to-blue-500 bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:bg-gradient-to-r dark:from-[#00B2FF] dark:to-blue-500' 
                       : 'border-gray-300 dark:border-gray-600'
                     }
                     flex items-center justify-center

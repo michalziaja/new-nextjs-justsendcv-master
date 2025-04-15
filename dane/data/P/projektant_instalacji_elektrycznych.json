@@ -1,0 +1,112 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant instalacji elektrycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-instalacji-elektrycznych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 307,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7000,
+                "p25": 6140,
+                "p75": 8250
+              },
+              "net": {
+                "median": 5102,
+                "p25": 4515,
+                "p75": 5954
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 10
+              },
+              "men": {
+                "count": 109,
+                "percentage": 90
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9040,
+                "p25": 7720,
+                "p75": 10860
+              },
+              "net": {
+                "median": 6493,
+                "p25": 5593,
+                "p75": 7733
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 35,
+                "percentage": 11
+              },
+              "men": {
+                "count": 272,
+                "percentage": 89
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 57
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 50
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 35
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10480,
+                "p25": 8640,
+                "p75": 12690
+              },
+              "net": {
+                "median": 7474,
+                "p25": 6219,
+                "p75": 8981
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 13,
+                "percentage": 7
+              },
+              "men": {
+                "count": 162,
+                "percentage": 93
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

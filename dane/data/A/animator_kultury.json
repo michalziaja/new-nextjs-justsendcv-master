@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Animator kultury",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-animator-kultury",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 55,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5830,
+            "p25": 4970,
+            "p75": 7560
+          },
+          "net": {
+            "median": 4304,
+            "p25": 3718,
+            "p75": 5483
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 45,
+              "percentage": 82
+            },
+            "men": {
+              "count": 10,
+              "percentage": 18
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

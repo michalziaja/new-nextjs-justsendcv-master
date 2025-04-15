@@ -1,0 +1,45 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Biotechnolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-biotechnolog",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 93,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6590,
+            "p25": 5670,
+            "p75": 8280
+          },
+          "net": {
+            "median": 4823,
+            "p25": 4195,
+            "p75": 5975
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 61,
+              "percentage": 66
+            },
+            "men": {
+              "count": 32,
+              "percentage": 34
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie analiz mikrobiologicznych oraz badań w laboratoriach,",
+          "opracowywanie dokumentacji zgodnie z zasadami GMP (Dobra Praktyka Wytwarzania)."
+        ]
+      }
+    ]
+  }
+]

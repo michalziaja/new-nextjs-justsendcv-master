@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent osobisty",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-osobisty",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": [
+          {
+            "title": "asystent osobisty"
+          },
+          {
+            "title": "concierge."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4500,
+            "p25": 3860,
+            "p75": 5590
+          },
+          "net": {
+            "median": 3398,
+            "p25": 2961,
+            "p75": 4140
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 58
+            },
+            "men": {
+              "count": 8,
+              "percentage": 42
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 36
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 36
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik techniczny IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-techniczny-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 40,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12230,
+            "p25": 8970,
+            "p75": 18270
+          },
+          "net": {
+            "median": 8667,
+            "p25": 6445,
+            "p75": 12784
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 8
+            },
+            "men": {
+              "count": 37,
+              "percentage": 92
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządza zasobami technicznymi firmy, we współpracy z kierownikami zespołów,",
+          "odpowiada za zapewnienie sprawnego działania infrastruktury technicznej (sprzęt i oprogramowanie),",
+          "dba o dochowanie postanowień umów SLA względem działów biznesowych firmy,",
+          "organizuje stałe wsparcie techniczne dla pracowników,",
+          "odpowiada za realizacje działań administracyjnych,",
+          "buduje narzędzia i procedury monitoringu utrzymywanej infrastruktury,",
+          "planuje rozbudowę infrastruktury dla sprostania potrzebom biznesowym firmy."
+        ]
+      }
+    ]
+  }
+]

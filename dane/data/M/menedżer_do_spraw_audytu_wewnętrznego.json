@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Menedżer do spraw audytu wewnętrznego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-menedzer-do-spraw-audytu-wewnetrznego",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 47,
+        "related_positions": [
+          {
+            "title": "menedżer ds. audytu wewnętrznego"
+          },
+          {
+            "title": "internal Audit Project Lead"
+          },
+          {
+            "title": "menedżer do spraw audytu wewnętrznego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 17250,
+            "p25": 10460,
+            "p75": 21650
+          },
+          "net": {
+            "median": 12089,
+            "p25": 7461,
+            "p75": 15088
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 24,
+              "percentage": 51
+            },
+            "men": {
+              "count": 23,
+              "percentage": 49
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "kontrolowanie zgodności działania firmy w stosunku do uwarunkowań zewnętrznych i procedur wewnętrznych,",
+          "ustalanie zakresów wykonywania audytów w działach i jednostkach biznesowych przedsiębiorstwa,",
+          "optymalizacja kosztów oraz procesów zachodzących w przedsiębiorstwie,",
+          "zarządzanie projektami audytorskimi oraz działalnością działu audytu,",
+          "przeprowadzanie audytu,",
+          "uczestnictwo we wczesnej fazie przekształceń własnościowych (fuzje/przejęcia)"
+        ]
+      }
+    ]
+  }
+]

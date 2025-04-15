@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor wojewódzki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-wojewodzki",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 85,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6780,
+            "p25": 5640,
+            "p75": 7800
+          },
+          "net": {
+            "median": 4952,
+            "p25": 4175,
+            "p75": 5647
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 54
+            },
+            "men": {
+              "count": 39,
+              "percentage": 46
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

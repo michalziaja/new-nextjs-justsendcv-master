@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor nadzoru bankowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-nadzoru-bankowego",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5540,
+            "p25": 4910,
+            "p75": 9810
+          },
+          "net": {
+            "median": 4106,
+            "p25": 3678,
+            "p75": 7017
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 67
+            },
+            "men": {
+              "count": 5,
+              "percentage": 33
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "bada wypłacalność, płynność płatniczą oraz wyniki ekonomiczne banku,",
+          "bada zgodność udzielanych kredytów, pożyczek pieniężnych, gwarancji bankowych i poręczeń z obowiązującymi w tym zakresie przepisami,",
+          "bada zabezpieczenia i terminowości spłaty kredytów i pożyczek pieniężnych,",
+          "bada stosowane oprocentowanie kredytów i pożyczek oraz rachunków bankowych,",
+          "dokonuje oceny sytuacji finansowej banku,",
+          "sporządza raporty i sprawozdania z przeprowadzonych czynności kontrolnych."
+        ]
+      }
+    ]
+  }
+]

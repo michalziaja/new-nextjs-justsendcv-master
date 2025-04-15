@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw analizy ryzyka",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-analizy-ryzyka",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 223,
+        "related_positions": [
+          {
+            "title": "specjalista ds. analizy ryzyka"
+          },
+          {
+            "title": "specjalista ds. modelowania ryzyka"
+          },
+          {
+            "title": "specjalista ds. ryzyka rynkowego"
+          },
+          {
+            "title": "specjalista do spraw analizy ryzyka"
+          },
+          {
+            "title": "specjalista do spraw modelowania ryzyka"
+          },
+          {
+            "title": "specjalista do spraw ryzyka rynkowego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7380,
+                "p25": 6030,
+                "p75": 8910
+              },
+              "net": {
+                "median": 5361,
+                "p25": 4441,
+                "p75": 6403
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 40,
+                "percentage": 44
+              },
+              "men": {
+                "count": 51,
+                "percentage": 56
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9520,
+                "p25": 7660,
+                "p75": 12740
+              },
+              "net": {
+                "median": 6819,
+                "p25": 5552,
+                "p75": 9015
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 116,
+                "percentage": 52
+              },
+              "men": {
+                "count": 107,
+                "percentage": 48
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 66
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 61
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 55
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12930,
+                "p25": 9880,
+                "p75": 17280
+              },
+              "net": {
+                "median": 9144,
+                "p25": 7065,
+                "p75": 12110
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 78,
+                "percentage": 48
+              },
+              "men": {
+                "count": 85,
+                "percentage": 52
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 54
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 45
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 36
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

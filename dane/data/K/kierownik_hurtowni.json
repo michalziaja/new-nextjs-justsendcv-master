@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik hurtowni",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-hurtowni",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 73,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9030,
+            "p25": 6700,
+            "p75": 11260
+          },
+          "net": {
+            "median": 6486,
+            "p25": 4897,
+            "p75": 8006
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 26,
+              "percentage": 36
+            },
+            "men": {
+              "count": 47,
+              "percentage": 64
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "C",
+    "positions": [
+      {
+        "title": "Commodity manager",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-commodity-manager",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15160,
+            "p25": 12060,
+            "p75": 18080
+          },
+          "net": {
+            "median": 10664,
+            "p25": 8551,
+            "p75": 12655
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 51,
+              "percentage": 57
+            },
+            "men": {
+              "count": 39,
+              "percentage": 43
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 84
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 78
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Tester systemów teleinformatycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-tester-systemow-teleinformatycznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 30,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12700,
+            "p25": 9870,
+            "p75": 17150
+          },
+          "net": {
+            "median": 8988,
+            "p25": 7058,
+            "p75": 12021
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 13
+            },
+            "men": {
+              "count": 26,
+              "percentage": 87
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw pakowania i opakowań",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-pakowania-i-opakowan",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 70,
+        "related_positions": [
+          {
+            "title": "specjalista do spraw pakowania i opakowań"
+          },
+          {
+            "title": "specjalista ds. pakowania i opakowań."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7840,
+            "p25": 6370,
+            "p75": 10490
+          },
+          "net": {
+            "median": 5674,
+            "p25": 4672,
+            "p75": 7481
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 47,
+              "percentage": 67
+            },
+            "men": {
+              "count": 23,
+              "percentage": 33
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor marketingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-marketingu",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 399,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. marketingu"
+          },
+          {
+            "title": "dyrektor marketingu"
+          },
+          {
+            "title": "dyrektor do spraw marketingu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 19810,
+            "p25": 13910,
+            "p75": 28160
+          },
+          "net": {
+            "median": 13835,
+            "p25": 9813,
+            "p75": 19526
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 234,
+              "percentage": 59
+            },
+            "men": {
+              "count": 165,
+              "percentage": 41
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 63
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 57
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 55
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

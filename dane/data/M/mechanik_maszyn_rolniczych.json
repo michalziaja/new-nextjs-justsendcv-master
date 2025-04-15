@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mechanik maszyn rolniczych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mechanik-maszyn-rolniczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5860,
+            "p25": 4730,
+            "p75": 7770
+          },
+          "net": {
+            "median": 4325,
+            "p25": 3554,
+            "p75": 5626
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 30
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 20
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

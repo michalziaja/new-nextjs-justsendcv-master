@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Monter nawierzchni kolejowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-monter-nawierzchni-kolejowej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5570,
+            "p25": 4550,
+            "p75": 9240
+          },
+          "net": {
+            "median": 4127,
+            "p25": 3432,
+            "p75": 6629
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

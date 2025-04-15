@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Optyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-optyk",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7250,
+            "p25": 5820,
+            "p75": 8850
+          },
+          "net": {
+            "median": 5272,
+            "p25": 4297,
+            "p75": 6363
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 68
+            },
+            "men": {
+              "count": 9,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "interpretowanie recept okulistycznych na okulary i soczewki kontaktowe,",
+          "dobieranie parametrów okularów do twrzy klienta,",
+          "doradzanie klientowi w wyborze oprawek,",
+          "montowanie szkieł w oprawkach,",
+          "informowanie o zasadach użytkowania oprawek i szkieł kontaktowych"
+        ]
+      }
+    ]
+  }
+]

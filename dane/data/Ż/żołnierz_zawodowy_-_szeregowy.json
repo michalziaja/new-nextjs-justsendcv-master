@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "Ż",
+    "positions": [
+      {
+        "title": "Żołnierz zawodowy - szeregowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-zolnierz-zawodowy-szeregowy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "Żołnierz zawodowy - szeregowy"
+          },
+          {
+            "title": "Żołnierz szeregowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6770,
+            "p25": 5060,
+            "p75": 7290
+          },
+          "net": {
+            "median": 4945,
+            "p25": 3779,
+            "p75": 5299
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 70
+            },
+            {
+              "name": "mieszkanie/dom służbowy",
+              "percentage": 40
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

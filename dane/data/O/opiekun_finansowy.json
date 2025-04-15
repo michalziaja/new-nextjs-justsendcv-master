@@ -1,0 +1,54 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Opiekun finansowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-opiekun-finansowy",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 189,
+        "related_positions": [
+          {
+            "title": "doradca finansowy"
+          },
+          {
+            "title": "opiekun finansowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6600,
+            "p25": 5430,
+            "p75": 9160
+          },
+          "net": {
+            "median": 4830,
+            "p25": 4032,
+            "p75": 6575
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 138,
+              "percentage": 73
+            },
+            "men": {
+              "count": 51,
+              "percentage": 27
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "doradzanie klientom przy wyborze usług finansowych,",
+          "gromadzenie i weryfikacja dokumentacji,",
+          "współpraca z bankami"
+        ]
+      }
+    ]
+  }
+]

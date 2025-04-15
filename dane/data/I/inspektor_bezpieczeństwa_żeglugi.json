@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor bezpieczeństwa żeglugi",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-bezpieczenstwa-zeglugi",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 21630,
+            "p25": 20170,
+            "p75": 24820
+          },
+          "net": {
+            "median": 15075,
+            "p25": 14079,
+            "p75": 17250
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

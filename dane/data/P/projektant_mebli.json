@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant mebli",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-mebli",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 111,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6630,
+            "p25": 5570,
+            "p75": 8160
+          },
+          "net": {
+            "median": 4849,
+            "p25": 4127,
+            "p75": 5893
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 78,
+              "percentage": 70
+            },
+            "men": {
+              "count": 33,
+              "percentage": 30
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

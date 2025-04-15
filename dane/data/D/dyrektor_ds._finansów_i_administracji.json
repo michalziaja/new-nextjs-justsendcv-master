@@ -1,0 +1,75 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor ds. finansów i administracji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-ds-finansow-i-administracji",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 357,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. administracyjnych"
+          },
+          {
+            "title": "dyrektor ds. finansów i administracji"
+          },
+          {
+            "title": "dyrektor do spraw administracyjnych"
+          },
+          {
+            "title": "dyrektor do spraw finansów i administracji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13860,
+            "p25": 9730,
+            "p75": 20870
+          },
+          "net": {
+            "median": 9778,
+            "p25": 6962,
+            "p75": 14557
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 245,
+              "percentage": 69
+            },
+            "men": {
+              "count": 112,
+              "percentage": 31
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 58
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 53
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 48
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie wszystkimi działami firmy w zakresie administracyjnym,",
+          "nadzór nad prawidłowym przebiegiem obsługi administracyjnej firmy,",
+          "przedstawianie właściwym instytucjom i organom nadzoru planów administracyjnych,",
+          "aprobowanie wydatków w granicach budżetu,",
+          "zawieranie umów i powierzanie specjalistom lub instytucjom prac zleconych,",
+          "zapewnienie staranności oraz dotrzymania terminów realizacji tworzonych dokumentów dotyczących administracji."
+        ]
+      }
+    ]
+  }
+]

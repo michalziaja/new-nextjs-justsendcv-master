@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor artystyczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-artystyczny",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 23,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11660,
+            "p25": 10030,
+            "p75": 14340
+          },
+          "net": {
+            "median": 8279,
+            "p25": 7167,
+            "p75": 10105
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 57
+            },
+            "men": {
+              "count": 10,
+              "percentage": 43
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizacja strategii reklamowej,",
+          "odpowiedzialność za kształt kampanii i jej stronę wizualną,",
+          "zarządzanie projektem,",
+          "zarządzanie pracą zespołu kreatywnego,",
+          "współpraca z osobami odpowiedzialnymi za realziację projektu i podwykonawcami"
+        ]
+      }
+    ]
+  }
+]

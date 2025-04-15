@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "Z",
+    "positions": [
+      {
+        "title": "Zastępca kierownika komórki organizacyjnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-zastepca-kierownika-komorki-organizacyjnej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 344,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7760,
+            "p25": 6590,
+            "p75": 9810
+          },
+          "net": {
+            "median": 5619,
+            "p25": 4823,
+            "p75": 7017
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 188,
+              "percentage": 55
+            },
+            "men": {
+              "count": 156,
+              "percentage": 45
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 53
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 42
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 42
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik placówki bankowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-placowki-bankowej",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 113,
+        "related_positions": [
+          {
+            "title": "kierownik oddziału banku"
+          },
+          {
+            "title": "kierownik placówki banku"
+          },
+          {
+            "title": "kierownik placówki bankowej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9110,
+            "p25": 7720,
+            "p75": 11890
+          },
+          "net": {
+            "median": 6541,
+            "p25": 5593,
+            "p75": 8435
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 77,
+              "percentage": 68
+            },
+            "men": {
+              "count": 36,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

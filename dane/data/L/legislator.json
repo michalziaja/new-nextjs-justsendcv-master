@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Legislator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-legislator",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9610,
+            "p25": 8240,
+            "p75": 12250
+          },
+          "net": {
+            "median": 6881,
+            "p25": 5947,
+            "p75": 8680
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 50
+            },
+            "men": {
+              "count": 8,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

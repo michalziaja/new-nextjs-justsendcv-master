@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator linii produkcyjnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-linii-produkcyjnej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 587,
+        "related_positions": [
+          {
+            "title": "operator linii produkcyjnej"
+          },
+          {
+            "title": "operator produkcji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6070,
+            "p25": 5180,
+            "p75": 7300
+          },
+          "net": {
+            "median": 4467,
+            "p25": 3862,
+            "p75": 5306
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 100,
+              "percentage": 17
+            },
+            "men": {
+              "count": 487,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa i nadzór zautomatyzowanej i zrobotyzowanej linii produkcyjnej,",
+          "prace instalacyjne, konserwacyjne i naprawcze linii i robotów,",
+          "dokonywanie prostych regulacji urządzeń wchodzących w skład linii (robota), zarówno mechanicznych, elektrycznych, jak i sterowania,",
+          "okresowa kontrola prawidłowości działania zespołów i podzespołów linii,",
+          "organizowanie bezpiecznego stanowiska pracy dla siebie i współpracowników."
+        ]
+      }
+    ]
+  }
+]

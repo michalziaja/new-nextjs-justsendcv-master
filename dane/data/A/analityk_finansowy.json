@@ -1,0 +1,146 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk finansowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-finansowy",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1027,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7190,
+                "p25": 6040,
+                "p75": 8470
+              },
+              "net": {
+                "median": 5232,
+                "p25": 4448,
+                "p75": 6104
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 221,
+                "percentage": 55
+              },
+              "men": {
+                "count": 178,
+                "percentage": 45
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 70
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 70
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 67
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9650,
+                "p25": 8150,
+                "p75": 11560
+              },
+              "net": {
+                "median": 6909,
+                "p25": 5886,
+                "p75": 8210
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 591,
+                "percentage": 58
+              },
+              "men": {
+                "count": 436,
+                "percentage": 42
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 84
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 74
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 72
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12110,
+                "p25": 10100,
+                "p75": 14900
+              },
+              "net": {
+                "median": 8585,
+                "p25": 7215,
+                "p75": 10487
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 362,
+                "percentage": 56
+              },
+              "men": {
+                "count": 282,
+                "percentage": 44
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 76
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 71
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 55
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "sporządzanie analiz i raportów finansowych,",
+          "analiza ryzyka ekonomicznego przedsięwzięć,",
+          "tworzenie prognoz ekonomicznych i ich weryfikacja,",
+          "tworzenie arkuszy analitycznych,",
+          "sporządzanie terminowych raportów z dokonanych analiz,",
+          "udział w przygotowywaniu długo- i krótkoterminowych strategii finansowych,",
+          "ocena od strony finansowej projektów inwestycyjnych."
+        ]
+      }
+    ]
+  }
+]

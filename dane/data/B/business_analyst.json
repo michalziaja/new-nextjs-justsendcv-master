@@ -1,0 +1,154 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Business Analyst",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-business-analyst",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1508,
+        "related_positions": [
+          {
+            "title": "analityk biznesowy"
+          },
+          {
+            "title": "business Analyst"
+          },
+          {
+            "title": "analityk biznesowo-systemowy."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7860,
+                "p25": 6780,
+                "p75": 9490
+              },
+              "net": {
+                "median": 5688,
+                "p25": 4952,
+                "p75": 6799
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 287,
+                "percentage": 56
+              },
+              "men": {
+                "count": 227,
+                "percentage": 44
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 68
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10950,
+                "p25": 8900,
+                "p75": 13760
+              },
+              "net": {
+                "median": 7794,
+                "p25": 6397,
+                "p75": 9710
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 778,
+                "percentage": 52
+              },
+              "men": {
+                "count": 730,
+                "percentage": 48
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 79
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 68
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14140,
+                "p25": 11000,
+                "p75": 18100
+              },
+              "net": {
+                "median": 9969,
+                "p25": 7829,
+                "p75": 12669
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 484,
+                "percentage": 43
+              },
+              "men": {
+                "count": 653,
+                "percentage": 57
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 78
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 67
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 64
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "wspiera bieżące prace projektowe,",
+          "przeprowadza analizy biznesowe,",
+          "tworzy dokumentację analityczno-projektową,",
+          "współpracuje z różnymi jednostkami organizacyjnymi klienta."
+        ]
+      }
+    ]
+  }
+]

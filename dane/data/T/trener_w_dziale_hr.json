@@ -1,0 +1,58 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Trener w dziale HR",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-trener-w-dziale-hr",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 206,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8830,
+            "p25": 7380,
+            "p75": 11010
+          },
+          "net": {
+            "median": 6350,
+            "p25": 5361,
+            "p75": 7835
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 130,
+              "percentage": 63
+            },
+            "men": {
+              "count": 76,
+              "percentage": 37
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 64
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 47
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 47
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektowanie i przeprowadzanie szkoleń dla pracowników (szkolenia wstępne i rozwijające kompetencje zatrudnionych),",
+          "monitorowanie i raportowanie efektywności szkoleń"
+        ]
+      }
+    ]
+  }
+]

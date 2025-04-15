@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu operacji finansowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-operacji-finansowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 21,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12320,
+            "p25": 9610,
+            "p75": 17830
+          },
+          "net": {
+            "median": 8728,
+            "p25": 6881,
+            "p75": 12485
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 62
+            },
+            "men": {
+              "count": 8,
+              "percentage": 38
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

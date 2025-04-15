@@ -1,0 +1,73 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik serwisu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-serwisu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 716,
+        "related_positions": [
+          {
+            "title": "kierownik serwisu"
+          },
+          {
+            "title": "koordynator serwisu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8270,
+            "p25": 6820,
+            "p75": 10350
+          },
+          "net": {
+            "median": 5968,
+            "p25": 4979,
+            "p75": 7385
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 147,
+              "percentage": 21
+            },
+            "men": {
+              "count": 569,
+              "percentage": 79
+            }
+          },
+          "benefits": [
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 60
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 57
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wsparcie techniczne klientów przed i po sprzedaży,",
+          "instalacja i sprawdzanie sprzętu zakupionego przez klientów,",
+          "obsługa serwisowa klientów,",
+          "tworzenie sieci serwisu,",
+          "rozliczanie napraw gwarancyjnych,",
+          "przygotowywanie raportów dotyczących działalności działu,",
+          "kontrola kosztów i zużycia materiałów,",
+          "kierowanie pracami działu serwisu,",
+          "tworzenie procedur serwisowych."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Prywatna opiekunka",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-prywatna-opiekunka",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 218,
+        "related_positions": [
+          {
+            "title": "opiekunka do dzieci"
+          },
+          {
+            "title": "niania"
+          },
+          {
+            "title": "opiekunka dzieci"
+          },
+          {
+            "title": "prywatna opiekunka"
+          },
+          {
+            "title": "opiekun dziecka"
+          },
+          {
+            "title": "opiekunka dziecięca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4900,
+            "p25": 4460,
+            "p75": 5700
+          },
+          "net": {
+            "median": 3671,
+            "p25": 3370,
+            "p75": 4216
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 212,
+              "percentage": 97
+            },
+            "men": {
+              "count": 6,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka nad małymi dziećmi w warunkach domowych,",
+          "prowadzenie zabaw uwzględniających właściwy rozwój dziecka,",
+          "wykonywanie zabiegów higieniczno-pielęgnacyjnych,",
+          "przygotowywanie posiłków i karmienie dziecka,",
+          "czuwanie nad prawidłowym rozwojem i bezpieczeństwem dziecka,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach"
+        ]
+      }
+    ]
+  }
+]

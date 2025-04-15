@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ochrony",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ochrony",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 24,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7630,
+            "p25": 6470,
+            "p75": 10520
+          },
+          "net": {
+            "median": 5531,
+            "p25": 4740,
+            "p75": 7502
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 24,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie zespołami pracowników ochrony fizycznej,",
+          "organizowanie i nadzorowanie wykonywania usług w zakresie ochrony osób i mienia,",
+          "prowadzenie dokumentacji gospodarczej w zakresie usług ochrony osób i mienia i innej,",
+          "sporządzanie planu ochrony obszarów, obiektów i urządzeń podlegających obowiązkowej ochronie,",
+          "organizowanie współpracy specjalistycznych uzbrojonych formacji ochronnych z policją, jednostkami ochrony przeciwpożarowej, obrony cywilnej i strażami gminnymi (miejskimi)"
+        ]
+      }
+    ]
+  }
+]

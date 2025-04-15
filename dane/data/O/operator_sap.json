@@ -1,0 +1,45 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator SAP",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-sap",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8860,
+            "p25": 7160,
+            "p75": 11610
+          },
+          "net": {
+            "median": 6370,
+            "p25": 5211,
+            "p75": 8245
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 29
+            },
+            "men": {
+              "count": 37,
+              "percentage": 71
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "utrzymywanie bieżących danych dotyczących procesu produkcji w systemach produkcyjnych, m.in.: aktualizowanie zamówień, potwierdzanie wykonania zamówienia, nadzorowanie zużycia,",
+          "analiza odchyleń założeń od rzeczywistości."
+        ]
+      }
+    ]
+  }
+]

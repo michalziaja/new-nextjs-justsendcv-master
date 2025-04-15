@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Aprobant",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-aprobant",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7310,
+            "p25": 6880,
+            "p75": 9700
+          },
+          "net": {
+            "median": 5313,
+            "p25": 5020,
+            "p75": 6943
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 62
+            },
+            "men": {
+              "count": 5,
+              "percentage": 38
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

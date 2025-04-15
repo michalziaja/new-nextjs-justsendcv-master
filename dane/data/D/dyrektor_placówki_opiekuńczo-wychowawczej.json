@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor placówki opiekuńczo-wychowawczej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-placowki-opiekunczo-wychowawczej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 26,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9330,
+            "p25": 7360,
+            "p75": 10030
+          },
+          "net": {
+            "median": 6690,
+            "p25": 5347,
+            "p75": 7167
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 26,
+              "percentage": 100
+            },
+            "men": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

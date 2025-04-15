@@ -21,7 +21,7 @@ export function SavedTablePagination({
   onPageChange,
 }: SavedTablePaginationProps) {
   return (
-    <Pagination className="md:mt-6 lg:mt-6 sm:mt-6 mt-4">
+    <Pagination className="md:mt-4 lg:mt-4 sm:mt-4 mt-4">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious

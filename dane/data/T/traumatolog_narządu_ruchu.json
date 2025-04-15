@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Traumatolog narządu ruchu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-traumatolog-narzadu-ruchu",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "lekarz ortopeda"
+          },
+          {
+            "title": "traumatolog narządu ruchu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 15610,
+            "p25": 9650,
+            "p75": 19670
+          },
+          "net": {
+            "median": 10972,
+            "p25": 6909,
+            "p75": 13739
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 20
+            },
+            "men": {
+              "count": 12,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

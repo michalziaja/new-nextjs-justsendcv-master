@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik pracowni",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-pracowni",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 36,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10160,
+            "p25": 8090,
+            "p75": 14220
+          },
+          "net": {
+            "median": 7256,
+            "p25": 5845,
+            "p75": 10024
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 36
+            },
+            "men": {
+              "count": 23,
+              "percentage": 64
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Profesor",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-profesor",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 159,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10800,
+            "p25": 9250,
+            "p75": 13640
+          },
+          "net": {
+            "median": 7693,
+            "p25": 6635,
+            "p75": 9629
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 51,
+              "percentage": 32
+            },
+            "men": {
+              "count": 108,
+              "percentage": 68
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 56
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 56
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 50
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie zajęć akademickich i badań naukowych z danego obszaru poprzedzone otrzymaniem tytułu profesora lub doktora habilitowanego,",
+          "koordynowanie pracy zespołu naukowego, katedry, instytutu lub innej samodzielnej jednostki uczelnianej"
+        ]
+      }
+    ]
+  }
+]

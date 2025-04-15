@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Monter maszyn i urządzeń mechanicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-monter-maszyn-i-urzadzen-mechanicznych",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 75,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5900,
+            "p25": 5170,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4352,
+            "p25": 3855,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 5
+            },
+            "men": {
+              "count": 71,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

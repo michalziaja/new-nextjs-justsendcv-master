@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw trade marketingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-trade-marketingu",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 110,
+        "related_positions": [
+          {
+            "title": "kierownik ds. trade marketingu"
+          },
+          {
+            "title": "kierownik do spraw trade marketingu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13770,
+            "p25": 10900,
+            "p75": 17480
+          },
+          "net": {
+            "median": 9717,
+            "p25": 7760,
+            "p75": 12246
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 81,
+              "percentage": 74
+            },
+            "men": {
+              "count": 29,
+              "percentage": 26
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

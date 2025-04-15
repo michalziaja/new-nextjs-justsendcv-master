@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier telekomunikacji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-telekomunikacji",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11080,
+            "p25": 8750,
+            "p75": 14270
+          },
+          "net": {
+            "median": 7883,
+            "p25": 6295,
+            "p75": 10057
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 6
+            },
+            "men": {
+              "count": 131,
+              "percentage": 94
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

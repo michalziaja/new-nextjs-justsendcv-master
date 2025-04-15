@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor ochrony danych osobowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ochrony-danych-osobowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 344,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8810,
+            "p25": 6810,
+            "p75": 11780
+          },
+          "net": {
+            "median": 6336,
+            "p25": 4972,
+            "p75": 8360
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 177,
+              "percentage": 51
+            },
+            "men": {
+              "count": 167,
+              "percentage": 49
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 30
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

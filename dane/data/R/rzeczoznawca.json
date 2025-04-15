@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Rzeczoznawca",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-rzeczoznawca",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": [
+          {
+            "title": "rzeczoznawca"
+          },
+          {
+            "title": "rzeczoznawca do spraw bezpieczeństwa i higieny pracy"
+          },
+          {
+            "title": "rzeczoznawca jakości handlowej artykułów rolno-spożywczych"
+          },
+          {
+            "title": "rzeczoznawca rolniczy"
+          },
+          {
+            "title": "rzeczoznawca ds. bezpieczeństwa i higieny pracy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7530,
+            "p75": 11530
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5463,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 16
+            },
+            "men": {
+              "count": 32,
+              "percentage": 84
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

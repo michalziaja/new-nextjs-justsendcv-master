@@ -1,0 +1,66 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor do spraw nadzoru robót budowlanych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-nadzoru-robot-budowlanych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 261,
+        "related_positions": [
+          {
+            "title": "inspektor nadzoru (budownictwo)"
+          },
+          {
+            "title": "inspektor ds. nadzoru robót budowlanych"
+          },
+          {
+            "title": "inspektor nadzoru robót elektrycznych"
+          },
+          {
+            "title": "inspektor nadzoru budowlanego"
+          },
+          {
+            "title": "inspektor nadzoru robót ogólnobudowlanych"
+          },
+          {
+            "title": "inspektor do spraw nadzoru robót budowlanych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9180,
+            "p25": 7590,
+            "p75": 10820
+          },
+          "net": {
+            "median": 6587,
+            "p25": 5504,
+            "p75": 7706
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 80,
+              "percentage": 31
+            },
+            "men": {
+              "count": 181,
+              "percentage": 69
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "reprezentowanie intersów inwestora na budowie,",
+          "kontrolowanie jakości wykonywanych prac oraz ich zgodności z planami i sztuką budowniczą,",
+          "kontrolowanie pracy kierownika budowy i wpisów do księgi budowy,",
+          "doradzanie wykonawcom w zakresie procesu budowy"
+        ]
+      }
+    ]
+  }
+]

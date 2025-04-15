@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Edukator ekologiczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-edukator-ekologiczny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5770,
+            "p25": 5180,
+            "p75": 6500
+          },
+          "net": {
+            "median": 4264,
+            "p25": 3862,
+            "p75": 4761
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 50
+            },
+            "men": {
+              "count": 5,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

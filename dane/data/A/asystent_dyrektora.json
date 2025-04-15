@@ -1,0 +1,123 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent dyrektora",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-dyrektora",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 98,
+        "related_positions": [
+          {
+            "title": "asystent dyrektora"
+          },
+          {
+            "title": "asystentka dyrektora."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6460,
+                "p25": 5480,
+                "p75": 7640
+              },
+              "net": {
+                "median": 4734,
+                "p25": 4066,
+                "p75": 5538
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 33,
+                "percentage": 83
+              },
+              "men": {
+                "count": 7,
+                "percentage": 18
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6920,
+                "p25": 5590,
+                "p75": 8280
+              },
+              "net": {
+                "median": 5047,
+                "p25": 4140,
+                "p75": 5975
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 94,
+                "percentage": 96
+              },
+              "men": {
+                "count": 4,
+                "percentage": 4
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 60
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 60
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 53
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6540,
+                "p25": 5510,
+                "p75": 9000
+              },
+              "net": {
+                "median": 4788,
+                "p25": 4086,
+                "p75": 6465
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 44,
+                "percentage": 98
+              },
+              "men": {
+                "count": 1,
+                "percentage": 2
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "wspomaganie pracy dyrektora,",
+          "wykonywanie czynności administracyjnych,",
+          "odpowiedzialność za ustalanie stałego grafiku przełożonego i zarządzanie jego korespondencją"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystentka stomatologiczna",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystentka-stomatologiczna",
+        "category": [
+          "służba zdrowia",
+          "stomatologia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 225,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5480,
+            "p25": 4950,
+            "p75": 6720
+          },
+          "net": {
+            "median": 4066,
+            "p25": 3704,
+            "p75": 4911
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 221,
+              "percentage": 98
+            },
+            "men": {
+              "count": 4,
+              "percentage": 2
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wspomaganie pracy stomatologa,",
+          "dbanie o higienę na stanowisku pracy lekarza,",
+          "asystowanie podczas zabiegów,",
+          "przygotowywanie materiałów do zabiegów profilaktycznych"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor PR",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-pr",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 18000,
+            "p25": 13030,
+            "p75": 23780
+          },
+          "net": {
+            "median": 12600,
+            "p25": 9213,
+            "p75": 16541
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 16,
+              "percentage": 46
+            },
+            "men": {
+              "count": 19,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opracowywanie zewnętrznej i wewnętrznej polityki informacyjnej firmy,",
+          "reprezentowanie firmy wobec mediów,",
+          "utrzymywanie kontaktów z grupami opiniotwórczymi: dziennikarzami, naukowcami, lokalnymi władzami,",
+          "udzielanie wywiadów lub przygotowywanie odpowiednich materiałów dla członków zarządu i innych osób reprezentujących firmę."
+        ]
+      }
+    ]
+  }
+]

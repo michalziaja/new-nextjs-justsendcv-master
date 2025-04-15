@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Diagnosta laboratoryjny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-diagnosta-laboratoryjny",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 212,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7020,
+            "p25": 5980,
+            "p75": 8260
+          },
+          "net": {
+            "median": 5115,
+            "p25": 4407,
+            "p75": 5961
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 175,
+              "percentage": 83
+            },
+            "men": {
+              "count": 37,
+              "percentage": 17
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

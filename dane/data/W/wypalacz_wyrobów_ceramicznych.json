@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Wypalacz wyrobów ceramicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-wypalacz-wyrobow-ceramicznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8350,
+            "p25": 6660,
+            "p75": 8890
+          },
+          "net": {
+            "median": 6022,
+            "p25": 4870,
+            "p75": 6390
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 90
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 81
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 81
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

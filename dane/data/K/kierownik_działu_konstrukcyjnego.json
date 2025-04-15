@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu konstrukcyjnego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-konstrukcyjnego",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 266,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12610,
+            "p25": 10240,
+            "p75": 16160
+          },
+          "net": {
+            "median": 8926,
+            "p25": 7311,
+            "p75": 11346
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 21,
+              "percentage": 8
+            },
+            "men": {
+              "count": 245,
+              "percentage": 92
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 55
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 50
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 44
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie realizowanych projektów konstrukcyjnych,",
+          "koordynacja prac konstruktorów,",
+          "współpraca z głównym technologiem."
+        ]
+      }
+    ]
+  }
+]

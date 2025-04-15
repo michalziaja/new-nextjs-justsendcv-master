@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Starszy komisarz skarbowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-starszy-komisarz-skarbowy",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 34,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5490,
+            "p25": 5110,
+            "p75": 7490
+          },
+          "net": {
+            "median": 3973,
+            "p25": 3731,
+            "p75": 5370
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 56
+            },
+            "men": {
+              "count": 15,
+              "percentage": 44
+            }
+          },
+          "benefits": [
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 21
+            },
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 8
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 4
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dostawca potraw",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dostawca-potraw",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3400,
+            "p25": 3230,
+            "p75": 4760
+          },
+          "net": {
+            "median": 2648,
+            "p25": 2532,
+            "p75": 3575
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 8
+            },
+            "men": {
+              "count": 12,
+              "percentage": 92
+            }
+          },
+          "benefits": [
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 53
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 30
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

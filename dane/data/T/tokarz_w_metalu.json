@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Tokarz w metalu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-tokarz-w-metalu",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 156,
+        "related_positions": [
+          {
+            "title": "tokarz"
+          },
+          {
+            "title": "tokarz w drewnie"
+          },
+          {
+            "title": "tokarz w metalu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6160,
+            "p25": 5350,
+            "p75": 7150
+          },
+          "net": {
+            "median": 4529,
+            "p25": 3977,
+            "p75": 5204
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 155,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie różnorodnych prac tokarskich, jak: toczenie powierzchni walcowych, stożkowych i czołowych, toczenie gwintów, przecinanie, roztaczanie otworów, obróbka elementów drobnych na tokarkach rewolwerowych i automatach tokarskich,",
+          "obsługa tokarek konwencjonalnych ogólnego przeznaczenia, specjalizowanych i specjalnych,",
+          "udział w bieżących naprawach i remontach maszyn i urządzeń produkcyjnych,",
+          "wykonywanie pomiarów warsztatowych,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      }
+    ]
+  }
+]

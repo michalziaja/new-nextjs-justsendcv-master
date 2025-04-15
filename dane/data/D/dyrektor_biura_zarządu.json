@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor biura zarządu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-biura-zarzadu",
+        "category": [
+          "zarząd"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 97,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 14910,
+            "p25": 10520,
+            "p75": 19330
+          },
+          "net": {
+            "median": 10494,
+            "p25": 7502,
+            "p75": 13507
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 70,
+              "percentage": 72
+            },
+            "men": {
+              "count": 27,
+              "percentage": 28
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 54
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 45
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 36
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

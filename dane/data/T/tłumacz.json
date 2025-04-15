@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Tłumacz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-tlumacz",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 102,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7590,
+            "p25": 6150,
+            "p75": 10460
+          },
+          "net": {
+            "median": 5504,
+            "p25": 4522,
+            "p75": 7461
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 77,
+              "percentage": 75
+            },
+            "men": {
+              "count": 25,
+              "percentage": 25
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 40
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 37
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 22
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

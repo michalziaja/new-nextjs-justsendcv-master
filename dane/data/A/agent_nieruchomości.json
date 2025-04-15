@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Agent nieruchomości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-agent-nieruchomosci",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 26,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7330,
+            "p25": 6100,
+            "p75": 11070
+          },
+          "net": {
+            "median": 5327,
+            "p25": 4488,
+            "p75": 7877
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 20,
+              "percentage": 77
+            },
+            "men": {
+              "count": 6,
+              "percentage": 23
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "poszukiwane ofert sprzedaży lub najmu nieruchomości,",
+          "prezentowanie pozyskanych ofert zainteresowanym klientom,",
+          "pozyskiwanie nowych klientów i utrzymywanie dobrych relacji z dotychczasowymi"
+        ]
+      }
+    ]
+  }
+]

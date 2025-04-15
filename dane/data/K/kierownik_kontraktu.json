@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik kontraktu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-kontraktu",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 88,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13910,
+            "p25": 10460,
+            "p75": 18050
+          },
+          "net": {
+            "median": 9813,
+            "p25": 7461,
+            "p75": 12635
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 26,
+              "percentage": 30
+            },
+            "men": {
+              "count": 62,
+              "percentage": 70
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

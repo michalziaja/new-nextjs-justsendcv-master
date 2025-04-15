@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "C",
+    "positions": [
+      {
+        "title": "Cukiernik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-cukiernik",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 93,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5980,
+            "p25": 5100,
+            "p75": 7480
+          },
+          "net": {
+            "median": 4407,
+            "p25": 3807,
+            "p75": 5430
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 63,
+              "percentage": 68
+            },
+            "men": {
+              "count": 30,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wypiek ciast i ciastek,",
+          "dbanie o czystość i porządek w miejscu pracy"
+        ]
+      }
+    ]
+  }
+]

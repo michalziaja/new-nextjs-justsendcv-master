@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Administrator stron internetowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-administrator-stron-internetowych",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 46,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6480,
+            "p25": 5310,
+            "p75": 7910
+          },
+          "net": {
+            "median": 4747,
+            "p25": 3950,
+            "p75": 5722
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 41
+            },
+            "men": {
+              "count": 27,
+              "percentage": 59
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

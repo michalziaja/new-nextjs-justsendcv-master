@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. rozwoju produktu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-rozwoju-produktu",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 125,
+        "related_positions": [
+          {
+            "title": "kierownik do spraw rozwoju produktu"
+          },
+          {
+            "title": "kierownik ds. rozwoju produktu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 15410,
+            "p25": 12060,
+            "p75": 19210
+          },
+          "net": {
+            "median": 10835,
+            "p25": 8551,
+            "p75": 13425
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 50,
+              "percentage": 40
+            },
+            "men": {
+              "count": 75,
+              "percentage": 60
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 64
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 64
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 58
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

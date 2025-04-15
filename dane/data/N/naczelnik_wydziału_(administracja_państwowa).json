@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Naczelnik wydziału (administracja państwowa)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-naczelnik-wydzialu-administracja-panstwowa",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 223,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11500,
+            "p25": 9300,
+            "p75": 13950
+          },
+          "net": {
+            "median": 8169,
+            "p25": 6670,
+            "p75": 9840
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 106,
+              "percentage": 48
+            },
+            "men": {
+              "count": 117,
+              "percentage": 52
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 64
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 57
+            },
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 42
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie pracą wydziału,| nadzorowanie pracy podległego personelu,",
+          "wnioskowanie zmian i udział w procesie tworzenia przepisów i regulacji wewnętrznych,",
+          "wykonywanie zadań organizacyjnych i kontrolnych związanych bezpośrednio z obszarem działalności wydziału"
+        ]
+      }
+    ]
+  }
+]

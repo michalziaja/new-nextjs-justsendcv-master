@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kamieniarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kamieniarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6930,
+            "p25": 5610,
+            "p75": 8470
+          },
+          "net": {
+            "median": 5054,
+            "p25": 4154,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 15,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

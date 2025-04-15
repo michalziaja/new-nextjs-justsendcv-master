@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik jakości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-jakosci",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6300,
+            "p25": 5570,
+            "p75": 7370
+          },
+          "net": {
+            "median": 4625,
+            "p25": 4127,
+            "p75": 5354
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 52,
+              "percentage": 37
+            },
+            "men": {
+              "count": 87,
+              "percentage": 63
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

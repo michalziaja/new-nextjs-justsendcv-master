@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Podinspektor (administracja państwowa)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-podinspektor-administracja-panstwowa",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 956,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5480,
+            "p25": 4870,
+            "p75": 6300
+          },
+          "net": {
+            "median": 4066,
+            "p25": 3650,
+            "p75": 4625
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 739,
+              "percentage": 77
+            },
+            "men": {
+              "count": 217,
+              "percentage": 23
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 23
+            },
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 23
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 19
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

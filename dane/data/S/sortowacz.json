@@ -1,0 +1,66 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sortowacz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sortowacz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": [
+          {
+            "title": "sortowacz"
+          },
+          {
+            "title": "sortownik paczek"
+          },
+          {
+            "title": "pracownik sortowni bagażu"
+          },
+          {
+            "title": "sortowacz listów"
+          },
+          {
+            "title": "sortowacz materiałów drzewnych"
+          },
+          {
+            "title": "sortowacz odpadów komunalnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5130,
+            "p25": 4700,
+            "p75": 5740
+          },
+          "net": {
+            "median": 3827,
+            "p25": 3534,
+            "p75": 4243
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 32
+            },
+            "men": {
+              "count": 19,
+              "percentage": 68
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie prac dotyczących segregowania i przygotowywania surowców do dalszego przerobu, w zależności od ich rodzaju, gatunku i przeznaczenia,",
+          "rozróżnianie surowców, ich rodzajów i gatunków oraz wad występujących w poszczególnych gatunkach surowców,",
+          "oznaczanie materiału posortowanego."
+        ]
+      }
+    ]
+  }
+]

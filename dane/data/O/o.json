@@ -1,0 +1,5003 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Obchodowy bloku",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 26,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8240,
+            "p25": 7210,
+            "p75": 9360
+          },
+          "net": {
+            "median": 5947,
+            "p25": 5245,
+            "p75": 6711
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 26,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Obuwnik",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "obuwnik"
+          },
+          {
+            "title": "obuwnik ortopedyczny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4400,
+            "p25": 3340,
+            "p75": 4750
+          },
+          "net": {
+            "median": 3277,
+            "p25": 2601,
+            "p75": 3501
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Obuwnik ortopedyczny",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "obuwnik"
+          },
+          {
+            "title": "obuwnik ortopedyczny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4400,
+            "p25": 3340,
+            "p75": 4750
+          },
+          "net": {
+            "median": 3277,
+            "p25": 2601,
+            "p75": 3501
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Odlewnik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": [
+          {
+            "title": "formierz"
+          },
+          {
+            "title": "odlewnik"
+          },
+          {
+            "title": "odlewnik wyrobów ceramicznych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5800,
+            "p25": 5220,
+            "p75": 7350
+          },
+          "net": {
+            "median": 4283,
+            "p25": 3889,
+            "p75": 5341
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 20
+            },
+            "men": {
+              "count": 20,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie i utrzymywanie procesu produkcji i utrzymania ruchu maszyn odlewniczych,",
+          "kontrola jakości wykonanych odlewów"
+        ]
+      },
+      {
+        "title": "Odlewnik wyrobów ceramicznych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": [
+          {
+            "title": "formierz"
+          },
+          {
+            "title": "odlewnik"
+          },
+          {
+            "title": "odlewnik wyrobów ceramicznych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5800,
+            "p25": 5220,
+            "p75": 7350
+          },
+          "net": {
+            "median": 4283,
+            "p25": 3889,
+            "p75": 5341
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 20
+            },
+            "men": {
+              "count": 20,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie i utrzymywanie procesu produkcji i utrzymania ruchu maszyn odlewniczych,",
+          "kontrola jakości wykonanych odlewów"
+        ]
+      },
+      {
+        "title": "Oficer sił zbrojnych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11040,
+            "p25": 9520,
+            "p75": 11750
+          },
+          "net": {
+            "median": 7856,
+            "p25": 6819,
+            "p75": 8340
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 45
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 36
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Ogrodnik",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 36,
+        "related_positions": [
+          {
+            "title": "ogrodnik"
+          },
+          {
+            "title": "ogrodnik szkółkarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5800,
+            "p25": 5000,
+            "p75": 7390
+          },
+          "net": {
+            "median": 4283,
+            "p25": 3738,
+            "p75": 5368
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 33
+            },
+            "men": {
+              "count": 24,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "utrzymywanie terenów zielonych,",
+          "dobór odpowiednich roślin,",
+          "pielęgnacja trawników, kwiatów, drzew i krzewów"
+        ]
+      },
+      {
+        "title": "Ogrodnik szkółkarz",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 36,
+        "related_positions": [
+          {
+            "title": "ogrodnik"
+          },
+          {
+            "title": "ogrodnik szkółkarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5800,
+            "p25": 5000,
+            "p75": 7390
+          },
+          "net": {
+            "median": 4283,
+            "p25": 3738,
+            "p75": 5368
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 33
+            },
+            "men": {
+              "count": 24,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "utrzymywanie terenów zielonych,",
+          "dobór odpowiednich roślin,",
+          "pielęgnacja trawników, kwiatów, drzew i krzewów"
+        ]
+      },
+      {
+        "title": "Ogrodnik terenów zieleni",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 21,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5050,
+            "p75": 7060
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3772,
+            "p75": 5143
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 10
+            },
+            "men": {
+              "count": 19,
+              "percentage": 90
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operations Manager",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 352,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 14060,
+            "p25": 9960,
+            "p75": 18750
+          },
+          "net": {
+            "median": 9445,
+            "p25": 6914,
+            "p75": 12440
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 134,
+              "percentage": 38
+            },
+            "men": {
+              "count": 218,
+              "percentage": 62
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 58
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 50
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 49
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 73,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5840,
+                "p25": 5180,
+                "p75": 6630
+              },
+              "net": {
+                "median": 4311,
+                "p25": 3862,
+                "p75": 4849
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 26
+              },
+              "men": {
+                "count": 35,
+                "percentage": 74
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6720,
+                "p25": 5360,
+                "p75": 7500
+              },
+              "net": {
+                "median": 4911,
+                "p25": 3984,
+                "p75": 5442
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 14
+              },
+              "men": {
+                "count": 63,
+                "percentage": 86
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 5980,
+                "p75": 7740
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4407,
+                "p75": 5607
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 17
+              },
+              "men": {
+                "count": 39,
+                "percentage": 83
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator CAD",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 49,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7150,
+            "p25": 5900,
+            "p75": 8200
+          },
+          "net": {
+            "median": 5204,
+            "p25": 4352,
+            "p75": 5920
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 24
+            },
+            "men": {
+              "count": 37,
+              "percentage": 76
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator CNC",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 360,
+        "related_positions": [
+          {
+            "title": "operator CNC"
+          },
+          {
+            "title": "operator maszyn sterowanych numerycznie"
+          },
+          {
+            "title": "frezer CNC"
+          },
+          {
+            "title": "tokarz CNC"
+          },
+          {
+            "title": "szlifierz CNC"
+          },
+          {
+            "title": "operator obrabiarek CNC"
+          },
+          {
+            "title": "operator obrabiarek sterowanych numerycznie"
+          },
+          {
+            "title": "ustawiacz maszyn CNC."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6120,
+                "p25": 5260,
+                "p75": 7460
+              },
+              "net": {
+                "median": 4502,
+                "p25": 3915,
+                "p75": 5416
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 156,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6810,
+                "p25": 5900,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4972,
+                "p25": 4352,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 354,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6210,
+                "p75": 8760
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4563,
+                "p75": 6302
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 153,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator DTP",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6390,
+            "p25": 5560,
+            "p75": 8010
+          },
+          "net": {
+            "median": 4686,
+            "p25": 4120,
+            "p75": 5791
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 40,
+              "percentage": 29
+            },
+            "men": {
+              "count": 99,
+              "percentage": 71
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "skład tekstów i ilustracji zgodnie z makietą,",
+          "przygotowywanie materiałów do korekty i jej wprowadzanie,",
+          "przygotowywanie materiałów do druku"
+        ]
+      },
+      {
+        "title": "Operator kamery",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7440,
+            "p25": 5670,
+            "p75": 9280
+          },
+          "net": {
+            "median": 5402,
+            "p25": 4195,
+            "p75": 6656
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 15
+            },
+            "men": {
+              "count": 17,
+              "percentage": 85
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator koparki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 126,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6600,
+            "p25": 5550,
+            "p75": 8310
+          },
+          "net": {
+            "median": 4830,
+            "p25": 4113,
+            "p75": 5994
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 126,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator koparki kołowej",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator koparko-ładowarki",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 55,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6650,
+            "p25": 5450,
+            "p75": 7760
+          },
+          "net": {
+            "median": 4863,
+            "p25": 4046,
+            "p75": 5619
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 55,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator linii produkcyjnej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 587,
+        "related_positions": [
+          {
+            "title": "operator linii produkcyjnej"
+          },
+          {
+            "title": "operator produkcji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6070,
+            "p25": 5180,
+            "p75": 7300
+          },
+          "net": {
+            "median": 4467,
+            "p25": 3862,
+            "p75": 5306
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 100,
+              "percentage": 17
+            },
+            "men": {
+              "count": 487,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa i nadzór zautomatyzowanej i zrobotyzowanej linii produkcyjnej,",
+          "prace instalacyjne, konserwacyjne i naprawcze linii i robotów,",
+          "dokonywanie prostych regulacji urządzeń wchodzących w skład linii (robota), zarówno mechanicznych, elektrycznych, jak i sterowania,",
+          "okresowa kontrola prawidłowości działania zespołów i podzespołów linii,",
+          "organizowanie bezpiecznego stanowiska pracy dla siebie i współpracowników."
+        ]
+      },
+      {
+        "title": "Operator maszyn",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn budowlanych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn drogowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6920,
+            "p25": 5560,
+            "p75": 8000
+          },
+          "net": {
+            "median": 5047,
+            "p25": 4120,
+            "p75": 5784
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 22,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn dźwigowo-transportowych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 37,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5660,
+            "p75": 9450
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4188,
+            "p75": 6773
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 37,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa i nadzór dźwigów, żurawi, przenośników, maszyn wyciągowych,",
+          "konserwowanie obsługiwanych maszyn oraz usuwanie drobnych usterek,",
+          "zgłaszanie właściwym osobom wszelkich zauważonych usterek,",
+          "okresowa kontrola prawidłowości działania obsługiwanych maszyn,",
+          "organizowanie własnego stanowiska pracy i utrzymywanie go w czystości."
+        ]
+      },
+      {
+        "title": "Operator maszyn i urządzeń produkcyjnych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn produkcyjnych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn przędzalniczych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn rolniczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 17,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5750,
+            "p25": 4590,
+            "p75": 7150
+          },
+          "net": {
+            "median": 4250,
+            "p25": 3459,
+            "p75": 5204
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 17,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn sterowanych numerycznie",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 360,
+        "related_positions": [
+          {
+            "title": "operator CNC"
+          },
+          {
+            "title": "operator maszyn sterowanych numerycznie"
+          },
+          {
+            "title": "frezer CNC"
+          },
+          {
+            "title": "tokarz CNC"
+          },
+          {
+            "title": "szlifierz CNC"
+          },
+          {
+            "title": "operator obrabiarek CNC"
+          },
+          {
+            "title": "operator obrabiarek sterowanych numerycznie"
+          },
+          {
+            "title": "ustawiacz maszyn CNC."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6120,
+                "p25": 5260,
+                "p75": 7460
+              },
+              "net": {
+                "median": 4502,
+                "p25": 3915,
+                "p75": 5416
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 156,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6810,
+                "p25": 5900,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4972,
+                "p25": 4352,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 354,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6210,
+                "p75": 8760
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4563,
+                "p75": 6302
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 153,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator maszyn tkackich",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator monitoringu",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6640,
+            "p25": 5560,
+            "p75": 7000
+          },
+          "net": {
+            "median": 4856,
+            "p25": 4120,
+            "p75": 5102
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 12
+            },
+            "men": {
+              "count": 22,
+              "percentage": 88
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator myjni",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 27,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5950,
+            "p25": 4910,
+            "p75": 7050
+          },
+          "net": {
+            "median": 4386,
+            "p25": 3678,
+            "p75": 5136
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 4
+            },
+            "men": {
+              "count": 26,
+              "percentage": 96
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator numerów alarmowych",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9330,
+            "p25": 7580,
+            "p75": 17540
+          },
+          "net": {
+            "median": 6690,
+            "p25": 5497,
+            "p75": 12287
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 20
+            },
+            "men": {
+              "count": 8,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator obrabiarek CNC",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 360,
+        "related_positions": [
+          {
+            "title": "operator CNC"
+          },
+          {
+            "title": "operator maszyn sterowanych numerycznie"
+          },
+          {
+            "title": "frezer CNC"
+          },
+          {
+            "title": "tokarz CNC"
+          },
+          {
+            "title": "szlifierz CNC"
+          },
+          {
+            "title": "operator obrabiarek CNC"
+          },
+          {
+            "title": "operator obrabiarek sterowanych numerycznie"
+          },
+          {
+            "title": "ustawiacz maszyn CNC."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6120,
+                "p25": 5260,
+                "p75": 7460
+              },
+              "net": {
+                "median": 4502,
+                "p25": 3915,
+                "p75": 5416
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 156,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6810,
+                "p25": 5900,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4972,
+                "p25": 4352,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 354,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6210,
+                "p75": 8760
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4563,
+                "p75": 6302
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 153,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator obrabiarek sterowanych numerycznie",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 360,
+        "related_positions": [
+          {
+            "title": "operator CNC"
+          },
+          {
+            "title": "operator maszyn sterowanych numerycznie"
+          },
+          {
+            "title": "frezer CNC"
+          },
+          {
+            "title": "tokarz CNC"
+          },
+          {
+            "title": "szlifierz CNC"
+          },
+          {
+            "title": "operator obrabiarek CNC"
+          },
+          {
+            "title": "operator obrabiarek sterowanych numerycznie"
+          },
+          {
+            "title": "ustawiacz maszyn CNC."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6120,
+                "p25": 5260,
+                "p75": 7460
+              },
+              "net": {
+                "median": 4502,
+                "p25": 3915,
+                "p75": 5416
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 156,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6810,
+                "p25": 5900,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4972,
+                "p25": 4352,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 354,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6210,
+                "p75": 8760
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4563,
+                "p75": 6302
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 153,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator pieców do obróbki cieplnej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": [
+          {
+            "title": "operator urządzeń obróbki cieplnej"
+          },
+          {
+            "title": "operator pieców do obróbki cieplnej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6720,
+            "p25": 5990,
+            "p75": 8320
+          },
+          "net": {
+            "median": 4911,
+            "p25": 4414,
+            "p75": 6002
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 5
+            },
+            "men": {
+              "count": 19,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa urządzeń do obróbki cieplno-chemicznej,",
+          "obsługa urządzeń do obróbki podzerowej,",
+          "obsługa urządzeń do odpuszczania (sezonowanie) i odprężania,",
+          "obsługa urządzeń do mycie automatycznego (odtłuszczanie) i kulowania,",
+          "eksploatacja urządzeń i instalacji gazowych,",
+          "eksploatacja urządzeń energetycznych, kontrola twardości, kontrola międzyoperacyjna wymiarowa,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Operator pompy do betonu",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator pomp i kompresorów LPG",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4160,
+            "p25": 3800,
+            "p75": 4860
+          },
+          "net": {
+            "median": 2965,
+            "p25": 2714,
+            "p75": 3453
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 13
+            },
+            "men": {
+              "count": 13,
+              "percentage": 87
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa parku zbiornikowego,",
+          "obsługa urządzeń dyspozytorni pompy pożarowe takich jak stacja sprężarek powietrza, agregat prądotwórczy, system detekcji gazu,",
+          "rozładunek i załadunku cystern kolejowych i samochodowych,",
+          "dostarczenie gazu na HNB,",
+          "przestrzeganie przepisów BHP,",
+          "naprawy i konserwacje urządzeń technicznych zakład w tym instalacji LPG i linii do napełniania butli."
+        ]
+      },
+      {
+        "title": "Operator pras",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": [
+          {
+            "title": "operator pras"
+          },
+          {
+            "title": "operator prasy krawędziowej"
+          },
+          {
+            "title": "operator prasy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6150,
+            "p25": 5240,
+            "p75": 7180
+          },
+          "net": {
+            "median": 4522,
+            "p25": 3902,
+            "p75": 5224
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 7
+            },
+            "men": {
+              "count": 129,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator prasy",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": [
+          {
+            "title": "operator pras"
+          },
+          {
+            "title": "operator prasy krawędziowej"
+          },
+          {
+            "title": "operator prasy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6150,
+            "p25": 5240,
+            "p75": 7180
+          },
+          "net": {
+            "median": 4522,
+            "p25": 3902,
+            "p75": 5224
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 7
+            },
+            "men": {
+              "count": 129,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator prasy krawędziowej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": [
+          {
+            "title": "operator pras"
+          },
+          {
+            "title": "operator prasy krawędziowej"
+          },
+          {
+            "title": "operator prasy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6150,
+            "p25": 5240,
+            "p75": 7180
+          },
+          "net": {
+            "median": 4522,
+            "p25": 3902,
+            "p75": 5224
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 7
+            },
+            "men": {
+              "count": 129,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator procesu produkcji",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1277,
+        "related_positions": [
+          {
+            "title": "inżynier produkcji"
+          },
+          {
+            "title": "inżynier procesu"
+          },
+          {
+            "title": "operator procesu produkcji"
+          },
+          {
+            "title": "inżynier procesu produkcji"
+          },
+          {
+            "title": "inżynier procesu produkcyjnego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7240,
+                "p25": 6340,
+                "p75": 8240
+              },
+              "net": {
+                "median": 5265,
+                "p25": 4651,
+                "p75": 5947
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 31
+              },
+              "men": {
+                "count": 266,
+                "percentage": 69
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 81
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 76
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9240,
+                "p25": 7860,
+                "p75": 11010
+              },
+              "net": {
+                "median": 6629,
+                "p25": 5688,
+                "p75": 7835
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 276,
+                "percentage": 22
+              },
+              "men": {
+                "count": 1001,
+                "percentage": 78
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 54
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 52
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 44
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11260,
+                "p25": 9220,
+                "p75": 13550
+              },
+              "net": {
+                "median": 8006,
+                "p25": 6615,
+                "p75": 9567
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 79,
+                "percentage": 14
+              },
+              "men": {
+                "count": 476,
+                "percentage": 86
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 47
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 41
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "zarządzanie informacjami dotyczącymi zdolności produkcyjnych oraz wykorzystaniem maszyn,",
+          "promowanie i nadzorowanie działań związanych z ulepszaniem procesu produkcji,",
+          "przygotowywanie linii produkcyjnej dla potrzeb niezbędnych do wprowadzenia lub modyfikacji nowego wyrobu,",
+          "opracowanie dokumentacji technicznej,",
+          "kontrola oprzyrządowania i maszyn w celu uruchomienia produkcji,",
+          "wspieranie działu zakupów w zakresie informacji dotyczących typów zamawianych maszyn i oprzyrządowania."
+        ]
+      },
+      {
+        "title": "Operator produkcji",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 587,
+        "related_positions": [
+          {
+            "title": "operator linii produkcyjnej"
+          },
+          {
+            "title": "operator produkcji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6070,
+            "p25": 5180,
+            "p75": 7300
+          },
+          "net": {
+            "median": 4467,
+            "p25": 3862,
+            "p75": 5306
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 100,
+              "percentage": 17
+            },
+            "men": {
+              "count": 487,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa i nadzór zautomatyzowanej i zrobotyzowanej linii produkcyjnej,",
+          "prace instalacyjne, konserwacyjne i naprawcze linii i robotów,",
+          "dokonywanie prostych regulacji urządzeń wchodzących w skład linii (robota), zarówno mechanicznych, elektrycznych, jak i sterowania,",
+          "okresowa kontrola prawidłowości działania zespołów i podzespołów linii,",
+          "organizowanie bezpiecznego stanowiska pracy dla siebie i współpracowników."
+        ]
+      },
+      {
+        "title": "Operator robotów spawalniczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6690,
+            "p25": 5910,
+            "p75": 7390
+          },
+          "net": {
+            "median": 4890,
+            "p25": 4359,
+            "p75": 5368
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 51,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator SAP",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8860,
+            "p25": 7160,
+            "p75": 11610
+          },
+          "net": {
+            "median": 6370,
+            "p25": 5211,
+            "p75": 8245
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 29
+            },
+            "men": {
+              "count": 37,
+              "percentage": 71
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "utrzymywanie bieżących danych dotyczących procesu produkcji w systemach produkcyjnych, m.in.: aktualizowanie zamówień, potwierdzanie wykonania zamówienia, nadzorowanie zużycia,",
+          "analiza odchyleń założeń od rzeczywistości."
+        ]
+      },
+      {
+        "title": "Operator sieci komputerowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8180,
+            "p25": 6800,
+            "p75": 9720
+          },
+          "net": {
+            "median": 5906,
+            "p25": 4966,
+            "p75": 6957
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 33
+            },
+            "men": {
+              "count": 12,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator suwnic",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": [
+          {
+            "title": "operator suwnic"
+          },
+          {
+            "title": "operator suwnicy"
+          },
+          {
+            "title": "operator suwnicowy"
+          },
+          {
+            "title": "suwnicowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6000,
+            "p25": 5120,
+            "p75": 8300
+          },
+          "net": {
+            "median": 4420,
+            "p25": 3820,
+            "p75": 5988
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 9
+            },
+            "men": {
+              "count": 53,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator suwnicowy",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": [
+          {
+            "title": "operator suwnic"
+          },
+          {
+            "title": "operator suwnicy"
+          },
+          {
+            "title": "operator suwnicowy"
+          },
+          {
+            "title": "suwnicowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6000,
+            "p25": 5120,
+            "p75": 8300
+          },
+          "net": {
+            "median": 4420,
+            "p25": 3820,
+            "p75": 5988
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 9
+            },
+            "men": {
+              "count": 53,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator suwnicy",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": [
+          {
+            "title": "operator suwnic"
+          },
+          {
+            "title": "operator suwnicy"
+          },
+          {
+            "title": "operator suwnicowy"
+          },
+          {
+            "title": "suwnicowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6000,
+            "p25": 5120,
+            "p75": 8300
+          },
+          "net": {
+            "median": 4420,
+            "p25": 3820,
+            "p75": 5988
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 9
+            },
+            "men": {
+              "count": 53,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator systemu automatycznego pakowania",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4150,
+            "p25": 3800,
+            "p75": 4660
+          },
+          "net": {
+            "median": 3118,
+            "p25": 2894,
+            "p75": 3443
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 20
+            },
+            "men": {
+              "count": 8,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "koordynacja cyklu pakowania produktów,",
+          "zmiana parametrów systemu pakowania,",
+          "nadzór i kontrola działania maszyn ważących, pakujących i etykietujących,",
+          "prowadzenie dokumentacji produkcyjnej,",
+          "przygotowywanie raportów i zarządzanie bazą danych o wytworzonej produkcji."
+        ]
+      },
+      {
+        "title": "Operator urządzeń do produkcji piwa",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5020,
+            "p25": 4740,
+            "p75": 6100
+          },
+          "net": {
+            "median": 3752,
+            "p25": 3561,
+            "p75": 4488
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 10
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 10
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator urządzeń obróbki cieplnej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": [
+          {
+            "title": "operator urządzeń obróbki cieplnej"
+          },
+          {
+            "title": "operator pieców do obróbki cieplnej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6720,
+            "p25": 5990,
+            "p75": 8320
+          },
+          "net": {
+            "median": 4911,
+            "p25": 4414,
+            "p75": 6002
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 5
+            },
+            "men": {
+              "count": 19,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa urządzeń do obróbki cieplno-chemicznej,",
+          "obsługa urządzeń do obróbki podzerowej,",
+          "obsługa urządzeń do odpuszczania (sezonowanie) i odprężania,",
+          "obsługa urządzeń do mycie automatycznego (odtłuszczanie) i kulowania,",
+          "eksploatacja urządzeń i instalacji gazowych,",
+          "eksploatacja urządzeń energetycznych, kontrola twardości, kontrola międzyoperacyjna wymiarowa,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Operator urządzeń oczyszczania ścieków",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6120,
+            "p25": 5520,
+            "p75": 6890
+          },
+          "net": {
+            "median": 4502,
+            "p25": 4093,
+            "p75": 5027
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 7
+            },
+            "men": {
+              "count": 13,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator urządzeń pakujących",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6390,
+            "p25": 5140,
+            "p75": 6980
+          },
+          "net": {
+            "median": 4686,
+            "p25": 3834,
+            "p75": 5088
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 9
+            },
+            "men": {
+              "count": 10,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator urządzeń procesów chemicznych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 49,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4280,
+            "p25": 3790,
+            "p75": 5480
+          },
+          "net": {
+            "median": 3106,
+            "p25": 2760,
+            "p75": 3952
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 10
+            },
+            "men": {
+              "count": 44,
+              "percentage": 90
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa i kontrola linii anodowania,",
+          "obsługa linii oksydowania i pasywacji,",
+          "obsługa linii trawienia i odtłuszczania,",
+          "obsługa urządzenia do filtracji i demineralizacji wody,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Operator urządzeń produkcyjnych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 130,
+        "related_positions": [
+          {
+            "title": "operator maszyn i urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn"
+          },
+          {
+            "title": "operator maszyn produkcyjnych"
+          },
+          {
+            "title": "operator urządzeń produkcyjnych"
+          },
+          {
+            "title": "operator maszyn przędzalniczych"
+          },
+          {
+            "title": "operator maszyn tkackich."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5870,
+                "p25": 5140,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4331,
+                "p25": 3834,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 10,
+                "percentage": 21
+              },
+              "men": {
+                "count": 38,
+                "percentage": 79
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5330,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4611,
+                "p25": 3963,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 9
+              },
+              "men": {
+                "count": 118,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6450,
+                "p25": 5620,
+                "p75": 7560
+              },
+              "net": {
+                "median": 4727,
+                "p25": 4161,
+                "p75": 5483
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 13
+              },
+              "men": {
+                "count": 54,
+                "percentage": 87
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Operator wiertarek",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5260,
+            "p25": 4490,
+            "p75": 5960
+          },
+          "net": {
+            "median": 3915,
+            "p25": 3391,
+            "p75": 4393
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 20
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 20
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa wiertarek ogólnego przeznaczenia i specjalnych bez sterowania numerycznego,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Operator wprowadzania danych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5560,
+            "p25": 4870,
+            "p75": 6980
+          },
+          "net": {
+            "median": 4120,
+            "p25": 3650,
+            "p75": 5088
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 34,
+              "percentage": 59
+            },
+            "men": {
+              "count": 24,
+              "percentage": 41
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator wtryskarki",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 70,
+        "related_positions": [
+          {
+            "title": "operator wtryskarki"
+          },
+          {
+            "title": "wtryskarkowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5530,
+            "p25": 4850,
+            "p75": 6530
+          },
+          "net": {
+            "median": 4099,
+            "p25": 3636,
+            "p75": 4782
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 14
+            },
+            "men": {
+              "count": 60,
+              "percentage": 86
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator wózka widłowego",
+        "category": [
+          "magazyn"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1080,
+        "related_positions": [
+          {
+            "title": "operator wózka widłowego"
+          },
+          {
+            "title": "operator wózków widłowych"
+          },
+          {
+            "title": "kierowca wózka widłowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5780,
+            "p25": 5180,
+            "p75": 6480
+          },
+          "net": {
+            "median": 4270,
+            "p25": 3862,
+            "p75": 4747
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 43,
+              "percentage": 4
+            },
+            "men": {
+              "count": 1037,
+              "percentage": 96
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 37
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 32
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 21
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "załadunek i rozładunek towaru z wykorzystaniem wózków widłowych,",
+          "obsługa urządzeń technicznych,",
+          "dbałość o utrzymanie porządku,",
+          "stosowanie procedur minimalizacji strat i stłuczek w magazynie."
+        ]
+      },
+      {
+        "title": "Operator wózków widłowych",
+        "category": [
+          "magazyn"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1080,
+        "related_positions": [
+          {
+            "title": "operator wózka widłowego"
+          },
+          {
+            "title": "operator wózków widłowych"
+          },
+          {
+            "title": "kierowca wózka widłowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5780,
+            "p25": 5180,
+            "p75": 6480
+          },
+          "net": {
+            "median": 4270,
+            "p25": 3862,
+            "p75": 4747
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 43,
+              "percentage": 4
+            },
+            "men": {
+              "count": 1037,
+              "percentage": 96
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 37
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 32
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 21
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "załadunek i rozładunek towaru z wykorzystaniem wózków widłowych,",
+          "obsługa urządzeń technicznych,",
+          "dbałość o utrzymanie porządku,",
+          "stosowanie procedur minimalizacji strat i stłuczek w magazynie."
+        ]
+      },
+      {
+        "title": "Operator zgrzewarek",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6240,
+            "p25": 5350,
+            "p75": 8350
+          },
+          "net": {
+            "median": 4584,
+            "p25": 3977,
+            "p75": 6022
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 13,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator ładowarki",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator żurawia jezdniowego",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator żurawia samojezdnego",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operator żurawia wieżowego",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Operatorów ciężkich maszyn budowlanych i drogowych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 197,
+        "related_positions": [
+          {
+            "title": "operator maszyn budowlanych"
+          },
+          {
+            "title": "operator żurawia wieżowego"
+          },
+          {
+            "title": "operator ładowarki"
+          },
+          {
+            "title": "operator pompy do betonu"
+          },
+          {
+            "title": "operator żurawia samojezdnego"
+          },
+          {
+            "title": "operatorów ciężkich maszyn budowlanych i drogowych"
+          },
+          {
+            "title": "operator koparki kołowej"
+          },
+          {
+            "title": "operator żurawia jezdniowego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5700,
+            "p75": 8470
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4216,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 192,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Opiekunka do dzieci",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 218,
+        "related_positions": [
+          {
+            "title": "opiekunka do dzieci"
+          },
+          {
+            "title": "niania"
+          },
+          {
+            "title": "opiekunka dzieci"
+          },
+          {
+            "title": "prywatna opiekunka"
+          },
+          {
+            "title": "opiekun dziecka"
+          },
+          {
+            "title": "opiekunka dziecięca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4900,
+            "p25": 4460,
+            "p75": 5700
+          },
+          "net": {
+            "median": 3671,
+            "p25": 3370,
+            "p75": 4216
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 212,
+              "percentage": 97
+            },
+            "men": {
+              "count": 6,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka nad małymi dziećmi w warunkach domowych,",
+          "prowadzenie zabaw uwzględniających właściwy rozwój dziecka,",
+          "wykonywanie zabiegów higieniczno-pielęgnacyjnych,",
+          "przygotowywanie posiłków i karmienie dziecka,",
+          "czuwanie nad prawidłowym rozwojem i bezpieczeństwem dziecka,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach"
+        ]
+      },
+      {
+        "title": "Opiekunka dzieci",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 218,
+        "related_positions": [
+          {
+            "title": "opiekunka do dzieci"
+          },
+          {
+            "title": "niania"
+          },
+          {
+            "title": "opiekunka dzieci"
+          },
+          {
+            "title": "prywatna opiekunka"
+          },
+          {
+            "title": "opiekun dziecka"
+          },
+          {
+            "title": "opiekunka dziecięca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4900,
+            "p25": 4460,
+            "p75": 5700
+          },
+          "net": {
+            "median": 3671,
+            "p25": 3370,
+            "p75": 4216
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 212,
+              "percentage": 97
+            },
+            "men": {
+              "count": 6,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka nad małymi dziećmi w warunkach domowych,",
+          "prowadzenie zabaw uwzględniających właściwy rozwój dziecka,",
+          "wykonywanie zabiegów higieniczno-pielęgnacyjnych,",
+          "przygotowywanie posiłków i karmienie dziecka,",
+          "czuwanie nad prawidłowym rozwojem i bezpieczeństwem dziecka,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach"
+        ]
+      },
+      {
+        "title": "Opiekunka dziecięca",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 218,
+        "related_positions": [
+          {
+            "title": "opiekunka do dzieci"
+          },
+          {
+            "title": "niania"
+          },
+          {
+            "title": "opiekunka dzieci"
+          },
+          {
+            "title": "prywatna opiekunka"
+          },
+          {
+            "title": "opiekun dziecka"
+          },
+          {
+            "title": "opiekunka dziecięca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4900,
+            "p25": 4460,
+            "p75": 5700
+          },
+          "net": {
+            "median": 3671,
+            "p25": 3370,
+            "p75": 4216
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 212,
+              "percentage": 97
+            },
+            "men": {
+              "count": 6,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka nad małymi dziećmi w warunkach domowych,",
+          "prowadzenie zabaw uwzględniających właściwy rozwój dziecka,",
+          "wykonywanie zabiegów higieniczno-pielęgnacyjnych,",
+          "przygotowywanie posiłków i karmienie dziecka,",
+          "czuwanie nad prawidłowym rozwojem i bezpieczeństwem dziecka,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach"
+        ]
+      },
+      {
+        "title": "Opiekunka osób starszych",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": [
+          {
+            "title": "opiekun osób starszych"
+          },
+          {
+            "title": "opiekunka osób starszych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5090,
+            "p25": 4480,
+            "p75": 5910
+          },
+          "net": {
+            "median": 3800,
+            "p25": 3384,
+            "p75": 4359
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 50,
+              "percentage": 86
+            },
+            "men": {
+              "count": 8,
+              "percentage": 14
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Opiekunka środowiskowa",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4040,
+            "p25": 3850,
+            "p75": 4450
+          },
+          "net": {
+            "median": 3084,
+            "p25": 2954,
+            "p75": 3363
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 90
+            },
+            "men": {
+              "count": 1,
+              "percentage": 10
+            }
+          },
+          "benefits": [
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 40
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Opiekun dziecka",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 218,
+        "related_positions": [
+          {
+            "title": "opiekunka do dzieci"
+          },
+          {
+            "title": "niania"
+          },
+          {
+            "title": "opiekunka dzieci"
+          },
+          {
+            "title": "prywatna opiekunka"
+          },
+          {
+            "title": "opiekun dziecka"
+          },
+          {
+            "title": "opiekunka dziecięca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4900,
+            "p25": 4460,
+            "p75": 5700
+          },
+          "net": {
+            "median": 3671,
+            "p25": 3370,
+            "p75": 4216
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 212,
+              "percentage": 97
+            },
+            "men": {
+              "count": 6,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka nad małymi dziećmi w warunkach domowych,",
+          "prowadzenie zabaw uwzględniających właściwy rozwój dziecka,",
+          "wykonywanie zabiegów higieniczno-pielęgnacyjnych,",
+          "przygotowywanie posiłków i karmienie dziecka,",
+          "czuwanie nad prawidłowym rozwojem i bezpieczeństwem dziecka,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach"
+        ]
+      },
+      {
+        "title": "Opiekun ekspozycji",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3380,
+            "p25": 3290,
+            "p75": 3660
+          },
+          "net": {
+            "median": 2634,
+            "p25": 2572,
+            "p75": 2825
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 64
+            },
+            "men": {
+              "count": 5,
+              "percentage": 36
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 28
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 28
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 21
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Opiekun finansowy",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 189,
+        "related_positions": [
+          {
+            "title": "doradca finansowy"
+          },
+          {
+            "title": "opiekun finansowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6600,
+            "p25": 5430,
+            "p75": 9160
+          },
+          "net": {
+            "median": 4830,
+            "p25": 4032,
+            "p75": 6575
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 138,
+              "percentage": 73
+            },
+            "men": {
+              "count": 51,
+              "percentage": 27
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "doradzanie klientom przy wyborze usług finansowych,",
+          "gromadzenie i weryfikacja dokumentacji,",
+          "współpraca z bankami"
+        ]
+      },
+      {
+        "title": "Opiekun klienta",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 114,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5940,
+                "p25": 5270,
+                "p75": 6700
+              },
+              "net": {
+                "median": 4379,
+                "p25": 3922,
+                "p75": 4897
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 36,
+                "percentage": 60
+              },
+              "men": {
+                "count": 24,
+                "percentage": 40
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6740,
+                "p25": 5850,
+                "p75": 8520
+              },
+              "net": {
+                "median": 4925,
+                "p25": 4318,
+                "p75": 6138
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 70,
+                "percentage": 61
+              },
+              "men": {
+                "count": 44,
+                "percentage": 39
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8440,
+                "p25": 6680,
+                "p75": 11170
+              },
+              "net": {
+                "median": 6083,
+                "p25": 4883,
+                "p75": 7944
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 31,
+                "percentage": 55
+              },
+              "men": {
+                "count": 25,
+                "percentage": 45
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Opiekun marki",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 605,
+        "related_positions": [
+          {
+            "title": "brand manager"
+          },
+          {
+            "title": "opiekun marki"
+          },
+          {
+            "title": "kierownik marki."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 12650,
+            "p25": 9850,
+            "p75": 16830
+          },
+          "net": {
+            "median": 8953,
+            "p25": 7045,
+            "p75": 11803
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 476,
+              "percentage": 79
+            },
+            "men": {
+              "count": 129,
+              "percentage": 21
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 54
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kreowanie i wprowadzanie na rynek nowych marek,",
+          "tworzenie planów i strategii rynkowych dla nowych i istniejących marek,",
+          "prowadzenie kampanii reklamowych i promocji danej marki służących zwiększeniu",
+          "efektywności sprzedaży i rozpoznawalności marki,",
+          "współpraca z działem sprzedaży przy akcjach promocyjnych,",
+          "dobór odpowiednich form reklamy i mediów reklamowych,",
+          "współpraca z agencjami reklamowymi,",
+          "kontrola skuteczności działań i stopnia ich realizacji,",
+          "współpraca z działem finansowym i sprzedaży przy ustalaniu rentowności produktu i strategii cenowych,",
+          "koordynacja projektów promocyjnych dealerów i przedstawicieli handlowych,",
+          "monitorowanie i analiza danych rynkowych dotyczących segmentu, konsumentów."
+        ]
+      },
+      {
+        "title": "Opiekun medyczny",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 91,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5480,
+            "p25": 4830,
+            "p75": 7210
+          },
+          "net": {
+            "median": 4066,
+            "p25": 3623,
+            "p75": 5245
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 83,
+              "percentage": 91
+            },
+            "men": {
+              "count": 8,
+              "percentage": 9
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Opiekun osób starszych",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": [
+          {
+            "title": "opiekun osób starszych"
+          },
+          {
+            "title": "opiekunka osób starszych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5090,
+            "p25": 4480,
+            "p75": 5910
+          },
+          "net": {
+            "median": 3800,
+            "p25": 3384,
+            "p75": 4359
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 50,
+              "percentage": 86
+            },
+            "men": {
+              "count": 8,
+              "percentage": 14
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Optometrysta",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 182,
+        "related_positions": [
+          {
+            "title": "optometrysta"
+          },
+          {
+            "title": "refrakcjonista."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7640,
+            "p25": 6110,
+            "p75": 9720
+          },
+          "net": {
+            "median": 5538,
+            "p25": 4495,
+            "p75": 6957
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 158,
+              "percentage": 87
+            },
+            "men": {
+              "count": 24,
+              "percentage": 13
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Optyk",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7250,
+            "p25": 5820,
+            "p75": 8850
+          },
+          "net": {
+            "median": 5272,
+            "p25": 4297,
+            "p75": 6363
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 68
+            },
+            "men": {
+              "count": 9,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "interpretowanie recept okulistycznych na okulary i soczewki kontaktowe,",
+          "dobieranie parametrów okularów do twrzy klienta,",
+          "doradzanie klientowi w wyborze oprawek,",
+          "montowanie szkieł w oprawkach,",
+          "informowanie o zasadach użytkowania oprawek i szkieł kontaktowych"
+        ]
+      },
+      {
+        "title": "Optyk okularowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 76,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6380,
+            "p25": 5190,
+            "p75": 7930
+          },
+          "net": {
+            "median": 4679,
+            "p25": 3868,
+            "p75": 5736
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 61,
+              "percentage": 80
+            },
+            "men": {
+              "count": 15,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Ordynator",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 17,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12820,
+            "p25": 10500,
+            "p75": 20990
+          },
+          "net": {
+            "median": 9070,
+            "p25": 7488,
+            "p75": 14639
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 53
+            },
+            "men": {
+              "count": 8,
+              "percentage": 47
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 17
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 17
+            },
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 11
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie pracą oddziału szpitalnego,",
+          "prowadzenie leczenia pacjentów za pomocą asystentów i całościowa odpowiedzialność za wyniki leczenia w oddziale,",
+          "dbanie o wysoką jakość świadczonych przez oddział usług,",
+          "prowadzenie polityki personalnej oddziału,",
+          "dbanie o rozwój zawodowy podległego personelu,",
+          "dbanie o racjonalne i zgodne z przeznaczeniem wykorzystanie majątku i środków oddziału"
+        ]
+      },
+      {
+        "title": "Organizator imprez rozrywkowych",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 245,
+        "related_positions": [
+          {
+            "title": "event manager"
+          },
+          {
+            "title": "event Specialist"
+          },
+          {
+            "title": "organizator wydarzeń"
+          },
+          {
+            "title": "organizator imprez rozrywkowych"
+          },
+          {
+            "title": "organizator imprez sportowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7710,
+            "p25": 6160,
+            "p75": 9690
+          },
+          "net": {
+            "median": 5586,
+            "p25": 4529,
+            "p75": 6936
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 179,
+              "percentage": 73
+            },
+            "men": {
+              "count": 66,
+              "percentage": 27
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 48
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 48
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie strategią eventów,",
+          "planowanie spotkań i specjalnych wydarzeń,",
+          "koordynowanie organizacji eventów,",
+          "kontrola realizacji wydarzeń pod kątem zgodności z budżetem,",
+          "negocjowanie kontraktów"
+        ]
+      },
+      {
+        "title": "Organizator imprez sportowych",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 245,
+        "related_positions": [
+          {
+            "title": "event manager"
+          },
+          {
+            "title": "event Specialist"
+          },
+          {
+            "title": "organizator wydarzeń"
+          },
+          {
+            "title": "organizator imprez rozrywkowych"
+          },
+          {
+            "title": "organizator imprez sportowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7710,
+            "p25": 6160,
+            "p75": 9690
+          },
+          "net": {
+            "median": 5586,
+            "p25": 4529,
+            "p75": 6936
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 179,
+              "percentage": 73
+            },
+            "men": {
+              "count": 66,
+              "percentage": 27
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 48
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 48
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie strategią eventów,",
+          "planowanie spotkań i specjalnych wydarzeń,",
+          "koordynowanie organizacji eventów,",
+          "kontrola realizacji wydarzeń pod kątem zgodności z budżetem,",
+          "negocjowanie kontraktów"
+        ]
+      },
+      {
+        "title": "Organizator obsługi sprzedaży internetowej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 50,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5780,
+            "p25": 5150,
+            "p75": 7250
+          },
+          "net": {
+            "median": 4270,
+            "p25": 3841,
+            "p75": 5272
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 50
+            },
+            "men": {
+              "count": 25,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Organizator prac artystycznych",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3820,
+            "p25": 3370,
+            "p75": 4320
+          },
+          "net": {
+            "median": 2780,
+            "p25": 2463,
+            "p75": 3133
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 80
+            },
+            "men": {
+              "count": 2,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Organizator transportu drogowego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6640,
+            "p25": 5700,
+            "p75": 8010
+          },
+          "net": {
+            "median": 4856,
+            "p25": 4216,
+            "p75": 5791
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 45
+            },
+            "men": {
+              "count": 23,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Organizator wydarzeń",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 245,
+        "related_positions": [
+          {
+            "title": "event manager"
+          },
+          {
+            "title": "event Specialist"
+          },
+          {
+            "title": "organizator wydarzeń"
+          },
+          {
+            "title": "organizator imprez rozrywkowych"
+          },
+          {
+            "title": "organizator imprez sportowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7710,
+            "p25": 6160,
+            "p75": 9690
+          },
+          "net": {
+            "median": 5586,
+            "p25": 4529,
+            "p75": 6936
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 179,
+              "percentage": 73
+            },
+            "men": {
+              "count": 66,
+              "percentage": 27
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 48
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 48
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie strategią eventów,",
+          "planowanie spotkań i specjalnych wydarzeń,",
+          "koordynowanie organizacji eventów,",
+          "kontrola realizacji wydarzeń pod kątem zgodności z budżetem,",
+          "negocjowanie kontraktów"
+        ]
+      },
+      {
+        "title": "Organizator",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6260,
+            "p25": 5420,
+            "p75": 8150
+          },
+          "net": {
+            "median": 4598,
+            "p25": 4025,
+            "p75": 5886
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 52
+            },
+            "men": {
+              "count": 12,
+              "percentage": 48
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Ortoptystka",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6720,
+            "p25": 5780,
+            "p75": 7020
+          },
+          "net": {
+            "median": 4911,
+            "p25": 4270,
+            "p75": 5115
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 92
+            },
+            "men": {
+              "count": 1,
+              "percentage": 8
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

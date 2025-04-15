@@ -1,0 +1,137 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant do spraw wdrożeń",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-do-spraw-wdrozen",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 210,
+        "related_positions": [
+          {
+            "title": "konsultant ds. wdrożeń"
+          },
+          {
+            "title": "konsultant do spraw wdrożeń."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7030,
+                "p25": 5710,
+                "p75": 8350
+              },
+              "net": {
+                "median": 5122,
+                "p25": 4223,
+                "p75": 6022
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 43,
+                "percentage": 50
+              },
+              "men": {
+                "count": 43,
+                "percentage": 50
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9920,
+                "p25": 7710,
+                "p75": 13210
+              },
+              "net": {
+                "median": 7093,
+                "p25": 5586,
+                "p75": 9335
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 98,
+                "percentage": 47
+              },
+              "men": {
+                "count": 112,
+                "percentage": 53
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 82
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 70
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 64
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13190,
+                "p25": 10230,
+                "p75": 18180
+              },
+              "net": {
+                "median": 9321,
+                "p25": 7304,
+                "p75": 12723
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 47,
+                "percentage": 35
+              },
+              "men": {
+                "count": 89,
+                "percentage": 65
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 78
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 78
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 78
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "odpowiedzialność za sprawne i bezawaryjne wdrożenie rozwiązań informatycznych u klienta firmy,",
+          "dostosowanie systemu do wymagań klienta,",
+          "rozwiązywanie problemów klientów związanych z systemem,",
+          "przeprowadzanie szkoleń dla użytkowników"
+        ]
+      }
+    ]
+  }
+]

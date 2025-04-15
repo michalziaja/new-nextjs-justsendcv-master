@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Podleśniczy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-podlesniczy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 41,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8070,
+            "p25": 7140,
+            "p75": 8760
+          },
+          "net": {
+            "median": 5831,
+            "p25": 5198,
+            "p75": 6302
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 24
+            },
+            "men": {
+              "count": 31,
+              "percentage": 76
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

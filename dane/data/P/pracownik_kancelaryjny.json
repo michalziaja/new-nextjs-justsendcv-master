@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik kancelaryjny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-kancelaryjny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 40,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5390,
+            "p25": 4730,
+            "p75": 6100
+          },
+          "net": {
+            "median": 4004,
+            "p25": 3554,
+            "p75": 4488
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 93
+            },
+            "men": {
+              "count": 3,
+              "percentage": 7
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

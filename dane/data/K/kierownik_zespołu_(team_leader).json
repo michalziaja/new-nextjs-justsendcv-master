@@ -1,0 +1,61 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik zespołu (Team Leader)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-zespolu-team-leader",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 3606,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11130,
+            "p25": 8480,
+            "p75": 15020
+          },
+          "net": {
+            "median": 7918,
+            "p25": 6111,
+            "p75": 10569
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1671,
+              "percentage": 46
+            },
+            "men": {
+              "count": 1935,
+              "percentage": 54
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 69
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 65
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 52
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "organizuje pracę zespołu,",
+          "wyznacza pracownikom zadania i kontroluje poprawność ich wykonania,",
+          "dba o przestrzeganie obowiązujących standardów,",
+          "wyznacza i monitoruje osiąganie założonych celów,",
+          "zarządza i motywuje zespół."
+        ]
+      }
+    ]
+  }
+]

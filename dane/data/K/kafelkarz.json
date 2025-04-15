@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kafelkarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kafelkarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 46,
+        "related_positions": [
+          {
+            "title": "glazurnik"
+          },
+          {
+            "title": "płytkarz"
+          },
+          {
+            "title": "kafelkarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6790,
+            "p25": 5760,
+            "p75": 9180
+          },
+          "net": {
+            "median": 4959,
+            "p25": 4257,
+            "p75": 6587
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 4
+            },
+            "men": {
+              "count": 44,
+              "percentage": 96
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

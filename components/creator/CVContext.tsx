@@ -19,6 +19,7 @@ export interface CVData {
     startDate: string;
     endDate: string;
     description: string;
+    type?: 'job' | 'project';
   }>;
   education: Array<{
     school: string;
@@ -35,7 +36,7 @@ export interface CVData {
       level: string;
     }>;
   };
-  rodoClause: string;
+  rodoClause?: string;
 }
 
 // Interfejs kontekstu CV

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "H",
+    "positions": [
+      {
+        "title": "Hydrolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-hydrolog",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8310,
+            "p25": 6650,
+            "p75": 8820
+          },
+          "net": {
+            "median": 5994,
+            "p25": 4863,
+            "p75": 6343
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 36
+            },
+            "men": {
+              "count": 9,
+              "percentage": 64
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

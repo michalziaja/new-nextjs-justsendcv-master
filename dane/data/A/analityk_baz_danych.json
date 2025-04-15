@@ -1,0 +1,138 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk baz danych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-baz-danych",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 543,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 6000,
+                "p75": 8130
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4420,
+                "p75": 5872
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 142,
+                "percentage": 56
+              },
+              "men": {
+                "count": 110,
+                "percentage": 44
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 68
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 48
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9040,
+                "p25": 7540,
+                "p75": 11280
+              },
+              "net": {
+                "median": 6493,
+                "p25": 5470,
+                "p75": 8019
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 269,
+                "percentage": 50
+              },
+              "men": {
+                "count": 274,
+                "percentage": 50
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 83
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 70
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 70
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11620,
+                "p25": 9280,
+                "p75": 14490
+              },
+              "net": {
+                "median": 8251,
+                "p25": 6656,
+                "p75": 10208
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 121,
+                "percentage": 37
+              },
+              "men": {
+                "count": 210,
+                "percentage": 63
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 91
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 66
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

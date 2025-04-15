@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Refrakcjonista",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-refrakcjonista",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 182,
+        "related_positions": [
+          {
+            "title": "optometrysta"
+          },
+          {
+            "title": "refrakcjonista."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7640,
+            "p25": 6110,
+            "p75": 9720
+          },
+          "net": {
+            "median": 5538,
+            "p25": 4495,
+            "p75": 6957
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 158,
+              "percentage": 87
+            },
+            "men": {
+              "count": 24,
+              "percentage": 13
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

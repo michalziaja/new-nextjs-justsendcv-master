@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu kontaktów z klientami (call center)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-kontaktow-z-klientami-call-center",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8870,
+            "p25": 7930,
+            "p75": 11000
+          },
+          "net": {
+            "median": 6377,
+            "p25": 5736,
+            "p75": 7829
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 68
+            },
+            "men": {
+              "count": 9,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie zespołem call center (również w systemie zmianowym),",
+          "szkolenie pracowników,",
+          "monitorowanie i kontrola wyników działań podległego zespołu,",
+          "przygotowanie raportów z działalności centrum,",
+          "organizowanie pracy działu."
+        ]
+      }
+    ]
+  }
+]

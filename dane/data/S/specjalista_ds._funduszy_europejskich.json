@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. funduszy europejskich",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-funduszy-europejskich",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 132,
+        "related_positions": [
+          {
+            "title": "specjalista ds. funduszy europejskich"
+          },
+          {
+            "title": "specjalista do spraw funduszy europejskich."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7290,
+            "p25": 6040,
+            "p75": 8620
+          },
+          "net": {
+            "median": 5299,
+            "p25": 4448,
+            "p75": 6206
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 98,
+              "percentage": 74
+            },
+            "men": {
+              "count": 34,
+              "percentage": 26
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 63
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 63
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kompleksowe przygotowywanie wniosków o dotacje,planów inwestycyjnych oraz studiów wykonywalności",
+          "zarządzanie projektami,",
+          "rozliczanie projektów,",
+          "współpraca z odpowiednimi instytucjami"
+        ]
+      }
+    ]
+  }
+]

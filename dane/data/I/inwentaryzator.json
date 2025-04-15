@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inwentaryzator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inwentaryzator",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 24,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6020,
+            "p25": 5400,
+            "p75": 7920
+          },
+          "net": {
+            "median": 4434,
+            "p25": 4011,
+            "p75": 5729
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 25
+            },
+            "men": {
+              "count": 18,
+              "percentage": 75
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

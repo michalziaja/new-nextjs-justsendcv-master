@@ -1,0 +1,57 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor Centrum Usług Wspólnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-centrum-uslug-wspolnych",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": [
+          {
+            "title": "dyrektor Centrum Usług Wspólnych"
+          },
+          {
+            "title": "shared Services Center Director."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 20390,
+            "p25": 10910,
+            "p75": 35540
+          },
+          "net": {
+            "median": 14230,
+            "p25": 7767,
+            "p75": 24557
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 24,
+              "percentage": 55
+            },
+            "men": {
+              "count": 20,
+              "percentage": 45
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialny za prawidłowe funkcjonowanie centrum, nadzór oraz optymalizacja kluczowych procesów operacyjnych,",
+          "uczestnictwo w opracowywaniu strategii rozwoju centrum, migracji nowych procesów i doskonalenia istniejących,",
+          "planowanie budżetu i realizacja strategii finansowej",
+          "zarządzanie zespołami pracowników,",
+          "komunikacja z kluczowymi reprezentantami biznesu w innych jednostkach i krajach,",
+          "reprezentacja centrum w kontaktach z innymi partnerami biznesowymi i kontrahentami"
+        ]
+      }
+    ]
+  }
+]

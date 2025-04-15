@@ -1,0 +1,118 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Informatyk (stanowisko ogólne)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-informatyk-stanowisko-ogolne",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 673,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5700,
+                "p25": 5070,
+                "p75": 6810
+              },
+              "net": {
+                "median": 4216,
+                "p25": 3786,
+                "p75": 4972
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 12,
+                "percentage": 7
+              },
+              "men": {
+                "count": 170,
+                "percentage": 93
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6040,
+                "p75": 9000
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4448,
+                "p75": 6465
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 41,
+                "percentage": 6
+              },
+              "men": {
+                "count": 632,
+                "percentage": 94
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 36
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 31
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 31
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8300,
+                "p25": 6900,
+                "p75": 10450
+              },
+              "net": {
+                "median": 5988,
+                "p25": 5034,
+                "p75": 7454
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 11,
+                "percentage": 4
+              },
+              "men": {
+                "count": 272,
+                "percentage": 96
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "nadzoruje pracę komputerów oraz oprogramowania,",
+          "instaluje oprogramowanie i zapewnianie jego sprawne funkcjonowanie,",
+          "archiwizuje dane,",
+          "usuwa problemy związane z funkcjonowaniem programów,",
+          "instaluje i sprawdza sprawność urządzeń peryferyjnych."
+        ]
+      }
+    ]
+  }
+]

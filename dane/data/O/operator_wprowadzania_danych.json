@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator wprowadzania danych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-wprowadzania-danych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5560,
+            "p25": 4870,
+            "p75": 6980
+          },
+          "net": {
+            "median": 4120,
+            "p25": 3650,
+            "p75": 5088
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 34,
+              "percentage": 59
+            },
+            "men": {
+              "count": 24,
+              "percentage": 41
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

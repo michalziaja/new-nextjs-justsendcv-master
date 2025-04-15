@@ -1,0 +1,158 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. kadr",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-kadr",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 3350,
+        "related_positions": [
+          {
+            "title": "specjalista ds. kadr i płac"
+          },
+          {
+            "title": "specjalista do spraw kadr"
+          },
+          {
+            "title": "specjalista do spraw kadr i płac"
+          },
+          {
+            "title": "specjalista ds. kadr."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5750,
+                "p25": 5030,
+                "p75": 6570
+              },
+              "net": {
+                "median": 4250,
+                "p25": 3759,
+                "p75": 4809
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 684,
+                "percentage": 93
+              },
+              "men": {
+                "count": 50,
+                "percentage": 7
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 63
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 53
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 53
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6930,
+                "p25": 5910,
+                "p75": 8220
+              },
+              "net": {
+                "median": 5054,
+                "p25": 4359,
+                "p75": 5934
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 3222,
+                "percentage": 96
+              },
+              "men": {
+                "count": 128,
+                "percentage": 4
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 60
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 56
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 32
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8010,
+                "p25": 6800,
+                "p75": 9740
+              },
+              "net": {
+                "median": 5791,
+                "p25": 4966,
+                "p75": 6969
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1403,
+                "percentage": 96
+              },
+              "men": {
+                "count": 64,
+                "percentage": 4
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 57
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 54
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 48
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie akt osobowych i dokumentacji związanej ze stosunkiem pracy,",
+          "sporządzanie umów o pracę, umów cywilno-prawnych i świadectw pracy,",
+          "naliczanie wynagrodzeń,",
+          "ewidencja czasu pracy, urlopów, zwolnień, itp.,",
+          "sporządzanie deklaracji podatkowych i zaświadczeń dla pracowników,",
+          "kontakty z urzędami"
+        ]
+      }
+    ]
+  }
+]

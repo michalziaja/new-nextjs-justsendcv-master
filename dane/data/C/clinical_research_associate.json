@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "C",
+    "positions": [
+      {
+        "title": "Clinical Research Associate",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-clinical-research-associate",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11390,
+            "p25": 7860,
+            "p75": 14510
+          },
+          "net": {
+            "median": 7741,
+            "p25": 5631,
+            "p75": 9733
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 29,
+              "percentage": 64
+            },
+            "men": {
+              "count": 16,
+              "percentage": 36
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 60
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 56
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 56
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

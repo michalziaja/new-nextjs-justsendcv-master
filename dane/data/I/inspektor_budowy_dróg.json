@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor budowy dróg",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-budowy-drog",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8700,
+            "p25": 6120,
+            "p75": 10500
+          },
+          "net": {
+            "median": 6261,
+            "p25": 4502,
+            "p75": 7488
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 28
+            },
+            "men": {
+              "count": 21,
+              "percentage": 72
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

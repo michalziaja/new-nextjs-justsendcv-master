@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierowca autocysterny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierowca-autocysterny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 40,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8480,
+            "p25": 7330,
+            "p75": 9860
+          },
+          "net": {
+            "median": 6111,
+            "p25": 5327,
+            "p75": 7051
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 40,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

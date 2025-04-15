@@ -1,0 +1,776 @@
+{
+  "letter": "I",
+  "count": 159,
+  "positions": [
+    {
+      "title": "Ilustrator",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ilustrator",
+      "checked": "yes"
+    },
+    {
+      "title": "Iluzjonista",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-iluzjonista",
+      "checked": "empty"
+    },
+    {
+      "title": "Imitator efektów dźwiękowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-imitator-efektow-dzwiekowych",
+      "checked": "empty"
+    },
+    {
+      "title": "Impregnator drewna",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-impregnator-drewna",
+      "checked": "empty"
+    },
+    {
+      "title": "Informator ruchu pasażerskiego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-informator-ruchu-pasazerskiego",
+      "checked": "empty"
+    },
+    {
+      "title": "Informator służby informacji powietrznej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-informator-sluzby-informacji-powietrznej",
+      "checked": "empty"
+    },
+    {
+      "title": "Informatyk (stanowisko ogólne)",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-informatyk-stanowisko-ogolne",
+      "checked": "yes"
+    },
+    {
+      "title": "Informatyk medyczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-informatyk-medyczny",
+      "checked": "yes"
+    },
+    {
+      "title": "Inkasent",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inkasent",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor (administracja państwowa)",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-administracja-panstwowa",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor bezpieczeństwa i higieny pracy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-bezpieczenstwa-i-higieny-pracy",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor bezpieczeństwa żeglugi",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-bezpieczenstwa-zeglugi",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor budowlany",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-budowlany",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor budowy dróg",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-budowy-drog",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor budowy mostów",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-budowy-mostow",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor do spraw BHP",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-bhp",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor do spraw miar i wag",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-miar-i-wag",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor do spraw nadzoru robót budowlanych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-nadzoru-robot-budowlanych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor do spraw obrotu hurtowego lekami",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-obrotu-hurtowego-lekami",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor do spraw ochrony środowiska",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-ochrony-srodowiska",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor do spraw sanitarnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-sanitarnych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor do spraw środowiska",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-srodowiska",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor do spraw wytwarzania Głównego Inspektoratu Farmaceutycznego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-wytwarzania-glownego-inspektoratu-farmaceutycznego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor dozoru jądrowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-dozoru-jadrowego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor dozoru technicznego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-dozoru-technicznego",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ds. BHP",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-bhp",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ds. miar i wag",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-miar-i-wag",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor ds. nadzoru robót budowlanych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-nadzoru-robot-budowlanych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ds. obrotu hurtowego lekami",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-obrotu-hurtowego-lekami",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor ds. ochrony środowiska",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-ochrony-srodowiska",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ds. sanitarnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-sanitarnych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ds. środowiska",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-srodowiska",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ds. wytwarzania Głównego Inspektoratu Farmaceutycznego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ds-wytwarzania-glownego-inspektoratu-farmaceutycznego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor farmaceutyczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-farmaceutyczny",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor hotelowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-hotelowy",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor Inspekcji Transportu Drogowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-inspekcji-transportu-drogowego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor kontroli handlu i usług",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-kontroli-handlu-i-uslug",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor kontroli skarbowej ",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-Inspektor-kontroli-skarbowej",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor nadzoru (budownictwo)",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-nadzoru-budownictwo",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor nadzoru bankowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-nadzoru-bankowego",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor nadzoru budowlanego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-nadzoru-budowlanego",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor nadzoru robót elektrycznych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-nadzoru-robot-elektrycznych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor nadzoru robót ogólnobudowlanych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-nadzoru-robot-ogolnobudowlanych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor obrony cywilnej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-obrony-cywilnej",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ochrony danych osobowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ochrony-danych-osobowych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ochrony przeciwpożarowej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ochrony-przeciwpozarowej",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ochrony radiologicznej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ochrony-radiologicznej",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor ochrony środowiska",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-ochrony-srodowiska",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor pracy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-pracy",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor rybołówstwa morskiego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-rybolowstwa-morskiego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inspektor sanitarny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-sanitarny",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor transportu drogowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-transportu-drogowego",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor wojewódzki",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-wojewodzki",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspektor wterynaryjny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-wterynaryjny",
+      "checked": "yes"
+    },
+    {
+      "title": "Inspicjent",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspicjent",
+      "checked": "empty"
+    },
+    {
+      "title": "Instalator sieci IT",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instalator-sieci-it",
+      "checked": "yes"
+    },
+    {
+      "title": "Instalator systemów alarmowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instalator-systemow-alarmowych",
+      "checked": "yes"
+    },
+    {
+      "title": "Instalator systemów alarmowych przeciwkradzieżowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instalator-systemow-alarmowych-przeciwkradziezowych",
+      "checked": "yes"
+    },
+    {
+      "title": "Instalator systemów telewizji przemysłowej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instalator-systemow-telewizji-przemyslowej",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor amatorskiego ruchu artystycznego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-amatorskiego-ruchu-artystycznego",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor fitness",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-fitness",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor gimnastyki korekcyjnej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-gimnastyki-korekcyjnej",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor higieny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-higieny",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor hipoterapii",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-hipoterapii",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor jazdy konnej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-jazdy-konnej",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor nauki jazdy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-nauki-jazdy",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor odnowy biologicznej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-odnowy-biologicznej",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor rekreacji ruchowej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-rekreacji-ruchowej",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor rytmiki",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-rytmiki",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor sportów ekstremalnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-sportow-ekstremalnych",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor sportów siłowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-sportow-silowych",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor sportu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-sportu",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor sportu osób niepełnosprawnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-sportu-osob-niepelnosprawnych",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor strzałowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-strzalowy",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor sztuki walki",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-sztuki-walki",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor tańca",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-tanca",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor techniki jazdy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-techniki-jazdy",
+      "checked": "yes"
+    },
+    {
+      "title": "Instruktor terapii uzależnień",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-terapii-uzaleznien",
+      "checked": "empty"
+    },
+    {
+      "title": "Instruktor terapii zajęciowej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-terapii-zajeciowej",
+      "checked": "yes"
+    },
+    {
+      "title": "Instrumentalista",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instrumentalista",
+      "checked": "empty"
+    },
+    {
+      "title": "Instrumentariuszka",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instrumentariuszka",
+      "checked": "yes"
+    },
+    {
+      "title": "Intendent",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-intendent",
+      "checked": "yes"
+    },
+    {
+      "title": "Internal Audit Project Lead",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-internal-audit-project-lead",
+      "checked": "yes"
+    },
+    {
+      "title": "Internal IT Auditor",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-internal-it-auditor",
+      "checked": "yes"
+    },
+    {
+      "title": "International forwarder",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-international-forwarder",
+      "checked": "yes"
+    },
+    {
+      "title": "International freight forwarder",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-international-freight-forwarder",
+      "checked": "yes"
+    },
+    {
+      "title": "Introligator",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-introligator",
+      "checked": "yes"
+    },
+    {
+      "title": "Introligator galanteryjny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-introligator-galanteryjny",
+      "checked": "yes"
+    },
+    {
+      "title": "Introligator poligraficzny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-introligator-poligraficzny",
+      "checked": "yes"
+    },
+    {
+      "title": "Inwentaryzator",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inwentaryzator",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier akustyk",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-akustyk",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier awionik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-awionik",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier biocybernetyki i inżynierii biomedycznej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-biocybernetyki-i-inzynierii-biomedycznej",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier budownictwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budownictwa",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier budowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budowy",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier budowy dróg",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budowy-drog",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier budowy mostów",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budowy-mostow",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier do spraw jakości",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-do-spraw-jakosci",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier do spraw rozwoju dostawców",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-do-spraw-rozwoju-dostawcow",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier do spraw sieci IT",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-do-spraw-sieci-it",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier do spraw testów automatycznych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-do-spraw-testow-automatycznych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier ds. jakości",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ds-jakosci",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier ds. rozwoju dostawców",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ds-rozwoju-dostawcow",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier ds. sieci IT",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ds-sieci-it",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier ds. testów automatycznych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ds-testow-automatycznych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier elektroenergetyk",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-elektroenergetyk",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier elektronik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-elektronik",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier energetyki",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-energetyki",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier geotechnik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-geotechnik",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier hutnik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-hutnik",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier jakości",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-jakosci",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier kliniczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-kliniczny",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier konstruktor",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-konstruktor",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier leśnictwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-lesnictwa",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier mechanik lotniczy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-mechanik-lotniczy",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier mechatronik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-mechatronik",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier nanostruktur",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-nanostruktur",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier normowania pracy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-normowania-pracy",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier odlewnik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-odlewnik",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier ogrodnictwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ogrodnictwa",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier oprogramowania",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-oprogramowania",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier poligrafii",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-poligrafii",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier pożarnictwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-pozarnictwa",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier procesu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-procesu",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier procesu malowania",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-procesu-malowania",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier procesu produkcji",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-procesu-produkcji",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier procesu produkcyjnego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-procesu-produkcyjnego",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier produkcji",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-produkcji",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier produktu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-produktu",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier rolnictwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-rolnictwa",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier rozwoju produktu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-rozwoju-produktu",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier ruchu drogowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ruchu-drogowego",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier ruchu kolejowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-ruchu-kolejowego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier rybactwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-rybactwa",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier serwisu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-serwisu",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier sieci IT",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-sieci-it",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier spawalnik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-spawalnik",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier sprzedaży",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-sprzedazy",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier systemowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-systemowy",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier techniki świetlnej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-techniki-swietlnej",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier technologii ceramiki",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-technologii-ceramiki",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier teleinformatyk",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-teleinformatyk",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier telekomunikacji",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-telekomunikacji",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier testów automatycznych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-testow-automatycznych",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier transportu drogowego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-transportu-drogowego",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier utrzymania ruchu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-utrzymania-ruchu",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier włókiennik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-wlokiennik",
+      "checked": "empty"
+    },
+    {
+      "title": "Inżynier wsparcia technicznego IT (helpdesk)",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-wsparcia-technicznego-it-helpdesk",
+      "checked": "yes"
+    },
+    {
+      "title": "Inżynier zootechniki",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-zootechniki",
+      "checked": "yes"
+    },
+    {
+      "title": "iOS developer",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ios-developer",
+      "checked": "yes"
+    },
+    {
+      "title": "IT Director",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-it-director",
+      "checked": "yes"
+    },
+    {
+      "title": "IT project manager",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-it-project-manager",
+      "checked": "yes"
+    },
+    {
+      "title": "IT Quality Assurance",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-it-quality-assurance",
+      "checked": "yes"
+    },
+    {
+      "title": "IT Security Specialist",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-it-security-specialist",
+      "checked": "yes"
+    }
+  ]
+}

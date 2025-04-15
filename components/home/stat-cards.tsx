@@ -36,7 +36,7 @@ function StatCard({ title, value, description, icon, borderColor, darkBorderColo
       dark:shadow-slate-900/20
       bg-white dark:bg-sidebar
       transition-all duration-200
-      rounded-md
+      rounded-sm
       border-t-[4px]
     `}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">

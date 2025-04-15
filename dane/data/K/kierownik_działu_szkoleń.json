@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu szkoleń",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-szkolen",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 115,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11010,
+            "p25": 8860,
+            "p75": 14850
+          },
+          "net": {
+            "median": 7835,
+            "p25": 6370,
+            "p75": 10453
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 78,
+              "percentage": 68
+            },
+            "men": {
+              "count": 37,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

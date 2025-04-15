@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Architekt baz danych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-architekt-baz-danych",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 39,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 19180,
+            "p25": 11890,
+            "p75": 25560
+          },
+          "net": {
+            "median": 13405,
+            "p25": 8435,
+            "p75": 17754
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 31
+            },
+            "men": {
+              "count": 27,
+              "percentage": 69
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "integruje możliwości funkcjonalne aplikacji analitycznych z istniejącymi systemami,",
+          "projektuje rozwiązania z uwzględnieniem oczekiwań użytkowników,",
+          "optymalizuje systemy baz danych,",
+          "opracowuje dokumentację techniczno ? projektową do tworzonego oprogramowania,",
+          "tworzy mapy i modele danych na podstawie zdiagnozowanych wymagań."
+        ]
+      }
+    ]
+  }
+]

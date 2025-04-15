@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor ośrodka kultury",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-Dyrektor-osrodka-kultury",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7950,
+            "p25": 6780,
+            "p75": 8880
+          },
+          "net": {
+            "median": 5750,
+            "p25": 4952,
+            "p75": 6383
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 68
+            },
+            "men": {
+              "count": 6,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

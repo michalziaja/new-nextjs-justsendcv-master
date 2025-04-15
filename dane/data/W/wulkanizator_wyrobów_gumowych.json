@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Wulkanizator wyrobów gumowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-wulkanizator-wyrobow-gumowych",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": [
+          {
+            "title": "wulkanizator"
+          },
+          {
+            "title": "wulkanizator wyrobów gumowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6040,
+            "p25": 4930,
+            "p75": 6950
+          },
+          "net": {
+            "median": 4448,
+            "p25": 3691,
+            "p75": 5067
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 5
+            },
+            "men": {
+              "count": 40,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

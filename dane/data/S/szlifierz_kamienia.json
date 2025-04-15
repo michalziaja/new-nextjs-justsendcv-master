@@ -1,0 +1,74 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Szlifierz kamienia",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-szlifierz-kamienia",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 115,
+        "related_positions": [
+          {
+            "title": "szlifierz"
+          },
+          {
+            "title": "szlifierz ceramiki"
+          },
+          {
+            "title": "szlifierz kamieni szlachetnych i ozdobnych"
+          },
+          {
+            "title": "szlifierz kamienia"
+          },
+          {
+            "title": "szlifierz materiałów drzewnych"
+          },
+          {
+            "title": "szlifierz metali"
+          },
+          {
+            "title": "szlifierz szkła gospodarczego i technicznego"
+          },
+          {
+            "title": "szlifierz szkła płaskiego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6140,
+            "p25": 5330,
+            "p75": 7380
+          },
+          "net": {
+            "median": 4515,
+            "p25": 3963,
+            "p75": 5361
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 3
+            },
+            "men": {
+              "count": 111,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "dobór i stosowanie optymalnych parametrów skrawania,",
+          "sprawdzanie i mierzenie wykonanych detali,",
+          "kontrolowanie i regulowanie przebiegu ostrzenia,",
+          "czyszczenie i konserwowanie użytkowanych narzędzi,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      }
+    ]
+  }
+]

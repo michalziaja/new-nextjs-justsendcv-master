@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dokumentalista",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dokumentalista",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 33,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5730,
+            "p25": 5180,
+            "p75": 6470
+          },
+          "net": {
+            "median": 4236,
+            "p25": 3862,
+            "p75": 4740
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 21,
+              "percentage": 64
+            },
+            "men": {
+              "count": 12,
+              "percentage": 36
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

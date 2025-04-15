@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw wsparcia sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-wsparcia-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 107,
+        "related_positions": [
+          {
+            "title": "kierownik ds. wsparcia sprzedaży"
+          },
+          {
+            "title": "kierownik do spraw wsparcia sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 11580,
+            "p25": 9020,
+            "p75": 16010
+          },
+          "net": {
+            "median": 8224,
+            "p25": 6479,
+            "p75": 11244
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 48,
+              "percentage": 45
+            },
+            "men": {
+              "count": 59,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

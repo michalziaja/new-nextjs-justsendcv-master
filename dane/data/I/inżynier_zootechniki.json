@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier zootechniki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-zootechniki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6530,
+            "p25": 4720,
+            "p75": 8960
+          },
+          "net": {
+            "median": 4782,
+            "p25": 3547,
+            "p75": 6438
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 69
+            },
+            "men": {
+              "count": 4,
+              "percentage": 31
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu personalnego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-personalnego",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 553,
+        "related_positions": [
+          {
+            "title": "kierownik ds. personalnych"
+          },
+          {
+            "title": "kierownik działu personalnego"
+          },
+          {
+            "title": "kierownik personalny"
+          },
+          {
+            "title": "kierownik do spraw personalnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 12560,
+            "p25": 9910,
+            "p75": 16510
+          },
+          "net": {
+            "median": 8892,
+            "p25": 7086,
+            "p75": 11584
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 507,
+              "percentage": 92
+            },
+            "men": {
+              "count": 46,
+              "percentage": 8
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 57
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 53
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 53
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "administrowanie spraw pracowniczych,",
+          "koordynowanie pracy podległego personelu,",
+          "wspieranie projektów rekrutacyjnych,",
+          "współtworzenie i realizacja polityki szkoleniowej i rozwoju pracowników w firmie"
+        ]
+      }
+    ]
+  }
+]

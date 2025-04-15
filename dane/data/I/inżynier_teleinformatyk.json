@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier teleinformatyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-teleinformatyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 60,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9110,
+            "p25": 6550,
+            "p75": 12690
+          },
+          "net": {
+            "median": 6541,
+            "p25": 4795,
+            "p75": 8981
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 60,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

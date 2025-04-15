@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik metrolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-metrolog",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 24,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7880,
+            "p25": 6360,
+            "p75": 8380
+          },
+          "net": {
+            "median": 5702,
+            "p25": 4665,
+            "p75": 6042
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 4
+            },
+            "men": {
+              "count": 23,
+              "percentage": 96
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

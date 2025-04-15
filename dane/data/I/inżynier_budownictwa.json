@@ -1,0 +1,99 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier budownictwa",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budownictwa",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 148,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 5950,
+                "p75": 8440
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4386,
+                "p75": 6083
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 36,
+                "percentage": 39
+              },
+              "men": {
+                "count": 57,
+                "percentage": 61
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8230,
+                "p25": 6990,
+                "p75": 9980
+              },
+              "net": {
+                "median": 5941,
+                "p25": 5095,
+                "p75": 7134
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 68,
+                "percentage": 46
+              },
+              "men": {
+                "count": 80,
+                "percentage": 54
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9060,
+                "p25": 7760,
+                "p75": 12230
+              },
+              "net": {
+                "median": 6506,
+                "p25": 5619,
+                "p75": 8667
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 20,
+                "percentage": 33
+              },
+              "men": {
+                "count": 41,
+                "percentage": 67
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

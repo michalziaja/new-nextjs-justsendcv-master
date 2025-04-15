@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Betoniarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-betoniarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 63,
+        "related_positions": [
+          {
+            "title": "betoniarz"
+          },
+          {
+            "title": "zbrojarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6400,
+            "p25": 5250,
+            "p75": 7710
+          },
+          "net": {
+            "median": 4693,
+            "p25": 3909,
+            "p75": 5586
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 8
+            },
+            "men": {
+              "count": 58,
+              "percentage": 92
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik obiektu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-obiektu",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 215,
+        "related_positions": [
+          {
+            "title": "kierownik obiektu"
+          },
+          {
+            "title": "facility manager"
+          },
+          {
+            "title": "specjalista zarządzający budynkami i budowlami"
+          },
+          {
+            "title": "kierownik pensjonatu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9360,
+            "p25": 7400,
+            "p75": 12880
+          },
+          "net": {
+            "median": 6711,
+            "p25": 5375,
+            "p75": 9110
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 78,
+              "percentage": 36
+            },
+            "men": {
+              "count": 137,
+              "percentage": 64
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 38
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 38
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 38
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "tworzenie i aktualizacja dokumentacji majątku nieruchomego,",
+          "planowanie i nadzór nad budżetem utrzymania majątku nieruchomego,",
+          "zarządzanie operacyjne majątkiem nieruchomym,",
+          "nadzór nad realizacją nowych inwestycji i remontów,",
+          "typowanie obiektów/ urządzeń do zakupu/remontu oraz organizowanie przetargów,",
+          "uzgadnianie zmian zasad użytkowania z władzami oraz nadzór nad ich realizacją,",
+          "nadzór nad prawidłowością i aktualnością zezwoleń,",
+          "koordynacja pracy dostawców usług utrzymania obiektów dla zapewnienia ciągłości operacyjnej,",
+          "tworzenie programów doraźnych/sezonowych dla zapewnienia prawidłowego funkcjonowania obiektów(zabezpieczanie przed zimą, przed upałami itp.),",
+          "przygotowanie materiałów do planów, sprawozdań itp."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "letter": "Ś",
+  "count": 5,
+  "positions": [
+    {
+      "title": "Ślusarz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-slusarz",
+      "checked": "yes"
+    },
+    {
+      "title": "Ślusarz galanterii metalowej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-slusarz-galanterii-metalowej",
+      "checked": "yes"
+    },
+    {
+      "title": "Ślusarz narzędziowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-slusarz-narzedziowy",
+      "checked": "yes"
+    },
+    {
+      "title": "Śpiewak solista",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-spiewak-solista",
+      "checked": "empty"
+    },
+    {
+      "title": "Świecki krzewiciel wiary",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-swiecki-krzewiciel-wiary",
+      "checked": "empty"
+    }
+  ]
+}

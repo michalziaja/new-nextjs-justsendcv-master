@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konstruktor rozkładów jazdy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konstruktor-rozkladow-jazdy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7470,
+            "p25": 5800,
+            "p75": 7560
+          },
+          "net": {
+            "median": 5422,
+            "p25": 4283,
+            "p75": 5483
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 80
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 70
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 70
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

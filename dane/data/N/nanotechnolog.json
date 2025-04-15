@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Nanotechnolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-nanotechnolog",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": [
+          {
+            "title": "nanotechnolog"
+          },
+          {
+            "title": "inżynier nanostruktur."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5860,
+            "p25": 4350,
+            "p75": 8880
+          },
+          "net": {
+            "median": 4219,
+            "p25": 3154,
+            "p75": 6349
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 33
+            },
+            "men": {
+              "count": 8,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

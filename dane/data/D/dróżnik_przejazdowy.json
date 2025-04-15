@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dróżnik przejazdowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-droznik-przejazdowy",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": [
+          {
+            "title": "dróżnik"
+          },
+          {
+            "title": "dróżnik przejazdowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 3900,
+            "p25": 3550,
+            "p75": 4510
+          },
+          "net": {
+            "median": 2988,
+            "p25": 2750,
+            "p75": 3404
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 50
+            },
+            "men": {
+              "count": 6,
+              "percentage": 50
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 25
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 25
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 25
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

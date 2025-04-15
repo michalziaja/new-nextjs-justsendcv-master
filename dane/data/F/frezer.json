@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Frezer",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-frezer",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 48,
+        "related_positions": [
+          {
+            "title": "frezer"
+          },
+          {
+            "title": "frezer drewna."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6570,
+            "p25": 5550,
+            "p75": 7590
+          },
+          "net": {
+            "median": 4809,
+            "p25": 4113,
+            "p75": 5504
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 48,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa frezarek konwencjonalnych ogólnego przeznaczenia, specjalizowanych i specjalnych,",
+          "frezowanie płaszczyzn, rowków wiórowych w narzędziach wieloostrzowych, sprzęgieł kłowych, rowków o różnym zarysie, krzywek, gwintów, krótkich i długich wałków wielowypustowych, zębów w kołach zębatych i zębatek,",
+          "zaznajamianie się z dokumentacją technologiczną obrabianych przedmiotów, rysunkiem wykonawczym, kartą technologiczną i kartami instrukcyjnymi wykonywanych operacji,",
+          "udział w bieżących naprawach i remontach maszyn i urządzeń produkcyjnych,",
+          "wykonywanie pomiarów warsztatowych."
+        ]
+      }
+    ]
+  }
+]

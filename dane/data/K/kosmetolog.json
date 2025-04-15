@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kosmetolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kosmetolog",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 163,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6040,
+            "p25": 5050,
+            "p75": 7390
+          },
+          "net": {
+            "median": 4448,
+            "p25": 3772,
+            "p75": 5368
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 163,
+              "percentage": 100
+            },
+            "men": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie zabiegów kosmetycznych (inwazyjnych),",
+          "prowadzenie dokumentacji przeprowadzonych zabiegów,",
+          "utrzymanie czystości w miejscu pracy,",
+          "utrzymywanie dobrych relacji z klientami."
+        ]
+      }
+    ]
+  }
+]

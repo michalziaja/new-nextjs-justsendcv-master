@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Robotnik gospodarczy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-robotnik-gospodarczy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5290,
+            "p25": 4650,
+            "p75": 6190
+          },
+          "net": {
+            "median": 3936,
+            "p25": 3500,
+            "p75": 4550
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 6
+            },
+            "men": {
+              "count": 17,
+              "percentage": 94
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

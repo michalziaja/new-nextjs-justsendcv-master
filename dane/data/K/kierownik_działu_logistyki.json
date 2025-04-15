@@ -1,0 +1,78 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu logistyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-logistyki",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 767,
+        "related_positions": [
+          {
+            "title": "kierownik ds. Logistyki"
+          },
+          {
+            "title": "kierownik działu logistyki"
+          },
+          {
+            "title": "kierownik zarządzający łańcuchem dostaw"
+          },
+          {
+            "title": "kierownik do spraw Logistyki."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10680,
+            "p25": 8520,
+            "p75": 13840
+          },
+          "net": {
+            "median": 7610,
+            "p25": 6138,
+            "p75": 9765
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 274,
+              "percentage": 36
+            },
+            "men": {
+              "count": 493,
+              "percentage": 64
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 38
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 31
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "tworzenie i ustanawianie procedur i procesów koniecznych we współpracy z dostawcami,",
+          "zarządzanie systemem scentralizowanej dystrybucji,",
+          "koordynacja łańcucha dostaw,",
+          "rozpoznanie rynku i nawiązywanie kontaktów z dostawcami,",
+          "negocjacje i zawieranie umów, okresowa ocena dostawców,",
+          "optymalizacja kosztów,",
+          "zarządzanie transportem bezpośrednio lub poprzez zewnętrzne agencje,",
+          "monitorowanie wywiązywania się z umów zewnętrznych kontrahentów."
+        ]
+      }
+    ]
+  }
+]

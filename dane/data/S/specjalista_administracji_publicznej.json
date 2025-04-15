@@ -1,0 +1,125 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista administracji publicznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-administracji-publicznej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 411,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6090,
+                "p25": 5510,
+                "p75": 7260
+              },
+              "net": {
+                "median": 4481,
+                "p25": 4086,
+                "p75": 5279
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 35,
+                "percentage": 70
+              },
+              "men": {
+                "count": 15,
+                "percentage": 30
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6620,
+                "p25": 5630,
+                "p75": 7930
+              },
+              "net": {
+                "median": 4843,
+                "p25": 4168,
+                "p75": 5736
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 300,
+                "percentage": 73
+              },
+              "men": {
+                "count": 111,
+                "percentage": 27
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 25
+              },
+              {
+                "name": "pożyczki preferencyjne",
+                "percentage": 25
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 12
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7870,
+                "p25": 6430,
+                "p75": 9590
+              },
+              "net": {
+                "median": 5695,
+                "p25": 4713,
+                "p75": 6867
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 223,
+                "percentage": 65
+              },
+              "men": {
+                "count": 122,
+                "percentage": 35
+              }
+            },
+            "benefits": [
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 37
+              },
+              {
+                "name": "pożyczki preferencyjne",
+                "percentage": 31
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 25
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierowca samochodu ciężarowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierowca-samochodu-ciezarowego",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1427,
+        "related_positions": [
+          {
+            "title": "kierowca samochodu ciężarowego"
+          },
+          {
+            "title": "kierowca kat. C + E"
+          },
+          {
+            "title": "kierowca kat. C"
+          },
+          {
+            "title": "kierowca kat. B lub C"
+          },
+          {
+            "title": "kierowca cysterny w transporcie krajowym"
+          },
+          {
+            "title": "kierowca samochodu ciężarowego na trasach międzynarodowych"
+          },
+          {
+            "title": "kierowca samochodu ciężarowego na trasach krajowych"
+          },
+          {
+            "title": "kierowca samochodu dostawczego."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7020,
+            "p25": 5700,
+            "p75": 9340
+          },
+          "net": {
+            "median": 5115,
+            "p25": 4216,
+            "p75": 6697
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 24,
+              "percentage": 2
+            },
+            "men": {
+              "count": 1403,
+              "percentage": 98
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 29
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 25
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 22
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "przewóz przesyłek, materiałów i towarów,",
+          "współudział w załadowywaniu i wyładowywaniu przewożonego materiału,",
+          "nadzorowanie prawidłowego, zgodnego z dopuszczalną ładownością załadunku pojazdu oraz jego odpowiednie zabezpieczenie,",
+          "odpowiedzialność za bezpieczeństwo przewozu,",
+          "utrzymywanie dobrego stanu technicznego i czystości pojazdu,",
+          "dokonywanie drobnych napraw."
+        ]
+      }
+    ]
+  }
+]

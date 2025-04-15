@@ -1,0 +1,1462 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Barista",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 21,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5220,
+            "p25": 4470,
+            "p75": 6620
+          },
+          "net": {
+            "median": 3889,
+            "p25": 3377,
+            "p75": 4843
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 71
+            },
+            "men": {
+              "count": 6,
+              "percentage": 29
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Barman",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6040,
+            "p25": 4900,
+            "p75": 7520
+          },
+          "net": {
+            "median": 4448,
+            "p25": 3671,
+            "p75": 5456
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 48
+            },
+            "men": {
+              "count": 27,
+              "percentage": 52
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "przygotowywanie i serwowanie napojów alkoholowych oraz bezalkoholowych klientom,",
+          "monitorowanie stanu zapasów i przygotowywanie zamówień"
+        ]
+      },
+      {
+        "title": "Beauty Consultant",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": [
+          {
+            "title": "wizażystka"
+          },
+          {
+            "title": "beauty Consultant"
+          },
+          {
+            "title": "stylistka modowa."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5600,
+            "p25": 4960,
+            "p75": 6370
+          },
+          "net": {
+            "median": 4147,
+            "p25": 3711,
+            "p75": 4672
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 90
+            },
+            "men": {
+              "count": 2,
+              "percentage": 10
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Betoniarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 63,
+        "related_positions": [
+          {
+            "title": "betoniarz"
+          },
+          {
+            "title": "zbrojarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6400,
+            "p25": 5250,
+            "p75": 7710
+          },
+          "net": {
+            "median": 4693,
+            "p25": 3909,
+            "p75": 5586
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 8
+            },
+            "men": {
+              "count": 58,
+              "percentage": 92
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Bibliotekarz",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 209,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5300,
+            "p25": 4760,
+            "p75": 6540
+          },
+          "net": {
+            "median": 3943,
+            "p25": 3575,
+            "p75": 4788
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 174,
+              "percentage": 83
+            },
+            "men": {
+              "count": 35,
+              "percentage": 17
+            }
+          },
+          "benefits": [
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 46
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 23
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 15
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "dbanie o posiadane przez bibliotekę zbiory,",
+          "obsługa klientów biblioteki,",
+          "dostarczanie informacji o bieżącej działalności placówki, jej wyposażeniu i zasadach udostępniania zbiorów"
+        ]
+      },
+      {
+        "title": "Biegły rewident",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": [
+          {
+            "title": "rewident"
+          },
+          {
+            "title": "biegły rewident"
+          },
+          {
+            "title": "rewident taboru."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10100,
+            "p25": 6710,
+            "p75": 14130
+          },
+          "net": {
+            "median": 7215,
+            "p25": 4904,
+            "p75": 9962
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 33
+            },
+            "men": {
+              "count": 30,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Biochemik",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5830,
+            "p25": 4690,
+            "p75": 8740
+          },
+          "net": {
+            "median": 4304,
+            "p25": 3527,
+            "p75": 6288
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 55
+            },
+            "men": {
+              "count": 5,
+              "percentage": 45
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 36
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 36
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Bioinformatyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 34,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9490,
+            "p25": 7010,
+            "p75": 13210
+          },
+          "net": {
+            "median": 6799,
+            "p25": 5109,
+            "p75": 9335
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 35
+            },
+            "men": {
+              "count": 22,
+              "percentage": 65
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Bioinżynier",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6050,
+            "p25": 4990,
+            "p75": 6620
+          },
+          "net": {
+            "median": 4355,
+            "p25": 3653,
+            "p75": 4756
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 47
+            },
+            "men": {
+              "count": 8,
+              "percentage": 53
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 45
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 27
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Biolog",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 27,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6410,
+            "p25": 5440,
+            "p75": 7710
+          },
+          "net": {
+            "median": 4699,
+            "p25": 4039,
+            "p75": 5586
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 21,
+              "percentage": 78
+            },
+            "men": {
+              "count": 6,
+              "percentage": 22
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Biotechnolog",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 93,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6590,
+            "p25": 5670,
+            "p75": 8280
+          },
+          "net": {
+            "median": 4823,
+            "p25": 4195,
+            "p75": 5975
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 61,
+              "percentage": 66
+            },
+            "men": {
+              "count": 32,
+              "percentage": 34
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie analiz mikrobiologicznych oraz badań w laboratoriach,",
+          "opracowywanie dokumentacji zgodnie z zasadami GMP (Dobra Praktyka Wytwarzania)."
+        ]
+      },
+      {
+        "title": "Blacharz",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 33,
+        "related_positions": [
+          {
+            "title": "blacharz"
+          },
+          {
+            "title": "blacharz samochodowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7710,
+            "p25": 5670,
+            "p75": 10080
+          },
+          "net": {
+            "median": 5586,
+            "p25": 4195,
+            "p75": 7201
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 33,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prace produkcyjne, remontowo-modernizacyjne oraz prototypowe,",
+          "w zakresie obróbki i kształtowania elementów z blach i profili kształtowych,",
+          "wykonywanie podstawowych operacji ślusarskich oraz blacharskich,",
+          "wykonywanie szkiców wyrobów blacharskich oraz odczytywanie schematów i rysunków technicznych,",
+          "wykonywanie operacji zgrzewania, lutowania, spawania, nitowania i klejenia."
+        ]
+      },
+      {
+        "title": "Blacharz budowlany",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3960,
+            "p25": 2860,
+            "p75": 4810
+          },
+          "net": {
+            "median": 2879,
+            "p25": 2103,
+            "p75": 3478
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Blacharz izolacji przemysłowych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3670,
+            "p25": 3350,
+            "p75": 3950
+          },
+          "net": {
+            "median": 2675,
+            "p25": 2450,
+            "p75": 2873
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Blacharz samochodowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 33,
+        "related_positions": [
+          {
+            "title": "blacharz"
+          },
+          {
+            "title": "blacharz samochodowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7710,
+            "p25": 5670,
+            "p75": 10080
+          },
+          "net": {
+            "median": 5586,
+            "p25": 4195,
+            "p75": 7201
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 33,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prace produkcyjne, remontowo-modernizacyjne oraz prototypowe,",
+          "w zakresie obróbki i kształtowania elementów z blach i profili kształtowych,",
+          "wykonywanie podstawowych operacji ślusarskich oraz blacharskich,",
+          "wykonywanie szkiców wyrobów blacharskich oraz odczytywanie schematów i rysunków technicznych,",
+          "wykonywanie operacji zgrzewania, lutowania, spawania, nitowania i klejenia."
+        ]
+      },
+      {
+        "title": "Brand manager",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 605,
+        "related_positions": [
+          {
+            "title": "brand manager"
+          },
+          {
+            "title": "opiekun marki"
+          },
+          {
+            "title": "kierownik marki."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 12650,
+            "p25": 9850,
+            "p75": 16830
+          },
+          "net": {
+            "median": 8953,
+            "p25": 7045,
+            "p75": 11803
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 476,
+              "percentage": 79
+            },
+            "men": {
+              "count": 129,
+              "percentage": 21
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 54
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kreowanie i wprowadzanie na rynek nowych marek,",
+          "tworzenie planów i strategii rynkowych dla nowych i istniejących marek,",
+          "prowadzenie kampanii reklamowych i promocji danej marki służących zwiększeniu",
+          "efektywności sprzedaży i rozpoznawalności marki,",
+          "współpraca z działem sprzedaży przy akcjach promocyjnych,",
+          "dobór odpowiednich form reklamy i mediów reklamowych,",
+          "współpraca z agencjami reklamowymi,",
+          "kontrola skuteczności działań i stopnia ich realizacji,",
+          "współpraca z działem finansowym i sprzedaży przy ustalaniu rentowności produktu i strategii cenowych,",
+          "koordynacja projektów promocyjnych dealerów i przedstawicieli handlowych,",
+          "monitorowanie i analiza danych rynkowych dotyczących segmentu, konsumentów."
+        ]
+      },
+      {
+        "title": "Broker edukacyjny",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 142,
+        "related_positions": [
+          {
+            "title": "broker informacji"
+          },
+          {
+            "title": "researcher"
+          },
+          {
+            "title": "broker edukacyjny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5960,
+            "p75": 11130
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4393,
+            "p75": 7918
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 107,
+              "percentage": 75
+            },
+            "men": {
+              "count": 35,
+              "percentage": 25
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 85
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 78
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Broker informacji",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 142,
+        "related_positions": [
+          {
+            "title": "broker informacji"
+          },
+          {
+            "title": "researcher"
+          },
+          {
+            "title": "broker edukacyjny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5960,
+            "p75": 11130
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4393,
+            "p75": 7918
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 107,
+              "percentage": 75
+            },
+            "men": {
+              "count": 35,
+              "percentage": 25
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 85
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 78
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Broker ubezpieczeniowy",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 176,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7860,
+                "p25": 6240,
+                "p75": 9360
+              },
+              "net": {
+                "median": 5688,
+                "p25": 4584,
+                "p75": 6711
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 28,
+                "percentage": 64
+              },
+              "men": {
+                "count": 16,
+                "percentage": 36
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9190,
+                "p25": 7230,
+                "p75": 11720
+              },
+              "net": {
+                "median": 6594,
+                "p25": 5258,
+                "p75": 8319
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 107,
+                "percentage": 61
+              },
+              "men": {
+                "count": 69,
+                "percentage": 39
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 91
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 83
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 83
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10450,
+                "p25": 8120,
+                "p75": 13800
+              },
+              "net": {
+                "median": 7454,
+                "p25": 5865,
+                "p75": 9737
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 79,
+                "percentage": 64
+              },
+              "men": {
+                "count": 45,
+                "percentage": 36
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Brukarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 62,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6120,
+            "p25": 4970,
+            "p75": 8270
+          },
+          "net": {
+            "median": 4502,
+            "p25": 3718,
+            "p75": 5968
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 61,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Brygadzista",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1341,
+        "related_positions": [
+          {
+            "title": "brygadzista (produkcja)"
+          },
+          {
+            "title": "brygadzista"
+          },
+          {
+            "title": "brygadzista produkcji"
+          },
+          {
+            "title": "brygadzistka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6940,
+            "p25": 5900,
+            "p75": 8270
+          },
+          "net": {
+            "median": 5061,
+            "p25": 4352,
+            "p75": 5968
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 222,
+              "percentage": 17
+            },
+            "men": {
+              "count": 1119,
+              "percentage": 83
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 41
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 32
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Brygadzista (produkcja)",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1341,
+        "related_positions": [
+          {
+            "title": "brygadzista (produkcja)"
+          },
+          {
+            "title": "brygadzista"
+          },
+          {
+            "title": "brygadzista produkcji"
+          },
+          {
+            "title": "brygadzistka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6940,
+            "p25": 5900,
+            "p75": 8270
+          },
+          "net": {
+            "median": 5061,
+            "p25": 4352,
+            "p75": 5968
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 222,
+              "percentage": 17
+            },
+            "men": {
+              "count": 1119,
+              "percentage": 83
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 41
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 32
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Brygadzista produkcji",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1341,
+        "related_positions": [
+          {
+            "title": "brygadzista (produkcja)"
+          },
+          {
+            "title": "brygadzista"
+          },
+          {
+            "title": "brygadzista produkcji"
+          },
+          {
+            "title": "brygadzistka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6940,
+            "p25": 5900,
+            "p75": 8270
+          },
+          "net": {
+            "median": 5061,
+            "p25": 4352,
+            "p75": 5968
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 222,
+              "percentage": 17
+            },
+            "men": {
+              "count": 1119,
+              "percentage": 83
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 41
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 32
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Brygadzista w dziale logistyki",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 189,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7170,
+            "p25": 5990,
+            "p75": 8280
+          },
+          "net": {
+            "median": 5218,
+            "p25": 4414,
+            "p75": 5975
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 22,
+              "percentage": 12
+            },
+            "men": {
+              "count": 167,
+              "percentage": 88
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Brygadzista w dziale utrzymania ruchu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 98,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9070,
+            "p25": 6650,
+            "p75": 11090
+          },
+          "net": {
+            "median": 6513,
+            "p25": 4863,
+            "p75": 7890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 97,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "organizacja, nadzór i kontrola pracy, zapoznawanie pracowników z zakresem robót,",
+          "bezpośredni udział w pracach brygady,",
+          "zabezpieczenie materiałów i narzędzi do pracy dla członków brygady oraz rozliczanie ich zużycia,",
+          "kontrola przestrzegania przepisów przeciwpożarowych i BHP,",
+          "powiadamianie przełożonych o zaistniałych usterkach i potrzebach napraw."
+        ]
+      },
+      {
+        "title": "Brygadzistka",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1341,
+        "related_positions": [
+          {
+            "title": "brygadzista (produkcja)"
+          },
+          {
+            "title": "brygadzista"
+          },
+          {
+            "title": "brygadzista produkcji"
+          },
+          {
+            "title": "brygadzistka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6940,
+            "p25": 5900,
+            "p75": 8270
+          },
+          "net": {
+            "median": 5061,
+            "p25": 4352,
+            "p75": 5968
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 222,
+              "percentage": 17
+            },
+            "men": {
+              "count": 1119,
+              "percentage": 83
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 41
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 32
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Bukieciarz",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": [
+          {
+            "title": "bukieciarz"
+          },
+          {
+            "title": "pracownik kwiaciarni"
+          },
+          {
+            "title": "florysta"
+          },
+          {
+            "title": "florystka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5520,
+            "p25": 4820,
+            "p75": 6690
+          },
+          "net": {
+            "median": 4093,
+            "p25": 3616,
+            "p75": 4890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 88
+            },
+            "men": {
+              "count": 6,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Business Analyst",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1508,
+        "related_positions": [
+          {
+            "title": "analityk biznesowy"
+          },
+          {
+            "title": "business Analyst"
+          },
+          {
+            "title": "analityk biznesowo-systemowy."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7860,
+                "p25": 6780,
+                "p75": 9490
+              },
+              "net": {
+                "median": 5688,
+                "p25": 4952,
+                "p75": 6799
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 287,
+                "percentage": 56
+              },
+              "men": {
+                "count": 227,
+                "percentage": 44
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 68
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10950,
+                "p25": 8900,
+                "p75": 13760
+              },
+              "net": {
+                "median": 7794,
+                "p25": 6397,
+                "p75": 9710
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 778,
+                "percentage": 52
+              },
+              "men": {
+                "count": 730,
+                "percentage": 48
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 79
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 68
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14140,
+                "p25": 11000,
+                "p75": 18100
+              },
+              "net": {
+                "median": 9969,
+                "p25": 7829,
+                "p75": 12669
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 484,
+                "percentage": 43
+              },
+              "men": {
+                "count": 653,
+                "percentage": 57
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 78
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 67
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 64
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "wspiera bieżące prace projektowe,",
+          "przeprowadza analizy biznesowe,",
+          "tworzy dokumentację analityczno-projektową,",
+          "współpracuje z różnymi jednostkami organizacyjnymi klienta."
+        ]
+      }
+    ]
+  }
+]

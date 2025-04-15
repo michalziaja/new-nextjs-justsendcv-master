@@ -1,0 +1,119 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant call center",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-call-center",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 113,
+        "related_positions": [
+          {
+            "title": "konsultant call center"
+          },
+          {
+            "title": "pracownik call center."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5790,
+                "p25": 5010,
+                "p75": 7400
+              },
+              "net": {
+                "median": 4277,
+                "p25": 3745,
+                "p75": 5375
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 49,
+                "percentage": 55
+              },
+              "men": {
+                "count": 40,
+                "percentage": 45
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6040,
+                "p25": 5050,
+                "p75": 7390
+              },
+              "net": {
+                "median": 4448,
+                "p25": 3772,
+                "p75": 5368
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 81,
+                "percentage": 72
+              },
+              "men": {
+                "count": 32,
+                "percentage": 28
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 81
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 45
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 45
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6110,
+                "p25": 5030,
+                "p75": 7590
+              },
+              "net": {
+                "median": 4495,
+                "p25": 3759,
+                "p75": 5504
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 42,
+                "percentage": 60
+              },
+              "men": {
+                "count": 28,
+                "percentage": 40
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

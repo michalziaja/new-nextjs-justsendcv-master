@@ -1,0 +1,67 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik działu logistyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-dzialu-logistyki",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 341,
+        "related_positions": [
+          {
+            "title": "pracownik szeregowy w dziale logistyki"
+          },
+          {
+            "title": "pracownik działu logistyki."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6160,
+            "p25": 5360,
+            "p75": 7690
+          },
+          "net": {
+            "median": 4529,
+            "p25": 3984,
+            "p75": 5572
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 145,
+              "percentage": 43
+            },
+            "men": {
+              "count": 196,
+              "percentage": 57
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 41
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 38
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zamawianie usług transportowych,",
+          "optymalizacja kosztów transportu,",
+          "prace administracyjne,",
+          "współpraca z firmami transportowymi."
+        ]
+      }
+    ]
+  }
+]

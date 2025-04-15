@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Montażysta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-montazysta",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 214,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6000,
+            "p25": 5150,
+            "p75": 7690
+          },
+          "net": {
+            "median": 4420,
+            "p25": 3841,
+            "p75": 5572
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 36,
+              "percentage": 17
+            },
+            "men": {
+              "count": 178,
+              "percentage": 83
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 33
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 25
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

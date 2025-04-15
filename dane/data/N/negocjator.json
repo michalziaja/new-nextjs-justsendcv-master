@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Negocjator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-negocjator",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12420,
+            "p25": 8100,
+            "p75": 18110
+          },
+          "net": {
+            "median": 8797,
+            "p25": 5851,
+            "p75": 12676
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 59
+            },
+            "men": {
+              "count": 9,
+              "percentage": 41
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "reprezentowanie firmy podczas negocjacji biznesowych,",
+          "przygotowywanie dokumentów (ofert, wzorów umów),",
+          "raportowanie wyników pracy"
+        ]
+      }
+    ]
+  }
+]

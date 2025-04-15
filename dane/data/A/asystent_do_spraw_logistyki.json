@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent do spraw logistyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-do-spraw-logistyki",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 309,
+        "related_positions": [
+          {
+            "title": "asystent w dziale logistyki"
+          },
+          {
+            "title": "asystent ds. logistyki"
+          },
+          {
+            "title": "asystent działu logistyki"
+          },
+          {
+            "title": "asystent do spraw logistyki."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5850,
+            "p25": 5150,
+            "p75": 7300
+          },
+          "net": {
+            "median": 4318,
+            "p25": 3841,
+            "p75": 5306
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 159,
+              "percentage": 51
+            },
+            "men": {
+              "count": 150,
+              "percentage": 49
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 42
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 42
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 31
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

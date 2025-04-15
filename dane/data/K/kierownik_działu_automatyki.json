@@ -1,0 +1,72 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu automatyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-automatyki",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 143,
+        "related_positions": [
+          {
+            "title": "kierownik działu automatyki"
+          },
+          {
+            "title": "koordynator zespołu automatyków."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13430,
+            "p25": 10200,
+            "p75": 15770
+          },
+          "net": {
+            "median": 9485,
+            "p25": 7283,
+            "p75": 11080
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 3
+            },
+            "men": {
+              "count": 138,
+              "percentage": 97
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 54
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 45
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektowanie i programowanie układów sterowania i regulacji procesów produkcyjnych, układów robotów,",
+          "nadzór nad pracą grup wytwarzających, montujących, uruchamiających i eksploatujących układy automatyki i robotyki,",
+          "kontrola prawidłowości funkcjonowania i obsługi maszyn i urządzeń produkcyjnych (wsparcie techniczne),",
+          "organizacja i kontrola montażu, modernizacji, remontów i wymiany sprzętu,",
+          "dostarczanie danych niezbędnych do planowania wydatków na park maszynowy,",
+          "monitorowanie parku maszynowego,",
+          "odpowiedzialność za zgodność instalacji,",
+          "szkolenie podległej kadry."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu informatyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-informatyki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 172,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12940,
+            "p25": 10640,
+            "p75": 17000
+          },
+          "net": {
+            "median": 9151,
+            "p25": 7583,
+            "p75": 11919
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 5
+            },
+            "men": {
+              "count": 163,
+              "percentage": 95
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 70
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 60
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 60
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

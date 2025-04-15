@@ -1,0 +1,61 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor hotelu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-hotelu",
+        "category": [
+          "usługi",
+          "hotele i kasyna"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 76,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12160,
+            "p25": 9910,
+            "p75": 17790
+          },
+          "net": {
+            "median": 8620,
+            "p25": 7086,
+            "p75": 12457
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 58
+            },
+            "men": {
+              "count": 32,
+              "percentage": 42
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 63
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 63
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie wszystkimi aspektami działalności hotelu, ze szczególnym uwzględnieniem dbałości o satysfakcję klienta i nadzorowania pracy podległego personelu,",
+          "dbanie o utrzymanie nieruchomości,",
+          "monitorowanie wszystkich operacji finansowych i kontrola nad budżetem,",
+          "rozwijanie działalności hotelu"
+        ]
+      }
+    ]
+  }
+]

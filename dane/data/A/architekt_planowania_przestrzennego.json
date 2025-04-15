@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Architekt planowania przestrzennego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-architekt-planowania-przestrzennego",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 84,
+        "related_positions": [
+          {
+            "title": "architekt planowania przestrzennego"
+          },
+          {
+            "title": "urbanista."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6700,
+            "p25": 5540,
+            "p75": 9560
+          },
+          "net": {
+            "median": 4897,
+            "p25": 4106,
+            "p75": 6847
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 55,
+              "percentage": 65
+            },
+            "men": {
+              "count": 29,
+              "percentage": 35
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

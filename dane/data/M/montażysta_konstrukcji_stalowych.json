@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Montażysta konstrukcji stalowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-montazysta-konstrukcji-stalowych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 120,
+        "related_positions": [
+          {
+            "title": "monter konstrukcji stalowych"
+          },
+          {
+            "title": "montażysta konstrukcji stalowych"
+          },
+          {
+            "title": "monter konstrukcji aluminiowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6380,
+            "p25": 5330,
+            "p75": 7990
+          },
+          "net": {
+            "median": 4679,
+            "p25": 3963,
+            "p75": 5777
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 119,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

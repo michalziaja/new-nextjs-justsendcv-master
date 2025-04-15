@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator robotów spawalniczych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-robotow-spawalniczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6690,
+            "p25": 5910,
+            "p75": 7390
+          },
+          "net": {
+            "median": 4890,
+            "p25": 4359,
+            "p75": 5368
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 51,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

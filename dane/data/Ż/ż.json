@@ -1,0 +1,251 @@
+[
+  {
+    "letter": "Ż",
+    "positions": [
+      {
+        "title": "Żałobnik",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": [
+          {
+            "title": "Żałobnik"
+          },
+          {
+            "title": "mistrz ceremonii pogrzebowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 3600,
+            "p25": 3180,
+            "p75": 4900
+          },
+          "net": {
+            "median": 2626,
+            "p25": 2329,
+            "p75": 3543
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 18
+            },
+            "men": {
+              "count": 9,
+              "percentage": 82
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Żołnierz szeregowy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "Żołnierz zawodowy - szeregowy"
+          },
+          {
+            "title": "Żołnierz szeregowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6770,
+            "p25": 5060,
+            "p75": 7290
+          },
+          "net": {
+            "median": 4945,
+            "p25": 3779,
+            "p75": 5299
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 70
+            },
+            {
+              "name": "mieszkanie/dom służbowy",
+              "percentage": 40
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Żołnierz zawodowy - oficer",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10760,
+            "p25": 7460,
+            "p75": 12160
+          },
+          "net": {
+            "median": 7665,
+            "p25": 5416,
+            "p75": 8620
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 45
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 36
+            },
+            {
+              "name": "mieszkanie/dom służbowy",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Żołnierz zawodowy - podoficer",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7200,
+            "p25": 6200,
+            "p75": 8840
+          },
+          "net": {
+            "median": 5238,
+            "p25": 4556,
+            "p75": 6357
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 12,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 41
+            },
+            {
+              "name": "mieszkanie/dom służbowy",
+              "percentage": 25
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 16
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Żołnierz zawodowy - szeregowy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "Żołnierz zawodowy - szeregowy"
+          },
+          {
+            "title": "Żołnierz szeregowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6770,
+            "p25": 5060,
+            "p75": 7290
+          },
+          "net": {
+            "median": 4945,
+            "p25": 3779,
+            "p75": 5299
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 70
+            },
+            {
+              "name": "mieszkanie/dom służbowy",
+              "percentage": 40
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 30
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

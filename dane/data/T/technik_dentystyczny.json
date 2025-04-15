@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik dentystyczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-dentystyczny",
+        "category": [
+          "służba zdrowia",
+          "stomatologia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 48,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6260,
+            "p25": 5170,
+            "p75": 7880
+          },
+          "net": {
+            "median": 4598,
+            "p25": 3855,
+            "p75": 5702
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 41,
+              "percentage": 85
+            },
+            "men": {
+              "count": 7,
+              "percentage": 15
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "naprawa i wytwarzanie protez zębowych,",
+          "naprawa i wytwarzanie aparatów ortodontycznych"
+        ]
+      }
+    ]
+  }
+]

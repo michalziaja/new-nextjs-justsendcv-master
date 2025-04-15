@@ -1,0 +1,71 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor do spraw sprzedaży międzynarodowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-do-spraw-sprzedazy-miedzynarodowej",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. sprzedaży międzynarodowej"
+          },
+          {
+            "title": "dyrektor do spraw sprzedaży międzynarodowej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 21760,
+            "p25": 15330,
+            "p75": 33940
+          },
+          "net": {
+            "median": 15164,
+            "p25": 10781,
+            "p75": 23467
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 36
+            },
+            "men": {
+              "count": 27,
+              "percentage": 64
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 72
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 72
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 63
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "organizacja i zarządzanie całością sprzedaży w regionie obejmującym co najmniej dwa kraje,",
+          "udział w opracowywaniu planów sprzedaży na terenie podległego obszaru,",
+          "tworzenie strategii sprzedażowych, rozwijanie sieci sprzedaży,",
+          "nadzór nad pracą całości działań działu sprzedaży,",
+          "realizacja zaplanowanego obrotu,",
+          "zapewnianie sprawozdawczości sprzedażowej,",
+          "kontakty i negocjacje z kluczowymi klientami z regionu."
+        ]
+      }
+    ]
+  }
+]

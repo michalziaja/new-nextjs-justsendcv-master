@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz ordynator oddziału",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ordynator-oddzialu",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 14350,
+            "p25": 10610,
+            "p75": 18410
+          },
+          "net": {
+            "median": 10112,
+            "p25": 7562,
+            "p75": 12880
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 42
+            },
+            "men": {
+              "count": 7,
+              "percentage": 58
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 25
+            },
+            {
+              "name": "prywatna emerytura",
+              "percentage": 8
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 8
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

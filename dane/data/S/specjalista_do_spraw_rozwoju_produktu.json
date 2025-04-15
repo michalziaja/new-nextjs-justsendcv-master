@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw rozwoju produktu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-rozwoju-produktu",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 250,
+        "related_positions": [
+          {
+            "title": "specjalista ds. rozwoju produktu"
+          },
+          {
+            "title": "specjalista do spraw rozwoju produktu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7910,
+            "p25": 6560,
+            "p75": 9850
+          },
+          "net": {
+            "median": 5722,
+            "p25": 4802,
+            "p75": 7045
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 130,
+              "percentage": 52
+            },
+            "men": {
+              "count": 120,
+              "percentage": 48
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 72
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 58
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 44
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektowanie wdrażanie nowych oraz zmodyfikowanych produktów,",
+          "współpraca z inżynierem procesu w celu wykonania dokumentacji nowego produktu oraz zmian w produkcji danego produktu,",
+          "przekładanie specyfikacji technicznej na szczegółowy plan, opis fazy konstrukcji,",
+          "optymalizacja procesów technologicznych produkcji zaprojektowanych produktów,",
+          "sporządzanie kalkulacji kosztu surowcowego nowych wyrobów."
+        ]
+      }
+    ]
+  }
+]

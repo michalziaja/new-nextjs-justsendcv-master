@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Szkutnik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-szkutnik",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6420,
+            "p25": 5420,
+            "p75": 7300
+          },
+          "net": {
+            "median": 4706,
+            "p25": 4025,
+            "p75": 5306
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 31
+            },
+            "men": {
+              "count": 9,
+              "percentage": 69
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

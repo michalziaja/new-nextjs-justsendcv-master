@@ -1,0 +1,2854 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Laborant budowlany",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 85,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5180,
+            "p75": 7160
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3862,
+            "p75": 5211
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 18
+            },
+            "men": {
+              "count": 70,
+              "percentage": 82
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Laborant chemiczny",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 247,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5570,
+                "p25": 5000,
+                "p75": 6460
+              },
+              "net": {
+                "median": 4127,
+                "p25": 3738,
+                "p75": 4734
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 173,
+                "percentage": 76
+              },
+              "men": {
+                "count": 55,
+                "percentage": 24
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5850,
+                "p25": 5180,
+                "p75": 7130
+              },
+              "net": {
+                "median": 4318,
+                "p25": 3862,
+                "p75": 5191
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 185,
+                "percentage": 75
+              },
+              "men": {
+                "count": 62,
+                "percentage": 25
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6270,
+                "p25": 5590,
+                "p75": 7620
+              },
+              "net": {
+                "median": 4604,
+                "p25": 4140,
+                "p75": 5525
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 59,
+                "percentage": 74
+              },
+              "men": {
+                "count": 21,
+                "percentage": 26
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "wykonywanie analiz surowców, półproduktów, materiałów pomocniczych i wyrobów gotowych,",
+          "wydawanie opinii o jakości badanych materiałów pod kątem zgodności z normami,",
+          "przygotowywanie informacji na potrzeby innych działów,",
+          "wykonywanie analiz związanych z warunkami pracy."
+        ]
+      },
+      {
+        "title": "Laborant mikrobiologiczny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 65,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5620,
+            "p25": 5100,
+            "p75": 6550
+          },
+          "net": {
+            "median": 4161,
+            "p25": 3807,
+            "p75": 4795
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 57,
+              "percentage": 88
+            },
+            "men": {
+              "count": 8,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lakiernik",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 239,
+        "related_positions": [
+          {
+            "title": "lakiernik"
+          },
+          {
+            "title": "lakiernik samochodowy"
+          },
+          {
+            "title": "lakiernik proszkowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6330,
+            "p25": 5470,
+            "p75": 7810
+          },
+          "net": {
+            "median": 4646,
+            "p25": 4059,
+            "p75": 5654
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 2
+            },
+            "men": {
+              "count": 235,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizacja prac lakierniczych polegających na malowaniu powierzchni, malowaniu aplikacji standardowych za pomocą sprzętu natryskowego,",
+          "nadzór i sprawdzanie jakości powłok lakierniczych poprzez dokonanie pomiarów za pomocą odpowiednich mierników,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Lakiernik proszkowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 239,
+        "related_positions": [
+          {
+            "title": "lakiernik"
+          },
+          {
+            "title": "lakiernik samochodowy"
+          },
+          {
+            "title": "lakiernik proszkowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6330,
+            "p25": 5470,
+            "p75": 7810
+          },
+          "net": {
+            "median": 4646,
+            "p25": 4059,
+            "p75": 5654
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 2
+            },
+            "men": {
+              "count": 235,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizacja prac lakierniczych polegających na malowaniu powierzchni, malowaniu aplikacji standardowych za pomocą sprzętu natryskowego,",
+          "nadzór i sprawdzanie jakości powłok lakierniczych poprzez dokonanie pomiarów za pomocą odpowiednich mierników,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Lakiernik samochodowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 239,
+        "related_positions": [
+          {
+            "title": "lakiernik"
+          },
+          {
+            "title": "lakiernik samochodowy"
+          },
+          {
+            "title": "lakiernik proszkowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6330,
+            "p25": 5470,
+            "p75": 7810
+          },
+          "net": {
+            "median": 4646,
+            "p25": 4059,
+            "p75": 5654
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 2
+            },
+            "men": {
+              "count": 235,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizacja prac lakierniczych polegających na malowaniu powierzchni, malowaniu aplikacji standardowych za pomocą sprzętu natryskowego,",
+          "nadzór i sprawdzanie jakości powłok lakierniczych poprzez dokonanie pomiarów za pomocą odpowiednich mierników,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      },
+      {
+        "title": "Lakiernik tworzyw sztucznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5920,
+            "p25": 5560,
+            "p75": 6940
+          },
+          "net": {
+            "median": 4366,
+            "p25": 4120,
+            "p75": 5061
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lakiernik wyrobów drzewnych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6610,
+            "p25": 5550,
+            "p75": 7720
+          },
+          "net": {
+            "median": 4836,
+            "p25": 4113,
+            "p75": 5593
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 25,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Laminater",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5500,
+            "p25": 4600,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4079,
+            "p25": 3466,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 10
+            },
+            "men": {
+              "count": 9,
+              "percentage": 90
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            },
+            {
+              "name": "prywatna emerytura",
+              "percentage": 10
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Laminiarz",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5570,
+            "p25": 5270,
+            "p75": 6470
+          },
+          "net": {
+            "median": 4127,
+            "p25": 3922,
+            "p75": 4740
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 20
+            },
+            "men": {
+              "count": 16,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lean Manufacturing Manager",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 187,
+        "related_positions": [
+          {
+            "title": "kierownik ds. Lean Manufacturing"
+          },
+          {
+            "title": "lean Manufacturing Manager"
+          },
+          {
+            "title": "kierownik do spraw Lean Manufacturing."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 14780,
+            "p25": 11720,
+            "p75": 18470
+          },
+          "net": {
+            "median": 10406,
+            "p25": 8319,
+            "p75": 12920
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 24
+            },
+            "men": {
+              "count": 143,
+              "percentage": 76
+            }
+          },
+          "benefits": [
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 73
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 60
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 60
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lean Specialist",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 276,
+        "related_positions": [
+          {
+            "title": "specjalista ds. Lean Manufacturing"
+          },
+          {
+            "title": "lean Specialist"
+          },
+          {
+            "title": "specjalista lean"
+          },
+          {
+            "title": "specjalista do spraw Lean Manufacturing."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8510,
+            "p25": 7100,
+            "p75": 10760
+          },
+          "net": {
+            "median": 6131,
+            "p25": 5170,
+            "p75": 7665
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 113,
+              "percentage": 41
+            },
+            "men": {
+              "count": 163,
+              "percentage": 59
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 70
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 55
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 50
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Legalizator",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5540,
+            "p25": 5290,
+            "p75": 6570
+          },
+          "net": {
+            "median": 4106,
+            "p25": 3936,
+            "p75": 4809
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 74
+            },
+            "men": {
+              "count": 5,
+              "percentage": 26
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Legislator",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9610,
+            "p25": 8240,
+            "p75": 12250
+          },
+          "net": {
+            "median": 6881,
+            "p25": 5947,
+            "p75": 8680
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 50
+            },
+            "men": {
+              "count": 8,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 141,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10920,
+            "p25": 8320,
+            "p75": 15610
+          },
+          "net": {
+            "median": 7774,
+            "p25": 6002,
+            "p75": 10972
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 84,
+              "percentage": 60
+            },
+            "men": {
+              "count": 57,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "diagnoza i leczenie chorób,",
+          "działania profilaktyczne,",
+          "przeprowadzanie badań diagnostycznych oraz w razie konieczności zabiegów i operacji"
+        ]
+      },
+      {
+        "title": "Lekarz - chirurg ogólny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 41,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12320,
+            "p25": 9180,
+            "p75": 19000
+          },
+          "net": {
+            "median": 8728,
+            "p25": 6587,
+            "p75": 13283
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 24
+            },
+            "men": {
+              "count": 31,
+              "percentage": 76
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz - chirurg stomatologiczny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4540,
+            "p25": 3790,
+            "p75": 5840
+          },
+          "net": {
+            "median": 3230,
+            "p25": 2707,
+            "p75": 4136
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 27
+            },
+            "men": {
+              "count": 8,
+              "percentage": 73
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz anestezjolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15020,
+            "p25": 11700,
+            "p75": 18710
+          },
+          "net": {
+            "median": 10569,
+            "p25": 8305,
+            "p75": 13085
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 40
+            },
+            "men": {
+              "count": 15,
+              "percentage": 60
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz chorób wewnętrznych",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 60,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13900,
+            "p25": 11300,
+            "p75": 18100
+          },
+          "net": {
+            "median": 9806,
+            "p25": 8033,
+            "p75": 12669
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 62
+            },
+            "men": {
+              "count": 23,
+              "percentage": 38
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz dentysta",
+        "category": [
+          "służba zdrowia",
+          "stomatologia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": [
+          {
+            "title": "stomatolog"
+          },
+          {
+            "title": "lekarz dentysta."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9310,
+            "p25": 8350,
+            "p75": 13390
+          },
+          "net": {
+            "median": 6677,
+            "p25": 6022,
+            "p75": 9458
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 50
+            },
+            "men": {
+              "count": 11,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka stomatologiczna nad pacjentami,",
+          "działalność profilaktyczna, lecznicza i rehabilitacyjna jamy ustnej"
+        ]
+      },
+      {
+        "title": "Lekarz gastroenterolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": [
+          {
+            "title": "lekarz gastroenterolog"
+          },
+          {
+            "title": "lekarz gastrolog."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6130,
+            "p25": 4600,
+            "p75": 8450
+          },
+          "net": {
+            "median": 4411,
+            "p25": 3405,
+            "p75": 6047
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 77
+            },
+            "men": {
+              "count": 3,
+              "percentage": 23
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 38
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 15
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 7
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz gastrolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": [
+          {
+            "title": "lekarz gastroenterolog"
+          },
+          {
+            "title": "lekarz gastrolog."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6130,
+            "p25": 4600,
+            "p75": 8450
+          },
+          "net": {
+            "median": 4411,
+            "p25": 3405,
+            "p75": 6047
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 77
+            },
+            "men": {
+              "count": 3,
+              "percentage": 23
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 38
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 15
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 7
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz ginekolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10220,
+            "p25": 8250,
+            "p75": 15220
+          },
+          "net": {
+            "median": 7297,
+            "p25": 5954,
+            "p75": 10705
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 54
+            },
+            "men": {
+              "count": 6,
+              "percentage": 46
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz kardiolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12000,
+            "p25": 10320,
+            "p75": 18310
+          },
+          "net": {
+            "median": 8510,
+            "p25": 7365,
+            "p75": 12812
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 32
+            },
+            "men": {
+              "count": 13,
+              "percentage": 68
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz laryngolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": [
+          {
+            "title": "lekarz laryngolog"
+          },
+          {
+            "title": "lekarz otolaryngolog."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5940,
+            "p25": 5040,
+            "p75": 10700
+          },
+          "net": {
+            "median": 4276,
+            "p25": 3686,
+            "p75": 7333
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 75
+            },
+            "men": {
+              "count": 4,
+              "percentage": 25
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 7
+            },
+            {
+              "name": "prywatna opieka medyczna",
+              "percentage": 7
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz medycyny pracy",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9360,
+            "p25": 7430,
+            "p75": 12260
+          },
+          "net": {
+            "median": 6711,
+            "p25": 5395,
+            "p75": 8688
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 10
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz neurolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13850,
+            "p25": 10020,
+            "p75": 22280
+          },
+          "net": {
+            "median": 9772,
+            "p25": 7160,
+            "p75": 15518
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 80
+            },
+            "men": {
+              "count": 2,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz okulista",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6990,
+            "p25": 4080,
+            "p75": 9900
+          },
+          "net": {
+            "median": 4937,
+            "p25": 2910,
+            "p75": 6965
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 62
+            },
+            "men": {
+              "count": 5,
+              "percentage": 38
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz onkolog kliniczny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 14780,
+            "p25": 12320,
+            "p75": 16620
+          },
+          "net": {
+            "median": 10406,
+            "p25": 8728,
+            "p75": 11660
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 46
+            },
+            "men": {
+              "count": 7,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz ordynator oddziału",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 14350,
+            "p25": 10610,
+            "p75": 18410
+          },
+          "net": {
+            "median": 10112,
+            "p25": 7562,
+            "p75": 12880
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 42
+            },
+            "men": {
+              "count": 7,
+              "percentage": 58
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 25
+            },
+            {
+              "name": "prywatna emerytura",
+              "percentage": 8
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 8
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz ortopeda",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "lekarz ortopeda"
+          },
+          {
+            "title": "traumatolog narządu ruchu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 15610,
+            "p25": 9650,
+            "p75": 19670
+          },
+          "net": {
+            "median": 10972,
+            "p25": 6909,
+            "p75": 13739
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 20
+            },
+            "men": {
+              "count": 12,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz otolaryngolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": [
+          {
+            "title": "lekarz laryngolog"
+          },
+          {
+            "title": "lekarz otolaryngolog."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5940,
+            "p25": 5040,
+            "p75": 10700
+          },
+          "net": {
+            "median": 4276,
+            "p25": 3686,
+            "p75": 7333
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 75
+            },
+            "men": {
+              "count": 4,
+              "percentage": 25
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 7
+            },
+            {
+              "name": "prywatna opieka medyczna",
+              "percentage": 7
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz pediatra",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 47,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12660,
+            "p25": 9740,
+            "p75": 16860
+          },
+          "net": {
+            "median": 8960,
+            "p25": 6969,
+            "p75": 11823
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 79
+            },
+            "men": {
+              "count": 10,
+              "percentage": 21
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz psychiatra",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 32,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15560,
+            "p25": 11410,
+            "p75": 23570
+          },
+          "net": {
+            "median": 10937,
+            "p25": 8108,
+            "p75": 16397
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 56
+            },
+            "men": {
+              "count": 14,
+              "percentage": 44
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz pulmonolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7080,
+            "p25": 5970,
+            "p75": 8730
+          },
+          "net": {
+            "median": 5080,
+            "p25": 4297,
+            "p75": 6244
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz radiolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11560,
+            "p25": 9490,
+            "p75": 15210
+          },
+          "net": {
+            "median": 8210,
+            "p25": 6799,
+            "p75": 10698
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 42
+            },
+            "men": {
+              "count": 11,
+              "percentage": 58
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz rodzinny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 77,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15640,
+            "p25": 10000,
+            "p75": 19560
+          },
+          "net": {
+            "median": 10991,
+            "p25": 7147,
+            "p75": 13664
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 61,
+              "percentage": 79
+            },
+            "men": {
+              "count": 16,
+              "percentage": 21
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "sprawowanie opieki nad chorymi (wszystkie grupy wiekowe w rodzinie),",
+          "stawianie diagnozy pozwalającej na leczenie lub skierowanie do specjalisty,",
+          "wykonywanie badań podstawowych,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach,",
+          "podejmowanie działań zmierzających do zapobiegania chorobom i promocji zdrowia"
+        ]
+      },
+      {
+        "title": "Lekarz specjalista II stopnia",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 89,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10110,
+            "p25": 7930,
+            "p75": 14310
+          },
+          "net": {
+            "median": 7222,
+            "p25": 5736,
+            "p75": 10085
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 52,
+              "percentage": 58
+            },
+            "men": {
+              "count": 37,
+              "percentage": 42
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz specjalista I stopnia",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 94,
+        "related_positions": [
+          {
+            "title": "lekarz specjalista I stopnia"
+          },
+          {
+            "title": "lekarz ze specjalizacją I stopnia."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7420,
+            "p25": 5960,
+            "p75": 9350
+          },
+          "net": {
+            "median": 5388,
+            "p25": 4393,
+            "p75": 6704
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 56,
+              "percentage": 60
+            },
+            "men": {
+              "count": 38,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz stażysta",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 43,
+        "related_positions": [
+          {
+            "title": "lekarz stażysta"
+          },
+          {
+            "title": "rezydent."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7910,
+            "p25": 5930,
+            "p75": 11050
+          },
+          "net": {
+            "median": 5722,
+            "p25": 4372,
+            "p75": 7863
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 44
+            },
+            "men": {
+              "count": 24,
+              "percentage": 56
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lekarz weterynarii",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 167,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7540,
+            "p25": 6210,
+            "p75": 9180
+          },
+          "net": {
+            "median": 5470,
+            "p25": 4563,
+            "p75": 6587
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 133,
+              "percentage": 80
+            },
+            "men": {
+              "count": 34,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "leczenie zwierząt domowych oraz hodowlanych,",
+          "rozpoznawanie chorób,",
+          "działania profilaktyczne (np. szczepienia)"
+        ]
+      },
+      {
+        "title": "Lekarz ze specjalizacją I stopnia",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 94,
+        "related_positions": [
+          {
+            "title": "lekarz specjalista I stopnia"
+          },
+          {
+            "title": "lekarz ze specjalizacją I stopnia."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7420,
+            "p25": 5960,
+            "p75": 9350
+          },
+          "net": {
+            "median": 5388,
+            "p25": 4393,
+            "p75": 6704
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 56,
+              "percentage": 60
+            },
+            "men": {
+              "count": 38,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lektor języka obcego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 75,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6300,
+            "p25": 5280,
+            "p75": 8790
+          },
+          "net": {
+            "median": 4625,
+            "p25": 3929,
+            "p75": 6322
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 65,
+              "percentage": 87
+            },
+            "men": {
+              "count": 10,
+              "percentage": 13
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 20
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie szkoleń językowych i/lub językowych zajęć edukacyjnych,",
+          "opracowywanie planów zajęć/szkoleń,",
+          "nadzorowanie posępów uczniów/uczestników szkoleń"
+        ]
+      },
+      {
+        "title": "Level designer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7440,
+            "p25": 6170,
+            "p75": 8470
+          },
+          "net": {
+            "median": 5402,
+            "p25": 4536,
+            "p75": 6104
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 29
+            },
+            "men": {
+              "count": 10,
+              "percentage": 71
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Leśniczy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10210,
+            "p25": 7920,
+            "p75": 11680
+          },
+          "net": {
+            "median": 7290,
+            "p25": 5729,
+            "p75": 8293
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 9
+            },
+            "men": {
+              "count": 20,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie lasami należącymi do Skarbu Państwa (z pominięciem Parków Narodowych),",
+          "prowadzenie gospodarki leśnej i ochrona lasów,",
+          "zwalczanie przestępsyw i wykroczeń w zakresie szkodnictwa leśnego"
+        ]
+      },
+      {
+        "title": "Liczarz",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3690,
+            "p25": 3400,
+            "p75": 4020
+          },
+          "net": {
+            "median": 2846,
+            "p25": 2648,
+            "p75": 3071
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 46
+            },
+            "men": {
+              "count": 7,
+              "percentage": 54
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 15
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 15
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 7
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lider klubu pracy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 40,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7810,
+            "p25": 6100,
+            "p75": 10460
+          },
+          "net": {
+            "median": 5654,
+            "p25": 4488,
+            "p75": 7461
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 30
+            },
+            "men": {
+              "count": 28,
+              "percentage": 70
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lider laboratorium",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 329,
+        "related_positions": [
+          {
+            "title": "kierownik laboratorium"
+          },
+          {
+            "title": "lider laboratorium."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9640,
+            "p25": 7540,
+            "p75": 11660
+          },
+          "net": {
+            "median": 6902,
+            "p25": 5470,
+            "p75": 8279
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 184,
+              "percentage": 56
+            },
+            "men": {
+              "count": 145,
+              "percentage": 44
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 58
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 51
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie pracą laboratorium,",
+          "organizacja pracy laborantów - koordynacja i kontrola,",
+          "zapewnienie sprzętu, szkła laboratoryjnego i odczynników,",
+          "prowadzenie pełnej dokumentacji w zakresie wykonywanych badań,",
+          "bieżąca kontrola przestrzegania przepisów BHP w laboratorium,",
+          "sprawowanie nadzoru nad powierzonymi środkami trwałymi i obrotowymi,",
+          "zatwierdzanie sprawozdań z badań wraz z opiniami i interpretacją wyników,",
+          "zatwierdzanie procedur i instrukcji metodycznych,",
+          "planowanie i nadzór nad wdrażaniem nowych metod badawczych."
+        ]
+      },
+      {
+        "title": "Lider magazynu",
+        "category": [
+          "magazyn"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1923,
+        "related_positions": [
+          {
+            "title": "kierownik magazynu"
+          },
+          {
+            "title": "koordynator magazynu"
+          },
+          {
+            "title": "kierownik magazynów"
+          },
+          {
+            "title": "lider magazynu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7010,
+            "p25": 6100,
+            "p75": 8350
+          },
+          "net": {
+            "median": 5109,
+            "p25": 4488,
+            "p75": 6022
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 247,
+              "percentage": 13
+            },
+            "men": {
+              "count": 1676,
+              "percentage": 87
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 35
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 23
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 22
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za sprawne funkcjonowanie magazynu,",
+          "organizowanie pracy personelu magazynu,",
+          "planowanie, nadzór i koordynacja przepływu towarów,",
+          "planowanie optymalnego wykorzystania przestrzeni magazynowej,",
+          "kontrola dokumentacji przepływu towarów,",
+          "przeprowadzanie inspekcji magazynu oraz jego wyposażenia"
+        ]
+      },
+      {
+        "title": "Lider zespołu call center",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 103,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7020,
+            "p25": 5850,
+            "p75": 8990
+          },
+          "net": {
+            "median": 5115,
+            "p25": 4318,
+            "p75": 6458
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 51,
+              "percentage": 50
+            },
+            "men": {
+              "count": 52,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Lider zespołu w dziale obsługi klienta",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 310,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7920,
+            "p25": 6200,
+            "p75": 10260
+          },
+          "net": {
+            "median": 5729,
+            "p25": 4556,
+            "p75": 7325
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 200,
+              "percentage": 65
+            },
+            "men": {
+              "count": 110,
+              "percentage": 35
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 69
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 57
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie i wsparcie zespołu ds. obsługi klienta,",
+          "dbanie o wysoki standard i jakość świadczonych przez zespół usług,",
+          "nawiązywanie i utrzymanie stałego kontaktu z klientami, dbanie o ich satysfakcję"
+        ]
+      },
+      {
+        "title": "Likwidator szkód",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 180,
+        "related_positions": [
+          {
+            "title": "likwidator szkód"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód majątkowych"
+          },
+          {
+            "title": "likwidator szkód komunikacyjnych"
+          },
+          {
+            "title": "likwidator szkód majątkowych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód majątkowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6100,
+                "p25": 5280,
+                "p75": 6940
+              },
+              "net": {
+                "median": 4488,
+                "p25": 3929,
+                "p75": 5061
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 61
+              },
+              "men": {
+                "count": 25,
+                "percentage": 39
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7270,
+                "p25": 6220,
+                "p75": 8840
+              },
+              "net": {
+                "median": 5286,
+                "p25": 4570,
+                "p75": 6357
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 66
+              },
+              "men": {
+                "count": 62,
+                "percentage": 34
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 66
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8480,
+                "p25": 7030,
+                "p75": 10160
+              },
+              "net": {
+                "median": 6111,
+                "p25": 5122,
+                "p75": 7256
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 62,
+                "percentage": 58
+              },
+              "men": {
+                "count": 45,
+                "percentage": 42
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "dokonywanie oględzin szkód (majątkowych, komunikacyjnych),",
+          "wycena szkód,",
+          "sporządzanie raportów,",
+          "obsługa klientów"
+        ]
+      },
+      {
+        "title": "Likwidator szkód komunikacyjnych",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 180,
+        "related_positions": [
+          {
+            "title": "likwidator szkód"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód majątkowych"
+          },
+          {
+            "title": "likwidator szkód komunikacyjnych"
+          },
+          {
+            "title": "likwidator szkód majątkowych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód majątkowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6100,
+                "p25": 5280,
+                "p75": 6940
+              },
+              "net": {
+                "median": 4488,
+                "p25": 3929,
+                "p75": 5061
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 61
+              },
+              "men": {
+                "count": 25,
+                "percentage": 39
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7270,
+                "p25": 6220,
+                "p75": 8840
+              },
+              "net": {
+                "median": 5286,
+                "p25": 4570,
+                "p75": 6357
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 66
+              },
+              "men": {
+                "count": 62,
+                "percentage": 34
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 66
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8480,
+                "p25": 7030,
+                "p75": 10160
+              },
+              "net": {
+                "median": 6111,
+                "p25": 5122,
+                "p75": 7256
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 62,
+                "percentage": 58
+              },
+              "men": {
+                "count": 45,
+                "percentage": 42
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "dokonywanie oględzin szkód (majątkowych, komunikacyjnych),",
+          "wycena szkód,",
+          "sporządzanie raportów,",
+          "obsługa klientów"
+        ]
+      },
+      {
+        "title": "Likwidator szkód majątkowych",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 180,
+        "related_positions": [
+          {
+            "title": "likwidator szkód"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista ds. likwidacji szkód majątkowych"
+          },
+          {
+            "title": "likwidator szkód komunikacyjnych"
+          },
+          {
+            "title": "likwidator szkód majątkowych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód komunikacyjnych"
+          },
+          {
+            "title": "specjalista do spraw likwidacji szkód majątkowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6100,
+                "p25": 5280,
+                "p75": 6940
+              },
+              "net": {
+                "median": 4488,
+                "p25": 3929,
+                "p75": 5061
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 61
+              },
+              "men": {
+                "count": 25,
+                "percentage": 39
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7270,
+                "p25": 6220,
+                "p75": 8840
+              },
+              "net": {
+                "median": 5286,
+                "p25": 4570,
+                "p75": 6357
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 66
+              },
+              "men": {
+                "count": 62,
+                "percentage": 34
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 66
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8480,
+                "p25": 7030,
+                "p75": 10160
+              },
+              "net": {
+                "median": 6111,
+                "p25": 5122,
+                "p75": 7256
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 62,
+                "percentage": 58
+              },
+              "men": {
+                "count": 45,
+                "percentage": 42
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "dokonywanie oględzin szkód (majątkowych, komunikacyjnych),",
+          "wycena szkód,",
+          "sporządzanie raportów,",
+          "obsługa klientów"
+        ]
+      },
+      {
+        "title": "Listonosz",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 33,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5160,
+            "p25": 4590,
+            "p75": 6170
+          },
+          "net": {
+            "median": 3848,
+            "p25": 3459,
+            "p75": 4536
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 45
+            },
+            "men": {
+              "count": 18,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Logistics Specialist",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1957,
+        "related_positions": [
+          {
+            "title": "specjalista ds. logistyki"
+          },
+          {
+            "title": "logistics Specialist"
+          },
+          {
+            "title": "specjalista do spraw logistyki."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5750,
+                "p25": 5160,
+                "p75": 6750
+              },
+              "net": {
+                "median": 4250,
+                "p25": 3848,
+                "p75": 4931
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 144,
+                "percentage": 44
+              },
+              "men": {
+                "count": 185,
+                "percentage": 56
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 47
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 47
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 34
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 6060,
+                "p75": 8840
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4462,
+                "p75": 6357
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 957,
+                "percentage": 49
+              },
+              "men": {
+                "count": 1000,
+                "percentage": 51
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 45
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 43
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8320,
+                "p25": 6950,
+                "p75": 10130
+              },
+              "net": {
+                "median": 6002,
+                "p25": 5067,
+                "p75": 7235
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 236,
+                "percentage": 43
+              },
+              "men": {
+                "count": 317,
+                "percentage": 57
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 65
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 57
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 45
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "kontrola nad przemieszczaniem się surowców, materiałów i towarów,",
+          "organizacja dostaw,",
+          "przyjmowanie zamówień od firm,",
+          "optymalizowanie pracy magazynów i przystosowywanie ich do wymagań odbiorców."
+        ]
+      },
+      {
+        "title": "Logopeda",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 68,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6900,
+            "p25": 5970,
+            "p75": 11590
+          },
+          "net": {
+            "median": 5034,
+            "p25": 4400,
+            "p75": 8231
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 67,
+              "percentage": 99
+            },
+            "men": {
+              "count": 1,
+              "percentage": 1
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "pomoc osobom z zaburzeniami mowy,",
+          "wykonywanie specjalistycznych badań i analiza ich wyników,",
+          "rozpoznawanie choroby i stanu zaburzeń,",
+          "ustalanie i przeprowadzanie terapii"
+        ]
+      },
+      {
+        "title": "Lutowacz",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5450,
+            "p25": 5120,
+            "p75": 5900
+          },
+          "net": {
+            "median": 4046,
+            "p25": 3820,
+            "p75": 4352
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 20
+            },
+            "men": {
+              "count": 12,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

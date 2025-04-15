@@ -1,0 +1,154 @@
+[
+  {
+    "letter": "J",
+    "positions": [
+      {
+        "title": "Java software developer",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-java-software-developer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 965,
+        "related_positions": [
+          {
+            "title": "programista Java"
+          },
+          {
+            "title": "java developer"
+          },
+          {
+            "title": "java software developer."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8620,
+                "p25": 7000,
+                "p75": 11000
+              },
+              "net": {
+                "median": 6206,
+                "p25": 5102,
+                "p75": 7829
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 84,
+                "percentage": 18
+              },
+              "men": {
+                "count": 396,
+                "percentage": 83
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 61
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 61
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 57
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13300,
+                "p25": 11010,
+                "p75": 16170
+              },
+              "net": {
+                "median": 9397,
+                "p25": 7835,
+                "p75": 11353
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 12
+              },
+              "men": {
+                "count": 847,
+                "percentage": 88
+              }
+            },
+            "benefits": [
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 80
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 76
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 76
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 18670,
+                "p25": 16070,
+                "p75": 22890
+              },
+              "net": {
+                "median": 13057,
+                "p25": 11285,
+                "p75": 15934
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 34,
+                "percentage": 6
+              },
+              "men": {
+                "count": 582,
+                "percentage": 94
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 71
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 60
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 53
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "tworzy kody źródłowe programów w języku Java,",
+          "programuje i testuje systemy informatyczne,",
+          "współpracuje z analitykami i projektantami systemów informatycznych oraz członkami zespołów wdrażających oprogramowanie,",
+          "poszukuje rozwiązań optymalizujących oprogramowanie,",
+          "uzupełnia dokumentację techniczną systemu związaną z rozwijanym oprogramowaniem."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik biura rachunkowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-biura-rachunkowego",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10200,
+            "p25": 8340,
+            "p75": 12730
+          },
+          "net": {
+            "median": 7283,
+            "p25": 6015,
+            "p75": 9008
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 100
+            },
+            "men": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

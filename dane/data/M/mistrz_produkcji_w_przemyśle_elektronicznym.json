@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mistrz produkcji w przemyśle elektronicznym",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mistrz-produkcji-w-przemysle-elektronicznym",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7170,
+            "p25": 5830,
+            "p75": 8440
+          },
+          "net": {
+            "median": 5218,
+            "p25": 4304,
+            "p75": 6083
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 17
+            },
+            "men": {
+              "count": 10,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista plc",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-plc",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 272,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7280,
+                "p25": 6120,
+                "p75": 8700
+              },
+              "net": {
+                "median": 5293,
+                "p25": 4502,
+                "p75": 6261
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 5,
+                "percentage": 3
+              },
+              "men": {
+                "count": 161,
+                "percentage": 97
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 55
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 55
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 55
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9720,
+                "p25": 8130,
+                "p75": 12110
+              },
+              "net": {
+                "median": 6957,
+                "p25": 5872,
+                "p75": 8585
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 11,
+                "percentage": 4
+              },
+              "men": {
+                "count": 261,
+                "percentage": 96
+              }
+            },
+            "benefits": [
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 65
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 60
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 43
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12000,
+                "p25": 9960,
+                "p75": 14270
+              },
+              "net": {
+                "median": 8510,
+                "p25": 7120,
+                "p75": 10057
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 6
+              },
+              "men": {
+                "count": 99,
+                "percentage": 94
+              }
+            },
+            "benefits": [
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 56
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 50
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 43
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

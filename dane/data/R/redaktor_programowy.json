@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Redaktor programowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-redaktor-programowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8190,
+            "p25": 6190,
+            "p75": 9330
+          },
+          "net": {
+            "median": 5913,
+            "p25": 4550,
+            "p75": 6690
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 55
+            },
+            "men": {
+              "count": 5,
+              "percentage": 45
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

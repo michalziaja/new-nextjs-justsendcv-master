@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor do spraw sanitarnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-do-spraw-sanitarnych",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 57,
+        "related_positions": [
+          {
+            "title": "inspektor sanitarny"
+          },
+          {
+            "title": "inspektor ds. sanitarnych"
+          },
+          {
+            "title": "inspektor do spraw sanitarnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7130,
+            "p25": 6260,
+            "p75": 9740
+          },
+          "net": {
+            "median": 5191,
+            "p25": 4598,
+            "p75": 6969
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 27,
+              "percentage": 47
+            },
+            "men": {
+              "count": 30,
+              "percentage": 53
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

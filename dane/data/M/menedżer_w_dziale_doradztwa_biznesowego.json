@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Menedżer w dziale doradztwa biznesowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-menedzer-w-dziale-doradztwa-biznesowego",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 20010,
+            "p25": 11320,
+            "p75": 25550
+          },
+          "net": {
+            "median": 13971,
+            "p25": 8047,
+            "p75": 17747
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 47
+            },
+            "men": {
+              "count": 10,
+              "percentage": 53
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za organizację projektów doradczych, audytorskich i wdrożeniowych (ustalenie harmonogramu, terminu projektu oraz dobór zespołu konsultantów),",
+          "budowanie długoterminowych relacji z klientem (zarząd, dyrektorzy działów)",
+          "prowadzenie negocjacji cenowych i podpisywanie umów z klientem",
+          "nadzorowanie przygotowania projektu,",
+          "przedstawianie i omówienie z klientem wniosków z przeglądów podatkowych",
+          "realizacja zadań sprzedażowych w ramach ustalonego budżetu,",
+          "odpowiedzialność za zatrudnianie, szkolenie, motywowanie pracowników,",
+          "ocenianie pracy konsultantów,",
+          "udział w seminariach i konferencjach branżowych"
+        ]
+      }
+    ]
+  }
+]

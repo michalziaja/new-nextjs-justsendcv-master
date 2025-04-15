@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. szkoleń",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-szkolen",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 300,
+        "related_positions": [
+          {
+            "title": "specjalista ds. szkoleń"
+          },
+          {
+            "title": "specjalista ds. organizacji szkoleń"
+          },
+          {
+            "title": "specjalista do spraw szkoleń"
+          },
+          {
+            "title": "specjalista do spraw organizacji szkoleń."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6140,
+                "p25": 5520,
+                "p75": 7160
+              },
+              "net": {
+                "median": 4515,
+                "p25": 4093,
+                "p75": 5211
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 54,
+                "percentage": 86
+              },
+              "men": {
+                "count": 9,
+                "percentage": 14
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7240,
+                "p25": 5930,
+                "p75": 8620
+              },
+              "net": {
+                "median": 5265,
+                "p25": 4372,
+                "p75": 6206
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 230,
+                "percentage": 77
+              },
+              "men": {
+                "count": 70,
+                "percentage": 23
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 76
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 69
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 53
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9290,
+                "p25": 6910,
+                "p75": 12270
+              },
+              "net": {
+                "median": 6663,
+                "p25": 5040,
+                "p75": 8694
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 110,
+                "percentage": 71
+              },
+              "men": {
+                "count": 44,
+                "percentage": 29
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 72
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 72
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 63
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "monitorowanie potrzeb szkoleniowych przedsiębiorstwa,",
+          "organizowanie szkoleń i nadzór nad ich realizacją,",
+          "współtworzenie polityki rozwoju pracowników i jej realizacja,",
+          "przeprowadzanie prostych szkoleń,",
+          "ocena efektywności szkoleń,",
+          "współpraca z firmami szkoleniowymi."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "letter": "C",
+    "positions": [
+      {
+        "title": "Compliance officer",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-compliance-officer",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 153,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7500,
+                "p25": 6400,
+                "p75": 8500
+              },
+              "net": {
+                "median": 5442,
+                "p25": 4693,
+                "p75": 6125
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 24,
+                "percentage": 53
+              },
+              "men": {
+                "count": 21,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9770,
+                "p25": 7790,
+                "p75": 12320
+              },
+              "net": {
+                "median": 6990,
+                "p25": 5640,
+                "p75": 8728
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 90,
+                "percentage": 59
+              },
+              "men": {
+                "count": 63,
+                "percentage": 41
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 73
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 69
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13430,
+                "p25": 10550,
+                "p75": 16480
+              },
+              "net": {
+                "median": 9485,
+                "p25": 7522,
+                "p75": 11564
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 113,
+                "percentage": 61
+              },
+              "men": {
+                "count": 73,
+                "percentage": 39
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 78
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 73
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 60
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pomoc dentystyczna",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pomoc-dentystyczna",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4500,
+            "p25": 3600,
+            "p75": 5050
+          },
+          "net": {
+            "median": 3398,
+            "p25": 2784,
+            "p75": 3772
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 82
+            },
+            "men": {
+              "count": 2,
+              "percentage": 18
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 27
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 9
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 9
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

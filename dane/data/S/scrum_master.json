@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Scrum Master",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-scrum-master",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 293,
+        "related_positions": [
+          {
+            "title": "scrum Master"
+          },
+          {
+            "title": "agile coach."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 14780,
+            "p25": 11010,
+            "p75": 18500
+          },
+          "net": {
+            "median": 10406,
+            "p25": 7835,
+            "p75": 12941
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 170,
+              "percentage": 58
+            },
+            "men": {
+              "count": 123,
+              "percentage": 42
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. planowania produkcji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-planowania-produkcji",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 234,
+        "related_positions": [
+          {
+            "title": "kierownik ds. planowania produkcji"
+          },
+          {
+            "title": "kierownik do spraw planowania produkcji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10800,
+            "p25": 8480,
+            "p75": 13980
+          },
+          "net": {
+            "median": 7693,
+            "p25": 6111,
+            "p75": 9860
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 73,
+              "percentage": 31
+            },
+            "men": {
+              "count": 161,
+              "percentage": 69
+            }
+          },
+          "benefits": [
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 50
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 43
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za przygotowanie planów produkcyjnych przedsiębiorstwa,",
+          "uczestniczenie w planowaniu strategii produkcyjnej firmy,",
+          "współpraca z działem marketingu i sprzedaży w zakresie wymiany informacji dotyczących zapotrzebowania na określony asortyment w różnych okresach czasu,",
+          "współpraca z działem zakupów i logistyki w celu zapewnienia materiałów i surowców do produkcji,",
+          "przygotowywanie i bieżąca korekta harmonogramu funkcjonowania zakładu produkcyjnego,",
+          "planowanie optymalnego wykorzystania maszyn i linii produkcyjnych,",
+          "zarządzanie podległym zespołem pracowników."
+        ]
+      }
+    ]
+  }
+]

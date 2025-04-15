@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Web designer",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-web-designer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 32,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5230,
+            "p25": 4420,
+            "p75": 6930
+          },
+          "net": {
+            "median": 3807,
+            "p25": 3290,
+            "p75": 4975
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 44
+            },
+            "men": {
+              "count": 18,
+              "percentage": 56
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 36
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 24
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

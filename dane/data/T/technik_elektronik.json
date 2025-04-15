@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik elektronik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-elektronik",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 210,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6600,
+            "p25": 5580,
+            "p75": 8210
+          },
+          "net": {
+            "median": 4830,
+            "p25": 4134,
+            "p75": 5927
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 2
+            },
+            "men": {
+              "count": 205,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

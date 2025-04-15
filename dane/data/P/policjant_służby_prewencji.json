@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Policjant służby prewencji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-policjant-sluzby-prewencji",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 37,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8620,
+            "p25": 7880,
+            "p75": 9700
+          },
+          "net": {
+            "median": 6206,
+            "p25": 5702,
+            "p75": 6943
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 3
+            },
+            "men": {
+              "count": 36,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

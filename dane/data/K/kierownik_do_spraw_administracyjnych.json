@@ -1,0 +1,77 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw administracyjnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-administracyjnych",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1212,
+        "related_positions": [
+          {
+            "title": "kierownik ds. administracyjnych"
+          },
+          {
+            "title": "kierownik ds. administracji"
+          },
+          {
+            "title": "kierownik administracji"
+          },
+          {
+            "title": "kierownik do spraw administracyjnych"
+          },
+          {
+            "title": "kierownik do spraw administracji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8320,
+            "p25": 6690,
+            "p75": 10710
+          },
+          "net": {
+            "median": 6002,
+            "p25": 4890,
+            "p75": 7631
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 875,
+              "percentage": 72
+            },
+            "men": {
+              "count": 337,
+              "percentage": 28
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 38
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 34
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 32
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "organizowanie sprawnej pracy biura,",
+          "nadzór nad pracą podległego personelu,",
+          "nadzór nad zaopatrzeniem w artykuły niezbędne dla funkcjonowania biura",
+          "nadzór nad sprawami gospodarczymi, inwestycyjnymi, transportem,",
+          "organizowanie pracy firm współpracujących (np. firm remontowo-budowlanych, serwisowych itp.)"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik komórki organizacyjnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-komorki-organizacyjnej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 61,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10470,
+            "p25": 7510,
+            "p75": 13000
+          },
+          "net": {
+            "median": 7467,
+            "p25": 5449,
+            "p75": 9192
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 26,
+              "percentage": 43
+            },
+            "men": {
+              "count": 35,
+              "percentage": 57
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

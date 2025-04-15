@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Automatyk sterowania ruchem kolejowym",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-automatyk-sterowania-ruchem-kolejowym",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 37,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6400,
+            "p25": 5010,
+            "p75": 8310
+          },
+          "net": {
+            "median": 4693,
+            "p25": 3745,
+            "p75": 5994
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 3
+            },
+            "men": {
+              "count": 36,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

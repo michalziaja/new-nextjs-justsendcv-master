@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista systemowy języków niskiego poziomu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-systemowy-jezykow-niskiego-poziomu",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 27,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13410,
+            "p25": 8760,
+            "p75": 15400
+          },
+          "net": {
+            "median": 9471,
+            "p25": 6302,
+            "p75": 10828
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 19
+            },
+            "men": {
+              "count": 22,
+              "percentage": 81
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "tworzy kody źródłowe programów w językach niskiego poziomu (assemblery),",
+          "programuje i testuje systemy,",
+          "współpracuje z analitykami i projektantami systemów informatycznych oraz członkami zespołów wdrażających oprogramowanie,",
+          "poszukuje rozwiązań optymalizujących oprogramowanie,",
+          "uzupełnia dokumentację techniczną systemu związaną z rozwijanym oprogramowaniem,",
+          "wdraża najnowsze technologie rozwoju oprogramowania."
+        ]
+      }
+    ]
+  }
+]

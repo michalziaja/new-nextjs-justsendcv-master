@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Bibliotekarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-bibliotekarz",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 209,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5300,
+            "p25": 4760,
+            "p75": 6540
+          },
+          "net": {
+            "median": 3943,
+            "p25": 3575,
+            "p75": 4788
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 174,
+              "percentage": 83
+            },
+            "men": {
+              "count": 35,
+              "percentage": 17
+            }
+          },
+          "benefits": [
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 46
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 23
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 15
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "dbanie o posiadane przez bibliotekę zbiory,",
+          "obsługa klientów biblioteki,",
+          "dostarczanie informacji o bieżącej działalności placówki, jej wyposażeniu i zasadach udostępniania zbiorów"
+        ]
+      }
+    ]
+  }
+]

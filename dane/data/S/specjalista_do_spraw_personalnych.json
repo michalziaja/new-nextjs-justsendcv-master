@@ -1,0 +1,166 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw personalnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-personalnych",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1796,
+        "related_positions": [
+          {
+            "title": "specjalista ds. personalnych"
+          },
+          {
+            "title": "hR Specialist"
+          },
+          {
+            "title": "specjalista ds. HR"
+          },
+          {
+            "title": "hR generalist"
+          },
+          {
+            "title": "specjalista do spraw personalnych"
+          },
+          {
+            "title": "specjalista do spraw HR."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5540,
+                "p75": 7380
+              },
+              "net": {
+                "median": 4611,
+                "p25": 4106,
+                "p75": 5361
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 451,
+                "percentage": 87
+              },
+              "men": {
+                "count": 68,
+                "percentage": 13
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 60
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 57
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7650,
+                "p25": 6540,
+                "p75": 9050
+              },
+              "net": {
+                "median": 5545,
+                "p25": 4788,
+                "p75": 6499
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1682,
+                "percentage": 94
+              },
+              "men": {
+                "count": 114,
+                "percentage": 6
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 73
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 63
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 54
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9140,
+                "p25": 7710,
+                "p75": 11080
+              },
+              "net": {
+                "median": 6561,
+                "p25": 5586,
+                "p75": 7883
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 715,
+                "percentage": 93
+              },
+              "men": {
+                "count": 51,
+                "percentage": 7
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 68
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 67
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 52
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie dokumentacji personalnej (akt osobowych, dokumentacji urlopów),",
+          "prowadzenie ewidencji czasu pracy,",
+          "realizowanie polityki personalnej,",
+          "współpraca przy prowadzeniu rekrutacji (kierownicy),",
+          "udział w dokonywaniu ocen okresowych,",
+          "współudział w tworzeniu zakresów obowiązków dla poszczególnych stanowisk,",
+          "współpraca z kierownikami innych działów,",
+          "współpraca z firmami doradztwa personalnego."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik prac biurowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-prac-biurowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5100,
+            "p25": 4520,
+            "p75": 5870
+          },
+          "net": {
+            "median": 3807,
+            "p25": 3411,
+            "p75": 4331
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 24,
+              "percentage": 69
+            },
+            "men": {
+              "count": 11,
+              "percentage": 31
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mechanik precyzyjny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mechanik-precyzyjny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6060,
+            "p25": 5360,
+            "p75": 7110
+          },
+          "net": {
+            "median": 4462,
+            "p25": 3984,
+            "p75": 5177
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 8
+            },
+            "men": {
+              "count": 11,
+              "percentage": 92
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

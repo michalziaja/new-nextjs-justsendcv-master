@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Spiker radiowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-spiker-radiowy",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3490,
+            "p25": 3190,
+            "p75": 4090
+          },
+          "net": {
+            "median": 2548,
+            "p25": 2337,
+            "p75": 2972
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 43
+            },
+            "men": {
+              "count": 8,
+              "percentage": 57
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

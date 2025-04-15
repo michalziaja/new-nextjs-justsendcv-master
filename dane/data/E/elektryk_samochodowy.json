@@ -1,0 +1,53 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Elektryk samochodowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-elektryk-samochodowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": [
+          {
+            "title": "elektronik samochodowy"
+          },
+          {
+            "title": "elektryk pojazdów samochodowych"
+          },
+          {
+            "title": "elektryk samochodowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7170,
+            "p25": 5660,
+            "p75": 10090
+          },
+          "net": {
+            "median": 5218,
+            "p25": 4188,
+            "p75": 7208
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 28,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

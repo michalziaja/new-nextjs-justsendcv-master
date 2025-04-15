@@ -16,15 +16,15 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col gap-2 p-2 transition-all duration-200">
       {/* Rząd 1: Statystyki */}
-      <div className="mb-14 ml-0 mr-0 mt-6 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6 md:mt-7 
-      lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-8 xl:mr-8 xl:mt-10">
+      <div className="mb-14 ml-2 mr-2 mt-6 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6 md:mt-7 
+      lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-15 xl:mr-15 xl:mt-12">
         <StatCards />
       </div>
 
       {/* Rząd 2: Ostatnie oferty i cele tygodniowe */}
       <div className="grid gap-2 grid-cols-1 lg:grid-cols-3
-      ml-0 mr-0 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6  
-      lg:ml-8 lg:mr-6 xl:ml-8 xl:mr-8">
+      ml-2 mr-2 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6  
+      lg:ml-8 lg:mr-6 xl:ml-15 xl:mr-15">
         <div className="lg:col-span-2 h-full">
           <RecentJobs />
         </div>
@@ -35,8 +35,8 @@ export default function Home() {
 
       {/* Rząd 3: Aktualności, Kalendarz, Checklista */}
       <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-      ml-0 mr-0 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6  
-      lg:ml-8 lg:mr-6 xl:ml-8 xl:mr-8">
+      ml-2 mr-2 sm:ml-2 sm:mr-2 md:ml-6 md:mr-6  
+      lg:ml-8 lg:mr-6 xl:ml-15 xl:mr-15">
         <NewsSection />
         <CalendarSection />
         <Checklist />

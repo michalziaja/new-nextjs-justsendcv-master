@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sprzedawca w stacji paliw",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sprzedawca-w-stacji-paliw",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 72,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5170,
+            "p25": 4570,
+            "p75": 5770
+          },
+          "net": {
+            "median": 3855,
+            "p25": 3446,
+            "p75": 4264
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 36,
+              "percentage": 50
+            },
+            "men": {
+              "count": 36,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

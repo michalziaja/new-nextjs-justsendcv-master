@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik lokalu gastronomicznego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-lokalu-gastronomicznego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6170,
+            "p25": 5230,
+            "p75": 7540
+          },
+          "net": {
+            "median": 4536,
+            "p25": 3895,
+            "p75": 5470
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 79
+            },
+            "men": {
+              "count": 3,
+              "percentage": 21
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

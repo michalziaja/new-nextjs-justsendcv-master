@@ -1,0 +1,91 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik regionu sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-regionu-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 943,
+        "related_positions": [
+          {
+            "title": "kierownik regionu sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik sprzedaży"
+          },
+          {
+            "title": "kierownik regionalny"
+          },
+          {
+            "title": "regionalny koordynator sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik ds. sprzedaży"
+          },
+          {
+            "title": "manager regionalny"
+          },
+          {
+            "title": "kierownik regionalny sprzedaży"
+          },
+          {
+            "title": "regionalny kierownik do spraw sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 13080,
+            "p25": 9850,
+            "p75": 17210
+          },
+          "net": {
+            "median": 9247,
+            "p25": 7045,
+            "p75": 12062
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 242,
+              "percentage": 26
+            },
+            "men": {
+              "count": 701,
+              "percentage": 74
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 63
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 59
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 51
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży firmy na terenie wyznaczonego obszaru,",
+          "nawiązywanie i utrzymywanie kontaktów handlowych na danym obszarze,",
+          "kierowanie zespołem handlowców,",
+          "nadzór nad ciągłością dostaw, monitorowanie przebiegu sprzedaży i dystrybucji na danym obszarze,",
+          "organizowanie akcji promocyjnych,",
+          "poszukiwanie nowych rynków zbytu,",
+          "kontakty i negocjacje z kluczowymi klientami z obszaru,",
+          "sporządzanie raportów i analiz,",
+          "wykonanie zaplanowanego obrotu."
+        ]
+      }
+    ]
+  }
+]

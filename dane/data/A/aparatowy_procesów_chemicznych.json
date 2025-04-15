@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Aparatowy procesów chemicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-aparatowy-procesow-chemicznych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 131,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6750,
+            "p25": 5850,
+            "p75": 8220
+          },
+          "net": {
+            "median": 4931,
+            "p25": 4318,
+            "p75": 5934
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 8
+            },
+            "men": {
+              "count": 120,
+              "percentage": 92
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

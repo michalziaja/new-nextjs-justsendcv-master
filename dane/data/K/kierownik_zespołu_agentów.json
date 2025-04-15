@@ -1,0 +1,64 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik zespołu agentów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-zespolu-agentow",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 54,
+        "related_positions": [
+          {
+            "title": "kierownik zespołu agentów"
+          },
+          {
+            "title": "menadżer zespołu agentów ubezpieczeniowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 11060,
+            "p25": 8090,
+            "p75": 13320
+          },
+          "net": {
+            "median": 7870,
+            "p25": 5845,
+            "p75": 9410
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 31,
+              "percentage": 57
+            },
+            "men": {
+              "count": 23,
+              "percentage": 43
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie zespołem agentów w zakresie sprzedaży produktów ubezpieczeniowych,",
+          "rekrutacja i selekcja kandydatów na agentów, motywowanie pracowników,",
+          "prowadzenie szkoleń z zakresu produktów ubezpieczeniowych oraz metod sprzedaży,",
+          "odpowiedzialność za sprzedaż i realizację budżetu,",
+          "zwiększanie sprzedaży w kolejnych okresach,",
+          "odpowiedzialność za jakość obsługi klienta,",
+          "wspieranie agentów w procesie pozyskiwania klientów,",
+          "analizowanie potencjału powierzonej części rynku,",
+          "monitorowanie oferty firm konkurencyjnych,",
+          "współpraca z innymi działami firmy ubezpieczeniowej,",
+          "uczestniczenie w negocjacjach z klientami,",
+          "okresowa ocena efektywności pracy podległych osób,",
+          "sporządzanie raportów dotyczących realizacji założonych planów sprzedaży"
+        ]
+      }
+    ]
+  }
+]

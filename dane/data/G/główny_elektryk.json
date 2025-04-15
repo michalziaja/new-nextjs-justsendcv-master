@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Główny elektryk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-glowny-elektryk",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 72,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9430,
+            "p25": 7420,
+            "p75": 12580
+          },
+          "net": {
+            "median": 6759,
+            "p25": 5388,
+            "p75": 8905
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 72,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "planowanie zapotrzebowania przedsiębiorstwa na energię elektryczną,",
+          "kontrola nad prawidłowym funkcjonowaniem pracy ciągów elektrycznych,",
+          "zapewnienie bezawaryjnej dostępności energii elektrycznej,",
+          "planowanie cykli remontowych instalacji elektrycznych,",
+          "odpowiedzialność za likwidowanie awarii i ich skutków,",
+          "koordynacja pracy podległych pracowników."
+        ]
+      }
+    ]
+  }
+]

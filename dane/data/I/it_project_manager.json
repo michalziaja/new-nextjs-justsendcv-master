@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "IT project manager",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-it-project-manager",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 376,
+        "related_positions": [
+          {
+            "title": "kierownik projektu IT"
+          },
+          {
+            "title": "iT project manager."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 15000,
+            "p25": 11390,
+            "p75": 19700
+          },
+          "net": {
+            "median": 10556,
+            "p25": 8095,
+            "p75": 13759
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 150,
+              "percentage": 40
+            },
+            "men": {
+              "count": 226,
+              "percentage": 60
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 82
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 61
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 61
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

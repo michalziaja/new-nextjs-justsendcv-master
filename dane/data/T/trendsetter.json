@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Trendsetter",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-trendsetter",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": [
+          {
+            "title": "promotor marki"
+          },
+          {
+            "title": "trendsetter."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7650,
+            "p25": 6350,
+            "p75": 11500
+          },
+          "net": {
+            "median": 5545,
+            "p25": 4659,
+            "p75": 8169
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 40
+            },
+            "men": {
+              "count": 6,
+              "percentage": 60
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

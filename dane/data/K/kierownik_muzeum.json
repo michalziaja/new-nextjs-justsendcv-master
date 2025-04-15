@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik muzeum",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-muzeum",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6540,
+            "p25": 5670,
+            "p75": 6780
+          },
+          "net": {
+            "median": 4788,
+            "p25": 4195,
+            "p75": 4952
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 70
+            },
+            "men": {
+              "count": 3,
+              "percentage": 30
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 50
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 30
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

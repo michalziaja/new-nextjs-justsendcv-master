@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Monter instalacji teletechnicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-monter-instalacji-teletechnicznych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 122,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5890,
+            "p25": 4710,
+            "p75": 6880
+          },
+          "net": {
+            "median": 4345,
+            "p25": 3540,
+            "p75": 5020
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 122,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

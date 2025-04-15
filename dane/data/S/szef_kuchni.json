@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Szef kuchni",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-szef-kuchni",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 198,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7550,
+            "p25": 6020,
+            "p75": 9200
+          },
+          "net": {
+            "median": 5477,
+            "p25": 4434,
+            "p75": 6601
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 47,
+              "percentage": 24
+            },
+            "men": {
+              "count": 151,
+              "percentage": 76
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie pracownikami kuchni,",
+          "organizacja pracy podległego zespołu,",
+          "troska o terminowe przygotowywanie potraw i ich jakość"
+        ]
+      }
+    ]
+  }
+]

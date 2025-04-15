@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. telekomunikacji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-telekomunikacji",
+        "category": [
+          "telekomunikacja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 134,
+        "related_positions": [
+          {
+            "title": "specjalista ds. telekomunikacji"
+          },
+          {
+            "title": "specjalista do spraw telekomunikacji."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8210,
+            "p25": 6620,
+            "p75": 10220
+          },
+          "net": {
+            "median": 5927,
+            "p25": 4843,
+            "p75": 7297
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 9
+            },
+            "men": {
+              "count": 122,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektuje architekturę i konfigurację systemów telekomunikacyjnych i teleinformatycznych,",
+          "planuje projekty integracyjne, w tym analizuje koszty wdrożenia oraz eksploatacji proponowanych rozwiązań,",
+          "opracowuje dokumentację techniczną,",
+          "nadzoruje stronę merytoryczną prac wdrożeniowych rozwiązań z zakresu telekomunikacji,",
+          "wspiera sprzedaż oraz doradza w zakresie projektowania,",
+          "wdrażania i eksploatacji systemów telekomunikacyjnych."
+        ]
+      }
+    ]
+  }
+]

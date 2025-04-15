@@ -1,0 +1,51 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Główny mechanik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-glowny-mechanik",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 148,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7740,
+            "p25": 6240,
+            "p75": 9560
+          },
+          "net": {
+            "median": 5607,
+            "p25": 4584,
+            "p75": 6847
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 147,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "planowanie, organizacja, koordynacja i kontrola w zakresie przygotowania i realizacji kluczowych prac remontowych i konserwacyjnych maszyn i linii technologicznych,",
+          "analiza kosztów remontów i konserwacji pod względem ich zgodności z budżetem,",
+          "organizacja przetargów i nadzór nad zlecaniem robót remontowych firmom zewnętrznym,",
+          "koordynowanie pracy podległych pracowników (mechaników lub pracowników działu utrzymania ruchu),",
+          "kontrola urządzeń pod względem legalizacji,",
+          "prowadzenie dokumentacji urządzeń,",
+          "organizacja napraw i nadzór nad usuwaniem poważniejszych awarii."
+        ]
+      }
+    ]
+  }
+]

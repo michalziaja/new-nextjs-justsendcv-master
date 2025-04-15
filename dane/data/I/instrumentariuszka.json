@@ -1,0 +1,53 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Instrumentariuszka",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instrumentariuszka",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 55,
+        "related_positions": [
+          {
+            "title": "instrumentariuszka"
+          },
+          {
+            "title": "pielęgniarka instrumentariuszka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8150,
+            "p25": 6330,
+            "p75": 9240
+          },
+          "net": {
+            "median": 5886,
+            "p25": 4646,
+            "p75": 6629
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 51,
+              "percentage": 93
+            },
+            "men": {
+              "count": 4,
+              "percentage": 7
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "pomoc chirurgowi w trakcie, przed i po operacji,",
+          "przygotowywanie sali operacyjnej, potrzebnych narzędzi, materiałów i aparatury"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik technologii żywności – produkcja cukiernicza",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-technologii-zywnosci---produkcja-cukiernicza",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4490,
+            "p25": 3990,
+            "p75": 4960
+          },
+          "net": {
+            "median": 3391,
+            "p25": 3050,
+            "p75": 3711
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 90
+            },
+            "men": {
+              "count": 1,
+              "percentage": 10
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 30
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 20
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

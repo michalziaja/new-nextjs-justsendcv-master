@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Makijażystka",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-makijazystka",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 84,
+        "related_positions": [
+          {
+            "title": "kosmetyczka"
+          },
+          {
+            "title": "makijażystka"
+          },
+          {
+            "title": "makijażysta."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5710,
+            "p25": 4890,
+            "p75": 8090
+          },
+          "net": {
+            "median": 4223,
+            "p25": 3664,
+            "p75": 5845
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 84,
+              "percentage": 100
+            },
+            "men": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie zabiegów z zakresu kosmetyki pielęgnacyjnej (zachowawczej), leczniczej i upiększającej,",
+          "sporządzanie i stosowanie prostych środków niezbędnych do wykonywania zabiegu kosmetycznego,",
+          "zabezpieczanie i konserwowanie narzędzi oraz aparatów po wykonaniu zabiegu,",
+          "udzielanie porad kosmetycznych,",
+          "przestrzeganie zasad higieny podczas zabiegów, przed i po nich"
+        ]
+      }
+    ]
+  }
+]

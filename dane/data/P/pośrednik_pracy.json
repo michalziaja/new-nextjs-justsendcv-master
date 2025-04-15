@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pośrednik pracy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-posrednik-pracy",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 53,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5220,
+            "p25": 4870,
+            "p75": 6160
+          },
+          "net": {
+            "median": 3889,
+            "p25": 3650,
+            "p75": 4529
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 83
+            },
+            "men": {
+              "count": 9,
+              "percentage": 17
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "udzielanie pomocy bezrobotnym i poszukującym pracy w uzyskaniu odpowiedniego zatrudnienia,| udzielanie pomocy pracodawcom w pozyskaniu pracowników,",
+          "poszukiwanie ofert pracy i przekazywanie ich bezrobotnym i poszukującym pracy,",
+          "udzielanie pracodawcom informacji o kandydatach,",
+          "współpraca z innymi urzędami pracy"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Rzeźnik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-rzeznik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4540,
+            "p25": 3370,
+            "p75": 6290
+          },
+          "net": {
+            "median": 3366,
+            "p25": 2619,
+            "p75": 4524
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 13,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 30
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

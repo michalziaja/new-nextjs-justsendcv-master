@@ -58,7 +58,7 @@ export function NavSecondary({
                 <span className="font-medium">Przejdź na Premium</span>
               </a>
             ) : (
-              <div className="flex w-full items-center gap-2 rounded-lg p-3 text-white text-xs shadow-[5px_5px_5px_rgba(0,0,0,0.3)] dark:shadow-xs bg-gradient-to-r from-green-500 to-emerald-500">
+              <div className="flex w-full items-center gap-2 rounded-md p-3 text-white text-xs shadow-sm dark:shadow-xs bg-gradient-to-r from-green-500 to-emerald-500">
                 <Crown className="h-6 w-6" />
                 <span className="font-medium">Używasz Premium</span>
               </div>
@@ -70,7 +70,7 @@ export function NavSecondary({
           {/* Baner wtyczek */}
           <SidebarMenuItem className="mb-2 pt-6">
             <Collapsible>
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg border border-gray-300 dark:border-slate-700 bg-transparent dark:bg-transparent p-3 hover:bg-gray-50 hover:scale-103 dark:hover:bg-slate-700 transition-colors text-xs shadow-[5px_5px_5px_rgba(0,0,0,0.3)] dark:shadow-xs">
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg border border-gray-300 dark:border-slate-700 bg-transparent dark:bg-transparent p-3 hover:bg-gray-50 hover:scale-103 dark:hover:bg-slate-700 transition-colors text-xs shadow-md dark:shadow-xs">
                 <div className="flex items-center gap-2">
                   <Download className="h-6 w-6" />
                   <span className="font-medium">Pobierz wtyczkę</span>

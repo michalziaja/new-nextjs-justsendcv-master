@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator sieci komputerowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-sieci-komputerowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8180,
+            "p25": 6800,
+            "p75": 9720
+          },
+          "net": {
+            "median": 5906,
+            "p25": 4966,
+            "p75": 6957
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 33
+            },
+            "men": {
+              "count": 12,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

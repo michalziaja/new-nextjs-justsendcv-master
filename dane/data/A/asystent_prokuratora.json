@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent prokuratora",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-prokuratora",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 50,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6150,
+            "p25": 5440,
+            "p75": 6810
+          },
+          "net": {
+            "median": 4522,
+            "p25": 4039,
+            "p75": 4972
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 74
+            },
+            "men": {
+              "count": 13,
+              "percentage": 26
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

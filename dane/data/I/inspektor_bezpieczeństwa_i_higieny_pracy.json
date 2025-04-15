@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor bezpieczeństwa i higieny pracy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-bezpieczenstwa-i-higieny-pracy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 140,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6130,
+            "p25": 5280,
+            "p75": 7750
+          },
+          "net": {
+            "median": 4509,
+            "p25": 3929,
+            "p75": 5614
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 83,
+              "percentage": 59
+            },
+            "men": {
+              "count": 57,
+              "percentage": 41
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

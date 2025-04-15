@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inkasent",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inkasent",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 4930,
+            "p75": 7640
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3691,
+            "p75": 5538
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 31
+            },
+            "men": {
+              "count": 9,
+              "percentage": 69
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "kontrolowanie wielkości zużycia mediów przez odbiorców na wyznaczonym terenie,",
+          "pobieranie opłat,",
+          "kontrolowanie prawidłowego działania urządzeń pomiarowych"
+        ]
+      }
+    ]
+  }
+]

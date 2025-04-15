@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent przetwarzania danych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-przetwarzania-danych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 36,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6360,
+            "p25": 5340,
+            "p75": 7650
+          },
+          "net": {
+            "median": 4665,
+            "p25": 3970,
+            "p75": 5545
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 20,
+              "percentage": 56
+            },
+            "men": {
+              "count": 16,
+              "percentage": 44
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

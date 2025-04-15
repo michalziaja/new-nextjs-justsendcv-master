@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik gospodarstwa ogrodniczego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-gospodarstwa-ogrodniczego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6420,
+            "p25": 5780,
+            "p75": 9270
+          },
+          "net": {
+            "median": 4706,
+            "p25": 4270,
+            "p75": 6649
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 20
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 20
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

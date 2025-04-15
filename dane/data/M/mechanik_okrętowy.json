@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mechanik okrętowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mechanik-okretowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9880,
+            "p25": 4660,
+            "p75": 27370
+          },
+          "net": {
+            "median": 7065,
+            "p25": 3506,
+            "p75": 18988
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 36
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 36
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 36
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Doradca ds. odszkodowań",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-doradca-ds-odszkodowan",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 18,
+        "related_positions": [
+          {
+            "title": "doradca do spraw odszkodowań"
+          },
+          {
+            "title": "doradca ds. odszkodowań."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7000,
+            "p25": 5580,
+            "p75": 9090
+          },
+          "net": {
+            "median": 5102,
+            "p25": 4134,
+            "p75": 6527
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 39
+            },
+            "men": {
+              "count": 11,
+              "percentage": 61
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

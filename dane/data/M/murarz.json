@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Murarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-murarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 68,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6490,
+            "p25": 5140,
+            "p75": 7710
+          },
+          "net": {
+            "median": 4754,
+            "p25": 3834,
+            "p75": 5586
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 68,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wznoszenie ścian głównie z cegły, kamienia, elementów betonowych, gipsowych i ceramicznych,",
+          "wykonywanie schodów, filarów i stropów,",
+          "wykonywanie robót licowych,",
+          "prowadzenie i nadzór nad pracami rozbiórkowymi"
+        ]
+      }
+    ]
+  }
+]

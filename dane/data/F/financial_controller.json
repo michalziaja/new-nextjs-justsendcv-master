@@ -1,0 +1,155 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Financial Controller",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-financial-controller",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 626,
+        "related_positions": [
+          {
+            "title": "kontroler finansowy"
+          },
+          {
+            "title": "financial Controller."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7540,
+                "p25": 6540,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5470,
+                "p25": 4788,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 144,
+                "percentage": 62
+              },
+              "men": {
+                "count": 89,
+                "percentage": 38
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 86
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 65
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10770,
+                "p25": 8810,
+                "p75": 12970
+              },
+              "net": {
+                "median": 7672,
+                "p25": 6336,
+                "p75": 9172
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 347,
+                "percentage": 55
+              },
+              "men": {
+                "count": 279,
+                "percentage": 45
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 69
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 62
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14160,
+                "p25": 11670,
+                "p75": 16780
+              },
+              "net": {
+                "median": 9983,
+                "p25": 8286,
+                "p75": 11769
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 326,
+                "percentage": 48
+              },
+              "men": {
+                "count": 352,
+                "percentage": 52
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 71
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 57
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 53
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "kontrola prawidłowości prowadzenia dokumentacji finansowej firmy,",
+          "kontrola wydatków i dochodów,",
+          "prowadzenie analizy rentowności inwestycji i przedsięwzięć oraz przeprowadzenie analiz możliwości ich sfinansowania,",
+          "nadzór nad polityką kredytową i podatkową firmy,",
+          "nadzór nad prawidłowością księgowań,",
+          "nadzór nad realizacją budżetu,",
+          "odpowiedzialność za wdrażanie planów finansowych,",
+          "przygotowywanie sprawozdań dla dyrektora finansowego i zarządu oraz prezentacja spraw wymagających jego decyzji,",
+          "odpowiedzialny za sprawozdawczość wewnętrzną i zewnętrzną."
+        ]
+      }
+    ]
+  }
+]

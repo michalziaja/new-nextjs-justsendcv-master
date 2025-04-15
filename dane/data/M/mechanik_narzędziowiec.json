@@ -1,0 +1,61 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mechanik narzędziowiec",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mechanik-narzedziowiec",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 76,
+        "related_positions": [
+          {
+            "title": "narzędziowiec"
+          },
+          {
+            "title": "technik narzędziowy"
+          },
+          {
+            "title": "mechanik narzędziowiec"
+          },
+          {
+            "title": "narzędziowiec form wtryskowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7010,
+            "p25": 5850,
+            "p75": 8980
+          },
+          "net": {
+            "median": 5109,
+            "p25": 4318,
+            "p75": 6451
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 75,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za dobór narzędzi zgodnie ze standardami i procedurami produkcji,",
+          "wydawanie oraz przyjmowanie zwracanych narzędzi pracy,",
+          "kontrola stanu technicznego narzędzi,",
+          "wykonywanie drobnych napraw, czyszczenie i konserwacja narzędzi."
+        ]
+      }
+    ]
+  }
+]

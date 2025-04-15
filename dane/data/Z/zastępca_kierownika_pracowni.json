@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "Z",
+    "positions": [
+      {
+        "title": "Zastępca kierownika pracowni",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-zastepca-kierownika-pracowni",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7700,
+            "p25": 6140,
+            "p75": 10140
+          },
+          "net": {
+            "median": 5579,
+            "p25": 4515,
+            "p75": 7242
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 39
+            },
+            "men": {
+              "count": 19,
+              "percentage": 61
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

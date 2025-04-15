@@ -1,0 +1,57 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw wynagrodzeń i benefitów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-wynagrodzen-i-benefitow",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 50,
+        "related_positions": [
+          {
+            "title": "kierownik ds. wynagrodzeń i benefitów"
+          },
+          {
+            "title": "kierownik do spraw wynagrodzeń i benefitów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 15000,
+            "p25": 11470,
+            "p75": 20000
+          },
+          "net": {
+            "median": 10556,
+            "p25": 8149,
+            "p75": 13964
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 38,
+              "percentage": 76
+            },
+            "men": {
+              "count": 12,
+              "percentage": 24
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "budowanie polityki wynagrodzeń w firmie,",
+          "nadzór nad systemem wynagrodzeń,",
+          "wdrażanie nowoczesnych narzędzi usprawniających działanie systemu wynagrodzeń,",
+          "kierowanie działem wynagrodzeń,",
+          "analiza informacji na temat rynku wynagrodzeń,",
+          "współudział w budowaniu systemów motywacyjnych,",
+          "współudział w negocjacjach ze związkami zawodowymi."
+        ]
+      }
+    ]
+  }
+]

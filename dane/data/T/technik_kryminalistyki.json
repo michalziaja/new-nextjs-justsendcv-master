@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik kryminalistyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-kryminalistyki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5720,
+            "p25": 5250,
+            "p75": 6880
+          },
+          "net": {
+            "median": 4230,
+            "p25": 3909,
+            "p75": 5020
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 50
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 40
+            },
+            {
+              "name": "prywatna emerytura",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

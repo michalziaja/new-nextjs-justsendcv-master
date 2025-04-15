@@ -1,0 +1,99 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Opiekun klienta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-opiekun-klienta",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 114,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5940,
+                "p25": 5270,
+                "p75": 6700
+              },
+              "net": {
+                "median": 4379,
+                "p25": 3922,
+                "p75": 4897
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 36,
+                "percentage": 60
+              },
+              "men": {
+                "count": 24,
+                "percentage": 40
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6740,
+                "p25": 5850,
+                "p75": 8520
+              },
+              "net": {
+                "median": 4925,
+                "p25": 4318,
+                "p75": 6138
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 70,
+                "percentage": 61
+              },
+              "men": {
+                "count": 44,
+                "percentage": 39
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8440,
+                "p25": 6680,
+                "p75": 11170
+              },
+              "net": {
+                "median": 6083,
+                "p25": 4883,
+                "p75": 7944
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 31,
+                "percentage": 55
+              },
+              "men": {
+                "count": 25,
+                "percentage": 45
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

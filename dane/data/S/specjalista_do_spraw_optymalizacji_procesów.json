@@ -1,0 +1,141 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw optymalizacji procesów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-optymalizacji-procesow",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 183,
+        "related_positions": [
+          {
+            "title": "specjalista ds. optymalizacji procesów"
+          },
+          {
+            "title": "process Improvements Specialist"
+          },
+          {
+            "title": "specjalista do spraw optymalizacji procesów."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7240,
+                "p25": 5560,
+                "p75": 8940
+              },
+              "net": {
+                "median": 5265,
+                "p25": 4120,
+                "p75": 6424
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 25,
+                "percentage": 60
+              },
+              "men": {
+                "count": 17,
+                "percentage": 40
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8960,
+                "p25": 7010,
+                "p75": 11050
+              },
+              "net": {
+                "median": 6438,
+                "p25": 5109,
+                "p75": 7863
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 76,
+                "percentage": 42
+              },
+              "men": {
+                "count": 107,
+                "percentage": 58
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 87
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 81
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10600,
+                "p25": 9040,
+                "p75": 15070
+              },
+              "net": {
+                "median": 7556,
+                "p25": 6493,
+                "p75": 10604
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 56,
+                "percentage": 50
+              },
+              "men": {
+                "count": 55,
+                "percentage": 50
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 100
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 75
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 75
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "optymalizowanie różnych rodzajów procesów, w tym finansowo-księgowych, podatkowych, zakupowych, obsługi klienta i innych,",
+          "mapowanie i analizowanie procesów biznesowych,",
+          "tworzenie oraz optymalizacja KPI (Key Performance Indicators),",
+          "branie udziału w przenoszeniu procesów do nowej lokalizacji,",
+          "doradzanie w charakterze eksperta w obszarze obsługiwanego procesu"
+        ]
+      }
+    ]
+  }
+]

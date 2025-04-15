@@ -1,0 +1,1851 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Facility manager",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 215,
+        "related_positions": [
+          {
+            "title": "kierownik obiektu"
+          },
+          {
+            "title": "facility manager"
+          },
+          {
+            "title": "specjalista zarządzający budynkami i budowlami"
+          },
+          {
+            "title": "kierownik pensjonatu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9360,
+            "p25": 7400,
+            "p75": 12880
+          },
+          "net": {
+            "median": 6711,
+            "p25": 5375,
+            "p75": 9110
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 78,
+              "percentage": 36
+            },
+            "men": {
+              "count": 137,
+              "percentage": 64
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 38
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 38
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 38
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "tworzenie i aktualizacja dokumentacji majątku nieruchomego,",
+          "planowanie i nadzór nad budżetem utrzymania majątku nieruchomego,",
+          "zarządzanie operacyjne majątkiem nieruchomym,",
+          "nadzór nad realizacją nowych inwestycji i remontów,",
+          "typowanie obiektów/ urządzeń do zakupu/remontu oraz organizowanie przetargów,",
+          "uzgadnianie zmian zasad użytkowania z władzami oraz nadzór nad ich realizacją,",
+          "nadzór nad prawidłowością i aktualnością zezwoleń,",
+          "koordynacja pracy dostawców usług utrzymania obiektów dla zapewnienia ciągłości operacyjnej,",
+          "tworzenie programów doraźnych/sezonowych dla zapewnienia prawidłowego funkcjonowania obiektów(zabezpieczanie przed zimą, przed upałami itp.),",
+          "przygotowanie materiałów do planów, sprawozdań itp."
+        ]
+      },
+      {
+        "title": "Fakturzysta",
+        "category": [
+          "księgowość"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 371,
+        "related_positions": [
+          {
+            "title": "fakturzysta"
+          },
+          {
+            "title": "fakturzystka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5610,
+            "p25": 4950,
+            "p75": 6650
+          },
+          "net": {
+            "median": 4154,
+            "p25": 3704,
+            "p75": 4863
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 334,
+              "percentage": 90
+            },
+            "men": {
+              "count": 37,
+              "percentage": 10
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 45
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wystawianie faktur VAT i rachunków,",
+          "prowadzenie ewidencji faktur i rachunków,",
+          "współpraca z działem handlowym w zakresie fakturowania,",
+          "przygotowanie materiałów związanych z fakturowaniem na potrzeby księgowości."
+        ]
+      },
+      {
+        "title": "Fakturzystka",
+        "category": [
+          "księgowość"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 371,
+        "related_positions": [
+          {
+            "title": "fakturzysta"
+          },
+          {
+            "title": "fakturzystka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5610,
+            "p25": 4950,
+            "p75": 6650
+          },
+          "net": {
+            "median": 4154,
+            "p25": 3704,
+            "p75": 4863
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 334,
+              "percentage": 90
+            },
+            "men": {
+              "count": 37,
+              "percentage": 10
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 45
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wystawianie faktur VAT i rachunków,",
+          "prowadzenie ewidencji faktur i rachunków,",
+          "współpraca z działem handlowym w zakresie fakturowania,",
+          "przygotowanie materiałów związanych z fakturowaniem na potrzeby księgowości."
+        ]
+      },
+      {
+        "title": "Farmaceuta",
+        "category": [
+          "służba zdrowia",
+          "apteki"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 403,
+        "related_positions": [
+          {
+            "title": "magister farmacji"
+          },
+          {
+            "title": "farmaceuta."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7360,
+                "p25": 6460,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5347,
+                "p25": 4734,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 71,
+                "percentage": 76
+              },
+              "men": {
+                "count": 22,
+                "percentage": 24
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7870,
+                "p25": 6980,
+                "p75": 9060
+              },
+              "net": {
+                "median": 5695,
+                "p25": 5088,
+                "p75": 6506
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 312,
+                "percentage": 77
+              },
+              "men": {
+                "count": 91,
+                "percentage": 23
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8940,
+                "p25": 7640,
+                "p75": 9920
+              },
+              "net": {
+                "median": 6424,
+                "p25": 5538,
+                "p75": 7093
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 105,
+                "percentage": 79
+              },
+              "men": {
+                "count": 28,
+                "percentage": 21
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "praca w aptece lub firmie farmaceutycznej,",
+          "w przypadku pracy w aptece: sporządzanie, analizowanie, klasyfikowanie, przechowywanie i wydawanie leków,",
+          "w przypadku pracy w firmie farmaceutycznej: prace badawcze nad tworzeniem i rozwojem leków, może także wykonywać czynności związane z produkcją, kontrolą jakości i marketingiem"
+        ]
+      },
+      {
+        "title": "Financial Controller",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 626,
+        "related_positions": [
+          {
+            "title": "kontroler finansowy"
+          },
+          {
+            "title": "financial Controller."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7540,
+                "p25": 6540,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5470,
+                "p25": 4788,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 144,
+                "percentage": 62
+              },
+              "men": {
+                "count": 89,
+                "percentage": 38
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 86
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 65
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10770,
+                "p25": 8810,
+                "p75": 12970
+              },
+              "net": {
+                "median": 7672,
+                "p25": 6336,
+                "p75": 9172
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 347,
+                "percentage": 55
+              },
+              "men": {
+                "count": 279,
+                "percentage": 45
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 69
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 62
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14160,
+                "p25": 11670,
+                "p75": 16780
+              },
+              "net": {
+                "median": 9983,
+                "p25": 8286,
+                "p75": 11769
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 326,
+                "percentage": 48
+              },
+              "men": {
+                "count": 352,
+                "percentage": 52
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 71
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 57
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 53
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "kontrola prawidłowości prowadzenia dokumentacji finansowej firmy,",
+          "kontrola wydatków i dochodów,",
+          "prowadzenie analizy rentowności inwestycji i przedsięwzięć oraz przeprowadzenie analiz możliwości ich sfinansowania,",
+          "nadzór nad polityką kredytową i podatkową firmy,",
+          "nadzór nad prawidłowością księgowań,",
+          "nadzór nad realizacją budżetu,",
+          "odpowiedzialność za wdrażanie planów finansowych,",
+          "przygotowywanie sprawozdań dla dyrektora finansowego i zarządu oraz prezentacja spraw wymagających jego decyzji,",
+          "odpowiedzialny za sprawozdawczość wewnętrzną i zewnętrzną."
+        ]
+      },
+      {
+        "title": "Fizjoterapeuta",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 462,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6480,
+            "p25": 5460,
+            "p75": 7910
+          },
+          "net": {
+            "median": 4747,
+            "p25": 4052,
+            "p75": 5722
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 322,
+              "percentage": 70
+            },
+            "men": {
+              "count": 140,
+              "percentage": 30
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 8
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 8
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 8
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "przeprowadzanie zabiegów leczniczych lub rehabilitacyjnych,",
+          "opracowywanie planu terapii,",
+          "działania profilaktyczne"
+        ]
+      },
+      {
+        "title": "Fizyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 24,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6960,
+            "p25": 6070,
+            "p75": 9750
+          },
+          "net": {
+            "median": 5074,
+            "p25": 4467,
+            "p75": 6976
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 33
+            },
+            "men": {
+              "count": 16,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fizyk medyczny",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9530,
+            "p25": 7370,
+            "p75": 13500
+          },
+          "net": {
+            "median": 6826,
+            "p25": 5354,
+            "p75": 9533
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 58
+            },
+            "men": {
+              "count": 5,
+              "percentage": 42
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fleet manager",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 330,
+        "related_positions": [
+          {
+            "title": "kierownik floty samochodowej"
+          },
+          {
+            "title": "fleet manager"
+          },
+          {
+            "title": "driver Coordinator"
+          },
+          {
+            "title": "koordynator ds. administracji floty"
+          },
+          {
+            "title": "koordynator do spraw administracji floty."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8110,
+            "p25": 6410,
+            "p75": 9930
+          },
+          "net": {
+            "median": 5858,
+            "p25": 4699,
+            "p75": 7099
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 139,
+              "percentage": 42
+            },
+            "men": {
+              "count": 191,
+              "percentage": 58
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 33
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 29
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "planowanie i realizowanie zakupów i sprzedaży samochodów,",
+          "realizacja procedur związanych z przydziałami samochodów służbowych,",
+          "planowanie i kontrola budżetu związanego z funkcjonowaniem floty,",
+          "zarządzanie zespołem pracowników,",
+          "zapewnienie sprawnej floty samochodowej dla właściwej realizacji celów biznesowych firmy,",
+          "współpraca z użytkownikami pojazdów firmowych oraz współpracującymi firmami zewnętrznymi."
+        ]
+      },
+      {
+        "title": "Fleet Specialist",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 233,
+        "related_positions": [
+          {
+            "title": "specjalista ds. floty samochodowej"
+          },
+          {
+            "title": "specjalista ds. obsługi floty"
+          },
+          {
+            "title": "specjalista ds. zarządzania flotą"
+          },
+          {
+            "title": "specjalista ds. utrzymania floty ciężarowej"
+          },
+          {
+            "title": "fleet Specialist"
+          },
+          {
+            "title": "specjalista do spraw floty samochodowej"
+          },
+          {
+            "title": "specjalista do spraw obsługi floty"
+          },
+          {
+            "title": "specjalista do spraw zarządzania flotą"
+          },
+          {
+            "title": "specjalista do spraw utrzymania floty ciężarowej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7210,
+            "p25": 6160,
+            "p75": 8350
+          },
+          "net": {
+            "median": 5245,
+            "p25": 4529,
+            "p75": 6022
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 59,
+              "percentage": 25
+            },
+            "men": {
+              "count": 174,
+              "percentage": 75
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie spraw powypadkowych, pokolizyjnych, prowadzenie rejestru napraw i szkód,",
+          "prowadzenie rozliczeń i analiz w obszarze kosztów związanych z naprawami, wymianą floty, a także paliwem i materiałami eksploatacyjnymi,",
+          "optymalizacja kosztów obsługi floty,",
+          "przygotowywanie analiz rynku dostawców,",
+          "zarządzanie obszarem administracyjnym floty, monitorowanie jakości świadczonych usług i ich kosztów, koordynowanie spraw związanych z ubezpieczeniami pojazdów,",
+          "przygotowywanie analiz ekonomiki wykorzystania floty samochodowej."
+        ]
+      },
+      {
+        "title": "Florysta",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": [
+          {
+            "title": "bukieciarz"
+          },
+          {
+            "title": "pracownik kwiaciarni"
+          },
+          {
+            "title": "florysta"
+          },
+          {
+            "title": "florystka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5520,
+            "p25": 4820,
+            "p75": 6690
+          },
+          "net": {
+            "median": 4093,
+            "p25": 3616,
+            "p75": 4890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 88
+            },
+            "men": {
+              "count": 6,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Florystka",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 52,
+        "related_positions": [
+          {
+            "title": "bukieciarz"
+          },
+          {
+            "title": "pracownik kwiaciarni"
+          },
+          {
+            "title": "florysta"
+          },
+          {
+            "title": "florystka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5520,
+            "p25": 4820,
+            "p75": 6690
+          },
+          "net": {
+            "median": 4093,
+            "p25": 3616,
+            "p75": 4890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 46,
+              "percentage": 88
+            },
+            "men": {
+              "count": 6,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Formierz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": [
+          {
+            "title": "formierz"
+          },
+          {
+            "title": "odlewnik"
+          },
+          {
+            "title": "odlewnik wyrobów ceramicznych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5800,
+            "p25": 5220,
+            "p75": 7350
+          },
+          "net": {
+            "median": 4283,
+            "p25": 3889,
+            "p75": 5341
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 20
+            },
+            "men": {
+              "count": 20,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzorowanie i utrzymywanie procesu produkcji i utrzymania ruchu maszyn odlewniczych,",
+          "kontrola jakości wykonanych odlewów"
+        ]
+      },
+      {
+        "title": "Formierz odlewnik",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4960,
+            "p25": 4320,
+            "p75": 7760
+          },
+          "net": {
+            "median": 3711,
+            "p25": 3275,
+            "p75": 5619
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 36
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 36
+            },
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fotoedytor",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6260,
+            "p25": 5760,
+            "p75": 7980
+          },
+          "net": {
+            "median": 4598,
+            "p25": 4257,
+            "p75": 5770
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 17,
+              "percentage": 85
+            },
+            "men": {
+              "count": 3,
+              "percentage": 15
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "akceptacja zdjęć przed ich publikacją,",
+          "negocjacje handlowe z freelancerami,",
+          "dbanie o wysoką jakość publikowanych materiałów"
+        ]
+      },
+      {
+        "title": "Fotograf",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 124,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6610,
+            "p25": 5510,
+            "p75": 8020
+          },
+          "net": {
+            "median": 4836,
+            "p25": 4086,
+            "p75": 5798
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 57,
+              "percentage": 46
+            },
+            "men": {
+              "count": 67,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie zdjęć fotograficznych,",
+          "wywoływanie zdjęć wykonanych własnoręcznie lub przez inne osoby"
+        ]
+      },
+      {
+        "title": "Frezer",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 48,
+        "related_positions": [
+          {
+            "title": "frezer"
+          },
+          {
+            "title": "frezer drewna."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6570,
+            "p25": 5550,
+            "p75": 7590
+          },
+          "net": {
+            "median": 4809,
+            "p25": 4113,
+            "p75": 5504
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 48,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa frezarek konwencjonalnych ogólnego przeznaczenia, specjalizowanych i specjalnych,",
+          "frezowanie płaszczyzn, rowków wiórowych w narzędziach wieloostrzowych, sprzęgieł kłowych, rowków o różnym zarysie, krzywek, gwintów, krótkich i długich wałków wielowypustowych, zębów w kołach zębatych i zębatek,",
+          "zaznajamianie się z dokumentacją technologiczną obrabianych przedmiotów, rysunkiem wykonawczym, kartą technologiczną i kartami instrukcyjnymi wykonywanych operacji,",
+          "udział w bieżących naprawach i remontach maszyn i urządzeń produkcyjnych,",
+          "wykonywanie pomiarów warsztatowych."
+        ]
+      },
+      {
+        "title": "Frezer CNC",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 360,
+        "related_positions": [
+          {
+            "title": "operator CNC"
+          },
+          {
+            "title": "operator maszyn sterowanych numerycznie"
+          },
+          {
+            "title": "frezer CNC"
+          },
+          {
+            "title": "tokarz CNC"
+          },
+          {
+            "title": "szlifierz CNC"
+          },
+          {
+            "title": "operator obrabiarek CNC"
+          },
+          {
+            "title": "operator obrabiarek sterowanych numerycznie"
+          },
+          {
+            "title": "ustawiacz maszyn CNC."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6120,
+                "p25": 5260,
+                "p75": 7460
+              },
+              "net": {
+                "median": 4502,
+                "p25": 3915,
+                "p75": 5416
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 3
+              },
+              "men": {
+                "count": 156,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6810,
+                "p25": 5900,
+                "p75": 7760
+              },
+              "net": {
+                "median": 4972,
+                "p25": 4352,
+                "p75": 5619
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 354,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7350,
+                "p25": 6210,
+                "p75": 8760
+              },
+              "net": {
+                "median": 5341,
+                "p25": 4563,
+                "p75": 6302
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 153,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Frezer drewna",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 48,
+        "related_positions": [
+          {
+            "title": "frezer"
+          },
+          {
+            "title": "frezer drewna."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6570,
+            "p25": 5550,
+            "p75": 7590
+          },
+          "net": {
+            "median": 4809,
+            "p25": 4113,
+            "p75": 5504
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 48,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa frezarek konwencjonalnych ogólnego przeznaczenia, specjalizowanych i specjalnych,",
+          "frezowanie płaszczyzn, rowków wiórowych w narzędziach wieloostrzowych, sprzęgieł kłowych, rowków o różnym zarysie, krzywek, gwintów, krótkich i długich wałków wielowypustowych, zębów w kołach zębatych i zębatek,",
+          "zaznajamianie się z dokumentacją technologiczną obrabianych przedmiotów, rysunkiem wykonawczym, kartą technologiczną i kartami instrukcyjnymi wykonywanych operacji,",
+          "udział w bieżących naprawach i remontach maszyn i urządzeń produkcyjnych,",
+          "wykonywanie pomiarów warsztatowych."
+        ]
+      },
+      {
+        "title": "Front-end developer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 684,
+        "related_positions": [
+          {
+            "title": "programista Javascript"
+          },
+          {
+            "title": "front-end developer"
+          },
+          {
+            "title": "javascript developer."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7710,
+                "p25": 6340,
+                "p75": 9610
+              },
+              "net": {
+                "median": 5586,
+                "p25": 4651,
+                "p75": 6881
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 24
+              },
+              "men": {
+                "count": 276,
+                "percentage": 76
+              }
+            },
+            "benefits": [
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 58
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 58
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12320,
+                "p25": 9690,
+                "p75": 15400
+              },
+              "net": {
+                "median": 8728,
+                "p25": 6936,
+                "p75": 10828
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 143,
+                "percentage": 21
+              },
+              "men": {
+                "count": 541,
+                "percentage": 79
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 70
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 50
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 18160,
+                "p25": 14780,
+                "p75": 23150
+              },
+              "net": {
+                "median": 12710,
+                "p25": 10406,
+                "p75": 16111
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 29,
+                "percentage": 15
+              },
+              "men": {
+                "count": 168,
+                "percentage": 85
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 84
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 84
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 76
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Fryzjer",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": [
+          {
+            "title": "fryzjer"
+          },
+          {
+            "title": "fryzjerka"
+          },
+          {
+            "title": "stylistka fryzur"
+          },
+          {
+            "title": "fryzjer damski"
+          },
+          {
+            "title": "fryzjer męski."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5820,
+            "p25": 4780,
+            "p75": 7930
+          },
+          "net": {
+            "median": 4297,
+            "p25": 3588,
+            "p75": 5736
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 77,
+              "percentage": 86
+            },
+            "men": {
+              "count": 13,
+              "percentage": 14
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fryzjerka",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": [
+          {
+            "title": "fryzjer"
+          },
+          {
+            "title": "fryzjerka"
+          },
+          {
+            "title": "stylistka fryzur"
+          },
+          {
+            "title": "fryzjer damski"
+          },
+          {
+            "title": "fryzjer męski."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5820,
+            "p25": 4780,
+            "p75": 7930
+          },
+          "net": {
+            "median": 4297,
+            "p25": 3588,
+            "p75": 5736
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 77,
+              "percentage": 86
+            },
+            "men": {
+              "count": 13,
+              "percentage": 14
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fryzjer damski",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": [
+          {
+            "title": "fryzjer"
+          },
+          {
+            "title": "fryzjerka"
+          },
+          {
+            "title": "stylistka fryzur"
+          },
+          {
+            "title": "fryzjer damski"
+          },
+          {
+            "title": "fryzjer męski."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5820,
+            "p25": 4780,
+            "p75": 7930
+          },
+          "net": {
+            "median": 4297,
+            "p25": 3588,
+            "p75": 5736
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 77,
+              "percentage": 86
+            },
+            "men": {
+              "count": 13,
+              "percentage": 14
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fryzjer męski",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": [
+          {
+            "title": "fryzjer"
+          },
+          {
+            "title": "fryzjerka"
+          },
+          {
+            "title": "stylistka fryzur"
+          },
+          {
+            "title": "fryzjer damski"
+          },
+          {
+            "title": "fryzjer męski."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5820,
+            "p25": 4780,
+            "p75": 7930
+          },
+          "net": {
+            "median": 4297,
+            "p25": 3588,
+            "p75": 5736
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 77,
+              "percentage": 86
+            },
+            "men": {
+              "count": 13,
+              "percentage": 14
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Fund Accountant",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 62,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6600,
+                "p25": 5890,
+                "p75": 7370
+              },
+              "net": {
+                "median": 4830,
+                "p25": 4345,
+                "p75": 5354
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 16,
+                "percentage": 35
+              },
+              "men": {
+                "count": 30,
+                "percentage": 65
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8510,
+                "p25": 7380,
+                "p75": 10780
+              },
+              "net": {
+                "median": 6131,
+                "p25": 5361,
+                "p75": 7679
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 35,
+                "percentage": 56
+              },
+              "men": {
+                "count": 27,
+                "percentage": 44
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 100
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 90
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 90
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9960,
+                "p25": 8270,
+                "p75": 13590
+              },
+              "net": {
+                "median": 7120,
+                "p25": 5968,
+                "p75": 9594
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 32,
+                "percentage": 39
+              },
+              "men": {
+                "count": 50,
+                "percentage": 61
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 100
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 80
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 60
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Funkcjonariusz celny",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": [
+          {
+            "title": "funkcjonariusz celny"
+          },
+          {
+            "title": "celnik."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9370,
+            "p25": 7400,
+            "p75": 10920
+          },
+          "net": {
+            "median": 6718,
+            "p25": 5375,
+            "p75": 7774
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 43
+            },
+            "men": {
+              "count": 20,
+              "percentage": 57
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Funkcjonariusz straży granicznej",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8650,
+            "p25": 7580,
+            "p75": 9320
+          },
+          "net": {
+            "median": 6226,
+            "p25": 5497,
+            "p75": 6683
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 18
+            },
+            "men": {
+              "count": 9,
+              "percentage": 82
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna emerytura",
+              "percentage": 18
+            },
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 18
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 18
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Funkcjonariusz służby ochrony",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6100,
+            "p25": 5120,
+            "p75": 8390
+          },
+          "net": {
+            "median": 4488,
+            "p25": 3820,
+            "p75": 6049
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 11
+            },
+            "men": {
+              "count": 31,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Funkcjonariusz służby więziennej",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7500,
+            "p25": 5660,
+            "p75": 8970
+          },
+          "net": {
+            "median": 5442,
+            "p25": 4188,
+            "p75": 6445
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 33
+            },
+            "men": {
+              "count": 8,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Funkcjonariusz służb specjalnych",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8030,
+            "p25": 6340,
+            "p75": 8990
+          },
+          "net": {
+            "median": 5804,
+            "p25": 4651,
+            "p75": 6458
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 18
+            },
+            "men": {
+              "count": 9,
+              "percentage": 82
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 36
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 27
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 18
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw sprzedaży i marketingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-sprzedazy-i-marketingu",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 261,
+        "related_positions": [
+          {
+            "title": "specjalista ds. sprzedaży i marketingu"
+          },
+          {
+            "title": "specjalista do spraw sprzedaży i marketingu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6850,
+            "p25": 5620,
+            "p75": 8500
+          },
+          "net": {
+            "median": 5000,
+            "p25": 4161,
+            "p75": 6125
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 149,
+              "percentage": 57
+            },
+            "men": {
+              "count": 112,
+              "percentage": 43
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 47
+            },
+            {
+              "name": "zniżki na firmowe produkty i usługi",
+              "percentage": 38
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 33
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

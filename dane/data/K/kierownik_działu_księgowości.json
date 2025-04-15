@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu księgowości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-ksiegowosci",
+        "category": [
+          "księgowość"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 396,
+        "related_positions": [
+          {
+            "title": "kierownik ds. księgowości"
+          },
+          {
+            "title": "kierownik działu księgowości"
+          },
+          {
+            "title": "kierownik do spraw księgowości."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10150,
+            "p25": 7800,
+            "p75": 14130
+          },
+          "net": {
+            "median": 7249,
+            "p25": 5647,
+            "p75": 9962
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 320,
+              "percentage": 81
+            },
+            "men": {
+              "count": 76,
+              "percentage": 19
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 71
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 60
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "sporządzanie analiz i prognoz finansowych,",
+          "prowadzenie oólnych spraw księgowych firmy i nadzór nad nimi,",
+          "sporządzanie comiesięcznych sprawozdań finansowych"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk giełdowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-gieldowy",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 23,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10020,
+            "p25": 6960,
+            "p75": 14000
+          },
+          "net": {
+            "median": 7160,
+            "p25": 5074,
+            "p75": 9873
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 30
+            },
+            "men": {
+              "count": 16,
+              "percentage": 70
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

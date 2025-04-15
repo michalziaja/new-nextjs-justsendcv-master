@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Szklarz pojazdów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-szklarz-pojazdow",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": [
+          {
+            "title": "szklarz"
+          },
+          {
+            "title": "szklarz pojazdów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6690,
+            "p25": 5650,
+            "p75": 7540
+          },
+          "net": {
+            "median": 4890,
+            "p25": 4182,
+            "p75": 5470
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 12,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

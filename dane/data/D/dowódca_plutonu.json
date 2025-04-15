@@ -1,0 +1,61 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dowódca plutonu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dowodca-plutonu",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8600,
+            "p25": 6840,
+            "p75": 12700
+          },
+          "net": {
+            "median": 6192,
+            "p25": 4993,
+            "p75": 8988
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 19,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna emerytura",
+              "percentage": 21
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 21
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 15
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie podległym zespołem,",
+          "kierowanie przebiegiem służby podwładnych,",
+          "odpowiedzialność za utrzymanie sprzętu w sprawności,",
+          "dbanie o rozwój podwładnych poprzez organizowanie szkoleń stale podnoszacych ich kwalifikacje,",
+          "organizowanie działań bojowych podległych drużyn oraz dowodzenie nimi w czasie walki"
+        ]
+      }
+    ]
+  }
+]

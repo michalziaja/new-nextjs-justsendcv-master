@@ -1,0 +1,53 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw obsługi kredytów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-obslugi-kredytow",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 145,
+        "related_positions": [
+          {
+            "title": "doradca kredytowy"
+          },
+          {
+            "title": "specjalista ds. obsługi kredytów"
+          },
+          {
+            "title": "specjalista do spraw obsługi kredytów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6960,
+            "p25": 5750,
+            "p75": 9040
+          },
+          "net": {
+            "median": 5074,
+            "p25": 4250,
+            "p75": 6493
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 115,
+              "percentage": 79
+            },
+            "men": {
+              "count": 30,
+              "percentage": 21
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

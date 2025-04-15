@@ -1,0 +1,57 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lakiernik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 239,
+        "related_positions": [
+          {
+            "title": "lakiernik"
+          },
+          {
+            "title": "lakiernik samochodowy"
+          },
+          {
+            "title": "lakiernik proszkowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6330,
+            "p25": 5470,
+            "p75": 7810
+          },
+          "net": {
+            "median": 4646,
+            "p25": 4059,
+            "p75": 5654
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 2
+            },
+            "men": {
+              "count": 235,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizacja prac lakierniczych polegających na malowaniu powierzchni, malowaniu aplikacji standardowych za pomocą sprzętu natryskowego,",
+          "nadzór i sprawdzanie jakości powłok lakierniczych poprzez dokonanie pomiarów za pomocą odpowiednich mierników,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      }
+    ]
+  }
+]

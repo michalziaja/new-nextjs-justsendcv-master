@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw GIS (system informacji geograficznej)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-gis-system-informacji-geograficznej",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 190,
+        "related_positions": [
+          {
+            "title": "specjalista ds. GIS (system informacji geograficznej)"
+          },
+          {
+            "title": "specjalista do spraw GIS (system informacji geograficznej)."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6960,
+            "p25": 6060,
+            "p75": 8890
+          },
+          "net": {
+            "median": 5074,
+            "p25": 4462,
+            "p75": 6390
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 85,
+              "percentage": 45
+            },
+            "men": {
+              "count": 105,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Game tester",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-game-tester",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 59,
+        "related_positions": [
+          {
+            "title": "tester gier komputerowych"
+          },
+          {
+            "title": "game tester."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5980,
+            "p25": 5290,
+            "p75": 6910
+          },
+          "net": {
+            "median": 4407,
+            "p25": 3936,
+            "p75": 5040
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 19
+            },
+            "men": {
+              "count": 48,
+              "percentage": 81
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

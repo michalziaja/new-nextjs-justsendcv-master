@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik grupy produktów (marketing)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-grupy-produktow-marketing",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 115,
+        "related_positions": [
+          {
+            "title": "kierownik grupy produktów (marketing)"
+          },
+          {
+            "title": "kierownik produktu (marketing)."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 14190,
+            "p25": 11290,
+            "p75": 18060
+          },
+          "net": {
+            "median": 10004,
+            "p25": 8026,
+            "p75": 12641
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 53,
+              "percentage": 46
+            },
+            "men": {
+              "count": 62,
+              "percentage": 54
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 54
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 54
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

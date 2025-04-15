@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Ratownik górniczy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ratownik-gorniczy",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8630,
+            "p25": 6480,
+            "p75": 11250
+          },
+          "net": {
+            "median": 6173,
+            "p25": 4657,
+            "p75": 8021
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

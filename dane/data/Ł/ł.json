@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "Ł",
+    "positions": [
+      {
+        "title": "Ładowacz (ręczny)",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4890,
+            "p25": 4440,
+            "p75": 5820
+          },
+          "net": {
+            "median": 3664,
+            "p25": 3356,
+            "p75": 4297
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 44,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "ręczny załadunek i rozładunek towarów,",
+          "lekkie prace transportowe,",
+          "wykonywanie prac porządkowych przed i po załadunku,",
+          "utrzymywanie czystości w miejscu pracy."
+        ]
+      }
+    ]
+  }
+]

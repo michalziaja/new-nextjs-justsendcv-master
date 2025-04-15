@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. administracji sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-administracji-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 46,
+        "related_positions": [
+          {
+            "title": "kierownik ds. administracji sprzedaży"
+          },
+          {
+            "title": "kierownik do spraw administracji sprzedaży."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9850,
+            "p25": 6980,
+            "p75": 11650
+          },
+          "net": {
+            "median": 7045,
+            "p25": 5088,
+            "p75": 8272
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 34,
+              "percentage": 74
+            },
+            "men": {
+              "count": 12,
+              "percentage": 26
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

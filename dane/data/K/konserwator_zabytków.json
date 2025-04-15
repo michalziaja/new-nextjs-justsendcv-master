@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konserwator zabytków",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konserwator-zabytkow",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3590,
+            "p25": 3030,
+            "p75": 3800
+          },
+          "net": {
+            "median": 2760,
+            "p25": 2379,
+            "p75": 2894
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 50
+            },
+            "men": {
+              "count": 5,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

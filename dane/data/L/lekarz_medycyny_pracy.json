@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz medycyny pracy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-medycyny-pracy",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9360,
+            "p25": 7430,
+            "p75": 12260
+          },
+          "net": {
+            "median": 6711,
+            "p25": 5395,
+            "p75": 8688
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 20
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 10
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

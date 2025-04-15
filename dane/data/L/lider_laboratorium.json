@@ -1,0 +1,72 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lider laboratorium",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lider-laboratorium",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 329,
+        "related_positions": [
+          {
+            "title": "kierownik laboratorium"
+          },
+          {
+            "title": "lider laboratorium."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9640,
+            "p25": 7540,
+            "p75": 11660
+          },
+          "net": {
+            "median": 6902,
+            "p25": 5470,
+            "p75": 8279
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 184,
+              "percentage": 56
+            },
+            "men": {
+              "count": 145,
+              "percentage": 44
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 58
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 51
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie pracą laboratorium,",
+          "organizacja pracy laborantów - koordynacja i kontrola,",
+          "zapewnienie sprzętu, szkła laboratoryjnego i odczynników,",
+          "prowadzenie pełnej dokumentacji w zakresie wykonywanych badań,",
+          "bieżąca kontrola przestrzegania przepisów BHP w laboratorium,",
+          "sprawowanie nadzoru nad powierzonymi środkami trwałymi i obrotowymi,",
+          "zatwierdzanie sprawozdań z badań wraz z opiniami i interpretacją wyników,",
+          "zatwierdzanie procedur i instrukcji metodycznych,",
+          "planowanie i nadzór nad wdrażaniem nowych metod badawczych."
+        ]
+      }
+    ]
+  }
+]

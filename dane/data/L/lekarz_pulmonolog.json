@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz pulmonolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-pulmonolog",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7080,
+            "p25": 5970,
+            "p75": 8730
+          },
+          "net": {
+            "median": 5080,
+            "p25": 4297,
+            "p75": 6244
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Krawiec",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-krawiec",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 54,
+        "related_positions": [
+          {
+            "title": "krawiec"
+          },
+          {
+            "title": "krawcowa."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5370,
+            "p25": 4750,
+            "p75": 6320
+          },
+          "net": {
+            "median": 3991,
+            "p25": 3568,
+            "p75": 4639
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 53,
+              "percentage": 98
+            },
+            "men": {
+              "count": 1,
+              "percentage": 2
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "dobieranie materiału odzieżowego i dodatków krawieckich,",
+          "wykonywanie form oraz szablonów elementów odzieży i projektowanie ich układu na materiale odzieżowym,",
+          "obliczanie zużycia materiałów podstawowych i dodatków krawieckich na jednostkę wyrobu,",
+          "wykrawanie elementów odzieży z materiałów, kompletowanie elementów z dodatkami,",
+          "wstępne łączenie podstawowych elementów odzieży i wykonywanie przymiarek,",
+          "szycie węzłów konstrukcyjnych odzieży i ich montowanie,",
+          "porządkowanie stanowiska pracy."
+        ]
+      }
+    ]
+  }
+]

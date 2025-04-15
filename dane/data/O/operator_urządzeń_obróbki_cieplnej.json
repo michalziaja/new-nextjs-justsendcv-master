@@ -1,0 +1,58 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator urządzeń obróbki cieplnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-urzadzen-obrobki-cieplnej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": [
+          {
+            "title": "operator urządzeń obróbki cieplnej"
+          },
+          {
+            "title": "operator pieców do obróbki cieplnej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6720,
+            "p25": 5990,
+            "p75": 8320
+          },
+          "net": {
+            "median": 4911,
+            "p25": 4414,
+            "p75": 6002
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 5
+            },
+            "men": {
+              "count": 19,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa urządzeń do obróbki cieplno-chemicznej,",
+          "obsługa urządzeń do obróbki podzerowej,",
+          "obsługa urządzeń do odpuszczania (sezonowanie) i odprężania,",
+          "obsługa urządzeń do mycie automatycznego (odtłuszczanie) i kulowania,",
+          "eksploatacja urządzeń i instalacji gazowych,",
+          "eksploatacja urządzeń energetycznych, kontrola twardości, kontrola międzyoperacyjna wymiarowa,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      }
+    ]
+  }
+]

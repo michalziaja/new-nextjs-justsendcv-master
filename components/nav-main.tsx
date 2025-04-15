@@ -54,10 +54,10 @@ export function NavMain({
                     >
                       <Link 
                         href={item.url}
-                        className="w-full flex items-center gap-6 px-6 py-4 rounded-md bg-transparent hover:bg-transparent active:bg-transparent dark:bg-transparent dark:hover:bg-transparent dark:active:bg-transparent shadow-[5px_5px_5px_rgba(0,0,0,0.3)] dark:shadow-xs border-1 dark:border-2 border-gray-400/50 dark:border-cyan-500/80"
+                        className="w-full flex items-center gap-4 px-6 py-3 rounded-sm  bg-gradient-to-tr from-[#3879DA] to-[#24D1DA]  text-white shadow-sm hover:opacity-95"
                       >
-                        <item.icon className="w-7 h-7 text-slate-700 dark:text-slate-200" />
-                        <span className="text-slate-800 dark:text-slate-200 text-lg font-medium">{item.title}</span>
+                        <item.icon className="w-8 h-8 text-white" />
+                        <span className="text-white text-base font-medium">{item.title}</span>
                       </Link>
                     </SidebarMenuButton>
                   </div>
@@ -68,10 +68,10 @@ export function NavMain({
                   >
                     <Link
                       href={item.url}
-                      className="w-full flex items-center gap-6 px-6 py-4 rounded-md bg-transparent hover:bg-transparent active:bg-transparent dark:bg-transparent dark:hover:bg-transparent dark:active:bg-transparent transition-transform duration-200 hover:scale-[1.08]"
+                      className="w-full flex items-center gap-4 px-6 py-3 rounded-md hover:bg-gray-50 transition-all duration-200 hover:scale-[1.03]"
                     >
-                      <item.icon className="w-7 h-7 text-slate-700 dark:text-slate-200" />
-                      <span className="text-slate-800 dark:text-slate-200 text-lg font-medium">{item.title}</span>
+                      <item.icon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
+                      <span className="text-slate-800 dark:text-slate-200 text-base font-medium">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 )}
@@ -90,7 +90,7 @@ export function NavMain({
                             <SidebarMenuSubButton asChild>
                               <Link
                                 href={subItem.url}
-                                className="text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-500 transition-colors duration-200"
+                                className="text-slate-700 dark:text-slate-300 hover:text-[#15d8e5] dark:hover:text-[#15d8e5] transition-colors duration-200"
                               >
                                 {subItem.title}
                               </Link>

@@ -1,0 +1,54 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Położna",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-polozna",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 135,
+        "related_positions": [
+          {
+            "title": "położna"
+          },
+          {
+            "title": "położna oddziałowa."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7180,
+            "p25": 5950,
+            "p75": 8390
+          },
+          "net": {
+            "median": 5224,
+            "p25": 4386,
+            "p75": 6049
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 133,
+              "percentage": 99
+            },
+            "men": {
+              "count": 2,
+              "percentage": 1
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "przygotowywanie kobiet do porodu,",
+          "odbieranie porodu samodzielnie lub jako asysta lakarza,",
+          "opieka nad matką i dzieckiem w pierwszych tygodniach życia"
+        ]
+      }
+    ]
+  }
+]

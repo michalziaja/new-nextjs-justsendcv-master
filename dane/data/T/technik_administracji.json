@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik administracji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-administracji",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5280,
+            "p25": 4560,
+            "p75": 6890
+          },
+          "net": {
+            "median": 3929,
+            "p25": 3439,
+            "p75": 5027
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 37
+            },
+            "men": {
+              "count": 22,
+              "percentage": 63
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

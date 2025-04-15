@@ -1,0 +1,461 @@
+{
+  "letter": "L",
+  "count": 99,
+  "positions": [
+    {
+      "title": "Laborant budowlany",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-budowlany",
+      "checked": "yes"
+    },
+    {
+      "title": "Laborant chemiczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-chemiczny",
+      "checked": "yes"
+    },
+    {
+      "title": "Laborant mikrobiologiczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-mikrobiologiczny",
+      "checked": "yes"
+    },
+    {
+      "title": "Laborant nasiennictwa",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-nasiennictwa",
+      "checked": "empty"
+    },
+    {
+      "title": "Laborant w hodowli roślin",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-w-hodowli-roslin",
+      "checked": "empty"
+    },
+    {
+      "title": "Laborant weterynaryjny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laborant-weterynaryjny",
+      "checked": "empty"
+    },
+    {
+      "title": "Lakiernik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik",
+      "checked": "yes"
+    },
+    {
+      "title": "Lakiernik proszkowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik-proszkowy",
+      "checked": "yes"
+    },
+    {
+      "title": "Lakiernik samochodowy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik-samochodowy",
+      "checked": "yes"
+    },
+    {
+      "title": "Lakiernik tworzyw sztucznych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik-tworzyw-sztucznych",
+      "checked": "yes"
+    },
+    {
+      "title": "Lakiernik wyrobów drzewnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lakiernik-wyrobow-drzewnych",
+      "checked": "yes"
+    },
+    {
+      "title": "Laminater",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laminater",
+      "checked": "yes"
+    },
+    {
+      "title": "Laminiarz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-laminiarz",
+      "checked": "yes"
+    },
+    {
+      "title": "Latarnik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-latarnik",
+      "checked": "empty"
+    },
+    {
+      "title": "Lean Manufacturing Manager",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lean-manufacturing-manager",
+      "checked": "yes"
+    },
+    {
+      "title": "Lean Specialist",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lean-specialist",
+      "checked": "yes"
+    },
+    {
+      "title": "Legalizator",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-legalizator",
+      "checked": "yes"
+    },
+    {
+      "title": "Legislator",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-legislator",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz - chirurg ogólny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-chirurg-ogolny",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz - chirurg stomatologiczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-chirurg-stomatologiczny",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz alergolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-alergolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz anestezjolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-anestezjolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz bez specjalizacji",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-bez-specjalizacji",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz chirurg onkolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-chirurg-onkolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz chorób wewnętrznych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-chorob-wewnetrznych",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz chorób zakaźnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-chorob-zakaznych",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz dentysta",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-dentysta",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz diabetolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-diabetolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz endodonta",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-endodonta",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz endokrynolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-endokrynolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz gastroenterolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-gastroenterolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz gastrolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-gastrolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz geriatra",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-geriatra",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz ginekolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ginekolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz hematolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-hematolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz immunolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-immunolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz implantolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-implantolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz internista",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-internista",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz kardiolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-kardiolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz laryngolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-laryngolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz medycyny estetycznej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-medycyny-estetycznej",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz medycyny pracy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-medycyny-pracy",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz nefrolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-nefrolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz neonatolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-neonatolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz neurolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-neurolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz okulista",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-okulista",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz onkolog kliniczny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-onkolog-kliniczny",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz ordynator oddziału",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ordynator-oddzialu",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz ortodonta",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ortodonta",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz ortopeda",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ortopeda",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz otolaryngolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-otolaryngolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz pediatra",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-pediatra",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz proktolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-proktolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz protetyk",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-protetyk",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz psychiatra",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-psychiatra",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz pulmonolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-pulmonolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz radiolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-radiolog",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz ratownik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ratownik",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz rehabilitacji medycznej",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-rehabilitacji-medycznej",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz reumatolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-reumatolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz rodzinny",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-rodzinny",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz seksuolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-seksuolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz specjalista I stopnia",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-specjalista-i-stopnia",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz specjalista II stopnia",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-specjalista-ii-stopnia",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz stażysta",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-stazysta",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz urolog",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-urolog",
+      "checked": "empty"
+    },
+    {
+      "title": "Lekarz weterynarii",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-weterynarii",
+      "checked": "yes"
+    },
+    {
+      "title": "Lekarz ze specjalizacją I stopnia",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz-ze-specjalizacja-i-stopnia",
+      "checked": "yes"
+    },
+    {
+      "title": "Lektor dialogów filmowych i radiowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lektor-dialogow-filmowych-i-radiowych",
+      "checked": "empty"
+    },
+    {
+      "title": "Lektor języka obcego",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lektor-jezyka-obcego",
+      "checked": "yes"
+    },
+    {
+      "title": "Leśniczy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lesniczy",
+      "checked": "yes"
+    },
+    {
+      "title": "Level designer",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-level-designer",
+      "checked": "yes"
+    },
+    {
+      "title": "Licytator",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-licytator",
+      "checked": "empty"
+    },
+    {
+      "title": "Liczarz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-liczarz",
+      "checked": "yes"
+    },
+    {
+      "title": "Lider klubu pracy",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lider-klubu-pracy",
+      "checked": "yes"
+    },
+    {
+      "title": "Lider laboratorium",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lider-laboratorium",
+      "checked": "yes"
+    },
+    {
+      "title": "Lider magazynu",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lider-magazynu",
+      "checked": "yes"
+    },
+    {
+      "title": "Lider zespołu call center",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lider-zespolu-call-center",
+      "checked": "yes"
+    },
+    {
+      "title": "Lider zespołu w dziale obsługi klienta",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lider-zespolu-w-dziale-obslugi-klienta",
+      "checked": "yes"
+    },
+    {
+      "title": "Likwidator szkód",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-likwidator-szkod",
+      "checked": "yes"
+    },
+    {
+      "title": "Likwidator szkód komunikacyjnych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-likwidator-szkod-komunikacyjnych",
+      "checked": "yes"
+    },
+    {
+      "title": "Likwidator szkód majątkowych",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-likwidator-szkod-majatkowych",
+      "checked": "yes"
+    },
+    {
+      "title": "Listonosz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-listonosz",
+      "checked": "yes"
+    },
+    {
+      "title": "Lobbysta",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lobbysta",
+      "checked": "empty"
+    },
+    {
+      "title": "Logistics Specialist",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-logistics-specialist",
+      "checked": "yes"
+    },
+    {
+      "title": "Logopeda",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-logopeda",
+      "checked": "yes"
+    },
+    {
+      "title": "Ludwisarz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ludwisarz",
+      "checked": "empty"
+    },
+    {
+      "title": "Lustrzarz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lustrzarz",
+      "checked": "empty"
+    },
+    {
+      "title": "Lutnik",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lutnik",
+      "checked": "empty"
+    },
+    {
+      "title": "Lutowacz",
+      "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lutowacz",
+      "checked": "yes"
+    }
+  ]
+}

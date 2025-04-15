@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Przewodnik turystyczny miejski",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-przewodnik-turystyczny-miejski",
+        "category": [
+          "usługi",
+          "turystyka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4690,
+            "p25": 3760,
+            "p75": 5600
+          },
+          "net": {
+            "median": 3527,
+            "p25": 2893,
+            "p75": 4147
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 30
+            },
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 30
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

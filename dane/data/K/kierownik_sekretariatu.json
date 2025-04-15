@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik sekretariatu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-sekretariatu",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 138,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5880,
+            "p25": 5100,
+            "p75": 7140
+          },
+          "net": {
+            "median": 4338,
+            "p25": 3807,
+            "p75": 5198
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 136,
+              "percentage": 99
+            },
+            "men": {
+              "count": 2,
+              "percentage": 1
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

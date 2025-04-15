@@ -1,0 +1,138 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Data Scientist",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-data-scientist",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 143,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6700,
+                "p25": 5260,
+                "p75": 8320
+              },
+              "net": {
+                "median": 4813,
+                "p25": 3826,
+                "p75": 5955
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 20,
+                "percentage": 36
+              },
+              "men": {
+                "count": 36,
+                "percentage": 64
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 52
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 43
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 43
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9650,
+                "p25": 7330,
+                "p75": 12090
+              },
+              "net": {
+                "median": 6740,
+                "p25": 5257,
+                "p75": 8188
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 38,
+                "percentage": 27
+              },
+              "men": {
+                "count": 105,
+                "percentage": 73
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 55
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 53
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 52
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13060,
+                "p25": 10850,
+                "p75": 17350
+              },
+              "net": {
+                "median": 8807,
+                "p25": 7418,
+                "p75": 11546
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 13,
+                "percentage": 21
+              },
+              "men": {
+                "count": 50,
+                "percentage": 79
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 73
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 67
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 62
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

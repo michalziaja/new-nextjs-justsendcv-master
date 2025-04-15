@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Robotnik górniczy dołowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-robotnik-gorniczy-dolowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10230,
+            "p25": 8720,
+            "p75": 10710
+          },
+          "net": {
+            "median": 7304,
+            "p25": 6274,
+            "p75": 7631
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 10,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

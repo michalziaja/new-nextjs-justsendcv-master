@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kontroler rozliczeń podatkowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kontroler-rozliczen-podatkowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7300,
+            "p25": 6440,
+            "p75": 9870
+          },
+          "net": {
+            "median": 5306,
+            "p25": 4720,
+            "p75": 7058
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 17,
+              "percentage": 89
+            },
+            "men": {
+              "count": 2,
+              "percentage": 11
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

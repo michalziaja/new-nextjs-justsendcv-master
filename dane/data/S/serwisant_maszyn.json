@@ -1,0 +1,107 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Serwisant maszyn",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-serwisant-maszyn",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 283,
+        "related_positions": [
+          {
+            "title": "serwisant maszyn"
+          },
+          {
+            "title": "serwisant urządzeń."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6740,
+                "p25": 5540,
+                "p75": 8010
+              },
+              "net": {
+                "median": 4925,
+                "p25": 4106,
+                "p75": 5791
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 0,
+                "percentage": 0
+              },
+              "men": {
+                "count": 89,
+                "percentage": 100
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7310,
+                "p25": 6140,
+                "p75": 8870
+              },
+              "net": {
+                "median": 5313,
+                "p25": 4515,
+                "p75": 6377
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 2,
+                "percentage": 1
+              },
+              "men": {
+                "count": 281,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9300,
+                "p25": 7090,
+                "p75": 12320
+              },
+              "net": {
+                "median": 6670,
+                "p25": 5163,
+                "p75": 8728
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 82,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

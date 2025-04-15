@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Blacharz samochodowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-blacharz-samochodowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 33,
+        "related_positions": [
+          {
+            "title": "blacharz"
+          },
+          {
+            "title": "blacharz samochodowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7710,
+            "p25": 5670,
+            "p75": 10080
+          },
+          "net": {
+            "median": 5586,
+            "p25": 4195,
+            "p75": 7201
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 33,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prace produkcyjne, remontowo-modernizacyjne oraz prototypowe,",
+          "w zakresie obróbki i kształtowania elementów z blach i profili kształtowych,",
+          "wykonywanie podstawowych operacji ślusarskich oraz blacharskich,",
+          "wykonywanie szkiców wyrobów blacharskich oraz odczytywanie schematów i rysunków technicznych,",
+          "wykonywanie operacji zgrzewania, lutowania, spawania, nitowania i klejenia."
+        ]
+      }
+    ]
+  }
+]

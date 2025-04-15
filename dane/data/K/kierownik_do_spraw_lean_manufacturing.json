@@ -1,0 +1,66 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik do spraw Lean Manufacturing",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-do-spraw-lean-manufacturing",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 187,
+        "related_positions": [
+          {
+            "title": "kierownik ds. Lean Manufacturing"
+          },
+          {
+            "title": "lean Manufacturing Manager"
+          },
+          {
+            "title": "kierownik do spraw Lean Manufacturing."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 14780,
+            "p25": 11720,
+            "p75": 18470
+          },
+          "net": {
+            "median": 10406,
+            "p25": 8319,
+            "p75": 12920
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 24
+            },
+            "men": {
+              "count": 143,
+              "percentage": 76
+            }
+          },
+          "benefits": [
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 73
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 60
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 60
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

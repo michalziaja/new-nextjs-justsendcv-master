@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dźwigowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dzwigowy",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": [
+          {
+            "title": "dźwigowy"
+          },
+          {
+            "title": "windziarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 3920,
+            "p25": 3160,
+            "p75": 4540
+          },
+          "net": {
+            "median": 2851,
+            "p25": 2315,
+            "p75": 3289
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

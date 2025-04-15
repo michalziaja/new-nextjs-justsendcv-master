@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Górnik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-gornik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 68,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11000,
+            "p25": 7720,
+            "p75": 14670
+          },
+          "net": {
+            "median": 7829,
+            "p25": 5593,
+            "p75": 10330
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 68,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie prac udostępniających, przygotowawczych i eksploatacyjnych związanych z wydobyciem węgla, rud metali, siarki lub soli,",
+          "obsługa oraz doraźne remonty maszyn wykorzystywanych w pracy,",
+          "dbanie o odpowiednie zabezpieczenie miejsca pracy"
+        ]
+      }
+    ]
+  }
+]

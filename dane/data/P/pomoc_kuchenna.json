@@ -1,0 +1,76 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pomoc kuchenna",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pomoc-kuchenna",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 200,
+        "related_positions": [
+          {
+            "title": "pracownik gastronomii"
+          },
+          {
+            "title": "pracownik restauracji"
+          },
+          {
+            "title": "pracownik bistro"
+          },
+          {
+            "title": "pracownik kuchni"
+          },
+          {
+            "title": "pomocnik kucharza"
+          },
+          {
+            "title": "pomoc kuchenna"
+          },
+          {
+            "title": "zmywacz naczyń"
+          },
+          {
+            "title": "pracownik kawiarni"
+          },
+          {
+            "title": "pomocnik ciastkarza."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5450,
+            "p25": 4630,
+            "p75": 7820
+          },
+          "net": {
+            "median": 4046,
+            "p25": 3487,
+            "p75": 5661
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 68
+            },
+            "men": {
+              "count": 65,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "przygotowywanie potraw i napojów w punktach gastronomicznych stosując odpowiednie narzędzia, maszyny i urządzenia,",
+          "ocenianie i dobów surowców i półproduktów, ocenianie ich w oparciu o normy i receptury gastronomiczne,",
+          "obliczanie wartości energetycznej potraw i napojów,",
+          "wydawanie przygotowanych potraw"
+        ]
+      }
+    ]
+  }
+]

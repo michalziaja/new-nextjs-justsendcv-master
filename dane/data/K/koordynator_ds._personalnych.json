@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Koordynator ds. personalnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-koordynator-ds-personalnych",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 417,
+        "related_positions": [
+          {
+            "title": "koordynator ds. personalnych"
+          },
+          {
+            "title": "koordynator do spraw personalnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7650,
+            "p25": 6280,
+            "p75": 9770
+          },
+          "net": {
+            "median": 5545,
+            "p25": 4611,
+            "p75": 6990
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 344,
+              "percentage": 82
+            },
+            "men": {
+              "count": 73,
+              "percentage": 18
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 44
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 41
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 35
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Serwisant urządzeń medycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-serwisant-urzadzen-medycznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 56,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8350,
+            "p25": 6770,
+            "p75": 10040
+          },
+          "net": {
+            "median": 6022,
+            "p25": 4945,
+            "p75": 7174
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 4
+            },
+            "men": {
+              "count": 54,
+              "percentage": 96
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

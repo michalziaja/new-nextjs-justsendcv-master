@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Obchodowy bloku",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-obchodowy-bloku",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 26,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8240,
+            "p25": 7210,
+            "p75": 9360
+          },
+          "net": {
+            "median": 5947,
+            "p25": 5245,
+            "p75": 6711
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 26,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

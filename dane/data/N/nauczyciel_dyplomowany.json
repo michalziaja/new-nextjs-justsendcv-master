@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Nauczyciel dyplomowany",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-nauczyciel-dyplomowany",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 107,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7540,
+            "p25": 6370,
+            "p75": 9380
+          },
+          "net": {
+            "median": 5470,
+            "p25": 4672,
+            "p75": 6725
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 84,
+              "percentage": 79
+            },
+            "men": {
+              "count": 23,
+              "percentage": 21
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

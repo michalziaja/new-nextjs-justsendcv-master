@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik automatyk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-automatyk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 99,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8070,
+            "p25": 6740,
+            "p75": 9770
+          },
+          "net": {
+            "median": 5831,
+            "p25": 4925,
+            "p75": 6990
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 3
+            },
+            "men": {
+              "count": 96,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

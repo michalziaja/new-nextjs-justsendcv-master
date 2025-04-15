@@ -1,0 +1,70 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw zarządzania jakością",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-zarzadzania-jakoscia",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 139,
+        "related_positions": [
+          {
+            "title": "specjalista ds. zarządzania jakością"
+          },
+          {
+            "title": "specjalista do spraw zarządzania jakością."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7200,
+            "p25": 5920,
+            "p75": 9910
+          },
+          "net": {
+            "median": 5238,
+            "p25": 4366,
+            "p75": 7086
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 100,
+              "percentage": 72
+            },
+            "men": {
+              "count": 39,
+              "percentage": 28
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 76
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 53
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 46
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wdrażanie zmian w kierunku poprawy jakości produktu,",
+          "monitorowanie obowiązujących norm i wymaganych procedur jakościowych i przechowywanie dokumentacji źródłowej,",
+          "monitorowanie i ewidencjonowanie niezgodności w stosunku do procedur i norm jakościowych oraz wskazywanie koniecznych zmian procedur technologicznych i jakościowych,",
+          "wdrażanie systemów jakości (systemów zarządzania jakością, środowiskiem, bezpieczeństwem pracy),",
+          "opracowanie, wdrażanie, przygotowanie systemów do certyfikacji, zgodnie z wymaganiami norm np.: ISO,",
+          "odpowiedzialny za wdrożenie/ nadzorowanie systemu ISO, wraz ze wszystkimi obowiązkami związanymi z jakością produktu finalnego,",
+          "ocena jakościową dostawców."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Krajacz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-krajacz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": [
+          {
+            "title": "krojczy"
+          },
+          {
+            "title": "krajacz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5950,
+            "p25": 4900,
+            "p75": 7190
+          },
+          "net": {
+            "median": 4386,
+            "p25": 3671,
+            "p75": 5232
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 26
+            },
+            "men": {
+              "count": 31,
+              "percentage": 74
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

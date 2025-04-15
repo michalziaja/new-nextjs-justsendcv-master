@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Serwisant sieci IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-serwisant-sieci-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 109,
+        "related_positions": [
+          {
+            "title": "instalator sieci IT"
+          },
+          {
+            "title": "serwisant sieci IT."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6140,
+            "p25": 5220,
+            "p75": 7490
+          },
+          "net": {
+            "median": 4515,
+            "p25": 3889,
+            "p75": 5435
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 109,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektuje infrastrukturę sieciową,",
+          "serwisuje i konfiguruje systemy sieciowe,",
+          "na bieżąco zarządza siecią internetową,",
+          "konserwuje sieć komputerową,",
+          "instaluje sieć wg dostarczonej dokumentacji,",
+          "prowadzi dokumentację sieci."
+        ]
+      }
+    ]
+  }
+]

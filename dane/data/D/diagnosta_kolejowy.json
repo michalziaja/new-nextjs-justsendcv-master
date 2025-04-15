@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Diagnosta kolejowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-diagnosta-kolejowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5410,
+            "p25": 5000,
+            "p75": 6110
+          },
+          "net": {
+            "median": 4018,
+            "p25": 3738,
+            "p75": 4495
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 21
+            },
+            "men": {
+              "count": 11,
+              "percentage": 79
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

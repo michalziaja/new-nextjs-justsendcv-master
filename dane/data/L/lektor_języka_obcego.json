@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lektor języka obcego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lektor-jezyka-obcego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 75,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6300,
+            "p25": 5280,
+            "p75": 8790
+          },
+          "net": {
+            "median": 4625,
+            "p25": 3929,
+            "p75": 6322
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 65,
+              "percentage": 87
+            },
+            "men": {
+              "count": 10,
+              "percentage": 13
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 20
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 10
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie szkoleń językowych i/lub językowych zajęć edukacyjnych,",
+          "opracowywanie planów zajęć/szkoleń,",
+          "nadzorowanie posępów uczniów/uczestników szkoleń"
+        ]
+      }
+    ]
+  }
+]

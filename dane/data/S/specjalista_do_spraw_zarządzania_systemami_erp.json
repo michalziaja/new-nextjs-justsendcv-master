@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw zarządzania systemami ERP",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-zarzadzania-systemami-erp",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 95,
+        "related_positions": [
+          {
+            "title": "specjalista ds. zarządzania systemami ERP"
+          },
+          {
+            "title": "specjalista do spraw zarządzania systemami ERP."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9850,
+            "p25": 7350,
+            "p75": 12870
+          },
+          "net": {
+            "median": 7045,
+            "p25": 5341,
+            "p75": 9103
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 28,
+              "percentage": 29
+            },
+            "men": {
+              "count": 67,
+              "percentage": 71
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

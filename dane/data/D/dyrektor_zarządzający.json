@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor zarządzający",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-zarzadzajacy",
+        "category": [
+          "zarząd"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1235,
+        "related_positions": [
+          {
+            "title": "dyrektor generalny"
+          },
+          {
+            "title": "dyrektor zarządzający."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 21460,
+            "p25": 13910,
+            "p75": 33380
+          },
+          "net": {
+            "median": 14959,
+            "p25": 9813,
+            "p75": 23085
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 372,
+              "percentage": 30
+            },
+            "men": {
+              "count": 863,
+              "percentage": 70
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 71
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 69
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 66
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kompleksowe zarządzanie firmą,",
+          "nadzór nad wszystkimi działami firmy,",
+          "opracowywanie planów i strategii rozwoju, nadzór nad ich wdrażaniem,",
+          "podejmowanie decyzji o charakterze strategicznym lub kluczowym dla funkcjonowania firmy,",
+          "nadzór formalny i merytoryczny nad działaniami firmy,",
+          "reprezentacja firmy w kluczowych negocjacjach."
+        ]
+      }
+    ]
+  }
+]

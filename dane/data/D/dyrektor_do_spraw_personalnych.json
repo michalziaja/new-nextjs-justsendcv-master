@@ -1,0 +1,81 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor do spraw personalnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-do-spraw-personalnych",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 332,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. personalnych"
+          },
+          {
+            "title": "dyrektor personalny"
+          },
+          {
+            "title": "dyrektor działu personalnego"
+          },
+          {
+            "title": "dyrektor do spraw personalnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 23570,
+            "p25": 16910,
+            "p75": 31360
+          },
+          "net": {
+            "median": 16397,
+            "p25": 11857,
+            "p75": 21708
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 294,
+              "percentage": 89
+            },
+            "men": {
+              "count": 38,
+              "percentage": 11
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 75
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 64
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 64
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kreowanie i realizowanie polityki personalnej firmy,",
+          "tworzenie strategii rozwoju zasobów ludzkich,",
+          "nadzór nad procesem rekrutacji w firmie,",
+          "zarządzanie systemem szkoleń i programami rozwojowymi,",
+          "nadzór nad polityką wynagradzania,",
+          "tworzenie systemów ocen okresowych,",
+          "budowanie systemów motywacyjnych,",
+          "planowanie ścieżek kariery zawodowej,",
+          "koordynowanie procesu wewnętrznej komunikacji w firmie,",
+          "współpraca ze związkami zawodowymi,",
+          "wspieranie menadżerów w podejmowaniu decyzji biznesowych i rozwiązywaniu problemów personalnych,",
+          "reprezentowanie firmy w relacjach z instytucjami związanymi z zarządzaniem personelem."
+        ]
+      }
+    ]
+  }
+]

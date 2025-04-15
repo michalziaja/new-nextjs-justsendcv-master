@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent w dziale IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-w-dziale-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 24,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6010,
+            "p25": 5240,
+            "p75": 6830
+          },
+          "net": {
+            "median": 4427,
+            "p25": 3902,
+            "p75": 4986
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 54
+            },
+            "men": {
+              "count": 11,
+              "percentage": 46
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wsparcie działu IT w codziennych obowiązkach administracyjnych,",
+          "może tworzyć proste aplikacje oraz przeprowadzać testy,",
+          "przyjmowanie zgłoszeń od klientów wewnętrznych"
+        ]
+      }
+    ]
+  }
+]

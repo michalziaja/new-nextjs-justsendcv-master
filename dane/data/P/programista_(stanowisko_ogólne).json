@@ -1,0 +1,148 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista (stanowisko ogólne)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-stanowisko-ogolne",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 575,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7650,
+                "p25": 6280,
+                "p75": 9700
+              },
+              "net": {
+                "median": 5545,
+                "p25": 4611,
+                "p75": 6943
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 47,
+                "percentage": 19
+              },
+              "men": {
+                "count": 197,
+                "percentage": 81
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 61
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 53
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 46
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11330,
+                "p25": 9000,
+                "p75": 14690
+              },
+              "net": {
+                "median": 8054,
+                "p25": 6465,
+                "p75": 10344
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 84,
+                "percentage": 15
+              },
+              "men": {
+                "count": 491,
+                "percentage": 85
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 71
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 57
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 52
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 16010,
+                "p25": 12560,
+                "p75": 20870
+              },
+              "net": {
+                "median": 11244,
+                "p25": 8892,
+                "p75": 14557
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 33,
+                "percentage": 8
+              },
+              "men": {
+                "count": 392,
+                "percentage": 92
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 85
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 66
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 59
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "tworzy i testuje systemy aplikacyjne,",
+          "opracowuje projekty informatyczne,",
+          "współpracuje z analitykami i projektantami systemów informatycznych oraz członkami zespołów wdrażających oprogramowanie,",
+          "uczestniczy w pracach wdrożeniowych ? instalowanie oprogramowania,",
+          "tworzy i uzupełnia dokumentację techniczną systemu związaną z rozwijanym oprogramowaniem,",
+          "zapewnia wsparcie techniczne dla użytkowników oprogramowania,",
+          "projektuje architekturę i tworzy dokumentację systemów i inne specyfikacje techniczne,",
+          "programuje i testuje aplikacje biznesowe,",
+          "poszukuje rozwiązań optymalizujących oprogramowanie."
+        ]
+      }
+    ]
+  }
+]

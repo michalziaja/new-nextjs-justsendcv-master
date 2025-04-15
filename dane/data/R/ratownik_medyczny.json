@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Ratownik medyczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ratownik-medyczny",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 77,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7870,
+            "p25": 6210,
+            "p75": 10120
+          },
+          "net": {
+            "median": 5695,
+            "p25": 4563,
+            "p75": 7229
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 23,
+              "percentage": 30
+            },
+            "men": {
+              "count": 54,
+              "percentage": 70
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wykonywanie na zlecenie kierownika zespołu, czynności i zabiegów ratowniczych w stanach zagrożenia życia, z uwzględnieniem ich specyfiki i właściwej kolejności postępowania,",
+          "planowanie, organizowanie i nadzorowanie działań ratowniczych w miejscu zdarzenia przed przybyciem służb współdziałania,",
+          "posługiwanie się sprzętem ochrony osobistej i medycznym,",
+          "transportowanie pacjentów pod nadzorem medycznym,",
+          "prowadzenie i gromadzenie dokumentacji udzielonej pomocy, sprawozdań o stanie zdrowia, doznanych obrażeniach, zastosowanych zabiegach i czynnościach ratowniczych"
+        ]
+      }
+    ]
+  }
+]

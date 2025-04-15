@@ -1,0 +1,51 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik narzędziowni",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-narzedziowni",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9560,
+            "p25": 8230,
+            "p75": 10220
+          },
+          "net": {
+            "median": 6847,
+            "p25": 5941,
+            "p75": 7297
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 12
+            },
+            "men": {
+              "count": 22,
+              "percentage": 88
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "produkcja narzędzi i oprzyrządowania,",
+          "sprawowanie nadzoru nad konserwacją, przeglądami i naprawami narzędzi wykonywanymi przez firmy zewnętrzne oraz wydziały produkcyjne,",
+          "dbanie o jakość napraw narzędzi wykonywanych przez podległych pracowników,",
+          "prowadzenie ewidencji narzędzi,",
+          "prowadzenie, archiwizowanie i aktualizowanie dokumentacji eksploatacyjnej narzędzi i oprzyrządowania,",
+          "planowanie i koordynowanie zadań wydziału związanych z naprawą, konserwacją, przeglądami, regeneracją i usuwaniem awarii narzędzi i oprzyrządowania,",
+          "kontrola właściwego wykorzystania materiałów do produkcji narzędzi."
+        ]
+      }
+    ]
+  }
+]

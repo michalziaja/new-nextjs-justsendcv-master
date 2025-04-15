@@ -1,0 +1,66 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Manager do spraw e-commerce",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-manager-do-spraw-e-commerce",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 424,
+        "related_positions": [
+          {
+            "title": "e-commerce manager"
+          },
+          {
+            "title": "manager ds. e-commerce"
+          },
+          {
+            "title": "manager do spraw e-commerce."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10000,
+            "p25": 7580,
+            "p75": 14370
+          },
+          "net": {
+            "median": 7147,
+            "p25": 5497,
+            "p75": 10126
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 202,
+              "percentage": 48
+            },
+            "men": {
+              "count": 222,
+              "percentage": 52
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 54
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 38
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

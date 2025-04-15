@@ -1,0 +1,67 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Fakturzystka",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-fakturzystka",
+        "category": [
+          "księgowość"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 371,
+        "related_positions": [
+          {
+            "title": "fakturzysta"
+          },
+          {
+            "title": "fakturzystka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5610,
+            "p25": 4950,
+            "p75": 6650
+          },
+          "net": {
+            "median": 4154,
+            "p25": 3704,
+            "p75": 4863
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 334,
+              "percentage": 90
+            },
+            "men": {
+              "count": 37,
+              "percentage": 10
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 45
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 45
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "wystawianie faktur VAT i rachunków,",
+          "prowadzenie ewidencji faktur i rachunków,",
+          "współpraca z działem handlowym w zakresie fakturowania,",
+          "przygotowanie materiałów związanych z fakturowaniem na potrzeby księgowości."
+        ]
+      }
+    ]
+  }
+]

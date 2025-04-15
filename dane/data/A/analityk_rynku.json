@@ -1,0 +1,64 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk rynku",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-rynku",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 144,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9800,
+            "p25": 7650,
+            "p75": 13070
+          },
+          "net": {
+            "median": 7010,
+            "p25": 5545,
+            "p75": 9240
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 68,
+              "percentage": 47
+            },
+            "men": {
+              "count": 76,
+              "percentage": 53
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 75
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 75
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 66
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektowanie badań marketingowych na potrzeby firmy,",
+          "realizacja projektów badawczych,",
+          "współpraca z zewnętrznymi firmami badawczymi,",
+          "interpretacja wyników badań, opracowywanie raportów, zestawień i analiz, przedstawianie wniosków z badań,",
+          "gromadzenie niezbędnej wiedzy o rynku, a następnie jej przetwarzanie, archiwizowanie i rozwijanie,",
+          "współpraca przy formułowaniu strategii marketingowej firmy,",
+          "prowadzenie stałego monitoringu określonych segmentów rynku,",
+          "notowanie istotnych zmian zachodzących w tych segmentach."
+        ]
+      }
+    ]
+  }
+]

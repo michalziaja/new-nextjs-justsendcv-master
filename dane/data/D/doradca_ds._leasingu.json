@@ -1,0 +1,52 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Doradca ds. leasingu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-doradca-ds-leasingu",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 54,
+        "related_positions": [
+          {
+            "title": "doradca ds. leasingu"
+          },
+          {
+            "title": "doradca leasingowy"
+          },
+          {
+            "title": "doradca do spraw leasingu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9780,
+            "p25": 7790,
+            "p75": 11880
+          },
+          "net": {
+            "median": 6997,
+            "p25": 5640,
+            "p75": 8429
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 46
+            },
+            "men": {
+              "count": 29,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

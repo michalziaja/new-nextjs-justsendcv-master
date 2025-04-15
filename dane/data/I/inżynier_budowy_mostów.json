@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier budowy mostów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budowy-mostow",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 47,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7650,
+            "p25": 6810,
+            "p75": 9210
+          },
+          "net": {
+            "median": 5545,
+            "p25": 4972,
+            "p75": 6608
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 15
+            },
+            "men": {
+              "count": 40,
+              "percentage": 85
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

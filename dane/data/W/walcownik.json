@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Walcownik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-walcownik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6720,
+            "p25": 6040,
+            "p75": 8480
+          },
+          "net": {
+            "median": 4911,
+            "p25": 4448,
+            "p75": 6111
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 13,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

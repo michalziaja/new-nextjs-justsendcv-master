@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Ekonometryk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ekonometryk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9920,
+            "p25": 7390,
+            "p75": 11600
+          },
+          "net": {
+            "median": 7093,
+            "p25": 5368,
+            "p75": 8238
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": [
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 30
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 20
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

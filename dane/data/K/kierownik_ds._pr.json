@@ -1,0 +1,72 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. PR",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-pr",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 170,
+        "related_positions": [
+          {
+            "title": "kierownik ds. PR"
+          },
+          {
+            "title": "pR manager"
+          },
+          {
+            "title": "kierownik do spraw PR."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 11830,
+            "p25": 9720,
+            "p75": 15410
+          },
+          "net": {
+            "median": 8394,
+            "p25": 6957,
+            "p75": 10835
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 132,
+              "percentage": 78
+            },
+            "men": {
+              "count": 38,
+              "percentage": 22
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 69
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 53
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 46
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "koordynacja wdrażania zewnętrznej i wewnętrznej polityki informacyjnej firmy,",
+          "nadzór nad pracą działu,",
+          "monitorowanie opinii publicznej,",
+          "kształtowanie wizerunku firmy na rynku,",
+          "kontakt z agencjami public relations."
+        ]
+      }
+    ]
+  }
+]

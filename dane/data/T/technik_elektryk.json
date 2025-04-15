@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik elektryk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-elektryk",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 222,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7030,
+            "p25": 6000,
+            "p75": 8330
+          },
+          "net": {
+            "median": 5122,
+            "p25": 4420,
+            "p75": 6008
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 1
+            },
+            "men": {
+              "count": 219,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

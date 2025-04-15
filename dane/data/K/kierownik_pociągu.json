@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik pociągu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-pociagu",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 31,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6960,
+            "p25": 6310,
+            "p75": 8290
+          },
+          "net": {
+            "median": 5074,
+            "p25": 4632,
+            "p75": 5982
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 32
+            },
+            "men": {
+              "count": 21,
+              "percentage": 68
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

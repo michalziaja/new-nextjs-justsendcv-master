@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Główny spawalnik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-glowny-spawalnik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 81,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10900,
+            "p25": 8620,
+            "p75": 12800
+          },
+          "net": {
+            "median": 7760,
+            "p25": 6206,
+            "p75": 9056
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 5
+            },
+            "men": {
+              "count": 77,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator kamery",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-kamery",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7440,
+            "p25": 5670,
+            "p75": 9280
+          },
+          "net": {
+            "median": 5402,
+            "p25": 4195,
+            "p75": 6656
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 15
+            },
+            "men": {
+              "count": 17,
+              "percentage": 85
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik firmy sprzątającej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-firmy-sprzatajacej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6280,
+            "p25": 5610,
+            "p75": 9320
+          },
+          "net": {
+            "median": 4611,
+            "p25": 4154,
+            "p75": 6683
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 72
+            },
+            "men": {
+              "count": 7,
+              "percentage": 28
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 40
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 32
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 32
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

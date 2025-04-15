@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Trakorzysta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-trakorzysta",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4260,
+            "p25": 3490,
+            "p75": 4860
+          },
+          "net": {
+            "median": 3188,
+            "p25": 2695,
+            "p75": 3571
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 9
+            },
+            "men": {
+              "count": 10,
+              "percentage": 91
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

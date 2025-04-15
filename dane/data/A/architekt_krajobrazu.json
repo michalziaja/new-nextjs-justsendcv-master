@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Architekt krajobrazu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-architekt-krajobrazu",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 63,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6810,
+            "p25": 5480,
+            "p75": 7840
+          },
+          "net": {
+            "median": 4972,
+            "p25": 4066,
+            "p75": 5674
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 53,
+              "percentage": 84
+            },
+            "men": {
+              "count": 10,
+              "percentage": 16
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

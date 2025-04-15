@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Arteterapeuta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-arteterapeuta",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3810,
+            "p25": 3430,
+            "p75": 4800
+          },
+          "net": {
+            "median": 2927,
+            "p25": 2668,
+            "p75": 3602
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 88
+            },
+            "men": {
+              "count": 2,
+              "percentage": 12
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 18
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 12
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 6
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

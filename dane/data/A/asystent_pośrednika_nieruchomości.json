@@ -1,0 +1,56 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent pośrednika nieruchomości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-posrednika-nieruchomosci",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6290,
+            "p25": 4510,
+            "p75": 6810
+          },
+          "net": {
+            "median": 4618,
+            "p25": 3404,
+            "p75": 4972
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 73
+            },
+            "men": {
+              "count": 3,
+              "percentage": 27
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 45
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 27
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

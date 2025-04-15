@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "Z",
+    "positions": [
+      {
+        "title": "Zaopatrzeniowiec",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-zaopatrzeniowiec",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 93,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6400,
+            "p25": 5560,
+            "p75": 7540
+          },
+          "net": {
+            "median": 4693,
+            "p25": 4120,
+            "p75": 5470
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 31,
+              "percentage": 33
+            },
+            "men": {
+              "count": 62,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

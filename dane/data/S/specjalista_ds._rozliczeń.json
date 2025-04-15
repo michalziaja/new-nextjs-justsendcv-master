@@ -1,0 +1,151 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. rozliczeń",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-rozliczen",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 799,
+        "related_positions": [
+          {
+            "title": "specjalista ds. rozliczeń"
+          },
+          {
+            "title": "specjalista ds. rozliczeń finansowych"
+          },
+          {
+            "title": "specjalista do spraw rozliczeń"
+          },
+          {
+            "title": "specjalista do spraw rozliczeń finansowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5490,
+                "p25": 4800,
+                "p75": 6410
+              },
+              "net": {
+                "median": 4073,
+                "p25": 3602,
+                "p75": 4699
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 158,
+                "percentage": 77
+              },
+              "men": {
+                "count": 46,
+                "percentage": 23
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 58
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 52
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 35
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6380,
+                "p25": 5420,
+                "p75": 7650
+              },
+              "net": {
+                "median": 4679,
+                "p25": 4025,
+                "p75": 5545
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 672,
+                "percentage": 84
+              },
+              "men": {
+                "count": 127,
+                "percentage": 16
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 56
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 48
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7540,
+                "p25": 6290,
+                "p75": 9040
+              },
+              "net": {
+                "median": 5470,
+                "p25": 4618,
+                "p75": 6493
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 200,
+                "percentage": 81
+              },
+              "men": {
+                "count": 46,
+                "percentage": 19
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 43
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 43
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 37
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

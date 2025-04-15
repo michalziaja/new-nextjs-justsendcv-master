@@ -1,0 +1,163 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Koordynator projektów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-koordynator-projektow",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 966,
+        "related_positions": [
+          {
+            "title": "kierownik projektu"
+          },
+          {
+            "title": "project Manager"
+          },
+          {
+            "title": "kierownik projektów"
+          },
+          {
+            "title": "koordynator projektów"
+          },
+          {
+            "title": "koordynator projektu"
+          },
+          {
+            "title": "koordynator projektów unijnych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7520,
+                "p25": 6270,
+                "p75": 8840
+              },
+              "net": {
+                "median": 5456,
+                "p25": 4604,
+                "p75": 6357
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 261,
+                "percentage": 69
+              },
+              "men": {
+                "count": 119,
+                "percentage": 31
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 67
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 46
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 46
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9220,
+                "p25": 7460,
+                "p75": 11980
+              },
+              "net": {
+                "median": 6615,
+                "p25": 5416,
+                "p75": 8496
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 578,
+                "percentage": 60
+              },
+              "men": {
+                "count": 388,
+                "percentage": 40
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 65
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 52
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11740,
+                "p25": 9000,
+                "p75": 15490
+              },
+              "net": {
+                "median": 8333,
+                "p25": 6465,
+                "p75": 10889
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 412,
+                "percentage": 48
+              },
+              "men": {
+                "count": 454,
+                "percentage": 52
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 72
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 56
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 54
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "planowanie, organizowanie oraz koordynowanie projektów,",
+          "ustalanie celów i zadań poszczgólnych współpracowników,",
+          "wybór metodologii i monitorowanie przebiegu prac badawczych,",
+          "monitorowanie realizacji budżetu projektów,",
+          "prezentowanie wyników projektów oraz kontrola stopnia zgodności uzyskanych wyników z założonymi celami"
+        ]
+      }
+    ]
+  }
+]

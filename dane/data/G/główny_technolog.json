@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Główny technolog",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-glowny-technolog",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 375,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9240,
+            "p25": 7290,
+            "p75": 11700
+          },
+          "net": {
+            "median": 6629,
+            "p25": 5299,
+            "p75": 8305
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 96,
+              "percentage": 26
+            },
+            "men": {
+              "count": 279,
+              "percentage": 74
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 36
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 36
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 31
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor ds. sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-ds-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1534,
+        "related_positions": [
+          {
+            "title": "dyrektor ds. sprzedaży"
+          },
+          {
+            "title": "dyrektor handlowy"
+          },
+          {
+            "title": "dyrektor sprzedaży"
+          },
+          {
+            "title": "dyrektor ds. handlowych"
+          },
+          {
+            "title": "dyrektor działu sprzedaży"
+          },
+          {
+            "title": "dyrektor do spraw sprzedaży"
+          },
+          {
+            "title": "dyrektor do spraw handlowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 20870,
+            "p25": 14310,
+            "p75": 29000
+          },
+          "net": {
+            "median": 14557,
+            "p25": 10085,
+            "p75": 20099
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 355,
+              "percentage": 23
+            },
+            "men": {
+              "count": 1179,
+              "percentage": 77
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 73
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 73
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 67
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "organizacja i zarządzanie całością sprzedaży na terenie całego kraju,",
+          "udział w opracowywaniu planów sprzedaży na terenie podległego obszaru,",
+          "tworzenie strategii sprzedażowych, rozwijanie sieci sprzedaży,",
+          "nadzór nad pracą całości działań działu sprzedaży,",
+          "realizacja zaplanowanego obrotu,",
+          "zapewnianie sprawozdawczości sprzedażowej,",
+          "kontakty i negocjacje z kluczowymi klientami z regionu."
+        ]
+      }
+    ]
+  }
+]

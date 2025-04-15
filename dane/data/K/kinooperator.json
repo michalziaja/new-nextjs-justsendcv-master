@@ -1,0 +1,45 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kinooperator",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kinooperator",
+        "category": [
+          "kultura i sztuka"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4010,
+            "p25": 3620,
+            "p75": 5620
+          },
+          "net": {
+            "median": 3064,
+            "p25": 2798,
+            "p75": 4161
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa urządzeń projekcyjnych w kinie,",
+          "dbanie o sprawne funkcjonowanie obsługiwanych urządzeń technicznych"
+        ]
+      }
+    ]
+  }
+]

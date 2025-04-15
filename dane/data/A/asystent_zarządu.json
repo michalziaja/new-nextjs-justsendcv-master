@@ -1,0 +1,147 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent zarządu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-zarzadu",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 379,
+        "related_positions": [
+          {
+            "title": "asystent zarządu"
+          },
+          {
+            "title": "asystentka zarządu"
+          },
+          {
+            "title": "asystent prezesa"
+          },
+          {
+            "title": "asystentka prezesa."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6010,
+                "p25": 5170,
+                "p75": 7120
+              },
+              "net": {
+                "median": 4427,
+                "p25": 3855,
+                "p75": 5184
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 108,
+                "percentage": 92
+              },
+              "men": {
+                "count": 10,
+                "percentage": 8
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 50
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 40
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 30
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 5760,
+                "p75": 8300
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4257,
+                "p75": 5988
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 371,
+                "percentage": 98
+              },
+              "men": {
+                "count": 8,
+                "percentage": 2
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 38
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 36
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 33
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7550,
+                "p25": 6230,
+                "p75": 10240
+              },
+              "net": {
+                "median": 5477,
+                "p25": 4577,
+                "p75": 7311
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 152,
+                "percentage": 97
+              },
+              "men": {
+                "count": 4,
+                "percentage": 3
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "zarządzanie obiegiem informacji między zwierzchnikami a pracownikami niższego szczebla,",
+          "przygotowanie niezbędnej dokumentacji i informacji na spotkania dyrektora i/lub zarządu,",
+          "klasyfikowanie i prowadzenie dokumentacji,",
+          "prowadzenie kluczowej korespondencji,",
+          "dokonywanie tłumaczeń pisemnych i ustnych,sporządzanie raportów i sprawozdań,",
+          "kontakty z klientami,",
+          "organizacja podróży służbowych,",
+          "przygotowywanie prezentacji."
+        ]
+      }
+    ]
+  }
+]

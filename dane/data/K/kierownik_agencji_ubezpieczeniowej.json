@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik agencji ubezpieczeniowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-agencji-ubezpieczeniowej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8040,
+            "p25": 6110,
+            "p75": 12460
+          },
+          "net": {
+            "median": 5810,
+            "p25": 4495,
+            "p75": 8824
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 92
+            },
+            "men": {
+              "count": 1,
+              "percentage": 8
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

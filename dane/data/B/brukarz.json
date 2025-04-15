@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "B",
+    "positions": [
+      {
+        "title": "Brukarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-brukarz",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 62,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6120,
+            "p25": 4970,
+            "p75": 8270
+          },
+          "net": {
+            "median": 4502,
+            "p25": 3718,
+            "p75": 5968
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 61,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

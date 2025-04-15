@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator pomp i kompresorów LPG",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-pomp-i-kompresorow-lpg",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4160,
+            "p25": 3800,
+            "p75": 4860
+          },
+          "net": {
+            "median": 2965,
+            "p25": 2714,
+            "p75": 3453
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 13
+            },
+            "men": {
+              "count": 13,
+              "percentage": 87
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa parku zbiornikowego,",
+          "obsługa urządzeń dyspozytorni pompy pożarowe takich jak stacja sprężarek powietrza, agregat prądotwórczy, system detekcji gazu,",
+          "rozładunek i załadunku cystern kolejowych i samochodowych,",
+          "dostarczenie gazu na HNB,",
+          "przestrzeganie przepisów BHP,",
+          "naprawy i konserwacje urządzeń technicznych zakład w tym instalacji LPG i linii do napełniania butli."
+        ]
+      }
+    ]
+  }
+]

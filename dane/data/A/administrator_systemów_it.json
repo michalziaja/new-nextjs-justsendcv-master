@@ -1,0 +1,151 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Administrator systemów IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-administrator-systemow-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1421,
+        "related_positions": [
+          {
+            "title": "administrator systemów IT"
+          },
+          {
+            "title": "administrator IT."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7160,
+                "p25": 5950,
+                "p75": 8890
+              },
+              "net": {
+                "median": 5211,
+                "p25": 4386,
+                "p75": 6390
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 33,
+                "percentage": 8
+              },
+              "men": {
+                "count": 381,
+                "percentage": 92
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 58
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 52
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9690,
+                "p25": 7740,
+                "p75": 12220
+              },
+              "net": {
+                "median": 6936,
+                "p25": 5607,
+                "p75": 8661
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 70,
+                "percentage": 5
+              },
+              "men": {
+                "count": 1351,
+                "percentage": 95
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 73
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 57
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 51
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11700,
+                "p25": 8900,
+                "p75": 16000
+              },
+              "net": {
+                "median": 8305,
+                "p25": 6397,
+                "p75": 11237
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 34,
+                "percentage": 3
+              },
+              "men": {
+                "count": 1019,
+                "percentage": 97
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 64
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 48
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 48
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "identyfikuje i rozwiązuje problemy związane z systemem informatycznym,",
+          "instaluje oprogramowanie,",
+          "monitoruje system IT,",
+          "szkoli pracowników z zakresu funkcjonowania i obsługi systemu oraz zainstalowanego oprogramowania,",
+          "może koordynować pracę mniej doświadczonych pracowników."
+        ]
+      }
+    ]
+  }
+]

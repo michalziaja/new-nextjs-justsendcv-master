@@ -1,0 +1,143 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Architekt",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-architekt",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 427,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6820,
+                "p25": 6010,
+                "p75": 8070
+              },
+              "net": {
+                "median": 4979,
+                "p25": 4427,
+                "p75": 5831
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 119,
+                "percentage": 73
+              },
+              "men": {
+                "count": 44,
+                "percentage": 27
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 40
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7700,
+                "p25": 6660,
+                "p75": 9200
+              },
+              "net": {
+                "median": 5579,
+                "p25": 4870,
+                "p75": 6601
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 297,
+                "percentage": 70
+              },
+              "men": {
+                "count": 130,
+                "percentage": 30
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 33
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 25
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 18
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9160,
+                "p25": 7670,
+                "p75": 11330
+              },
+              "net": {
+                "median": 6575,
+                "p25": 5559,
+                "p75": 8054
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 81,
+                "percentage": 42
+              },
+              "men": {
+                "count": 111,
+                "percentage": 58
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 35
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 21
+              },
+              {
+                "name": "prywatna opieka medyczna dla rodziny pracownika",
+                "percentage": 21
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "planowanie i nadzór nad wszystkimi architektonicznymi aspektami projektów konstrukcyjnych,",
+          "odpowiedzialność za dokumentację techniczną,",
+          "akceptacja zamówionych materiałów,",
+          "kontrola przebiegu realizacji inwestycji"
+        ]
+      }
+    ]
+  }
+]

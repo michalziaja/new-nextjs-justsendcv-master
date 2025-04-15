@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Makler giełd towarowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-makler-gield-towarowych",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12420,
+            "p25": 11250,
+            "p75": 17890
+          },
+          "net": {
+            "median": 8797,
+            "p25": 7999,
+            "p75": 12526
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 7
+            },
+            "men": {
+              "count": 13,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

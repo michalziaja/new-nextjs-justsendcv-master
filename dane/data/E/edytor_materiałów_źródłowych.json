@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Edytor materiałów źródłowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-edytor-materialow-zrodlowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4710,
+            "p25": 4360,
+            "p75": 6630
+          },
+          "net": {
+            "median": 3540,
+            "p25": 3303,
+            "p75": 4849
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 50
+            },
+            "men": {
+              "count": 5,
+              "percentage": 50
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 60
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 40
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

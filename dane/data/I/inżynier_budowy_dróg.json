@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier budowy dróg",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-budowy-drog",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 108,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7380,
+            "p25": 6470,
+            "p75": 8490
+          },
+          "net": {
+            "median": 5361,
+            "p25": 4740,
+            "p75": 6118
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 29,
+              "percentage": 27
+            },
+            "men": {
+              "count": 79,
+              "percentage": 73
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

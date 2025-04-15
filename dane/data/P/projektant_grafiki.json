@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant grafiki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-grafiki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 156,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6880,
+            "p25": 5950,
+            "p75": 8630
+          },
+          "net": {
+            "median": 5020,
+            "p25": 4386,
+            "p75": 6213
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 96,
+              "percentage": 62
+            },
+            "men": {
+              "count": 60,
+              "percentage": 38
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

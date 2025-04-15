@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw podatków",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-podatkow",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 170,
+        "related_positions": [
+          {
+            "title": "specjalista ds. podatków"
+          },
+          {
+            "title": "specjalista do spraw podatków."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8600,
+            "p25": 7270,
+            "p75": 11100
+          },
+          "net": {
+            "median": 6192,
+            "p25": 5286,
+            "p75": 7897
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 115,
+              "percentage": 68
+            },
+            "men": {
+              "count": 55,
+              "percentage": 32
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 80
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 60
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 53
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

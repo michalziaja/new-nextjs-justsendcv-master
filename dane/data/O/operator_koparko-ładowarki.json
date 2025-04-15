@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator koparko-ładowarki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-koparko-ladowarki",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 55,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6650,
+            "p25": 5450,
+            "p75": 7760
+          },
+          "net": {
+            "median": 4863,
+            "p25": 4046,
+            "p75": 5619
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 55,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik informacji turystycznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-informacji-turystycznej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3680,
+            "p25": 3400,
+            "p75": 4460
+          },
+          "net": {
+            "median": 2839,
+            "p25": 2648,
+            "p75": 3370
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 91
+            },
+            "men": {
+              "count": 1,
+              "percentage": 9
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 18
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 18
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 18
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

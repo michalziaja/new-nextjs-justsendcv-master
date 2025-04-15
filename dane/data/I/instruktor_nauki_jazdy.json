@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Instruktor nauki jazdy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-nauki-jazdy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "instruktor nauki jazdy"
+          },
+          {
+            "title": "instruktor techniki jazdy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6620,
+            "p25": 5000,
+            "p75": 7240
+          },
+          "net": {
+            "median": 4843,
+            "p25": 3738,
+            "p75": 5265
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 7
+            },
+            "men": {
+              "count": 14,
+              "percentage": 93
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie nauki kierowania pojazdem silnikowym lub tramwajem dla określonej kategorii uprawnień,",
+          "prowadzenie zajęć dydaktycznych w szkołach kształcących w zawodach o kierunku samochodowym, rolniczym itp.,",
+          "dbanie o prawidłowy stan techniczny pojazdów, na których prowadzone jest szkolenie,",
+          "odpowiednie przygotowanie kursantów do postępowania egzaminacyjnego"
+        ]
+      }
+    ]
+  }
+]

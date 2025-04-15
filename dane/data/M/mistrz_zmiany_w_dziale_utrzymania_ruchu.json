@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Mistrz zmiany w dziale utrzymania ruchu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-mistrz-zmiany-w-dziale-utrzymania-ruchu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 49,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9100,
+            "p25": 7600,
+            "p75": 10440
+          },
+          "net": {
+            "median": 6534,
+            "p25": 5511,
+            "p75": 7447
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 49,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk do spraw IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-do-spraw-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 267,
+        "related_positions": [
+          {
+            "title": "analityk ds. IT"
+          },
+          {
+            "title": "analityk do spraw IT."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8490,
+                "p25": 6750,
+                "p75": 10770
+              },
+              "net": {
+                "median": 6118,
+                "p25": 4931,
+                "p75": 7672
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 50,
+                "percentage": 43
+              },
+              "men": {
+                "count": 65,
+                "percentage": 57
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11460,
+                "p25": 9280,
+                "p75": 13910
+              },
+              "net": {
+                "median": 8142,
+                "p25": 6656,
+                "p75": 9813
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 80,
+                "percentage": 30
+              },
+              "men": {
+                "count": 187,
+                "percentage": 70
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 88
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 88
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 72
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14000,
+                "p25": 10830,
+                "p75": 19090
+              },
+              "net": {
+                "median": 9873,
+                "p25": 7713,
+                "p75": 13343
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 64,
+                "percentage": 30
+              },
+              "men": {
+                "count": 151,
+                "percentage": 70
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 75
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 62
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 62
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "analizuje możliwości współpracy poszczególnych systemów komputerowych,",
+          "analizuje problemy w obszarze niezawodności, wydajności, skalowalności, bezpieczeństwa i funkcjonalności,",
+          "modeluje procesy biznesowe,",
+          "doradza w zakresie aplikacji internetowych oraz tworzenia specyfikacji,",
+          "analizuje wymagania i problemy użytkowników,",
+          "sporządza analizy danych na zlecenie klienta wewnętrznego i zewnętrznego,",
+          "dobiera produkty pod kątem użytkownika."
+        ]
+      }
+    ]
+  }
+]

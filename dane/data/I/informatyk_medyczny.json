@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Informatyk medyczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-informatyk-medyczny",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 25,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8900,
+            "p25": 5800,
+            "p75": 10480
+          },
+          "net": {
+            "median": 6397,
+            "p25": 4283,
+            "p75": 7474
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 25,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

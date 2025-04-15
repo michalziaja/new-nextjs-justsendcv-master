@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik punktu/oddziału sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-punktu-oddzialu-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 65,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5300,
+            "p25": 4930,
+            "p75": 6410
+          },
+          "net": {
+            "median": 3943,
+            "p25": 3691,
+            "p75": 4699
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 40,
+              "percentage": 62
+            },
+            "men": {
+              "count": 25,
+              "percentage": 38
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie magazynu artykułów promocyjnych (wsparcia sprzedaży) i biurowych na potrzeby działu,",
+          "tworzenie korespondencji handlowej i ofert itp.,",
+          "wysyłanie korespondencji w imieniu pracowników działu handlowego,",
+          "wykonywanie poleceń przełożonych."
+        ]
+      }
+    ]
+  }
+]

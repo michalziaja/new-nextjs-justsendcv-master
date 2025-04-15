@@ -1,0 +1,75 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor regionu sprzedaży",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-regionu-sprzedazy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 281,
+        "related_positions": [
+          {
+            "title": "dyrektor regionu sprzedaży"
+          },
+          {
+            "title": "regionalny dyrektor sprzedaży"
+          },
+          {
+            "title": "dyrektor regionalny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 19480,
+            "p25": 15520,
+            "p75": 26500
+          },
+          "net": {
+            "median": 13609,
+            "p25": 10910,
+            "p75": 18395
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 59,
+              "percentage": 21
+            },
+            "men": {
+              "count": 222,
+              "percentage": 79
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 81
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 81
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 62
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "współtworzenie i nadzorowanie realizacji strategii sprzedaży tradycyjnej firmy na terenie wyznaczonego obszaru,",
+          "organizacja i zarządzanie siecią sprzedaży w regionie,",
+          "nadzór nad pracą kierowników obszaru sprzedaży,",
+          "udział w opracowywaniu planów sprzedaży na terenie podległego obszaru,",
+          "realizacja zaplanowanego obrotu,",
+          "sporządzanie raportów i analiz,",
+          "kontakty i negocjacje z kluczowymi klientami z regionu,",
+          "rozwój sieci sprzedaży."
+        ]
+      }
+    ]
+  }
+]

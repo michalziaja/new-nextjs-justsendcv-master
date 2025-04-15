@@ -1,0 +1,53 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. badań marketingowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-badan-marketingowych",
+        "category": [
+          "marketing"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 106,
+        "related_positions": [
+          {
+            "title": "specjalista ds. badań marketingowych"
+          },
+          {
+            "title": "specjalista do spraw badań marketingowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9230,
+            "p25": 7000,
+            "p75": 11480
+          },
+          "net": {
+            "median": 6622,
+            "p25": 5102,
+            "p75": 8156
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 85,
+              "percentage": 80
+            },
+            "men": {
+              "count": 21,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "planowanie badań marketingowych (analiza potrzeb, wybór narzędzi i procedur badawczych),",
+          "realizacja badań,",
+          "analizowanie zgromadzonych danyc i sporządzanie raportów"
+        ]
+      }
+    ]
+  }
+]

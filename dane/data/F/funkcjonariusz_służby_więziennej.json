@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Funkcjonariusz służby więziennej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-funkcjonariusz-sluzby-wieziennej",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7500,
+            "p25": 5660,
+            "p75": 8970
+          },
+          "net": {
+            "median": 5442,
+            "p25": 4188,
+            "p75": 6445
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 33
+            },
+            "men": {
+              "count": 8,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

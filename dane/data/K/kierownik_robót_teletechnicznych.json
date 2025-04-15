@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik robót teletechnicznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-robot-teletechnicznych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10100,
+            "p25": 7920,
+            "p75": 13420
+          },
+          "net": {
+            "median": 7215,
+            "p25": 5729,
+            "p75": 9478
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 13
+            },
+            "men": {
+              "count": 13,
+              "percentage": 87
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,1513 @@
+[
+  {
+    "letter": "W",
+    "positions": [
+      {
+        "title": "Wagowy",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5620,
+            "p25": 4990,
+            "p75": 6720
+          },
+          "net": {
+            "median": 4161,
+            "p25": 3731,
+            "p75": 4911
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 21,
+              "percentage": 60
+            },
+            "men": {
+              "count": 14,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Walcownik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6720,
+            "p25": 6040,
+            "p75": 8480
+          },
+          "net": {
+            "median": 4911,
+            "p25": 4448,
+            "p75": 6111
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 13,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Webdeveloper",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 156,
+        "related_positions": [
+          {
+            "title": "webdeveloper"
+          },
+          {
+            "title": "web developer."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8760,
+            "p25": 6810,
+            "p75": 11960
+          },
+          "net": {
+            "median": 6302,
+            "p25": 4972,
+            "p75": 8483
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 39,
+              "percentage": 25
+            },
+            "men": {
+              "count": 117,
+              "percentage": 75
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektuje i tworzy aplikacje internetowe (z wykorzystaniem np. technologii Dhtml, Javascript, ASP, php, perl),",
+          "współpracuje z projektantem i programistą stron WWW,",
+          "współpracuje z analitykami i projektantami systemów informatycznych,",
+          "kontroluje poprawność aplikacji,",
+          "pisze testy do oprogramowania,",
+          "uzupełnia dokumentację techniczną systemu związaną z rozwijanym oprogramowaniem."
+        ]
+      },
+      {
+        "title": "Webmaster",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 51,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7490,
+            "p25": 5650,
+            "p75": 11000
+          },
+          "net": {
+            "median": 5435,
+            "p25": 4182,
+            "p75": 7829
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 20
+            },
+            "men": {
+              "count": 41,
+              "percentage": 80
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "realizuje projekty za pomocą programów graficznych oraz języków HTML, DHTML, javascript, CSS, PHP, CGI, SQL, VRLM,",
+          "FLASH itp.,",
+          "współpracuje z klientami w zakresie uzgodnień projektów,",
+          "instaluje, konfiguruje i zarządza serwisami internetowymi,",
+          "monitoruje działania serwisów internetowych."
+        ]
+      },
+      {
+        "title": "Web designer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 32,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5230,
+            "p25": 4420,
+            "p75": 6930
+          },
+          "net": {
+            "median": 3807,
+            "p25": 3290,
+            "p75": 4975
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 44
+            },
+            "men": {
+              "count": 18,
+              "percentage": 56
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 36
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 24
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Web developer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 156,
+        "related_positions": [
+          {
+            "title": "webdeveloper"
+          },
+          {
+            "title": "web developer."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8760,
+            "p25": 6810,
+            "p75": 11960
+          },
+          "net": {
+            "median": 6302,
+            "p25": 4972,
+            "p75": 8483
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 39,
+              "percentage": 25
+            },
+            "men": {
+              "count": 117,
+              "percentage": 75
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "projektuje i tworzy aplikacje internetowe (z wykorzystaniem np. technologii Dhtml, Javascript, ASP, php, perl),",
+          "współpracuje z projektantem i programistą stron WWW,",
+          "współpracuje z analitykami i projektantami systemów informatycznych,",
+          "kontroluje poprawność aplikacji,",
+          "pisze testy do oprogramowania,",
+          "uzupełnia dokumentację techniczną systemu związaną z rozwijanym oprogramowaniem."
+        ]
+      },
+      {
+        "title": "Wiceprezes zarządu",
+        "category": [
+          "zarząd"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 184,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 20870,
+            "p25": 14610,
+            "p75": 31490
+          },
+          "net": {
+            "median": 14557,
+            "p25": 10289,
+            "p75": 21796
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 61,
+              "percentage": 33
+            },
+            "men": {
+              "count": 123,
+              "percentage": 67
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 66
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 53
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 53
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "określanie i formułowanie polityki dla wyodrębnionego pionu przedsiębiorstwa,",
+          "planowanie i koordynowanie głównych działań firmy w wyodrębnionym zakresie,",
+          "ocenianie działalności określonego pionu przedsiębiorstwa i osiąganych rezultatów oraz przedstawianie ich dyrektorowi generalnemu (prezesowi), organowi założycielskiemu, radzie nadzorczej lub gremium zarządzającemu,",
+          "utrzymywanie współpracy z poszczególnymi pionami firmy,",
+          "reprezentowanie określonego pionu przedsiębiorstwa w kontaktach z zewnętrznymi instytucjami,",
+          "nadzorowanie innych pracowników,",
+          "zastępowanie Prezesa Zarządu w razie jego nieobecności"
+        ]
+      },
+      {
+        "title": "Wiertacz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "wiertacz"
+          },
+          {
+            "title": "wiertacz studni"
+          },
+          {
+            "title": "wiertacz w drewnie"
+          },
+          {
+            "title": "wiertacz w metalu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5680,
+            "p75": 9630
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4202,
+            "p75": 6895
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 15,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wiertacz studni",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "wiertacz"
+          },
+          {
+            "title": "wiertacz studni"
+          },
+          {
+            "title": "wiertacz w drewnie"
+          },
+          {
+            "title": "wiertacz w metalu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5680,
+            "p75": 9630
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4202,
+            "p75": 6895
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 15,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wiertacz w drewnie",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "wiertacz"
+          },
+          {
+            "title": "wiertacz studni"
+          },
+          {
+            "title": "wiertacz w drewnie"
+          },
+          {
+            "title": "wiertacz w metalu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5680,
+            "p75": 9630
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4202,
+            "p75": 6895
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 15,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wiertacz w metalu",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": [
+          {
+            "title": "wiertacz"
+          },
+          {
+            "title": "wiertacz studni"
+          },
+          {
+            "title": "wiertacz w drewnie"
+          },
+          {
+            "title": "wiertacz w metalu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7390,
+            "p25": 5680,
+            "p75": 9630
+          },
+          "net": {
+            "median": 5368,
+            "p25": 4202,
+            "p75": 6895
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 15,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Windykator terenowy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 72,
+        "related_positions": [
+          {
+            "title": "negocjator terenowy"
+          },
+          {
+            "title": "windykator terenowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6580,
+            "p25": 5660,
+            "p75": 8720
+          },
+          "net": {
+            "median": 4816,
+            "p25": 4188,
+            "p75": 6274
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 38,
+              "percentage": 53
+            },
+            "men": {
+              "count": 34,
+              "percentage": 47
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie rozmów telefonicznych lub bezpośrednich negocjacji z dłużnikami,",
+          "wyjaśnianie powodów opóźnień w zakresie płatności,",
+          "motywowanie klientów do zapłaty,",
+          "informowanie klientów o działaniach i narzędziach stosowanych podczas windykacji."
+        ]
+      },
+      {
+        "title": "Windziarz",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": [
+          {
+            "title": "dźwigowy"
+          },
+          {
+            "title": "windziarz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 3920,
+            "p25": 3160,
+            "p75": 4540
+          },
+          "net": {
+            "median": 2851,
+            "p25": 2315,
+            "p75": 3289
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wizażystka",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": [
+          {
+            "title": "wizażystka"
+          },
+          {
+            "title": "beauty Consultant"
+          },
+          {
+            "title": "stylistka modowa."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5600,
+            "p25": 4960,
+            "p75": 6370
+          },
+          "net": {
+            "median": 4147,
+            "p25": 3711,
+            "p75": 4672
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 18,
+              "percentage": 90
+            },
+            "men": {
+              "count": 2,
+              "percentage": 10
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wizytator",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7170,
+            "p25": 6580,
+            "p75": 8070
+          },
+          "net": {
+            "median": 5218,
+            "p25": 4816,
+            "p75": 5831
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 68
+            },
+            "men": {
+              "count": 6,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Woźna",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": [
+          {
+            "title": "woźny"
+          },
+          {
+            "title": "woźna."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4870,
+            "p25": 4520,
+            "p75": 7420
+          },
+          "net": {
+            "median": 3650,
+            "p25": 3411,
+            "p75": 5388
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 26,
+              "percentage": 90
+            },
+            "men": {
+              "count": 3,
+              "percentage": 10
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Woźny",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": [
+          {
+            "title": "woźny"
+          },
+          {
+            "title": "woźna."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4870,
+            "p25": 4520,
+            "p75": 7420
+          },
+          "net": {
+            "median": 3650,
+            "p25": 3411,
+            "p75": 5388
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 26,
+              "percentage": 90
+            },
+            "men": {
+              "count": 3,
+              "percentage": 10
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wtryskarkowy",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 70,
+        "related_positions": [
+          {
+            "title": "operator wtryskarki"
+          },
+          {
+            "title": "wtryskarkowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5530,
+            "p25": 4850,
+            "p75": 6530
+          },
+          "net": {
+            "median": 4099,
+            "p25": 3636,
+            "p75": 4782
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 10,
+              "percentage": 14
+            },
+            "men": {
+              "count": 60,
+              "percentage": 86
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wulkanizator",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": [
+          {
+            "title": "wulkanizator"
+          },
+          {
+            "title": "wulkanizator wyrobów gumowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6040,
+            "p25": 4930,
+            "p75": 6950
+          },
+          "net": {
+            "median": 4448,
+            "p25": 3691,
+            "p75": 5067
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 5
+            },
+            "men": {
+              "count": 40,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wulkanizator wyrobów gumowych",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": [
+          {
+            "title": "wulkanizator"
+          },
+          {
+            "title": "wulkanizator wyrobów gumowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6040,
+            "p25": 4930,
+            "p75": 6950
+          },
+          "net": {
+            "median": 4448,
+            "p25": 3691,
+            "p75": 5067
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 5
+            },
+            "men": {
+              "count": 40,
+              "percentage": 95
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wychowawca w instytucjach pieczy zastępczej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "wychowawca w placówkach oświatowych"
+          },
+          {
+            "title": "wychowawca w placówkach wsparcia dziennego"
+          },
+          {
+            "title": "wychowawca w placówkach wychowawczych"
+          },
+          {
+            "title": "wychowawca w placówkach opiekuńczych"
+          },
+          {
+            "title": "wychowawca w instytucjach pieczy zastępczej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4720,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3547,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 88
+            },
+            "men": {
+              "count": 19,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wychowawca w placówkach opiekuńczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "wychowawca w placówkach oświatowych"
+          },
+          {
+            "title": "wychowawca w placówkach wsparcia dziennego"
+          },
+          {
+            "title": "wychowawca w placówkach wychowawczych"
+          },
+          {
+            "title": "wychowawca w placówkach opiekuńczych"
+          },
+          {
+            "title": "wychowawca w instytucjach pieczy zastępczej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4720,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3547,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 88
+            },
+            "men": {
+              "count": 19,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wychowawca w placówkach oświatowych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "wychowawca w placówkach oświatowych"
+          },
+          {
+            "title": "wychowawca w placówkach wsparcia dziennego"
+          },
+          {
+            "title": "wychowawca w placówkach wychowawczych"
+          },
+          {
+            "title": "wychowawca w placówkach opiekuńczych"
+          },
+          {
+            "title": "wychowawca w instytucjach pieczy zastępczej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4720,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3547,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 88
+            },
+            "men": {
+              "count": 19,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wychowawca w placówkach wsparcia dziennego",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "wychowawca w placówkach oświatowych"
+          },
+          {
+            "title": "wychowawca w placówkach wsparcia dziennego"
+          },
+          {
+            "title": "wychowawca w placówkach wychowawczych"
+          },
+          {
+            "title": "wychowawca w placówkach opiekuńczych"
+          },
+          {
+            "title": "wychowawca w instytucjach pieczy zastępczej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4720,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3547,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 88
+            },
+            "men": {
+              "count": 19,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wychowawca w placówkach wychowawczych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": [
+          {
+            "title": "wychowawca w placówkach oświatowych"
+          },
+          {
+            "title": "wychowawca w placówkach wsparcia dziennego"
+          },
+          {
+            "title": "wychowawca w placówkach wychowawczych"
+          },
+          {
+            "title": "wychowawca w placówkach opiekuńczych"
+          },
+          {
+            "title": "wychowawca w instytucjach pieczy zastępczej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5440,
+            "p25": 4720,
+            "p75": 6790
+          },
+          "net": {
+            "median": 4039,
+            "p25": 3547,
+            "p75": 4959
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 135,
+              "percentage": 88
+            },
+            "men": {
+              "count": 19,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wydawca materiałów",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 40,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8000,
+            "p25": 6750,
+            "p75": 9230
+          },
+          "net": {
+            "median": 5784,
+            "p25": 4931,
+            "p75": 6622
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 25,
+              "percentage": 63
+            },
+            "men": {
+              "count": 15,
+              "percentage": 37
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wykrawacz",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 13,
+        "related_positions": [
+          {
+            "title": "wykrawacz"
+          },
+          {
+            "title": "rozbieracz."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4610,
+            "p25": 3930,
+            "p75": 4920
+          },
+          "net": {
+            "median": 3473,
+            "p25": 3009,
+            "p75": 3684
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 38
+            },
+            "men": {
+              "count": 8,
+              "percentage": 62
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 15
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 15
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 15
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wykładowca",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 347,
+        "related_positions": [
+          {
+            "title": "nauczyciel akademicki"
+          },
+          {
+            "title": "wykładowca"
+          },
+          {
+            "title": "pracownik naukowy ."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8250,
+            "p25": 5920,
+            "p75": 10800
+          },
+          "net": {
+            "median": 5954,
+            "p25": 4366,
+            "p75": 7693
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 187,
+              "percentage": 54
+            },
+            "men": {
+              "count": 160,
+              "percentage": 46
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 38
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 33
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 28
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wykładowca na kursach (edukator)",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8600,
+            "p25": 6050,
+            "p75": 11030
+          },
+          "net": {
+            "median": 6192,
+            "p25": 4454,
+            "p75": 7849
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 16,
+              "percentage": 80
+            },
+            "men": {
+              "count": 4,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wypalacz wyrobów ceramicznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8350,
+            "p25": 6660,
+            "p75": 8890
+          },
+          "net": {
+            "median": 6022,
+            "p25": 4870,
+            "p75": 6390
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 90
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 81
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 81
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wytaczarz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 17,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6870,
+            "p25": 4930,
+            "p75": 9100
+          },
+          "net": {
+            "median": 5014,
+            "p25": 3691,
+            "p75": 6534
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 17,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wytapiacz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5380,
+            "p25": 5100,
+            "p75": 5660
+          },
+          "net": {
+            "median": 3998,
+            "p25": 3807,
+            "p75": 4188
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 36
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 36
+            },
+            {
+              "name": "prywatna opieka medyczna dla rodziny pracownika",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wyższy urzędnik państwowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 59,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7880,
+            "p25": 6270,
+            "p75": 11090
+          },
+          "net": {
+            "median": 5702,
+            "p25": 4604,
+            "p75": 7890
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 39,
+              "percentage": 66
+            },
+            "men": {
+              "count": 20,
+              "percentage": 34
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Wyższy urzędnik samorządowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 117,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7050,
+            "p25": 6000,
+            "p75": 8750
+          },
+          "net": {
+            "median": 5136,
+            "p25": 4420,
+            "p75": 6295
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 76,
+              "percentage": 65
+            },
+            "men": {
+              "count": 41,
+              "percentage": 35
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

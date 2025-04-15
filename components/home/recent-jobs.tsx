@@ -67,7 +67,7 @@ export function RecentJobs() {
   };
 
   return (
-    <Card className="h-full rounded-md border-1 border-gray-200 dark:border-gray-800
+    <Card className="h-full rounded-sm border-1 border-gray-200 dark:border-gray-800
     shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
     dark:shadow-slate-900/20
     bg-white dark:bg-slate-900">
@@ -134,7 +134,7 @@ export function RecentJobs() {
               {recentJobs.map((job) => (
                 <div 
                   key={job.id} 
-                  className="grid hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors duration-200 py-3 cursor-pointer"
+                  className="grid hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-sm transition-colors duration-200 py-3 cursor-pointer"
                   style={{ gridTemplateColumns: '2fr 1.5fr 0.7fr 0.5fr' }}
                   onClick={() => handleJobClick(job.id)}
                 >

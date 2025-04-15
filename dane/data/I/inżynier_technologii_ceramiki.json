@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier technologii ceramiki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-technologii-ceramiki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 21,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8350,
+            "p25": 6970,
+            "p75": 10210
+          },
+          "net": {
+            "median": 6022,
+            "p25": 5081,
+            "p75": 7290
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 29
+            },
+            "men": {
+              "count": 15,
+              "percentage": 71
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

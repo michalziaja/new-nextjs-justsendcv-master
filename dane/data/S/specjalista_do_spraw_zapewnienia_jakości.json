@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw zapewnienia jakości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-zapewnienia-jakosci",
+        "category": [
+          "kontrola jakości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 825,
+        "related_positions": [
+          {
+            "title": "specjalista ds. jakości"
+          },
+          {
+            "title": "specjalista ds. zapewnienia jakości"
+          },
+          {
+            "title": "specjalista do spraw jakości"
+          },
+          {
+            "title": "specjalista do spraw zapewnienia jakości."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5480,
+                "p75": 7250
+              },
+              "net": {
+                "median": 4598,
+                "p25": 4066,
+                "p75": 5272
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 113,
+                "percentage": 69
+              },
+              "men": {
+                "count": 50,
+                "percentage": 31
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7100,
+                "p25": 6050,
+                "p75": 8500
+              },
+              "net": {
+                "median": 5170,
+                "p25": 4454,
+                "p75": 6125
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 504,
+                "percentage": 61
+              },
+              "men": {
+                "count": 321,
+                "percentage": 39
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 50
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 44
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 42
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8480,
+                "p25": 7150,
+                "p75": 10570
+              },
+              "net": {
+                "median": 6111,
+                "p25": 5204,
+                "p75": 7535
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 132,
+                "percentage": 58
+              },
+              "men": {
+                "count": 96,
+                "percentage": 42
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 58
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 58
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 54
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "realizacja procedur kontroli jakości,",
+          "współpraca z laboratoriami produkcyjnymi/badawczymi i działem produkcji pod kątem zapewnienia standardów jakości,",
+          "monitorowanie systemu zapewniania jakości w firmie i u dostawców,",
+          "przeprowadzanie analiz jakości,",
+          "analiza informacji od klientów na temat jakości produktów firmy,",
+          "prowadzenie dokumentacji związanej z jakością produkcji."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Administrator nieruchomości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-administrator-nieruchomosci",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 205,
+        "related_positions": [
+          {
+            "title": "administrator nieruchomości"
+          },
+          {
+            "title": "administrator obiektu."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5920,
+                "p25": 5060,
+                "p75": 7840
+              },
+              "net": {
+                "median": 4366,
+                "p25": 3779,
+                "p75": 5674
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 36,
+                "percentage": 60
+              },
+              "men": {
+                "count": 24,
+                "percentage": 40
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6640,
+                "p25": 5640,
+                "p75": 7650
+              },
+              "net": {
+                "median": 4856,
+                "p25": 4175,
+                "p75": 5545
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 111,
+                "percentage": 54
+              },
+              "men": {
+                "count": 94,
+                "percentage": 46
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7410,
+                "p25": 6030,
+                "p75": 9360
+              },
+              "net": {
+                "median": 5382,
+                "p25": 4441,
+                "p75": 6711
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 48,
+                "percentage": 43
+              },
+              "men": {
+                "count": 64,
+                "percentage": 57
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "zarządzanie budynkiem, budynkami lub osiedlem,",
+          "dbanie o utrzymanie czystości i odpowiedni stan techniczny podległych mu budynków,",
+          "realizacja przeglądów technicznych obiektów zgodnie z wymogami prawa budowlanego,",
+          "realizacja konserwancji i remontów,",
+          "osbługa w zakresie dostarczenia zarządzanym obiektom wszelkich mediów,",
+          "naliczanie miesięcznych opłat za dostarczone właścicielom media i zrealizowane na ich rzecz usługi"
+        ]
+      }
+    ]
+  }
+]

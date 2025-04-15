@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Referendarz sądowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-referendarz-sadowy",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12180,
+            "p25": 7650,
+            "p75": 16820
+          },
+          "net": {
+            "median": 8633,
+            "p25": 5545,
+            "p75": 11796
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 64
+            },
+            "men": {
+              "count": 8,
+              "percentage": 36
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opracowywanie, analiza, opiniowanie dokumentacji fachowej,",
+          "reprezentowanie jednostki w zakresie interpretacji zapisów w dokumentach,",
+          "obsługa przepływu informacji w jednostce."
+        ]
+      }
+    ]
+  }
+]

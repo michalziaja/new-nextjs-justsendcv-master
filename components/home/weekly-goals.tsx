@@ -177,9 +177,9 @@ export function WeeklyGoals() {
 
   // Funkcja zwracająca kolor paska postępu w zależności od procentu
   const getProgressColor = (percent: number) => {
-    if (percent <= 25) return 'bg-red-500 dark:bg-red-400';
-    if (percent <= 60) return 'bg-yellow-500 dark:bg-yellow-400';
-    return 'bg-green-500 dark:bg-green-400';
+    if (percent <= 25) return 'bg-gradient-to-r from-red-400 to-red-600 dark:from-red-400 dark:to-red-500';
+    if (percent <= 60) return 'bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-yellow-400 dark:to-yellow-500';
+    return 'bg-gradient-to-r from-green-400 to-green-600 dark:from-green-400 dark:to-green-500';
   };
 
   // Pobierz liczbę aplikacji dla danego dnia
@@ -189,13 +189,13 @@ export function WeeklyGoals() {
   };
 
   return (
-    <Card className="h-full rounded-md border-1 border-gray-200 dark:border-gray-800
+    <Card className="h-full rounded-sm border-1 border-gray-200 dark:border-gray-800
       shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
       dark:shadow-slate-900/20
       bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">
-          <Target className="h-5 w-5 text-blue-500 dark:text-blue-400" />
+          <Target className="h-5 w-5 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500" />
           <CardTitle>Cel tygodniowy</CardTitle>
         </div>
         <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
@@ -263,7 +263,7 @@ export function WeeklyGoals() {
             <div className="grid grid-cols-2 gap-4 pt-2">
               <div>
                 <div className="text-sm font-medium flex items-center gap-1">
-                  <TrendingUp className="h-4 w-4 text-green-500" />
+                  <TrendingUp className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />
                   Średnio dziennie
                 </div>
                 <Skeleton className="h-8 w-12 mt-1" />
@@ -310,7 +310,7 @@ export function WeeklyGoals() {
           <div className="grid grid-cols-2 gap-4 pt-2">
             <div>
               <p className="text-sm font-medium flex items-center gap-1">
-                <TrendingUp className="h-4 w-4 text-green-500" />
+                <TrendingUp className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />
                   Średnio dziennie
               </p>
                 <p className="text-2xl font-bold">{dailyAverage}</p>
@@ -330,7 +330,7 @@ export function WeeklyGoals() {
                 <div className="text-xs text-muted-foreground">{day}</div>
                 <div className={`h-1.5 mt-1 rounded-full ${
                   index <= adjustedCurrentDay 
-                    ? 'bg-blue-500 dark:bg-blue-400' 
+                    ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500' 
                     : 'bg-gray-200 dark:bg-gray-800'
                 }`} />
                 <div className="text-xs font-medium mt-1">

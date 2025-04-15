@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant programowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-programowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 30,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10920,
+            "p25": 7000,
+            "p75": 14780
+          },
+          "net": {
+            "median": 7774,
+            "p25": 5102,
+            "p75": 10406
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 43
+            },
+            "men": {
+              "count": 17,
+              "percentage": 57
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

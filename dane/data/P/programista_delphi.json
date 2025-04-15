@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista Delphi",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-delphi",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 68,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13820,
+            "p25": 11130,
+            "p75": 16190
+          },
+          "net": {
+            "median": 9751,
+            "p25": 7918,
+            "p75": 11367
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 67,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

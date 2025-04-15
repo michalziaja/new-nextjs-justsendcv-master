@@ -1,0 +1,156 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Automatyk w dziale utrzymania ruchu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-automatyk-w-dziale-utrzymania-ruchu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 973,
+        "related_positions": [
+          {
+            "title": "automatyk"
+          },
+          {
+            "title": "automatyk w dziale utrzymania ruchu."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7040,
+                "p25": 6080,
+                "p75": 8520
+              },
+              "net": {
+                "median": 5129,
+                "p25": 4474,
+                "p75": 6138
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 21,
+                "percentage": 5
+              },
+              "men": {
+                "count": 423,
+                "percentage": 95
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 52
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 38
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9300,
+                "p25": 7750,
+                "p75": 11330
+              },
+              "net": {
+                "median": 6670,
+                "p25": 5614,
+                "p75": 8054
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 22,
+                "percentage": 2
+              },
+              "men": {
+                "count": 951,
+                "percentage": 98
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 42
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 34
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 30
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11400,
+                "p25": 9160,
+                "p75": 14160
+              },
+              "net": {
+                "median": 8102,
+                "p25": 6575,
+                "p75": 9983
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 6,
+                "percentage": 2
+              },
+              "men": {
+                "count": 343,
+                "percentage": 98
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 74
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 58
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 54
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "kontrola prawidłowości funkcjonowania i obsługi maszyn i urządzeń produkcyjnych (wsparcie techniczne),",
+          "kontrola montażu, modernizacji, remontów i wymiany sprzętu,",
+          "dostarczanie danych niezbędnych do planowania wydatków na park maszynowy,",
+          "monitorowanie parku maszynowego,",
+          "zapewnienie bezawaryjnej dostępności wszystkich mediów (elektryczność, woda, para, gaz),",
+          "uczestnictwo w odbiorze i opiniowaniu projektów układów automatyki i robotyki,",
+          "konserwacja i naprawa urządzeń automatyki,",
+          "udział w montażach i demontażach maszyn i urządzeń,",
+          "wykonywanie zleconych modernizacji sprzętu."
+        ]
+      }
+    ]
+  }
+]

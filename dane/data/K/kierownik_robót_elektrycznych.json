@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik robót elektrycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-robot-elektrycznych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11830,
+            "p25": 9700,
+            "p75": 15410
+          },
+          "net": {
+            "median": 8394,
+            "p25": 6943,
+            "p75": 10835
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 9,
+              "percentage": 6
+            },
+            "men": {
+              "count": 145,
+              "percentage": 94
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw magazynowych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-magazynowych",
+        "category": [
+          "magazyn"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 369,
+        "related_positions": [
+          {
+            "title": "specjalista ds. magazynowych"
+          },
+          {
+            "title": "specjalista ds. gospodarki magazynowej"
+          },
+          {
+            "title": "specjalista ds. administracji magazynowej"
+          },
+          {
+            "title": "specjalista do spraw magazynowych"
+          },
+          {
+            "title": "specjalista do spraw gospodarki magazynowej"
+          },
+          {
+            "title": "specjalista do spraw administracji magazynowej."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5750,
+                "p25": 5210,
+                "p75": 6740
+              },
+              "net": {
+                "median": 4250,
+                "p25": 3881,
+                "p75": 4925
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 30,
+                "percentage": 48
+              },
+              "men": {
+                "count": 33,
+                "percentage": 52
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6060,
+                "p25": 5360,
+                "p75": 7130
+              },
+              "net": {
+                "median": 4462,
+                "p25": 3984,
+                "p75": 5191
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 151,
+                "percentage": 41
+              },
+              "men": {
+                "count": 218,
+                "percentage": 59
+              }
+            },
+            "benefits": [
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 33
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 26
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 26
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6560,
+                "p25": 5730,
+                "p75": 7380
+              },
+              "net": {
+                "median": 4802,
+                "p25": 4236,
+                "p75": 5361
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 40,
+                "percentage": 43
+              },
+              "men": {
+                "count": 53,
+                "percentage": 57
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "rejestracja przepływu towarów w systemie informatycznym,",
+          "prowadzenie analiz ruchów magazynowych oraz stanów magazynowych,",
+          "współpraca w realizowaniu projektów logistycznych,",
+          "sprawowanie kontroli i odpowiedzialność za powierzone mienie."
+        ]
+      }
+    ]
+  }
+]

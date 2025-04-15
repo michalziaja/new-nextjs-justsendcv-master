@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier energetyki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-energetyki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 131,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9000,
+            "p25": 7580,
+            "p75": 12150
+          },
+          "net": {
+            "median": 6465,
+            "p25": 5497,
+            "p75": 8613
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 20,
+              "percentage": 15
+            },
+            "men": {
+              "count": 111,
+              "percentage": 85
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 40
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 40
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 40
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

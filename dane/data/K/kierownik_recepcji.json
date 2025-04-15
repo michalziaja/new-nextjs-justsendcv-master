@@ -1,0 +1,60 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik recepcji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-recepcji",
+        "category": [
+          "usługi",
+          "hotele i kasyna"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 171,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5990,
+            "p25": 5160,
+            "p75": 7180
+          },
+          "net": {
+            "median": 4414,
+            "p25": 3848,
+            "p75": 5224
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 145,
+              "percentage": 85
+            },
+            "men": {
+              "count": 26,
+              "percentage": 15
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 26
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 13
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 13
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zarządzanie zespołem pracowników recepcji,",
+          "dbanie o wysoką jakość obsługi klienta,",
+          "kontrolowanie kontraktów, depozytów i rachunków"
+        ]
+      }
+    ]
+  }
+]

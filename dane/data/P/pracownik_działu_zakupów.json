@@ -1,0 +1,60 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik działu zakupów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-dzialu-zakupow",
+        "category": [
+          "zakupy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 179,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6830,
+            "p25": 5540,
+            "p75": 8500
+          },
+          "net": {
+            "median": 4986,
+            "p25": 4106,
+            "p75": 6125
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 106,
+              "percentage": 59
+            },
+            "men": {
+              "count": 73,
+              "percentage": 41
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 50
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 50
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 50
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "monitorowanie rynku dostawców, poddostawców,",
+          "monitorowanie rynku produktów i usług,",
+          "realizacja zamówień,",
+          "współpraca z działem produkcji oraz działem sprzedaży."
+        ]
+      }
+    ]
+  }
+]

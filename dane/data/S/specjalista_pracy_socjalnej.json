@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista pracy socjalnej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-pracy-socjalnej",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 91,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6000,
+            "p25": 5210,
+            "p75": 7010
+          },
+          "net": {
+            "median": 4420,
+            "p25": 3881,
+            "p75": 5109
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 84,
+              "percentage": 92
+            },
+            "men": {
+              "count": 7,
+              "percentage": 8
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "planowanie oraz realizacja programów mających na celu pomoc osobom majacym trudności z samodzielnym funkcjonowaniem w społeczeństwie,",
+          "interwencja kryzysowa,",
+          "współpraca z różnego rodzaju instytucjami i ogranizacjami."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,151 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent w dziale obsługi klienta",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-w-dziale-obslugi-klienta",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 209,
+        "related_positions": [
+          {
+            "title": "asystent w dziale obsługi klienta"
+          },
+          {
+            "title": "asystent ds. obsługi klienta"
+          },
+          {
+            "title": "asystent biura obsługi klienta"
+          },
+          {
+            "title": "asystent do spraw obsługi klienta."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5670,
+                "p25": 4900,
+                "p75": 6610
+              },
+              "net": {
+                "median": 4195,
+                "p25": 3671,
+                "p75": 4836
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 159,
+                "percentage": 76
+              },
+              "men": {
+                "count": 50,
+                "percentage": 24
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 62
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 58
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6160,
+                "p25": 5120,
+                "p75": 8010
+              },
+              "net": {
+                "median": 4529,
+                "p25": 3820,
+                "p75": 5791
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 168,
+                "percentage": 80
+              },
+              "men": {
+                "count": 41,
+                "percentage": 20
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 61
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 54
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 41
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6830,
+                "p25": 5390,
+                "p75": 8260
+              },
+              "net": {
+                "median": 4986,
+                "p25": 4004,
+                "p75": 5961
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 64,
+                "percentage": 79
+              },
+              "men": {
+                "count": 17,
+                "percentage": 21
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 53
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 53
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 46
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

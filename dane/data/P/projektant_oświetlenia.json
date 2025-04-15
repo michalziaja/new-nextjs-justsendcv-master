@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant oświetlenia",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-oswietlenia",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 108,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8330,
+            "p25": 6420,
+            "p75": 11500
+          },
+          "net": {
+            "median": 6008,
+            "p25": 4706,
+            "p75": 8169
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 48,
+              "percentage": 44
+            },
+            "men": {
+              "count": 60,
+              "percentage": 56
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista Android",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-android",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 92,
+        "related_positions": [
+          {
+            "title": "programista Android"
+          },
+          {
+            "title": "android developer."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9240,
+                "p25": 6680,
+                "p75": 12320
+              },
+              "net": {
+                "median": 6629,
+                "p25": 4883,
+                "p75": 8728
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 9,
+                "percentage": 20
+              },
+              "men": {
+                "count": 36,
+                "percentage": 80
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12520,
+                "p25": 10870,
+                "p75": 15500
+              },
+              "net": {
+                "median": 8865,
+                "p25": 7740,
+                "p75": 10896
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 17,
+                "percentage": 18
+              },
+              "men": {
+                "count": 75,
+                "percentage": 82
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 19670,
+                "p25": 14840,
+                "p75": 25040
+              },
+              "net": {
+                "median": 13739,
+                "p25": 10446,
+                "p75": 17399
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 4,
+                "percentage": 10
+              },
+              "men": {
+                "count": 36,
+                "percentage": 90
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

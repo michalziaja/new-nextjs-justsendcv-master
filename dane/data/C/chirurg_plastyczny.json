@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "C",
+    "positions": [
+      {
+        "title": "Chirurg plastyczny",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-chirurg-plastyczny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5670,
+            "p25": 4380,
+            "p75": 6940
+          },
+          "net": {
+            "median": 4017,
+            "p25": 3118,
+            "p75": 4903
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

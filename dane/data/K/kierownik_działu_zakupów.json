@@ -1,0 +1,76 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu zakupów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-zakupow",
+        "category": [
+          "zakupy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 1166,
+        "related_positions": [
+          {
+            "title": "kierownik ds. zakupów"
+          },
+          {
+            "title": "kierownik działu zakupów"
+          },
+          {
+            "title": "kierownik zakupów"
+          },
+          {
+            "title": "kierownik do spraw zakupów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 12320,
+            "p25": 9700,
+            "p75": 16160
+          },
+          "net": {
+            "median": 8728,
+            "p25": 6943,
+            "p75": 11346
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 550,
+              "percentage": 47
+            },
+            "men": {
+              "count": 616,
+              "percentage": 53
+            }
+          },
+          "benefits": [
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 58
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 56
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 47
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kształtowanie i realizacja polityki zakupów,",
+          "składanie zamówień i odpowiedzialność za ich wykonanie w terminie,",
+          "negocjowanie cen i odpowiedzialność za zakup materiałów i towarów,",
+          "kontakty z dostawcami,",
+          "ustalanie terminów płatności,",
+          "koordynacja dostaw,",
+          "tworzenie standardów i procedur związanych z zakupami."
+        ]
+      }
+    ]
+  }
+]

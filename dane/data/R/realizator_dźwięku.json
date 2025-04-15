@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Realizator dźwięku",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-realizator-dzwieku",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 38,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6610,
+            "p25": 5060,
+            "p75": 8180
+          },
+          "net": {
+            "median": 4836,
+            "p25": 3779,
+            "p75": 5906
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 11
+            },
+            "men": {
+              "count": 34,
+              "percentage": 89
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

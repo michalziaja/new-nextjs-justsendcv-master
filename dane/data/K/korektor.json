@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Korektor",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-korektor",
+        "category": [
+          "media",
+          "wydawnictwa"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 4680,
+            "p25": 4020,
+            "p75": 7450
+          },
+          "net": {
+            "median": 3456,
+            "p25": 3035,
+            "p75": 5342
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 73
+            },
+            "men": {
+              "count": 3,
+              "percentage": 27
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

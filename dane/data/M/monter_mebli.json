@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Monter mebli",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-monter-mebli",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 53,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5980,
+            "p25": 5190,
+            "p75": 7540
+          },
+          "net": {
+            "median": 4407,
+            "p25": 3868,
+            "p75": 5470
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 6
+            },
+            "men": {
+              "count": 50,
+              "percentage": 94
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

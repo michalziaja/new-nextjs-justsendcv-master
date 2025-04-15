@@ -1,0 +1,49 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik ogólnobudowlany",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-ogolnobudowlany",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 235,
+        "related_positions": [
+          {
+            "title": "pracownik budowlany"
+          },
+          {
+            "title": "pracownik ogólnobudowlany."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6340,
+            "p25": 5290,
+            "p75": 7810
+          },
+          "net": {
+            "median": 4651,
+            "p25": 3936,
+            "p75": 5654
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 235,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

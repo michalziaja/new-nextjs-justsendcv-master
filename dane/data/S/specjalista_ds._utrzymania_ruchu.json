@@ -1,0 +1,72 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. utrzymania ruchu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-utrzymania-ruchu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 307,
+        "related_positions": [
+          {
+            "title": "specjalista ds. utrzymania ruchu"
+          },
+          {
+            "title": "specjalista do spraw utrzymania ruchu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8350,
+            "p25": 6960,
+            "p75": 9770
+          },
+          "net": {
+            "median": 6022,
+            "p25": 5074,
+            "p75": 6990
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 16,
+              "percentage": 5
+            },
+            "men": {
+              "count": 291,
+              "percentage": 95
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 54
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 45
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zapewnienie prawidłowego stanu technicznego linii produkcyjnych,",
+          "wykonywanie prac związanych z utrzymaniem ruchu,",
+          "nadzór nad parkiem maszynowym w zakładzie pracy, odpowiedzialność za prace związane z instalacją, utrzymaniem ruchu, okresowe przeglądy oraz serwis maszyn,",
+          "kontrola eksploatacji maszyn i urządzeń,",
+          "rozwiązywanie bieżących problemów natury technicznej,",
+          "badanie przyczyn awarii i przestojów urządzeń oraz opracowywanie działań prewencyjnych,",
+          "nadzór na dokumentacją maszyn, sprzętu i urządzeń zakładu,",
+          "współpraca z zewnętrznymi firmami serwisowymi."
+        ]
+      }
+    ]
+  }
+]

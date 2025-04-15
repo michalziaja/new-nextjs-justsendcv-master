@@ -1,0 +1,124 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw seo",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-seo",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 210,
+        "related_positions": [
+          {
+            "title": "specjalista SEO"
+          },
+          {
+            "title": "specjalista ds. seo"
+          },
+          {
+            "title": "specjalista ds. pozycjonowania"
+          },
+          {
+            "title": "specjalista sem"
+          },
+          {
+            "title": "specjalista ds. sem"
+          },
+          {
+            "title": "specjalista do spraw seo"
+          },
+          {
+            "title": "specjalista do spraw pozycjonowania"
+          },
+          {
+            "title": "specjalista do spraw sem."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5600,
+                "p25": 4960,
+                "p75": 6610
+              },
+              "net": {
+                "median": 4147,
+                "p25": 3711,
+                "p75": 4836
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 30,
+                "percentage": 51
+              },
+              "men": {
+                "count": 29,
+                "percentage": 49
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7520,
+                "p25": 6400,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5456,
+                "p25": 4693,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 107,
+                "percentage": 51
+              },
+              "men": {
+                "count": 103,
+                "percentage": 49
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9850,
+                "p25": 8350,
+                "p75": 11640
+              },
+              "net": {
+                "median": 7045,
+                "p25": 6022,
+                "p75": 8265
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 38,
+                "percentage": 41
+              },
+              "men": {
+                "count": 54,
+                "percentage": 59
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

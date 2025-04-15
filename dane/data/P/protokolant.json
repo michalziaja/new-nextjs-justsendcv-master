@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Protokolant",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-protokolant",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 50,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5230,
+            "p25": 4860,
+            "p75": 6140
+          },
+          "net": {
+            "median": 3895,
+            "p25": 3643,
+            "p75": 4515
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 88
+            },
+            "men": {
+              "count": 6,
+              "percentage": 12
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "protokołowanie, wykonywanie czynności kancelaryjnych związanych z prowadzeniem spraw sądowych,",
+          "wykonywanie prac administracyjno-biurowych,",
+          "redagowanie pism odpowiednich dla danej jednostki,",
+          "gromadzenie i przechowywanie dokumentacji."
+        ]
+      }
+    ]
+  }
+]

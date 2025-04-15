@@ -1,0 +1,69 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Asystent do spraw prawnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-asystent-do-spraw-prawnych",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 110,
+        "related_positions": [
+          {
+            "title": "asystent ds. prawnych"
+          },
+          {
+            "title": "asystent do spraw prawnych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6130,
+            "p25": 5410,
+            "p75": 8040
+          },
+          "net": {
+            "median": 4509,
+            "p25": 4018,
+            "p75": 5810
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 89,
+              "percentage": 81
+            },
+            "men": {
+              "count": 21,
+              "percentage": 19
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 50
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 50
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 20
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "zapewnienie bieżącej obsługi prawnej w zakresie prawa cywilnego i administracyjnego,",
+          "tworzenie, prowadzenie i analiza dokumentacji prawnej,",
+          "przygotowanie pism urzędowych i sądów oraz opiniowanie dokumentów,",
+          "sporządzanie protokołów,",
+          "współpraca z kancelariami i prawnikami zewnętrznymi"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "F",
+    "positions": [
+      {
+        "title": "Funkcjonariusz straży granicznej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-funkcjonariusz-strazy-granicznej",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8650,
+            "p25": 7580,
+            "p75": 9320
+          },
+          "net": {
+            "median": 6226,
+            "p25": 5497,
+            "p75": 6683
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 18
+            },
+            "men": {
+              "count": 9,
+              "percentage": 82
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna emerytura",
+              "percentage": 18
+            },
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 18
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 18
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

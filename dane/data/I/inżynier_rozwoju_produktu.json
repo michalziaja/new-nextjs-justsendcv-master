@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier rozwoju produktu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-rozwoju-produktu",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 476,
+        "related_positions": [
+          {
+            "title": "inżynier produktu"
+          },
+          {
+            "title": "inżynier rozwoju produktu."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7420,
+                "p25": 6520,
+                "p75": 8670
+              },
+              "net": {
+                "median": 5388,
+                "p25": 4775,
+                "p75": 6240
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 26,
+                "percentage": 21
+              },
+              "men": {
+                "count": 98,
+                "percentage": 79
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 66
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 58
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 58
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9800,
+                "p25": 8320,
+                "p75": 11560
+              },
+              "net": {
+                "median": 7010,
+                "p25": 6002,
+                "p75": 8210
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 118,
+                "percentage": 25
+              },
+              "men": {
+                "count": 358,
+                "percentage": 75
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 78
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 70
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11330,
+                "p25": 9690,
+                "p75": 14480
+              },
+              "net": {
+                "median": 8054,
+                "p25": 6936,
+                "p75": 10201
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 40,
+                "percentage": 17
+              },
+              "men": {
+                "count": 194,
+                "percentage": 83
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 72
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 68
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 60
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

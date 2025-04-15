@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Pracownik drukarni",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-pracownik-drukarni",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5550,
+            "p25": 4870,
+            "p75": 7370
+          },
+          "net": {
+            "median": 4113,
+            "p25": 3650,
+            "p75": 5354
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 17
+            },
+            "men": {
+              "count": 10,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik sali",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-sali",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 47,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5990,
+            "p25": 5440,
+            "p75": 8160
+          },
+          "net": {
+            "median": 4414,
+            "p25": 4039,
+            "p75": 5893
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 33,
+              "percentage": 70
+            },
+            "men": {
+              "count": 14,
+              "percentage": 30
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

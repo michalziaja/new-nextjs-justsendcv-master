@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Creator from "@/components/creator/Creator";
 import Preview from '@/components/creator/Preview';
 import { CVProvider } from '@/components/creator/CVContext';
-import { IoIosCreate } from "react-icons/io";
-import { IoMdEye } from "react-icons/io";
+
 
 
 // Główny komponent strony
@@ -33,9 +32,9 @@ export default function CreatorPage() {
 
   return (
     <CVProvider>
-      <div className="pb-4 lg:mt-8 xl:mt-12 md:mt-6 mt-6 mr-1 ml-0 sm:mr-4 sm:ml-3.5 md:mr-8 md:ml-7">
+      <div className="pb-4 lg:mt-8 xl:mt-11 md:mt-6 mt-6 mr-1 ml-0 sm:mr-4 sm:ml-3.5 md:mr-8 md:ml-7 xl:mr-15 xl:ml-15 h-[calc(100vh-7rem)] xl:h-[calc(100vh-8.5rem)]">
         {/* Układ siatki z responsywnością */}
-        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-2 max-w-[1800px] mx-auto h-full`}>
+        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-2 max-w-[1800px] mx-auto h-full relative overflow-visible`}>
           {/* Na małych ekranach pokazujemy albo kreator albo podgląd wraz z przyciskiem przełączania */}
           {isSmallScreen ? (
             <>

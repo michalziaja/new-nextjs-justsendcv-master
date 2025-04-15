@@ -1,0 +1,152 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik ds. obsługi kluczowych klientów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-ds-obslugi-kluczowych-klientow",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 299,
+        "related_positions": [
+          {
+            "title": "key Account Manager"
+          },
+          {
+            "title": "kierownik ds. kluczowych klientów"
+          },
+          {
+            "title": "kierownik ds. obsługi kluczowych klientów"
+          },
+          {
+            "title": "kierownik do spraw kluczowych klientów"
+          },
+          {
+            "title": "kierownik do spraw obsługi kluczowych klientów."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7860,
+                "p25": 6270,
+                "p75": 11280
+              },
+              "net": {
+                "median": 5688,
+                "p25": 4604,
+                "p75": 8019
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 22,
+                "percentage": 55
+              },
+              "men": {
+                "count": 18,
+                "percentage": 45
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10520,
+                "p25": 8350,
+                "p75": 14370
+              },
+              "net": {
+                "median": 7502,
+                "p25": 6022,
+                "p75": 10126
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 137,
+                "percentage": 46
+              },
+              "men": {
+                "count": 162,
+                "percentage": 54
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 54
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 51
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 51
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12990,
+                "p25": 9850,
+                "p75": 16690
+              },
+              "net": {
+                "median": 9185,
+                "p25": 7045,
+                "p75": 11708
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 183,
+                "percentage": 32
+              },
+              "men": {
+                "count": 388,
+                "percentage": 68
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 62
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 58
+              },
+              {
+                "name": "samochód osobowy do użytku prywatnego",
+                "percentage": 54
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "tworzenie i realizowanie strategii sprzedaży i obsługi kluczowych klientów firmy,",
+          "opieka nad klientami korporacyjnymi,",
+          "prowadzenie negocjacji z kontrahentami,",
+          "sporządzanie raportów i analiz,",
+          "przygotowywanie umów i koordynacja ich realizacji,",
+          "monitorowanie i analiza danych rynkowych dotyczących segmentu, konsumentów, działań konkurencji i wyników własnego produktu/usługi,",
+          "przygotowywanie raportów marketingowych i cenowych, akcji promocyjnych,",
+          "tworzenie nowych rynków zbytu w zakresie kluczowych klientów,",
+          "współpraca z działem marketingu."
+        ]
+      }
+    ]
+  }
+]

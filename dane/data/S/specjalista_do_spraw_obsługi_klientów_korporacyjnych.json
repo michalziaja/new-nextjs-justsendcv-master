@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw obsługi klientów korporacyjnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-obslugi-klientow-korporacyjnych",
+        "category": [
+          "obsługa klienta"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 276,
+        "related_positions": [
+          {
+            "title": "specjalista ds. obsługi klientów korporacyjnych"
+          },
+          {
+            "title": "specjalista ds. relacji z klientem korporacyjnym"
+          },
+          {
+            "title": "specjalista do spraw obsługi klientów korporacyjnych"
+          },
+          {
+            "title": "specjalista do spraw relacji z klientem korporacyjnym."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8090,
+            "p25": 6630,
+            "p75": 10910
+          },
+          "net": {
+            "median": 5845,
+            "p25": 4849,
+            "p75": 7767
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 192,
+              "percentage": 70
+            },
+            "men": {
+              "count": 84,
+              "percentage": 30
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 84
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 66
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 61
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

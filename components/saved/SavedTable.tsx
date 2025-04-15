@@ -409,13 +409,13 @@ export function SavedTable() {
   // Style dla statusów
   const getStatusStyles = (status: ApplicationStatus) => {
     switch (status) {
-      case 'zapisana': return 'bg-blue-600 text-white'
-      case 'wysłana': return 'bg-purple-600 text-white'
-      case 'kontakt': return 'bg-yellow-600 text-white'
-      case 'rozmowa': return 'bg-cyan-600 text-white'
-      case 'oferta': return 'bg-green-600 text-white'
-      case 'odmowa': return 'bg-red-600 text-white'
-      default: return 'bg-gray-600 text-white'
+      case 'zapisana': return 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white'
+      case 'wysłana': return 'bg-gradient-to-r from-purple-500 to-purple-700 text-white'
+      case 'kontakt': return 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white'
+      case 'rozmowa': return 'bg-gradient-to-r from-cyan-500 to-cyan-700 text-white'
+      case 'oferta': return 'bg-gradient-to-r from-green-500 to-green-700 text-white'
+      case 'odmowa': return 'bg-gradient-to-r from-red-500 to-red-700 text-white'
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-700 text-white'
     }
   }
 

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inspektor transportu drogowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inspektor-transportu-drogowego",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7360,
+            "p25": 6110,
+            "p75": 8500
+          },
+          "net": {
+            "median": 5347,
+            "p25": 4495,
+            "p75": 6125
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 14
+            },
+            "men": {
+              "count": 12,
+              "percentage": 86
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sekretarz gminy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sekretarz-gminy",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8600,
+            "p25": 7610,
+            "p75": 9980
+          },
+          "net": {
+            "median": 6146,
+            "p25": 5455,
+            "p75": 6926
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 37
+            },
+            "men": {
+              "count": 12,
+              "percentage": 63
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 41
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 29
+            },
+            {
+              "name": "ryczałt na paliwo",
+              "percentage": 17
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

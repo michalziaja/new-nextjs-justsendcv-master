@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik narzędziowiec",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-narzedziowiec",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7070,
+            "p25": 5600,
+            "p75": 7360
+          },
+          "net": {
+            "median": 5150,
+            "p25": 4147,
+            "p75": 5347
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 36
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 36
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za dobór narzędzi zgodnie ze standardami i procedurami produkcji,",
+          "udział w zakupie i serwisie narzędzi,",
+          "wydawanie oraz przyjmowanie zwracanych narzędzi pracy,",
+          "kontrola stanu technicznego narzędzi,",
+          "wykonywanie drobnych napraw, czyszczenie i konserwacja narzędzi."
+        ]
+      }
+    ]
+  }
+]

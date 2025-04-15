@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "Z",
+    "positions": [
+      {
+        "title": "Zarządca nieruchomości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-Zarzadca-nieruchomosci",
+        "category": [
+          "usługi",
+          "nieruchomości"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 219,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8260,
+            "p25": 6920,
+            "p75": 10630
+          },
+          "net": {
+            "median": 5961,
+            "p25": 5047,
+            "p75": 7576
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 137,
+              "percentage": 63
+            },
+            "men": {
+              "count": 82,
+              "percentage": 37
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

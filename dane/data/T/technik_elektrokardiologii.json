@@ -1,0 +1,50 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik elektrokardiologii",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-elektrokardiologii",
+        "category": [
+          "służba zdrowia",
+          "personel pomocniczy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 80,
+        "related_positions": [
+          {
+            "title": "technik elektrokardiologii"
+          },
+          {
+            "title": "elektrokardiolog."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5950,
+            "p25": 5260,
+            "p75": 6960
+          },
+          "net": {
+            "median": 4386,
+            "p25": 3915,
+            "p75": 5074
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 67,
+              "percentage": 84
+            },
+            "men": {
+              "count": 13,
+              "percentage": 16
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

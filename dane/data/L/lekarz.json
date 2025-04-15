@@ -1,0 +1,47 @@
+[
+  {
+    "letter": "L",
+    "positions": [
+      {
+        "title": "Lekarz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-lekarz",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 141,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10920,
+            "p25": 8320,
+            "p75": 15610
+          },
+          "net": {
+            "median": 7774,
+            "p25": 6002,
+            "p75": 10972
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 84,
+              "percentage": 60
+            },
+            "men": {
+              "count": 57,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "diagnoza i leczenie chorób,",
+          "działania profilaktyczne,",
+          "przeprowadzanie badań diagnostycznych oraz w razie konieczności zabiegów i operacji"
+        ]
+      }
+    ]
+  }
+]

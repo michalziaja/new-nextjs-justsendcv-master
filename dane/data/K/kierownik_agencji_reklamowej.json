@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik agencji reklamowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-agencji-reklamowej",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 28,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8050,
+            "p25": 6780,
+            "p75": 10350
+          },
+          "net": {
+            "median": 5817,
+            "p25": 4952,
+            "p75": 7385
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 39
+            },
+            "men": {
+              "count": 17,
+              "percentage": 61
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

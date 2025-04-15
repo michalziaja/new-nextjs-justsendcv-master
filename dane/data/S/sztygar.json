@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Sztygar",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-sztygar",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9580,
+            "p25": 8140,
+            "p75": 15000
+          },
+          "net": {
+            "median": 6861,
+            "p25": 5879,
+            "p75": 10556
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 4
+            },
+            "men": {
+              "count": 43,
+              "percentage": 96
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzór nad pracownikami przygotowującymi, kontrolującymi i prowadzącymi prace wydobywcze w kopalni,",
+          "kontrola jakości wykonywanych prac, pomiarów i obliczeń"
+        ]
+      }
+    ]
+  }
+]

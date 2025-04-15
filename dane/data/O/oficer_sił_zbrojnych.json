@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Oficer sił zbrojnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-oficer-sil-zbrojnych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 11,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11040,
+            "p25": 9520,
+            "p75": 11750
+          },
+          "net": {
+            "median": 7856,
+            "p25": 6819,
+            "p75": 8340
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 11,
+              "percentage": 100
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 45
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 36
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

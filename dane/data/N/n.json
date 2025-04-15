@@ -1,0 +1,5984 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Naczelnik wydziału (administracja państwowa)",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 223,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11500,
+            "p25": 9300,
+            "p75": 13950
+          },
+          "net": {
+            "median": 8169,
+            "p25": 6670,
+            "p75": 9840
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 106,
+              "percentage": 48
+            },
+            "men": {
+              "count": 117,
+              "percentage": 52
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 64
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 57
+            },
+            {
+              "name": "pożyczki preferencyjne",
+              "percentage": 42
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "kierowanie pracą wydziału,| nadzorowanie pracy podległego personelu,",
+          "wnioskowanie zmian i udział w procesie tworzenia przepisów i regulacji wewnętrznych,",
+          "wykonywanie zadań organizacyjnych i kontrolnych związanych bezpośrednio z obszarem działalności wydziału"
+        ]
+      },
+      {
+        "title": "Nadsztygar",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10640,
+            "p25": 9890,
+            "p75": 13670
+          },
+          "net": {
+            "median": 7583,
+            "p25": 7072,
+            "p75": 9648
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 2,
+              "percentage": 14
+            },
+            "men": {
+              "count": 12,
+              "percentage": 86
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nanotechnolog",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": [
+          {
+            "title": "nanotechnolog"
+          },
+          {
+            "title": "inżynier nanostruktur."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5860,
+            "p25": 4350,
+            "p75": 8880
+          },
+          "net": {
+            "median": 4219,
+            "p25": 3154,
+            "p75": 6349
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 4,
+              "percentage": 33
+            },
+            "men": {
+              "count": 8,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Narzędziowiec",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 76,
+        "related_positions": [
+          {
+            "title": "narzędziowiec"
+          },
+          {
+            "title": "technik narzędziowy"
+          },
+          {
+            "title": "mechanik narzędziowiec"
+          },
+          {
+            "title": "narzędziowiec form wtryskowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7010,
+            "p25": 5850,
+            "p75": 8980
+          },
+          "net": {
+            "median": 5109,
+            "p25": 4318,
+            "p75": 6451
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 75,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za dobór narzędzi zgodnie ze standardami i procedurami produkcji,",
+          "wydawanie oraz przyjmowanie zwracanych narzędzi pracy,",
+          "kontrola stanu technicznego narzędzi,",
+          "wykonywanie drobnych napraw, czyszczenie i konserwacja narzędzi."
+        ]
+      },
+      {
+        "title": "Narzędziowiec form wtryskowych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 76,
+        "related_positions": [
+          {
+            "title": "narzędziowiec"
+          },
+          {
+            "title": "technik narzędziowy"
+          },
+          {
+            "title": "mechanik narzędziowiec"
+          },
+          {
+            "title": "narzędziowiec form wtryskowych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7010,
+            "p25": 5850,
+            "p75": 8980
+          },
+          "net": {
+            "median": 5109,
+            "p25": 4318,
+            "p75": 6451
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 75,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za dobór narzędzi zgodnie ze standardami i procedurami produkcji,",
+          "wydawanie oraz przyjmowanie zwracanych narzędzi pracy,",
+          "kontrola stanu technicznego narzędzi,",
+          "wykonywanie drobnych napraw, czyszczenie i konserwacja narzędzi."
+        ]
+      },
+      {
+        "title": "Nastawniczy",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": [
+          {
+            "title": "nastawniczy"
+          },
+          {
+            "title": "zwrotnicowy"
+          },
+          {
+            "title": "zwrotniczy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6370,
+            "p25": 5500,
+            "p75": 7250
+          },
+          "net": {
+            "median": 4672,
+            "p25": 4079,
+            "p75": 5272
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 20,
+              "percentage": 45
+            },
+            "men": {
+              "count": 24,
+              "percentage": 55
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel akademicki",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 347,
+        "related_positions": [
+          {
+            "title": "nauczyciel akademicki"
+          },
+          {
+            "title": "wykładowca"
+          },
+          {
+            "title": "pracownik naukowy ."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 8250,
+            "p25": 5920,
+            "p75": 10800
+          },
+          "net": {
+            "median": 5954,
+            "p25": 4366,
+            "p75": 7693
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 187,
+              "percentage": 54
+            },
+            "men": {
+              "count": 160,
+              "percentage": 46
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 38
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 33
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 28
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel bibliotekarz",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel biologii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel chemii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel domowy",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel dyplomowany",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 107,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7540,
+            "p25": 6370,
+            "p75": 9380
+          },
+          "net": {
+            "median": 5470,
+            "p25": 4672,
+            "p75": 6725
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 84,
+              "percentage": 79
+            },
+            "men": {
+              "count": 23,
+              "percentage": 21
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel etyki",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel fizyki i astronomii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel geografii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel historii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel informatyki / technologii informacyjnej",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel instruktor",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel języka obcego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel języka polskiego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel konsultant",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel kontraktowy",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 51,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5550,
+            "p25": 4710,
+            "p75": 6600
+          },
+          "net": {
+            "median": 4113,
+            "p25": 3540,
+            "p75": 4830
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 43,
+              "percentage": 84
+            },
+            "men": {
+              "count": 8,
+              "percentage": 16
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel logopeda",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel matematyki",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel mianowany",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 58,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6780,
+            "p25": 5680,
+            "p75": 9200
+          },
+          "net": {
+            "median": 4952,
+            "p25": 4202,
+            "p75": 6601
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 76
+            },
+            "men": {
+              "count": 14,
+              "percentage": 24
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel muzyki",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel nauczania początkowego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel plastyki",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel przedmiotów zawodowych",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 44,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6760,
+            "p25": 5070,
+            "p75": 8490
+          },
+          "net": {
+            "median": 4938,
+            "p25": 3786,
+            "p75": 6118
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 22,
+              "percentage": 50
+            },
+            "men": {
+              "count": 22,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie zajęć z danego przedmiotu w celu przygotowania do zawodu,",
+          "prowadzenie dokumentacji"
+        ]
+      },
+      {
+        "title": "Nauczyciel przedsiębiorczości",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel przedszkolny",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 466,
+        "related_positions": [
+          {
+            "title": "nauczyciel wychowania przedszkolnego"
+          },
+          {
+            "title": "nauczyciel przedszkolny"
+          },
+          {
+            "title": "przedszkolanka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5380,
+            "p25": 4760,
+            "p75": 6440
+          },
+          "net": {
+            "median": 3998,
+            "p25": 3575,
+            "p75": 4720
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 464,
+              "percentage": 100
+            },
+            "men": {
+              "count": 2,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel przysposobienia obronnego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel religii",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel stażysta",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 14,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5080,
+            "p25": 4480,
+            "p75": 7190
+          },
+          "net": {
+            "median": 3793,
+            "p25": 3384,
+            "p75": 5232
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 14,
+              "percentage": 100
+            },
+            "men": {
+              "count": 0,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Nauczyciel techniki",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel wiedzy o kulturze",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel wiedzy o społeczeństwie",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel wychowania do życia w rodzinie",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel wychowania fizycznego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 568,
+        "related_positions": [
+          {
+            "title": "nauczyciel"
+          },
+          {
+            "title": "nauczyciel bibliotekarz"
+          },
+          {
+            "title": "nauczyciel biologii"
+          },
+          {
+            "title": "nauczyciel chemii"
+          },
+          {
+            "title": "nauczyciel domowy"
+          },
+          {
+            "title": "nauczyciel etyki"
+          },
+          {
+            "title": "nauczyciel fizyki i astronomii"
+          },
+          {
+            "title": "nauczyciel geografii"
+          },
+          {
+            "title": "nauczyciel historii"
+          },
+          {
+            "title": "nauczyciel informatyki / technologii informacyjnej"
+          },
+          {
+            "title": "nauczyciel instruktor"
+          },
+          {
+            "title": "nauczyciel języka obcego"
+          },
+          {
+            "title": "nauczyciel języka polskiego"
+          },
+          {
+            "title": "nauczyciel konsultant"
+          },
+          {
+            "title": "nauczyciel logopeda"
+          },
+          {
+            "title": "nauczyciel matematyki"
+          },
+          {
+            "title": "nauczyciel muzyki"
+          },
+          {
+            "title": "nauczyciel nauczania początkowego"
+          },
+          {
+            "title": "nauczyciel plastyki"
+          },
+          {
+            "title": "nauczyciel przedsiębiorczości"
+          },
+          {
+            "title": "nauczyciel przysposobienia obronnego"
+          },
+          {
+            "title": "nauczyciel religii"
+          },
+          {
+            "title": "nauczyciel techniki"
+          },
+          {
+            "title": "nauczyciel wiedzy o kulturze"
+          },
+          {
+            "title": "nauczyciel wiedzy o społeczeństwie"
+          },
+          {
+            "title": "nauczyciel wychowania do życia w rodzinie"
+          },
+          {
+            "title": "nauczyciel wychowania fizycznego."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5950,
+                "p25": 5010,
+                "p75": 8120
+              },
+              "net": {
+                "median": 4386,
+                "p25": 3745,
+                "p75": 5865
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 80
+              },
+              "men": {
+                "count": 22,
+                "percentage": 20
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5200,
+                "p75": 7940
+              },
+              "net": {
+                "median": 4598,
+                "p25": 3875,
+                "p75": 5743
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 443,
+                "percentage": 78
+              },
+              "men": {
+                "count": 125,
+                "percentage": 22
+              }
+            },
+            "benefits": [
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 33
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 19
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 19
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 5990,
+                "p75": 10440
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4414,
+                "p75": 7447
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 58,
+                "percentage": 53
+              },
+              "men": {
+                "count": 51,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie pracy dydaktyczno-oświatowej w szkole,",
+          "przekazywanie wiedzy zawartej w programach nauczania,",
+          "realizacja zadań pedagogicznych"
+        ]
+      },
+      {
+        "title": "Nauczyciel wychowania przedszkolnego",
+        "category": [
+          "nauka i szkolnictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 466,
+        "related_positions": [
+          {
+            "title": "nauczyciel wychowania przedszkolnego"
+          },
+          {
+            "title": "nauczyciel przedszkolny"
+          },
+          {
+            "title": "przedszkolanka."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5380,
+            "p25": 4760,
+            "p75": 6440
+          },
+          "net": {
+            "median": 3998,
+            "p25": 3575,
+            "p75": 4720
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 464,
+              "percentage": 100
+            },
+            "men": {
+              "count": 2,
+              "percentage": 0
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Negocjator",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 22,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 12420,
+            "p25": 8100,
+            "p75": 18110
+          },
+          "net": {
+            "median": 8797,
+            "p25": 5851,
+            "p75": 12676
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 59
+            },
+            "men": {
+              "count": 9,
+              "percentage": 41
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "reprezentowanie firmy podczas negocjacji biznesowych,",
+          "przygotowywanie dokumentów (ofert, wzorów umów),",
+          "raportowanie wyników pracy"
+        ]
+      },
+      {
+        "title": "Negocjator biznesowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 13650,
+            "p25": 8960,
+            "p75": 16510
+          },
+          "net": {
+            "median": 9636,
+            "p25": 6438,
+            "p75": 11584
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 87
+            },
+            "men": {
+              "count": 2,
+              "percentage": 13
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Negocjator terenowy",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 72,
+        "related_positions": [
+          {
+            "title": "negocjator terenowy"
+          },
+          {
+            "title": "windykator terenowy."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 6580,
+            "p25": 5660,
+            "p75": 8720
+          },
+          "net": {
+            "median": 4816,
+            "p25": 4188,
+            "p75": 6274
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 38,
+              "percentage": 53
+            },
+            "men": {
+              "count": 34,
+              "percentage": 47
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "prowadzenie rozmów telefonicznych lub bezpośrednich negocjacji z dłużnikami,",
+          "wyjaśnianie powodów opóźnień w zakresie płatności,",
+          "motywowanie klientów do zapłaty,",
+          "informowanie klientów o działaniach i narzędziach stosowanych podczas windykacji."
+        ]
+      },
+      {
+        "title": "Neurologopeda",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 42,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6110,
+            "p25": 5640,
+            "p75": 8060
+          },
+          "net": {
+            "median": 4495,
+            "p25": 4175,
+            "p75": 5824
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 41,
+              "percentage": 98
+            },
+            "men": {
+              "count": 1,
+              "percentage": 2
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Niania",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 218,
+        "related_positions": [
+          {
+            "title": "opiekunka do dzieci"
+          },
+          {
+            "title": "niania"
+          },
+          {
+            "title": "opiekunka dzieci"
+          },
+          {
+            "title": "prywatna opiekunka"
+          },
+          {
+            "title": "opiekun dziecka"
+          },
+          {
+            "title": "opiekunka dziecięca."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4900,
+            "p25": 4460,
+            "p75": 5700
+          },
+          "net": {
+            "median": 3671,
+            "p25": 3370,
+            "p75": 4216
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 212,
+              "percentage": 97
+            },
+            "men": {
+              "count": 6,
+              "percentage": 3
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "opieka nad małymi dziećmi w warunkach domowych,",
+          "prowadzenie zabaw uwzględniających właściwy rozwój dziecka,",
+          "wykonywanie zabiegów higieniczno-pielęgnacyjnych,",
+          "przygotowywanie posiłków i karmienie dziecka,",
+          "czuwanie nad prawidłowym rozwojem i bezpieczeństwem dziecka,",
+          "udzielanie pierwszej pomocy w nagłych wypadkach"
+        ]
+      },
+      {
+        "title": "Notariusz",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9940,
+            "p25": 7540,
+            "p75": 11360
+          },
+          "net": {
+            "median": 7106,
+            "p25": 5470,
+            "p75": 8074
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 58
+            },
+            "men": {
+              "count": 5,
+              "percentage": 42
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Elektryk budowlany",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-elektryk-budowlany",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 171,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6340,
+            "p25": 5560,
+            "p75": 7630
+          },
+          "net": {
+            "median": 4651,
+            "p25": 4120,
+            "p75": 5531
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 170,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

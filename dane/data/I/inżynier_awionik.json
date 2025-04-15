@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier awionik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-awionik",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 29,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11100,
+            "p25": 8810,
+            "p75": 13910
+          },
+          "net": {
+            "median": 7897,
+            "p25": 6336,
+            "p75": 9813
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 17
+            },
+            "men": {
+              "count": 24,
+              "percentage": 83
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

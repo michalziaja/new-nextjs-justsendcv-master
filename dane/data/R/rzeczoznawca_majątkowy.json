@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "R",
+    "positions": [
+      {
+        "title": "Rzeczoznawca majątkowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-rzeczoznawca-majatkowy",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 60,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11580,
+            "p25": 8350,
+            "p75": 13130
+          },
+          "net": {
+            "median": 8224,
+            "p25": 6022,
+            "p75": 9280
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 73
+            },
+            "men": {
+              "count": 16,
+              "percentage": 27
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

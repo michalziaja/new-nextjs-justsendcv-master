@@ -19,6 +19,7 @@ import {
   UserCircle,
   PieChart,
   Calendar,
+  Calculator,
 } from "lucide-react";
 
 // Definicja typu UserData z createdAt
@@ -38,6 +39,7 @@ const data = {
     { title: "Kreator CV", url: "/creator", icon: FileText },
     { title: "Asystent AI", url: "/assist", icon: Brain },
     { title: "Terminarz", url: "/scheduler", icon: Calendar },
+    { title: "Kalkulator", url: "/calculator", icon: Calculator },
     { title: "Statystyki", url: "/stats", icon: PieChart },
     { title: "Trening", url: "#", icon: Dumbbell },
     { title: "Profil", url: "/profile", icon: UserCircle },
@@ -51,10 +53,10 @@ export function AppSidebar({
 }: React.ComponentProps<typeof Sidebar> & { userData: UserData }) {
   return (
     <Sidebar
-      className="text-2xl top-16 h-[calc(97vh-4.5rem)] mt-4 border-1 border-gray-100 rounded-md bg-white dark:bg-sidebar dark:border-slate-800 shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:shadow-background"
+      className="text-lg top-16 h-[calc(97vh-4.5rem)] mt-4 border-1 border-gray-100 rounded-sm bg-white dark:bg-sidebar dark:border-slate-800 shadow-2xl dark:shadow-background"
       {...props}
     >
-      <SidebarContent className="p-0 mt-4 text-2xl">
+      <SidebarContent className="p-0 mt-4">
         <NavMain items={data.navMain} />
         <NavSecondary userData={userData} items={data.navSecondary} className="mt-8" />
       </SidebarContent>

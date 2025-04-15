@@ -1,0 +1,180 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw sprzedaży eksportowej",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-sprzedazy-eksportowej",
+        "category": [
+          "export/import"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 604,
+        "related_positions": [
+          {
+            "title": "specjalista ds. eksportu i importu"
+          },
+          {
+            "title": "specjalista ds. eksportu"
+          },
+          {
+            "title": "specjalista ds. handlu zagranicznego"
+          },
+          {
+            "title": "specjalista ds. sprzedaży eksportowej"
+          },
+          {
+            "title": "specjalista ds. importu"
+          },
+          {
+            "title": "specjalista do spraw eksportu i importu"
+          },
+          {
+            "title": "specjalista do spraw eksportu"
+          },
+          {
+            "title": "specjalista do spraw handlu zagranicznego"
+          },
+          {
+            "title": "specjalista do spraw sprzedaży eksportowej"
+          },
+          {
+            "title": "specjalista do spraw importu."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5790,
+                "p25": 5100,
+                "p75": 6850
+              },
+              "net": {
+                "median": 4277,
+                "p25": 3807,
+                "p75": 5000
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 55,
+                "percentage": 59
+              },
+              "men": {
+                "count": 38,
+                "percentage": 41
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 35
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 28
+              },
+              {
+                "name": "imprezy integracyjne",
+                "percentage": 28
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7210,
+                "p25": 6250,
+                "p75": 8600
+              },
+              "net": {
+                "median": 5245,
+                "p25": 4591,
+                "p75": 6192
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 427,
+                "percentage": 71
+              },
+              "men": {
+                "count": 177,
+                "percentage": 29
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 35
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 31
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 26
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7910,
+                "p25": 6800,
+                "p75": 10000
+              },
+              "net": {
+                "median": 5722,
+                "p25": 4966,
+                "p75": 7147
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 148,
+                "percentage": 69
+              },
+              "men": {
+                "count": 68,
+                "percentage": 31
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 30
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 28
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 25
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "prowadzenie promocji i sprzedaży produktów firmy,",
+          "nawiązywanie i utrzymywanie bezpośrednich kontaktów z klientami,",
+          "zamawianie i sprowadzanie towarów od dostawców zagranicznych,",
+          "realizowanie planów sprzedaży,",
+          "rozwijanie istniejących i pozyskiwanie nowych rynków zbytu,",
+          "kontakt z agencjami celnymi - kontrola dokumentacji i płatności celnych,",
+          "przygotowywanie raportów i analiz,",
+          "prowadzanie dokumentacji związanej z importem i eksportem towarów,",
+          "obsługa kontrahentów firmy w zakresie kontaktów handlowych,",
+          "przygotowywanie transakcji od strony formalnej z uwzględnieniem norm prawnych obowiązujących uczestników kontraktu."
+        ]
+      }
+    ]
+  }
+]

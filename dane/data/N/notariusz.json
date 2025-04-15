@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "N",
+    "positions": [
+      {
+        "title": "Notariusz",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-notariusz",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 12,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9940,
+            "p25": 7540,
+            "p75": 11360
+          },
+          "net": {
+            "median": 7106,
+            "p25": 5470,
+            "p75": 8074
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 58
+            },
+            "men": {
+              "count": 5,
+              "percentage": 42
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

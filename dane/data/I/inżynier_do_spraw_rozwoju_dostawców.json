@@ -1,0 +1,68 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier do spraw rozwoju dostawców",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-do-spraw-rozwoju-dostawcow",
+        "category": [
+          "zakupy"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 155,
+        "related_positions": [
+          {
+            "title": "specjalista ds. rozwoju dostawców"
+          },
+          {
+            "title": "inżynier ds. rozwoju dostawców"
+          },
+          {
+            "title": "specjalista do spraw rozwoju dostawców"
+          },
+          {
+            "title": "inżynier do spraw rozwoju dostawców."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 10770,
+            "p25": 7990,
+            "p75": 15390
+          },
+          "net": {
+            "median": 7672,
+            "p25": 5777,
+            "p75": 10821
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 58,
+              "percentage": 37
+            },
+            "men": {
+              "count": 97,
+              "percentage": 63
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 83
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 66
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 58
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

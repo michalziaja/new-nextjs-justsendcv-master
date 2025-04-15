@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Instruktor fitness",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-instruktor-fitness",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 3020,
+            "p25": 2770,
+            "p75": 4540
+          },
+          "net": {
+            "median": 2216,
+            "p25": 2040,
+            "p75": 3289
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 5,
+              "percentage": 50
+            },
+            "men": {
+              "count": 5,
+              "percentage": 50
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

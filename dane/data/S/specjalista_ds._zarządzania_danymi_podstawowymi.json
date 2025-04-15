@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista ds. zarządzania danymi podstawowymi",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-ds-zarzadzania-danymi-podstawowymi",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 55,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7820,
+            "p25": 6080,
+            "p75": 10160
+          },
+          "net": {
+            "median": 5661,
+            "p25": 4474,
+            "p75": 7256
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 67
+            },
+            "men": {
+              "count": 18,
+              "percentage": 33
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 81
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 63
+            },
+            {
+              "name": "karnety na siłownie i do klubów fitness",
+              "percentage": 63
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

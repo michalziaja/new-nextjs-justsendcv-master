@@ -1,0 +1,143 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw serwisu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-serwisu",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 479,
+        "related_positions": [
+          {
+            "title": "inżynier serwisu"
+          },
+          {
+            "title": "technik serwisu wózków widłowych"
+          },
+          {
+            "title": "specjalista ds. serwisu"
+          },
+          {
+            "title": "specjalista do spraw serwisu."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7330,
+                "p25": 6450,
+                "p75": 9150
+              },
+              "net": {
+                "median": 5327,
+                "p25": 4727,
+                "p75": 6567
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 11,
+                "percentage": 9
+              },
+              "men": {
+                "count": 105,
+                "percentage": 91
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9000,
+                "p25": 7150,
+                "p75": 11290
+              },
+              "net": {
+                "median": 6465,
+                "p25": 5204,
+                "p75": 8026
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 29,
+                "percentage": 6
+              },
+              "men": {
+                "count": 450,
+                "percentage": 94
+              }
+            },
+            "benefits": [
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 57
+              },
+              {
+                "name": "komputer przenośny do użytku prywatnego",
+                "percentage": 52
+              },
+              {
+                "name": "samochód osobowy do użytku prywatnego",
+                "percentage": 42
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 11000,
+                "p25": 8440,
+                "p75": 14550
+              },
+              "net": {
+                "median": 7829,
+                "p25": 6083,
+                "p75": 10248
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 8,
+                "percentage": 3
+              },
+              "men": {
+                "count": 241,
+                "percentage": 97
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 53
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 53
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 42
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "koordynowanie realizacji planu inwestycji oraz remontów,",
+          "dokonywanie zakupów technicznych,",
+          "nadzór nad procedurami eksploatacji maszyn oraz prawidłowym przeprowadzeniem przeglądów i napraw"
+        ]
+      }
+    ]
+  }
+]

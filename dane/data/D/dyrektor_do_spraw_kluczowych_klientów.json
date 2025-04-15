@@ -1,0 +1,66 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor do spraw kluczowych klientów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-do-spraw-kluczowych-klientow",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 111,
+        "related_positions": [
+          {
+            "title": "key Account Director"
+          },
+          {
+            "title": "dyrektor ds. kluczowych klientów"
+          },
+          {
+            "title": "dyrektor ds. obsługi kluczowych klientów"
+          },
+          {
+            "title": "dyrektor do spraw kluczowych klientów"
+          },
+          {
+            "title": "dyrektor do spraw obsługi kluczowych klientów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 16460,
+            "p25": 12740,
+            "p75": 24920
+          },
+          "net": {
+            "median": 11551,
+            "p25": 9015,
+            "p75": 17318
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 45,
+              "percentage": 41
+            },
+            "men": {
+              "count": 66,
+              "percentage": 59
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "tworzenie i realizowanie strategii sprzedaży i obsługi kluczowych klientów firmy,",
+          "zarządzanie podległym zespołem Key Account Managerów,",
+          "opieka nad klientami korporacyjnymi,",
+          "realizowanie planu sprzedaży w ramach strategii opracowanej dla kluczowych klientów,",
+          "tworzenie nowych rynków zbytu w zakresie kluczowych klientów,",
+          "prowadzenie negocjacji z kluczowymi kontrahentami."
+        ]
+      }
+    ]
+  }
+]

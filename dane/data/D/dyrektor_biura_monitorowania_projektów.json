@@ -1,0 +1,60 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor biura monitorowania projektów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-biura-monitorowania-projektow",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 125,
+        "related_positions": [
+          {
+            "title": "dyrektor Biura Zarządzania Projektami"
+          },
+          {
+            "title": "dyrektor biura monitorowania projektów"
+          },
+          {
+            "title": "project Monitoring Office Director ."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 19500,
+            "p25": 13210,
+            "p75": 25310
+          },
+          "net": {
+            "median": 13623,
+            "p25": 9335,
+            "p75": 17583
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 44,
+              "percentage": 35
+            },
+            "men": {
+              "count": 81,
+              "percentage": 65
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "współpracowanie z zarządem w obszarze kreowania strategii działania biura zarządzania projektami w określonym zakresie biznesowym lub w skali całej organizacji,",
+          "tworzenie i wdrażanie metodologii zarządzania projektami w ramach działalności biura zarządzania projektami,",
+          "ponoszenie odpowiedzialności za realizację powierzonych projektów, zgodnie z wyznaczonymi kryteriami,",
+          "ocena ryzyka i konfliktów oraz wprowadzanie działań naprawczych,",
+          "zarządzenie podległym zespołem menedżerów,",
+          "współpracowanie z innymi działami oraz partnerami zewnętrznymi,",
+          "tworzenie nowych projektów optymalizacyjnych"
+        ]
+      }
+    ]
+  }
+]

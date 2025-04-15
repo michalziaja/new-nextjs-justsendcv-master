@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "T",
+    "positions": [
+      {
+        "title": "Technik handlowiec",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-technik-handlowiec",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 166,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 7340,
+            "p25": 5830,
+            "p75": 9950
+          },
+          "net": {
+            "median": 5334,
+            "p25": 4304,
+            "p75": 7113
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 22
+            },
+            "men": {
+              "count": 129,
+              "percentage": 78
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

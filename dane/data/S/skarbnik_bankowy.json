@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Skarbnik bankowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-skarbnik-bankowy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 16,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5210,
+            "p25": 3780,
+            "p75": 5560
+          },
+          "net": {
+            "median": 3881,
+            "p25": 2907,
+            "p75": 4120
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3,
+              "percentage": 19
+            },
+            "men": {
+              "count": 13,
+              "percentage": 81
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 37
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 37
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 31
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

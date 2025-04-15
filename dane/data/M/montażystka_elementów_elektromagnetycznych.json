@@ -1,0 +1,62 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Montażystka elementów elektromagnetycznych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-montazystka-elementow-elektromagnetycznych",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 310,
+        "related_positions": [
+          {
+            "title": "monter elementów w procesie produkcji"
+          },
+          {
+            "title": "montażystka elementów elektromagnetycznych"
+          },
+          {
+            "title": "monter urządzeń elektronicznych w procesie produkcji"
+          },
+          {
+            "title": "montażysta elementów elektromagnetycznych."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5540,
+            "p25": 4930,
+            "p75": 6430
+          },
+          "net": {
+            "median": 4106,
+            "p25": 3691,
+            "p75": 4713
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 70,
+              "percentage": 23
+            },
+            "men": {
+              "count": 240,
+              "percentage": 77
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "montaż podzespołów i zespołów o dużym stopniu zaawansowania technicznego,",
+          "obsługa narzędzi montażowych i kontrolnych,",
+          "przekazywanie posiadanej wiedzy uczniom, stażystom i mniej doświadczonym pracownikom,",
+          "przestrzeganie zasad procesu technologicznego oraz zasad zawartych w instrukcjach stanowiskowych i procedurach,",
+          "podstawowe sprawdzanie jakości wytworzonych produktów."
+        ]
+      }
+    ]
+  }
+]

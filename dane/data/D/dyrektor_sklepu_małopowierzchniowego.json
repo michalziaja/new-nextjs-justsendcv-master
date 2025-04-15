@@ -1,0 +1,59 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Dyrektor sklepu małopowierzchniowego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-dyrektor-sklepu-malopowierzchniowego",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 72,
+        "related_positions": [
+          {
+            "title": "dyrektor sklepu"
+          },
+          {
+            "title": "dyrektor sklepu małopowierzchniowego"
+          },
+          {
+            "title": "dyrektor sklepu wielkopowierzchniowego"
+          },
+          {
+            "title": "dyrektor hipermarketu"
+          },
+          {
+            "title": "dyrektor supermarketu."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 14930,
+            "p25": 11010,
+            "p75": 19860
+          },
+          "net": {
+            "median": 10508,
+            "p25": 7835,
+            "p75": 13869
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 24,
+              "percentage": 33
+            },
+            "men": {
+              "count": 48,
+              "percentage": 67
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

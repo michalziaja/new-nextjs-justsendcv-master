@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier wsparcia technicznego IT (helpdesk)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-wsparcia-technicznego-it-helpdesk",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 391,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6350,
+                "p25": 5340,
+                "p75": 7710
+              },
+              "net": {
+                "median": 4659,
+                "p25": 3970,
+                "p75": 5586
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 26,
+                "percentage": 12
+              },
+              "men": {
+                "count": 194,
+                "percentage": 88
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 64
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 52
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 47
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8320,
+                "p25": 6780,
+                "p75": 10110
+              },
+              "net": {
+                "median": 6002,
+                "p25": 4952,
+                "p75": 7222
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 36,
+                "percentage": 9
+              },
+              "men": {
+                "count": 355,
+                "percentage": 91
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 69
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 63
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 48
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10500,
+                "p25": 8350,
+                "p75": 12750
+              },
+              "net": {
+                "median": 7488,
+                "p25": 6022,
+                "p75": 9022
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 18,
+                "percentage": 11
+              },
+              "men": {
+                "count": 139,
+                "percentage": 89
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 89
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 78
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 57
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "zapewnia odpowiedni poziom obsługi klienta,",
+          "odpowiada za doradztwo techniczne klientom,",
+          "przyjmuje zgłoszenia, rejestruje i rozwiązuje problemy (także te bardziej zaawansowane) lub przekazuje problemy do innych zespołów wsparcia i je nadzoruje,",
+          "utrzymuje dokumentację związaną z procesami i konfiguracją,",
+          "raportuje statystyki dotyczące zgłoszeń otrzymanych, rozwiązanych i w toku,",
+          "zapewnia ochronę danych personalnych i biznesowych."
+        ]
+      }
+    ]
+  }
+]

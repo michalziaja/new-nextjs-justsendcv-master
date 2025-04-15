@@ -1,0 +1,132 @@
+[
+  {
+    "letter": "U",
+    "positions": [
+      {
+        "title": "Underwriter",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-underwriter",
+        "category": [
+          "bankowość",
+          "ubezpieczenia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 95,
+        "related_positions": [
+          {
+            "title": "underwriter"
+          },
+          {
+            "title": "specjalista zarządzania ryzykiem."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7500,
+                "p25": 6140,
+                "p75": 9120
+              },
+              "net": {
+                "median": 5442,
+                "p25": 4515,
+                "p75": 6547
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 39,
+                "percentage": 66
+              },
+              "men": {
+                "count": 20,
+                "percentage": 34
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10090,
+                "p25": 7710,
+                "p75": 11770
+              },
+              "net": {
+                "median": 7208,
+                "p25": 5586,
+                "p75": 8353
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 45,
+                "percentage": 47
+              },
+              "men": {
+                "count": 50,
+                "percentage": 53
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 90
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 80
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 70
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12500,
+                "p25": 9850,
+                "p75": 15520
+              },
+              "net": {
+                "median": 8851,
+                "p25": 7045,
+                "p75": 10910
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 61,
+                "percentage": 51
+              },
+              "men": {
+                "count": 58,
+                "percentage": 49
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "udzielanie gwarancji ubezpieczeniowych zgodnie z procedurami,",
+          "analiza oraz szacowanie ryzyka oraz kondycji finansowo-ekonomicznej klientów,",
+          "przygotowywanie ofert oraz tworzenie programów ubezpieczeniowych dla klientów,",
+          "współpraca z brokerami i agentami, budowanie relacji,",
+          "negocjowanie szczególnych warunków umów ubezpieczenia,",
+          "tworzenie konkurencyjnych ofert,",
+          "współpraca z innymi działami przy zadaniach sprzedażowych,",
+          "cykliczna analiza całego portfela oraz poszczególnych klientów,",
+          "zabezpieczenie firmy przed zagrożeniami, które mogą wynikać z niedoszacowania ryzyka,",
+          "uszeregowanie klientów i przydzielenie ich do określonej klasy ryzyka,",
+          "przeprowadzanie szkoleń produktowych z zakresu obowiązujących przepisów prawa oraz ogólnych warunków ubezpieczeń,"
+        ]
+      }
+    ]
+  }
+]

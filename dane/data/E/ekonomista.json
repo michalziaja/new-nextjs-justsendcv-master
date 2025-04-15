@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Ekonomista",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ekonomista",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 101,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8480,
+            "p25": 6960,
+            "p75": 10440
+          },
+          "net": {
+            "median": 6111,
+            "p25": 5074,
+            "p75": 7447
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 81,
+              "percentage": 80
+            },
+            "men": {
+              "count": 20,
+              "percentage": 20
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

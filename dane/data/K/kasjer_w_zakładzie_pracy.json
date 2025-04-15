@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kasjer w zakładzie pracy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kasjer-w-zakladzie-pracy",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 68,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5360,
+            "p25": 4810,
+            "p75": 6330
+          },
+          "net": {
+            "median": 3984,
+            "p25": 3609,
+            "p75": 4646
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 58,
+              "percentage": 85
+            },
+            "men": {
+              "count": 10,
+              "percentage": 15
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

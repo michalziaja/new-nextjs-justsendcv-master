@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik działu prawnego",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-dzialu-prawnego",
+        "category": [
+          "usługi",
+          "prawnicze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 80,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15320,
+            "p25": 10770,
+            "p75": 22360
+          },
+          "net": {
+            "median": 10774,
+            "p25": 7672,
+            "p75": 15573
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 37,
+              "percentage": 46
+            },
+            "men": {
+              "count": 43,
+              "percentage": 54
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

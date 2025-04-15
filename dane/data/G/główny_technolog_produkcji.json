@@ -1,0 +1,66 @@
+[
+  {
+    "letter": "G",
+    "positions": [
+      {
+        "title": "Główny technolog produkcji",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-glowny-technolog-produkcji",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 245,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9030,
+            "p25": 7400,
+            "p75": 11130
+          },
+          "net": {
+            "median": 6486,
+            "p25": 5375,
+            "p75": 7918
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 52,
+              "percentage": 21
+            },
+            "men": {
+              "count": 193,
+              "percentage": 79
+            }
+          },
+          "benefits": [
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 36
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 31
+            },
+            {
+              "name": "dofinansowanie posiłków",
+              "percentage": 26
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "planowanie, opracowywanie i wdrażanie procesów technologicznych,",
+          "podejmuje działania mające na celu optymalizację i usprawnienie realizacji produkcji,",
+          "opracowywanie i aktualizowanie instrukcji technologicznych,",
+          "ustala i realizuje harmonogram kontroli procesów technologicznych,",
+          "kontroluje poprawność przebiegu produkcji z uwzględnieniem jakości produktu końcowego, kosztów jego wytworzenia, zgodności z przyjętymi normami technologicznymi,",
+          "zarządza danymi konstrukcyjnymi, zestawieniami materiałowymi,",
+          "prowadzi nadzór nad aktualnością i kompletnością dokumentacji konstrukcyjnej i technologicznej,",
+          "koordynuje badania prób technologicznych, ustala parametry technologiczne,",
+          "współpracuje z innymi działami firmy związanymi z procesem technologicznym i realizacją produkcji,",
+          "kieruje pracą podległych pracowników."
+        ]
+      }
+    ]
+  }
+]

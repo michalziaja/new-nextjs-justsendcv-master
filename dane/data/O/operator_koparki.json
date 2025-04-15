@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "O",
+    "positions": [
+      {
+        "title": "Operator koparki",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-operator-koparki",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 126,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6600,
+            "p25": 5550,
+            "p75": 8310
+          },
+          "net": {
+            "median": 4830,
+            "p25": 4113,
+            "p75": 5994
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 126,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "M",
+    "positions": [
+      {
+        "title": "Monter instalacji sanitarnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-monter-instalacji-sanitarnych",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 110,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6180,
+            "p25": 5300,
+            "p75": 7300
+          },
+          "net": {
+            "median": 4543,
+            "p25": 3943,
+            "p75": 5306
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 110,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Konsultant SAP",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-konsultant-sap",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 229,
+        "related_positions": [
+          {
+            "title": "konsultant SAP"
+          },
+          {
+            "title": "sap consultant."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9150,
+                "p25": 7530,
+                "p75": 10500
+              },
+              "net": {
+                "median": 6567,
+                "p25": 5463,
+                "p75": 7488
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 74,
+                "percentage": 46
+              },
+              "men": {
+                "count": 88,
+                "percentage": 54
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 77
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 71
+              },
+              {
+                "name": "telefon komórkowy do użytku prywatnego",
+                "percentage": 60
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 14110,
+                "p25": 11130,
+                "p75": 18270
+              },
+              "net": {
+                "median": 9949,
+                "p25": 7918,
+                "p75": 12784
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 88,
+                "percentage": 38
+              },
+              "men": {
+                "count": 141,
+                "percentage": 62
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 90
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 83
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 64
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 18470,
+                "p25": 15240,
+                "p75": 22250
+              },
+              "net": {
+                "median": 12920,
+                "p25": 10719,
+                "p75": 15498
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 37,
+                "percentage": 21
+              },
+              "men": {
+                "count": 139,
+                "percentage": 79
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 84
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 78
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 63
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

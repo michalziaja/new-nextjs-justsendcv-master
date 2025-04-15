@@ -1,0 +1,125 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista bankowości",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-bankowosci",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 308,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6550,
+                "p25": 5930,
+                "p75": 7840
+              },
+              "net": {
+                "median": 4795,
+                "p25": 4372,
+                "p75": 5674
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 38,
+                "percentage": 58
+              },
+              "men": {
+                "count": 28,
+                "percentage": 42
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7650,
+                "p25": 6530,
+                "p75": 9490
+              },
+              "net": {
+                "median": 5545,
+                "p25": 4782,
+                "p75": 6799
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 225,
+                "percentage": 73
+              },
+              "men": {
+                "count": 83,
+                "percentage": 27
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 72
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 55
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9160,
+                "p25": 7480,
+                "p75": 11730
+              },
+              "net": {
+                "median": 6575,
+                "p25": 5430,
+                "p75": 8326
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 192,
+                "percentage": 69
+              },
+              "men": {
+                "count": 88,
+                "percentage": 31
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 55
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 55
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 44
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

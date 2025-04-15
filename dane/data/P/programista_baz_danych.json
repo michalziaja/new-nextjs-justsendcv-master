@@ -1,0 +1,107 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista baz danych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-baz-danych",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 226,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7700,
+                "p25": 6680,
+                "p75": 9180
+              },
+              "net": {
+                "median": 5579,
+                "p25": 4883,
+                "p75": 6587
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 28,
+                "percentage": 34
+              },
+              "men": {
+                "count": 54,
+                "percentage": 66
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 12000,
+                "p25": 10000,
+                "p75": 15120
+              },
+              "net": {
+                "median": 8510,
+                "p25": 7147,
+                "p75": 10637
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 61,
+                "percentage": 27
+              },
+              "men": {
+                "count": 165,
+                "percentage": 73
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 16150,
+                "p25": 13070,
+                "p75": 20530
+              },
+              "net": {
+                "median": 11340,
+                "p25": 9240,
+                "p75": 14325
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 19,
+                "percentage": 12
+              },
+              "men": {
+                "count": 139,
+                "percentage": 88
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "tworzy schematy baz danych w oparciu o otrzymane specyfikacje,",
+          "tworzy skrypty instalujące bazy danych, w szczególności dane konfiguracyjne/słownikowe,",
+          "wykonuje optymalizację działania baz danych,",
+          "zgłasza uwagi i propozycje dotyczące otrzymanych specyfikacji,",
+          "konfiguruje silniki baz danych w zakresie podstawowych parametrów,",
+          "programuje logikę aplikacyjną w oparciu o języki ogólnego przeznaczenia dostarczane wraz",
+          "z popularnymi silnikami baz danych (tzw. stored procedures)."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "letter": "A",
+    "positions": [
+      {
+        "title": "Analityk kredytowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-analityk-kredytowy",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 146,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7000,
+                "p25": 6000,
+                "p75": 8260
+              },
+              "net": {
+                "median": 5102,
+                "p25": 4420,
+                "p75": 5961
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 20,
+                "percentage": 47
+              },
+              "men": {
+                "count": 23,
+                "percentage": 53
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8480,
+                "p25": 6850,
+                "p75": 10500
+              },
+              "net": {
+                "median": 6111,
+                "p25": 5000,
+                "p75": 7488
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 84,
+                "percentage": 58
+              },
+              "men": {
+                "count": 62,
+                "percentage": 42
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9690,
+                "p25": 8000,
+                "p75": 13050
+              },
+              "net": {
+                "median": 6936,
+                "p25": 5784,
+                "p75": 9226
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 97,
+                "percentage": 53
+              },
+              "men": {
+                "count": 85,
+                "percentage": 47
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 66
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 53
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 46
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "letter": "S",
+    "positions": [
+      {
+        "title": "Specjalista do spraw IT",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-specjalista-do-spraw-it",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 867,
+        "related_positions": [
+          {
+            "title": "specjalista w dziale IT"
+          },
+          {
+            "title": "specjalista ds. IT"
+          },
+          {
+            "title": "specjalista do spraw IT."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6260,
+                "p25": 5430,
+                "p75": 7250
+              },
+              "net": {
+                "median": 4598,
+                "p25": 4032,
+                "p75": 5272
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 21,
+                "percentage": 12
+              },
+              "men": {
+                "count": 152,
+                "percentage": 88
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7930,
+                "p25": 6710,
+                "p75": 9530
+              },
+              "net": {
+                "median": 5736,
+                "p25": 4904,
+                "p75": 6826
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 66,
+                "percentage": 8
+              },
+              "men": {
+                "count": 801,
+                "percentage": 92
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 72
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 63
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 45
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10280,
+                "p25": 8210,
+                "p75": 12940
+              },
+              "net": {
+                "median": 7337,
+                "p25": 5927,
+                "p75": 9151
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 11,
+                "percentage": 4
+              },
+              "men": {
+                "count": 256,
+                "percentage": 96
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 62
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 50
+              },
+              {
+                "name": "prywatna opieka medyczna dla rodziny pracownika",
+                "percentage": 50
+              }
+            ]
+          }
+        ],
+        "responsibilities": [
+          "instaluje, regularnie konserwuje i administruje systemami informatycznymi, oraz hard- i softwarem,",
+          "analizuje potrzeby i planuje rozwój wdrożeń oprogramowania,",
+          "planuje szkolenia dla pracowników firmy z zakresu informatyki,",
+          "pomaga użytkownikom w zakresie codziennego użytkowania infrastruktury informatycznej"
+        ]
+      }
+    ]
+  }
+]

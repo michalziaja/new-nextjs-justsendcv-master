@@ -1,0 +1,110 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Elektryk",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-elektryk",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 143,
+        "related_positions": [
+          {
+            "title": "elektryk"
+          },
+          {
+            "title": "elektroenergetyk."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6570,
+                "p25": 5770,
+                "p75": 8040
+              },
+              "net": {
+                "median": 4809,
+                "p25": 4264,
+                "p75": 5810
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 3,
+                "percentage": 5
+              },
+              "men": {
+                "count": 60,
+                "percentage": 95
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7360,
+                "p25": 5990,
+                "p75": 8690
+              },
+              "net": {
+                "median": 5347,
+                "p25": 4414,
+                "p75": 6254
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 1
+              },
+              "men": {
+                "count": 142,
+                "percentage": 99
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8210,
+                "p25": 6710,
+                "p75": 9960
+              },
+              "net": {
+                "median": 5927,
+                "p25": 4904,
+                "p75": 7120
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 1,
+                "percentage": 2
+              },
+              "men": {
+                "count": 62,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "montaż, demontaż i naprawa sieci i urządzeń elektrycznych lub ich elementów,",
+          "kontrola pracy sieci i urządzeń elektrycznych,"
+        ]
+      }
+    ]
+  }
+]

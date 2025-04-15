@@ -1,0 +1,43 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kierownik stacji paliw",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kierownik-stacji-paliw",
+        "category": [
+          "sprzedaż",
+          "handel"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 48,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6250,
+            "p25": 5030,
+            "p75": 8080
+          },
+          "net": {
+            "median": 4591,
+            "p25": 3759,
+            "p75": 5838
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 23,
+              "percentage": 48
+            },
+            "men": {
+              "count": 25,
+              "percentage": 52
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

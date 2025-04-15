@@ -1,0 +1,46 @@
+[
+  {
+    "letter": "D",
+    "positions": [
+      {
+        "title": "Diagnosta samochodowy",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-diagnosta-samochodowy",
+        "category": [
+          "serwis",
+          "utrzymanie ruchu"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 133,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6270,
+            "p25": 5290,
+            "p75": 7510
+          },
+          "net": {
+            "median": 4604,
+            "p25": 3936,
+            "p75": 5449
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 1
+            },
+            "men": {
+              "count": 132,
+              "percentage": 99
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "ocena stanu technicznego pojazdów samochodowych,",
+          "obsługa urządzeń do diagnostyki samochodowej"
+        ]
+      }
+    ]
+  }
+]

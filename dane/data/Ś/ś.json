@@ -1,0 +1,144 @@
+[
+  {
+    "letter": "Ś",
+    "positions": [
+      {
+        "title": "Ślusarz",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 382,
+        "related_positions": [
+          {
+            "title": "Ślusarz"
+          },
+          {
+            "title": "Ślusarz galanterii metalowej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5290,
+            "p75": 7330
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3936,
+            "p75": 5327
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 2
+            },
+            "men": {
+              "count": 375,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "dokonywanie bieżących napraw ślusarskich,",
+          "obróbka części mechanicznych,",
+          "udział w bieżących naprawach i remontach maszyn i urządzeń produkcyjnych,",
+          "udział w produkcji części zamiennych,",
+          "dobór narzędzi i utrzymywanie ich w dobrym stanie technicznym,",
+          "wykonywanie pomiarów warsztatowych,",
+          "efektywne gospodarowanie powierzonymi materiałami, narzędziami i urządzeniami,",
+          "utrzymanie czystości stanowiska pracy."
+        ]
+      },
+      {
+        "title": "Ślusarz galanterii metalowej",
+        "category": [
+          "produkcja",
+          "przemysł"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 382,
+        "related_positions": [
+          {
+            "title": "Ślusarz"
+          },
+          {
+            "title": "Ślusarz galanterii metalowej."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 5930,
+            "p25": 5290,
+            "p75": 7330
+          },
+          "net": {
+            "median": 4372,
+            "p25": 3936,
+            "p75": 5327
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 7,
+              "percentage": 2
+            },
+            "men": {
+              "count": 375,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "dokonywanie bieżących napraw ślusarskich,",
+          "obróbka części mechanicznych,",
+          "udział w bieżących naprawach i remontach maszyn i urządzeń produkcyjnych,",
+          "udział w produkcji części zamiennych,",
+          "dobór narzędzi i utrzymywanie ich w dobrym stanie technicznym,",
+          "wykonywanie pomiarów warsztatowych,",
+          "efektywne gospodarowanie powierzonymi materiałami, narzędziami i urządzeniami,",
+          "utrzymanie czystości stanowiska pracy."
+        ]
+      },
+      {
+        "title": "Ślusarz narzędziowy",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 109,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 6780,
+            "p25": 5780,
+            "p75": 8340
+          },
+          "net": {
+            "median": 4952,
+            "p25": 4270,
+            "p75": 6015
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 0,
+              "percentage": 0
+            },
+            "men": {
+              "count": 109,
+              "percentage": 100
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

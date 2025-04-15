@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kontroler rozliczeń pieniężnych",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kontroler-rozliczen-pienieznych",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 23,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 8250,
+            "p25": 6800,
+            "p75": 9240
+          },
+          "net": {
+            "median": 5954,
+            "p25": 4966,
+            "p75": 6629
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 13,
+              "percentage": 57
+            },
+            "men": {
+              "count": 10,
+              "percentage": 43
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

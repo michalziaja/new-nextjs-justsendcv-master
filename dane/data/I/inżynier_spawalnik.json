@@ -1,0 +1,55 @@
+[
+  {
+    "letter": "I",
+    "positions": [
+      {
+        "title": "Inżynier spawalnik",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-inzynier-spawalnik",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 106,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 9710,
+            "p25": 7710,
+            "p75": 11100
+          },
+          "net": {
+            "median": 6950,
+            "p25": 5586,
+            "p75": 7897
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 21,
+              "percentage": 20
+            },
+            "men": {
+              "count": 85,
+              "percentage": 80
+            }
+          },
+          "benefits": [
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 50
+            },
+            {
+              "name": "dofinansowanie nauki",
+              "percentage": 33
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 33
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

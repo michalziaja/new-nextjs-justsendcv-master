@@ -1,0 +1,112 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Projektant instalacji sanitarnych (HVAC)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-projektant-instalacji-sanitarnych-hvac",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 138,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6280,
+                "p25": 5680,
+                "p75": 7800
+              },
+              "net": {
+                "median": 4611,
+                "p25": 4202,
+                "p75": 5647
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 26,
+                "percentage": 55
+              },
+              "men": {
+                "count": 21,
+                "percentage": 45
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8860,
+                "p25": 7500,
+                "p75": 10890
+              },
+              "net": {
+                "median": 6370,
+                "p25": 5442,
+                "p75": 7753
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 77,
+                "percentage": 56
+              },
+              "men": {
+                "count": 61,
+                "percentage": 44
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 64
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 64
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 57
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 10100,
+                "p25": 8590,
+                "p75": 12290
+              },
+              "net": {
+                "median": 7215,
+                "p25": 6186,
+                "p75": 8708
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 49,
+                "percentage": 52
+              },
+              "men": {
+                "count": 46,
+                "percentage": 48
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      }
+    ]
+  }
+]

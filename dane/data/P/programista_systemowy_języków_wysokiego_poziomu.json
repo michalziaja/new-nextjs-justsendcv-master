@@ -1,0 +1,48 @@
+[
+  {
+    "letter": "P",
+    "positions": [
+      {
+        "title": "Programista systemowy języków wysokiego poziomu",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-programista-systemowy-jezykow-wysokiego-poziomu",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 32,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 16030,
+            "p25": 10080,
+            "p75": 18940
+          },
+          "net": {
+            "median": 11257,
+            "p25": 7201,
+            "p75": 13241
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 3
+            },
+            "men": {
+              "count": 31,
+              "percentage": 97
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "tworzy kody źródłowe programów w językach wysokiego poziomu (znajomość języków programowania: C, C++, Visual Basic, Java, Delphi i innych, itp.),",
+          "programuje i testuje systemy informatyczne,",
+          "współpracuje z analitykami i projektantami systemów informatycznych oraz członkami zespołów wdrażających oprogramowanie,",
+          "poszukuje rozwiązań optymalizujących oprogramowanie,",
+          "uzupełnia dokumentację techniczną systemu związaną z rozwijanym oprogramowaniem."
+        ]
+      }
+    ]
+  }
+]

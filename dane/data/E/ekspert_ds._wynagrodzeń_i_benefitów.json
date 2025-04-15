@@ -1,0 +1,71 @@
+[
+  {
+    "letter": "E",
+    "positions": [
+      {
+        "title": "Ekspert ds. wynagrodzeń i benefitów",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-ekspert-ds-wynagrodzen-i-benefitow",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 380,
+        "related_positions": [
+          {
+            "title": "specjalista ds. wynagrodzeń i benefitów"
+          },
+          {
+            "title": "ekspert ds. wynagrodzeń i benefitów"
+          },
+          {
+            "title": "compensation and Benefits Specialist"
+          },
+          {
+            "title": "specjalista do spraw wynagrodzeń i benefitów"
+          },
+          {
+            "title": "ekspert do spraw wynagrodzeń i benefitów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9650,
+            "p25": 7370,
+            "p75": 12510
+          },
+          "net": {
+            "median": 6909,
+            "p25": 5354,
+            "p75": 8858
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 306,
+              "percentage": 81
+            },
+            "men": {
+              "count": 74,
+              "percentage": 19
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 83
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 80
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 55
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]

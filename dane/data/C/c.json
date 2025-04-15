@@ -1,0 +1,1247 @@
+[
+  {
+    "letter": "C",
+    "positions": [
+      {
+        "title": "Cabin Crew",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 20,
+        "related_positions": [
+          {
+            "title": "stewardesa w lotnictwie pasażerskim"
+          },
+          {
+            "title": "cabin Crew"
+          },
+          {
+            "title": "steward w lotnictwie pasażerskim."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7810,
+            "p25": 5580,
+            "p75": 8560
+          },
+          "net": {
+            "median": 5654,
+            "p25": 4134,
+            "p75": 6166
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 12,
+              "percentage": 60
+            },
+            "men": {
+              "count": 8,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "obsługa pasażerów podczas lotu samolotem,",
+          "przygotowywanie samolotu na przyjęcie podróżnych,",
+          "odpowiedzialność za sprawne przeprowadzenie akcji ewakuacyjnej w razie konieczności"
+        ]
+      },
+      {
+        "title": "C/c++ developer",
+        "category": [
+          "it"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 442,
+        "related_positions": [
+          {
+            "title": "programista C/C++"
+          },
+          {
+            "title": "c/c++ developer."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9040,
+                "p25": 7390,
+                "p75": 11150
+              },
+              "net": {
+                "median": 6493,
+                "p25": 5368,
+                "p75": 7930
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 14,
+                "percentage": 7
+              },
+              "men": {
+                "count": 178,
+                "percentage": 93
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 50
+              },
+              {
+                "name": "elastyczny czas pracy",
+                "percentage": 50
+              },
+              {
+                "name": "szkolenia/kursy zawodowe",
+                "percentage": 40
+              }
+            ]
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13500,
+                "p25": 11090,
+                "p75": 16730
+              },
+              "net": {
+                "median": 9533,
+                "p25": 7890,
+                "p75": 11735
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 26,
+                "percentage": 6
+              },
+              "men": {
+                "count": 416,
+                "percentage": 94
+              }
+            },
+            "benefits": [
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 72
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 63
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 63
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 19270,
+                "p25": 16300,
+                "p75": 22360
+              },
+              "net": {
+                "median": 13467,
+                "p25": 11441,
+                "p75": 15573
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 5,
+                "percentage": 2
+              },
+              "men": {
+                "count": 291,
+                "percentage": 98
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Celnik",
+        "category": [
+          "sektor publiczny"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 35,
+        "related_positions": [
+          {
+            "title": "funkcjonariusz celny"
+          },
+          {
+            "title": "celnik."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9370,
+            "p25": 7400,
+            "p75": 10920
+          },
+          "net": {
+            "median": 6718,
+            "p25": 5375,
+            "p75": 7774
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 15,
+              "percentage": 43
+            },
+            "men": {
+              "count": 20,
+              "percentage": 57
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Chemik",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 93,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6100,
+                "p25": 5350,
+                "p75": 7070
+              },
+              "net": {
+                "median": 4488,
+                "p25": 3977,
+                "p75": 5150
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 49,
+                "percentage": 78
+              },
+              "men": {
+                "count": 14,
+                "percentage": 22
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6880,
+                "p25": 5840,
+                "p75": 8190
+              },
+              "net": {
+                "median": 5020,
+                "p25": 4311,
+                "p75": 5913
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 62,
+                "percentage": 67
+              },
+              "men": {
+                "count": 31,
+                "percentage": 33
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8140,
+                "p25": 6000,
+                "p75": 9790
+              },
+              "net": {
+                "median": 5879,
+                "p25": 4420,
+                "p75": 7003
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 34,
+                "percentage": 63
+              },
+              "men": {
+                "count": 20,
+                "percentage": 37
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Chief accountant",
+        "category": [
+          "księgowość"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 4022,
+        "related_positions": [
+          {
+            "title": "główny księgowy"
+          },
+          {
+            "title": "główna księgowa"
+          },
+          {
+            "title": "chief accountant."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 11330,
+            "p25": 8580,
+            "p75": 15390
+          },
+          "net": {
+            "median": 8054,
+            "p25": 6179,
+            "p75": 10821
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 3571,
+              "percentage": 89
+            },
+            "men": {
+              "count": 451,
+              "percentage": 11
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 48
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 42
+            },
+            {
+              "name": "szkolenia/kursy zawodowe",
+              "percentage": 41
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "odpowiedzialność za sprawne działanie księgowości w firmie,",
+          "nadzór nad pracą działu księgowości,",
+          "sporządzanie bilansów, sprawozdań i raportów okresowych,",
+          "nadzorowanie rozliczeń z budżetem państwa,",
+          "organizacja obiegu dokumentów księgowych,",
+          "informowanie zarządu firmy o bieżącej sytuacji finansowej,",
+          "odpowiedzialność za zgodność działań finansowych przedsiębiorstwa z obowiązującymi przepisami prawnymi,",
+          "współpracuje z audytorem zewnętrznym w trakcie corocznej kontroli,",
+          "przygotowuje roczne sprawozdanie budżetowe dla kierownictwa firmy oraz inne niestandardowe raporty na życzenie zarządu."
+        ]
+      },
+      {
+        "title": "Chirurg plastyczny",
+        "category": [
+          "służba zdrowia",
+          "lekarze"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 10,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5670,
+            "p25": 4380,
+            "p75": 6940
+          },
+          "net": {
+            "median": 4017,
+            "p25": 3118,
+            "p75": 4903
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 6,
+              "percentage": 60
+            },
+            "men": {
+              "count": 4,
+              "percentage": 40
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Cieśla",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 57,
+        "related_positions": [
+          {
+            "title": "cieśla"
+          },
+          {
+            "title": "cieśla szalunkowy"
+          },
+          {
+            "title": "cieśla konstrukcyjny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7380,
+            "p25": 5560,
+            "p75": 8950
+          },
+          "net": {
+            "median": 5361,
+            "p25": 4120,
+            "p75": 6431
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 56,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Cieśla konstrukcyjny",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 57,
+        "related_positions": [
+          {
+            "title": "cieśla"
+          },
+          {
+            "title": "cieśla szalunkowy"
+          },
+          {
+            "title": "cieśla konstrukcyjny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7380,
+            "p25": 5560,
+            "p75": 8950
+          },
+          "net": {
+            "median": 5361,
+            "p25": 4120,
+            "p75": 6431
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 56,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Cieśla szalunkowy",
+        "category": [
+          "budownictwo"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 57,
+        "related_positions": [
+          {
+            "title": "cieśla"
+          },
+          {
+            "title": "cieśla szalunkowy"
+          },
+          {
+            "title": "cieśla konstrukcyjny."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 7380,
+            "p25": 5560,
+            "p75": 8950
+          },
+          "net": {
+            "median": 5361,
+            "p25": 4120,
+            "p75": 6431
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 1,
+              "percentage": 2
+            },
+            "men": {
+              "count": 56,
+              "percentage": 98
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Clinical Research Associate",
+        "category": [
+          "badania i rozwój"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 45,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 11390,
+            "p25": 7860,
+            "p75": 14510
+          },
+          "net": {
+            "median": 7741,
+            "p25": 5631,
+            "p75": 9733
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 29,
+              "percentage": 64
+            },
+            "men": {
+              "count": 16,
+              "percentage": 36
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 60
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 56
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 56
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Coach",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 15,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 10020,
+            "p25": 7670,
+            "p75": 11530
+          },
+          "net": {
+            "median": 7160,
+            "p25": 5559,
+            "p75": 8190
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 8,
+              "percentage": 53
+            },
+            "men": {
+              "count": 7,
+              "percentage": 47
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Commodity manager",
+        "category": [
+          "logistyka i transport"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 90,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 15160,
+            "p25": 12060,
+            "p75": 18080
+          },
+          "net": {
+            "median": 10664,
+            "p25": 8551,
+            "p75": 12655
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 51,
+              "percentage": 57
+            },
+            "men": {
+              "count": 39,
+              "percentage": 43
+            }
+          },
+          "benefits": [
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 84
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 78
+            },
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 57
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Compensation and Benefits Specialist",
+        "category": [
+          "hr"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 380,
+        "related_positions": [
+          {
+            "title": "specjalista ds. wynagrodzeń i benefitów"
+          },
+          {
+            "title": "ekspert ds. wynagrodzeń i benefitów"
+          },
+          {
+            "title": "compensation and Benefits Specialist"
+          },
+          {
+            "title": "specjalista do spraw wynagrodzeń i benefitów"
+          },
+          {
+            "title": "ekspert do spraw wynagrodzeń i benefitów."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9650,
+            "p25": 7370,
+            "p75": 12510
+          },
+          "net": {
+            "median": 6909,
+            "p25": 5354,
+            "p75": 8858
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 306,
+              "percentage": 81
+            },
+            "men": {
+              "count": 74,
+              "percentage": 19
+            }
+          },
+          "benefits": [
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 83
+            },
+            {
+              "name": "prywatna opieka medyczna dla pracownika",
+              "percentage": 80
+            },
+            {
+              "name": "ubezpieczenie na życie/NNW",
+              "percentage": 55
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Compliance officer",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 153,
+        "related_positions": null,
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 7500,
+                "p25": 6400,
+                "p75": 8500
+              },
+              "net": {
+                "median": 5442,
+                "p25": 4693,
+                "p75": 6125
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 24,
+                "percentage": 53
+              },
+              "men": {
+                "count": 21,
+                "percentage": 47
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 9770,
+                "p25": 7790,
+                "p75": 12320
+              },
+              "net": {
+                "median": 6990,
+                "p25": 5640,
+                "p75": 8728
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 90,
+                "percentage": 59
+              },
+              "men": {
+                "count": 63,
+                "percentage": 41
+              }
+            },
+            "benefits": [
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 73
+              },
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 69
+              },
+              {
+                "name": "karnety na siłownie i do klubów fitness",
+                "percentage": 65
+              }
+            ]
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 13430,
+                "p25": 10550,
+                "p75": 16480
+              },
+              "net": {
+                "median": 9485,
+                "p25": 7522,
+                "p75": 11564
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 113,
+                "percentage": 61
+              },
+              "men": {
+                "count": 73,
+                "percentage": 39
+              }
+            },
+            "benefits": [
+              {
+                "name": "możliwość pracy zdalnej",
+                "percentage": 78
+              },
+              {
+                "name": "prywatna opieka medyczna dla pracownika",
+                "percentage": 73
+              },
+              {
+                "name": "ubezpieczenie na życie/NNW",
+                "percentage": 60
+              }
+            ]
+          }
+        ],
+        "responsibilities": null
+      },
+      {
+        "title": "Concierge",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 19,
+        "related_positions": [
+          {
+            "title": "asystent osobisty"
+          },
+          {
+            "title": "concierge."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 4500,
+            "p25": 3860,
+            "p75": 5590
+          },
+          "net": {
+            "median": 3398,
+            "p25": 2961,
+            "p75": 4140
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 11,
+              "percentage": 58
+            },
+            "men": {
+              "count": 8,
+              "percentage": 42
+            }
+          },
+          "benefits": [
+            {
+              "name": "elastyczny czas pracy",
+              "percentage": 36
+            },
+            {
+              "name": "imprezy integracyjne",
+              "percentage": 36
+            },
+            {
+              "name": "możliwość pracy zdalnej",
+              "percentage": 27
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Cool hunter",
+        "category": [
+          "usługi",
+          "pozostałe"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 39,
+        "related_positions": [
+          {
+            "title": "analityk trendów rynkowych"
+          },
+          {
+            "title": "cool hunter."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 9470,
+            "p25": 7750,
+            "p75": 14320
+          },
+          "net": {
+            "median": 6785,
+            "p25": 5614,
+            "p75": 10092
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 19,
+              "percentage": 49
+            },
+            "men": {
+              "count": 20,
+              "percentage": 51
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Copywriter",
+        "category": [
+          "pr",
+          "reklama"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 137,
+        "related_positions": [
+          {
+            "title": "copywriter"
+          },
+          {
+            "title": "autor tekstów i sloganów reklamowych."
+          }
+        ],
+        "salaries": null,
+        "levels": [
+          {
+            "level": "młodszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 5570,
+                "p25": 5000,
+                "p75": 6410
+              },
+              "net": {
+                "median": 4127,
+                "p25": 3738,
+                "p75": 4699
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 42,
+                "percentage": 86
+              },
+              "men": {
+                "count": 7,
+                "percentage": 14
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "specjalista",
+            "salaries": {
+              "gross": {
+                "median": 6740,
+                "p25": 5470,
+                "p75": 7800
+              },
+              "net": {
+                "median": 4925,
+                "p25": 4059,
+                "p75": 5647
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 106,
+                "percentage": 77
+              },
+              "men": {
+                "count": 31,
+                "percentage": 23
+              }
+            },
+            "benefits": []
+          },
+          {
+            "level": "starszy specjalista",
+            "salaries": {
+              "gross": {
+                "median": 8020,
+                "p25": 6720,
+                "p75": 10970
+              },
+              "net": {
+                "median": 5798,
+                "p25": 4911,
+                "p75": 7808
+              }
+            },
+            "gender_distribution": {
+              "women": {
+                "count": 38,
+                "percentage": 79
+              },
+              "men": {
+                "count": 10,
+                "percentage": 21
+              }
+            },
+            "benefits": []
+          }
+        ],
+        "responsibilities": [
+          "pisanie, korekta i edytowanie tekstów reklamowych,",
+          "współpraca z pracownikami działu kreatywnego, reklamy i klientami"
+        ]
+      },
+      {
+        "title": "Country Manager",
+        "category": [
+          "brak kategorii"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 110,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 20040,
+            "p25": 12730,
+            "p75": 33670
+          },
+          "net": {
+            "median": 13264,
+            "p25": 8596,
+            "p75": 21967
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 31,
+              "percentage": 28
+            },
+            "men": {
+              "count": 79,
+              "percentage": 72
+            }
+          },
+          "benefits": [
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 68
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 65
+            },
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 54
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": null
+      },
+      {
+        "title": "Country Tax Lead",
+        "category": [
+          "finanse i controlling"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 163,
+        "related_positions": [
+          {
+            "title": "menedżer ds. podatków"
+          },
+          {
+            "title": "tax Manager"
+          },
+          {
+            "title": "country Tax Lead"
+          },
+          {
+            "title": "menedżer do spraw podatków."
+          }
+        ],
+        "salaries": {
+          "gross": {
+            "median": 19810,
+            "p25": 16010,
+            "p75": 23710
+          },
+          "net": {
+            "median": 13835,
+            "p25": 11244,
+            "p75": 16493
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 72,
+              "percentage": 44
+            },
+            "men": {
+              "count": 91,
+              "percentage": 56
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "nadzór merytoryczny nad powierzonym obszarem podatkowym,",
+          "nadzór nad poprawnością rozliczeń podatkowych,",
+          "organizacja pracy zespołu analityków podatkowych,",
+          "wewnętrzne doradztwo w powierzonym obszarze podatkowym,",
+          "współpraca z lokalnymi organami administracji skarbowej,",
+          "optymalizowanie wartości odprowadzanego podatku,",
+          "analiza regulacji podatkowych i orzeczeń sądowych dotyczących podatków."
+        ]
+      },
+      {
+        "title": "Cukiernik",
+        "category": [
+          "usługi",
+          "gastronomia"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 93,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5980,
+            "p25": 5100,
+            "p75": 7480
+          },
+          "net": {
+            "median": 4407,
+            "p25": 3807,
+            "p75": 5430
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 63,
+              "percentage": 68
+            },
+            "men": {
+              "count": 30,
+              "percentage": 32
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": [
+          "wypiek ciast i ciastek,",
+          "dbanie o czystość i porządek w miejscu pracy"
+        ]
+      },
+      {
+        "title": "Członek zarządu",
+        "category": [
+          "zarząd"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 154,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 23670,
+            "p25": 14350,
+            "p75": 36940
+          },
+          "net": {
+            "median": 16466,
+            "p25": 10112,
+            "p75": 25512
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 47,
+              "percentage": 31
+            },
+            "men": {
+              "count": 107,
+              "percentage": 69
+            }
+          },
+          "benefits": [
+            {
+              "name": "samochód osobowy do użytku prywatnego",
+              "percentage": 78
+            },
+            {
+              "name": "komputer przenośny do użytku prywatnego",
+              "percentage": 75
+            },
+            {
+              "name": "telefon komórkowy do użytku prywatnego",
+              "percentage": 64
+            }
+          ]
+        },
+        "levels": null,
+        "responsibilities": [
+          "określanie i formułowanie polityki dla wyodrębnionego pionu przedsiębiorstwa,",
+          "planowanie i koordynowanie głównych działań firmy w wyodrębnionym zakresie,",
+          "ocenianie działalności określonego pionu przedsiębiorstwa i osiąganych rezultatów oraz przedstawianie ich dyrektorowi generalnemu (prezesowi), organowi założycielskiemu, radzie nadzorczej lub gremium zarządzającemu,",
+          "utrzymywanie współpracy z poszczególnymi pionami firmy,",
+          "reprezentowanie określonego pionu przedsiębiorstwa w kontaktach z zewnętrznymi instytucjami,",
+          "nadzorowanie innych pracowników"
+        ]
+      }
+    ]
+  }
+]

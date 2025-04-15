@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "K",
+    "positions": [
+      {
+        "title": "Kancelista (administracja publiczna)",
+        "url": "https://wynagrodzenia.pl/moja-placa/ile-zarabia-kancelista-administracja-publiczna",
+        "category": [
+          "administracja"
+        ],
+        "update_date": "styczeń 2025",
+        "sample_size": 41,
+        "related_positions": null,
+        "salaries": {
+          "gross": {
+            "median": 5360,
+            "p25": 4900,
+            "p75": 6970
+          },
+          "net": {
+            "median": 3984,
+            "p25": 3671,
+            "p75": 5081
+          },
+          "gender_distribution": {
+            "women": {
+              "count": 31,
+              "percentage": 76
+            },
+            "men": {
+              "count": 10,
+              "percentage": 24
+            }
+          },
+          "benefits": []
+        },
+        "levels": null,
+        "responsibilities": null
+      }
+    ]
+  }
+]
