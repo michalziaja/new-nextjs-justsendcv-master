@@ -1,3 +1,143 @@
+/* @import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: rgb(245, 245, 250);
+  --foreground: rgb(33, 33, 51);
+  --card: rgb(255, 255, 255);
+  --card-foreground: rgb(33, 33, 51);
+  --popover: rgb(255, 255, 255);
+  --popover-foreground: rgb(33, 33, 51);
+  --primary: rgb(54, 54, 81);
+  --primary-foreground: rgb(250, 250, 253);
+  --secondary: rgb(247, 247, 252);
+  --secondary-foreground: rgb(54, 54, 81);
+  --muted: rgb(247, 247, 252);
+  --muted-foreground: rgb(140, 140, 168);
+  --accent: rgb(247, 247, 252);
+  --accent-foreground: rgb(54, 54, 81);
+  --destructive: rgb(221, 70, 50);
+  --destructive-foreground: rgb(221, 70, 50);
+  --border: rgb(237, 237, 247);
+  --input: rgb(237, 237, 247);
+  --ring: rgb(180, 180, 206);
+  --chart-1: rgb(220, 130, 50);
+  --chart-2: rgb(100, 190, 170);
+  --chart-3: rgb(70, 100, 200);
+  --chart-4: rgb(240, 180, 60);
+  --chart-5: rgb(230, 150, 70);
+  --radius: 0.625rem;
+  --sidebar: rgb(255, 255, 255);
+  --sidebar-foreground: rgb(33, 33, 51);
+  --sidebar-primary: rgb(54, 54, 81);
+  --sidebar-primary-foreground: rgb(250, 250, 253);
+  --sidebar-accent: rgb(247, 247, 252);
+  --sidebar-accent-foreground: rgb(54, 54, 81);
+  --sidebar-border: rgb(237, 237, 247);
+  --sidebar-ring: rgb(180, 180, 206);
+}
+
+.dark {
+  --background: rgb(33, 33, 51);
+  --foreground: rgb(250, 250, 253);
+  --card: rgb(38, 38, 58);
+  --card-foreground: rgb(250, 250, 253);
+  --popover: rgb(33, 33, 51);
+  --popover-foreground: rgb(250, 250, 253);
+  --primary: rgb(250, 250, 253);
+  --primary-foreground: rgb(54, 54, 81);
+  --secondary: rgb(71, 71, 102);
+  --secondary-foreground: rgb(250, 250, 253);
+  --muted: rgb(71, 71, 102);
+  --muted-foreground: rgb(180, 180, 206);
+  --accent: rgb(71, 71, 102);
+  --accent-foreground: rgb(250, 250, 253);
+  --destructive: rgb(130, 45, 35);
+  --destructive-foreground: rgb(180, 70, 50);
+  --border: rgb(71, 71, 102);
+  --input: rgb(71, 71, 102);
+  --ring: rgb(114, 114, 154);
+  --chart-1: rgb(110, 80, 230);
+  --chart-2: rgb(120, 200, 180);
+  --chart-3: rgb(230, 150, 70);
+  --chart-4: rgb(180, 100, 240);
+  --chart-5: rgb(220, 90, 60);
+  --sidebar: rgb(53, 53, 81);
+  --sidebar-foreground: rgb(250, 250, 253);
+  --sidebar-primary: rgb(110, 80, 230);
+  --sidebar-primary-foreground: rgb(250, 250, 253);
+  --sidebar-accent: rgb(71, 71, 102);
+  --sidebar-accent-foreground: rgb(250, 250, 253);
+  --sidebar-border: rgb(71, 71, 102);
+  --sidebar-ring: rgb(114, 114, 154);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes bell-shake {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(4deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0); }
+}
+
+.animate-bell {
+  animation: bell-shake 1s ease-in-out;
+} */
+ 
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -137,3 +277,4 @@
 .animate-bell {
   animation: bell-shake 1s ease-in-out;
 }
+

@@ -27,7 +27,7 @@ export interface UserProfile {
 export const mockUserProfile: UserProfile = {
   firstName: "Jan",
   lastName: "Kowalski",
-  email: "jan.kowalski@example.com",
+  email: "michalziaja88@gmail.com",
   phone: "+48 123 456 789",
   address: "Warszawa, Polska",
   socials: {

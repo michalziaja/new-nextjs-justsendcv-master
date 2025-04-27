@@ -64,6 +64,11 @@ export function JobDescription({ application, isDesktop, keywords = [] }: JobDes
       <div className="rounded-lg h-[calc(100%-2rem)] w-[calc(95%+2.5rem)]">
         <div 
           className="p-1 h-full overflow-y-auto whitespace-pre-line text-sm"
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
+            WebkitOverflowScrolling: 'touch'
+          }}
           dangerouslySetInnerHTML={{ __html: highlightedText }}
         />
       </div>

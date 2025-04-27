@@ -76,21 +76,6 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
   // Klasa dla tła kolumny gdy zadanie jest nad nią podczas przeciągania
   const columnBackgroundClass = isOver ? "bg-sky-50 dark:bg-sky-950/50" : ""
 
-  // Określenie szerokości kolumny w zależności od liczby kolumn
-  // Uwzględniając odstępy między kolumnami (gap-2, gap-3, gap-4)
-  const getColumnWidth = () => {
-    switch (columnCount) {
-      case 3:
-        return "w-[32.5%]" // Dla 3 kolumn zajmujemy ~32.5% szerokości
-      case 4:
-        return "w-[24.2%]" // Dla 4 kolumn zajmujemy ~24.2% szerokości
-      case 5:
-        return "w-[19.2%]" // Dla 5 kolumn zajmujemy ~19.2% szerokości
-      default:
-        return "w-full"
-    }
-  }
-
   const isRemovable = column.id !== "todo" && column.id !== "in-progress" && column.id !== "done"
 
   // Automatyczne ustawienie fokusu na pole edycji tytułu
@@ -131,7 +116,7 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
     <Card 
       ref={setSortableNodeRef}
       style={style}
-      className={`${getColumnWidth()} min-w-[210px] h-fit ${getColumnHeaderColor(column.id)} shadow-[2px_4px_10px_rgba(0,0,0,0.3)] border-2 rounded-lg ${extraClasses} ${isDragging ? 'opacity-50 z-50 shadow-xl scale-105' : 'opacity-100'} transition-transform duration-200`}
+      className={`min-w-[160px] h-fit ${getColumnHeaderColor(column.id)} shadow-[2px_4px_10px_rgba(0,0,0,0.3)] border-2 rounded-lg ${extraClasses} ${isDragging ? 'opacity-50 z-50 shadow-xl scale-105' : 'opacity-100'} transition-transform duration-200`}
     >
       <CardHeader className="p-3 pb-0 cursor-grab" {...attributes}>
         <div className="flex justify-between items-center">
@@ -198,32 +183,31 @@ const KanbanColumn: React.FC<KanbanColumnProps> = ({
               onDelete={(taskId) => {
                 if (task.isTemp) {
                   if (onEditTask) {
-                    onEditTask(taskId, { cancelTemp: true });
+                    onEditTask(taskId, { cancelTemp: true })
                   }
-                } else if (onDeleteTask) {
-                  onDeleteTask(taskId, column.id);
-                }
-              }} 
-              onEdit={(taskId, updatedTask) => {
-                if (onEditTask) {
-                  onEditTask(taskId, updatedTask);
+                } else {
+                  if (onDeleteTask) {
+                    onDeleteTask(taskId, column.id)
+                  }
                 }
               }}
+              onEdit={onEditTask}
               isNew={task.isNew}
             />
           ))}
         </SortableContext>
         
         {tasks.length === 0 && (
-          <div className="flex items-center justify-center h-32 w-full text-center">
-            <p className="text-sm text-muted-foreground">Brak zadań</p>
+          <div className="flex items-center justify-center h-20 w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg mt-2">
+            <p className="text-sm text-gray-400 dark:text-gray-500">Przeciągnij tutaj zadanie</p>
           </div>
         )}
         
         <Button 
           variant="ghost" 
-          className="mt-6 w-full text-xs py-1 h-auto hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400"
+          className="mt-4 p-1 h-auto text-xs flex items-center justify-center border border-dashed border-gray-300 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/30"
           onClick={() => onAddTask(column.id)}
+          size="sm"
         >
           <Plus className="h-3 w-3 mr-1" />
           Dodaj zadanie

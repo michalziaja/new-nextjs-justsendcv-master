@@ -50,10 +50,10 @@ export function NavUser({ userData }: { userData: UserData }) {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <SidebarMenuButton
-                size="lg"
+                size="default"
                 className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
               >
-                <Avatar className="h-8 w-8 rounded-lg">
+                <Avatar className="-ml-2 h-8 w-8 rounded-lg">
                   {userData.avatar && userData.avatar !== "" ? (
                     <Image
                       src={userData.avatar}

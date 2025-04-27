@@ -51,14 +51,14 @@ export function SiteHeader() {
 
   // Common header layout to avoid duplication
   const headerContent = (
-    <div className="flex h-14 w-full items-center justify-between px-4 ">
+    <div className="flex h-11 w-full items-center justify-between px-3 ">
       <div className="flex items-center">
         {/* Logo jako przycisk zwijania menu */}
         <div 
           onClick={toggleSidebar}
           className="flex items-center gap-2 rounded-sm p-1 cursor-pointer hover:scale-105 transition-all duration-300"
         >
-          <div className={`flex aspect-square size-10 items-center justify-center transition-transform duration-500 ${open ? 'rotate-360' : ''}`}>
+          <div className={`flex aspect-square size-8.5 items-center justify-center transition-transform duration-500 ${open ? 'rotate-360' : ''}`}>
             <div className="relative w-full h-full">
               <Image
                 src="/logo.png"
@@ -75,12 +75,12 @@ export function SiteHeader() {
         </div>
 
         {/* Spacing before separator */}
-        <div className="w-10" />
+        <div className="w-3" />
         
         {/* Separator */}
-        <div className="hidden md:flex h-8 items-center">
+        {/* <div className="hidden md:flex h-8 items-center">
           <Separator orientation="vertical" />
-        </div>
+        </div> */}
         
         {/* Spacing after separator */}
         <div className="w-4" />
@@ -110,7 +110,7 @@ export function SiteHeader() {
   )
 
   return (
-    <header className="bg-white sticky top-2.5 z-50 flex w-[calc(100%-1rem)] border-1 border-gray-100 mx-auto items-center rounded-sm shadow-md dark:shadow-[2px_4px_10px_rgba(0,0,1,0.3)] dark:bg-slate-900 dark:border-slate-800 ">
+    <header className="bg-white sticky top-2.5 z-50 flex w-[calc(100%-1rem)] border-1 border-gray-100 mx-auto items-center rounded-sm shadow-[2px_4px_5px_rgba(0,0,0,0.1)] dark:shadow-[2px_4px_10px_rgba(0,0,1,0.3)] dark:bg-slate-900 dark:border-slate-800 ">
       {headerContent}
     </header>
   )

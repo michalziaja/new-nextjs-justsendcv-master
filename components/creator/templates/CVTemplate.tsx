@@ -1,416 +1,887 @@
-import React from 'react';
-import { CVData } from '../CVContext';
+//components/creator/templates/CVTemplate.tsx
 
-// Interfejs danych do szablonu CV
-export interface CVTemplateData {
-  personalData: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    address: string;
-  };
-  experience: Array<{
-    position: string;
-    company: string;
-    startDate: string;
-    endDate: string;
-    description: string;
-    type?: 'job' | 'project';
-  }>;
-  education: Array<{
-    school: string;
-    degree: string;
-    startDate: string;
-    endDate: string;
-    description: string;
-  }>;
-  skills: {
-    technical: string[];
-    soft: string[];
-    languages: Array<{
-      language: string;
-      level: string;
-    }>;
-  };
-  rodoClause: string;
-}
+import React, { useRef, useEffect } from 'react';
+import { useCV } from '../CVContext';
+import { 
+  CVTemplateProps,
+  SectionRefs,
+  translations,
+  colorPalette,
+  defaultFontSizes,
+  defaultSpacing,
+  deepMerge,
+  useHasContent,
+  useSectionsLayout,
+  formatDate,
+  getVisibleSections
+} from './CVTemplateLogic';
 
 // Komponent renderujący nowoczesny szablon CV
-export const ModernCVTemplate: React.FC<{ data: CVData }> = ({ data }) => {
-  return (
-    <div className="p-6 h-full font-sans text-sm relative">
-      {/* Nagłówek z danymi osobowymi */}
-      <div className="border-b-2 border-blue-500 pb-4">
-        <h1 className="text-2xl font-bold">{data.personalData.firstName} {data.personalData.lastName}</h1>
-        <div className="text-gray-700 mt-2 grid grid-cols-2 gap-1">
-          <div>Email: {data.personalData.email}</div>
-          <div>Telefon: {data.personalData.phone}</div>
-          <div className="col-span-2">Adres: {data.personalData.address}</div>
+export const ModernCVTemplate: React.FC<CVTemplateProps> = ({ 
+  data, 
+  selectedJob, 
+  language, 
+  pageIndex = 0, 
+  totalPages = 1, 
+  isPrintVersion = false,
+  isMeasurement = false,
+  sectionsMap = {},
+  onSectionsUpdate,
+  activeSection = 'summary', // Domyślnie ustawiamy "summary", aby pokazać wszystkie sekcje
+  showProjectsInPreview = false
+}) => {
+  const t = translations[language];
+  const isLastPage = pageIndex === totalPages - 1;
+  const { cvData } = useCV();
+
+  // Pobierz listę sekcji, które powinny być widoczne
+  const visibleSections = isMeasurement ? 
+    ['header', 'profile', 'experience', 'projects', 'education', 'courses', 'skills', 'rodo'] : // Podczas pomiaru pokazujemy wszystkie
+    getVisibleSections(activeSection, isPrintVersion || (activeSection !== 'experience' || showProjectsInPreview));
+
+  // Obliczanie podstawowych rozmiarów czcionek
+  const baseFontSizes = {
+    ...defaultFontSizes,
+    ...Object.entries(cvData.customStyles?.fontSizes || {}).reduce((acc, [key, value]) => {
+      if (value !== undefined && value !== '') {
+        acc[key as keyof typeof defaultFontSizes] = value;
+      }
+      return acc;
+    }, {} as Partial<typeof defaultFontSizes>)
+  };
+  
+  // Używamy bezpośrednio baseFontSizes, nie skalujemy
+  const effectiveFontSizes = baseFontSizes;
+
+  // Dla spacing (zagnieżdżone) - używamy deepMerge
+  const effectiveSpacing = deepMerge(defaultSpacing, cvData.customStyles?.spacing || {});
+
+  // Referencje dla każdego elementu w sekcjach - używamy tablic referencji React
+  const experienceItemsRef = useRef<React.RefObject<HTMLDivElement | null>[]>([]);
+  const projectItemsRef = useRef<React.RefObject<HTMLDivElement | null>[]>([]);
+  const educationItemsRef = useRef<React.RefObject<HTMLDivElement | null>[]>([]);
+  const coursesItemsRef = useRef<React.RefObject<HTMLDivElement | null>[]>([]);
+
+  // Inicjalizacja tablic referencji przy każdej zmianie danych
+  useEffect(() => {
+    const experienceItems = data.experience.filter(exp => !exp.type || exp.type === 'job');
+    const projectItems = data.experience.filter(exp => exp.type === 'project');
+
+    // Tworzymy nowe tablice referencji o odpowiednich rozmiarach
+    const newExperienceRefs: React.RefObject<HTMLDivElement | null>[] = [];
+    const newProjectRefs: React.RefObject<HTMLDivElement | null>[] = [];
+    const newEducationRefs: React.RefObject<HTMLDivElement | null>[] = [];
+    const newCoursesRefs: React.RefObject<HTMLDivElement | null>[] = [];
+
+    // Inicjalizujemy referencje dla doświadczenia
+    for (let i = 0; i < experienceItems.length; i++) {
+      if (i < experienceItemsRef.current.length) {
+        newExperienceRefs.push(experienceItemsRef.current[i]);
+      } else {
+        newExperienceRefs.push(React.createRef<HTMLDivElement | null>());
+      }
+    }
+
+    // Inicjalizujemy referencje dla projektów
+    for (let i = 0; i < projectItems.length; i++) {
+      if (i < projectItemsRef.current.length) {
+        newProjectRefs.push(projectItemsRef.current[i]);
+      } else {
+        newProjectRefs.push(React.createRef<HTMLDivElement | null>());
+      }
+    }
+
+    // Inicjalizujemy referencje dla edukacji
+    for (let i = 0; i < data.education.length; i++) {
+      if (i < educationItemsRef.current.length) {
+        newEducationRefs.push(educationItemsRef.current[i]);
+      } else {
+        newEducationRefs.push(React.createRef<HTMLDivElement | null>());
+      }
+    }
+
+    // Inicjalizujemy referencje dla kursów
+    const coursesLength = data.courses?.length || 0;
+    for (let i = 0; i < coursesLength; i++) {
+      if (i < coursesItemsRef.current.length) {
+        newCoursesRefs.push(coursesItemsRef.current[i]);
+      } else {
+        newCoursesRefs.push(React.createRef<HTMLDivElement | null>());
+      }
+    }
+
+    // Aktualizujemy referencje
+    experienceItemsRef.current = newExperienceRefs;
+    projectItemsRef.current = newProjectRefs;
+    educationItemsRef.current = newEducationRefs;
+    coursesItemsRef.current = newCoursesRefs;
+  }, [data.experience, data.education, data.courses]);
+
+  // Referencje do sekcji
+  const sectionRefs: SectionRefs = {
+    header: useRef<HTMLDivElement | null>(null),
+    profile: useRef<HTMLDivElement | null>(null),
+    experience: useRef<HTMLDivElement | null>(null),
+    projects: useRef<HTMLDivElement | null>(null),
+    education: useRef<HTMLDivElement | null>(null),
+    courses: useRef<HTMLDivElement | null>(null),
+    skills: useRef<HTMLDivElement | null>(null),
+    rodo: useRef<HTMLDivElement | null>(null),
+    // Używamy zainicjalizowanych tablic referencji
+    experienceItems: experienceItemsRef.current,
+    projectItems: projectItemsRef.current,
+    educationItems: educationItemsRef.current,
+    coursesItems: coursesItemsRef.current
+  };
+
+  // Sprawdzanie zawartości sekcji
+  const hasContent = useHasContent(data);
+
+  // Obliczanie layoutu sekcji
+  useSectionsLayout(sectionRefs, hasContent, isMeasurement, onSectionsUpdate, effectiveSpacing);
+
+  // Funkcja renderująca sekcję z obsługą podziału sekcji na strony
+  const renderSection = (key: string, content: React.ReactNode, index?: number) => {
+    // Sprawdź czy sekcja powinna być widoczna na podstawie aktualnego kroku
+    const sectionBase = key.split('-')[0] as string;
+    if (!isMeasurement && !visibleSections.includes(sectionBase)) {
+      return null; // Nie renderuj sekcji, jeśli nie jest widoczna
+    }
+    
+    if (!isMeasurement) {
+      if (key !== 'header') {
+        const sectionKey = key.split('-')[0] as keyof typeof hasContent;
+        if (hasContent[sectionKey] === false) {
+          return null;
+        }
+      }
+    }
+    
+    // Tryb pomiaru - renderujemy wszystkie sekcje bez sprawdzania strony
+    if (isMeasurement) {
+      // Sprawdź, czy to element podziałowej sekcji (np. experience-0, education-1)
+      if (key.includes('-') && !key.startsWith('header-')) {
+        const [baseSection, idx] = key.split('-');
+        // Używamy odpowiedniej referencji z tablic elementów
+        const elemIdx = parseInt(idx);
+        let elemRef = null;
+        
+        if (baseSection === 'experience' && sectionRefs.experienceItems && elemIdx < sectionRefs.experienceItems.length) {
+          elemRef = sectionRefs.experienceItems[elemIdx];
+        } else if (baseSection === 'projects' && sectionRefs.projectItems && elemIdx < sectionRefs.projectItems.length) {
+          elemRef = sectionRefs.projectItems[elemIdx];
+        } else if (baseSection === 'education' && sectionRefs.educationItems && elemIdx < sectionRefs.educationItems.length) {
+          elemRef = sectionRefs.educationItems[elemIdx];
+        } else if (baseSection === 'course' && sectionRefs.coursesItems && elemIdx < sectionRefs.coursesItems.length) {
+          elemRef = sectionRefs.coursesItems[elemIdx];
+        }
+        
+        return (
+          <div
+            key={`${key}-${index ?? ''}`}
+            ref={elemRef}
+            style={{
+              pageBreakInside: 'avoid',
+              breakInside: 'avoid',
+              position: 'relative',
+              marginTop: elemIdx > 0 ? effectiveSpacing.elements.itemMargin : effectiveSpacing.elements.contentSpacing
+            }}
+          >
+            {content}
+          </div>
+        );
+      }
+      
+      // Podstawowe sekcje (header, profile, itp.)
+      return (
+        <div
+          key={`${key}-${index ?? ''}`}
+          ref={key in sectionRefs ? 
+            // Sprawdzamy czy jest to pojedyncza referencja czy tablica
+            Array.isArray(sectionRefs[key as keyof typeof sectionRefs]) ? 
+              undefined : // Jeśli to tablica, nie używamy referencji
+              sectionRefs[key as keyof typeof sectionRefs] as React.RefObject<HTMLDivElement> : 
+            undefined
+          }
+          style={{
+            pageBreakInside: 'avoid',
+            breakInside: 'avoid',
+            position: 'relative',
+            marginTop: key !== 'header' ? effectiveSpacing.sections.margin : undefined
+          }}
+        >
+          {content}
+        </div>
+      );
+    }
+    
+    // Dla RODO - tylko na ostatniej stronie
+    if (key === 'rodo') {
+      if (isLastPage) {
+        return (
+          <div
+            key={`${key}-${index ?? ''}`}
+            style={{
+              pageBreakInside: 'avoid',
+              breakInside: 'avoid',
+              position: 'relative',
+              marginTop: effectiveSpacing.rodo.topMargin
+            }}
+          >
+            {content}
+          </div>
+        );
+      }
+      return null;
+    }
+    
+    // Dla nagłówka - tylko na pierwszej stronie
+    if (key === 'header') {
+      if (pageIndex === 0) {
+        return (
+          <div
+            key={`${key}-${index ?? ''}`}
+            style={{
+              pageBreakInside: 'avoid',
+              breakInside: 'avoid',
+              position: 'relative'
+            }}
+          >
+            {content}
+          </div>
+        );
+      }
+      return null;
+    }
+    
+    // Sprawdzenie czy to pojedynczy element sekcji (np. experience-0, education-1)
+    if (key.includes('-') && !key.startsWith('header-')) {
+      const [baseSection, idx] = key.split('-');
+      const elemIdx = parseInt(idx);
+      
+      // Sprawdź czy mamy informacje o mapie sekcji
+      if (Object.keys(sectionsMap).length > 0) {
+        // Znajdź sekcję bazową
+        const baseSectionInfo = sectionsMap[baseSection];
+        
+        if (baseSectionInfo && baseSectionInfo.childElements) {
+          // Sprawdź czy ten element należy do bieżącej strony
+          const elementKey = `${baseSection}-${idx}`;
+          const elementInfo = baseSectionInfo.childElements[elementKey];
+          
+          if (elementInfo && elementInfo.page !== undefined) {
+            // Jeśli element ma przypisaną stronę, sprawdź czy to ta strona
+            if (pageIndex !== (elementInfo.page - 1)) {
+              return null; // Element należy do innej strony
+            }
+          } else {
+            // Fallback - sprawdź, czy sekcja jest przypisana do tej strony
+            if (baseSectionInfo.page !== undefined && pageIndex !== (baseSectionInfo.page - 1)) {
+              return null;
+            }
+          }
+        }
+      }
+      
+      // Określ, czy element jest kontynuacją z poprzedniej strony
+      let isContinuation = false;
+      let marginTop = elemIdx > 0 ? effectiveSpacing.elements.itemMargin : effectiveSpacing.elements.contentSpacing;
+      
+      // Sprawdź czy sekcja jest podzielona i czy to element z początku strony
+      if (sectionsMap[baseSection] && 
+          sectionsMap[baseSection].isSplit && 
+          sectionsMap[baseSection].elementsBoundaries) {
+        
+        const boundaries = sectionsMap[baseSection].elementsBoundaries;
+        
+        // Sprawdź, czy to pierwszy element na tej stronie
+        if (boundaries[pageIndex + 1] && 
+            boundaries[pageIndex + 1].firstElement === elemIdx &&
+            pageIndex > 0) {
+          // To jest pierwszy element na tej stronie, ale nie pierwszej
+          isContinuation = true;
+          marginTop = effectiveSpacing.elements.contentSpacing; // Reset marginesu
+        }
+      }
+      
+      // Renderuj element z odpowiednim stylem
+      return (
+        <div
+          key={`${key}-${index ?? ''}`}
+          style={{
+            pageBreakInside: 'avoid',
+            breakInside: 'avoid',
+            position: 'relative',
+            marginTop
+          }}
+        >
+          {/* Dodaj informację o kontynuacji jeśli potrzebna */}
+          {isContinuation && (
+            <div style={{ 
+              fontSize: effectiveFontSizes.base,
+              color: colorPalette.grayDark,
+              fontStyle: 'italic',
+              marginBottom: '8px'
+            }}>
+              {language === 'pl' ? '(kontynuacja)' : '(continued)'}
+            </div>
+          )}
+          {content}
+        </div>
+      );
+    }
+    
+    // Dla zwykłych sekcji (profile, experience, education, itp.)
+    // Nowy sposób sprawdzania, na której stronie powinna znaleźć się sekcja
+    if (Object.keys(sectionsMap).length > 0 && sectionsMap[key]) {
+      // Jeśli mamy informacje o stronie w mapie sekcji, używamy jej
+      const sectionInfo = sectionsMap[key];
+      
+      if (sectionInfo.page !== undefined) {
+        // Sprawdzamy czy bieżący indeks strony odpowiada przypisanej stronie sekcji
+        if (pageIndex !== (sectionInfo.page - 1)) {
+          return null; // Sekcja nie należy do bieżącej strony
+        }
+        
+        // Sprawdź, czy nagłówek sekcji powinien być renderowany na tej stronie
+        if (sectionInfo.isSplit && pageIndex > 0) {
+          // Dla podzielonych sekcji na następnych stronach dodajemy informację o kontynuacji
+          // Znajdujemy elementy, które należą do bieżącej strony
+          if (sectionInfo.elementsBoundaries && sectionInfo.elementsBoundaries[pageIndex + 1]) {
+            const { firstElement, lastElement } = sectionInfo.elementsBoundaries[pageIndex + 1];
+            
+            // Renderujemy tylko elementy, nie nagłówek sekcji
+            return (
+              <div
+                key={`${key}-cont-${pageIndex}`}
+                style={{
+                  pageBreakInside: 'avoid',
+                  breakInside: 'avoid',
+                  position: 'relative',
+                  marginTop: effectiveSpacing.sections.margin
+                }}
+              >
+                {/* Nagłówek kontynuacji */}
+                <h2 style={{ 
+                  paddingBottom: effectiveSpacing.sections.headerPadding,
+                  borderBottom: `${effectiveSpacing.sections.bottomBorder} solid ${colorPalette.grayMedium}`, 
+                  fontSize: effectiveFontSizes.sectionHeader,
+                  fontWeight: 700
+                }}>
+                  {t[key as keyof typeof t]} {language === 'pl' ? '(kontynuacja)' : '(continued)'}
+                </h2>
+                
+                {/* Zawartość będzie renderowana jako osobne elementy */}
+              </div>
+            );
+          }
+          return null;
+        }
+      } else {
+        // Stara metoda jako fallback - sprawdzamy na podstawie początku sekcji
+        const pageHeight = 297 * 3.779; // A4_HEIGHT_MM * MM_TO_PX
+        const startPage = Math.floor(sectionInfo.start / pageHeight);
+        
+        if (pageIndex !== startPage) {
+          return null;
+        }
+      }
+    } 
+    else if (Object.keys(sectionsMap).length === 0 && pageIndex !== 0) {
+      return null;
+    }
+    
+    return (
+      <div
+        key={`${key}-${index ?? ''}`}
+        style={{
+          pageBreakInside: 'avoid',
+          breakInside: 'avoid',
+          position: 'relative',
+          marginTop: key !== 'header' && !key.includes('-') ? effectiveSpacing.sections.margin : 
+                    key.includes('-') ? effectiveSpacing.elements.itemMargin : undefined
+        }}
+      >
+        {content}
+      </div>
+    );
+  };
+
+  // Funkcja renderująca nagłówek sekcji
+  const renderSectionHeader = (title: string, sectionType: keyof typeof effectiveSpacing.sectionSpacing) => (
+    <h2 style={{ 
+      paddingBottom: effectiveSpacing.sections.headerPadding,
+      borderBottom: `${effectiveSpacing.sections.bottomBorder} solid ${colorPalette.grayMedium}`, 
+      fontSize: effectiveFontSizes.sectionHeader,
+      fontWeight: 700,
+      marginTop: effectiveSpacing.sectionSpacing[sectionType]
+    }}>{title}</h2>
+  );
+
+  // Style dla kontenera głównego
+  const containerStyle = {
+    paddingTop: pageIndex === 0 ? effectiveSpacing.document.paddingTop : '0px', // Górny margines tylko dla pierwszej strony
+    paddingBottom: effectiveSpacing.document.paddingBottom,
+    paddingLeft: effectiveSpacing.document.paddingSides,
+    paddingRight: effectiveSpacing.document.paddingSides,
+    fontFamily: '"Roboto", sans-serif', 
+    lineHeight: '1.5',
+    height: '100%', 
+    display: 'flex', 
+    flexDirection: 'column' as const, 
+    fontSize: effectiveFontSizes.base,
+    position: 'relative' as const,
+    minHeight: '297mm',
+    margin: '0',
+    overflow: isMeasurement ? 'visible' : 'hidden'
+  };
+
+  // Style dla głównej treści CV
+  const mainContentStyle = {
+    flexGrow: 1,
+    paddingBottom: isLastPage ? '60px' : 0,
+    position: 'relative' as const,
+    height: isPrintVersion ? '100%' : 'auto',
+    margin: '0'
+  };
+
+  // Przygotowanie sekcji doświadczenia
+  const experienceItems = data.experience
+    .filter(exp => !exp.type || exp.type === 'job')
+    .map((exp, index) => renderSection(`experience-${index}`, (
+      <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ fontWeight: 700, fontSize: effectiveFontSizes.position }}>{exp.position}</div>
+          <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
+            {exp.startDate && formatDate(exp.startDate, language)} - {exp.endDate && formatDate(exp.endDate, language)}
+          </div>
+        </div>
+        <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{exp.company}</div>
+        <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>{exp.description}</div>
+      </div>
+    ), index));
+
+  // Przygotowanie sekcji projektów
+  const projectItems = data.experience
+    .filter(exp => exp.type === 'project')
+    .map((exp, index) => renderSection(`projects-${index}`, (
+      <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position }}>{exp.position}</div>
+          <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
+            {exp.startDate && formatDate(exp.startDate, language)} - {exp.endDate && formatDate(exp.endDate, language)}
+          </div>
+        </div>
+        <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{exp.company}</div>
+        <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>{exp.description}</div>
+      </div>
+    ), index));
+
+  // Przygotowanie sekcji edukacji
+  const educationItems = data.education.map((edu, index) => renderSection(`education-${index}`, (
+    <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position }}>{edu.school}</div>
+        <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
+          {edu.startDate && formatDate(edu.startDate, language)} - {edu.endDate && formatDate(edu.endDate, language)}
         </div>
       </div>
-      
-      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
-      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
-        <div className="mt-4">
-          <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Doświadczenie zawodowe</h2>
-          {data.experience
-            .filter(exp => !exp.type || exp.type === 'job')
-            .map((exp, index) => (
-            <div key={index} className="mt-3">
-              <div className="flex justify-between">
-                <div className="font-medium">{exp.position}</div>
-                <div className="text-gray-600 text-xs">
-                  {exp.startDate} - {exp.endDate || 'obecnie'}
+      <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{edu.degree}</div>
+      <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>{edu.description}</div>
+    </div>
+  ), index));
+
+  // Przygotowanie sekcji kursów
+  const coursesItems = data.courses && data.courses.length > 0 
+    ? data.courses.map((course, index) => (
+        <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
+          {/* Pierwszy wiersz: Nazwa kursu i data */}
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position }}>{course.name}</div>
+            <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
+              {course.date && formatDate(course.date, language)}
+            </div>
+          </div>
+          
+          {/* Drugi wiersz: Organizator i numer certyfikatu */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px' }}>
+            <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{course.organizer}</div>
+            {course.certificateNumber && (
+              <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.description }}>
+                {t.certificateNo}: {course.certificateNumber}
+              </div>
+            )}
+          </div>
+          
+          {/* Trzeci wiersz: Opis */}
+          {course.description && (
+            <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>
+              {course.description}
+            </div>
+          )}
+        </div>
+      ))
+    : [];
+
+  if (isMeasurement) {
+    return (
+      <div style={containerStyle}>
+        <div style={mainContentStyle}>
+          {/* Nagłówek z danymi osobowymi */}
+          {renderSection('header', (
+            <div style={{ 
+              borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`, 
+              paddingBottom: effectiveSpacing.header.bottomMargin,
+              marginBottom: effectiveSpacing.header.bottomSpacing
+            }}>
+              <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+              <div style={{ 
+                marginTop: effectiveSpacing.elements.contentSpacing,
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
+                gap: effectiveSpacing.elements.margin,
+                color: colorPalette.grayDark,
+                fontSize: effectiveFontSizes.contactInfo
+              }}>
+                <div>{t.email}: {data.personalData.email}</div>
+                <div>{t.phone}: {data.personalData.phone}</div>
+                <div style={{ gridColumn: 'span 2 / span 2' }}>{t.address}: {data.personalData.address}</div>
+              </div>
+              {selectedJob && (
+                <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                  {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                </div>
+              )}
+            </div>
+          ))}
+          
+          {/* Opis profilu - zawsze na początku */}
+          {hasContent.profile && renderSection('profile', (
+            <div>
+              {renderSectionHeader(t.profile, 'profile')}
+              <p style={{ 
+                marginTop: effectiveSpacing.elements.contentSpacing,
+                color: colorPalette.grayDark, 
+                // fontSize: effectiveFontSizes.profileText
+                fontSize: effectiveFontSizes.description
+              }}>{data.description}</p>
+            </div>
+          ))}
+        
+          {/* Doświadczenie */}
+          {hasContent.experience && experienceItems.length > 0 && renderSection('experience', (
+            <div>
+              {renderSectionHeader(t.experience, 'experience')}
+              {experienceItems}
+            </div>
+          ))}
+          
+          {/* Projekty */}
+          {hasContent.projects && projectItems.length > 0 && renderSection('projects', (
+            <div>
+              {renderSectionHeader(t.projects, 'projects')}
+              {projectItems}
+            </div>
+          ))}
+          
+          {/* Wykształcenie */}
+          {hasContent.education && renderSection('education', (
+            <div>
+              {renderSectionHeader(t.education, 'education')}
+              {educationItems}
+            </div>
+          ))}
+          
+          {/* Kursy i certyfikaty */}
+          {hasContent.courses && renderSection('courses', (
+            <div>
+              {renderSectionHeader(t.courses, 'courses')}
+              {coursesItems}
+            </div>
+          ))}
+          
+          {/* Umiejętności */}
+          {hasContent.skills && renderSection('skills', (
+            <div>
+              {renderSectionHeader(t.skills, 'skills')}
+              <div style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
+                gap: effectiveSpacing.elements.skillsColumnGap,
+                marginTop: effectiveSpacing.elements.contentSpacing
+              }}>
+                <div>
+                  <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.technical}</h3>
+                  <div style={{ 
+                    marginTop: effectiveSpacing.elements.margin,
+                    display: 'flex', 
+                    flexWrap: 'wrap', 
+                    gap: effectiveSpacing.elements.tagGap
+                  }}>
+                    {data.skills.technical.map((skill, index) => (
+                      <span key={index} style={{ 
+                        backgroundColor: colorPalette.primaryLight, 
+                        color: colorPalette.primaryText, 
+                        padding: effectiveSpacing.elements.tagPadding,
+                        borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                        fontSize: effectiveFontSizes.tagText
+                      }}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.soft}</h3>
+                  <div style={{ 
+                    marginTop: effectiveSpacing.elements.margin,
+                    display: 'flex', 
+                    flexWrap: 'wrap', 
+                    gap: effectiveSpacing.elements.tagGap
+                  }}>
+                    {data.skills.soft.map((skill, index) => (
+                      <span key={index} style={{ 
+                        backgroundColor: colorPalette.secondaryLight, 
+                        color: colorPalette.secondaryText, 
+                        padding: effectiveSpacing.elements.tagPadding,
+                        borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                        fontSize: effectiveFontSizes.tagText
+                      }}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="text-gray-700">{exp.company}</div>
-              <div className="mt-1 text-xs">{exp.description}</div>
+              
+              <div style={{ marginTop: effectiveSpacing.elements.itemMargin }}>
+                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.languages}</h3>
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.margin,
+                  display: 'flex', 
+                  flexWrap: 'wrap', 
+                  gap: effectiveSpacing.elements.languagesItemGap
+                }}>
+                  {data.skills.languages.filter(lang => lang.language && lang.level).map((lang, index) => (
+                    <div key={index} style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: effectiveSpacing.elements.margin,
+                      fontSize: effectiveFontSizes.tagText
+                    }}>
+                      <span style={{ fontWeight: 400 }}>{lang.language}:</span>
+                      <span style={{ backgroundColor: colorPalette.grayLight, padding: '0 4px', borderRadius: '4px' }}>{lang.level}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
-      )}
+        
+        {/* Klauzula RODO */}
+        {data.rodoClause && hasContent.rodo && isLastPage && data.showRodoClause !== false && (
+          <div 
+            ref={sectionRefs.rodo}
+            style={{ 
+              fontSize: effectiveFontSizes.rodoText, 
+              color: colorPalette.textLight, 
+              lineHeight: '1.2',
+              paddingLeft: effectiveSpacing.document.paddingSides,
+              paddingRight: effectiveSpacing.document.paddingSides,
+              visibility: 'hidden', 
+              position: 'absolute',
+              bottom: '-9999px',
+            }}
+          >
+            {data.rodoClause}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div style={containerStyle}>
+      <div style={mainContentStyle}>
+        {/* Nagłówek z danymi osobowymi */}
+        {renderSection('header', (
+          <div style={{ 
+            borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`, 
+            paddingBottom: effectiveSpacing.header.bottomMargin,
+            marginBottom: effectiveSpacing.header.bottomSpacing
+          }}>
+            <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+            <div style={{ 
+              marginTop: effectiveSpacing.elements.contentSpacing,
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
+              gap: effectiveSpacing.elements.margin,
+              color: colorPalette.grayDark,
+              fontSize: effectiveFontSizes.contactInfo
+            }}>
+              <div>{t.email}: {data.personalData.email}</div>
+              <div>{t.phone}: {data.personalData.phone}</div>
+              <div style={{ gridColumn: 'span 2 / span 2' }}>{t.address}: {data.personalData.address}</div>
+            </div>
+            {selectedJob && (
+              <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+              </div>
+            )}
+          </div>
+        ))}
+        
+        {/* Opis profilu - zawsze na początku */}
+        {hasContent.profile && renderSection('profile', (
+          <div>
+            {renderSectionHeader(t.profile, 'profile')}
+            <p style={{ 
+              marginTop: effectiveSpacing.elements.contentSpacing,
+              color: colorPalette.grayDark, 
+              // fontSize: effectiveFontSizes.profileText
+              fontSize: effectiveFontSizes.description
+            }}>{data.description}</p>
+          </div>
+        ))}
       
-      {/* Projekty */}
-      {data.experience.some(exp => exp.type === 'project') && (
-        <div className="mt-4">
-          <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Projekty</h2>
-          {data.experience
-            .filter(exp => exp.type === 'project')
-            .map((exp, index) => (
-            <div key={index} className="mt-3">
-              <div className="flex justify-between">
-                <div className="font-medium">{exp.position}</div>
-                <div className="text-gray-600 text-xs">
-                  {exp.startDate} - {exp.endDate || 'obecnie'}
+        {/* Doświadczenie */}
+        {hasContent.experience && experienceItems.length > 0 && renderSection('experience', (
+          <div>
+            {renderSectionHeader(t.experience, 'experience')}
+            {experienceItems}
+          </div>
+        ))}
+        
+        {/* Projekty */}
+        {hasContent.projects && projectItems.length > 0 && renderSection('projects', (
+          <div>
+            {renderSectionHeader(t.projects, 'projects')}
+            {projectItems}
+          </div>
+        ))}
+        
+        {/* Wykształcenie */}
+        {hasContent.education && renderSection('education', (
+          <div>
+            {renderSectionHeader(t.education, 'education')}
+            {educationItems}
+          </div>
+        ))}
+        
+        {/* Kursy i certyfikaty */}
+        {hasContent.courses && renderSection('courses', (
+          <div>
+            {renderSectionHeader(t.courses, 'courses')}
+            {coursesItems}
+          </div>
+        ))}
+        
+        {/* Umiejętności */}
+        {hasContent.skills && renderSection('skills', (
+          <div>
+            {renderSectionHeader(t.skills, 'skills')}
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
+              gap: effectiveSpacing.elements.skillsColumnGap,
+              marginTop: effectiveSpacing.elements.contentSpacing
+            }}>
+              <div>
+                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.technical}</h3>
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.margin,
+                  display: 'flex', 
+                  flexWrap: 'wrap', 
+                  gap: effectiveSpacing.elements.tagGap
+                }}>
+                  {data.skills.technical.map((skill, index) => (
+                    <span key={index} style={{ 
+                      backgroundColor: colorPalette.primaryLight, 
+                      color: colorPalette.primaryText, 
+                      padding: effectiveSpacing.elements.tagPadding,
+                      borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                      fontSize: effectiveFontSizes.tagText
+                    }}>
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <div className="text-gray-700">{exp.company}</div>
-              <div className="mt-1 text-xs">{exp.description}</div>
-            </div>
-          ))}
-        </div>
-      )}
-      
-      {/* Wykształcenie */}
-      <div className="mt-4">
-        <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Wykształcenie</h2>
-        {data.education.map((edu, index) => (
-          <div key={index} className="mt-3">
-            <div className="flex justify-between">
-              <div className="font-medium">{edu.school}</div>
-              <div className="text-gray-600 text-xs">
-                {edu.startDate} - {edu.endDate || 'obecnie'}
+              <div>
+                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.soft}</h3>
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.margin,
+                  display: 'flex', 
+                  flexWrap: 'wrap', 
+                  gap: effectiveSpacing.elements.tagGap
+                }}>
+                  {data.skills.soft.map((skill, index) => (
+                    <span key={index} style={{ 
+                      backgroundColor: colorPalette.secondaryLight, 
+                      color: colorPalette.secondaryText, 
+                      padding: effectiveSpacing.elements.tagPadding,
+                      borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                      fontSize: effectiveFontSizes.tagText
+                    }}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="text-gray-700">{edu.degree}</div>
-            <div className="mt-1 text-xs">{edu.description}</div>
+            
+            <div style={{ marginTop: effectiveSpacing.elements.itemMargin }}>
+              <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.languages}</h3>
+              <div style={{ 
+                marginTop: effectiveSpacing.elements.margin,
+                display: 'flex', 
+                flexWrap: 'wrap', 
+                gap: effectiveSpacing.elements.languagesItemGap
+              }}>
+                {data.skills.languages.filter(lang => lang.language && lang.level).map((lang, index) => (
+                  <div key={index} style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: effectiveSpacing.elements.margin,
+                    fontSize: effectiveFontSizes.tagText
+                  }}>
+                    <span style={{ fontWeight: 400 }}>{lang.language}:</span>
+                    <span style={{ backgroundColor: colorPalette.grayLight, padding: '0 4px', borderRadius: '4px' }}>{lang.level}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
       
-      {/* Umiejętności */}
-      <div className="mt-4">
-        <h2 className="text-lg font-semibold border-b border-gray-300 pb-1">Umiejętności</h2>
-        <div className="grid grid-cols-2 gap-3 mt-2">
-          <div>
-            <h3 className="font-medium text-gray-800">Techniczne</h3>
-            <div className="mt-1 flex flex-wrap gap-1">
-              {data.skills.technical.map((skill, index) => (
-                <span key={index} className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded text-xs">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="font-medium text-gray-800">Miękkie</h3>
-            <div className="mt-1 flex flex-wrap gap-1">
-              {data.skills.soft.map((skill, index) => (
-                <span key={index} className="bg-green-50 text-green-700 px-2 py-0.5 rounded text-xs">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-3">
-          <h3 className="font-medium text-gray-800">Języki obce</h3>
-          <div className="mt-1 flex flex-wrap gap-2">
-            {data.skills.languages.filter(lang => lang.language && lang.level).map((lang, index) => (
-              <div key={index} className="flex items-center gap-1 text-xs">
-                <span className="font-medium">{lang.language}:</span>
-                <span className="bg-gray-100 px-1 rounded">{lang.level}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      
-      {/* Klauzula RODO - pozycjonowana na dole */}
-      {data.rodoClause && (
-        <div className="absolute bottom-0 left-0 right-0 pt-2 pb-2 border-t border-gray-200 bg-white">
-          <p className="text-[9px] text-gray-500 leading-tight px-6">{data.rodoClause}</p>
+      {/* Klauzula RODO */}
+      {hasContent.rodo && data.rodoClause && isLastPage && data.showRodoClause !== false && (
+        <div style={{ 
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          width: '100%',
+          borderTop: `${effectiveSpacing.rodo.borderWidth} solid ${colorPalette.grayMedium}`,
+          paddingTop: effectiveSpacing.rodo.topMargin,
+          paddingLeft: effectiveSpacing.document.paddingSides,
+          paddingRight: effectiveSpacing.document.paddingSides,
+          paddingBottom: effectiveSpacing.document.paddingBottom,
+          backgroundColor: '#fff',
+          zIndex: 10
+        }}>
+          <p style={{ 
+            fontSize: effectiveFontSizes.rodoText, 
+            color: colorPalette.textLight, 
+            lineHeight: '1.2',
+            margin: 0
+          }}>{data.rodoClause}</p>
         </div>
       )}
     </div>
   );
 };
 
-// Komponent renderujący klasyczny szablon CV
-export const ClassicCVTemplate: React.FC<{ data: CVData }> = ({ data }) => {
-  return (
-    <div className="p-6 h-full font-serif text-sm relative">
-      {/* Nagłówek z danymi osobowymi */}
-      <div className="text-center pb-4 border-b border-gray-300">
-        <h1 className="text-xl font-bold uppercase tracking-wider">{data.personalData.firstName} {data.personalData.lastName}</h1>
-        <div className="text-gray-700 mt-2">
-          <div>{data.personalData.email} • {data.personalData.phone}</div>
-          <div>{data.personalData.address}</div>
-        </div>
-      </div>
-      
-      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
-      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
-        <div className="mt-4">
-          <h2 className="font-bold uppercase tracking-wider text-center mb-2">Doświadczenie zawodowe</h2>
-          {data.experience
-            .filter(exp => !exp.type || exp.type === 'job')
-            .map((exp, index) => (
-            <div key={index} className="mt-3">
-              <div className="flex justify-between font-medium">
-                <div>{exp.position}, {exp.company}</div>
-                <div className="text-gray-600">
-                  {exp.startDate} - {exp.endDate || 'obecnie'}
-                </div>
-              </div>
-              <div className="mt-1 text-xs">{exp.description}</div>
-            </div>
-          ))}
-        </div>
-      )}
-      
-      {/* Projekty */}
-      {data.experience.some(exp => exp.type === 'project') && (
-        <div className="mt-4">
-          <h2 className="font-bold uppercase tracking-wider text-center mb-2">Projekty</h2>
-          {data.experience
-            .filter(exp => exp.type === 'project')
-            .map((exp, index) => (
-            <div key={index} className="mt-3">
-              <div className="flex justify-between font-medium">
-                <div>{exp.position}, {exp.company}</div>
-                <div className="text-gray-600">
-                  {exp.startDate} - {exp.endDate || 'obecnie'}
-                </div>
-              </div>
-              <div className="mt-1 text-xs">{exp.description}</div>
-            </div>
-          ))}
-        </div>
-      )}
-      
-      {/* Wykształcenie */}
-      <div className="mt-4">
-        <h2 className="font-bold uppercase tracking-wider text-center mb-2">Wykształcenie</h2>
-        {data.education.map((edu, index) => (
-          <div key={index} className="mt-3">
-            <div className="flex justify-between font-medium">
-              <div>{edu.degree}, {edu.school}</div>
-              <div className="text-gray-600">
-                {edu.startDate} - {edu.endDate || 'obecnie'}
-              </div>
-            </div>
-            <div className="mt-1 text-xs">{edu.description}</div>
-          </div>
-        ))}
-      </div>
-      
-      {/* Umiejętności */}
-      <div className="mt-4">
-        <h2 className="font-bold uppercase tracking-wider text-center mb-2">Umiejętności</h2>
-        
-        <div className="mt-2">
-          <h3 className="font-medium">Techniczne:</h3>
-          <p>{data.skills.technical.join(', ')}</p>
-        </div>
-        
-        <div className="mt-2">
-          <h3 className="font-medium">Miękkie:</h3>
-          <p>{data.skills.soft.join(', ')}</p>
-        </div>
-        
-        <div className="mt-2">
-          <h3 className="font-medium">Języki obce:</h3>
-          <p>
-            {data.skills.languages
-              .filter(lang => lang.language && lang.level)
-              .map(lang => `${lang.language} (${lang.level})`)
-              .join(', ')}
-          </p>
-        </div>
-      </div>
-      
-      {/* Klauzula RODO - pozycjonowana na dole */}
-      {data.rodoClause && (
-        <div className="absolute bottom-0 left-0 right-0 pt-2 pb-2 border-t border-gray-300 bg-white text-center">
-          <p className="text-[9px] text-gray-500 leading-tight px-6">{data.rodoClause}</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// Komponent renderujący kreatywny szablon CV
-export const CreativeCVTemplate: React.FC<{ data: CVData }> = ({ data }) => {
-  return (
-    <div className="p-6 h-full font-sans text-sm bg-gradient-to-br from-blue-50 to-purple-50 relative">
-      {/* Nagłówek z danymi osobowymi */}
-      <div className="relative pb-6 mb-6">
-        <div className="absolute top-0 left-0 w-16 h-16 bg-purple-400 rounded-full opacity-20"></div>
-        <div className="absolute top-10 right-10 w-24 h-24 bg-blue-400 rounded-full opacity-10"></div>
-        
-        <h1 className="text-3xl font-bold text-purple-800 relative z-10">
-          {data.personalData.firstName} {data.personalData.lastName}
-        </h1>
-        <div className="text-gray-700 mt-3 relative z-10">
-          <div className="flex items-center gap-2 text-sm">
-            <span>{data.personalData.email}</span>
-            <span>•</span>
-            <span>{data.personalData.phone}</span>
-          </div>
-          <div className="text-sm">{data.personalData.address}</div>
-        </div>
-      </div>
-      
-      {/* Doświadczenie - pokazywane tylko jeśli istnieją wpisy typu job */}
-      {data.experience.some(exp => !exp.type || exp.type === 'job') && (
-        <div className="mt-6">
-          <h2 className="text-lg font-semibold text-purple-800 relative">
-            <span className="relative z-10">Doświadczenie zawodowe</span>
-            <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
-          </h2>
-          
-          <div className="mt-3 space-y-4">
-            {data.experience
-              .filter(exp => !exp.type || exp.type === 'job')
-              .map((exp, index) => (
-              <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
-                <div className="flex justify-between">
-                  <div className="font-medium text-blue-700">{exp.position}</div>
-                  <div className="text-gray-500 text-xs">
-                    {exp.startDate} - {exp.endDate || 'obecnie'}
-                  </div>
-                </div>
-                <div className="text-gray-700 font-medium">{exp.company}</div>
-                <div className="mt-2 text-xs text-gray-600">{exp.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-      
-      {/* Projekty */}
-      {data.experience.some(exp => exp.type === 'project') && (
-        <div className="mt-6">
-          <h2 className="text-lg font-semibold text-purple-800 relative">
-            <span className="relative z-10">Projekty</span>
-            <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
-          </h2>
-          
-          <div className="mt-3 space-y-4">
-            {data.experience
-              .filter(exp => exp.type === 'project')
-              .map((exp, index) => (
-              <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
-                <div className="flex justify-between">
-                  <div className="font-medium text-blue-700">{exp.position}</div>
-                  <div className="text-gray-500 text-xs">
-                    {exp.startDate} - {exp.endDate || 'obecnie'}
-                  </div>
-                </div>
-                <div className="text-gray-700 font-medium">{exp.company}</div>
-                <div className="mt-2 text-xs text-gray-600">{exp.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-      
-      {/* Wykształcenie */}
-      <div className="mt-6">
-        <h2 className="text-lg font-semibold text-purple-800 relative">
-          <span className="relative z-10">Wykształcenie</span>
-          <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
-        </h2>
-        
-        <div className="mt-3 space-y-4">
-          {data.education.map((edu, index) => (
-            <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
-              <div className="flex justify-between">
-                <div className="font-medium text-blue-700">{edu.degree}</div>
-                <div className="text-gray-500 text-xs">
-                  {edu.startDate} - {edu.endDate || 'obecnie'}
-                </div>
-              </div>
-              <div className="text-gray-700 font-medium">{edu.school}</div>
-              <div className="mt-2 text-xs text-gray-600">{edu.description}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      
-      {/* Umiejętności */}
-      <div className="mt-6 mb-16"> {/* Dodajemy dolny margines dla miejsca na klauzulę RODO */}
-        <h2 className="text-lg font-semibold text-purple-800 relative">
-          <span className="relative z-10">Umiejętności</span>
-          <span className="absolute bottom-0 left-0 h-3 w-24 bg-purple-200 opacity-50"></span>
-        </h2>
-        
-        <div className="mt-3 grid grid-cols-2 gap-4">
-          <div className="bg-white p-3 rounded-lg shadow-sm">
-            <h3 className="font-medium text-blue-700 mb-2">Techniczne</h3>
-            <div className="flex flex-wrap gap-1">
-              {data.skills.technical.map((skill, index) => (
-                <span key={index} className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full text-xs">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-          
-          <div className="bg-white p-3 rounded-lg shadow-sm">
-            <h3 className="font-medium text-blue-700 mb-2">Miękkie</h3>
-            <div className="flex flex-wrap gap-1">
-              {data.skills.soft.map((skill, index) => (
-                <span key={index} className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full text-xs">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-3 bg-white p-3 rounded-lg shadow-sm">
-          <h3 className="font-medium text-blue-700 mb-2">Języki obce</h3>
-          <div className="flex flex-wrap gap-2">
-            {data.skills.languages.filter(lang => lang.language && lang.level).map((lang, index) => (
-              <div key={index} className="bg-gradient-to-r from-blue-50 to-purple-50 px-3 py-1 rounded-full text-xs flex items-center">
-                <span className="font-medium">{lang.language}:</span>
-                <span className="ml-1 bg-white px-1 rounded-full">{lang.level}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      
-      {/* Klauzula RODO - pozycjonowana na dole */}
-      {data.rodoClause && (
-        <div className="absolute bottom-0 left-0 right-0 pt-2 pb-2 bg-white bg-opacity-90 rounded-b-lg">
-          <p className="text-[9px] text-gray-500 leading-tight px-6">{data.rodoClause}</p>
-        </div>
-      )}
-    </div>
-  );
-}; 
+export default ModernCVTemplate;

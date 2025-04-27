@@ -102,7 +102,7 @@ export function ApplicationDetailsDrawer({
               <JobAnalysis 
                 application={application} 
                 isDesktop={isDesktop} 
-                onKeywordsFound={setFoundKeywords}
+                
               />
             </div>
 

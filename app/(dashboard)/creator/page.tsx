@@ -1,3 +1,4 @@
+//app/(dashboard)/creator/page.tsx
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -32,9 +33,9 @@ export default function CreatorPage() {
 
   return (
     <CVProvider>
-      <div className="pb-4 lg:mt-8 xl:mt-11 md:mt-6 mt-6 mr-1 ml-0 sm:mr-4 sm:ml-3.5 md:mr-8 md:ml-7 xl:mr-15 xl:ml-15 h-[calc(100vh-7rem)] xl:h-[calc(100vh-8.5rem)]">
+      <div className="pb-4 lg:mt-8 xl:mt-11 md:mt-6 mt-6 mr-1 ml-0 sm:mr-4 sm:ml-3.5 md:mr-8 md:ml-7 xl:mr-15 xl:ml-15 h-[calc(100vh)] xl:h-[calc(87vh)] overflow-hidden">
         {/* Układ siatki z responsywnością */}
-        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-2 max-w-[1800px] mx-auto h-full relative overflow-visible`}>
+        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-2 max-w-[1800px] mx-auto h-full relative overflow-hidden`}>
           {/* Na małych ekranach pokazujemy albo kreator albo podgląd wraz z przyciskiem przełączania */}
           {isSmallScreen ? (
             <>

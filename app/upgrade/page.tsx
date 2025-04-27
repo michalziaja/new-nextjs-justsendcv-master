@@ -152,16 +152,16 @@ export default function UpgradePage() {
   useEffect(() => {
     const checkUserAndSubscription = async () => {
       try {
-        const { data: { session } } = await supabase.auth.getSession();
+        const { data: { user }, error: userError } = await supabase.auth.getUser();
         
-        if (!session || !session.user) {
+        if (userError || !user) {
           setIsCheckingSubscription(false);
           setIsEligible(false);
           router.push("/unauthorized");
           return;
         }
 
-        setUserData(session.user);
+        setUserData(user);
 
         startTransition(async () => {
           try {
@@ -169,7 +169,7 @@ export default function UpgradePage() {
             const { data: subscriptionData, error: subscriptionError } = await supabase
               .from("subscriptions")
               .select("*")
-              .eq("user_id", session.user.id)
+              .eq("user_id", user.id)
               .single();
 
             if (subscriptionError && subscriptionError.code !== 'PGRST116') {

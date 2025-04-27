@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useMemo, useId } from "react"
+import React, { useState, useMemo, useId, useEffect } from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { KanbanBoard as KanbanBoardType, Task, TaskStatus, Column } from "./types"
@@ -13,93 +13,55 @@ import { restrictToWindowEdges } from "@dnd-kit/modifiers"
 import KanbanTask from "./KanbanTask"
 import { v4 as uuidv4 } from "uuid"
 import { getColumnHeaderColor } from "./utils"
+import { getOrCreateKanbanBoard, updateKanbanBoard } from "./services/kanbanService"
 
-// Dane przykładowe dla tablicy Kanban
-const initialTasks: Record<string, Task> = {
-  "task-1": {
-    id: "task-1",
-    title: "Przygotować CV do PwC",
-    description: "Dostosować CV do wymagań oferty na stanowisko Analityka Finansowego",
-    priority: "high",
-    status: "todo",
-    createdAt: new Date().toISOString(),
-    dueDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
-    tags: ["CV", "Finanse"],
+// Inicjalny pusty stan tablicy Kanban
+const emptyBoard: KanbanBoardType = {
+  tasks: {},
+  columns: {
+    todo: {
+      id: "todo",
+      title: "Do zrobienia",
+      taskIds: [],
+    },
+    "in-progress": {
+      id: "in-progress",
+      title: "W trakcie",
+      taskIds: [],
+    },
+    done: {
+      id: "done",
+      title: "Ukończone",
+      taskIds: [],
+    },
   },
-  "task-2": {
-    id: "task-2",
-    title: "Wysłać aplikację do McKinsey",
-    description: "Przesłać CV i list motywacyjny na stanowisko konsultanta",
-    priority: "medium",
-    status: "in-progress",
-    createdAt: new Date().toISOString(),
-    dueDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString(),
-    tags: ["Konsulting"],
-  },
-  "task-3": {
-    id: "task-3",
-    title: "Przygotować się do rozmowy z Deloitte",
-    description: "Przejrzeć typowe pytania rekrutacyjne i przećwiczyć odpowiedzi",
-    priority: "high",
-    status: "in-progress",
-    createdAt: new Date().toISOString(),
-    dueDate: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString(),
-    tags: ["Rozmowa", "Przygotowanie"],
-  },
-  "task-4": {
-    id: "task-4",
-    title: "Aktualizacja LinkedIn",
-    description: "Dodać nowe umiejętności i doświadczenia do profilu",
-    priority: "low",
-    status: "todo",
-    createdAt: new Date().toISOString(),
-    tags: ["Social Media"],
-  },
-  "task-5": {
-    id: "task-5",
-    title: "Uzupełnić profil na GoldenLine",
-    description: "Zaktualizować informacje zawodowe i certyfikaty",
-    priority: "low",
-    status: "done",
-    createdAt: new Date().toISOString(),
-    tags: ["Social Media"],
-  },
+  columnOrder: ["todo", "in-progress", "done"],
 }
-
-// Zdefiniowanie 3 podstawowych kolumn
-const initialColumns: Record<string, Column> = {
-  todo: {
-    id: "todo",
-    title: "Do zrobienia",
-    taskIds: ["task-1", "task-4"],
-  },
-  "in-progress": {
-    id: "in-progress",
-    title: "W trakcie",
-    taskIds: ["task-2", "task-3"],
-  },
-  done: {
-    id: "done",
-    title: "Ukończone",
-    taskIds: ["task-5"],
-  },
-}
-
-// Kolejność kolumn
-const initialColumnOrder: TaskStatus[] = ["todo", "in-progress", "done"]
 
 interface KanbanBoardProps {
   searchQuery?: string;
 }
 
 const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
+  // Generowanie unikalnych identyfikatorów - muszą być zawsze wywołane
+  const dndContextId = useId()
+  const sortableContextId = useId()
+  
   // Stan tablicy Kanban
-  const [boardData, setBoardData] = useState<KanbanBoardType>({
-  tasks: initialTasks,
-  columns: initialColumns,
-  columnOrder: initialColumnOrder,
-  })
+  const [boardData, setBoardData] = useState<KanbanBoardType>(emptyBoard)
   const [activeTask, setActiveTask] = useState<Task | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  
+  // Dodajemy stan dla tymczasowych zadań
+  const [tempTasks, setTempTasks] = useState<Record<string, Task>>({})
+  
+  // Aktualnie przeciągana kolumna
+  const [activeColumn, setActiveColumn] = useState<{ column: Column, tasks: Task[] } | null>(null)
+  
+  // Liczba kolumn do określenia responsywności
+  const columnCount = useMemo(() => boardData.columnOrder.length, [boardData.columnOrder.length])
+  const canAddColumn = useMemo(() => columnCount < 5, [columnCount])
   
   // Konfiguracja sensorów dla DnD (określa jak użytkownik może rozpocząć przeciąganie)
   const sensors = useSensors(
@@ -109,6 +71,43 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
       },
     })
   )
+  
+  // Pobierz lub utwórz tablicę Kanban przy pierwszym renderowaniu
+  useEffect(() => {
+    const loadKanbanBoard = async () => {
+      try {
+        setIsLoading(true)
+        const board = await getOrCreateKanbanBoard()
+        setBoardData(board)
+      } catch (err) {
+        console.error("Błąd podczas ładowania tablicy Kanban:", err)
+        setError("Nie udało się załadować tablicy Kanban")
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    
+    loadKanbanBoard()
+  }, [])
+  
+  // Aktualizacja tablicy Kanban w bazie danych po zmianach
+  useEffect(() => {
+    const saveKanbanBoard = async () => {
+      // Nie zapisujemy pustej tablicy (np. podczas inicjalizacji)
+      if (isLoading || Object.keys(boardData.tasks).length === 0) return
+      
+      try {
+        await updateKanbanBoard(boardData)
+      } catch (err) {
+        console.error("Błąd podczas zapisywania tablicy Kanban:", err)
+        setError("Nie udało się zapisać zmian w tablicy Kanban")
+      }
+    }
+    
+    // Używamy debounce aby ograniczyć liczbę zapisów
+    const debounceTimeout = setTimeout(saveKanbanBoard, 2000)
+    return () => clearTimeout(debounceTimeout)
+  }, [boardData, isLoading])
   
   // Funkcja do filtrowania zadań na podstawie wyszukiwania
   const filterTasks = useMemo(() => {
@@ -129,10 +128,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
   }, [boardData.tasks, searchQuery])
   
   // Filtrowane zadania
-  const filteredTasks = filterTasks
-  
-  // Dodajemy nowy stan dla tymczasowych zadań
-  const [tempTasks, setTempTasks] = useState<Record<string, Task>>({})
+  const filteredTasks = useMemo(() => filterTasks, [filterTasks])
 
   // Funkcja do dodawania nowego zadania - teraz tworzy tylko tymczasowe zadanie
   const handleAddTask = (columnId: TaskStatus) => {
@@ -398,13 +394,6 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
     )
   }
 
-  // Liczba kolumn do określenia responsywności
-  const columnCount = boardData.columnOrder.length
-  const canAddColumn = columnCount < 5
-
-  // Aktualnie przeciągana kolumna
-  const [activeColumn, setActiveColumn] = useState<{ column: Column, tasks: Task[] } | null>(null)
-
   // Funkcja wywoływana po zakończeniu przeciągania
   const handleDragEnd = (event: DragEndEvent) => {
     setActiveTask(null)
@@ -526,6 +515,43 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
     }
   }
 
+  // Funkcja pomagająca obliczyć szerokość kolumny
+  const getColumnWidth = (currentColumnCount: number, isAddButton: boolean = false) => {
+    // Przycisk dodaj kolumnę zawsze ma 20%
+    if (isAddButton) return 'w-[20%]'
+    
+    // Jeśli mamy 3 kolumny, każda ma (100% - 20% - 2 * gap) / 3
+    if (currentColumnCount === 3) return 'w-[25%]' // ~(100% - 20% - 2*2.5%) / 3
+    
+    // Jeśli mamy 4 kolumny, każda ma (100% - 20% - 3 * gap) / 4
+    if (currentColumnCount === 4) return 'w-[18.75%]' // ~(100% - 20% - 3*2.5%) / 4
+    
+    // Jeśli mamy 5 kolumn, każda ma 20% - tu nie będzie przycisku dodaj
+    return 'w-[20%]'
+  }
+
+  // Jeśli tablica jest w trakcie ładowania, pokazujemy informację
+  if (isLoading) {
+    return (
+      <div className="mb-6 flex items-center justify-center h-[300px]">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-800 dark:border-gray-200 mx-auto mb-4"></div>
+          <p className="text-lg font-medium">Ładowanie tablicy Kanban...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Jeśli wystąpił błąd, pokazujemy komunikat
+  if (error) {
+    return (
+      <div className="mb-6 border border-red-300 bg-red-50 dark:bg-red-950/30 dark:border-red-800 rounded-lg p-4">
+        <p className="text-red-800 dark:text-red-400 font-medium">{error}</p>
+        <p className="text-red-600 dark:text-red-500 mt-2">Odśwież stronę, aby spróbować ponownie.</p>
+      </div>
+    )
+  }
+
   return (
     <div className="mb-6">
       <DndContext
@@ -534,12 +560,12 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
         modifiers={[restrictToWindowEdges]}
-        id={useId()}
+        id={dndContextId}
       >
         <div className="flex gap-3 justify-between pr-0">
-          <SortableContext items={boardData.columnOrder} strategy={horizontalListSortingStrategy} id={useId()}>
+          <SortableContext items={boardData.columnOrder} strategy={horizontalListSortingStrategy} id={sortableContextId}>
             {boardData.columnOrder.map((columnId, index) => {
-          const column = boardData.columns[columnId]
+              const column = boardData.columns[columnId]
               
               // Filtrujemy normalne zadania wg wyszukiwania
               const normalTasks = column.taskIds
@@ -557,11 +583,13 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
               const isFirst = index === 0
               const isLast = !canAddColumn && index === columnCount - 1
               const extraClasses = isFirst ? "ml-0" : isLast ? "mr-0" : ""
+              // Obliczamy szerokość kolumny
+              const columnWidthClass = getColumnWidth(columnCount)
 
-          return (
-            <KanbanColumn
-              key={column.id}
-              column={column}
+              return (
+                <KanbanColumn
+                  key={column.id}
+                  column={column}
                   tasks={allTasks}
                   onAddTask={handleAddTask}
                   onRemoveColumn={handleRemoveColumn}
@@ -569,28 +597,28 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
                   onDeleteTask={handleDeleteTask}
                   onEditTask={handleEditTask}
                   columnCount={canAddColumn ? columnCount + 1 : columnCount}
-                  extraClasses={extraClasses}
-            />
-          )
-        })}
+                  extraClasses={`${extraClasses} ${columnWidthClass}`}
+                />
+              )
+            })}
           </SortableContext>
 
           {/* Przycisk dodawania nowej kolumny */}
           {canAddColumn && (
-            <Card className={`${columnCount === 3 ? 'w-[24.2%]' : columnCount === 4 ? 'w-[19.2%]' : 'w-full'} min-w-[130px] h-fit shadow-[2px_4px_10px_rgba(0,0,0,0.3)] bg-gray-50 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-700 rounded-lg`}>
-          <CardHeader className="p-3">
+            <Card className={`${getColumnWidth(columnCount, true)} min-w-[100px] h-fit shadow-[2px_4px_10px_rgba(0,0,0,0.3)] bg-gray-50 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-700 rounded-lg`}>
+              <CardHeader className="p-3">
                 <Button 
                   variant="ghost" 
                   className="flex items-center justify-center w-full border border-dashed"
                   onClick={handleAddColumn}
                 >
-              <Plus className="h-5 w-5 mr-2" />
+                  <Plus className="h-5 w-5 mr-2" />
                   Dodaj kolumnę
-            </Button>
-          </CardHeader>
-        </Card>
+                </Button>
+              </CardHeader>
+            </Card>
           )}
-      </div>
+        </div>
 
         <DragOverlay>
           {activeTask && <KanbanTask task={activeTask} onEdit={handleEditTask} />}

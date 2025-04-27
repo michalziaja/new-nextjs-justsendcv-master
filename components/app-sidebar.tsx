@@ -53,14 +53,14 @@ export function AppSidebar({
 }: React.ComponentProps<typeof Sidebar> & { userData: UserData }) {
   return (
     <Sidebar
-      className="text-lg top-16 h-[calc(97vh-4.5rem)] mt-4 border-1 border-gray-100 rounded-sm bg-white dark:bg-sidebar dark:border-slate-800 shadow-2xl dark:shadow-background"
+      className="text-lg top-10.5 h-[calc(99vh-4.5rem)] mt-4 border-1 border-gray-200 rounded-sm bg-white dark:bg-slate-900 dark:border-slate-800 shadow-[2px_4px_8px_rgba(0,0,0,0.2)] dark:shadow-background"
       {...props}
     >
-      <SidebarContent className="p-0 mt-4">
-        <NavMain items={data.navMain} />
-        <NavSecondary userData={userData} items={data.navSecondary} className="mt-8" />
+      <SidebarContent className="p-0 mt-4 bg-white dark:bg-slate-900">
+        <NavMain items={data.navMain}  />
+        <NavSecondary userData={userData} items={data.navSecondary} className="mt-8 bg-white dark:bg-slate-900" />
       </SidebarContent>
-      <SidebarFooter className="border-t border-gray-200 dark:border-slate-800">
+      <SidebarFooter className="border-t border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900">
         <NavUser userData={userData} />
       </SidebarFooter>
     </Sidebar>

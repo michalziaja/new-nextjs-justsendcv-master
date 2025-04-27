@@ -1,192 +1,392 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import nlp from 'compromise'
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { cn } from "@/lib/utils"
 import { JobOffer } from "../saved/ApplicationDetailsDrawer"
-import { extendNLP, KEYWORDS_CATEGORIES, KeywordMatch, KeywordCategory } from "@/lib/keywords-dictionary"
+import { Loader2, AlertTriangle, LogIn, Search, Sparkles } from "lucide-react"
+import { createClient } from "@/utils/supabase/client"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { useRouter } from "next/navigation"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
-// Inicjalizacja rozszerzenia NLP przy pierwszym ładowaniu komponentu
-extendNLP()
+// Typ dla etapów analizy
+type AnalysisStage = 'idle' | 'sending' | 'analyzing' | 'preparing';
+
+// Mapowanie etapów na tekst
+const stageMessages: Record<AnalysisStage, string> = {
+  idle: '',
+  sending: 'Wysyłanie zapytania...', 
+  analyzing: 'Analizowanie oferty...', 
+  preparing: 'Przygotowywanie wyników...'
+};
+
+interface JobAnalysisResult {
+  id: string
+  job_offer_id: string
+  skills: string[]
+  technologies: string[]
+  experience: string[]
+  education: string[]
+  languages: string[]
+  other_requirements: string[]
+  analyzed_at: string
+}
 
 interface JobAnalysisProps {
   application: JobOffer
   isDesktop: boolean
-  onKeywordsFound?: (keywords: Array<{ keyword: string, category: KeywordCategory }>) => void
+  onKeywordsFound?: (keywords: Array<{ keyword: string, category: string }>) => void
 }
 
 export function JobAnalysis({ application, isDesktop, onKeywordsFound }: JobAnalysisProps) {
-  const [keywordMatches, setKeywordMatches] = useState<KeywordMatch[]>([])
-  const [analysisScore, setAnalysisScore] = useState<number>(0)
-  const [cvSuggestions, setCvSuggestions] = useState<string[]>([])
+  const [isAnalyzing, setIsAnalyzing] = useState(false)
+  // Dodajemy stan dla etapu analizy
+  const [analysisStage, setAnalysisStage] = useState<AnalysisStage>('idle');
+  const [isLoading, setIsLoading] = useState(true)
+  const [analysisResult, setAnalysisResult] = useState<JobAnalysisResult | null>(null)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [authError, setAuthError] = useState(false)
+  const supabase = createClient()
+  const router = useRouter()
 
+  // Sprawdzenie czy użytkownik jest zalogowany
   useEffect(() => {
-    if (!application?.full_description) {
-      return
+    async function checkAuth() {
+      const { data, error } = await supabase.auth.getUser();
+      if (error || !data.user) {
+        console.error("❌ JobAnalysis: Błąd autoryzacji:", error);
+        // Nie ustawiamy tu isLoading na false, pozwalamy drugiemu useEffect działać
+      } else {
+        setAuthError(false); // Resetuj błąd autoryzacji jeśli user jest
+      }
     }
-
-    const description = application.full_description.toLowerCase()
-    const doc = nlp(description)
-    const matches: KeywordMatch[] = []
-    let totalScore = 0
-    const suggestions: string[] = []
-    const foundKeywords: Array<{ keyword: string, category: KeywordCategory }> = []
-
-    const sentences = doc.sentences().out('array')
-    const terms = doc.terms().out('array')
-    const nouns = doc.nouns().out('array')
-    const adjectives = doc.adjectives().out('array')
-
-    Object.entries(KEYWORDS_CATEGORIES).forEach(([category, { keywords, weight }]) => {
-      keywords.forEach(keyword => {
-        const regex = new RegExp(`\\b${keyword}\\b`, 'gi')
-        const exactMatches = (description.match(regex) || []).length
-
-        if (exactMatches > 0) {
-          foundKeywords.push({
-            keyword,
-            category: category as KeywordCategory
-          })
-          const context = sentences.filter((sentence: string) =>
-            sentence.toLowerCase().includes(keyword)
-          ).slice(0, 2)
-
-          const isRequired = context.some((sentence: string) =>
-            sentence.includes('wymagane') || 
-            sentence.includes('wymagania') || 
-            sentence.includes('obowiązkowe') || 
-            sentence.includes('musi') ||
-            sentence.includes('min.') ||
-            sentence.includes('required') ||
-            sentence.includes('mandatory') ||
-            !sentence.includes('mile widziane') &&
-            !sentence.includes('preferred')
-          )
-
-          const contextScore = nouns.includes(keyword) ? 1.2 : 
-                              adjectives.includes(keyword) ? 1.1 : 1.0
-          const requirementScore = isRequired ? 1.5 : 1.0
-          const score = exactMatches * weight * contextScore * requirementScore
-
-          totalScore += score
-
-          matches.push({
-            category: category as KeywordCategory,
-            keyword,
-            count: exactMatches,
-            score,
-            context,
-            isRequired
-          })
-
-          if (category === 'industrySkills' || category === 'requirements') {
-            suggestions.push(
-              isRequired 
-                ? `Podkreśl doświadczenie w: ${keyword} (wymagane/required)`
-                : `Rozważ dodanie: ${keyword} (mile widziane/preferred)`
-            )
-          }
-        }
-      })
-    })
-
-    matches.sort((a, b) => b.score - a.score)
-    setKeywordMatches(matches.slice(0, 20))
-    setAnalysisScore(totalScore)
-    setCvSuggestions(suggestions.slice(0, 5))
     
-    // Przekazanie znalezionych słów kluczowych wraz z kategoriami
-    if (onKeywordsFound) {
-      onKeywordsFound(foundKeywords)
-    }
-  }, [application, onKeywordsFound])
+    checkAuth();
+  }, [supabase.auth]); // Zależność od supabase.auth
 
-  const getCategoryColor = (category: KeywordCategory) => {
-    switch (category) {
-      case 'industrySkills': return 'bg-blue-100 text-blue-800'
-      case 'softSkills': return 'bg-green-100 text-green-800'
-      case 'requirements': return 'bg-yellow-100 text-yellow-800'
-      case 'benefits': return 'bg-purple-100 text-purple-800'
-      case 'generalJobTerms': return 'bg-gray-100 text-gray-800'
-      default: return 'bg-gray-100 text-gray-800'
+  // Sprawdzenie czy analiza istnieje przy ładowaniu komponentu
+  useEffect(() => {
+    // Czekaj na sprawdzenie autoryzacji zanim zaczniesz ładować analizę
+    // To zapobiega próbie ładowania gdy użytkownik nie jest zalogowany
+    async function checkExistingAnalysis() {
+      // Sprawdź najpierw, czy jest użytkownik
+      const { data: authData, error: authCheckError } = await supabase.auth.getUser();
+      if (authCheckError || !authData.user) {
+        setAuthError(true);
+        setIsLoading(false); // Kończymy ładowanie, bo nie ma usera
+        return;
+      }
+
+      if (!application?.id) {
+        setIsLoading(false);
+        return;
+      }
+      
+      console.log("🔍 JobAnalysis: Sprawdzanie istniejącej analizy dla oferty ID:", application.id);
+      
+      try {
+        // Resetuj błąd i wynik przed sprawdzeniem
+        setErrorMessage(null);
+        setAnalysisResult(null);
+        
+        const { data, error } = await supabase
+          .from("job_analysis_results")
+          .select("*")
+          .eq("job_offer_id", application.id)
+          .single();
+        
+        if (data && !error) {
+          console.log("✅ JobAnalysis: Znaleziono istniejącą analizę");
+          setAnalysisResult(data);
+          
+          if (onKeywordsFound) {
+            const keywords = [
+              ...(data.skills || []).map((k: string) => ({ keyword: k, category: 'skills' })),
+              ...(data.technologies || []).map((k: string) => ({ keyword: k, category: 'technologies' })),
+              ...(data.experience || []).map((k: string) => ({ keyword: k, category: 'experience' })),
+            ];
+            console.log(`✅ JobAnalysis: Przekazywanie ${keywords.length} słów kluczowych do komponentu nadrzędnego`);
+            onKeywordsFound(keywords);
+          }
+        } else if (error && error.code !== 'PGRST116') {
+          console.error("❌ JobAnalysis: Błąd pobierania analizy:", error);
+          setErrorMessage("Problem z pobraniem analizy. Spróbuj odświeżyć stronę.");
+        } else {
+          console.log("ℹ️ JobAnalysis: Brak istniejącej analizy dla tej oferty");
+        }
+      } catch (err) {
+        console.error("❌ JobAnalysis: Błąd podczas sprawdzania analizy:", err);
+        setErrorMessage("Wystąpił problem z połączeniem z bazą danych.");
+      } finally {
+        setIsLoading(false);
+      }
     }
+    
+    checkExistingAnalysis();
+  // Zależności: application.id, onKeywordsFound, supabase
+  }, [application?.id, onKeywordsFound, supabase]);
+
+  const handleLoginRedirect = () => {
+    router.push('/login');
+  };
+
+  const handleAnalyzeJob = async () => {
+    if (!application?.id || !application?.full_description) {
+      setErrorMessage("Oferta nie zawiera opisu, który można przeanalizować.");
+      return;
+    }
+    
+    const { data: authData, error: authCheckError } = await supabase.auth.getUser();
+    if (authCheckError || !authData.user) {
+      setAuthError(true);
+      setErrorMessage("Musisz być zalogowany, aby analizować oferty.");
+      return;
+    }
+    
+    setIsAnalyzing(true);
+    setAnalysisStage('sending'); // Ustawiamy etap: wysyłanie
+    setErrorMessage(null);
+    // Czyścimy poprzedni wynik na czas nowej analizy
+    setAnalysisResult(null); 
+    
+    console.log("🔄 JobAnalysis: Rozpoczęcie analizy oferty ID:", application.id);
+    console.log(`🔤 JobAnalysis: Długość opisu: ${application.full_description.length} znaków`);
+    
+    try {
+      // Symulacja krótkiego opóźnienia dla etapu 'analyzing'
+      await new Promise(resolve => setTimeout(resolve, 300)); 
+      setAnalysisStage('analyzing'); // Ustawiamy etap: analiza
+
+      const response = await fetch("/api/job-analyze", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          jobOfferId: application.id,
+          jobDescription: application.full_description
+        })
+      });
+      
+      if (response.status === 401) {
+        setAuthError(true);
+        throw new Error("Musisz być zalogowany, aby analizować oferty.");
+      }
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: "Nieznany błąd serwera" }));
+        console.error("❌ JobAnalysis: Błąd HTTP:", response.status, errorData);
+        throw new Error(errorData.error || `Błąd serwera: ${response.status}`);
+      }
+      
+      setAnalysisStage('preparing'); // Ustawiamy etap: przygotowanie
+      const data = await response.json();
+      console.log("✅ JobAnalysis: Otrzymano odpowiedź z API, status:", response.status);
+      
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      
+      if (!data.analysis) {
+        console.error("❌ JobAnalysis: Brak danych analizy w odpowiedzi");
+        throw new Error("Otrzymano nieprawidłową odpowiedź z serwera");
+      }
+      
+      // Krótkie opóźnienie przed pokazaniem wyników dla lepszego UX
+      await new Promise(resolve => setTimeout(resolve, 500)); 
+      
+      setAnalysisResult(data.analysis);
+      console.log("✅ JobAnalysis: Ustawiono wynik analizy w komponencie");
+      
+      if (onKeywordsFound && data.analysis) {
+        const keywords = [
+          ...(data.analysis.skills || []).map((k: string) => ({ keyword: k, category: 'skills' })),
+          ...(data.analysis.technologies || []).map((k: string) => ({ keyword: k, category: 'technologies' })),
+          ...(data.analysis.experience || []).map((k: string) => ({ keyword: k, category: 'experience' })),
+        ];
+        console.log(`✅ JobAnalysis: Przekazywanie ${keywords.length} słów kluczowych`);
+        onKeywordsFound(keywords);
+      }
+      
+      if (data.tokenStats) {
+        console.log("🔢 JobAnalysis: Statystyki tokenów:");
+        console.log(`  Tokeny IN (prompt): ${data.tokenStats.promptTokens}`);
+        console.log(`  Tokeny OUT (completion): ${data.tokenStats.outputTokens}`);
+        console.log(`  Tokeny Łącznie: ${data.tokenStats.totalTokens}`);
+      }
+      
+    } catch (error) {
+      console.error("❌ JobAnalysis: Błąd analizy:", error);
+      setErrorMessage(error instanceof Error ? error.message : "Nie udało się przeanalizować oferty. Spróbuj ponownie później.");
+      // Resetujemy wynik jeśli był błąd
+      setAnalysisResult(null); 
+    } finally {
+      setIsAnalyzing(false);
+      setAnalysisStage('idle'); // Resetujemy etap po zakończeniu
+    }
+  };
+
+  const renderAnalysisSection = (title: string, items: string[]) => {
+    if (!items || items.length === 0) return null;
+    
+    if (items.length === 1 && (items[0].toLowerCase().includes("brak informacji") || items[0].toLowerCase().includes("błąd analizy"))) {
+      return (
+        <div className="space-y-2 mb-4">
+          <h4 className="font-medium text-sm">{title}:</h4>
+          <p className="text-sm text-muted-foreground pl-3 italic">{items[0]}</p>
+        </div>
+      );
+    }
+    
+    return (
+      <div className="space-y-2 mb-4">
+        <h4 className="font-medium text-sm">{title}:</h4>
+        <ul className="list-disc pl-5 space-y-1">
+          {items.map((item, index) => (
+            <li key={index} className="text-sm">{item}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  if (isLoading) {
+    return (
+      // Kontener centrujący dla stanu ładowania
+      <div className="h-full flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  if (authError && !isLoading) {
+    return (
+      // Kontener centrujący dla błędu autoryzacji
+      <div className="h-full flex flex-col items-center justify-center gap-4 p-4">
+        <Alert variant="destructive" className="mb-2">
+          <AlertTriangle className="h-4 w-4 mr-2" />
+          <AlertDescription className="text-sm">
+            Musisz być zalogowany, aby przeglądać i analizować oferty pracy.
+          </AlertDescription>
+        </Alert>
+        <Button onClick={handleLoginRedirect} className="gap-2">
+          <LogIn className="h-4 w-4" />
+          Zaloguj się
+        </Button>
+      </div>
+    );
   }
 
   return (
-    <div className="h-full">
-      {/* <h3 className="font-medium text-sm text-muted-foreground mb-2">Analiza ogłoszenia</h3> */}
-      <ScrollArea className="rounded-lg p-0 h-[calc(100%-2rem)]">
-        {keywordMatches.length > 0 ? (
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-md font-medium">Wynik analizy:</span>
-              <Badge variant="secondary" className={cn(
-                analysisScore > 20 ? 'bg-green-100 dark:bg-green-900' : 'bg-yellow-100 dark:bg-yellow-900',
-                'mr-4'
-              )}>
-                {analysisScore.toFixed(1)} pkt
-              </Badge>
-            </div>
-            <div className="flex justify-center w-full">
-              <div className="w-[100%] mr-4 h-px bg-border"></div>
-            </div>
-            {Object.keys(KEYWORDS_CATEGORIES).map((category) => {
-              const categoryMatches = keywordMatches.filter(
-                match => match.category === category
-              )
-              if (categoryMatches.length === 0) return null
+    <div className="h-full flex flex-col"> {/* Użyj flex-col dla rozciągnięcia ScrollArea */}
+      <ScrollArea className="p-0 flex-grow border-r-2 border-gray-300"> {/* flex-grow zajmie dostępną przestrzeń */}
+        {/* Kontener dla zawartości ScrollArea, aby centrowanie działało poprawnie */} 
+        <div className={`min-h-full flex flex-col ml-2 ${!analysisResult ? 'items-center justify-center' : ''}`}> 
+          {/* Renderowanie stanu ładowania lub przycisku analizy */}
+          {!analysisResult && (
+            // Zmieniono główny kontener, aby umożliwić precyzyjne pozycjonowanie spinnera
+            <div className="flex flex-col items-center justify-center w-full px-4 min-h-full">
+              {isAnalyzing ? (
+                // Stan ładowania z placeholderami dla precyzyjnego pozycjonowania
+                <div className="flex flex-col items-center text-center w-full">
+                  {/* Placeholder dla tekstu nad przyciskiem */}
+                  <p className="text-sm text-muted-foreground text-center mt-40 mb-6 invisible" aria-hidden="true">
+                    Kliknij przycisk poniżej, aby przeprowadzić analizę AI
+                  </p>
+                  
+                  {/* Ewentualne alerty (placeholder) - zakładamy, że nie ma ich podczas ładowania, ale można dodać jeśli trzeba */}
 
-              return (
-                <div key={category} className="space-y-2">
-                  <h4 className="text-sm font-medium">
-                    {KEYWORDS_CATEGORIES[category as KeywordCategory].label}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {categoryMatches.map((match, index) => (
-                      <Badge
-                        key={`${match.keyword}-${index}`}
-                        variant="outline"
-                        className={cn(
-                          getCategoryColor(match.category),
-                          match.isRequired && 'border-2 border-dashed',
-                          'cursor-help'
-                        )}
-                        title={`Kontekst: ${match.context.join(' | ')}`}
-                      >
-                        {match.keyword} ({match.count})
-                        {match.isRequired && <span className="ml-1 text-xs">*</span>}
-                      </Badge>
-                    ))}
+                  {/* Kontener spinnera - rozmiar jak przycisk */}
+                  <div className="flex flex-col items-center justify-center gap-2 w-16 h-16">
+                     <Loader2 className="h-16 w-16 animate-spin text-purple-500" /> {/* Spinner w centrum */}
+                  </div>
+                  
+                  {/* Tekst postępu pod spinnerem */}
+                  <p className="text-sm text-muted-foreground mt-2 min-h-[1.5em]"> {/* Dodano min-h dla stabilności layoutu */} 
+                     {stageMessages[analysisStage]}
+                  </p>
+
+                  {/* Placeholder dla wskazówki pod przyciskiem */}
+                  <div className="mt-6 text-xs text-gray-500 mb-4 bg-blue-50 p-2 rounded border border-blue-100 invisible w-full max-w-md max-h-[calc(100vh-200px)]" aria-hidden="true">
+                    <span className="font-medium">Wskazówka:</span> Placeholder dla zachowania miejsca.
                   </div>
                 </div>
-              )
-            })}
+              ) : (
+                // Stan spoczynku (przycisk analizy)
+                // Używamy diva aby objąć wszystkie elementy i zapewnić spójne centrowanie
+                <div className="flex flex-col items-center text-center w-full">
+                  <p className="text-sm text-muted-foreground text-center mt-40 mb-10">
+                    Kliknij przycisk poniżej, aby przeprowadzić analizę AI
+                  </p>
+                  {errorMessage && (
+                    <Alert variant="destructive" className="mb-4">
+                      <AlertTriangle className="h-4 w-4 mr-2" />
+                      <AlertDescription className="text-sm">
+                        {errorMessage}
+                      </AlertDescription>
+                    </Alert>
+                  )}
+                  {!application?.full_description && (
+                    <Alert className="mb-4 bg-amber-50 border-amber-200">
+                      <AlertTriangle className="h-4 w-4 mr-2 text-amber-500" />
+                      <AlertDescription className="text-sm">
+                        Ta oferta nie zawiera pełnego opisu do analizy.
+                      </AlertDescription>
+                    </Alert>
+                  )}
+                  <TooltipProvider delayDuration={300}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button 
+                          onClick={handleAnalyzeJob} 
+                          disabled={!application?.full_description} // Tylko sprawdzamy czy jest opis
+                          // Dodajemy gradient, efekt cienia i skalowanie na hover
+                          className="rounded-full p-4 w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl 
+                                     bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 
+                                     text-white 
+                                     transition-all duration-300 ease-in-out hover:scale-110 focus:scale-110 active:scale-105"
+                          aria-label="Analizuj ofertę pracy"
+                        >
+                          <Sparkles className="h-8 w-8" />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Analizuj ofertę za pomocą AI</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                  {/* <p className="text-xs text-muted-foreground text-center mt-3 px-4">
+                    Wynik analizy pomoże nam stworzyć CV idealnie dopasowane do tej oferty.
+                  </p> */}
+                  <p className="mt-10 text-xs text-gray-500 mb-4 bg-blue-50 p-2 rounded border border-blue-100 w-full max-w-md"> {/* Dodano w-full max-w-md dla spójności */} 
+                    <span className="font-medium">Wskazówka:</span> Wynik analizy pomoże nam stworzyć CV idealnie dopasowane do tej oferty.
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
 
-            {cvSuggestions.length > 0 && (
-              <>
-                <div className="flex justify-center w-full">
-                  <div className="w-full mr-4 h-px bg-border"></div>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium">Sugestie do CV:</h4>
-                  <ul className="list-disc pl-4 text-sm text-muted-foreground">
-                    {cvSuggestions.map((suggestion, index) => (
-                      <li key={index}>{suggestion}</li>
-                    ))}
-                  </ul>
-                </div>
-              </>
-            )}
-          </div>
-        ) : (
-          <div className="h-full flex items-center justify-center text-sm text-muted-foreground">
-            Brak treści do analizy
-          </div>
-        )}
+          {/* Renderowanie wyników analizy */}
+          {analysisResult && (
+            <div className="space-y-4 p-2 w-full max-h-[calc(100vh-200px)] overflow-y-auto"
+                 style={{
+                   scrollbarWidth: 'thin',
+                   scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
+                   WebkitOverflowScrolling: 'touch'
+                 }}>
+              {/* <h3 className="font-medium text-md mb-4">Wyniki analizy AI:</h3> */}
+              {renderAnalysisSection("UMIEJĘTNOŚCI", analysisResult.skills)}
+              {renderAnalysisSection("TECHNOLOGIE / NARZĘDZIA", analysisResult.technologies)}
+              {renderAnalysisSection("DOŚWIADCZENIE", analysisResult.experience)}
+              {renderAnalysisSection("WYKSZTAŁCENIE / CERTYFIKATY", analysisResult.education)}
+              {renderAnalysisSection("JĘZYKI OBCE", analysisResult.languages)}
+              {renderAnalysisSection("INNE WYMAGANIA", analysisResult.other_requirements)}
+            </div>
+          )}
+        </div>
       </ScrollArea>
     </div>
-  )
+  );
 }

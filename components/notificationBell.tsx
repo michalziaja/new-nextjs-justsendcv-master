@@ -39,14 +39,14 @@ export function NotificationBell() {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const { data: { session } } = await supabase.auth.getSession();
-        if (!session) return;
+        const { data: { user }, error: userError } = await supabase.auth.getUser();
+        if (userError || !user) return;
 
         // Pobierz wszystkie powiadomienia (odczytane i nieodczytane)
         const { data, error } = await supabase
           .from('notifications')
           .select('*')
-          .eq('user_id', session.user.id)
+          .eq('user_id', user.id)
           .order('created_at', { ascending: false })
           .limit(3);
           
@@ -65,7 +65,7 @@ export function NotificationBell() {
               event: 'INSERT',
               schema: 'public',
               table: 'notifications',
-              filter: `user_id=eq.${session.user.id}`
+              filter: `user_id=eq.${user.id}`
             },
             (payload: { new: Notification }) => {
               setNotifications(prev => {
@@ -94,8 +94,8 @@ export function NotificationBell() {
 
   const markAsRead = async (id: string) => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
+      const { data: { user }, error: userError } = await supabase.auth.getUser();
+      if (userError || !user) return;
 
       const { error } = await supabase
         .from('notifications')
@@ -117,8 +117,8 @@ export function NotificationBell() {
 
   const markAllAsRead = async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
+      const { data: { user }, error: userError } = await supabase.auth.getUser();
+      if (userError || !user) return;
 
       const unreadIds = notifications.filter(n => !n.read).map(n => n.id);
       if (unreadIds.length === 0) return;
