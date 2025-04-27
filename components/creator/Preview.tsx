@@ -481,7 +481,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
       {/* Kontener główny ze scrollowaniem */}
       <div
         ref={containerRef}
-        className="flex-1 mt-2 bg-transparent flex justify-center px-0 pb-0 pt-0 relative"
+        className="flex-1 -mt-1 bg-transparent flex justify-center px-0 pb-0 pt-0 relative"
         style={{
           overflowY: scrollNeeded ? 'auto' : 'hidden',
           overflowX: 'hidden',

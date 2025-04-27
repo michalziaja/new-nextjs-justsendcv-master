@@ -318,9 +318,9 @@ export function CVProvider({ children }: { children: ReactNode }) {
           
         if (existingDrafts && existingDrafts.length > 0) {
           // Aktualizuj istniejącą kopię roboczą
-          response = await supabase
-            .from('user_cvs')
-            .update(cvDataToSave)
+        response = await supabase
+          .from('user_cvs')
+          .update(cvDataToSave)
             .eq('id', existingDrafts[0].id)
             .select()
             .single();
@@ -334,8 +334,8 @@ export function CVProvider({ children }: { children: ReactNode }) {
           response = await supabase
             .from('user_cvs')
             .insert(cvDataToSave)
-            .select()
-            .single();
+          .select()
+          .single();
             
           // Aktualizuj currentCVId na ID nowej kopii roboczej
           if (response.data) {

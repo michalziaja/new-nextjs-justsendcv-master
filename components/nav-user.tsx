@@ -67,9 +67,9 @@ export function NavUser({ userData }: { userData: UserData }) {
                     {userData.name?.charAt(0) || "U"}
                   </AvatarFallback>
                 </Avatar>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">{userData.name}</span>
-                  <span className="truncate text-xs">{userData.email}</span>
+                <div className="grid -ml-1 flex-1 text-left leading-tight">
+                  <span className="truncate font-medium text-[13px]">{userData.name}</span>
+                  <span className="truncate text-[11px]">{userData.email}</span>
                 </div>
                 <ChevronsUpDown className="ml-auto size-4" />
               </SidebarMenuButton>
@@ -96,8 +96,8 @@ export function NavUser({ userData }: { userData: UserData }) {
                       {userData.name?.charAt(0) || "U"}
                     </AvatarFallback>
                   </Avatar>
-                  <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate font-medium">{userData.name}</span>
+                  <div className="grid flex-1 text-left leading-tight">
+                    <span className="truncate font-medium text-sm">{userData.name}</span>
                     <span className="truncate text-xs">{userData.email}</span>
                   </div>
                 </div>

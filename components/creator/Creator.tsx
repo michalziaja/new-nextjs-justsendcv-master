@@ -482,7 +482,7 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
   }
 
   return (
-    <div className="flex flex-col -ml-1 gap-4 mb-1">
+    <div className="flex flex-col -ml-1 gap-1 mb-1">
       {/* Nagłówek kreatora z paskiem postępu */}
       <CreatorHeader 
         activeSection={activeSection}
