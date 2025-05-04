@@ -6,9 +6,7 @@ import { Checklist } from "@/components/home/checklist"
 import { NewsSection } from "@/components/home/news-section"
 import { CalendarSection } from "@/components/home/calendar-section"
 import { WeeklyGoals } from "@/components/home/weekly-goals"
-
-export const iframeHeight = "800px"
-
+import { DocumentAssistant } from "@/components/assistant/document-assistant"
 
 export default function Home() {
   return (
@@ -38,6 +36,12 @@ export default function Home() {
         <NewsSection />
         <CalendarSection />
         <Checklist />
+      </div>
+
+      {/* Rząd 4: Asystent Dokumentów */}
+      <div className="mt-6 ml-2 mr-2 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6  
+      lg:ml-8 lg:mr-6 xl:ml-15 xl:mr-15">
+        <DocumentAssistant />
       </div>
     </div>
   )
