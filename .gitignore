@@ -1,6 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-/supabase
-/dane
+
 # dependencies
 /Chrome-Extension*
 /node_modules
@@ -14,10 +13,11 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+/supabase
+/dane
 # testing
 /coverage
-
+/supabase/schema.sql
 # next.js
 /.next/
 /out/
