@@ -2,8 +2,18 @@
 
 import { encodedRedirect } from "@/utils/utils";
 import { createClient } from "@/utils/supabase/server";
-import { headers, cookies } from "next/headers";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+
+interface ProfileData {
+  first_name?: string;
+  last_name?: string;
+  email?: string;
+  phone?: string;
+  location?: string;
+  bio?: string;
+  [key: string]: any; // Pozwalamy na dodatkowe pola, ale lepiej byłoby je zdefiniować
+}
 
 export const signUpAction = async (formData: FormData) => {
   const email = formData.get("email")?.toString();
@@ -224,7 +234,7 @@ export async function deleteAccountAction(userId: string) {
   return { success: true };
 }
 
-export async function updateUserProfileAction(userId: string, profileData: any) {
+export async function updateUserProfileAction(userId: string, profileData: ProfileData) {
   const supabase = await createClient();
   
   const { data: existingProfile, error: fetchError } = await supabase

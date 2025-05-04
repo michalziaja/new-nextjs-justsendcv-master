@@ -3,6 +3,7 @@
 import { ThemeToggle } from "@/components/theme-toggle"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import Image from "next/image"
 
 export default function AuthLayout({
   children,
@@ -16,9 +17,11 @@ export default function AuthLayout({
         <div className="relative w-full h-full flex items-center justify-center p-12 z-10">
           <div className="text-center">
             <div className="relative w-48 h-48 mx-auto mb-6 drop-shadow-lg">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="JustSend.cv Logo" 
+                width={192}
+                height={192}
                 className="relative w-full h-full transition-transform hover:scale-105" 
               />
             </div>
@@ -69,9 +72,11 @@ export default function AuthLayout({
           {/* Logo i napis na małych ekranach */}
           <div className="flex items-center justify-center gap-3 mb-8 z-10">
             <div className="relative w-12 h-12">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="JustSend.cv Logo" 
+                width={48}
+                height={48}
                 className="relative w-full h-full" 
               />
             </div>

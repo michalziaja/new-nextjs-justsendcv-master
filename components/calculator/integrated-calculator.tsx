@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { 
   Card, 
   CardContent, 
@@ -75,7 +75,7 @@ export function IntegratedCalculator({
     if (initialContractType && initialContractType !== contractType) {
       setContractType(initialContractType);
     }
-  }, [initialContractType]);
+  }, [initialContractType, contractType]);
   
   // Wykonaj obliczenia dla wybranego typu umowy
   useEffect(() => {
@@ -222,7 +222,7 @@ export function IntegratedCalculator({
       onResultsUpdate(calculationResults, calcDirection);
     }
     
-  }, [amount, calcDirection, options, contractType, contractTypeMain, b2bType]);
+  }, [amount, calcDirection, options, contractType, contractTypeMain, b2bType, onResultsUpdate]);
   
   // Obsługa zmiany typu umowy
   const handleContractTypeChange = (value: UopContractType) => {
@@ -254,18 +254,9 @@ export function IntegratedCalculator({
   };
   
   // Obsługa zmiany opcji
-  const handleOptionChange = (key: keyof UopOptionsState, value: any) => {
-    if (key === 'zlecenieEmerytalne' && contractType === 'zlecenie') {
-      // Dla zlecenia, gdy zmienia się składka emerytalna, automatycznie aktualizuj rentową
-      setOptions(prev => ({ 
-        ...prev, 
-        [key]: value,
-        zlecenieRentowe: value // Rentowa idzie w parze z emerytalną
-      }));
-    } else {
-      setOptions(prev => ({ ...prev, [key]: value }));
-    }
-  };
+  const handleOptionChange = useCallback((key: keyof UopOptionsState, value: string | number | boolean) => {
+    setOptions(prev => ({ ...prev, [key]: value }));
+  }, []);
   
   // Obsługa zmiany głównego typu umowy (umowa/b2b)
   const handleMainContractTypeChange = (value: string) => {
