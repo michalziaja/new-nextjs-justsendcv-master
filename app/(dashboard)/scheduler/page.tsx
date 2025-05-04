@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useDeferredValue } from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent } from "@/components/ui/card"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CalendarIcon, Kanban, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import dynamic from "next/dynamic"

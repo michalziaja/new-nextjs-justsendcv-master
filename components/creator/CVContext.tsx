@@ -186,92 +186,6 @@ export function CVProvider({ children }: { children: ReactNode }) {
   // Supabase client
   const supabase = createClient();
 
-  // Pobieranie zapisanych CV użytkownika po załadowaniu
-  useEffect(() => {
-    async function fetchSavedCVs() {
-      setIsLoading(true);
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        
-        if (!user) {
-          console.error("Użytkownik nie jest zalogowany");
-          setSavedCVs([]);
-          setIsLoading(false);
-          return;
-        }
-
-        const { data, error } = await supabase
-          .from('user_cvs')
-          .select('*')
-          .order('updated_at', { ascending: false });
-
-        if (error) {
-          console.error("Błąd podczas pobierania CV:", error);
-          setSavedCVs([]);
-        } else {
-          setSavedCVs(data || []);
-          
-          // Jeśli istnieje wersja robocza, załaduj ją automatycznie
-          const draftCV = data?.find(cv => cv.is_draft);
-          if (draftCV) {
-            await loadCV(draftCV.id);
-          }
-        }
-      } catch (error) {
-        console.error("Wystąpił błąd:", error);
-        setSavedCVs([]);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    fetchSavedCVs();
-  }, []);
-
-  // Pobieranie analizy oferty pracy
-  useEffect(() => {
-    const fetchJobAnalysis = async () => {
-      if (!selectedJob?.id) return;
-      
-      try {
-        const { data, error } = await supabase
-          .from('job_analysis_results')
-          .select('*')
-          .eq('job_offer_id', selectedJob.id)
-          .maybeSingle();
-          
-        if (error) {
-          console.error("Błąd podczas pobierania analizy oferty:", error);
-          setJobAnalysis(null);
-          return;
-        }
-        
-        if (data) {
-          setJobAnalysis(data as JobAnalysis);
-        } else {
-          setJobAnalysis(null);
-        }
-      } catch (error) {
-        console.error("Wystąpił błąd:", error);
-        setJobAnalysis(null);
-      }
-    };
-    
-    fetchJobAnalysis();
-  }, [selectedJob]);
-
-  // Automatyczne zapisywanie CV po każdej zmianie danych
-  useEffect(() => {
-    // Tylko jeśli aktywna sekcja nie jest 'start' i mamy currentCVId
-    if (activeSection !== 'start') {
-      const autosaveTimeout = setTimeout(async () => {
-        await saveCV(true); // Zawsze zapisujemy jako kopię roboczą
-      }, 3000); // opóźnienie 3 sekundy po ostatniej zmianie
-
-      return () => clearTimeout(autosaveTimeout);
-    }
-  }, [cvData, selectedTemplate, activeSection]);
-
   // Funkcja do zapisywania CV
   const saveCV = async (asDraft = true): Promise<string | null> => {
     setIsSaving(true);
@@ -426,6 +340,83 @@ export function CVProvider({ children }: { children: ReactNode }) {
       setIsLoading(false);
     }
   };
+
+  // Pobieranie zapisanych CV
+  useEffect(() => {
+    async function fetchSavedCVs() {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return;
+
+        const { data, error } = await supabase
+          .from('user_cvs')
+          .select('*')
+          .eq('user_id', user.id)
+          .order('updated_at', { ascending: false });
+
+        if (error) {
+          console.error("Błąd podczas pobierania zapisanych CV:", error);
+          setSavedCVs([]);
+          return;
+        }
+
+        if (data) {
+          setSavedCVs(data);
+        }
+      } catch (error) {
+        console.error("Wystąpił błąd:", error);
+        setSavedCVs([]);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchSavedCVs();
+  }, [supabase, loadCV]);
+
+  // Pobieranie analizy oferty pracy
+  useEffect(() => {
+    const fetchJobAnalysis = async () => {
+      if (!selectedJob?.id) return;
+      
+      try {
+        const { data, error } = await supabase
+          .from('job_analysis_results')
+          .select('*')
+          .eq('job_offer_id', selectedJob.id)
+          .maybeSingle();
+          
+        if (error) {
+          console.error("Błąd podczas pobierania analizy oferty:", error);
+          setJobAnalysis(null);
+          return;
+        }
+        
+        if (data) {
+          setJobAnalysis(data as JobAnalysis);
+        } else {
+          setJobAnalysis(null);
+        }
+      } catch (error) {
+        console.error("Wystąpił błąd:", error);
+        setJobAnalysis(null);
+      }
+    };
+    
+    fetchJobAnalysis();
+  }, [selectedJob, supabase]);
+
+  // Automatyczne zapisywanie CV po każdej zmianie danych
+  useEffect(() => {
+    // Tylko jeśli aktywna sekcja nie jest 'start' i mamy currentCVId
+    if (activeSection !== 'start') {
+      const autosaveTimeout = setTimeout(async () => {
+        await saveCV(true); // Zawsze zapisujemy jako kopię roboczą
+      }, 3000); // opóźnienie 3 sekundy po ostatniej zmianie
+
+      return () => clearTimeout(autosaveTimeout);
+    }
+  }, [cvData, selectedTemplate, activeSection, saveCV]);
 
   // Funkcja do tworzenia nowego CV
   const createNewCV = () => {

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
+import Image from "next/image";
 
 
 export default function NotFound() {
@@ -24,9 +25,11 @@ export default function NotFound() {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <div className="relative w-24 h-24 mx-auto mb-6 drop-shadow-lg">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="JustSend.cv Logo" 
+              width={96}
+              height={96}
               className="relative w-full h-full transition-transform hover:scale-105" 
             />
           </div>

@@ -108,7 +108,7 @@ export default function UpgradePage() {
   const [isEligible, setIsEligible] = useState<boolean | null>(null);
   const [isPending, startTransition] = useTransition();
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const [userData, setUserData] = useState<any>(null);
+  const [userData, setUserData] = useState<{ id: string; email?: string } | null>(null);
   
   // Referencje do sekcji i stany widoczności
   const pricingRef = useRef<HTMLDivElement>(null);

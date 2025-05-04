@@ -12,7 +12,11 @@ interface ProfileData {
   phone?: string;
   location?: string;
   bio?: string;
-  [key: string]: any; // Pozwalamy na dodatkowe pola, ale lepiej byłoby je zdefiniować
+  fullName?: string;
+  // Dodaj inne pola, które mogą być potrzebne
+  social_links?: string;
+  about_me?: string;
+  avatar?: string;
 }
 
 export const signUpAction = async (formData: FormData) => {

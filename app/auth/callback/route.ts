@@ -1,6 +1,8 @@
 // app/auth/callback/route.ts
 import { createClient } from "@/utils/supabase/server";
 import { NextResponse } from "next/server";
+import { User } from "@supabase/supabase-js";
+import { SupabaseClient } from "@supabase/supabase-js";
 
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
@@ -34,7 +36,7 @@ export async function GET(request: Request) {
   return NextResponse.redirect(`${finalOrigin}/home`);
 }
 
-async function createOrUpdateProfile(user: any, supabase: any) {
+async function createOrUpdateProfile(user: User, supabase: SupabaseClient) {
   const userId = user.id;
   const email = user.email;
 

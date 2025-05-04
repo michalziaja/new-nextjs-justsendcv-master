@@ -7,14 +7,14 @@ import { SalaryTools } from "@/components/calculator/job-goal";
 import { SalaryChecker } from "@/components/calculator/salary-checker";
 import { JobGoalContent } from "@/components/calculator/job-goal";
 import { IntegratedCalculator } from "@/components/calculator/integrated-calculator";
+import { CalculationResults, defaultResults, UopContractType } from "@/components/calculator/utils/types";
 
 import { useState, useCallback } from "react";
-import { CalculationResults, defaultResults } from "@/components/calculator/utils/types";
 
 export default function CalculatorPage() {
   // Stan aktywnych zakładek
   const [contractType, setContractType] = useState<string>("umowa");
-  const [subType, setSubType] = useState<string>("pracaUop");
+  const [subType, setSubType] = useState<UopContractType>("pracaUop");
   const [b2bType, setB2bType] = useState<"ogolne" | "liniowy" | "ryczalt">("ogolne");
   const [toolsTab, setToolsTab] = useState<string>("wyszukaj");
   
@@ -34,7 +34,7 @@ export default function CalculatorPage() {
   // Obsługa zmiany podtypu umowy
   const handleSubTypeChange = (value: string) => {
     if (contractType === "umowa") {
-      setSubType(value);
+      setSubType(value as UopContractType);
     } else {
       if (value === "ogolne" || value === "liniowy" || value === "ryczalt") {
         setB2bType(value);
@@ -64,7 +64,7 @@ export default function CalculatorPage() {
           <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4">
             <IntegratedCalculator 
               onResultsUpdate={handleResultsUpdate} 
-              initialContractType={subType as any}
+              initialContractType={subType as UopContractType}
               contractTypeMain={contractType}
               onContractTypeMainChange={handleContractChange}
               initialB2bType={b2bType}
@@ -74,8 +74,7 @@ export default function CalculatorPage() {
           
           <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 min-h-[42vh]">
             <CalculationTable 
-              results={calculatorResults} 
-              contractType={getCurrentSubType() as any} 
+              results={calculatorResults}
             />
           </div>
         </div>

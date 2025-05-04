@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AccountManagement } from "@/components/account-managment";
+import { UserData } from "@/app/types";
 
 // Komponent po stronie klienta do obsługi dialogu zarządzania kontem
-export default function AccountManagementClient({ userData }: { userData: any }) {
+export default function AccountManagementClient({ userData }: { userData: UserData }) {
   const [open, setOpen] = useState(false);
   
   return (

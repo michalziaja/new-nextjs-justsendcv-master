@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from "react"
 import { Suspense } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BarChart, FileText, Users, PieChart as PieChartIcon, CreditCard, CheckCheck } from "lucide-react"
 import { Skeleton } from "@/components/ui/skeleton"
 
 // Import sekcji statystyk

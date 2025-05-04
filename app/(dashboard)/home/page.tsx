@@ -1,7 +1,5 @@
 // app/(dashboard)/page.tsx
 "use client"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { StatCards } from "@/components/home/stat-cards"
 import { RecentJobs } from "@/components/home/recent-jobs"
 import { Checklist } from "@/components/home/checklist"

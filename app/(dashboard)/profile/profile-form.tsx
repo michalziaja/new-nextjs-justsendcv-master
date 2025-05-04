@@ -6,21 +6,11 @@ import { updateUserProfileAction } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { UserData } from "@/app/types";
 
 interface ProfileFormProps {
   userId: string;
-  initialData: {
-    id?: string;
-    name: string;
-    email: string;
-    first_name?: string;
-    last_name?: string;
-    social_links?: string;
-    about_me?: string;
-    avatar?: string;
-    isSubscribed?: boolean;
-    createdAt?: string;
-  };
+  initialData: UserData;
 }
 
 // Komponent formularza danych profilu

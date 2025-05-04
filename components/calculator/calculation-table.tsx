@@ -7,12 +7,10 @@ import { useState } from "react";
 
 interface CalculationTableProps {
   results: CalculationResults;
-  contractType: "uop" | "zlecenie" | "dzielo";
 }
 
 export const CalculationTable: React.FC<CalculationTableProps> = ({ 
-  results, 
-  contractType 
+  results
 }) => {
   const [activeTab, setActiveTab] = useState<"components" | "employer" | "yearly">("components");
 

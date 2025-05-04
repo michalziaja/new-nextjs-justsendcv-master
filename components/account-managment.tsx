@@ -13,15 +13,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { deleteAccountAction } from "@/app/actions";
-
-type UserData = {
-  id: string;
-  name: string;
-  email: string;
-  avatar: string;
-  isSubscribed: boolean;
-  createdAt: string;
-};
+import { UserData } from "@/app/types";
 
 interface AccountManagementProps {
   open: boolean;

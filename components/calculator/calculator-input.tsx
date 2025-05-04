@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { 
   Card, 
   CardContent 
@@ -47,7 +46,7 @@ export const CalculatorInput: React.FC<CalculatorInputProps> = ({
   onOptionsChange
 }) => {
   // Obsługa zmian opcji
-  const handleOptionChange = (key: keyof UopOptionsState, value: any) => {
+  const handleOptionChange = (key: keyof UopOptionsState, value: string | number | boolean) => {
     onOptionsChange({ ...options, [key]: value });
   };
 
