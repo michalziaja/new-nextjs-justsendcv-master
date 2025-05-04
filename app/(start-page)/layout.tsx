@@ -1,6 +1,6 @@
 // app/(landing)/layout.tsx
 import { ThemeProvider } from "@/providers/providers"
-import UserInitializer from "@/components/UserInitializer"
+
 
 export default function LandingLayout({
     children,
@@ -9,7 +9,7 @@ export default function LandingLayout({
   }) {
     return (
       <div className="min-h-screen">
-        <UserInitializer />
+
         <ThemeProvider>
             {children}
         </ThemeProvider>

@@ -8,7 +8,7 @@ import { CalendarSection } from "@/components/home/calendar-section"
 import { WeeklyGoals } from "@/components/home/weekly-goals"
 
 export const iframeHeight = "800px"
-export const description = "Dashboard strony głównej JustSend.cv"
+
 
 export default function Home() {
   return (
