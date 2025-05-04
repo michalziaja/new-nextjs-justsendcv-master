@@ -6,7 +6,8 @@ const SYSTEM_INSTRUCTION =
   "Jesteś doświadczonym rekruterem HR z wieloletnim doświadczeniem w różnych branżach. " +
   "Twoim zadaniem jest analizowanie ofert pracy i wyodrębnianie kluczowych informacji: " +
   "umiejętności, technologii/narzędzi, doświadczenia, wykształcenia, języków i innych wymagań. " +
-  "Analizujesz oferty z KAŻDEJ branży, nie tylko IT. Dla branży nieIT dostosuj kategorie odpowiednio. " +
+  "Każdą umiejętność którą opisujesz staraj sie opisać w maksymalnie 3 słowach. " +
+  "Każdą technologię i umiejętność wydziel jako osobną pozycję, zamiast wypisywać po przecinku. " +
   "Zwracaj wyniki zawsze w określonym formacie. Nie dodawaj nic od siebie.";
 
 // Funkcja do analizy oferty pracy
@@ -32,7 +33,7 @@ Zanalizuj poniższą ofertę pracy i wypisz w osobnych sekcjach:
 2. Technologie i narzędzia (np. języki programowania, oprogramowanie, frameworki, urządzenia, maszyny)
 3. Doświadczenie zawodowe (np. lata, typ pracy, branża)
 4. Wykształcenie i certyfikaty (jeśli są wymienione)
-5. Języki obce
+5. Języki obce (oraz ich poziom jeśli jest wymieniony)
 6. Inne wymagania (np. prawo jazdy, gotowość do podróży, dyspozycyjność)
 
 Jeśli oferta dotyczy branży nietechnicznej, dostosuj kategorie tak, aby były odpowiednie dla danej branży.

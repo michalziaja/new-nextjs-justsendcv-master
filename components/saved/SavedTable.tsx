@@ -127,7 +127,10 @@ export function SavedTable() {
   const [status, setStatus] = useState<ApplicationStatus>("wszystkie")
   const [searchQuery, setSearchQuery] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
-  const [sortConfig, setSortConfig] = useState<SortConfig>({ key: null, direction: 'asc' })
+  const [sortConfig, setSortConfig] = useState<SortConfig>({ 
+    key: 'created_at', // Sortowanie po dacie utworzenia
+    direction: 'desc'  // Sortowanie malejąco (od najnowszych)
+  })
   const [selectedApplication, setSelectedApplication] = useState<MappedApplication | null>(null)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const [applications, setApplications] = useState<MappedApplication[]>([])
