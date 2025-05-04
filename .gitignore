@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 /supabase
+/dane
 # dependencies
 /Chrome-Extension*
 /node_modules

@@ -37,7 +37,7 @@ const data = {
     { title: "Home", url: "/home", icon: Home },
     { title: "Zapisane", url: "/saved", icon: BookmarkCheck },
     { title: "Kreator CV", url: "/creator", icon: FileText },
-    { title: "Asystent AI", url: "/assist", icon: Brain },
+    { title: "Asystent AI", url: "/assistant", icon: Brain },
     { title: "Terminarz", url: "/scheduler", icon: Calendar },
     { title: "Kalkulator", url: "/calculator", icon: Calculator },
     { title: "Statystyki", url: "/stats", icon: PieChart },
