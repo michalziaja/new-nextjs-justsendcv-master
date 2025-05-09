@@ -70,14 +70,14 @@ export function Checklist() {
     bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">
-          <CheckSquare className="h-5 w-5 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500" />
+          <CheckSquare className="h-5 w-5 text-[#00B2FF] stroke-2 transform transition-transform hover:scale-110" />
           <CardTitle>Checklista</CardTitle>
         </div>
         <Button 
           variant="link" 
           size="icon" 
           className="h-8 w-8 transition-transform duration-200 hover:scale-155 active:scale-90">
-          <RefreshCw className="h-4 w-4" />
+          <RefreshCw className="h-4 w-4 text-[#00B2FF]" />
         </Button>
       </CardHeader>
       <CardContent>
@@ -97,7 +97,7 @@ export function Checklist() {
                   <div className={`
                     h-5 w-5 rounded border-2 
                     ${task.completed 
-                      ? 'border-gradient-to-r from-[#00B2FF] to-blue-600 dark:border-gradient-to-r dark:from-[#00B2FF] dark:to-blue-500 bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:bg-gradient-to-r dark:from-[#00B2FF] dark:to-blue-500' 
+                      ? 'border-gradient-to-r from-blue-500 to-blue-600 dark:border-gradient-to-r dark:from-blue-500 dark:to-blue-600 bg-gradient-to-r from-blue-500 to-blue-600 dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600' 
                       : 'border-gray-300 dark:border-gray-600'
                     }
                     flex items-center justify-center

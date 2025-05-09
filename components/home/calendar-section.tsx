@@ -2,7 +2,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CalendarDays } from "lucide-react"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export function CalendarSection() {
   return (
@@ -12,15 +11,9 @@ export function CalendarSection() {
       bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">
-          <CalendarDays className="h-5 w-5 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500" />
+          <CalendarDays className="h-5 w-5 text-[#00B2FF] stroke-2 transform transition-transform hover:scale-110" />
           <CardTitle>Terminarz</CardTitle>
         </div>
-        <Tabs defaultValue="tasks" className="w-[250px]">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="tasks" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white">Zadania</TabsTrigger>
-            <TabsTrigger value="calendar" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white">Kalendarz</TabsTrigger>
-          </TabsList>
-        </Tabs>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

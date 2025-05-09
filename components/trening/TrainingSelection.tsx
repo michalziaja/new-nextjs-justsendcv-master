@@ -390,10 +390,11 @@ export default function TrainingSelection({
               bg-white 
               shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
               cursor-pointer transition-all text-center
+              border-t-[6px]
               ${
                 selectedTrainingType === 'preparation' 
-                  ? 'border-blue-600 bg-blue-50 border-t-[6px]' 
-                  : 'border-gray-200 border-t-blue-600 border-t-[1px] hover:border-blue-300'
+                  ? 'border-blue-600 bg-blue-50' 
+                  : 'border-t-blue-600/20 hover:border-blue-300'
               }
             `}
           >
@@ -412,10 +413,11 @@ export default function TrainingSelection({
               bg-white 
               shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
               cursor-pointer transition-all text-center
+              border-t-[6px]
               ${
                 selectedTrainingType === 'questions' 
-                  ? 'border-purple-600 bg-purple-50 border-t-[6px]' 
-                  : 'border-gray-200 border-t-purple-600 border-t-[1px] hover:border-purple-300'
+                  ? 'border-purple-600 bg-purple-50' 
+                  : 'border-t-purple-600/20 hover:border-purple-300'
               }
             `}
           >
@@ -434,10 +436,11 @@ export default function TrainingSelection({
               bg-white 
               shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
               cursor-pointer transition-all text-center
+              border-t-[6px]
               ${
                 selectedTrainingType === 'practice' 
-                  ? 'border-green-600 bg-green-50 border-t-[6px]' 
-                  : 'border-gray-200 border-t-green-600 border-t-[1px] hover:border-green-300'
+                  ? 'border-green-600 bg-green-50' 
+                  : 'border-t-green-600/20 hover:border-green-300'
               }
             `}
           >

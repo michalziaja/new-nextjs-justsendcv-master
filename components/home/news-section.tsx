@@ -12,7 +12,7 @@ export function NewsSection() {
       bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">
-          <MessageSquare className="h-5 w-5 text-transparent bg-clip-text bg-blue-500 dark:bg-blue-500" />
+          <MessageSquare className="h-5 w-5 text-[#00B2FF] stroke-2 transform transition-transform hover:scale-110" />
           <CardTitle>Aktualności</CardTitle>
         </div>
         <Tabs defaultValue="market" className="w-[250px]">

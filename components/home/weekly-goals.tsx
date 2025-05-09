@@ -195,8 +195,8 @@ export function WeeklyGoals() {
       bg-white dark:bg-slate-900">
       <CardHeader className="flex flex-row items-center justify-between space-y-0">
         <div className="flex items-center gap-2">
-          <Target className="h-5 w-5 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500" />
-          <CardTitle>Cel tygodniowy</CardTitle>
+          <Target className="h-5 w-5 text-[#00B2FF] stroke-2 transform transition-transform hover:scale-110" />
+          <CardTitle className="flex items-center">Cel tygodniowy</CardTitle>
         </div>
         <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
           <PopoverTrigger asChild>

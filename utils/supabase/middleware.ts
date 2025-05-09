@@ -56,7 +56,9 @@ export const updateSession = async (request: NextRequest) => {
     const { data: { user }, error } = await supabase.auth.getUser();
 
     const publicRoutes = ["/", "/sign-in", "/sign-up", "/forgot-password", "/unauthorized", "/auth/callback"];
-    const isPublicRoute = publicRoutes.includes(request.nextUrl.pathname);
+    // Sprawdzanie czy ścieżka zaczyna się od /article/
+    const isArticlePage = request.nextUrl.pathname.startsWith('/article/');
+    const isPublicRoute = publicRoutes.includes(request.nextUrl.pathname) || isArticlePage;
 
     // Przekieruj niezalogowanych użytkowników z chronionych tras na /unauthorized
     if (!user && !isPublicRoute) {

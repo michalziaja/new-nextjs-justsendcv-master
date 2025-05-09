@@ -40,18 +40,18 @@ function StatCard({ title, value, description, icon, borderColor, darkBorderColo
       border-t-[4px]
     `}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">
-        <CardTitle className="-mt-4 text-sm font-sm md:text-base lg:text-base xl:text-base">{title}</CardTitle>
+        <CardTitle className="-mt-6 text-sm font-sm md:text-base lg:text-base xl:text-base">{title}</CardTitle>
         {icon}
       </CardHeader>
       <CardContent>
-        <div className="-mt-6 mb-2 text-md md:text-2xl lg:text-2xl xl:text-2xl font-bold flex items-center">
+        <div className="-mt-8 mb-1 text-md md:text-2xl lg:text-2xl xl:text-2xl font-bold flex items-center">
           {isLoading ? (
             <Skeleton className="h-8 w-10" />
           ) : (
             value
           )}
         </div>
-        <p className="text-xs text-muted-foreground hidden min-[700px]:block -mb-2">{description}</p>
+        <p className="text-xs text-muted-foreground hidden min-[700px]:block -mb-3">{description}</p>
       </CardContent>
     </Card>
   )

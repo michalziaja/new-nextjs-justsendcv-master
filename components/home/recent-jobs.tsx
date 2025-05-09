@@ -72,8 +72,8 @@ export function RecentJobs() {
     dark:shadow-slate-900/20
     bg-white dark:bg-slate-900">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 pt-1">
-          <FileText className="h-5 w-5 text-blue-500 dark:text-blue-400" />
+        <CardTitle className="flex items-center gap-2 pt-1 -mb-2">
+          <FileText className="h-5 w-5 text-[#00B2FF] stroke-2 transform transition-transform hover:scale-110" />
           Ostatnio zapisane oferty
         </CardTitle>
       </CardHeader>
@@ -121,12 +121,12 @@ export function RecentJobs() {
         ) : (
           <div className="space-y-2 pt-2">
             {/* Nagłówki kolumn */}
-            <div className="grid pb-2 border-b border-gray-200 dark:border-gray-800" 
+            <div className="grid pb-0 -ml-2 -mr-2 rounded-sm bg-gray-100/70 dark:bg-gray-800 border-gray-200 dark:border-gray-800" 
                  style={{ gridTemplateColumns: '2fr 1.5fr 0.7fr 0.5fr' }}>
-              <div className="text-md font-medium">Stanowisko</div>
-              <div className="text-md font-medium">Firma</div>
-              <div className="text-md font-medium text-right pr-4">Portal</div>
-              <div className="text-md font-medium text-right">Data</div>
+              <div className="text-md ml-4 font-medium flex items-center h-10">Stanowisko</div>
+              <div className="text-md font-medium flex items-center h-10">Firma</div>
+              <div className="text-md mr-2 font-medium text-right pr-4 flex items-center justify-end h-10">Portal</div>
+              <div className="text-md mr-4 font-medium text-right flex items-center justify-end h-10">Data</div>
             </div>
             
             {/* Lista ofert */}
@@ -138,8 +138,8 @@ export function RecentJobs() {
                   style={{ gridTemplateColumns: '2fr 1.5fr 0.7fr 0.5fr' }}
                   onClick={() => handleJobClick(job.id)}
                 >
-                  <div className="text-sm font-medium truncate">{job.title}</div>
-                  <div className="text-sm text-muted-foreground truncate">{job.company}</div>
+                  <div className="text-sm ml-2 font-medium truncate">{job.title}</div>
+                  <div className="text-sm -ml-1 text-muted-foreground truncate">{job.company}</div>
                   <div className="text-sm text-muted-foreground truncate text-right pr-4">{job.site || "-"}</div>
                   <div className="text-sm text-muted-foreground text-right">
                     {new Date(job.created_at).toLocaleDateString('pl-PL', {

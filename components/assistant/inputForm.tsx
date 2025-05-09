@@ -61,7 +61,7 @@ export default function InputForm() {
   }
 
   return (
-    <Card className="p-4 space-y-4">
+    <Card className="p-4 space-y-4 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
       <div className="grid grid-cols-2 gap-4">
         {/* Wybór CV - lewa kolumna */}
         <div>

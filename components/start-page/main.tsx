@@ -32,6 +32,7 @@ interface AppFeature {
   icon: React.ReactNode
   description: string
   image: string
+  bulletPoints: string[]
 }
 
 interface Site {
@@ -53,20 +54,30 @@ interface FAQ {
   answer: string
 }
 
+// Interfejs dla artykułów
+interface Article {
+  id: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  imageAlt: string;
+  content: string;
+}
+
 // Dane dla sekcji
 const features: Feature[] = [
-  { icon: Brain, title: "Inteligentny kreator CV", description: "Twórz profesjonalne CV z pomocą AI." },
-  { icon: Target, title: "Śledzenie aplikacji", description: "Monitoruj status swoich aplikacji." },
-  { icon: BarChart3, title: "Rozszerzone statystyki", description: "Analizuj skuteczność aplikacji." },
-  { icon: Sparkles, title: "Asystent AI", description: "Otrzymuj porady od AI." },
-  { icon: Clock, title: "Oszczędność czasu", description: "Automatyzacja procesów aplikacyjnych." },
-  { icon: Shield, title: "Prywatność i bezpieczeństwo", description: "Twoje dane są bezpieczne." },
+  { icon: ListTodo, title: "Monitorowanie Aplikacji", description: "Zmiana statusów i analiza wymagań oferty." },
+  { icon: Brain, title: "Kreator CV z AI", description: "Twórz profesjonalne CV z pomocą sztucznej inteligencji." },
+  { icon: BarChart3, title: "Rozszerzone statystyki", description: "Analizuj skuteczność swoich aplikacji." },
+  { icon: Bot, title: "Asystent AI", description: "Tworzenie wiadomości i dokumentów aplikacyjnych." },
+  { icon: Target, title: "Trening", description: "Generowanie pytań dopasowanych do konkretnej oferty." },
+  { icon: Chrome, title: "Wtyczka do Chrome", description: "Łatwe zapisywanie ofert pracy jednym kliknięciem." },
 ]
 
 const stats: Stat[] = [
   { value: 70, label: "większa szansa na przejście HR", suffix: "%" },
   { value: 85, label: "większa dokładność", suffix: "%" },
-  { value: 3, label: "szybsze tworzenie", suffix: "x" },
+  { value: 3, label: "szybsze tworzenie CV", suffix: "x" },
   { value: 12, label: "zaoszczędzone godziny", suffix: "h" },
 ]
 
@@ -77,6 +88,11 @@ const appFeatures: AppFeature[] = [
     icon: <ListTodo className="h-5 w-5" />,
     description: "Śledź aplikacje w jednym miejscu.",
     image: "/placeholder.svg?height=600&width=800",
+    bulletPoints: [
+      "Przejrzysty widok wszystkich aplikacji",
+      "Statusy poszczególnych etapów rekrutacji",
+      "Przypomnienia o terminach rozmów i zadaniach"
+    ]
   },
   {
     id: "cv-creator",
@@ -84,6 +100,11 @@ const appFeatures: AppFeature[] = [
     icon: <FileText className="h-5 w-5" />,
     description: "Twórz CV z AI.",
     image: "/placeholder.svg?height=600&width=800",
+    bulletPoints: [
+      "Szablony CV zoptymalizowane pod ATS",
+      "Sugestie treści generowane przez AI",
+      "Personalizacja CV pod konkretne ogłoszenie"
+    ]
   },
   {
     id: "statistics",
@@ -91,20 +112,47 @@ const appFeatures: AppFeature[] = [
     icon: <BarChart3 className="h-5 w-5" />,
     description: "Analizuj proces poszukiwania pracy.",
     image: "/placeholder.svg?height=600&width=800",
+    bulletPoints: [
+      "Analiza skuteczności Twoich aplikacji",
+      "Porównanie z innymi kandydatami",
+      "Insight na temat najpopularniejszych umiejętności"
+    ]
   },
   {
     id: "ai-assistant",
     title: "Asystent AI",
     icon: <Bot className="h-5 w-5" />,
-    description: "Porady od AI.",
+    description: "Generuj wiadomości i dokumenty.",
     image: "/placeholder.svg?height=600&width=800",
+    bulletPoints: [
+      "Automatyczne tworzenie listów motywacyjnych",
+      "Profesjonalne wiadomości do rekruterów",
+      "Analiza i optymalizacja treści"
+    ]
+  },
+  {
+    id: "interview-training",
+    title: "Trening rozmowy",
+    icon: <Target className="h-5 w-5" />,
+    description: "Przygotuj się do rozmowy kwalifikacyjnej z AI.",
+    image: "/placeholder.svg?height=600&width=800",
+    bulletPoints: [
+      "Pytania dopasowane do konkretnej oferty",
+      "Symulacja rozmowy kwalifikacyjnej",
+      "Feedback i sugestie usprawnień"
+    ]
   },
   {
     id: "browser-plugin",
-    title: "Wtyczka do przeglądarki",
+    title: "Wtyczka",
     icon: <Chrome className="h-5 w-5" />,
     description: "Zapisuj oferty jednym kliknięciem.",
     image: "/placeholder.svg?height=600&width=800",
+    bulletPoints: [
+      "Szybki zapis ofert z portali pracy",
+      "Automatyczne dodawanie do Twojego konta",
+      "Powiadomienia o nowych ofertach"
+    ]
   },
 ]
 
@@ -207,7 +255,25 @@ const faqs: FAQ[] = [
   },
 ]
 
-
+// Artykuły
+const articles: Article[] = [
+  {
+    id: "art1",
+    title: "Nowe trendy w rekrutacji – jak zmieniają się procesy rekrutacyjne na rynku pracy",
+    excerpt: "Rynek pracy dynamicznie się zmienia, a procesy rekrutacyjne przechodzą prawdziwą rewolucję. Cyfryzacja, automatyzacja i rosnące oczekiwania kandydatów sprawiają, że zarówno firmy, jak i osoby poszukujące pracy muszą dostosowywać się do nowych realiów.",
+    image: "/art/csm_baramundi_online-documentation_square_1970ab9dde.jpg",
+    imageAlt: "Nowe trendy w rekrutacji",
+    content: "Rynek pracy dynamicznie się zmienia, a procesy rekrutacyjne przechodzą prawdziwą rewolucję. Cyfryzacja, automatyzacja i rosnące oczekiwania kandydatów sprawiają, że zarówno firmy, jak i osoby poszukujące pracy muszą dostosowywać się do nowych realiów. Odkryj, jakie trendy kształtują obecnie rekrutację i jak możesz je wykorzystać, by zwiększyć swoje szanse na sukces zawodowy.\n\nSztuczna inteligencja w rekrutacji – rewolucja dla kandydatów i pracodawców\nSztuczna inteligencja (AI) coraz częściej wspiera procesy rekrutacyjne we wszystkich branżach. Firmy wykorzystują algorytmy do analizy CV, selekcji kandydatów i dopasowywania ich do konkretnych stanowisk. Dla kandydatów oznacza to konieczność tworzenia dokumentów aplikacyjnych zoptymalizowanych pod kątem systemów ATS (Applicant Tracking System), które automatycznie skanują CV w poszukiwaniu odpowiednich słów kluczowych.\n\nNowoczesne kreatory CV z AI, takie jak JustSend.cv, pomagają w przygotowaniu dokumentów, które łatwo przechodzą przez automatyczną selekcję. Dzięki funkcjom takim jak inteligentne dopasowanie CV do oferty, personalizacja szablonów czy wsparcie AI w optymalizacji treści, kandydaci mogą znacząco zwiększyć swoje szanse na zaproszenie do kolejnych etapów rekrutacji."
+  },
+  {
+    id: "art2",
+    title: "Jak ułatwić sobie szukanie pracy – nowoczesne narzędzia dla każdego kandydata",
+    excerpt: "Poszukiwanie pracy to proces, który może być stresujący i czasochłonny. Na szczęście, dzięki nowoczesnym narzędziom i aplikacjom, możesz znacząco ułatwić sobie cały proces – od tworzenia CV, przez śledzenie aplikacji, aż po przygotowanie do rozmowy kwalifikacyjnej.",
+    image: "/art/opportunity-3185099_960_720-1-768x586.jpg",
+    imageAlt: "Nowoczesne narzędzia do szukania pracy",
+    content: "Poszukiwanie pracy to proces, który może być stresujący i czasochłonny. Na szczęście, dzięki nowoczesnym narzędziom i aplikacjom, możesz znacząco ułatwić sobie cały proces – od tworzenia CV, przez śledzenie aplikacji, aż po przygotowanie do rozmowy kwalifikacyjnej.\n\nInteligentny kreator CV z AI\nKreator CV oparty na sztucznej inteligencji to nieoceniona pomoc dla każdego, kto chce przygotować profesjonalny dokument aplikacyjny. Narzędzia takie jak JustSend.cv oferują:\n\nSzablony CV zoptymalizowane pod systemy ATS\n\nSugestie treści generowane przez AI\n\nMożliwość personalizacji CV pod konkretne ogłoszenie\n\nWsparcie w tworzeniu listu motywacyjnego i profilu zawodowego\n\nDzięki temu Twoje CV będzie nie tylko atrakcyjne wizualnie, ale także skuteczne w oczach rekruterów i systemów automatycznej selekcji."
+  }
+];
 
 export default function StartPage() {
   const statsRef = useRef<HTMLDivElement>(null)
@@ -217,6 +283,7 @@ export default function StartPage() {
   const sitesRef = useRef<HTMLDivElement>(null)
   const pricingRef = useRef<HTMLDivElement>(null)
   const faqRef = useRef<HTMLDivElement>(null)
+  const articlesRef = useRef<HTMLDivElement>(null)
 
   const isStatsInView = useInView(statsRef, { once: true, amount: 0.2 })
   const isHeroInView = useInView(heroRef, { once: true, amount: 0.1 })
@@ -225,6 +292,7 @@ export default function StartPage() {
   const isSitesInView = useInView(sitesRef, { once: true, amount: 0.2 })
   const isPricingInView = useInView(pricingRef, { once: true, amount: 0.2 })
   const isFaqInView = useInView(faqRef, { once: true, amount: 0.2 })
+  const isArticlesInView = useInView(articlesRef, { once: true, amount: 0.2 })
 
   // Animacje
   const fadeInUp = {
@@ -287,7 +355,7 @@ export default function StartPage() {
             initial="hidden"
             animate={isHeroInView ? "visible" : "hidden"}
             variants={fadeInUp}
-            className="w-full py-32 px-4"
+            className="w-full py-24 px-4"
           >
             <div className="container mx-auto text-center max-w-4xl mt-16 mb-16">
               <motion.div
@@ -374,13 +442,13 @@ export default function StartPage() {
             initial="hidden"
             animate={isFeaturesInView ? "visible" : "hidden"}
             variants={fadeInUp}
-            className="w-full py-24"
+            className="w-full py-24 px-4"
           >
-            <div className="container mx-auto px-4 mt-8 mb-16">
+            <div className="container mx-auto px-4 mt-16 mb-16">
               <div className="text-center mb-16">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-5xl md:text-6xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
+                  className="text-5xl md:text-6xl lg:text-6xl font-bold mb-2 text-gray-900 dark:text-white"
                 >
                   Wszystko, czego potrzebujesz, aby
                 </motion.h2>
@@ -391,13 +459,19 @@ export default function StartPage() {
                 >
                   zwiększyć swoje szanse na sukces.
                 </motion.p>
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
+                >
+                  Narzędzia, które ułatwią Ci proces poszukiwania pracy
+                </motion.p>
               </div>
 
               <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 animate={isFeaturesInView ? "visible" : "hidden"}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4"
               >
                 {features.map((feature) => (
                   <motion.div
@@ -405,10 +479,15 @@ export default function StartPage() {
                     variants={itemFadeIn}
                     className="p-6 rounded-xl bg-card dark:bg-[#0A0F1C]/50 border-2 border-gray-200 dark:border-gray-800 hover:border-[#00B2FF] hover:ring-2 hover:ring-[#00B2FF]/50 shadow-lg hover:shadow-xl hover:shadow-[#00B2FF]/10 relative"
                   >
-                    {/* Ikona z akcentem kolorystycznym */}
-                    <feature.icon className="w-12 h-12 text-[#00B2FF] mb-4" />
-                    <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    {/* Header z tytułem i ikoną */}
+                    <div className="flex flex-row items-center justify-between space-y-0 pb-2">
+                      <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
+                      <feature.icon className="w-8 h-8 text-[#00B2FF]" />
+                    </div>
+                    {/* Content z opisem */}
+                    <div>
+                      <p className="text-muted-foreground">{feature.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </motion.div>
@@ -421,9 +500,24 @@ export default function StartPage() {
             initial="hidden"
             animate={isStatsInView ? "visible" : "hidden"}
             variants={fadeInUp}
-            className="w-full py-24"
+            className="w-full py-24 px-4"
           >
-            <div className="container mx-auto px-4 mb-16">
+            <div className="container mx-auto px-4 mt-16 mb-16">
+              <div className="text-center mb-16">
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight"
+                >
+                  Realne efekty i liczby
+                </motion.h2>
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
+                >
+                  Przekonaj się, jakie korzyści przynosi korzystanie z <span className="text-[#00B2FF]">JustSend</span><span className="text-gray-900 dark:text-white">.</span><span className="text-[#00B2FF]">cv</span>
+                </motion.p>
+              </div>
+              
               <div className="max-w-6xl mx-auto">
                 <motion.div
                   variants={staggerContainer}
@@ -452,10 +546,10 @@ export default function StartPage() {
             initial="hidden"
             animate={isAppShowcaseInView ? "visible" : "hidden"}
             variants={fadeInUp}
-            className="w-full py-24"
+            className="w-full py-24 px-4"
           >
-            <div className="container mx-auto px-4 mb-16">
-              <div className="text-center mb-16">
+            <div className="container mx-auto px-4 mt-16 mb-10">
+              <div className="text-center mb-10">
                 <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-7xl font-bold mb-1">
                   <span className="text-gray-900 dark:text-white">Kompleksowa platforma</span>
                   <br />
@@ -469,12 +563,12 @@ export default function StartPage() {
 
               <motion.div variants={fadeInUp}>
               <Tabs defaultValue="job-tracker" className="w-full max-w-5xl mx-auto">
-                <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-8">
+                <TabsList className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-10 w-full justify-between">
                   {appFeatures.map((feature) => (
                     <TabsTrigger
                       key={feature.id}
                       value={feature.id}
-                        className="flex items-center gap-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+                      className="flex items-center justify-center gap-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
                     >
                       {feature.icon}
                       <span className="hidden md:inline">{feature.title}</span>
@@ -489,19 +583,12 @@ export default function StartPage() {
                         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{feature.title}</h3>
                         <p className="text-gray-600 dark:text-gray-300 mb-6">{feature.description}</p>
                         <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                          <li className="flex items-center gap-2">
-                              {/* Okrąg z gradientem jako znacznik listy */}
+                          {feature.bulletPoints.map((point, index) => (
+                            <li key={index} className="flex items-center gap-2">
                               <div className="h-5 w-5 rounded-full bg-gradient-to-r from-[#00B2FF] to-blue-600 flex items-center justify-center text-white">✓</div>
-                            <span>Łatwy w użyciu interfejs</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                              <div className="h-5 w-5 rounded-full bg-gradient-to-r from-[#00B2FF] to-blue-600 flex items-center justify-center text-white">✓</div>
-                            <span>Optymalizacja oparta na AI</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                              <div className="h-5 w-5 rounded-full bg-gradient-to-r from-[#00B2FF] to-blue-600 flex items-center justify-center text-white">✓</div>
-                            <span>Aktualizacje w czasie rzeczywistym</span>
-                          </li>
+                              <span>{point}</span>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                       <div className="relative">
@@ -524,13 +611,22 @@ export default function StartPage() {
             initial="hidden"
             animate={isSitesInView ? "visible" : "hidden"}
             variants={fadeInUp}
-            className="w-full py-24"
+            className="w-full py-24 px-4"
           >
-            <div className="container mx-auto px-4 mb-16">
+            <div className="container mx-auto px-4 mt-16 mb-16">
               <div className="text-center mb-16">
-                <motion.h3 variants={fadeInUp} className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                  Portale z którymi współpracuje wtyczka JustSend.cv
-                </motion.h3>
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight"
+                >
+                  Gdzie możesz użyć wtyczki <span className="text-[#00B2FF]">JustSend</span><span className="text-gray-900 dark:text-white">.</span><span className="text-[#00B2FF]">cv</span>
+                </motion.h2>
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
+                >
+                  Nasza wtyczka współpracuje z najpopularniejszymi portalami pracy
+                </motion.p>
 
                 <motion.div
                   variants={staggerContainer}
@@ -557,16 +653,76 @@ export default function StartPage() {
             </div>
           </motion.section>
 
+           {/* Articles Section - Sekcja z artykułami */}
+           <motion.section
+            ref={articlesRef}
+            initial="hidden"
+            animate={isArticlesInView ? "visible" : "hidden"}
+            variants={fadeInUp}
+            className="w-full py-24 px-4"
+          >
+            <div className="container mx-auto px-4 mt-16 mb-16">
+              <div className="text-center mb-16">
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight"
+                >
+                  Artykuły i porady
+                </motion.h2>
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+                >
+                  Poznaj najnowsze trendy w rekrutacji i dowiedz się, jak skutecznie poszukiwać pracy
+                </motion.p>
+              </div>
+
+              {/* Główne artykuły */}
+              <motion.div
+                variants={staggerContainer}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+              >
+                {articles.map((article) => (
+                  <motion.div
+                    key={article.id}
+                    variants={itemFadeIn}
+                    className="bg-white dark:bg-[#0A0F1C] rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="relative h-64 w-full">
+                      <Image
+                        src={article.image}
+                        alt={article.imageAlt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
+                        {article.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        {article.excerpt}
+                      </p>
+                      <Button className="bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white" asChild>
+                        <a href={`/article/${article.id}`}>Czytaj więcej</a>
+                      </Button>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </motion.section>
+
            {/* Pricing Section - Sekcja z planami cenowymi i animacją */}
            <motion.section
             ref={pricingRef}
             initial="hidden"
             animate={isPricingInView ? "visible" : "hidden"}
             variants={pricingAnimation}
-            className="w-full py-24"
+            className="w-full py-24 px-4"
             id="pricing"
           >
-            <div className="container mx-auto px-4 mb-16">
+            <div className="container mx-auto px-4 mt-16 mb-16">
               <div className="text-center mb-16">
                 <motion.h2
                   variants={pricingItemAnimation}
@@ -677,15 +833,15 @@ export default function StartPage() {
             initial="hidden"
             animate={isFaqInView ? "visible" : "hidden"}
             variants={fadeInUp}
-            className="w-full py-24"
+            className="w-full py-24 px-4"
             id="faq"
           >
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 mt-16 mb-16">
               <div className="text-center mb-16">
                 {/* Gradientowy nagłówek dla wyróżnienia */}
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-4xl md:text-5xl font-bold mb-4 text-[#00B2FF] bg-clip-text"
+                  className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight bg-clip-text"
                 >
                   Często zadawane pytania
                 </motion.h2>
