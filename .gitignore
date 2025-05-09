@@ -21,7 +21,10 @@
 # next.js
 /.next/
 /out/
-
+supabase/schema.sql
+schema.sql
+schema.txt
+/sql
 # production
 /build
 
