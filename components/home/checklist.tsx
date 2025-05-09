@@ -97,7 +97,7 @@ export function Checklist() {
                   <div className={`
                     h-5 w-5 rounded border-2 
                     ${task.completed 
-                      ? 'border-gradient-to-r from-blue-500 to-blue-600 dark:border-gradient-to-r dark:from-blue-500 dark:to-blue-600 bg-gradient-to-r from-blue-500 to-blue-600 dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600' 
+                      ? 'border-gradient-to-r border-blue-500 dark:border-gradient-to-r dark:border-blue-500 bg-gradient-to-r from-blue-500 to-blue-600 dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600' 
                       : 'border-gray-300 dark:border-gray-600'
                     }
                     flex items-center justify-center
