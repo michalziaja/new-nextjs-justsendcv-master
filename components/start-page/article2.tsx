@@ -16,7 +16,7 @@ const article = {
   secondImage: "/art/art4.jpg",
   secondImageAlt: "Cyfrowe narzędzia rekrutacyjne",
   readTime: "4 min",
-  date: "5 października 2023",
+  date: "5 maja 2025",
   author: "Zespół JustSend.cv",
   tags: ["narzędzia", "aplikacje", "CV", "rekrutacja", "efektywność"]
 }
@@ -43,7 +43,7 @@ export default function Article2() {
         <div className="absolute bottom-50 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-cyan-500/80 to-transparent dark:via-cyan-500/30" />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 mt-10">
         <main className="flex flex-col items-center">
           {/* Nagłówek artykułu */}
           <motion.section
@@ -53,16 +53,6 @@ export default function Article2() {
             className="w-full py-24 px-4"
           >
             <div className="container mx-auto">
-              {/* Nawigacja powrotu */}
-              <div className="mb-8">
-                <Button variant="ghost" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#00B2FF]" asChild>
-                  <Link href="/">
-                    <ArrowLeft className="h-4 w-4" />
-                    Powrót do strony głównej
-                  </Link>
-                </Button>
-              </div>
-
               {/* Główny nagłówek */}
               <div className="max-w-4xl mx-auto">
                 <div className="flex flex-wrap items-center gap-2 mb-6">
@@ -258,15 +248,23 @@ export default function Article2() {
 
               {/* Tagi i udostępnianie */}
               <div className="max-w-4xl mx-auto mt-12 border-t border-gray-200 dark:border-gray-800 pt-8">
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {article.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
+                <div className="flex flex-wrap justify-between items-center">
+                  <div className="flex flex-wrap gap-2 mb-4 md:mb-0">
+                    {article.tags.map((tag) => (
+                      <span 
+                        key={tag} 
+                        className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                  <Button variant="ghost" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#00B2FF]" asChild>
+                    <Link href="/">
+                      <ArrowLeft className="h-4 w-4" />
+                      Powrót do strony głównej
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>

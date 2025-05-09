@@ -38,6 +38,8 @@ interface AppFeature {
 interface Site {
   name: string
   logo: string
+  logoDark?: string
+  url: string
 }
 
 interface Plan {
@@ -157,16 +159,21 @@ const appFeatures: AppFeature[] = [
 ]
 
 const sites: Site[] = [
-  { name: "pracuj.pl", logo: "/sites/pracuj.pl.png" },
-  { name: "praca.pl", logo: "/sites/praca.png" },
-  { name: "linkedin.com", logo: "/sites/linkedin.png" },
-  { name: "nofluffjobs.com", logo: "/sites/nofluffjobs.png" },
-  { name: "justjoin.it", logo: "/sites/justjoin.png" },
-  { name: "indeed.com", logo: "/sites/indeed.jpg" },
-  { name: "gowork.pl", logo: "/sites/gowork.png" },
-  { name: "aplikuj.pl", logo: "/sites/aplikuj.png" },
-  { name: "rocketjobs.pl", logo: "/sites/rocketjobs.png" },
-  { name: "kwf.pl", logo: "/sites/kwf.png" },
+  { name: "pracuj.pl", logo: "/sites/pracuj.pl.png", url: "https://pracuj.pl" },
+  { name: "praca.pl", logo: "/sites/praca.png", url: "https://praca.pl" },
+  { name: "linkedin.com", logo: "/sites/linkedin.png", logoDark: "/sites/linkedin-dark.png", url: "https://linkedin.com" },
+  { name: "nofluffjobs.com", logo: "/sites/NoFluffJobs.png", url: "https://nofluffjobs.com" },
+  { name: "justjoin.it", logo: "/sites/justjoinit.png", logoDark: "/sites/justjoinit-dark.png", url: "https://justjoin.it" },
+  { name: "indeed.com", logo: "/sites/indeed.png", logoDark: "/sites/indeed-dark.png", url: "https://indeed.com" },
+  { name: "gowork.pl", logo: "/sites/gowork.png", url: "https://gowork.pl" },
+  { name: "aplikuj.pl", logo: "/sites/aplikuj.png", logoDark: "/sites/aplikuj-dark.png", url: "https://aplikuj.pl" },
+  { name: "rocketjobs.pl", logo: "/sites/rocketjobs.png", url: "https://rocketjobs.pl" },
+  { name: "kwf.pl", logo: "/sites/kwf.png", logoDark: "/sites/kwf-dark.png", url: "https://kwf.pl" },
+  { name: "solid.jobs", logo: "/sites/solid.png", logoDark: "/sites/solid-dark.png", url: "https://solid.jobs" },
+  { name: "olx.pl", logo: "/sites/olx.png", logoDark: "/sites/olx-dark.png", url: "https://olx.pl" },
+  { name: "nuzle.pl", logo: "/sites/nuzle.png", url: "https://nuzle.pl" },
+  { name: "infopraca.pl", logo: "/sites/infopraca.png", url: "https://infopraca.pl" },
+  { name: "jober.pl", logo: "/sites/jober.png", url: "https://jober.pl" },
 ]
 
 const plans: Plan[] = [
@@ -261,7 +268,7 @@ const articles: Article[] = [
     id: "art1",
     title: "Nowe trendy w rekrutacji – jak zmieniają się procesy rekrutacyjne na rynku pracy",
     excerpt: "Rynek pracy dynamicznie się zmienia, a procesy rekrutacyjne przechodzą prawdziwą rewolucję. Cyfryzacja, automatyzacja i rosnące oczekiwania kandydatów sprawiają, że zarówno firmy, jak i osoby poszukujące pracy muszą dostosowywać się do nowych realiów.",
-    image: "/art/csm_baramundi_online-documentation_square_1970ab9dde.jpg",
+    image: "/art/art1.jpg",
     imageAlt: "Nowe trendy w rekrutacji",
     content: "Rynek pracy dynamicznie się zmienia, a procesy rekrutacyjne przechodzą prawdziwą rewolucję. Cyfryzacja, automatyzacja i rosnące oczekiwania kandydatów sprawiają, że zarówno firmy, jak i osoby poszukujące pracy muszą dostosowywać się do nowych realiów. Odkryj, jakie trendy kształtują obecnie rekrutację i jak możesz je wykorzystać, by zwiększyć swoje szanse na sukces zawodowy.\n\nSztuczna inteligencja w rekrutacji – rewolucja dla kandydatów i pracodawców\nSztuczna inteligencja (AI) coraz częściej wspiera procesy rekrutacyjne we wszystkich branżach. Firmy wykorzystują algorytmy do analizy CV, selekcji kandydatów i dopasowywania ich do konkretnych stanowisk. Dla kandydatów oznacza to konieczność tworzenia dokumentów aplikacyjnych zoptymalizowanych pod kątem systemów ATS (Applicant Tracking System), które automatycznie skanują CV w poszukiwaniu odpowiednich słów kluczowych.\n\nNowoczesne kreatory CV z AI, takie jak JustSend.cv, pomagają w przygotowaniu dokumentów, które łatwo przechodzą przez automatyczną selekcję. Dzięki funkcjom takim jak inteligentne dopasowanie CV do oferty, personalizacja szablonów czy wsparcie AI w optymalizacji treści, kandydaci mogą znacząco zwiększyć swoje szanse na zaproszenie do kolejnych etapów rekrutacji."
   },
@@ -269,7 +276,7 @@ const articles: Article[] = [
     id: "art2",
     title: "Jak ułatwić sobie szukanie pracy – nowoczesne narzędzia dla każdego kandydata",
     excerpt: "Poszukiwanie pracy to proces, który może być stresujący i czasochłonny. Na szczęście, dzięki nowoczesnym narzędziom i aplikacjom, możesz znacząco ułatwić sobie cały proces – od tworzenia CV, przez śledzenie aplikacji, aż po przygotowanie do rozmowy kwalifikacyjnej.",
-    image: "/art/opportunity-3185099_960_720-1-768x586.jpg",
+    image: "/art/art3.jpg",
     imageAlt: "Nowoczesne narzędzia do szukania pracy",
     content: "Poszukiwanie pracy to proces, który może być stresujący i czasochłonny. Na szczęście, dzięki nowoczesnym narzędziom i aplikacjom, możesz znacząco ułatwić sobie cały proces – od tworzenia CV, przez śledzenie aplikacji, aż po przygotowanie do rozmowy kwalifikacyjnej.\n\nInteligentny kreator CV z AI\nKreator CV oparty na sztucznej inteligencji to nieoceniona pomoc dla każdego, kto chce przygotować profesjonalny dokument aplikacyjny. Narzędzia takie jak JustSend.cv oferują:\n\nSzablony CV zoptymalizowane pod systemy ATS\n\nSugestie treści generowane przez AI\n\nMożliwość personalizacji CV pod konkretne ogłoszenie\n\nWsparcie w tworzeniu listu motywacyjnego i profilu zawodowego\n\nDzięki temu Twoje CV będzie nie tylko atrakcyjne wizualnie, ale także skuteczne w oczach rekruterów i systemów automatycznej selekcji."
   }
@@ -638,14 +645,28 @@ export default function StartPage() {
                       variants={itemFadeIn}
                       className="flex items-center justify-center group"
                     >
-                      <div className="relative h-12 w-24 transition-all transform group-hover:scale-110 duration-300 filter hover:drop-shadow-lg">
+                      {/* Dodanie linka do strony portalu */}
+                      <a 
+                        href={site.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="relative h-12 w-24 transition-all transform group-hover:scale-110 duration-300 filter hover:drop-shadow-lg"
+                      >
+                        {/* Logo w trybie jasnym - pokazywane tylko w jasnym motywie */}
                         <Image
-                          src={site.logo || "/placeholder.svg"}
+                          src={site.logo}
                           alt={`${site.name} logo`}
                           fill
-                          className="object-contain"
+                          className="object-contain block dark:hidden"
                         />
-                      </div>
+                        {/* Logo w trybie ciemnym - pokazywane tylko w ciemnym motywie */}
+                        <Image
+                          src={site.logoDark || site.logo}
+                          alt={`${site.name} logo`}
+                          fill
+                          className="object-contain hidden dark:block"
+                        />
+                      </a>
                     </motion.div>
                   ))}
                 </motion.div>
