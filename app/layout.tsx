@@ -18,6 +18,26 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "JustSend.cv",
   description: "Zmień sposób w jaki szukasz pracy",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        sizes: "any"
+      }
+    ],
+    apple: [
+      {
+        url: "/favicon.ico",
+        sizes: "any"
+      }
+    ],
+    shortcut: [
+      {
+        url: "/favicon.ico",
+        sizes: "any"
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
