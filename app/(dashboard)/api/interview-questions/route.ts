@@ -239,3 +239,7 @@ export async function POST(req: Request) {
     }
   }
 }
+
+export const config = {
+  runtime: 'edge'
+};
