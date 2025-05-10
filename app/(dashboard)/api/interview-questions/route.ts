@@ -3,22 +3,11 @@ import { GoogleGenAI, GenerateContentResponse } from '@google/genai';
 
 // Sprawdzamy dostępność klucza API w sposób bardziej widoczny
 const apiKey = process.env.GEMINI_API_KEY || '';
-console.log(`Klucz API Gemini dostępny: ${apiKey ? 'TAK' : 'NIE'}`);
-
 if (!apiKey) {
   console.error('❌ BŁĄD: Brak klucza API Gemini (GEMINI_API_KEY)!');
 }
-
 // Inicjalizacja klienta Google Gen AI tylko gdy klucz jest dostępny
-let ai: any = null;
-try {
-  if (apiKey) {
-    ai = new GoogleGenAI({ apiKey });
-    console.log('✅ Klient GoogleGenAI zainicjalizowany');
-  }
-} catch (error) {
-  console.error('❌ Błąd inicjalizacji GoogleGenAI:', error);
-}
+const ai = new GoogleGenAI({ apiKey });
 
 // Dodajemy Cache dla ostatnich zapytań, aby uniknąć podwójnego wywoływania API
 const requestCache = new Map<string, Promise<NextResponse>>();
@@ -76,7 +65,7 @@ function generateFallbackQuestions(position: string, companyName: string): Quest
 export async function POST(req: Request) {
   console.log('🔄 Rozpoczęcie obsługi żądania POST do /api/interview-questions');
   
-  if (!apiKey || !ai) {
+  if (!apiKey) {
     console.error('❌ Brak klucza API lub klient nie został zainicjalizowany');
     return NextResponse.json({
       success: true, // Oznaczamy jako sukces, aby nie przerywać flow aplikacji

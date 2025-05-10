@@ -2,20 +2,20 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Inicjalizacja klienta Gemini
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || "";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
 // Sprawdzenie klucza API
-if (!GOOGLE_API_KEY) {
+if (!GEMINI_API_KEY) {
   console.error("❌ BŁĄD: Brak klucza API Gemini (GOOGLE_API_KEY) w zmiennych środowiskowych!");
 }
 
-export const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
+export const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 // Funkcja do tworzenia modelu z instrukcją systemową
 export function createModel(modelName: string, systemInstruction: string) {
   try {
-    if (!GOOGLE_API_KEY) {
-      throw new Error("Brak klucza API Gemini (GOOGLE_API_KEY)");
+    if (!GEMINI_API_KEY) {
+      throw new Error("Brak klucza API Gemini (GEMINI_API_KEY)");
     }
     
     console.log(`🤖 Gemini: Tworzenie modelu ${modelName}`);
