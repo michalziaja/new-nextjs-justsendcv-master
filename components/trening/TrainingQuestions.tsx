@@ -76,49 +76,23 @@ export default function TrainingQuestions({
   }
 
   // Sprawdzamy, czy pytania są dostępne
-  if (!trainingType || !questions || questions.length === 0) {
+  if (!trainingType || !questions.length) {
     return (
       <div
         className="bg-white rounded-lg shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
       >
         <div className="bg-white rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
           <div className="text-5xl mb-6">🎯</div>
-          <h2 className="text-xl font-semibold mb-4">Brak pytań rekrutacyjnych</h2>
+          <h2 className="text-xl font-semibold mb-4">Wybierz ofertę pracy</h2>
           <p className="text-gray-600 mb-6">
-            {!trainingType 
-              ? "Wybierz ofertę pracy, aby rozpocząć przygotowania do rozmowy."
-              : "Nie udało się wygenerować pytań. Spróbuj ponownie lub wybierz inną ofertę pracy."}
+            Wybierz ofertę pracy, aby rozpocząć przygotowania do rozmowy.
           </p>
-          {/* Dodajemy komunikat o problemach z API */}
-          {trainingType && (
-            <div className="text-sm text-yellow-600 bg-yellow-50 p-3 rounded-lg">
-              <p className="font-medium">Możliwe przyczyny problemu:</p>
-              <ul className="list-disc list-inside mt-1">
-                <li>Tymczasowy problem z połączeniem</li>
-                <li>Problem z konfiguracją API</li>
-                <li>Limit zapytań do API został wyczerpany</li>
-              </ul>
-            </div>
-          )}
         </div>
       </div>
     );
   }
 
   const currentQuestion = questions[currentQuestionIndex];
-  
-  // Dodajemy sprawdzenie, czy pytanie istnieje
-  if (!currentQuestion) {
-    setCurrentQuestionIndex(0);
-    return (
-      <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden flex flex-col">
-        <div className="flex-grow flex flex-col items-center justify-center">
-          <div className="text-3xl mb-3">⚠️</div>
-          <p className="text-gray-600">Wystąpił problem z wyświetleniem pytania. Odświeżamy...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div

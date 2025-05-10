@@ -81,29 +81,12 @@ export async function POST(req: Request) {
     return NextResponse.json({
       success: true, // Oznaczamy jako sukces, aby nie przerywać flow aplikacji
       error: 'Konfiguracja API niekompletna: Brak klucza API Gemini',
-      questions: generateFallbackQuestions("tego stanowiska", "tej firmie")  // Zwracamy awaryjne pytania
+      questions: []  // Pusta tablica pytań
     });
   }
 
   try {
-    // Debugowanie nagłówków i metody żądania 
-    console.log('Metoda żądania:', req.method);
-    console.log('Nagłówki żądania:', Object.fromEntries(req.headers.entries()));
-    
-    // Sprawdzamy, czy request jest prawidłowy JSON
-    let body;
-    try {
-      body = await req.json();
-    } catch (parseError) {
-      console.error('❌ Błąd parsowania JSON z body:', parseError);
-      return NextResponse.json({ 
-        success: false, 
-        error: 'Nieprawidłowy format danych',
-        questions: generateFallbackQuestions("tego stanowiska", "tej firmie")
-      }, { status: 400 });
-    }
-    
-    const { companyName, position, description } = body;
+    const { companyName, position, description } = await req.json();
     console.log(`📝 Otrzymano dane: firma=${companyName}, stanowisko=${position}`);
     
     if (!companyName || !position) {
@@ -111,7 +94,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ 
         success: false, 
         error: 'Brak nazwy firmy lub stanowiska',
-        questions: generateFallbackQuestions("tego stanowiska", "tej firmie") 
+        questions: [] 
       }, { status: 400 });
     }
 
@@ -160,28 +143,12 @@ export async function POST(req: Request) {
 
         console.log('📝 Wysyłanie zapytania do Gemini API');
         
-        // Spróbuj użyć API Gemini - dodajemy obsługę błędu CORS
+        // Spróbuj użyć API Gemini
         try {
-          // Dodajemy timeout na wypadek, gdyby API nie odpowiedziało
-          const timeoutPromise = new Promise<GenerateContentResponse | null>((resolve) => {
-            setTimeout(() => {
-              console.warn('⚠️ Timeout - brak odpowiedzi z Gemini API');
-              resolve(null);
-            }, 15000); // 15 sekund timeout
-          });
-
-          // Wywołujemy faktyczne zapytanie do Gemini
-          const apiPromise = ai.models.generateContent({
+          const result: GenerateContentResponse = await ai.models.generateContent({
             model: 'gemini-2.0-flash',
             contents: [{ text: prompt }],
           });
-          
-          // Używamy Promise.race aby obsłużyć timeout
-          const result = await Promise.race([apiPromise, timeoutPromise]);
-          
-          if (!result) {
-            throw new Error('Timeout - API nie odpowiada w oczekiwanym czasie');
-          }
 
           const candidates = result.candidates;
           if (!candidates || candidates.length === 0) {
@@ -222,7 +189,6 @@ export async function POST(req: Request) {
               });
             } else {
               console.warn("⚠️ Nie znaleziono obiektu JSON w odpowiedzi, używam zapasowych pytań");
-              console.log("Odpowiedź API:", text);
               return NextResponse.json({
                 success: true,
                 questions: generateFallbackQuestions(position, companyName)
@@ -230,8 +196,6 @@ export async function POST(req: Request) {
             }
           } catch (parseError) {
             console.error("❌ Błąd parsowania JSON:", parseError);
-            // Zapisujemy pełną odpowiedź API do debugowania
-            console.log("Odpowiedź API:", text);
             return NextResponse.json({
               success: true,
               questions: generateFallbackQuestions(position, companyName)
