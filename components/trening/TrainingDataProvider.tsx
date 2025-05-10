@@ -221,6 +221,15 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
     setIsGeneratingQuestions(true);
 
     try {
+      // Pobieramy najpierw aktualny token dostępu - to rozwiąże problem 406 Not Acceptable
+      const { data: sessionData } = await supabase.auth.getSession();
+      
+      if (!sessionData.session) {
+        console.error("Brak aktywnej sesji użytkownika");
+        throw new Error("Brak autoryzacji");
+      }
+      
+      // Teraz wykonujemy zapytanie z prawidłowym nagłówkiem autoryzacji
       const { data, error } = await supabase
         .from('training_data')
         .select('questions')
