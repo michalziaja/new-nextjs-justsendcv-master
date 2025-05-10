@@ -258,7 +258,7 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
         body: JSON.stringify({
           companyName: jobOffer.company,
           position: jobOffer.title,
-          description: jobOffer.full_description || ''
+          description: jobOffer.full_description
         })
       });
       
