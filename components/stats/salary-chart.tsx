@@ -43,17 +43,24 @@ export function SalaryChartSection({ salaryRanges, isLoading }: SalaryChartProps
   };
 
   return (
-    <Card className="overflow-hidden h-[268px] bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
+    <Card className="h-full overflow-hidden bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
       <CardHeader className="flex flex-row items-center justify-between -mt-2">
         <div className="flex items-center gap-2">
           <CreditCard className="h-5 w-5 text-green-500" />
           <CardTitle className="text-md font-medium">Wynagrodzenia w ofertach</CardTitle>
         </div>
       </CardHeader>
-      <CardContent className="p-0">
+      <CardContent className="p-0 -mt-2">
         {isLoading ? (
-          <div className="px-6 py-2">
-            <Skeleton className="h-[230px] w-full" />
+          <div className="flex items-center justify-center h-[170px] w-full">
+            <div className="w-[90%] h-[90%] flex flex-col gap-2 justify-center">
+              <Skeleton className="h-4 w-16" />
+              <Skeleton className="h-8 w-full" />
+              <Skeleton className="h-8 w-full" />
+              <Skeleton className="h-8 w-full" />
+              <Skeleton className="h-8 w-full" />
+              <Skeleton className="h-8 w-full" />
+            </div>
           </div>
         ) : salaryRanges.length > 0 ? (
           <div className="h-[230px] px-3 -mt-5">
@@ -122,7 +129,7 @@ export function SalaryChartSection({ salaryRanges, isLoading }: SalaryChartProps
             </ResponsiveContainer>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-[230px] px-6">
+          <div className="flex items-center justify-center -mt-4 h-[230px] px-6">
             <p className="text-muted-foreground">Brak danych o wynagrodzeniach</p>
           </div>
         )}

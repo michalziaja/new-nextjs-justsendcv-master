@@ -25,7 +25,11 @@ export function TechnologiesCard({ technologies, isLoading }: { technologies: Sk
       </CardHeader>
       <CardContent>
         {isLoading ? (
-          <Skeleton className="h-[200px] w-full" />
+          <div className="flex items-center justify-center h-[170px] w-full">
+            <div className="w-[90%] h-[90%]">
+              <Skeleton className="h-full w-full rounded-md" />
+            </div>
+          </div>
         ) : technologies.length > 0 ? (
           <div className="flex flex-wrap gap-2 justify-center">
             {technologies.map((tech, index) => (

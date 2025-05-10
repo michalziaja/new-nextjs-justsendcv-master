@@ -16,7 +16,7 @@ interface SkillItem {
 
 export function SkillsCard({ skills, isLoading }: { skills: SkillItem[], isLoading: boolean }) {
   return (
-    <Card className="overflow-hidden h-[250px] bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
+    <Card className="h-full overflow-hidden bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
       <CardHeader className="flex flex-row items-center justify-between -mt-2">
         <div className="flex items-center gap-2">
           <Brain className="h-5 w-5 text-blue-500" />
@@ -25,7 +25,11 @@ export function SkillsCard({ skills, isLoading }: { skills: SkillItem[], isLoadi
       </CardHeader>
       <CardContent>
         {isLoading ? (
-          <Skeleton className="h-[200px] w-full" />
+          <div className="flex items-center justify-center h-[170px] w-full">
+            <div className="w-[90%] h-[90%]">
+              <Skeleton className="h-full w-full rounded-md" />
+            </div>
+          </div>
         ) : skills.length > 0 ? (
           <div className="flex flex-wrap gap-2 justify-center">
             {skills.map((skill, index) => (

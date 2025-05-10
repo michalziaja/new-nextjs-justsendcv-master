@@ -182,7 +182,11 @@ export function JobOffersSection({ timelineData, isLoading }: JobOffersSectionPr
       </CardHeader> */}
       <CardContent className="mt-2">
         {isLoading ? (
-          <Skeleton className="h-[300px] w-full" />
+          <div className="flex items-center justify-center h-[200px] w-full">
+            <div className="w-[90%] h-[90%]">
+              <Skeleton className="h-full w-full rounded-md" />
+            </div>
+          </div>
         ) : filteredData.length > 0 ? (
           <div className="flex gap-4">
             <div className="flex-1">

@@ -1,11 +1,12 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { InfoIcon } from 'lucide-react';
+import { InfoIcon, SearchIcon } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 import { useAssistant } from './assistantContext';
 
 export default function InputForm() {
@@ -24,6 +25,24 @@ export default function InputForm() {
     deleteTemplate,
     generateText 
   } = useAssistant();
+
+  // Stan dla wyszukiwania ofert
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredOffers, setFilteredOffers] = useState(jobOffers);
+
+  // Efekt filtrowania ofert przy zmianie wyszukiwania lub listy ofert
+  useEffect(() => {
+    if (searchQuery.trim() === '') {
+      setFilteredOffers(jobOffers);
+    } else {
+      const query = searchQuery.toLowerCase();
+      const filtered = jobOffers.filter(offer => 
+        offer.title.toLowerCase().includes(query) || 
+        offer.company.toLowerCase().includes(query)
+      );
+      setFilteredOffers(filtered);
+    }
+  }, [searchQuery, jobOffers]);
 
   // Mapowanie statusów EN->PL
   const statusMap: Record<string, string> = {
@@ -85,6 +104,11 @@ export default function InputForm() {
                     <div className="flex justify-between items-start">
                       <div>
                         <h3 className="font-medium text-xs">{cv.name}</h3>
+                        {cv.job_offer_id && (
+                          <span className="text-[10px] text-gray-500">
+                            Dopasowane do oferty
+                          </span>
+                        )}
                       </div>
                       {selectedUserCV === cv.id && (
                         <span className="text-purple-500 text-xs">✓</span>
@@ -100,13 +124,26 @@ export default function InputForm() {
         {/* Wybór oferty - prawa kolumna */}
         <div>
           <h3 className="text-sm font-medium mb-2">Oferty pracy</h3>
-          <div className="overflow-y-auto" style={{ maxHeight: 'calc(27vh)' }}>
-            {jobOffers.length === 0 ? (
+          
+          {/* Pole wyszukiwania ofert */}
+          <div className="relative mb-2">
+            <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+            <Input 
+              type="text" 
+              placeholder="Szukaj ofert..." 
+              className="pl-8 pr-2 py-1 text-xs h-8"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+          
+          <div className="overflow-y-auto" style={{ maxHeight: 'calc(23vh)' }}>
+            {filteredOffers.length === 0 ? (
               <div className="p-4 text-gray-500 text-center text-xs border border-gray-200 rounded-md">
-                Nie masz żadnych zapisanych ofert.
+                {searchQuery.trim() !== '' ? 'Nie znaleziono ofert pasujących do wyszukiwania' : 'Nie znaleziono ofert pracy'}
               </div>
             ) : (
-              jobOffers.map(offer => (
+              filteredOffers.map(offer => (
                 <div 
                   key={offer.id} 
                   className={`border ${selectedJobOffer === offer.id 
@@ -121,13 +158,11 @@ export default function InputForm() {
                         <h3 className="font-medium text-xs">{offer.title}</h3>
                         <p className="text-[10px] text-gray-600">{offer.company}</p>
                       </div>
-                      {offer.status && (
-                        <div className="flex items-center">
-                          <span className={`text-[10px] px-1.5 py-0.5 rounded text-white ${getStatusStyles(offer.status || '')}`}>
-                            {statusMap[offer.status || ''] || offer.status}
-                          </span>
-                        </div>
-                      )}
+                      <div className="flex items-center">
+                        <span className={`text-[10px] px-1.5 py-0.5 rounded text-white ${getStatusStyles(offer.status || 'saved')}`}>
+                          {statusMap[offer.status || 'saved'] || offer.status || 'zapisana'}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -146,7 +181,7 @@ export default function InputForm() {
         <Textarea 
           id="additional-info" 
           placeholder="Podaj dodatkowe informacje, które powinny zostać uwzględnione w wiadomości..." 
-          className="min-h-[120px]"
+          className="min-h-[85px]"
           value={additionalInfo}
           onChange={(e) => setAdditionalInfo(e.target.value)}
         />
@@ -172,7 +207,7 @@ export default function InputForm() {
         )}
       </Button>
       
-      {/* Zapisane szablony - można zachować, ale już z pominięciem <Select> */}
+      {/* Zapisane szablony */}
       {savedTemplates.length > 0 && (
         <div className="mt-4 p-3 bg-blue-50 border border-blue-100 rounded">
           <p className="text-xs text-blue-700 mb-2 font-medium">

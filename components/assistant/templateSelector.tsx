@@ -32,7 +32,7 @@ export default function TemplateSelector() {
   };
 
   return (
-    <div className="w-full mb-8 mt-6">
+    <div className="w-full">
       {/* Karty szablonów w układzie siatki */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
         {documentTemplates.map((template) => (

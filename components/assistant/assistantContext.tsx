@@ -22,6 +22,7 @@ type JobOffer = {
 type UserCV = {
   id: string;
   name: string;
+  job_offer_id?: string;
 };
 
 type SavedTemplate = {
@@ -39,7 +40,7 @@ const exampleJobOffers: JobOffer[] = [
 
 const exampleUserCVs: UserCV[] = [
   { id: 'cv-1', name: 'CV Techniczne' },
-  { id: 'cv-2', name: 'CV Kreatywne' },
+  { id: 'cv-2', name: 'CV Kreatywne', job_offer_id: 'job-1' },
   { id: 'cv-3', name: 'CV Ogólne' },
 ];
 
@@ -84,10 +85,11 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
       try {
         const supabase = createClient();
         
-        // Pobieranie ofert pracy
+        // Pobieranie ofert pracy - wszystkie oferty, nie tylko zapisane
         const { data: jobOffersData, error: jobOffersError } = await supabase
           .from('job_offers')
-          .select('id, title, company');
+          .select('id, title, company, status')
+          .order('created_at', { ascending: false });
           
         if (!jobOffersError && jobOffersData && jobOffersData.length > 0) {
           setJobOffers(jobOffersData);
@@ -96,7 +98,7 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
         // Pobieranie CV użytkownika
         const { data: userCVsData, error: userCVsError } = await supabase
           .from('user_cvs')
-          .select('id, name');
+          .select('id, name, job_offer_id');
           
         if (!userCVsError && userCVsData && userCVsData.length > 0) {
           setUserCVs(userCVsData);

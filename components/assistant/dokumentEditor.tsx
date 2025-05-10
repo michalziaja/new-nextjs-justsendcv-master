@@ -208,7 +208,7 @@ export default function DokumentEditor() {
         </div>
       )}
       
-      <div className="relative min-h-[400px] rounded-sm border border-gray-200">
+      <div className="relative rounded-sm border border-gray-200">
         {isGenerating && (
           <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-10 rounded-sm">
             <div className="flex flex-col items-center">

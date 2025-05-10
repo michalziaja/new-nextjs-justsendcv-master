@@ -59,8 +59,41 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
     return value.toString();
   };
 
+  // Komponent legendy dla wykresów
+  const ChartLegend = ({ items }: { items: (PortalData | StatusData)[] }) => {
+    // Sortujemy dane według wartości (od największej)
+    const sortedItems = [...items].sort((a, b) => b.value - a.value);
+    
+    // Suma wszystkich wartości dla obliczenia procentów
+    const total = sortedItems.reduce((sum, item) => sum + item.value, 0);
+    
+    return (
+      <div className="flex flex-col px-2 h-full justify-center overflow-y-auto">
+        {sortedItems.map((item, index) => (
+          <div 
+            key={index} 
+            className="flex items-center gap-1 mb-1 text-xs transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800 p-0.5 rounded"
+            onMouseEnter={() => activeTab === "portals" ? handlePortalMouseEnter(item, index) : handleStatusMouseEnter(item, index)}
+            onMouseLeave={() => activeTab === "portals" ? handlePortalMouseLeave() : handleStatusMouseLeave()}
+          >
+            <div 
+              className="w-3 h-3 rounded-sm" 
+              style={{ backgroundColor: item.color }}
+            />
+            <span className="font-medium truncate max-w-[80px]" title={item.name}>
+              {item.name}
+            </span>
+            <span className="ml-auto font-semibold">
+              {Math.round((item.value / total) * 100)}%
+            </span>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
-    <Card className="overflow-hidden h-[268px] bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
+    <Card className="h-full overflow-hidden bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
       <CardHeader className="flex flex-row items-center justify-between -mt-4 px-2">
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as "portals" | "statuses")} className="w-full">
           <TabsList className="grid w-full grid-cols-2">
@@ -81,17 +114,19 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
       </CardHeader>
       <CardContent className="p-0">
         {isLoading ? (
-          <div className="px-6 py-2">
-            <Skeleton className="h-[230px] w-full" />
+          <div className="flex items-center justify-center h-[170px] w-full">
+            <div className="w-[90%] h-[90%]">
+              <Skeleton className="h-full w-full rounded-full" />
+            </div>
           </div>
         ) : (
           <>
             {/* Zawartość zakładki Portale */}
             {activeTab === "portals" && (
               portals.length > 0 ? (
-                <div className="flex flex-row h-[230px]">
+                <div className="flex flex-row h-[170px]">
                   {/* Wykres po lewej stronie */}
-                  <div className="w-full flex items-center justify-center -mt-5">
+                  <div className="w-[60%] flex items-center justify-center -mt-1">
                     <div className="w-full h-full">
                       <PieChart 
                         data={portals.map((portal, i) => ({
@@ -101,8 +136,8 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
                         colors={portals.map(portal => portal.color)}
                         dataKey="value"
                         nameKey="name"
-                        innerRadius={55}
-                        outerRadius={85}
+                        innerRadius={40}
+                        outerRadius={65}
                         paddingAngle={3}
                         startAngle={90}
                         endAngle={-270}
@@ -110,9 +145,14 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
                       />
                     </div>
                   </div>
+                  
+                  {/* Legenda po prawej stronie */}
+                  <div className="w-[40%] flex items-center">
+                    <ChartLegend items={portals} />
+                  </div>
                 </div>
               ) : (
-                <div className="flex items-center justify-center h-[230px] px-6">
+                <div className="flex items-center justify-center h-[170px] px-6">
                   <p className="text-muted-foreground">Brak danych o portalach</p>
                 </div>
               )
@@ -121,9 +161,9 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
             {/* Zawartość zakładki Statusy */}
             {activeTab === "statuses" && (
               statuses.length > 0 ? (
-                <div className="flex flex-row h-[230px]">
+                <div className="flex flex-row h-[170px]">
                   {/* Wykres po lewej stronie */}
-                  <div className="w-full flex items-center justify-center -mt-5">
+                  <div className="w-[60%] flex items-center justify-center -mt-1">
                     <div className="w-full h-full">
                       <PieChart 
                         data={statuses.map((status, i) => ({
@@ -133,8 +173,8 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
                         colors={statuses.map(status => status.color)}
                         dataKey="value"
                         nameKey="name"
-                        innerRadius={55}
-                        outerRadius={85}
+                        innerRadius={40}
+                        outerRadius={65}
                         paddingAngle={3}
                         startAngle={90}
                         endAngle={-270}
@@ -142,9 +182,14 @@ export function PortalsStatusesSection({ portals, statuses, isLoading }: Portals
                       />
                     </div>
                   </div>
+                  
+                  {/* Legenda po prawej stronie */}
+                  <div className="w-[40%] mb-6 flex items-center">
+                    <ChartLegend items={statuses} />
+                  </div>
                 </div>
               ) : (
-                <div className="flex items-center justify-center h-[230px] px-6">
+                <div className="flex items-center justify-center h-[170px] px-6">
                   <p className="text-muted-foreground">Brak danych o statusach</p>
                 </div>
               )
