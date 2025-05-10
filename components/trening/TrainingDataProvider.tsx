@@ -263,32 +263,42 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
       });
       
       if (!response.ok) {
-        throw new Error(`Błąd API: ${response.status}`);
+        console.warn(`Odpowiedź API ze statusem błędu: ${response.status}`);
       }
       
       const data = await response.json();
       
-      if (data.success && data.questions && data.questions.length > 0) {
-        // Sprawdzamy, czy pytania mają poprawną strukturę
-        const validQuestions = data.questions.every((q: any) => 
-          q.id && typeof q.id === 'number' &&
-          q.question && typeof q.question === 'string' &&
-          Array.isArray(q.tips) && q.tips.length > 0
-        );
+      // Obsługa zarówno przypadku sukcesu jak i błędu, o ile mamy pytania
+      if (data.questions && data.questions.length > 0) {
+        try {
+          // Sprawdzamy, czy pytania mają poprawną strukturę
+          const validQuestions = data.questions.every((q: any) => 
+            q.id && typeof q.id === 'number' &&
+            q.question && typeof q.question === 'string' &&
+            Array.isArray(q.tips) && q.tips.length > 0
+          );
 
-        if (!validQuestions) {
-          throw new Error("Otrzymane pytania mają nieprawidłową strukturę");
+          if (!validQuestions) {
+            console.warn("Otrzymane pytania mają nieprawidłową strukturę, ale próbujemy je wykorzystać");
+          }
+
+          setQuestions(data.questions);
+          await saveQuestions(data.questions, jobOffer);
+        } catch (validationError) {
+          console.error("Błąd podczas walidacji pytań:", validationError);
+          setQuestions(data.questions); // Używamy pytań nawet jeśli walidacja nie przeszła
         }
-
-        setQuestions(data.questions);
-        await saveQuestions(data.questions, jobOffer);
+      } else if (data.error) {
+        console.error("Błąd API:", data.error);
+        throw new Error(data.error);
       } else {
-        throw new Error(data.error || "Nie udało się wygenerować pytań");
+        console.error("Brak pytań w odpowiedzi API");
+        throw new Error("Nie udało się wygenerować pytań");
       }
     } catch (error) {
       console.error("Błąd podczas generowania pytań:", error);
       setQuestions([]);
-      throw error;
+      // Nie rzucamy błędu dalej, aby nie przerywać flow aplikacji
     } finally {
       setIsGeneratingQuestions(false);
     }
