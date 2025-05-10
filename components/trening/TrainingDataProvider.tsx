@@ -252,7 +252,7 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
     setIsGeneratingQuestions(true);
 
     try {
-      const response = await fetch('/api/generate-interview-questions', {
+      const response = await fetch('/api/interview-questions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
