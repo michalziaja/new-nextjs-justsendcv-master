@@ -88,14 +88,30 @@ export async function POST(req: Request): Promise<NextResponse> {
   
   try {
     console.log('--- Rozpoczęcie komunikacji z API Gemini ---');
-    // Wywołanie API Gemini
+    // Wywołanie API Gemini z timeoutem
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => {
+      controller.abort();
+      console.error('--- Timeout podczas wywołania API Gemini (30s) ---');
+    }, 30000); // 30 sekund timeoutu
+    
+    console.log('--- Konfiguracja podstawowych parametrów modelu ---');
     const result = await ai.models.generateContent({
       model: 'gemini-2.0-flash',
       contents: [{ text: combinedPrompt }], // Przekazujemy jedną treść bez pola `role`
     }).catch(error => {
       console.error('--- Błąd podczas wywołania API Gemini ---', error);
       throw error;
+    }).finally(() => {
+      clearTimeout(timeoutId);
+      console.log('--- Zakończono wywołanie API (timeout cleared) ---');
     });
+    
+    // Sprawdzenie czy zapytanie zostało przerwane
+    if (controller.signal.aborted) {
+      console.error('--- Zapytanie do API Gemini zostało przerwane z powodu timeoutu ---');
+      throw new Error('Timeout podczas komunikacji z API Gemini');
+    }
     
     console.log('--- Odpowiedź z API Gemini otrzymana pomyślnie ---');
 
@@ -161,3 +177,8 @@ export async function POST(req: Request): Promise<NextResponse> {
     );
   }
 }
+
+// Zwiększenie limitu czasu dla funkcji serverless
+export const config = {
+  maxDuration: 60 // 60 sekund dla Vercel
+};
