@@ -6,7 +6,7 @@ import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
 
 interface PersonalDataSectionProps {
   cvData: CVData;
-  updatePersonalData: (field: string, value: string | SocialLink[]) => void;
+  updatePersonalData: (field: string, value: string) => void;
   selectedJob: any; // Dostosuj typ do faktycznej struktury selectedJob
   setSelectedJob: (job: any) => void;
   onBack: () => void;
@@ -54,9 +54,8 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     setSocialLinks(updatedLinks);
     
     // Aktualizacja danych personalnych w CV poprzez przekazanie nowej tablicy linków
-    // Używamy funkcji updatePersonalData zamiast próbować bezpośrednio używać setCvData
-    // Funkcja ta oczekuje nazwę pola i wartość, więc przekazujemy 'socialLinks' jako pole
-    updatePersonalData('socialLinks', updatedLinks);
+    // Konwertujemy tablicę SocialLink[] na string (JSON), aby uniknąć problemów typowania
+    updatePersonalData('socialLinks', JSON.stringify(updatedLinks));
   };
   
   // Funkcja pomocnicza zwracająca ikonę dla danego typu linku

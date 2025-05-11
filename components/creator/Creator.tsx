@@ -14,11 +14,11 @@ import StartSection from './sections/StartSection';
 import PersonalDataSection from './sections/PersonalDataSection';
 import DescriptionSection from './sections/DescriptionSection';
 import ExperienceSection from './sections/ExperienceSection';
-import ProjectsSection from './sections/ProjectsSection';
 import EducationSection from './sections/EducationSection';
 import CoursesSection from './sections/CoursesSection';
 import SkillsSection from './sections/SkillsSection';
 import SummarySection from './sections/SummarySection';
+import ProjectsSection from './sections/ProjectsSection';
 
 // Komponent dla lewej strony - kreator
 export default function Creator({ switchMode }: { switchMode?: () => void }) {
@@ -97,14 +97,32 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
   ];
 
   // Funkcja do aktualizacji danych osobowych
-  const updatePersonalData = (field: string, value: any) => {
-    setCvData({
-      ...cvData,
-      personalData: {
-        ...cvData.personalData,
-        [field]: value
+  const updatePersonalData = (field: string, value: string) => {
+    // Jeśli pole to socialLinks, próbujemy sparsować JSON
+    if (field === 'socialLinks') {
+      try {
+        // Parsujemy wartość JSON do obiektu
+        const parsedValue = JSON.parse(value);
+        setCvData({
+          ...cvData,
+          personalData: {
+            ...cvData.personalData,
+            [field]: parsedValue
+          }
+        });
+      } catch (error) {
+        console.error('Błąd podczas parsowania JSON dla socialLinks:', error);
       }
-    });
+    } else {
+      // Dla pozostałych pól używamy wartości bezpośrednio
+      setCvData({
+        ...cvData,
+        personalData: {
+          ...cvData.personalData,
+          [field]: value
+        }
+      });
+    }
   };
 
   // Funkcja do aktualizacji opisu profilu

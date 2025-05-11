@@ -46,7 +46,7 @@ export interface JobAnalysis {
 }
 
 // Dodajemy interfejs dla linku społecznościowego
-interface SocialLink {
+export interface SocialLink {
   type: string;
   url: string;
   include: boolean; // Czy dany link ma być uwzględniony w CV
