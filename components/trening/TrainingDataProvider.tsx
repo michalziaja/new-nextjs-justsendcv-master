@@ -250,7 +250,7 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
     if (!jobOffer) return;
     
     setIsGeneratingQuestions(true);
-    
+    console.log("Generowanie pytań dla oferty:", jobOffer.id);
     try {
       const response = await fetch('/api/interview-questions', {
         method: 'POST',
@@ -268,7 +268,7 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
       }
       
       const data = await response.json();
-      
+      console.log("Odpowiedź API:", data);
       // Obsługa zarówno przypadku sukcesu jak i błędu, o ile mamy pytania
       if (data.questions && data.questions.length > 0) {
         try {
