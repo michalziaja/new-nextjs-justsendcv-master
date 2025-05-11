@@ -62,14 +62,30 @@ export default function TrainingQuestions({
 
   // Zmieniona logika dla ekranu "brak pytań" - teraz wyświetlamy ekran ładowania jeśli się generują
   if (isGeneratingQuestions) {
+    // Sprawdź, czy mamy już częściowe wyniki (czy generowanie jest w trakcie)
+    const questionsInProgress = questions.length > 0;
+    const progressText = questionsInProgress 
+      ? `Wygenerowano ${questions.length} z 15 pytań...` 
+      : "Generowanie pytań rekrutacyjnych...";
+    
+    const progressPercentage = questions.length / 15 * 100;
+
     return (
       <div
         className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden flex flex-col"
       >
-        <div className=" rounded-lg p-6 flex-grow flex flex-col items-center justify-center">
+        <div className="rounded-lg p-6 flex-grow flex flex-col items-center justify-center">
           <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500 mb-3"></div>
-          <p className="text-gray-600 mb-2">Generowanie pytań rekrutacyjnych...</p>
-          <p className="text-sm text-gray-500">To może potrwać kilka sekund</p>
+          <p className="text-gray-600 mb-2">{progressText}</p>
+          {questionsInProgress && (
+            <div className="w-64 bg-gray-200 rounded-full h-2.5 mb-2">
+              <div 
+                className="bg-blue-600 h-2.5 rounded-full" 
+                style={{ width: `${progressPercentage}%` }}
+              ></div>
+            </div>
+          )}
+          <p className="text-sm text-gray-500">Etap {Math.ceil(questions.length / 5)} z 3</p>
         </div>
       </div>
     );

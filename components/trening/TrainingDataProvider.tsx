@@ -251,55 +251,74 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
     
     setIsGeneratingQuestions(true);
     console.log("Generowanie pytań dla oferty:", jobOffer.id);
+    
+    const allQuestions: Question[] = [];
+    const totalGroups = 3;
+    
     try {
-      const response = await fetch('/api/interview-questions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          company: jobOffer.company,
-          title: jobOffer.title,
-          full_description: jobOffer.full_description
-          
-        })
-      });
-      
-      if (!response.ok) {
-        console.warn(`Odpowiedź API ze statusem błędu: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      console.log("Odpowiedź API:", data);
-      // Obsługa zarówno przypadku sukcesu jak i błędu, o ile mamy pytania
-      if (data.questions && data.questions.length > 0) {
+      // Generowanie pytań w 3 grupach po 5 pytań
+      for (let groupNum = 1; groupNum <= totalGroups; groupNum++) {
+        console.log(`Rozpoczynam generowanie grupy ${groupNum}/${totalGroups}`);
+        
         try {
-          // Sprawdzamy, czy pytania mają poprawną strukturę
-          const validQuestions = data.questions.every((q: any) => 
-            q.id && typeof q.id === 'number' &&
-            q.question && typeof q.question === 'string' &&
-            Array.isArray(q.tips) && q.tips.length > 0
-          );
-
-          if (!validQuestions) {
-            console.warn("Otrzymane pytania mają nieprawidłową strukturę, ale próbujemy je wykorzystać");
+          const response = await fetch('/api/interview-questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              company: jobOffer.company,
+              title: jobOffer.title,
+              full_description: jobOffer.full_description,
+              group: groupNum
+            })
+          });
+          
+          if (!response.ok) {
+            console.warn(`Odpowiedź API ze statusem błędu (grupa ${groupNum}): ${response.status}`);
+            continue; // kontynuuj z następną grupą nawet jeśli obecna się nie powiodła
           }
-
-          setQuestions(data.questions);
-          await saveQuestions(data.questions, jobOffer);
-        } catch (validationError) {
-          console.error("Błąd podczas walidacji pytań:", validationError);
-          setQuestions(data.questions); // Używamy pytań nawet jeśli walidacja nie przeszła
+          
+          const data = await response.json();
+          console.log(`Odpowiedź API dla grupy ${groupNum}:`, data);
+          
+          if (data.success && data.questions && data.questions.length > 0) {
+            // Dodaj pytania z tej grupy do całkowitej kolekcji
+            allQuestions.push(...data.questions);
+            
+            // Aktualizuj stan pytań po każdej grupie, aby użytkownik widział postęp
+            setQuestions([...allQuestions]);
+          } else if (data.error) {
+            console.error(`Błąd API (grupa ${groupNum}):`, data.error);
+          } else {
+            console.warn(`Brak pytań w odpowiedzi API (grupa ${groupNum})`);
+          }
+          
+        } catch (groupError) {
+          console.error(`Błąd podczas generowania pytań grupy ${groupNum}:`, groupError);
+          // Kontynuuj z następną grupą nawet jeśli obecna się nie powiodła
         }
-      } else if (data.error) {
-        console.error("Błąd API:", data.error);
-        throw new Error(data.error);
-      } else {
-        console.error("Brak pytań w odpowiedzi API");
-        throw new Error("Nie udało się wygenerować pytań");
       }
+      
+      console.log(`Wygenerowano łącznie ${allQuestions.length} pytań`);
+      
+      // Sortuj pytania według id, aby zapewnić poprawną kolejność
+      allQuestions.sort((a, b) => a.id - b.id);
+      
+      // Ustaw finalną listę pytań
+      setQuestions(allQuestions);
+      
+      // Zapisz wszystkie wygenerowane pytania
+      if (allQuestions.length > 0) {
+        await saveQuestions(allQuestions, jobOffer);
+      } else {
+        console.error("Nie udało się wygenerować żadnych pytań po wszystkich próbach");
+      }
+      
     } catch (error) {
-      console.error("Błąd podczas generowania pytań:", error);
-      setQuestions([]);
-      // Nie rzucamy błędu dalej, aby nie przerywać flow aplikacji
+      console.error("Błąd podczas procesu generowania pytań:", error);
+      // Używamy już zebranych pytań (jeśli jakieś są) lub pustej tablicy
+      if (allQuestions.length === 0) {
+        setQuestions([]);
+      }
     } finally {
       setIsGeneratingQuestions(false);
     }

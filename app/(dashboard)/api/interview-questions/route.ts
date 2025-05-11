@@ -32,12 +32,17 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
 
   // Parsowanie i walidacja danych wejściowych
-  let company: string, title: string, full_description: string | undefined;
+  let company: string, title: string, full_description: string | undefined, group: number;
   try {
     const body = await req.json();
     company = body.company;
     title = body.title;
     full_description = body.full_description;
+    group = parseInt(body.group) || 1; // domyślnie grupa 1 (1-5 pytań)
+    
+    if (isNaN(group) || group < 1 || group > 3) {
+      group = 1; // zabezpieczenie przed nieprawidłowymi wartościami
+    }
 
     if (!company || !title) {
       return NextResponse.json(
@@ -52,6 +57,39 @@ export async function POST(req: Request): Promise<NextResponse> {
     );
   }
 
+  // Określenie kategorii pytań dla danej grupy
+  let categories: { [key: string]: number } = {};
+  
+  if (group === 1) {
+    categories = {
+      "Doświadczenie zawodowe": 2,
+      "Umiejętności techniczne i kompetencje": 1,
+      "Pytania behawioralne i sytuacyjne": 1,
+      "Motywację i dopasowanie do firmy": 1
+    };
+  } else if (group === 2) {
+    categories = {
+      "Doświadczenie zawodowe": 1,
+      "Umiejętności techniczne i kompetencje": 2,
+      "Pytania behawioralne i sytuacyjne": 1,
+      "Motywację i dopasowanie do firmy": 1
+    };
+  } else if (group === 3) {
+    categories = {
+      "Doświadczenie zawodowe": 1,
+      "Umiejętności techniczne i kompetencje": 0,
+      "Pytania behawioralne i sytuacyjne": 1,
+      "Motywację i dopasowanie do firmy": 1,
+      "Oczekiwania i plany zawodowe": 2
+    };
+  }
+
+  // Przygotowanie podsumowania kategorii dla promptu
+  const categoriesText = Object.entries(categories)
+    .filter(([_, count]) => count > 0)
+    .map(([category, count]) => `- ${category} (${count} ${count === 1 ? 'pytanie' : 'pytania'})`)
+    .join('\n');
+
   // Instrukcja systemowa
   const systemInstruction = `
     Jesteś ekspertem HR specjalizującym się w rekrutacji. Tworzysz profesjonalne pytania rekrutacyjne, które są precyzyjne, zgodne z najlepszymi praktykami i dostosowane do stanowiska oraz firmy. 
@@ -60,28 +98,27 @@ export async function POST(req: Request): Promise<NextResponse> {
 
   // Prompt użytkownika
   const userPrompt = `
-    Wygeneruj 15 profesjonalnych pytań rekrutacyjnych dla stanowiska ${title} w firmie ${company}.
-    Pytania powinny obejmować:
-    - Doświadczenie zawodowe (4 pytania)
-    - Umiejętności techniczne i kompetencje (3 pytania)
-    - Pytania behawioralne i sytuacyjne (3 pytania)
-    - Motywację i dopasowanie do firmy ${company} (3 pytania)
-    - Oczekiwania i plany zawodowe (2 pytania)
+    Wygeneruj 5 profesjonalnych pytań rekrutacyjnych dla stanowiska ${title} w firmie ${company}.
+    To część ${group} z 3 zadań generowania pytań. 
+    Pytania powinny obejmować następujące kategorie:
+    ${categoriesText}
 
     Opis stanowiska: ${full_description}
 
     Dla każdego pytania dodaj 4 krótkie wskazówki, jak najlepiej odpowiedzieć.
+    WAŻNE: Numeruj pytania od ${(group - 1) * 5 + 1} do ${group * 5}.
     Odpowiedz w formacie JSON:
     {
       "questions": [
-        { "id": 1, "question": "Treść pytania", "tips": ["Wskazówka 1", "Wskazówka 2", "Wskazówka 3", "Wskazówka 4"] }
+        { "id": ${(group - 1) * 5 + 1}, "question": "Treść pytania", "tips": ["Wskazówka 1", "Wskazówka 2", "Wskazówka 3", "Wskazówka 4"] }
       ]
     }
   `;
 
   // Połączenie instrukcji systemowej i promptu użytkownika w jedną treść
   const combinedPrompt = `${systemInstruction}\n\n${userPrompt}`;
-  console.log(combinedPrompt);
+  console.log(`Generowanie pytań grupa ${group}/3 dla ${company} - ${title}`);
+  
   try {
     // Wywołanie API Gemini
     const result = await ai.models.generateContent({
@@ -90,7 +127,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     });
 
     // Logowanie informacji o zużyciu tokenów
-    console.log('--- Statystyki użycia tokenów dla generowanych pytań ---');
+    console.log(`--- Statystyki użycia tokenów dla generowanych pytań (grupa ${group}/3) ---`);
     logTokenUsage(result);
     
     const text = result.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
@@ -118,7 +155,12 @@ export async function POST(req: Request): Promise<NextResponse> {
       );
     }
 
-    return NextResponse.json({ success: true, questions: parsedData.questions } as AppApiResponse);
+    return NextResponse.json({ 
+      success: true, 
+      questions: parsedData.questions,
+      group: group,
+      totalGroups: 3
+    });
   } catch (error: any) {
     return NextResponse.json(
       { success: false, error: `Błąd serwera: ${error.message || 'Nieznany błąd API'}`, questions: [] } as AppApiResponse,
