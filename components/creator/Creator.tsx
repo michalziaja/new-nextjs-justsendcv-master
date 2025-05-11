@@ -97,7 +97,7 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
   ];
 
   // Funkcja do aktualizacji danych osobowych
-  const updatePersonalData = (field: string, value: string) => {
+  const updatePersonalData = (field: string, value: any) => {
     setCvData({
       ...cvData,
       personalData: {

@@ -155,6 +155,26 @@ import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
 import { spacing } from '@/components/creator/templates/TemplateStyles';
 
+// Funkcja do sanityzacji nazwy pliku - usuwa znaki specjalne i diakrytyczne
+function sanitizeFilename(filename: string): string {
+  // Usuwamy znaki diakrytyczne (np. ą -> a, ć -> c, itd.)
+  return filename
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    // Zamiana polskich znaków na łacińskie
+    .replace(/ą/g, 'a').replace(/Ą/g, 'A')
+    .replace(/ć/g, 'c').replace(/Ć/g, 'C')
+    .replace(/ę/g, 'e').replace(/Ę/g, 'E')
+    .replace(/ł/g, 'l').replace(/Ł/g, 'L')
+    .replace(/ń/g, 'n').replace(/Ń/g, 'N')
+    .replace(/ó/g, 'o').replace(/Ó/g, 'O')
+    .replace(/ś/g, 's').replace(/Ś/g, 'S')
+    .replace(/ź/g, 'z').replace(/Ź/g, 'Z')
+    .replace(/ż/g, 'z').replace(/Ż/g, 'Z')
+    // Usuwamy inne znaki specjalne, które mogą powodować problemy
+    .replace(/[^\w.-]/g, '_');
+}
+
 export async function POST(request: NextRequest) {
   console.log("Otrzymano żądanie generowania PDF");
   
@@ -290,11 +310,14 @@ export async function POST(request: NextRequest) {
     
     console.log("Przeglądarka zamknięta, zwracanie odpowiedzi...");
     
+    // Sanityzujemy nazwę pliku, aby uniknąć problemów z kodowaniem
+    const sanitizedFilename = sanitizeFilename(options?.filename || 'dokument');
+    
     // Zwróć PDF jako odpowiedź
     return new NextResponse(pdfBuffer, {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="CV_${options?.filename || 'dokument'}.pdf"`,
+        'Content-Disposition': `attachment; filename="CV_${sanitizedFilename}.pdf"`,
       },
     });
   } catch (error) {

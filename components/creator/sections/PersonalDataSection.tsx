@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoClose } from "react-icons/io5";
 import { CVData, useCV } from '../CVContext';
+import { FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
 
 interface PersonalDataSectionProps {
   cvData: CVData;
@@ -11,6 +13,13 @@ interface PersonalDataSectionProps {
   onNext: () => void;
 }
 
+// Interfejs dla linku społecznościowego
+interface SocialLink {
+  type: string;
+  url: string;
+  include: boolean;
+}
+
 const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   cvData,
   updatePersonalData,
@@ -19,7 +28,57 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   onBack,
   onNext
 }) => {
-  const { saveCV, isSaving } = useCV();
+  const { saveCV, isSaving, loadUserProfile } = useCV();
+  const [socialLinks, setSocialLinks] = useState<SocialLink[]>(cvData.personalData.socialLinks || []);
+  
+  // Pobierz dane profilu przy pierwszym renderowaniu
+  useEffect(() => {
+    // Ładowanie danych z profilu użytkownika
+    loadUserProfile();
+  }, [loadUserProfile]);
+  
+  // Aktualizacja stanu socialLinks gdy zmienią się dane CV
+  useEffect(() => {
+    if (cvData.personalData.socialLinks) {
+      setSocialLinks(cvData.personalData.socialLinks);
+    }
+  }, [cvData.personalData.socialLinks]);
+  
+  // Funkcja do zmiany stanu "include" dla linku społecznościowego
+  const toggleSocialLinkInclude = (index: number) => {
+    const updatedLinks = [...socialLinks];
+    updatedLinks[index] = {
+      ...updatedLinks[index],
+      include: !updatedLinks[index].include
+    };
+    setSocialLinks(updatedLinks);
+    
+    // Aktualizacja danych personalnych w CV poprzez przekazanie nowej tablicy linków
+    // Używamy funkcji updatePersonalData zamiast próbować bezpośrednio używać setCvData
+    // Funkcja ta oczekuje nazwę pola i wartość, więc przekazujemy 'socialLinks' jako pole
+    updatePersonalData('socialLinks', updatedLinks);
+  };
+  
+  // Funkcja pomocnicza zwracająca ikonę dla danego typu linku
+  const getSocialIcon = (type: string) => {
+    switch (type.toLowerCase()) {
+      case 'linkedin':
+        return <FaLinkedin className="text-blue-600" />;
+      case 'github':
+        return <FaGithub className="text-gray-800" />;
+      case 'portfolio':
+      case 'website':
+        return <FaGlobe className="text-green-600" />;
+      case 'twitter':
+        return <FaTwitter className="text-blue-400" />;
+      case 'facebook':
+        return <FaFacebook className="text-blue-700" />;
+      case 'instagram':
+        return <FaInstagram className="text-pink-600" />;
+      default:
+        return <FaGlobe className="text-gray-500" />;
+    }
+  };
   
   return (
     <div className="flex flex-col h-full ">
@@ -128,6 +187,48 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
             />
           </div>
         </div>
+        
+        {/* Sekcja linków społecznościowych */}
+        {socialLinks.length > 0 && (
+          <div className="mt-6">
+            <h4 className="text-md font-semibold mb-3">Linki społecznościowe</h4>
+            <p className="text-gray-600 mb-3 text-sm">Wybierz, które linki chcesz uwzględnić w swoim CV</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {socialLinks.map((link, index) => (
+                <div key={index} className="flex items-center border rounded-md p-2 hover:bg-gray-50">
+                  {/* Checkbox do uwzględnienia linku w CV */}
+                  <button 
+                    type="button"
+                    onClick={() => toggleSocialLinkInclude(index)}
+                    className="mr-2 focus:outline-none"
+                    title={link.include ? "Kliknij, aby usunąć z CV" : "Kliknij, aby dodać do CV"}
+                  >
+                    {link.include ? (
+                      <IoMdCheckboxOutline className="w-5 h-5 text-blue-500" />
+                    ) : (
+                      <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
+                    )}
+                  </button>
+                  
+                  {/* Ikona typu linku */}
+                  <div className="mr-2">
+                    {getSocialIcon(link.type)}
+                  </div>
+                  
+                  {/* Informacje o linku */}
+                  <div className="flex-1">
+                    <div className="text-sm font-medium">{link.type}</div>
+                    <div className="text-xs text-gray-500 truncate">{link.url}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-gray-500">
+              Zaznacz checkboxy przy linkach, które chcesz uwzględnić w swoim CV. Aby edytować linki, przejdź do sekcji edycji profilu.
+            </p>
+          </div>
+        )}
       </div>
       {/* Kontener przycisków - zawsze na dole */}
       <div className="mt-auto flex justify-between border-t-2 p-4 w-full">

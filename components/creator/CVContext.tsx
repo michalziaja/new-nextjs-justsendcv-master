@@ -8,6 +8,19 @@ import { mockUserProfile } from './mockData';
 import { JobOffer } from '../saved/ApplicationDetailsDrawer';
 import { spacing, fontSizes } from './templates/TemplateStyles'; // Importujemy domyślne style
 
+// Interfejs dla profilu użytkownika
+interface UserProfile {
+  user_id: string;
+  first_name?: string;
+  last_name?: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+  birth_year?: string;
+  about_me?: string;
+  social_links?: string;
+}
+
 // Definicja interfejsu dla zapisanego CV
 export interface SavedCV {
   id: string;
@@ -32,6 +45,13 @@ export interface JobAnalysis {
   analyzed_at: string;
 }
 
+// Dodajemy interfejs dla linku społecznościowego
+interface SocialLink {
+  type: string;
+  url: string;
+  include: boolean; // Czy dany link ma być uwzględniony w CV
+}
+
 // Definicja interfejsu danych CV
 export interface CVData {
   personalData: {
@@ -40,6 +60,7 @@ export interface CVData {
     email: string;
     phone: string;
     address: string;
+    socialLinks?: SocialLink[]; // Dodajemy pole na linki społecznościowe
   };
   description: string;
   profilePosition?: 'top' | 'bottom'; // Dodane pole określające pozycję opisu w CV
@@ -117,6 +138,7 @@ interface CVContextProps {
   // Nowe wartości dostępne w kontekście, ale bez powiadomień
   savedJobs: JobOffer[];
   isLoadingJobs: boolean;
+  loadUserProfile: () => Promise<void>;
 }
 
 // Początkowy stan danych CV
@@ -127,6 +149,7 @@ const initialCVData: CVData = {
     email: mockUserProfile.email,
     phone: mockUserProfile.phone,
     address: mockUserProfile.address,
+    socialLinks: [], // Inicjalizacja pustą tablicą
   },
   description: '',
   experience: [
@@ -647,6 +670,64 @@ export function CVProvider({ children }: { children: ReactNode }) {
     }
   }, []); // Tylko przy pierwszym renderowaniu
 
+  // Funkcja do ładowania danych użytkownika z profilu
+  const loadUserProfile = React.useCallback(async (): Promise<void> => {
+    try {
+      const supabase = createClient();
+      
+      // Pobierz ID zalogowanego użytkownika
+      const { data: { user } } = await supabase.auth.getUser();
+      
+      if (!user) {
+        console.error("Użytkownik nie jest zalogowany");
+        return;
+      }
+      
+      // Pobierz profil użytkownika
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('user_id', user.id)
+        .single();
+      
+      if (error && error.code !== 'PGRST116') {
+        console.error('Błąd podczas pobierania profilu:', error.message);
+        return;
+      }
+      
+      if (data) {
+        // Parsowanie linków społecznościowych jeśli istnieją
+        let socialLinks: SocialLink[] = [];
+        if (data.social_links) {
+          try {
+            const parsedLinks = JSON.parse(data.social_links);
+            socialLinks = Array.isArray(parsedLinks) 
+              ? parsedLinks.map(link => ({ ...link, include: false })) // Domyślnie nie uwzględniamy linków
+              : [];
+          } catch (e) {
+            console.error('Błąd parsowania linków społecznościowych:', e);
+          }
+        }
+        
+        // Aktualizuj dane CV danymi z profilu użytkownika
+        setCvData(prevData => ({
+          ...prevData,
+          personalData: {
+            ...prevData.personalData,
+            firstName: data.first_name || prevData.personalData.firstName,
+            lastName: data.last_name || prevData.personalData.lastName,
+            email: data.email || prevData.personalData.email,
+            phone: data.phone || prevData.personalData.phone,
+            address: data.address || prevData.personalData.address,
+            socialLinks: socialLinks.length > 0 ? socialLinks : prevData.personalData.socialLinks,
+          }
+        }));
+      }
+    } catch (error) {
+      console.error("Wystąpił błąd podczas pobierania danych profilu:", error);
+    }
+  }, []);
+
   return (
     <CVContext.Provider
       value={{
@@ -676,7 +757,8 @@ export function CVProvider({ children }: { children: ReactNode }) {
         jobAnalysis,
         // Dodajemy nowe wartości do kontekstu, ale bez powiadomień
         savedJobs,
-        isLoadingJobs
+        isLoadingJobs,
+        loadUserProfile,
       }}
     >
       {children}

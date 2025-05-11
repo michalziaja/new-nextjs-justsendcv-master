@@ -15,6 +15,14 @@ import {
   formatDate,
   getVisibleSections
 } from './CVTemplateLogic';
+import { 
+  FaLinkedin, 
+  FaGithub, 
+  FaGlobe, 
+  FaTwitter, 
+  FaFacebook, 
+  FaInstagram 
+} from 'react-icons/fa';
 
 // Komponent renderujący nowoczesny szablon CV
 export const ModernCVTemplate: React.FC<CVTemplateProps> = ({ 
@@ -139,6 +147,27 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
 
   // Obliczanie layoutu sekcji
   useSectionsLayout(sectionRefs, hasContent, isMeasurement, onSectionsUpdate, effectiveSpacing);
+
+  // Funkcja pomocnicza zwracająca ikonę dla danego typu linku
+  const getSocialIcon = (type: string) => {
+    switch (type.toLowerCase()) {
+      case 'linkedin':
+        return <FaLinkedin style={{ fontSize: '16px' }} />;
+      case 'github':
+        return <FaGithub style={{ fontSize: '16px' }} />;
+      case 'portfolio':
+      case 'website':
+        return <FaGlobe style={{ fontSize: '16px' }} />;
+      case 'twitter':
+        return <FaTwitter style={{ fontSize: '16px' }} />;
+      case 'facebook':
+        return <FaFacebook style={{ fontSize: '16px' }} />;
+      case 'instagram':
+        return <FaInstagram style={{ fontSize: '16px' }} />;
+      default:
+        return <FaGlobe style={{ fontSize: '16px' }} />;
+    }
+  };
 
   // Funkcja renderująca sekcję z obsługą podziału sekcji na strony
   const renderSection = (key: string, content: React.ReactNode, index?: number) => {
@@ -547,6 +576,32 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 <div>{t.phone}: {data.personalData.phone}</div>
                 <div style={{ gridColumn: 'span 2 / span 2' }}>{t.address}: {data.personalData.address}</div>
               </div>
+              
+              {/* Linki społecznościowe */}
+              {data.personalData.socialLinks && data.personalData.socialLinks.length > 0 && data.personalData.socialLinks.some(link => link.include) && (
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                  fontSize: effectiveFontSizes.contactInfo
+                }}>
+                  {data.personalData.socialLinks
+                    .filter(link => link.include)
+                    .map((link, index) => (
+                      <div key={index} style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '6px',
+                        color: colorPalette.primary
+                      }}>
+                        {getSocialIcon(link.type)}
+                        <span>{link.url}</span>
+                      </div>
+                    ))}
+                </div>
+              )}
+              
               {selectedJob && (
                 <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
                   {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
@@ -724,6 +779,32 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
               <div>{t.phone}: {data.personalData.phone}</div>
               <div style={{ gridColumn: 'span 2 / span 2' }}>{t.address}: {data.personalData.address}</div>
             </div>
+            
+            {/* Linki społecznościowe */}
+            {data.personalData.socialLinks && data.personalData.socialLinks.length > 0 && data.personalData.socialLinks.some(link => link.include) && (
+              <div style={{ 
+                marginTop: effectiveSpacing.elements.contentSpacing,
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '12px',
+                fontSize: effectiveFontSizes.contactInfo
+              }}>
+                {data.personalData.socialLinks
+                  .filter(link => link.include)
+                  .map((link, index) => (
+                    <div key={index} style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: '6px',
+                      color: colorPalette.primary
+                    }}>
+                      {getSocialIcon(link.type)}
+                      <span>{link.url}</span>
+                    </div>
+                  ))}
+              </div>
+            )}
+            
             {selectedJob && (
               <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
                 {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}

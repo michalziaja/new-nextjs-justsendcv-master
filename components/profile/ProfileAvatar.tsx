@@ -4,36 +4,19 @@ import React, { useState, useRef, useCallback } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { AlertCircle, Upload, Camera, UserCircle, X, Check, Crop } from 'lucide-react';
+import { AlertCircle, Upload, Camera, UserCircle, X, Check } from 'lucide-react';
 import { createClient } from '@/utils/supabase/client';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import Cropper from 'react-easy-crop';
-import { Dialog, DialogContent, DialogTitle, DialogHeader, DialogFooter } from "@/components/ui/dialog";
-import { Slider } from "@/components/ui/slider";
 import imageCompression from 'browser-image-compression';
 
-// Typ dla obszaru przyciętego
-interface CroppedAreaPixels {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-}
-
 export default function ProfileAvatar() {
+  // Stan dla błędów, uploadu itp.
   const [avatar, setAvatar] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  
-  // Stan dla modalu kadrowania
-  const [showCropModal, setShowCropModal] = useState(false);
-  const [cropImage, setCropImage] = useState<string | null>(null);
-  const [crop, setCrop] = useState({ x: 0, y: 0 });
-  const [zoom, setZoom] = useState(1);
-  const [croppedAreaPixels, setCroppedAreaPixels] = useState<CroppedAreaPixels | null>(null);
   
   // Funkcja do pobierania avatara użytkownika
   const fetchUserAvatar = async () => {
@@ -141,97 +124,6 @@ export default function ProfileAvatar() {
   React.useEffect(() => {
     fetchUserAvatar();
   }, []);
-  
-  // Funkcja do uzyskania przycięcia obrazu
-  const onCropComplete = useCallback((_croppedArea: any, croppedAreaPixels: CroppedAreaPixels) => {
-    setCroppedAreaPixels(croppedAreaPixels);
-  }, []);
-
-  // Funkcja do utworzenia przycietego obrazu
-  const createCroppedImage = async () => {
-    try {
-      if (!cropImage || !croppedAreaPixels) return null;
-      
-      const image = new Image();
-      image.src = cropImage;
-      
-      await new Promise((resolve) => {
-        image.onload = resolve;
-      });
-      
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      
-      if (!ctx) return null;
-      
-      // Ustawienie wymiarów canvas na podstawie obszaru przyciętego
-      canvas.width = croppedAreaPixels.width;
-      canvas.height = croppedAreaPixels.height;
-      
-      // Narysowanie przyciętego obrazu na canvas
-      ctx.drawImage(
-        image,
-        croppedAreaPixels.x,
-        croppedAreaPixels.y,
-        croppedAreaPixels.width,
-        croppedAreaPixels.height,
-        0,
-        0,
-        croppedAreaPixels.width,
-        croppedAreaPixels.height
-      );
-      
-      // Konwersja canvas do Blob
-      const blob = await new Promise<Blob | null>((resolve) => {
-        canvas.toBlob((blob) => resolve(blob), 'image/jpeg', 0.9);
-      });
-      
-      if (!blob) return null;
-      
-      // Utworzenie pliku z Blob
-      const croppedFile = new File([blob], 'cropped-image.jpg', {
-        type: 'image/jpeg',
-        lastModified: Date.now(),
-      });
-      
-      // Kompresja przyciętego obrazu
-      const options = {
-        maxSizeMB: 1,
-        maxWidthOrHeight: 800,
-        useWebWorker: true
-      };
-      return await imageCompression(croppedFile, options);
-      
-    } catch (error) {
-      console.error('Błąd podczas tworzenia przyciętego obrazu:', error);
-      return null;
-    }
-  };
-  
-  // Funkcja do zatwierdzenia kadrowania i przesłania pliku
-  const handleCropConfirm = async () => {
-    try {
-      const croppedFile = await createCroppedImage();
-      
-      if (!croppedFile) {
-        setError('Nie udało się przygotować przyciętego obrazu');
-        setShowCropModal(false);
-        return;
-      }
-      
-      // Zamknij modal kadrowania
-      setShowCropModal(false);
-      setCropImage(null);
-      
-      // Przesłanie przyciętego pliku
-      await uploadAvatar(croppedFile as File);
-      
-    } catch (error) {
-      console.error('Błąd podczas zatwierdzania kadrowania:', error);
-      setError('Wystąpił błąd podczas przetwarzania obrazu');
-      setShowCropModal(false);
-    }
-  };
   
   // Obsługa uploadu pliku
   const uploadAvatar = async (file: File) => {
@@ -410,6 +302,28 @@ export default function ProfileAvatar() {
         return;
       }
       
+      // Usuwanie plików z magazynu (storage)
+      try {
+        const { data: filesList } = await supabase.storage
+          .from('avatars')
+          .list(user.id);
+        
+        if (filesList && filesList.length > 0) {
+          const filesToRemove = filesList.map(f => `${user.id}/${f.name}`);
+          console.log('Usuwanie plików ze storage:', filesToRemove);
+          
+          const { error: removeError } = await supabase.storage
+            .from('avatars')
+            .remove(filesToRemove);
+            
+          if (removeError) {
+            console.error('Błąd podczas usuwania plików ze storage:', removeError);
+          }
+        }
+      } catch (storageError) {
+        console.error('Błąd podczas dostępu do storage:', storageError);
+      }
+      
       // Aktualizacja profilu użytkownika - usunięcie avatara
       const { error: updateError } = await supabase
         .from('profiles')
@@ -433,14 +347,13 @@ export default function ProfileAvatar() {
     }
   };
   
-  // Funkcja do przygotowania pliku do kadrowania
-  const prepareFileForCrop = (file: File) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      setCropImage(e.target?.result as string);
-      setShowCropModal(true);
-    };
-    reader.readAsDataURL(file);
+  // Funkcja do przygotowania pliku do uploadu
+  const prepareFileForUpload = (file: File) => {
+    setUploading(true);
+    // Bezpośrednio prześlij plik bez przycinania
+    uploadAvatar(file).finally(() => {
+      setUploading(false);
+    });
   };
   
   // Otwieranie okna wyboru pliku
@@ -451,7 +364,7 @@ export default function ProfileAvatar() {
   // Obsługa zmiany pliku
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      prepareFileForCrop(e.target.files[0]);
+      prepareFileForUpload(e.target.files[0]);
     }
   };
   
@@ -474,7 +387,7 @@ export default function ProfileAvatar() {
     setDragActive(false);
     
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      prepareFileForCrop(e.dataTransfer.files[0]);
+      prepareFileForUpload(e.dataTransfer.files[0]);
     }
   }, []);
   
@@ -548,33 +461,6 @@ export default function ProfileAvatar() {
 
           {/* Panel boczny z przyciskami i informacjami */}
           <div className="flex flex-col gap-4 flex-1 min-w-[200px]">
-            <div className="flex flex-wrap gap-2">
-              {avatar && (
-                <>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="text-destructive"
-                    onClick={removeAvatar}
-                    disabled={uploading}
-                  >
-                    <X className="h-4 w-4 mr-1" />
-                    Usuń
-                  </Button>
-
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setShowCropModal(true)}
-                    disabled={uploading}
-                  >
-                    <Crop className="h-4 w-4 mr-1" />
-                    Przytnij
-                  </Button>
-                </>
-              )}
-            </div>
-
             <div className="space-y-2">
               <p className="text-sm font-medium">Wymagania dla zdjęcia:</p>
               <ul className="text-xs text-muted-foreground space-y-1 list-disc list-inside">
@@ -582,6 +468,19 @@ export default function ProfileAvatar() {
                 <li>Dozwolone formaty: JPG, PNG</li>
                 <li>Zalecany wymiar: min. 400x400 pikseli</li>
               </ul>
+              
+              {avatar && (
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-destructive mt-3 w-full"
+                  onClick={removeAvatar}
+                  disabled={uploading}
+                >
+                  <X className="h-4 w-4 mr-1" />
+                  Usuń zdjęcie
+                </Button>
+              )}
             </div>
 
             {/* Komunikaty o błędach lub sukcesie */}
@@ -601,62 +500,6 @@ export default function ProfileAvatar() {
           </div>
         </div>
       </CardContent>
-
-      {/* Modal do kadrowania */}
-      <Dialog open={showCropModal} onOpenChange={setShowCropModal}>
-        <DialogContent className="sm:max-w-[500px]">
-          <DialogHeader>
-            <DialogTitle>Przytnij zdjęcie profilowe</DialogTitle>
-          </DialogHeader>
-          <div className="relative h-[300px] w-full my-4">
-            {cropImage && (
-              <Cropper
-                image={cropImage}
-                crop={crop}
-                zoom={zoom}
-                aspect={1}
-                onCropChange={setCrop}
-                onCropComplete={onCropComplete}
-                onZoomChange={setZoom}
-                classes={{
-                  containerClassName: "rounded-md overflow-hidden"
-                }}
-              />
-            )}
-          </div>
-          <div className="px-1 py-4">
-            <div className="flex items-center mb-2">
-              <span className="text-sm mr-2">Przybliżenie:</span>
-              <Slider
-                min={1}
-                max={3}
-                step={0.05}
-                value={[zoom]}
-                onValueChange={(value: number[]) => setZoom(value[0])}
-                className="flex-1"
-              />
-            </div>
-          </div>
-          <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={() => {
-                setShowCropModal(false);
-                setCropImage(null);
-              }}
-            >
-              Anuluj
-            </Button>
-            <Button 
-              onClick={handleCropConfirm}
-              disabled={!cropImage}
-            >
-              <Crop className="h-4 w-4 mr-2" />
-              Zatwierdź kadrowanie
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 } 
