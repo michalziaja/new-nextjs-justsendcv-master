@@ -151,9 +151,10 @@
 //api/generate-pdf/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 // Importujemy specjalne wersje bibliotek do środowisk serverless
-import chromium from 'chrome-aws-lambda';
+import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
 import { spacing } from '@/components/creator/templates/TemplateStyles';
+
 export async function POST(request: NextRequest) {
   console.log("Otrzymano żądanie generowania PDF");
   
@@ -229,13 +230,17 @@ export async function POST(request: NextRequest) {
 
     console.log("Uruchamianie przeglądarki Puppeteer...");
     
+    // Instalujemy chromium, jeśli potrzeba
+    await chromium.font('https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf');
+    // W środowisku produkcyjnym używamy wersji serverless, lokalnie używamy normalnej instalacji
+    const executablePath = await chromium.executablePath();
+    
     // Uruchom Puppeteer z odpowiednimi opcjami dla środowisk serverless
-    // Ta konfiguracja jest kompatybilna z AWS Lambda, Vercel i Netlify Functions
     const browser = await puppeteer.launch({ 
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
-      executablePath: await chromium.executablePath,
-      headless: chromium.headless,
+      executablePath: executablePath,
+      headless: true, // lub chromium.headless
     }).catch(err => {
       console.error("Błąd podczas uruchamiania przeglądarki:", err);
       throw err;
