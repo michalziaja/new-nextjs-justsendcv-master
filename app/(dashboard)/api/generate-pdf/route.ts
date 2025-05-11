@@ -4,6 +4,11 @@ import chromium from '@sparticuz/chromium-min';
 import puppeteer from 'puppeteer-core';
 import { spacing } from '@/components/creator/templates/TemplateStyles';
 
+// Funkcja pomocnicza do sprawdzania środowiska
+const isNetlify = () => {
+  return process.env.NETLIFY === 'true' || !!process.env.NETLIFY_DEV;
+};
+
 export async function POST(request: NextRequest) {
   console.log("Otrzymano żądanie generowania PDF");
   
@@ -87,7 +92,7 @@ export async function POST(request: NextRequest) {
     
     if (isDev) {
       // W środowisku developerskim używamy standardowej instancji puppeteer
-      // Najpierw próbujemy zainstalować standardowe puppeteer
+      console.log("Używam standardowego Puppeteer w środowisku developerskim");
       try {
         const puppeteerStandard = await import('puppeteer');
         browser = await puppeteerStandard.default.launch({
@@ -99,16 +104,35 @@ export async function POST(request: NextRequest) {
         throw new Error("Nie można uruchomić przeglądarki. Sprawdź, czy puppeteer jest zainstalowany: npm install puppeteer");
       }
     } else {
-      // W środowisku produkcyjnym (Netlify) używamy chromium-min
+      // W środowisku produkcyjnym (Netlify) używamy puppeteer-core z chromium-min
+      console.log("Używam puppeteer-core z chromium-min w środowisku produkcyjnym (Netlify)");
       try {
-        // Na Netlify używamy gotowej ścieżki do chromium (nie potrzebujemy instalacji)
-        const executablePath = await chromium.executablePath();
+        // Ustawiamy dodatkowe opcje dla Netlify
+        const netlifyChromeArgs = [
+          '--disable-gpu',
+          '--disable-dev-shm-usage',
+          '--disable-setuid-sandbox',
+          '--no-first-run',
+          '--no-sandbox',
+          '--no-zygote',
+          '--single-process',
+        ];
+
+        // Określamy jawną ścieżkę dla Netlify
+        let executablePath;
+        if (isNetlify()) {
+          executablePath = '/var/task/node_modules/@sparticuz/chromium-min/bin';
+          console.log("Używam jawnej ścieżki dla środowiska Netlify:", executablePath);
+        } else {
+          executablePath = await chromium.executablePath();
+          console.log("Używam ścieżki z chromium-min:", executablePath);
+        }
         
         browser = await puppeteer.launch({ 
-          args: chromium.args,
+          args: netlifyChromeArgs,
           defaultViewport: chromium.defaultViewport,
           executablePath: executablePath,
-          headless: chromium.headless,
+          headless: true,
         });
       } catch (error) {
         console.error("Błąd przy próbie użycia chromium-min:", error);
