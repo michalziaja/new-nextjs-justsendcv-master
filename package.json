@@ -80,6 +80,7 @@
     "react-pdf": "^9.2.1",
     "react-use-measure": "^2.1.7",
     "recharts": "^2.15.3",
+    "sharp": "^0.34.1",
     "stripe": "^17.7.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
