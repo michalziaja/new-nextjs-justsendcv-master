@@ -28,7 +28,7 @@ export default function Page() {
         <div className="flex flex-col lg:flex-row gap-4">
           {/* Lewa kolumna - Avatar i wskazówki w jednej karcie */}
           <div className="w-full lg:w-[38%] ">
-            <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)]  min-h-[70vh] rounded-sm">
+            <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)]  min-h-[75vh] rounded-sm">
               <CardContent className="p-2 -mt-2 space-y-6">
                 {/* Sekcja ze zdjęciem */}
                 <ProfileAvatar />
@@ -43,7 +43,7 @@ export default function Page() {
 
           {/* Prawa kolumna - Wszystkie dane w jednej karcie */}
           <div className="w-full lg:w-[62%]">
-            <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)]  min-h-[70vh] rounded-sm p-6">
+            <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)]  min-h-[75vh] rounded-sm p-6">
               <ProfileForm />
             </Card>
           </div>

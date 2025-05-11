@@ -109,6 +109,17 @@ const StartSection: React.FC<StartSectionProps> = ({
     // Tutaj można dodać dodatkową logikę po przetworzeniu pliku
   };
 
+  // Obsługa pomyślnego importu CV
+  const handleImportSuccess = () => {
+    // Ustawiamy aktywną sekcję na dane osobowe (pierwszy krok edycji)
+    setActiveSection('personalData');
+    // Automatyczny wybór pierwszego dostępnego szablonu
+    setSelectedTemplate(templates[0]?.id || "nowoczesny");
+    // Przechodzimy do następnego kroku
+    onNext();
+    console.log('✅ CV zostało pomyślnie zaimportowane, przejście do edycji danych osobowych');
+  };
+
   // Funkcja do zmiany nazwy CV
   const handleRename = async (cvId: string) => {
     if (!newName.trim()) return;
@@ -338,6 +349,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                     <CVFileUploader 
                       onFileProcessed={handleFileProcessed}
                       className="w-full max-w-md"
+                      onImportSuccess={handleImportSuccess}
                     />
                   </div>
             </div>

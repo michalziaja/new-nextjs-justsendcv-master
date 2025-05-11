@@ -21,7 +21,10 @@ import {
   FaGlobe, 
   FaTwitter, 
   FaFacebook, 
-  FaInstagram 
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt
 } from 'react-icons/fa';
 
 // Komponent renderujący nowoczesny szablon CV
@@ -271,12 +274,111 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
           <div
             key={`${key}-${index ?? ''}`}
             style={{
-              pageBreakInside: 'avoid',
-              breakInside: 'avoid',
-              position: 'relative'
+              display: 'flex', 
+              alignItems: 'flex-start',
+              borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
+              paddingBottom: effectiveSpacing.header.bottomMargin,
+              marginBottom: effectiveSpacing.header.bottomSpacing
             }}
           >
-            {content}
+            {/* Zdjęcie profilowe - jeśli włączone i dostępne */}
+            {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
+              <div style={{
+                marginRight: '20px', 
+                width: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
+                height: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
+                overflow: 'hidden',
+                borderRadius: data.personalData.photoBorderRadius || '0px', // Stosujemy wybrane zaokrąglenie
+                flexShrink: 0 
+              }}>
+                <img 
+                  src={data.personalData.photoUrl} 
+                  alt="Zdjęcie profilowe" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+            )}
+            
+            {/* Kontener na dane tekstowe */}
+            <div style={{ flex: 1 }}> 
+              <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+              
+              {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
+              {data.personalData.socialLinks && 
+               data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
+                // Jeśli są linki - układ dwukolumnowy
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: effectiveSpacing.elements.margin,
+                  color: colorPalette.grayDark,
+                  fontSize: effectiveFontSizes.contactInfo
+                }}>
+                  {/* Lewa kolumna - dane kontaktowe */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.email}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.phone}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.address}
+                    </div>
+                  </div>
+                  
+                  {/* Prawa kolumna - linki społecznościowe */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    {data.personalData.socialLinks
+                      .filter(link => link.include)
+                      .map((link, index) => (
+                        <div key={index} style={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '6px',
+                          color: colorPalette.primary
+                        }}>
+                          {getSocialIcon(link.type)}
+                          <span>{link.url}</span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+               ) : (
+                // Jeśli nie ma linków - dane kontaktowe w jednym rzędzie
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  color: colorPalette.grayDark,
+                  fontSize: effectiveFontSizes.contactInfo
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
+                    {data.personalData.email}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
+                    {data.personalData.phone}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
+                    {data.personalData.address}
+                  </div>
+                </div>
+               )}
+              
+              {selectedJob && (
+                <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                  {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                </div>
+              )}
+            </div>
           </div>
         );
       }
@@ -558,55 +660,111 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
         <div style={mainContentStyle}>
           {/* Nagłówek z danymi osobowymi */}
           {renderSection('header', (
-            <div style={{ 
-              borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`, 
+            <div style={{ // Główny kontener dla całego nagłówka (zdjęcie + tekst)
+              display: 'flex', 
+              alignItems: 'flex-start',
+              borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
               paddingBottom: effectiveSpacing.header.bottomMargin,
               marginBottom: effectiveSpacing.header.bottomSpacing
             }}>
-              <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
-              <div style={{ 
-                marginTop: effectiveSpacing.elements.contentSpacing,
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
-                gap: effectiveSpacing.elements.margin,
-                color: colorPalette.grayDark,
-                fontSize: effectiveFontSizes.contactInfo
-              }}>
-                <div>{t.email}: {data.personalData.email}</div>
-                <div>{t.phone}: {data.personalData.phone}</div>
-                <div style={{ gridColumn: 'span 2 / span 2' }}>{t.address}: {data.personalData.address}</div>
-              </div>
-              
-              {/* Linki społecznościowe */}
-              {data.personalData.socialLinks && data.personalData.socialLinks.length > 0 && data.personalData.socialLinks.some(link => link.include) && (
-                <div style={{ 
-                  marginTop: effectiveSpacing.elements.contentSpacing,
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '12px',
-                  fontSize: effectiveFontSizes.contactInfo
+              {/* Zdjęcie profilowe - jeśli włączone i dostępne */}
+              {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
+                <div style={{
+                  marginRight: '20px', 
+                  width: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
+                  height: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
+                  overflow: 'hidden',
+                  borderRadius: data.personalData.photoBorderRadius || '0px', // Stosujemy wybrane zaokrąglenie
+                  flexShrink: 0 
                 }}>
-                  {data.personalData.socialLinks
-                    .filter(link => link.include)
-                    .map((link, index) => (
-                      <div key={index} style={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        gap: '6px',
-                        color: colorPalette.primary
-                      }}>
-                        {getSocialIcon(link.type)}
-                        <span>{link.url}</span>
-                      </div>
-                    ))}
+                  <img 
+                    src={data.personalData.photoUrl} 
+                    alt="Zdjęcie profilowe" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
                 </div>
               )}
               
-              {selectedJob && (
-                <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
-                  {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
-                </div>
-              )}
+              {/* Kontener na dane tekstowe */}
+              <div style={{ flex: 1 }}> 
+                <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+                
+                {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
+                {data.personalData.socialLinks && 
+                 data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
+                  // Jeśli są linki - układ dwukolumnowy
+                  <div style={{ 
+                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gap: effectiveSpacing.elements.margin,
+                    color: colorPalette.grayDark,
+                    fontSize: effectiveFontSizes.contactInfo
+                  }}>
+                    {/* Lewa kolumna - dane kontaktowe */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
+                        {data.personalData.email}
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
+                        {data.personalData.phone}
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
+                        {data.personalData.address}
+                      </div>
+                    </div>
+                    
+                    {/* Prawa kolumna - linki społecznościowe */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      {data.personalData.socialLinks
+                        .filter(link => link.include)
+                        .map((link, index) => (
+                          <div key={index} style={{ 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            gap: '6px',
+                            color: colorPalette.primary
+                          }}>
+                            {getSocialIcon(link.type)}
+                            <span>{link.url}</span>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                 ) : (
+                  // Jeśli nie ma linków - dane kontaktowe w jednym rzędzie
+                  <div style={{ 
+                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    color: colorPalette.grayDark,
+                    fontSize: effectiveFontSizes.contactInfo
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.email}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.phone}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.address}
+                    </div>
+                  </div>
+                 )}
+                
+                {selectedJob && (
+                  <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                    {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
           
@@ -761,55 +919,111 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
       <div style={mainContentStyle}>
         {/* Nagłówek z danymi osobowymi */}
         {renderSection('header', (
-          <div style={{ 
-            borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`, 
+          <div style={{ // Główny kontener dla całego nagłówka (zdjęcie + tekst)
+            display: 'flex',
+            alignItems: 'flex-start',
+            borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
             paddingBottom: effectiveSpacing.header.bottomMargin,
             marginBottom: effectiveSpacing.header.bottomSpacing
           }}>
-            <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
-            <div style={{ 
-              marginTop: effectiveSpacing.elements.contentSpacing,
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
-              gap: effectiveSpacing.elements.margin,
-              color: colorPalette.grayDark,
-              fontSize: effectiveFontSizes.contactInfo
-            }}>
-              <div>{t.email}: {data.personalData.email}</div>
-              <div>{t.phone}: {data.personalData.phone}</div>
-              <div style={{ gridColumn: 'span 2 / span 2' }}>{t.address}: {data.personalData.address}</div>
-            </div>
-            
-            {/* Linki społecznościowe */}
-            {data.personalData.socialLinks && data.personalData.socialLinks.length > 0 && data.personalData.socialLinks.some(link => link.include) && (
-              <div style={{ 
-                marginTop: effectiveSpacing.elements.contentSpacing,
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '12px',
-                fontSize: effectiveFontSizes.contactInfo
+            {/* Zdjęcie profilowe - jeśli włączone i dostępne */}
+            {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
+              <div style={{
+                marginRight: '20px',
+                width: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
+                height: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
+                overflow: 'hidden',
+                borderRadius: data.personalData.photoBorderRadius || '0px', // Stosujemy wybrane zaokrąglenie
+                flexShrink: 0 
               }}>
-                {data.personalData.socialLinks
-                  .filter(link => link.include)
-                  .map((link, index) => (
-                    <div key={index} style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: '6px',
-                      color: colorPalette.primary
-                    }}>
-                      {getSocialIcon(link.type)}
-                      <span>{link.url}</span>
+                <img 
+                  src={data.personalData.photoUrl} 
+                  alt="Zdjęcie profilowe" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+            )}
+
+            {/* Kontener na dane tekstowe */}
+            <div style={{ flex: 1 }}> 
+              <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+          
+              {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
+              {data.personalData.socialLinks && 
+               data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
+                // Jeśli są linki - układ dwukolumnowy
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: effectiveSpacing.elements.margin,
+                  color: colorPalette.grayDark,
+                  fontSize: effectiveFontSizes.contactInfo
+                }}>
+                  {/* Lewa kolumna - dane kontaktowe */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.email}
                     </div>
-                  ))}
-              </div>
-            )}
-            
-            {selectedJob && (
-              <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
-                {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
-              </div>
-            )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.phone}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.address}
+                    </div>
+                  </div>
+                  
+                  {/* Prawa kolumna - linki społecznościowe */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    {data.personalData.socialLinks
+                      .filter(link => link.include)
+                      .map((link, index) => (
+                        <div key={index} style={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '6px',
+                          color: colorPalette.primary
+                        }}>
+                          {getSocialIcon(link.type)}
+                          <span>{link.url}</span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+               ) : (
+                // Jeśli nie ma linków - dane kontaktowe w jednym rzędzie
+                <div style={{ 
+                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  color: colorPalette.grayDark,
+                  fontSize: effectiveFontSizes.contactInfo
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
+                    {data.personalData.email}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
+                    {data.personalData.phone}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
+                    {data.personalData.address}
+                  </div>
+                </div>
+               )}
+              
+              {selectedJob && (
+                <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                  {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                </div>
+              )}
+            </div>
           </div>
         ))}
         

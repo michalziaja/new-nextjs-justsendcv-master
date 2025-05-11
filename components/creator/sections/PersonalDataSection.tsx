@@ -31,6 +31,13 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   const { saveCV, isSaving, loadUserProfile } = useCV();
   const [socialLinks, setSocialLinks] = useState<SocialLink[]>(cvData.personalData.socialLinks || []);
   
+  // Stan do kontrolowania widoczności sekcji zdjęcia w formularzu
+  const [includePhoto, setIncludePhoto] = useState(false);
+  // Stan do kontrolowania skali zdjęcia
+  const [currentPhotoScale, setCurrentPhotoScale] = useState(100);
+  // Stan do kontrolowania zaokrąglenia rogów zdjęcia (wartość procentowa 0-50)
+  const [currentBorderRadiusPercent, setCurrentBorderRadiusPercent] = useState(0);
+  
   // Pobierz dane profilu przy pierwszym renderowaniu
   useEffect(() => {
     // Ładowanie danych z profilu użytkownika
@@ -42,7 +49,28 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     if (cvData.personalData.socialLinks) {
       setSocialLinks(cvData.personalData.socialLinks);
     }
-  }, [cvData.personalData.socialLinks]);
+    // Synchronizuj stan checkboxa zdjęcia z danymi CV
+    if (cvData.personalData.includePhotoInCV !== undefined) {
+      // Poprawka: Konwertuj potencjalny string z kontekstu na boolean
+      setIncludePhoto(String(cvData.personalData.includePhotoInCV).toLowerCase() === 'true');
+    }
+    // Synchronizuj stan skali zdjęcia z danymi CV
+    if (cvData.personalData.photoScalePercent !== undefined) {
+      setCurrentPhotoScale(cvData.personalData.photoScalePercent);
+    }
+    // Synchronizuj stan zaokrąglenia rogów zdjęcia z danymi CV
+    if (cvData.personalData.photoBorderRadius !== undefined) {
+      const radiusStr = cvData.personalData.photoBorderRadius;
+      if (typeof radiusStr === 'string' && radiusStr.endsWith('%')) {
+        const percentValue = parseInt(radiusStr.replace('%', ''));
+        if (!isNaN(percentValue)) {
+          setCurrentBorderRadiusPercent(Math.max(0, Math.min(50, percentValue)));
+        }
+      } else if (radiusStr === '0px' || radiusStr === '0' || Number(radiusStr) === 0) {
+        setCurrentBorderRadiusPercent(0);
+      }
+    }
+  }, [cvData.personalData.socialLinks, cvData.personalData.includePhotoInCV, cvData.personalData.photoScalePercent, cvData.personalData.photoBorderRadius]);
   
   // Funkcja do zmiany stanu "include" dla linku społecznościowego
   const toggleSocialLinkInclude = (index: number) => {
@@ -228,6 +256,71 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
             </p>
           </div>
         )}
+        
+        {/* Sekcja Zdjęcie Profilowe */}
+        <div className="mt-6">
+          <h4 className="text-md font-semibold mb-3">Zdjęcie profilowe</h4>
+          <div className="flex items-center mb-3">
+            <button
+              type="button"
+              onClick={() => {
+                const newValue = !includePhoto;
+                setIncludePhoto(newValue);
+                updatePersonalData('includePhotoInCV', newValue.toString()); // Aktualizuj dane CV
+              }}
+              className="mr-2 focus:outline-none flex items-center"
+              title={includePhoto ? "Ukryj opcje zdjęcia" : "Pokaż opcje zdjęcia"}
+            >
+              {includePhoto ? (
+                <IoMdCheckboxOutline className="w-5 h-5 text-blue-500" />
+              ) : (
+                <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
+              )}
+              <span className="ml-2 text-sm text-gray-700">Dołącz zdjęcie do CV</span>
+            </button>
+          </div>
+
+          {includePhoto && (
+            <div className="p-4 border rounded-md bg-gray-50">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+                <div>
+                  <label htmlFor="photoScaleRange" className="block text-sm text-gray-600 mb-1">Rozmiar ({currentPhotoScale}%):</label>
+                  <input 
+                    id="photoScaleRange"
+                    type="range" 
+                    min="50" 
+                    max="150" 
+                    step="5" 
+                    value={currentPhotoScale}
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                    onChange={(e) => {
+                      const newScale = parseInt(e.target.value);
+                      setCurrentPhotoScale(newScale);
+                      updatePersonalData('photoScalePercent', newScale.toString()); 
+                    }}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="borderRadiusRange" className="block text-sm text-gray-600 mb-1">Zaokrąglenie ({currentBorderRadiusPercent}%):</label>
+                  <input 
+                    id="borderRadiusRange"
+                    type="range" 
+                    min="0" 
+                    max="50" 
+                    step="1" 
+                    value={currentBorderRadiusPercent}
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                    onChange={(e) => {
+                      const newRadiusPercent = parseInt(e.target.value);
+                      setCurrentBorderRadiusPercent(newRadiusPercent);
+                      updatePersonalData('photoBorderRadius', newRadiusPercent + '%');
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
       {/* Kontener przycisków - zawsze na dole */}
       <div className="mt-auto flex justify-between border-t-2 p-4 w-full">

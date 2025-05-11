@@ -19,6 +19,7 @@ interface UserProfile {
   birth_year?: string;
   about_me?: string;
   social_links?: string;
+  avatar?: string; // Dodajemy pole avatar, aby pobrać URL zdjęcia
 }
 
 // Definicja interfejsu dla zapisanego CV
@@ -61,6 +62,10 @@ export interface CVData {
     phone: string;
     address: string;
     socialLinks?: SocialLink[]; // Dodajemy pole na linki społecznościowe
+    photoUrl?: string; // URL do zdjęcia profilowego
+    includePhotoInCV?: boolean; // Czy dołączyć zdjęcie do CV
+    photoScalePercent?: number; // Skala zdjęcia w procentach (np. 100, 105, etc.)
+    photoBorderRadius?: string; // Wartość border-radius dla zdjęcia (np. '0px', '8px', '50%')
   };
   description: string;
   profilePosition?: 'top' | 'bottom'; // Dodane pole określające pozycję opisu w CV
@@ -150,6 +155,10 @@ const initialCVData: CVData = {
     phone: mockUserProfile.phone,
     address: mockUserProfile.address,
     socialLinks: [], // Inicjalizacja pustą tablicą
+    photoUrl: undefined, // Inicjalizacja URL zdjęcia
+    includePhotoInCV: false, // Domyślnie nie dołączamy zdjęcia
+    photoScalePercent: 100, // Domyślna skala zdjęcia to 100%
+    photoBorderRadius: '0px', // Domyślnie brak zaokrąglenia rogów
   },
   description: '',
   experience: [
@@ -720,6 +729,7 @@ export function CVProvider({ children }: { children: ReactNode }) {
             phone: data.phone || prevData.personalData.phone,
             address: data.address || prevData.personalData.address,
             socialLinks: socialLinks.length > 0 ? socialLinks : prevData.personalData.socialLinks,
+            photoUrl: data.avatar || prevData.personalData.photoUrl, // Ustawiamy photoUrl
           }
         }));
       }
