@@ -1,7 +1,9 @@
 //api/generate-pdf/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import puppeteer from 'puppeteer';
+import chromium from '@sparticuz/chromium-min';
+import puppeteer from 'puppeteer-core';
 import { spacing } from '@/components/creator/templates/TemplateStyles';
+
 export async function POST(request: NextRequest) {
   console.log("Otrzymano żądanie generowania PDF");
   
@@ -77,13 +79,46 @@ export async function POST(request: NextRequest) {
 
     console.log("Uruchamianie przeglądarki Puppeteer...");
     
-    // Uruchom Puppeteer z odpowiednimi opcjami
-    const browser = await puppeteer.launch({ 
-      headless: true  // Używamy true zamiast 'new', aby uniknąć błędów typowania
-    }).catch(err => {
-      console.error("Błąd podczas uruchamiania przeglądarki:", err);
-      throw err;
-    });
+    // Sprawdzenie środowiska i konfiguracja Puppeteer
+    let browser;
+    
+    // Sprawdź, czy jesteśmy w środowisku developerskim czy produkcyjnym
+    const isDev = process.env.NODE_ENV === 'development';
+    
+    if (isDev) {
+      // W środowisku developerskim używamy standardowej instancji puppeteer
+      // Najpierw próbujemy zainstalować standardowe puppeteer
+      try {
+        const puppeteerStandard = await import('puppeteer');
+        browser = await puppeteerStandard.default.launch({
+          headless: true,
+          args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+      } catch (error) {
+        console.error("Błąd przy próbie użycia standardowego puppeteer:", error);
+        throw new Error("Nie można uruchomić przeglądarki. Sprawdź, czy puppeteer jest zainstalowany: npm install puppeteer");
+      }
+    } else {
+      // W środowisku produkcyjnym (Netlify) używamy chromium-min
+      try {
+        // Na Netlify używamy gotowej ścieżki do chromium (nie potrzebujemy instalacji)
+        const executablePath = await chromium.executablePath();
+        
+        browser = await puppeteer.launch({ 
+          args: chromium.args,
+          defaultViewport: chromium.defaultViewport,
+          executablePath: executablePath,
+          headless: chromium.headless,
+        });
+      } catch (error) {
+        console.error("Błąd przy próbie użycia chromium-min:", error);
+        throw error;
+      }
+    }
+    
+    if (!browser) {
+      throw new Error("Nie udało się uruchomić przeglądarki.");
+    }
     
     console.log("Przeglądarka uruchomiona, tworzenie nowej strony...");
     
