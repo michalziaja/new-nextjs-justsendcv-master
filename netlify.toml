@@ -2,24 +2,6 @@
   command = "npm run build"
   publish = ".next"
 
-[build.environment]
-  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-  NPM_FLAGS = "--legacy-peer-deps"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-# Zwiększenie limitu czasu dla funkcji generowania PDF i dodanie plików chromium
-[functions]
-  node_bundler = "esbuild"
-  included_files = [
-    "node_modules/@sparticuz/chromium-min/**/*",
-    "node_modules/puppeteer-core/**/*"
-  ]
-
-# Dodanie zmiennych środowiskowych dla funkcji
-[functions.environment]
-  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-
-
 
