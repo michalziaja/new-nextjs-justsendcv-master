@@ -242,13 +242,12 @@ export async function POST(req: Request): Promise<NextResponse> {
   const userPrompt = `
     Dane wejściowe (JSON): ${rawBody}
 
-       Wygeneruj 15 profesjonalnych pytań rekrutacyjnych dla stanowiska w firmie .
-   Pytania powinny obejmować:
-     - Doświadczenie zawodowe (4 pytania)
-     - Umiejętności techniczne i kompetencje (3 pytania)
-     - Pytania behawioralne i sytuacyjne (3 pytania)
-     - Motywację i dopasowanie do firmy } (3 pytania)
-     - Oczekiwania i plany zawodowe (2 pytania)
+    Wygeneruj 5 profesjonalnych pytań rekrutacyjnych na podstawie danych wejściowych.
+    Pytania powinny obejmować:
+    - Doświadczenie zawodowe (2 pytania)
+    - Umiejętności techniczne i kompetencje (1 pytanie)
+    - Pytania behawioralne i sytuacyjne (1 pytanie)
+    - Motywację i dopasowanie do firmy (1 pytanie)
 
     Dla każdego pytania dodaj 4 krótkie wskazówki, jak najlepiej odpowiedzieć.
     Odpowiedz w formacie JSON:
