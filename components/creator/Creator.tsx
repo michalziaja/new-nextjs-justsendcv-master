@@ -36,12 +36,10 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
     setShowProjectsInPreview,
     lastSaved,
     isSaving,
-    saveCV
+    saveCV,
+    savedJobs,
+    isLoadingJobs
   } = useCV();
-  
-  // Stan dla zapisanych ofert pracy
-  const [savedJobs, setSavedJobs] = useState<any[]>([]);
-  const [isLoadingJobs, setIsLoadingJobs] = useState(true);
   
   // Stan do przechowywania poprzedniej aktywnej sekcji
   const [previousSection, setPreviousSection] = useState<string | null>(null);
@@ -49,45 +47,6 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
   // Ref dla kontenera z plakietkami i stan do śledzenia przewijania
   const badgeContainerRef = useRef<HTMLDivElement>(null);
   const [isScrolling, setIsScrolling] = useState(false);
-
-  // Pobieranie zapisanych ofert pracy
-  useEffect(() => {
-    const fetchSavedJobs = async () => {
-      setIsLoadingJobs(true);
-      try {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-
-        if (!user) {
-          console.error("Użytkownik nie jest zalogowany");
-          setSavedJobs([]);
-          setIsLoadingJobs(false);
-          return;
-        }
-
-        const { data: jobOffers, error } = await supabase
-          .from('job_offers')
-          .select('*')
-          .eq('user_id', user.id)
-          .eq('status', 'saved') // Filtruj tylko oferty o statusie 'saved' (zapisana)
-          .order('created_at', { ascending: false });  // Sortowanie od najnowszych
-
-        if (error) {
-          console.error("Błąd podczas pobierania ofert pracy:", error);
-          setSavedJobs([]);
-        } else {
-          setSavedJobs(jobOffers);
-        }
-      } catch (error) {
-        console.error("Wystąpił błąd:", error);
-        setSavedJobs([]);
-      } finally {
-        setIsLoadingJobs(false);
-      }
-    };
-
-    fetchSavedJobs();
-  }, []);
 
   // Sprawdzanie, czy kontener wymaga przewijania
   useEffect(() => {

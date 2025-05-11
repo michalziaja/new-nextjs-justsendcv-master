@@ -113,6 +113,10 @@ interface CVContextProps {
   lastSaved: Date | null;
   isSaving: boolean;
   jobAnalysis: JobAnalysis | null;
+  
+  // Nowe wartości dostępne w kontekście, ale bez powiadomień
+  savedJobs: JobOffer[];
+  isLoadingJobs: boolean;
 }
 
 // Początkowy stan danych CV
@@ -183,11 +187,135 @@ export function CVProvider({ children }: { children: ReactNode }) {
   const [isSaving, setIsSaving] = useState<boolean>(false);
   const [jobAnalysis, setJobAnalysis] = useState<JobAnalysis | null>(null);
   
+  // Dodajemy stan dla ofert pracy, aby uniknąć pobierania ich w wielu miejscach
+  const [savedJobs, setSavedJobs] = useState<JobOffer[]>([]);
+  const [isLoadingJobs, setIsLoadingJobs] = useState<boolean>(true);
+  
+  // Flaga wskazująca, czy dane zostały już pobrane
+  const [dataFetched, setDataFetched] = useState<boolean>(false);
+  
   // Supabase client
   const supabase = createClient();
 
-  // Funkcja do zapisywania CV
-  const saveCV = async (asDraft = true): Promise<string | null> => {
+  // Pobieranie wszystkich potrzebnych danych w jednym useEffect
+  useEffect(() => {
+    // Funkcja do pobierania wszystkich danych
+    const fetchAllData = async () => {
+      if (dataFetched) return; // Unikamy ponownego pobierania, jeśli dane już zostały pobrane
+      
+      // Sprawdzenie, czy zapytanie jest już w trakcie wykonywania
+      const isRequestInProgress = sessionStorage.getItem('creator_data_request_in_progress');
+      const lastRequestTime = sessionStorage.getItem('creator_data_last_request_time');
+      
+      // Jeśli zapytanie jest w trakcie lub zostało wykonane w ciągu ostatnich 5 sekund, pomijamy
+      if (isRequestInProgress === 'true' || 
+          (lastRequestTime && Date.now() - parseInt(lastRequestTime) < 5000)) {
+        console.log('Zapytanie zostało już wykonane lub jest w trakcie - pomijam');
+        
+        // Sprawdzamy, czy dane są dostępne w sessionStorage
+        const cachedData = sessionStorage.getItem('creator_cached_data');
+        if (cachedData) {
+          try {
+            const { cvs, jobs } = JSON.parse(cachedData);
+            if (cvs) setSavedCVs(cvs);
+            if (jobs) setSavedJobs(jobs);
+            setDataFetched(true);
+            setIsLoading(false);
+            setIsLoadingJobs(false);
+          } catch (e) {
+            console.error('Błąd podczas parsowania danych z cache:', e);
+          }
+        }
+        
+        return;
+      }
+      
+      // Oznaczamy, że zapytanie jest w trakcie
+      sessionStorage.setItem('creator_data_request_in_progress', 'true');
+      sessionStorage.setItem('creator_data_last_request_time', Date.now().toString());
+      
+      setIsLoading(true);
+      setIsLoadingJobs(true);
+      
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        if (!user) {
+          console.error("Użytkownik nie jest zalogowany");
+          setIsLoading(false);
+          setIsLoadingJobs(false);
+          sessionStorage.removeItem('creator_data_request_in_progress');
+          return;
+        }
+        
+        // Wykonujemy wszystkie zapytania równolegle dla lepszej wydajności
+        const [cvsResponse, jobsResponse] = await Promise.all([
+          // Pobieranie zapisanych CV
+          supabase
+            .from('user_cvs')
+            .select('*')
+            .eq('user_id', user.id)
+            .order('updated_at', { ascending: false }),
+            
+          // Pobieranie ofert pracy
+          supabase
+            .from('job_offers')
+            .select('*')
+            .eq('user_id', user.id)
+            .eq('status', 'saved')
+            .order('created_at', { ascending: false })
+        ]);
+        
+        // Cache dla wyników
+        const cacheData: { cvs?: any[]; jobs?: any[] } = {};
+        
+        // Obsługa błędów
+        if (cvsResponse.error) {
+          console.error("Błąd podczas pobierania zapisanych CV:", cvsResponse.error);
+        } else if (cvsResponse.data) {
+          setSavedCVs(cvsResponse.data);
+          cacheData.cvs = cvsResponse.data;
+        }
+        
+        if (jobsResponse.error) {
+          console.error("Błąd podczas pobierania ofert pracy:", jobsResponse.error);
+        } else if (jobsResponse.data) {
+          setSavedJobs(jobsResponse.data);
+          cacheData.jobs = jobsResponse.data;
+        }
+        
+        // Zapisz dane w sessionStorage
+        sessionStorage.setItem('creator_cached_data', JSON.stringify(cacheData));
+        
+        // Ustawiamy flagę, że dane zostały pobrane
+        setDataFetched(true);
+      } catch (error) {
+        console.error("Wystąpił błąd podczas pobierania danych:", error);
+      } finally {
+        setIsLoading(false);
+        setIsLoadingJobs(false);
+        // Oznaczamy, że zapytanie zostało zakończone
+        sessionStorage.removeItem('creator_data_request_in_progress');
+      }
+    };
+    
+    fetchAllData();
+    
+    // Czyszczenie przy odmontowaniu komponentu
+    return () => {
+      // Przy opuszczaniu komponentu, usuwamy blokadę
+      sessionStorage.removeItem('creator_data_request_in_progress');
+    };
+  }, []); // Pusta tablica zależności - wykonuje się tylko raz
+
+  // Przechowywanie ostatnich zapisanych danych jako referencja
+  const lastSavedDataRef = React.useRef({
+    cvData: null as CVData | null,
+    template: ''
+  });
+
+  // Funkcja do zapisywania CV - użycie useCallback, aby zapobiec tworzeniu nowych instancji
+  const saveCV = React.useCallback(async (asDraft = true): Promise<string | null> => {
     setIsSaving(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();
@@ -293,10 +421,10 @@ export function CVProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsSaving(false);
     }
-  };
+  }, [cvData, cvName, currentCVId, selectedJob?.id, selectedTemplate, supabase]);
 
   // Funkcja do ładowania CV
-  const loadCV = async (cvId: string): Promise<boolean> => {
+  const loadCV = React.useCallback(async (cvId: string): Promise<boolean> => {
     setIsLoading(true);
     try {
       const { data, error } = await supabase
@@ -316,17 +444,29 @@ export function CVProvider({ children }: { children: ReactNode }) {
         setCVName(data.name);
         setCurrentCVId(data.id);
         
-        // Jeśli CV jest powiązane z ofertą pracy, załaduj ją również
+        // Jeśli CV jest powiązane z ofertą pracy, sprawdź najpierw w savedJobs
         if (data.job_offer_id) {
-          const { data: jobData, error: jobError } = await supabase
-            .from('job_offers')
-            .select('*')
-            .eq('id', data.job_offer_id)
-            .single();
-            
-          if (!jobError && jobData) {
-            setSelectedJob(jobData as JobOffer);
+          // Szukamy oferty w już pobranych ofertach
+          const jobFromCache = savedJobs.find(job => job.id === data.job_offer_id);
+          
+          if (jobFromCache) {
+            // Jeśli oferta znajduje się już w naszych danych, nie musimy wykonywać zapytania
+            setSelectedJob(jobFromCache as JobOffer);
+          } else {
+            // Jeśli nie znaleziono w cache, pobieramy z bazy
+            const { data: jobData, error: jobError } = await supabase
+              .from('job_offers')
+              .select('*')
+              .eq('id', data.job_offer_id)
+              .single();
+              
+            if (!jobError && jobData) {
+              setSelectedJob(jobData as JobOffer);
+            }
           }
+        } else {
+          // Jeśli CV nie jest powiązane z ofertą, resetujemy wybraną ofertę
+          setSelectedJob(null);
         }
         
         return true;
@@ -339,45 +479,53 @@ export function CVProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  // Pobieranie zapisanych CV
-  useEffect(() => {
-    async function fetchSavedCVs() {
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return;
-
-        const { data, error } = await supabase
-          .from('user_cvs')
-          .select('*')
-          .eq('user_id', user.id)
-          .order('updated_at', { ascending: false });
-
-        if (error) {
-          console.error("Błąd podczas pobierania zapisanych CV:", error);
-          setSavedCVs([]);
-          return;
-        }
-
-        if (data) {
-          setSavedCVs(data);
-        }
-      } catch (error) {
-        console.error("Wystąpił błąd:", error);
-        setSavedCVs([]);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    fetchSavedCVs();
-  }, [supabase, loadCV]);
+  }, [supabase, setCvData, setSelectedTemplate, setCVName, setCurrentCVId, setSelectedJob, savedJobs]);
 
   // Pobieranie analizy oferty pracy
   useEffect(() => {
     const fetchJobAnalysis = async () => {
-      if (!selectedJob?.id) return;
+      if (!selectedJob?.id) {
+        setJobAnalysis(null);
+        return;
+      }
+      
+      // Sprawdzenie, czy zapytanie jest już w trakcie wykonywania
+      const analysisRequestKey = `job_analysis_request_${selectedJob.id}`;
+      const isAnalysisRequestInProgress = sessionStorage.getItem(analysisRequestKey);
+      
+      // Jeśli zapytanie jest w trakcie, pomijamy
+      if (isAnalysisRequestInProgress === 'true') {
+        console.log('Zapytanie o analizę oferty jest już w trakcie - pomijam');
+        return;
+      }
+      
+      // Oznaczamy, że zapytanie jest w trakcie
+      sessionStorage.setItem(analysisRequestKey, 'true');
+      
+      // Tworzymy klucz cache dla analizy oferty
+      const cacheKey = `job_analysis_${selectedJob.id}`;
+      
+      // Sprawdzamy, czy analiza jest już w lokalnym storage
+      const cachedAnalysis = localStorage.getItem(cacheKey);
+      if (cachedAnalysis) {
+        try {
+          const parsedAnalysis = JSON.parse(cachedAnalysis);
+          // Sprawdzamy, czy dane nie są przestarzałe (np. starsze niż 24h)
+          const cacheTime = parsedAnalysis.cachedAt || 0;
+          const now = Date.now();
+          const cacheAge = now - cacheTime;
+          
+          // Jeśli cache jest ważny (mniej niż 24 godziny), używamy go
+          if (cacheAge < 24 * 60 * 60 * 1000) {
+            setJobAnalysis(parsedAnalysis.data);
+            sessionStorage.removeItem(analysisRequestKey);
+            return;
+          }
+        } catch (e) {
+          // Ignorujemy błędy parsowania
+          console.error("Błąd parsowania cache analizy oferty:", e);
+        }
+      }
       
       try {
         const { data, error } = await supabase
@@ -394,42 +542,70 @@ export function CVProvider({ children }: { children: ReactNode }) {
         
         if (data) {
           setJobAnalysis(data as JobAnalysis);
+          
+          // Zapisujemy do localStorage z timestampem
+          localStorage.setItem(cacheKey, JSON.stringify({
+            data,
+            cachedAt: Date.now()
+          }));
         } else {
           setJobAnalysis(null);
         }
       } catch (error) {
         console.error("Wystąpił błąd:", error);
         setJobAnalysis(null);
+      } finally {
+        // Oznaczamy, że zapytanie zostało zakończone
+        sessionStorage.removeItem(analysisRequestKey);
       }
     };
     
     fetchJobAnalysis();
-  }, [selectedJob, supabase]);
+    
+    // Czyszczenie przy zmianie oferty pracy
+    return () => {
+      if (selectedJob?.id) {
+        sessionStorage.removeItem(`job_analysis_request_${selectedJob.id}`);
+      }
+    };
+  }, [selectedJob?.id]);
 
   // Automatyczne zapisywanie CV po każdej zmianie danych
   useEffect(() => {
-    // Tylko jeśli aktywna sekcja nie jest 'start' i mamy currentCVId
+    // Tylko jeśli aktywna sekcja nie jest 'start' i mamy dane do zapisania
     if (activeSection !== 'start') {
-      const autosaveTimeout = setTimeout(async () => {
-        await saveCV(true); // Zawsze zapisujemy jako kopię roboczą
-      }, 3000); // opóźnienie 3 sekundy po ostatniej zmianie
+      // Sprawdzamy, czy dane faktycznie się zmieniły
+      const hasDataChanged = JSON.stringify(cvData) !== JSON.stringify(lastSavedDataRef.current.cvData) || 
+                             selectedTemplate !== lastSavedDataRef.current.template;
+      
+      if (hasDataChanged) {
+        const autosaveTimeout = setTimeout(async () => {
+          // Aktualizujemy referencję do ostatnio zapisanych danych
+          lastSavedDataRef.current = {
+            cvData: JSON.parse(JSON.stringify(cvData)),
+            template: selectedTemplate
+          };
+          
+          await saveCV(true); // Zawsze zapisujemy jako kopię roboczą
+        }, 5000); // zwiększono opóźnienie do 5 sekund
 
-      return () => clearTimeout(autosaveTimeout);
+        return () => clearTimeout(autosaveTimeout);
+      }
     }
   }, [cvData, selectedTemplate, activeSection, saveCV]);
 
   // Funkcja do tworzenia nowego CV
-  const createNewCV = () => {
+  const createNewCV = React.useCallback(() => {
     setCvData(initialCVData);
     setSelectedTemplate('nowoczesny');
     setSelectedJob(null);
     setCVName('Moje CV');
     setCurrentCVId(null);
     setActiveSection('personalData');
-  };
+  }, []);
 
   // Funkcja do usuwania zapisanego CV
-  const deleteSavedCV = async (cvId: string): Promise<boolean> => {
+  const deleteSavedCV = React.useCallback(async (cvId: string): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from('user_cvs')
@@ -442,11 +618,16 @@ export function CVProvider({ children }: { children: ReactNode }) {
       }
 
       // Aktualizacja listy CV
-      setSavedCVs(savedCVs.filter(cv => cv.id !== cvId));
+      setSavedCVs(prevCVs => prevCVs.filter(cv => cv.id !== cvId));
       
       // Jeśli usunięto aktualnie załadowane CV, zresetuj stan
       if (currentCVId === cvId) {
-        createNewCV();
+        setCvData(initialCVData);
+        setSelectedTemplate('nowoczesny');
+        setSelectedJob(null);
+        setCVName('Moje CV');
+        setCurrentCVId(null);
+        setActiveSection('personalData');
       }
       
       return true;
@@ -454,7 +635,17 @@ export function CVProvider({ children }: { children: ReactNode }) {
       console.error("Wystąpił błąd podczas usuwania CV:", error);
       return false;
     }
-  };
+  }, [supabase, currentCVId]);
+
+  // Inicjalizacja lastSavedDataRef po pierwszym załadowaniu danych
+  useEffect(() => {
+    if (cvData) {
+      lastSavedDataRef.current = {
+        cvData: JSON.parse(JSON.stringify(cvData)),
+        template: selectedTemplate
+      };
+    }
+  }, []); // Tylko przy pierwszym renderowaniu
 
   return (
     <CVContext.Provider
@@ -482,7 +673,10 @@ export function CVProvider({ children }: { children: ReactNode }) {
         deleteSavedCV,
         lastSaved,
         isSaving,
-        jobAnalysis
+        jobAnalysis,
+        // Dodajemy nowe wartości do kontekstu, ale bez powiadomień
+        savedJobs,
+        isLoadingJobs
       }}
     >
       {children}

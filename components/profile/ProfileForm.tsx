@@ -8,10 +8,11 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertCircle, PlusCircle, Trash2, CheckCircle, UserCircle, FileText, Link, MapPin } from 'lucide-react';
+import { AlertCircle, PlusCircle, Trash2, CheckCircle, UserCircle, FileText, Link, MapPin, Phone, Facebook, Linkedin, Github, Instagram, Twitter, Globe, Dribbble, Figma } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { updateUserProfileAction } from '@/app/actions';
 import { createClient } from '@/utils/supabase/client';
+import { Skeleton } from '@/components/ui/skeleton';
 
 // Typy linków społecznościowych
 type SocialLinkType = 'linkedin' | 'github' | 'portfolio' | 'twitter' | 'facebook' | 'instagram' | 'dribbble' | 'behance';
@@ -25,19 +26,31 @@ interface SocialLink {
 // Interfejs dla profilu użytkownika
 interface UserProfile {
   user_id: string;
+  prefix?: string;
   first_name?: string;
   last_name?: string;
   birth_date?: string;
+  birth_year?: string;
   email?: string;
   about_me?: string;
-  city?: string;
+  address?: string;
+  phone?: string;
   social_links?: string; // JSON string z linkami społecznościowymi
 }
 
-// Komponent formularza profilu
-export default function ProfileForm() {
+interface ProfileFormProps {
+  showOnlyPersonalData?: boolean;
+  showOnlyAboutMe?: boolean;
+  showOnlySocialLinks?: boolean;
+}
+
+export default function ProfileForm({ 
+  showOnlyPersonalData,
+  showOnlyAboutMe,
+  showOnlySocialLinks 
+}: ProfileFormProps = {}) {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [profile, setProfile] = useState<UserProfile | null>(null);
@@ -74,6 +87,11 @@ export default function ProfileForm() {
         }
         
         if (data) {
+          // Mapowanie z city na address jeśli potrzebne
+          if (data.city && !data.address) {
+            data.address = data.city;
+          }
+          
           setProfile(data);
           
           // Parsowanie linków społecznościowych jeśli istnieją
@@ -93,6 +111,8 @@ export default function ProfileForm() {
       } catch (error) {
         console.error('Nieoczekiwany błąd:', error);
         setError('Wystąpił nieoczekiwany błąd podczas ładowania danych');
+      } finally {
+        setIsLoading(false);
       }
     };
     
@@ -136,7 +156,7 @@ export default function ProfileForm() {
     setSuccess(null);
     
     try {
-      // Przygotowanie danych do zapisania (usuwając pole fullName, którego nie ma w tabeli)
+      // Przygotowanie danych do zapisania
       const profileData = {
         ...profile,
         social_links: JSON.stringify(socialLinks),
@@ -167,121 +187,280 @@ export default function ProfileForm() {
     }
   };
 
+  // Komponent Skeleton do wyświetlania podczas ładowania
+  const ProfileFormSkeleton = () => (
+    <div className="space-y-8">
+      {/* Skeleton danych osobowych */}
+      <div className="p-2 -mt-1 bg-gray-50/50 rounded-sm border border-gray-200">
+        <div className="p-2">
+          <div className="flex items-center mb-4">
+            <Skeleton className="h-6 w-6 rounded-full mr-2" />
+            <Skeleton className="h-7 w-32" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Lewa kolumna */}
+            <div className="space-y-4">
+              {[...Array(3)].map((_, i) => (
+                <div key={`left-${i}`} className="flex items-center gap-4">
+                  <Skeleton className="h-4 w-16" />
+                  <Skeleton className="h-8 w-full" />
+                </div>
+              ))}
+            </div>
+            
+            {/* Prawa kolumna */}
+            <div className="space-y-4">
+              {[...Array(3)].map((_, i) => (
+                <div key={`right-${i}`} className="flex items-center gap-4">
+                  <Skeleton className="h-4 w-16" />
+                  <Skeleton className="h-8 w-full" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Skeleton sekcji O mnie */}
+      <div className="p-2 -mt-2 bg-gray-50/50 rounded-sm border border-gray-200">
+        <div className="p-2">
+          <div className="flex items-center mb-4">
+            <Skeleton className="h-6 w-6 rounded-full mr-2" />
+            <Skeleton className="h-7 w-32" />
+          </div>
+          <Skeleton className="h-20 w-full" />
+        </div>
+      </div>
+      
+      {/* Skeleton sekcji Linki społecznościowe */}
+      <div className="p-2 -mt-2 bg-gray-50/50 rounded-sm border border-gray-200">
+        <div className="p-2">
+          <div className="flex items-center mb-4">
+            <Skeleton className="h-6 w-6 rounded-full mr-2" />
+            <Skeleton className="h-7 w-48" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[...Array(4)].map((_, i) => (
+              <div key={`social-${i}`} className="flex items-center gap-2">
+                <div className="w-1/3">
+                  <Skeleton className="h-8 w-full" />
+                </div>
+                <div className="flex-1">
+                  <Skeleton className="h-8 w-full" />
+                </div>
+                <div>
+                  <Skeleton className="h-9 w-9 rounded-md" />
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-4">
+            <Skeleton className="h-9 w-32" />
+          </div>
+        </div>
+      </div>
+      
+      {/* Skeleton przycisku zapisu */}
+      <div className="flex justify-end">
+        <Skeleton className="h-8 w-32 rounded-md" />
+      </div>
+    </div>
+  );
+
+  if (isLoading) {
+    return <ProfileFormSkeleton />;
+  }
+
   if (!profile) {
     return (
-      <div className="flex justify-center items-center h-[60vh]">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      <div className="flex flex-col items-center justify-center h-[60vh] space-y-4">
+        <AlertCircle className="h-12 w-12 text-destructive" />
+        <p className="text-lg text-center">Nie udało się załadować profilu.</p>
+        <Button onClick={() => window.location.reload()}>Spróbuj ponownie</Button>
       </div>
     );
   }
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-2">
-      <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)] rounded-sm">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <div className="relative mr-2">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 opacity-20"></div>
-              <UserCircle className="h-5 w-5 text-blue-500 relative z-10" />
-            </div>
-            Dane osobowe
-          </CardTitle>
-          <CardDescription>
-            Uzupełnij swoje podstawowe dane osobowe
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="first_name">Imię</Label>
-              <Input 
-                id="first_name"
-                value={profile.first_name || ''}
-                onChange={(e) => setProfile({...profile, first_name: e.target.value})}
-                placeholder="Twoje imię"
-              />
-            </div>
-            
-            <div className="space-y-2">
-              <Label htmlFor="last_name">Nazwisko</Label>
-              <Input 
-                id="last_name"
-                value={profile.last_name || ''}
-                onChange={(e) => setProfile({...profile, last_name: e.target.value})}
-                placeholder="Twoje nazwisko"
-              />
-            </div>
+  const renderPersonalData = () => (
+    <div className="p-2 -mt-1 bg-gray-50/50 rounded-sm border border-gray-200">
+      <div className="p-2  ">
+        <h3 className="flex items-center text-lg font-semibold mb-4">
+          <div className="relative mr-2">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 opacity-20"></div>
+            <UserCircle className="h-6 w-6 text-blue-500 relative z-10" />
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="city">Miasto</Label>
-              <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          Dane osobowe
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Lewa kolumna */}
+          <div className="space-y-4">
+            {/* Imię */}
+            <div className="flex items-center gap-4">
+              <Label htmlFor="first_name" className="w-16">Imię</Label>
+              <div className="relative flex-1">
+                <UserCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input 
-                  id="city"
-                  value={profile.city || ''}
-                  onChange={(e) => setProfile({...profile, city: e.target.value})}
-                  placeholder="Miasto zamieszkania"
+                  id="first_name"
+                  value={profile.first_name || ''}
+                  onChange={(e) => setProfile({...profile, first_name: e.target.value})}
+                  placeholder="Twoje imię"
                   className="pl-9"
                 />
               </div>
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="birth_date">Data urodzenia</Label>
-              <Input 
-                id="birth_date"
-                type="date"
-                value={profile.birth_date || ''}
-                onChange={(e) => setProfile({...profile, birth_date: e.target.value})}
-              />
+            {/* Nazwisko */}
+            <div className="flex items-center gap-4">
+              <Label htmlFor="last_name" className="w-16">Nazwisko</Label>
+              <div className="relative flex-1">
+                <UserCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input 
+                  id="last_name"
+                  value={profile.last_name || ''}
+                  onChange={(e) => setProfile({...profile, last_name: e.target.value})}
+                  placeholder="Twoje nazwisko"
+                  className="pl-9"
+                />
+              </div>
+            </div>
+            
+            {/* Email */}
+            <div className="flex items-center gap-4">
+              <Label htmlFor="email" className="w-16">Email</Label>
+              <div className="relative flex-1">
+                <Link className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input 
+                  id="email"
+                  type="email"
+                  value={profile.email || ''}
+                  onChange={(e) => setProfile({...profile, email: e.target.value})}
+                  placeholder="Twój adres email"
+                  className="pl-9"
+                />
+              </div>
             </div>
           </div>
-        </CardContent>
-      </Card>
-      
-      <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)] rounded-sm">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <div className="relative mr-2">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-green-600 opacity-20"></div>
-              <FileText className="h-5 w-5 text-green-500 relative z-10" />
+          
+          {/* Prawa kolumna */}
+          <div className="space-y-4">
+            {/* Adres */}
+            <div className="flex items-center gap-4">
+              <Label htmlFor="address" className="w-16">Adres</Label>
+              <div className="relative flex-1">
+                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input 
+                  id="address"
+                  value={profile.address || ''}
+                  onChange={(e) => setProfile({...profile, address: e.target.value})}
+                  placeholder="Twój adres"
+                  className="pl-9"
+                />
+              </div>
             </div>
-            O mnie
-          </CardTitle>
-          <CardDescription>
-            Opisz krótko swoją osobę, doświadczenie lub zainteresowania
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Textarea 
-            id="about_me"
-            value={profile.about_me || ''}
-            onChange={(e) => setProfile({...profile, about_me: e.target.value})}
-            placeholder="Napisz kilka zdań o sobie..."
-            className="min-h-[120px]"
-          />
-        </CardContent>
-      </Card>
-      
-      <Card className="shadow-[2px_4px_10px_rgba(0,0,0,0.3)] rounded-sm">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <div className="relative mr-2">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 opacity-20"></div>
-              <Link className="h-5 w-5 text-purple-500 relative z-10" />
+            
+            {/* Telefon */}
+            <div className="flex items-center gap-4">
+              <Label htmlFor="phone" className="w-16">Telefon</Label>
+              <div className="relative flex-1">
+                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input 
+                  id="phone"
+                  value={profile.phone || ''}
+                  onChange={(e) => setProfile({...profile, phone: e.target.value})}
+                  placeholder="Twój numer telefonu"
+                  className="pl-9"
+                />
+              </div>
             </div>
-            Linki społecznościowe
-          </CardTitle>
-          <CardDescription>
-            Dodaj swoje profile społecznościowe, portfolio lub inne ważne linki
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
+            
+            {/* Rocznik */}
+            <div className="flex items-center gap-4">
+              <Label htmlFor="birth_year" className="w-16">Rocznik</Label>
+              <div className="relative flex-1">
+                <AlertCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input 
+                  id="birth_year"
+                  type="number"
+                  min="1900"
+                  max={new Date().getFullYear()}
+                  value={profile.birth_year || ''}
+                  onChange={(e) => setProfile({...profile, birth_year: e.target.value})}
+                  placeholder="Rok urodzenia"
+                  className="pl-9"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderAboutMe = () => (
+    <div className="p-2 -mt-2 bg-gray-50/50 rounded-sm border border-gray-200">
+      <div className="p-2">
+        <h3 className="flex items-center text-lg font-semibold mb-4">
+          <div className="relative mr-2">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-green-600 opacity-20"></div>
+            <FileText className="h-6 w-6 text-green-500 relative z-10" />
+          </div>
+          O mnie
+        </h3>
+        
+        <Textarea 
+          id="about_me"
+          value={profile.about_me || ''}
+          onChange={(e) => setProfile({...profile, about_me: e.target.value})}
+          placeholder="Napisz kilka zdań o sobie..."
+          className="min-h-[120px]"
+        />
+      </div>
+    </div>
+  );
+
+  // Funkcja do renderowania odpowiedniej ikony na podstawie typu linku
+  const renderSocialIcon = (type: SocialLinkType) => {
+    switch (type) {
+      case 'linkedin':
+        return <Linkedin className="h-4 w-4 text-blue-600" />;
+      case 'github':
+        return <Github className="h-4 w-4 text-gray-800" />;
+      case 'portfolio':
+        return <Globe className="h-4 w-4 text-green-600" />;
+      case 'twitter':
+        return <Twitter className="h-4 w-4 text-blue-400" />;
+      case 'facebook':
+        return <Facebook className="h-4 w-4 text-blue-700" />;
+      case 'instagram':
+        return <Instagram className="h-4 w-4 text-pink-600" />;
+      case 'dribbble':
+        return <Dribbble className="h-4 w-4 text-pink-500" />;
+      case 'behance':
+        return <Figma className="h-4 w-4 text-blue-800" />; // Używamy Figma jako zastępstwa dla Behance
+      default:
+        return <Link className="h-4 w-4 text-muted-foreground" />;
+    }
+  };
+
+  const renderSocialLinks = () => (
+    <div className="p-2 -mt-2 bg-gray-50/50 rounded-sm border border-gray-200">
+      <div className="p-2">
+        <h3 className="flex items-center text-lg font-semibold mb-4">
+          <div className="relative mr-2">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 opacity-20"></div>
+            <Link className="h-5 w-5 text-purple-500 relative z-10" />
+          </div>
+          Linki społecznościowe
+        </h3>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {socialLinks.map((link, index) => (
-            <div key={index} className="grid grid-cols-12 gap-2 items-center">
-              <div className="col-span-4 sm:col-span-3">
+            <div key={index} className="flex items-center gap-2">
+              <div className="w-1/3">
                 <Select 
                   value={link.type}
                   onValueChange={(value) => updateSocialLinkType(index, value as SocialLinkType)}
@@ -290,19 +469,35 @@ export default function ProfileForm() {
                     <SelectValue placeholder="Wybierz typ" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="linkedin">LinkedIn</SelectItem>
-                    <SelectItem value="github">GitHub</SelectItem>
-                    <SelectItem value="portfolio">Portfolio</SelectItem>
-                    <SelectItem value="twitter">Twitter</SelectItem>
-                    <SelectItem value="facebook">Facebook</SelectItem>
-                    <SelectItem value="instagram">Instagram</SelectItem>
-                    <SelectItem value="dribbble">Dribbble</SelectItem>
-                    <SelectItem value="behance">Behance</SelectItem>
+                    <SelectItem value="linkedin" className="flex items-center gap-2">
+                      <Linkedin className="h-4 w-4 text-blue-600 inline mr-2" />LinkedIn
+                    </SelectItem>
+                    <SelectItem value="github" className="flex items-center gap-2">
+                      <Github className="h-4 w-4 text-gray-800 inline mr-2" />GitHub
+                    </SelectItem>
+                    <SelectItem value="portfolio" className="flex items-center gap-2">
+                      <Globe className="h-4 w-4 text-green-600 inline mr-2" />Portfolio
+                    </SelectItem>
+                    <SelectItem value="twitter" className="flex items-center gap-2">
+                      <Twitter className="h-4 w-4 text-blue-400 inline mr-2" />Twitter
+                    </SelectItem>
+                    <SelectItem value="facebook" className="flex items-center gap-2">
+                      <Facebook className="h-4 w-4 text-blue-700 inline mr-2" />Facebook
+                    </SelectItem>
+                    <SelectItem value="instagram" className="flex items-center gap-2">
+                      <Instagram className="h-4 w-4 text-pink-600 inline mr-2" />Instagram
+                    </SelectItem>
+                    <SelectItem value="dribbble" className="flex items-center gap-2">
+                      <Dribbble className="h-4 w-4 text-pink-500 inline mr-2" />Dribbble
+                    </SelectItem>
+                    <SelectItem value="behance" className="flex items-center gap-2">
+                      <Figma className="h-4 w-4 text-blue-800 inline mr-2" />Behance
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               
-              <div className="col-span-7 sm:col-span-8">
+              <div className="flex-1">
                 <Input 
                   value={link.url}
                   onChange={(e) => updateSocialLinkUrl(index, e.target.value)}
@@ -310,7 +505,7 @@ export default function ProfileForm() {
                 />
               </div>
               
-              <div className="col-span-1">
+              <div>
                 <Button 
                   type="button" 
                   variant="ghost" 
@@ -322,20 +517,39 @@ export default function ProfileForm() {
               </div>
             </div>
           ))}
-          
+        </div>
+        
+        <div className="mt-4">
           <Button 
             type="button" 
             variant="outline" 
-            size="sm" 
-            className="mt-2"
+            size="sm"
             onClick={addSocialLink}
           >
             <PlusCircle className="h-4 w-4 mr-2" /> Dodaj link
           </Button>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-8">
+      {showOnlyPersonalData && renderPersonalData()}
+      {showOnlyAboutMe && renderAboutMe()}
+      {showOnlySocialLinks && renderSocialLinks()}
       
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+      {/* Jeśli nie wybrano żadnej konkretnej sekcji, pokaż wszystkie */}
+      {!showOnlyPersonalData && !showOnlyAboutMe && !showOnlySocialLinks && (
+        <>
+          {renderPersonalData()}
+          {renderAboutMe()}
+          {renderSocialLinks()}
+        </>
+      )}
+
+      {/* Komunikaty i przycisk zapisu */}
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="w-full md:w-auto">
           {error && (
             <Alert variant="destructive" className="mb-0 py-2">
@@ -352,7 +566,11 @@ export default function ProfileForm() {
           )}
         </div>
         
-        <Button type="submit" disabled={isLoading} className="w-full md:w-auto">
+        <Button 
+          type="submit" 
+          disabled={isLoading} 
+          className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white shadow-md transition-all"
+        >
           {isLoading ? 'Zapisywanie...' : 'Zapisz zmiany'}
         </Button>
       </div>

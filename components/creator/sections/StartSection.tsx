@@ -50,7 +50,8 @@ const StartSection: React.FC<StartSectionProps> = ({
     deleteSavedCV,
     setCVName,
     saveCV,
-    setActiveSection
+    setActiveSection,
+   
   } = useCV();
   
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -58,8 +59,6 @@ const StartSection: React.FC<StartSectionProps> = ({
   const [newName, setNewName] = useState<string>('');
   
   // Stany dla obsługi ofert pracy
-  const [jobOffers, setJobOffers] = useState<any[]>([]);
-  const [isLoadingOffers, setIsLoadingOffers] = useState(true);
   const [selectedOffer, setSelectedOffer] = useState<any | null>(null);
   
   // Stan dla zakładek tworzenia CV
@@ -72,48 +71,6 @@ const StartSection: React.FC<StartSectionProps> = ({
   const [selectedCVId, setSelectedCVId] = useState<string>('');
   const [selectedCVInfo, setSelectedCVInfo] = useState<SavedCV | null>(null);
   const [selectedCVJobOffer, setSelectedCVJobOffer] = useState<any | null>(null);
-
-  // Pobieranie ofert pracy
-  useEffect(() => {
-    const fetchJobOffers = async () => {
-      setIsLoadingOffers(true);
-      try {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-
-        if (!user) {
-          console.error("Użytkownik nie jest zalogowany");
-          setJobOffers([]);
-          setIsLoadingOffers(false);
-          return;
-        }
-
-        const { data: offers, error } = await supabase
-          .from('job_offers')
-          .select('*')
-          .eq('user_id', user.id)
-          .eq('status', 'saved') // Filtrujemy tylko zapisane oferty
-          .order('created_at', { ascending: false });
-
-        if (error) {
-          console.error("Błąd podczas pobierania ofert pracy:", error);
-          setJobOffers([]);
-        } else {
-          // Dodatkowe filtrowanie po statusie dla pewności
-          const savedOffers = offers?.filter(offer => offer.status === 'saved') || [];
-          setJobOffers(savedOffers);
-          console.log('Pobrano oferty zapisane:', savedOffers.length);
-        }
-      } catch (error) {
-        console.error("Wystąpił błąd:", error);
-        setJobOffers([]);
-      } finally {
-        setIsLoadingOffers(false);
-      }
-    };
-
-    fetchJobOffers();
-  }, []);
 
   // Style dla statusów
   const getStatusStyles = (status: string) => {
@@ -192,31 +149,40 @@ const StartSection: React.FC<StartSectionProps> = ({
   };
 
   // Funkcja do pobierania informacji o ofercie pracy powiązanej z CV
-  const fetchJobOfferForCV = async (jobOfferId: string | null) => {
+  // Memoizujemy funkcję za pomocą useCallback, aby zapobiec niepotrzebnym renderom
+  const fetchJobOfferForCV = React.useCallback(async (jobOfferId: string | null) => {
     if (!jobOfferId) {
       setSelectedCVJobOffer(null);
       return;
     }
 
     try {
-      const supabase = createClient();
-      const { data, error } = await supabase
-        .from('job_offers')
-        .select('*')
-        .eq('id', jobOfferId)
-        .single();
-
-      if (error) {
-        console.error("Błąd podczas pobierania oferty pracy:", error);
-        setSelectedCVJobOffer(null);
+      // Zamiast pobierać dane z bazy, możemy sprawdzić, czy oferta jest dostępna w savedJobs
+      const matchingJob = savedJobs.find(job => job.id === jobOfferId);
+      
+      if (matchingJob) {
+        setSelectedCVJobOffer(matchingJob);
       } else {
-        setSelectedCVJobOffer(data);
+        // Jeśli nie znaleziono oferty w lokalnych danych, pobieramy ją z bazy
+        const supabase = createClient();
+        const { data, error } = await supabase
+          .from('job_offers')
+          .select('*')
+          .eq('id', jobOfferId)
+          .single();
+
+        if (error) {
+          console.error("Błąd podczas pobierania oferty pracy:", error);
+          setSelectedCVJobOffer(null);
+        } else {
+          setSelectedCVJobOffer(data);
+        }
       }
     } catch (error) {
       console.error("Wystąpił błąd:", error);
       setSelectedCVJobOffer(null);
     }
-  };
+  }, [savedJobs]); // Dodajemy savedJobs jako zależność
 
   // Funkcja do formatowania daty
   const formatDate = (dateStr: string) => {
@@ -398,13 +364,13 @@ const StartSection: React.FC<StartSectionProps> = ({
                   
                   {/* Wybór oferty - w formie listy zamiast select */}
                   <div className="bg-white mt-2">
-                    {isLoadingOffers ? (
+                    {isLoadingJobs ? (
                       <div className="p-4 text-gray-500 text-center">Ładowanie ofert pracy...</div>
-                    ) : jobOffers.length === 0 ? (
+                    ) : savedJobs.length === 0 ? (
                       <div className="p-4 text-gray-500 text-center">Nie masz żadnych zapisanych ofert pracy.</div>
                     ) : (
                       <div className="overflow-y-auto" style={{ maxHeight: 'calc(38vh)' }}>
-                        {jobOffers.map(offer => (
+                        {savedJobs.map(offer => (
                           <div 
                             key={offer.id} 
                             className={`border ${selectedOffer?.id === offer.id 
