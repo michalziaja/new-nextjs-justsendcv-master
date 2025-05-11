@@ -318,6 +318,40 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
             );
           })}
         </div>
+
+        {/* Sekcja Zdjęcie Profilowe */}
+        <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-4">Zdjęcie Profilowe</h5>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"> {/* Utrzymujemy układ siatki dla spójności */}
+          <div className="flex items-center justify-between">
+            <label htmlFor="photoScaleAdvanced" className="text-xs font-medium text-gray-600 w-1/2">Skala zdjęcia (%)</label>
+            <input
+              id="photoScaleAdvanced"
+              type="number"
+              className="w-1/2 border rounded-md px-3 py-1.5 text-sm text-center"
+              min="100"
+              max="200"
+              step="5"
+              value={cvData.personalData?.photoScalePercent || 100} // Odczyt z personalData, domyślnie 100
+              onChange={(e) => {
+                const val = parseInt(e.target.value, 10);
+                if (!isNaN(val) && val >= 100 && val <= 200) {
+                  setCvData(prevCvData => ({
+                    ...prevCvData,
+                    personalData: {
+                      // Upewniamy się, że personalData istnieje, chociaż powinno
+                      ...(prevCvData.personalData || { 
+                        firstName: '', lastName: '', email: '', phone: '', address: '' 
+                      }), 
+                      photoScalePercent: val,
+                    },
+                  }));
+                }
+              }}
+            />
+          </div>
+          {/* Można tu dodać w przyszłości inne opcje związane ze zdjęciem, np. border-radius */}
+        </div>
+
       </div>
       
       {/* Przyciski na dole */}

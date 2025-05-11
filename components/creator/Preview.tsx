@@ -536,6 +536,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
                   sectionsMap={sectionsMap}
                   activeSection={activeSection}
                   showProjectsInPreview={showProjectsInPreview}
+                  showJobTitle={cvData.showJobTitleInCV || false}
                 />
               </div>
             ))}
@@ -566,6 +567,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
             onSectionsUpdate={handleSectionsUpdate}
             activeSection={activeSection}
             showProjectsInPreview={showProjectsInPreview}
+            showJobTitle={cvData.showJobTitleInCV || false}
           />
         </div>
       </div>
@@ -610,6 +612,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
                 sectionsMap={sectionsMap}
                 activeSection="summary" // Zawsze pokazuj wszystko dla wersji do druku
                 showProjectsInPreview={true} // Zawsze pokazuj projekty w wersji do druku
+                showJobTitle={cvData.showJobTitleInCV || false}
               />
             </div>
           ))}

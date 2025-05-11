@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { IoClose } from "react-icons/io5";
 import { CVData, useCV } from '../CVContext';
 import { FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
+import { FaUser, FaShareAlt } from "react-icons/fa";
 
 interface PersonalDataSectionProps {
   cvData: CVData;
@@ -28,23 +29,34 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   onBack,
   onNext
 }) => {
-  const { saveCV, isSaving, loadUserProfile } = useCV();
+  const { saveCV, isSaving, loadUserProfile, currentCVId } = useCV();
   const [socialLinks, setSocialLinks] = useState<SocialLink[]>(cvData.personalData.socialLinks || []);
   
   // Stan do kontrolowania widoczności sekcji zdjęcia w formularzu
-  const [includePhoto, setIncludePhoto] = useState(false);
+  const [includePhoto, setIncludePhoto] = useState(cvData.personalData.includePhotoInCV || false);
   // Stan do kontrolowania skali zdjęcia
-  const [currentPhotoScale, setCurrentPhotoScale] = useState(100);
+  const [currentPhotoScale, setCurrentPhotoScale] = useState(cvData.personalData.photoScalePercent || 100);
   // Stan do kontrolowania zaokrąglenia rogów zdjęcia (wartość procentowa 0-50)
   const [currentBorderRadiusPercent, setCurrentBorderRadiusPercent] = useState(0);
+  // Stan do śledzenia ostatnio zmienionego linku (dla efektu wizualnego)
+  const [lastToggledLinkIndex, setLastToggledLinkIndex] = useState<number | null>(null);
+  // Stan do kontrolowania widoczności adnotacji o stanowisku w CV
+  const [showJobTitle, setShowJobTitle] = useState(cvData.showJobTitleInCV || false);
   
-  // Pobierz dane profilu przy pierwszym renderowaniu
+  const profileLoadedRef = useRef(false);
+
+  // Pobierz dane profilu przy pierwszym renderowaniu, jeśli tworzymy nowe CV
   useEffect(() => {
-    // Ładowanie danych z profilu użytkownika
-    loadUserProfile();
-  }, [loadUserProfile]);
-  
-  // Aktualizacja stanu socialLinks gdy zmienią się dane CV
+    // Wywołaj loadUserProfile tylko jeśli tworzymy nowe CV (currentCVId jest null)
+    // i profil nie został jeszcze załadowany w tej sesji komponentu.
+    if (currentCVId === null && !profileLoadedRef.current) {
+      console.log("PersonalDataSection: Ładowanie danych profilu dla nowego CV.");
+      loadUserProfile();
+      profileLoadedRef.current = true; // Oznacz, że profil został załadowany
+    }
+  }, [loadUserProfile, currentCVId]);
+
+  // Efekt do synchronizacji stanów lokalnych z cvData (np. socialLinks, includePhoto itd.)
   useEffect(() => {
     if (cvData.personalData.socialLinks) {
       setSocialLinks(cvData.personalData.socialLinks);
@@ -70,7 +82,11 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
         setCurrentBorderRadiusPercent(0);
       }
     }
-  }, [cvData.personalData.socialLinks, cvData.personalData.includePhotoInCV, cvData.personalData.photoScalePercent, cvData.personalData.photoBorderRadius]);
+    // Synchronizuj stan widoczności adnotacji o stanowisku
+    if (cvData.showJobTitleInCV !== undefined) {
+      setShowJobTitle(cvData.showJobTitleInCV);
+    }
+  }, [cvData.personalData, cvData.showJobTitleInCV]);
   
   // Funkcja do zmiany stanu "include" dla linku społecznościowego
   const toggleSocialLinkInclude = (index: number) => {
@@ -82,8 +98,18 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     setSocialLinks(updatedLinks);
     
     // Aktualizacja danych personalnych w CV poprzez przekazanie nowej tablicy linków
-    // Konwertujemy tablicę SocialLink[] na string (JSON), aby uniknąć problemów typowania
     updatePersonalData('socialLinks', JSON.stringify(updatedLinks));
+    
+    // Ustaw indeks ostatnio przełączonego linku dla efektu wizualnego
+    setLastToggledLinkIndex(index);
+    
+    // Zresetuj efekt wizualny po 1 sekundzie
+    setTimeout(() => {
+      setLastToggledLinkIndex(null);
+    }, 1000);
+    
+    // Automatyczny zapis CV po zmianie linków
+    saveCV(true);
   };
   
   // Funkcja pomocnicza zwracająca ikonę dla danego typu linku
@@ -109,30 +135,26 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   
   return (
     <div className="flex flex-col h-full ">
-      <div className="p-4 ml-6">
-        <h3 className="text-lg font-semibold mb-2">Dane osobowe</h3>
-        <p className="text-gray-600 mb-4">Wprowadź swoje podstawowe dane kontaktowe</p>
+      <div className="p-4 ml-6 -mt-2">
+        <h3 className="text-lg font-semibold mb-0 flex items-center">
+          <FaUser className="mr-2 text-blue-500" /> Dane osobowe
+        </h3>
+        <p className="text-gray-600 mb-4 text-sm">Wprowadź swoje podstawowe dane kontaktowe</p>
         
         {/* Informacja o wybranym stanowisku z możliwością edycji/usunięcia */}
         {selectedJob && (
-          <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-md">
-            <div className="flex justify-between items-start mb-2">
-              <h4 className="text-sm font-medium text-gray-700">Informacja o aplikowanym stanowisku:</h4>
-              <button 
-                onClick={() => setSelectedJob(null)}
-                className="text-gray-500 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
-                title="Usuń wybrane stanowisko"
-              >
-                <IoClose className="w-5 h-5" />
-              </button>
+          <div className="mb-2 p-4 bg-blue-50 border border-blue-200 rounded-md">
+            <div className="flex justify-between items-start ">
+            
+            
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1">Stanowisko</label>
+            {/* Wyświetlanie w jednym rzędzie */}
+            <div className="flex gap-4">
+              <div className="flex-1">
                 <input 
                   type="text" 
-                  className="w-full border rounded-md px-3 py-2 text-sm" 
+                  className="w-2/3 border rounded-md px-3 py-2 text-sm" 
                   value={selectedJob.title}
                   onChange={(e) => {
                     // Tworzymy kopię obiektu i aktualizujemy tytuł
@@ -141,11 +163,10 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
                   }}
                 />
               </div>
-              <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1">Firma</label>
+              <div className="flex-1">
                 <input 
                   type="text" 
-                  className="w-full border rounded-md px-3 py-2 text-sm" 
+                  className="w-2/3 border rounded-md px-3 py-2 text-sm" 
                   value={selectedJob.company}
                   onChange={(e) => {
                     // Tworzymy kopię obiektu i aktualizujemy firmę
@@ -156,58 +177,78 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
               </div>
             </div>
             
-            <div className="mt-2 text-xs text-gray-500">
-              Ta informacja będzie widoczna w nagłówku Twojego CV. Możesz ją edytować lub usunąć.
+            <div className="mt-2 flex items-center">
+              <input
+                type="checkbox"
+                id="showJobTitle"
+                className="mr-2 h-3 w-3 text-blue-600 border-gray-300 rounded"
+                checked={showJobTitle}
+                onChange={(e) => {
+                  const newValue = e.target.checked;
+                  setShowJobTitle(newValue);
+                  // Aktualizujemy parametr w CVData
+                  const cvDataUpdate = {
+                    ...cvData,
+                    showJobTitleInCV: newValue
+                  };
+                  updatePersonalData('showJobTitleInCV', newValue.toString());
+                }}
+              />
+              <label htmlFor="showJobTitle" className="text-sm text-gray-600">
+                Pokaż informację o stanowisku w nagłówku CV
+              </label>
             </div>
+            
+         
           </div>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Imię</label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="flex items-baseline">
+            <label className="text-md font-medium text-gray-900 mr-3 whitespace-nowrap w-10">Imię</label>
             <input 
               type="text" 
-              className="w-full border rounded-md px-3 py-2" 
+              className="w-3/4 border text-sm rounded-md px-3 py-2" 
               placeholder="Wprowadź imię"
               value={cvData.personalData.firstName}
               onChange={(e) => updatePersonalData('firstName', e.target.value)}
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Nazwisko</label>
+          <div className="flex items-baseline">
+            <label className="text-md font-medium text-gray-900 mr-10 whitespace-nowrap w-10">Nazwisko</label>
             <input 
               type="text" 
-              className="w-full border rounded-md px-3 py-2" 
+              className="w-4/6 border text-sm rounded-md px-3 py-2" 
               placeholder="Wprowadź nazwisko"
               value={cvData.personalData.lastName}
               onChange={(e) => updatePersonalData('lastName', e.target.value)}
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <div className="flex items-baseline">
+            <label className="text-md font-medium text-gray-900 mr-3 whitespace-nowrap w-10">Email</label>
             <input 
               type="email" 
-              className="w-full border rounded-md px-3 py-2" 
+              className="w-3/4 border text-sm rounded-md px-3 py-2" 
               placeholder="Wprowadź email"
               value={cvData.personalData.email}
               onChange={(e) => updatePersonalData('email', e.target.value)}
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+          <div className="flex items-baseline">
+            <label className="text-md font-medium text-gray-900 mr-10 whitespace-nowrap w-10">Telefon</label>
             <input 
               type="tel" 
-              className="w-full border rounded-md px-3 py-2" 
+              className="w-4/6 border text-sm rounded-md px-3 py-2" 
               placeholder="Wprowadź numer telefonu"
               value={cvData.personalData.phone}
               onChange={(e) => updatePersonalData('phone', e.target.value)}
             />
           </div>
-          <div className="col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Adres</label>
+          <div className="flex items-baseline">
+            <label className="text-md font-medium text-gray-900 mr-3 whitespace-nowrap w-10">Adres</label>
             <input 
               type="text" 
-              className="w-full border rounded-md px-3 py-2" 
+              className="w-3/4 border text-sm rounded-md px-3 py-2" 
               placeholder="Wprowadź adres"
               value={cvData.personalData.address}
               onChange={(e) => updatePersonalData('address', e.target.value)}
@@ -217,13 +258,17 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
         
         {/* Sekcja linków społecznościowych */}
         {socialLinks.length > 0 && (
-          <div className="mt-6">
-            <h4 className="text-md font-semibold mb-3">Linki społecznościowe</h4>
-            <p className="text-gray-600 mb-3 text-sm">Wybierz, które linki chcesz uwzględnić w swoim CV</p>
+          <div className="mt-10">
+            <h4 className="text-lg font-semibold mb-0 flex items-center">
+              <FaShareAlt className="mr-2 text-blue-500" /> Linki społecznościowe
+            </h4>
+            <p className="text-gray-600 mb-4 text-sm">Wybierz, które linki chcesz uwzględnić w swoim CV</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {socialLinks.map((link, index) => (
-                <div key={index} className="flex items-center border rounded-md p-2 hover:bg-gray-50">
+                <div key={index} className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all ${
+                  lastToggledLinkIndex === index ? 'bg-blue-50 border-blue-300' : ''
+                }`}>
                   {/* Checkbox do uwzględnienia linku w CV */}
                   <button 
                     type="button"
@@ -251,16 +296,14 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
                 </div>
               ))}
             </div>
-            <p className="mt-2 text-xs text-gray-500">
-              Zaznacz checkboxy przy linkach, które chcesz uwzględnić w swoim CV. Aby edytować linki, przejdź do sekcji edycji profilu.
-            </p>
+           
           </div>
         )}
         
         {/* Sekcja Zdjęcie Profilowe */}
-        <div className="mt-6">
-          <h4 className="text-md font-semibold mb-3">Zdjęcie profilowe</h4>
-          <div className="flex items-center mb-3">
+        <div className="mt-10">
+          {/* <h4 className="text-lg font-semibold mb-3">Zdjęcie profilowe</h4> */}
+          <div className="flex items-center mb-0">
             <button
               type="button"
               onClick={() => {
@@ -276,20 +319,23 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
               ) : (
                 <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
               )}
-              <span className="ml-2 text-sm text-gray-700">Dołącz zdjęcie do CV</span>
+              <span className="ml-2 text-lg font-semibold ">Dołącz zdjęcie do CV</span>
+
             </button>
           </div>
-
+              <p className="text-sm mb-2 text-gray-500">
+              Zaznacz checkboxy aby dodać zdjęcie do CV.
+            </p>
           {includePhoto && (
-            <div className="p-4 border rounded-md bg-gray-50">
+            <div className="p-4 border rounded-md ">
               <div className="grid grid-cols-2 gap-x-6 gap-y-2">
                 <div>
                   <label htmlFor="photoScaleRange" className="block text-sm text-gray-600 mb-1">Rozmiar ({currentPhotoScale}%):</label>
                   <input 
                     id="photoScaleRange"
                     type="range" 
-                    min="50" 
-                    max="150" 
+                    min="100" 
+                    max="200" 
                     step="5" 
                     value={currentPhotoScale}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"

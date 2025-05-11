@@ -113,8 +113,16 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
       } catch (error) {
         console.error('Błąd podczas parsowania JSON dla socialLinks:', error);
       }
-    } else {
-      // Dla pozostałych pól używamy wartości bezpośrednio
+    } 
+    // Jeśli pole to showJobTitleInCV, aktualizujemy wartość poza personalData
+    else if (field === 'showJobTitleInCV') {
+      setCvData({
+        ...cvData,
+        showJobTitleInCV: value === 'true'
+      });
+    }
+    // Dla pozostałych pól używamy wartości bezpośrednio w personalData
+    else {
       setCvData({
         ...cvData,
         personalData: {

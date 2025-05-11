@@ -39,7 +39,8 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
   sectionsMap = {},
   onSectionsUpdate,
   activeSection = 'summary', // Domyślnie ustawiamy "summary", aby pokazać wszystkie sekcje
-  showProjectsInPreview = false
+  showProjectsInPreview = false,
+  showJobTitle = false // Domyślnie nie pokazujemy adnotacji o stanowisku
 }) => {
   const t = translations[language];
   const isLastPage = pageIndex === totalPages - 1;
@@ -329,6 +330,11 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                       <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.address}
                     </div>
+                    {selectedJob && showJobTitle && (
+                      <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
+                        {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                      </div>
+                    )}
                   </div>
                   
                   {/* Prawa kolumna - linki społecznościowe */}
@@ -358,7 +364,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                   color: colorPalette.grayDark,
                   fontSize: effectiveFontSizes.contactInfo
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px',  }}>
                     <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
                     {data.personalData.email}
                   </div>
@@ -366,18 +372,19 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
                     {data.personalData.phone}
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginRight: '10px' }}>
                     <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                     {data.personalData.address}
                   </div>
                 </div>
                )}
-              
-              {selectedJob && (
-                <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
-                  {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
-                </div>
-              )}
+               
+               {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych */}
+               {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && (
+                 <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                   {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                 </div>
+               )}
             </div>
           </div>
         );
@@ -715,6 +722,11 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                         <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                         {data.personalData.address}
                       </div>
+                      {selectedJob && showJobTitle && (
+                        <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
+                          {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                        </div>
+                      )}
                     </div>
                     
                     {/* Prawa kolumna - linki społecznościowe */}
@@ -744,7 +756,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     color: colorPalette.grayDark,
                     fontSize: effectiveFontSizes.contactInfo
                   }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px',  }}>
                       <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.email}
                     </div>
@@ -752,14 +764,15 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                       <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.phone}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginRight: '10px' }}>
                       <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.address}
                     </div>
                   </div>
                  )}
                 
-                {selectedJob && (
+                {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych */}
+                {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && (
                   <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
                     {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
                   </div>
@@ -920,7 +933,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
         {/* Nagłówek z danymi osobowymi */}
         {renderSection('header', (
           <div style={{ // Główny kontener dla całego nagłówka (zdjęcie + tekst)
-            display: 'flex',
+            display: 'flex', 
             alignItems: 'flex-start',
             borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
             paddingBottom: effectiveSpacing.header.bottomMargin,
@@ -929,7 +942,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             {/* Zdjęcie profilowe - jeśli włączone i dostępne */}
             {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
               <div style={{
-                marginRight: '20px',
+                marginRight: '20px', 
                 width: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
                 height: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
                 overflow: 'hidden',
@@ -943,11 +956,11 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 />
               </div>
             )}
-
+            
             {/* Kontener na dane tekstowe */}
             <div style={{ flex: 1 }}> 
               <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
-          
+              
               {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
               {data.personalData.socialLinks && 
                data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
@@ -974,6 +987,11 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                       <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.address}
                     </div>
+                    {selectedJob && showJobTitle && (
+                      <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
+                        {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                      </div>
+                    )}
                   </div>
                   
                   {/* Prawa kolumna - linki społecznościowe */}
@@ -1003,7 +1021,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                   color: colorPalette.grayDark,
                   fontSize: effectiveFontSizes.contactInfo
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px',  }}>
                     <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
                     {data.personalData.email}
                   </div>
@@ -1011,18 +1029,19 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
                     {data.personalData.phone}
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginRight: '10px' }}>
                     <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                     {data.personalData.address}
                   </div>
                 </div>
                )}
-              
-              {selectedJob && (
-                <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
-                  {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
-                </div>
-              )}
+               
+               {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych */}
+               {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && (
+                 <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                   {language === 'pl' ? 'Aplikacja na stanowisko:' : 'Application for position:'} {selectedJob.title} {language === 'pl' ? 'w' : 'at'} {selectedJob.company}
+                 </div>
+               )}
             </div>
           </div>
         ))}

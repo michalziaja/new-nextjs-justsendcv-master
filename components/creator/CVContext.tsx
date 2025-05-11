@@ -101,6 +101,7 @@ export interface CVData {
   };
   rodoClause?: string;
   showRodoClause?: boolean;
+  showJobTitleInCV?: boolean; // Czy pokazywać adnotację o stanowisku w nagłówku CV
   customStyles?: CustomStyles; // Dodajemy pole na niestandardowe style
 }
 
@@ -351,22 +352,46 @@ export function CVProvider({ children }: { children: ReactNode }) {
     setIsSaving(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();
-      
       if (!user) {
         console.error("Użytkownik nie jest zalogowany");
         return null;
       }
 
-      // Jeśli to autozapis, używamy nazwy "Kopia robocza"
-      // Jeśli to ręczny zapis (asDraft = false), dodajemy datę do nazwy
       let nameToSave = cvName;
+      let operation: 'insert' | 'update' = 'insert';
+      let targetCvIdForUpdate: string | null = null;
+
+      const existingCv = currentCVId ? savedCVs.find(cv => cv.id === currentCVId) : null;
+
       if (asDraft) {
+        // Logika dla kopii roboczej (autozapis)
         nameToSave = "Kopia robocza";
+        const { data: existingDrafts } = await supabase
+          .from('user_cvs')
+          .select('id')
+          .eq('user_id', user.id)
+          .eq('is_draft', true);
+
+        if (existingDrafts && existingDrafts.length > 0) {
+          operation = 'update';
+          targetCvIdForUpdate = existingDrafts[0].id;
+        } else {
+          operation = 'insert';
+        }
       } else {
-        // Dodajemy datę do nazwy przy ręcznym zapisie
-        const currentDate = new Date();
-        const formattedDate = `${currentDate.getDate()}.${currentDate.getMonth() + 1}.${currentDate.getFullYear()}`;
-        nameToSave = `${cvName} - ${formattedDate}`;
+        // Logika dla zapisu nazwanego (przycisk "Zapisz")
+        if (existingCv && !existingCv.is_draft) {
+          // Edytujemy istniejące, nazwane CV - nadpisujemy
+          operation = 'update';
+          targetCvIdForUpdate = currentCVId; // currentCVId musi być poprawne
+          nameToSave = cvName; // Użyj aktualnej nazwy, bez dodawania daty
+        } else {
+          // Zapisujemy jako nowe nazwane CV (z nowego, lub z kopii roboczej)
+          operation = 'insert';
+          const currentDate = new Date();
+          const formattedDate = `${currentDate.getDate()}.${currentDate.getMonth() + 1}.${currentDate.getFullYear()}`;
+          nameToSave = cvName === "Kopia robocza" || !cvName.trim() ? `Moje CV - ${formattedDate}` : `${cvName} - ${formattedDate}`;
+        }
       }
 
       const cvDataToSave = {
@@ -376,72 +401,48 @@ export function CVProvider({ children }: { children: ReactNode }) {
         custom_styles: cvData.customStyles || {},
         selected_template: selectedTemplate,
         job_offer_id: selectedJob?.id || null,
-        is_draft: asDraft
+        is_draft: asDraft,
+        updated_at: new Date().toISOString(), // Jawne ustawienie updated_at dla pewności
       };
 
       let response;
-      
-      // Jeśli to autozapis, znajdź istniejącą kopię roboczą
-      if (asDraft) {
-        // Sprawdzamy, czy istnieje już kopia robocza
-        const { data: existingDrafts } = await supabase
-          .from('user_cvs')
-          .select('id')
-          .eq('user_id', user.id)
-          .eq('is_draft', true);
-          
-        if (existingDrafts && existingDrafts.length > 0) {
-          // Aktualizuj istniejącą kopię roboczą
+      if (operation === 'update' && targetCvIdForUpdate) {
+        // Usuwamy pole user_id, bo nie chcemy go aktualizować przy update, może być niezmienne lub zarządzane przez RLS
+        const { user_id, ...updatePayload } = cvDataToSave;
         response = await supabase
           .from('user_cvs')
-          .update(cvDataToSave)
-            .eq('id', existingDrafts[0].id)
-            .select()
-            .single();
-            
-          // Aktualizuj currentCVId na ID istniejącej kopii roboczej
-          if (!currentCVId) {
-            setCurrentCVId(existingDrafts[0].id);
-          }
-        } else {
-          // Utwórz nową kopię roboczą
-          response = await supabase
-            .from('user_cvs')
-            .insert(cvDataToSave)
+          .update(updatePayload)
+          .eq('id', targetCvIdForUpdate)
           .select()
           .single();
-            
-          // Aktualizuj currentCVId na ID nowej kopii roboczej
-          if (response.data) {
-            setCurrentCVId(response.data.id);
-          }
+        if (!response.error && !asDraft) {
+            setCurrentCVId(targetCvIdForUpdate); // Upewnij się, że currentCVId jest ustawione poprawnie po nadpisaniu
         }
-      } else {
-        // Jeśli to ręczny zapis, zawsze tworzymy nowy rekord
+      } else { // operation === 'insert'
         response = await supabase
           .from('user_cvs')
           .insert(cvDataToSave)
           .select()
           .single();
-          
-        // Aktualizuj currentCVId na ID nowego zapisu
         if (response.data) {
           setCurrentCVId(response.data.id);
+          if (!asDraft) setCVName(nameToSave); // Ustaw nową nazwę z datą jeśli tworzono nowe CV
         }
       }
 
       if (response.error) {
-        console.error("Błąd podczas zapisywania CV:", response.error);
+        console.error("Błąd podczas zapisywania CV:", response.error.message);
         return null;
       }
 
       // Aktualizacja listy zapisanych CV
-      const { data: updatedCVs, error } = await supabase
+      const { data: updatedCVs, error: fetchError } = await supabase
         .from('user_cvs')
         .select('*')
+        .eq('user_id', user.id) // Dodano filtrowanie po user_id
         .order('updated_at', { ascending: false });
 
-      if (!error && updatedCVs) {
+      if (!fetchError && updatedCVs) {
         setSavedCVs(updatedCVs);
       }
 
@@ -453,7 +454,7 @@ export function CVProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsSaving(false);
     }
-  }, [cvData, cvName, currentCVId, selectedJob?.id, selectedTemplate, supabase]);
+  }, [cvData, cvName, currentCVId, selectedJob?.id, selectedTemplate, supabase, savedCVs, setSavedCVs, setCVName, setCurrentCVId]); // Dodano savedCVs i setCVName, setCurrentCVId do zależności
 
   // Funkcja do ładowania CV
   const loadCV = React.useCallback(async (cvId: string): Promise<boolean> => {
@@ -471,7 +472,24 @@ export function CVProvider({ children }: { children: ReactNode }) {
       }
 
       if (data) {
-        setCvData(data.cv_data as CVData);
+        // Tworzymy kopię danych, aby uniknąć bezpośredniej modyfikacji
+        let loadedCvData = { ...data.cv_data } as CVData;
+
+        // Parsowanie socialLinks jeśli są stringiem JSON
+        if (loadedCvData.personalData && typeof loadedCvData.personalData.socialLinks === 'string') {
+          try {
+            const parsedLinks = JSON.parse(loadedCvData.personalData.socialLinks);
+            loadedCvData.personalData.socialLinks = Array.isArray(parsedLinks) ? parsedLinks : [];
+          } catch (e) {
+            console.error("Błąd parsowania socialLinks podczas ładowania CV:", e);
+            loadedCvData.personalData.socialLinks = []; // W razie błędu ustaw pustą tablicę
+          }
+        } else if (loadedCvData.personalData && !Array.isArray(loadedCvData.personalData.socialLinks)) {
+          // Jeśli nie jest stringiem ani tablicą (np. undefined lub inny typ), ustaw pustą tablicę
+          loadedCvData.personalData.socialLinks = [];
+        }
+
+        setCvData(loadedCvData);
         setSelectedTemplate(data.selected_template);
         setCVName(data.name);
         setCurrentCVId(data.id);
@@ -682,61 +700,62 @@ export function CVProvider({ children }: { children: ReactNode }) {
   // Funkcja do ładowania danych użytkownika z profilu
   const loadUserProfile = React.useCallback(async (): Promise<void> => {
     try {
-      const supabase = createClient();
-      
-      // Pobierz ID zalogowanego użytkownika
       const { data: { user } } = await supabase.auth.getUser();
-      
       if (!user) {
-        console.error("Użytkownik nie jest zalogowany");
+        console.error("Użytkownik nie jest zalogowany - loadUserProfile");
         return;
       }
       
-      // Pobierz profil użytkownika
-      const { data, error } = await supabase
+      const { data: profileData, error: profileError } = await supabase
         .from('profiles')
         .select('*')
         .eq('user_id', user.id)
         .single();
       
-      if (error && error.code !== 'PGRST116') {
-        console.error('Błąd podczas pobierania profilu:', error.message);
+      if (profileError && profileError.code !== 'PGRST116') {
+        console.error('Błąd podczas pobierania profilu - loadUserProfile:', profileError.message);
         return;
       }
       
-      if (data) {
-        // Parsowanie linków społecznościowych jeśli istnieją
-        let socialLinks: SocialLink[] = [];
-        if (data.social_links) {
-          try {
-            const parsedLinks = JSON.parse(data.social_links);
-            socialLinks = Array.isArray(parsedLinks) 
-              ? parsedLinks.map(link => ({ ...link, include: false })) // Domyślnie nie uwzględniamy linków
-              : [];
-          } catch (e) {
-            console.error('Błąd parsowania linków społecznościowych:', e);
+      if (profileData) {
+        setCvData(prevCvData => {
+          let newSocialLinks = prevCvData.personalData.socialLinks || [];
+
+          if (profileData.social_links) {
+            try {
+              const parsedProfileLinks = JSON.parse(profileData.social_links);
+              if (Array.isArray(parsedProfileLinks)) {
+                if (!newSocialLinks || newSocialLinks.length === 0) {
+                  newSocialLinks = parsedProfileLinks.map((link: any) => ({ 
+                    ...link, 
+                    include: false
+                  }));
+                }
+              }
+            } catch (e) {
+              console.error('Błąd parsowania linków społecznościowych z profilu - loadUserProfile:', e);
+            }
           }
-        }
-        
-        // Aktualizuj dane CV danymi z profilu użytkownika
-        setCvData(prevData => ({
-          ...prevData,
-          personalData: {
-            ...prevData.personalData,
-            firstName: data.first_name || prevData.personalData.firstName,
-            lastName: data.last_name || prevData.personalData.lastName,
-            email: data.email || prevData.personalData.email,
-            phone: data.phone || prevData.personalData.phone,
-            address: data.address || prevData.personalData.address,
-            socialLinks: socialLinks.length > 0 ? socialLinks : prevData.personalData.socialLinks,
-            photoUrl: data.avatar || prevData.personalData.photoUrl, // Ustawiamy photoUrl
-          }
-        }));
+
+          return {
+            ...prevCvData,
+            personalData: {
+              ...prevCvData.personalData,
+              firstName: profileData.first_name || prevCvData.personalData.firstName,
+              lastName: profileData.last_name || prevCvData.personalData.lastName,
+              email: profileData.email || prevCvData.personalData.email,
+              phone: profileData.phone || prevCvData.personalData.phone,
+              address: profileData.address || prevCvData.personalData.address,
+              socialLinks: newSocialLinks,
+              photoUrl: profileData.avatar || prevCvData.personalData.photoUrl,
+            }
+          };
+        });
       }
     } catch (error) {
-      console.error("Wystąpił błąd podczas pobierania danych profilu:", error);
+      console.error("Wystąpił błąd podczas pobierania danych profilu - loadUserProfile:", error);
     }
-  }, []);
+  }, [supabase]); // Zależność tylko od supabase, która się nie zmienia
 
   return (
     <CVContext.Provider

@@ -45,6 +45,7 @@ export interface CVTemplateProps {
   onSectionsUpdate?: (sections: {[key: string]: EnhancedSectionInfo}) => void;
   activeSection?: string;
   showProjectsInPreview?: boolean; // Flaga kontrolująca widoczność sekcji projektów
+  showJobTitle?: boolean; // Flaga kontrolująca widoczność adnotacji o aplikowanym stanowisku
 }
 
 // Funkcja pomocnicza do formatowania daty
