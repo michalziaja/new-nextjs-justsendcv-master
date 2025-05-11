@@ -152,7 +152,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     }
     
     const text = result.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
-    console.log('--- Otrzymany tekst (pierwsze 100 znaków): ---', text?.substring(0, 100));
+    console.log('--- Otrzymany tekst ---');
     
     if (!text) {
       console.error('--- Brak tekstu w odpowiedzi API ---');
