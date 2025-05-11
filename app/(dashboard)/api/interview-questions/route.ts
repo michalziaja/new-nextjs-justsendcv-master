@@ -24,7 +24,10 @@ const apiKey = process.env.GEMINI_API_KEY;
 const ai: GoogleGenAI | null = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 export async function POST(req: Request): Promise<NextResponse> {
+  console.log('--- Rozpoczęcie przetwarzania żądania POST ---');
+  
   if (!ai) {
+    console.error('Błąd: Brak klucza API Gemini.');
     return NextResponse.json(
       { success: false, error: 'Brak klucza API Gemini.', questions: [] } as AppApiResponse,
       { status: 500 }
@@ -81,20 +84,35 @@ export async function POST(req: Request): Promise<NextResponse> {
 
   // Połączenie instrukcji systemowej i promptu użytkownika w jedną treść
   const combinedPrompt = `${systemInstruction}\n\n${userPrompt}`;
-  console.log(combinedPrompt);
+  console.log('--- Prompt przygotowany, rozpoczynam wywołanie API Gemini ---');
+  
   try {
+    console.log('--- Rozpoczęcie komunikacji z API Gemini ---');
     // Wywołanie API Gemini
     const result = await ai.models.generateContent({
       model: 'gemini-2.0-flash',
       contents: [{ text: combinedPrompt }], // Przekazujemy jedną treść bez pola `role`
+    }).catch(error => {
+      console.error('--- Błąd podczas wywołania API Gemini ---', error);
+      throw error;
     });
+    
+    console.log('--- Odpowiedź z API Gemini otrzymana pomyślnie ---');
 
     // Logowanie informacji o zużyciu tokenów
     console.log('--- Statystyki użycia tokenów dla generowanych pytań ---');
-    logTokenUsage(result);
+    try {
+      const tokenStats = logTokenUsage(result);
+      console.log('Statystyki tokenów:', JSON.stringify(tokenStats));
+    } catch (tokenError) {
+      console.error('--- Błąd podczas logowania tokenów ---', tokenError);
+    }
     
     const text = result.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+    console.log('--- Otrzymany tekst (pierwsze 100 znaków): ---', text?.substring(0, 100));
+    
     if (!text) {
+      console.error('--- Brak tekstu w odpowiedzi API ---');
       return NextResponse.json(
         { success: false, error: 'API Gemini zwróciło pustą odpowiedź.', questions: [] } as AppApiResponse,
         { status: 500 }
@@ -102,24 +120,41 @@ export async function POST(req: Request): Promise<NextResponse> {
     }
 
     // Parsowanie JSON z odpowiedzi
+    console.log('--- Rozpoczynam parsowanie JSON ---');
     const jsonMatch = text.match(/\{[\S\s]*"questions"[\S\s]*\}/);
     if (!jsonMatch) {
+      console.error('--- Brak poprawnej struktury JSON w odpowiedzi ---');
+      console.log('Otrzymana odpowiedź:', text);
       return NextResponse.json(
         { success: false, error: 'Brak poprawnej struktury JSON w odpowiedzi.', questions: [] } as AppApiResponse,
         { status: 500 }
       );
     }
 
-    const parsedData: GeminiApiResponse = JSON.parse(jsonMatch[0]);
-    if (!Array.isArray(parsedData.questions)) {
+    try {
+      const parsedData: GeminiApiResponse = JSON.parse(jsonMatch[0]);
+      console.log(`--- JSON sparsowany pomyślnie, znaleziono ${parsedData.questions?.length || 0} pytań ---`);
+      
+      if (!Array.isArray(parsedData.questions)) {
+        console.error('--- Brak tablicy "questions" w odpowiedzi ---');
+        return NextResponse.json(
+          { success: false, error: 'Nieprawidłowa struktura danych (brak tablicy "questions").', questions: [] } as AppApiResponse,
+          { status: 500 }
+        );
+      }
+
+      console.log('--- Zwracam odpowiedź z pytaniami ---');
+      return NextResponse.json({ success: true, questions: parsedData.questions } as AppApiResponse);
+    } catch (parseError: any) {
+      console.error('--- Błąd podczas parsowania JSON ---', parseError);
+      console.log('Dopasowany tekst JSON:', jsonMatch[0].substring(0, 200) + '...');
       return NextResponse.json(
-        { success: false, error: 'Nieprawidłowa struktura danych (brak tablicy "questions").', questions: [] } as AppApiResponse,
+        { success: false, error: `Błąd parsowania JSON: ${parseError.message}`, questions: [] } as AppApiResponse,
         { status: 500 }
       );
     }
-
-    return NextResponse.json({ success: true, questions: parsedData.questions } as AppApiResponse);
   } catch (error: any) {
+    console.error('--- Błąd podczas przetwarzania żądania ---', error);
     return NextResponse.json(
       { success: false, error: `Błąd serwera: ${error.message || 'Nieznany błąd API'}`, questions: [] } as AppApiResponse,
       { status: 500 }
