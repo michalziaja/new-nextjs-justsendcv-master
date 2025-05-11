@@ -6,6 +6,17 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
+  # Zwiększenie limitu czasu dla funkcji serverless na Netlify
+  node_bundler = "esbuild"
+  included_files = ["node_modules/**"]
+  
+  # Zwiększony czas oczekiwania dla wszystkich funkcji
   timeout = 30
-
+  
+  # Szczególnie dla funkcji związanych z Gemini API
+  [functions."api/interview-questions"]
+    timeout = 30
+  
+  [functions."api/gemini-search-with-tools"]
+    timeout = 30
 
