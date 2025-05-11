@@ -250,15 +250,16 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
     if (!jobOffer) return;
     
     setIsGeneratingQuestions(true);
-
+    
     try {
       const response = await fetch('/api/interview-questions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          companyName: jobOffer.company,
-          position: jobOffer.title,
-          description: jobOffer.full_description
+          company: jobOffer.company,
+          title: jobOffer.title,
+          full_description: jobOffer.full_description
+          
         })
       });
       
