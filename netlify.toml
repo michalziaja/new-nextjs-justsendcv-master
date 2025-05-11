@@ -3,8 +3,8 @@
   publish = ".next"
 
 [build.environment]
-
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -16,7 +16,6 @@
     "node_modules/@sparticuz/chromium-min/**/*",
     "node_modules/puppeteer-core/**/*"
   ]
-
 
 # Dodanie zmiennych środowiskowych dla funkcji
 [functions.environment]
