@@ -6,7 +6,7 @@ import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
 
 interface PersonalDataSectionProps {
   cvData: CVData;
-  updatePersonalData: (field: string, value: string) => void;
+  updatePersonalData: (field: string, value: string | SocialLink[]) => void;
   selectedJob: any; // Dostosuj typ do faktycznej struktury selectedJob
   setSelectedJob: (job: any) => void;
   onBack: () => void;
