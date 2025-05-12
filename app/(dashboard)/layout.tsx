@@ -27,11 +27,21 @@ export default async function DashboardLayout({
     console.error("Błąd pobierania subskrypcji:", subscriptionError);
   }
 
+  const { data: profileData, error: profileError } = await supabase
+    .from("profiles")
+    .select("avatar")
+    .eq("user_id", user.id)
+    .single();
+
+  if (profileError) {
+    console.error("Błąd pobierania avatara:", profileError);
+  }
+
   const userData = {
     id: user.id,
     name: user.user_metadata?.name || user.user_metadata?.first_name + " " + user.user_metadata?.last_name || "User",
     email: user.email || "",
-    avatar: user.user_metadata?.avatar_url || null,
+    avatar: profileData?.avatar || user.user_metadata?.avatar_url || null,
     isSubscribed: subscription?.plan === "premium" || false,
     createdAt: user.created_at, // Data założenia konta
   };

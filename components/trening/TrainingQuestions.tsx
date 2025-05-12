@@ -64,11 +64,12 @@ export default function TrainingQuestions({
   if (isGeneratingQuestions) {
     // Sprawdź, czy mamy już częściowe wyniki (czy generowanie jest w trakcie)
     const questionsInProgress = questions.length > 0;
+    const maxQuestions = selectedCV ? 20 : 15; // 4 grupy po 5 pytań, jeśli mamy CV, w przeciwnym razie 3 grupy
     const progressText = questionsInProgress 
-      ? `Wygenerowano ${questions.length} z 15 pytań...` 
+      ? `Wygenerowano ${questions.length} z ${maxQuestions} pytań...` 
       : "Generowanie pytań rekrutacyjnych...";
     
-    const progressPercentage = questions.length / 15 * 100;
+    const progressPercentage = questions.length / maxQuestions * 100;
 
     return (
       <div
@@ -85,7 +86,7 @@ export default function TrainingQuestions({
               ></div>
             </div>
           )}
-          <p className="text-sm text-gray-500">Etap {Math.ceil(questions.length / 5)} z 3</p>
+          <p className="text-sm text-gray-500">Etap {Math.ceil(questions.length / 5)} z {selectedCV ? 4 : 3}</p>
         </div>
       </div>
     );

@@ -38,6 +38,12 @@ const nextConfig: NextConfig = {
         port: "", // Pozostaw puste, jeśli nie używasz niestandardowego portu
         pathname: "/**", // Pozwala na wszystkie ścieżki w tej domenie
       },
+      {
+        protocol: "https",
+        hostname: "*.supabase.co",
+        port: "",
+        pathname: "/**", // Pozwala na wszystkie ścieżki z Supabase Storage
+      }
     ],
   },
 };

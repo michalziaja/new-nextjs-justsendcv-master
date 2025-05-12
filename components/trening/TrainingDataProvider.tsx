@@ -15,8 +15,8 @@ interface TrainingDataContextType {
   // Metody
   checkExistingCompanyData: (jobOffer: JobOffer) => Promise<void>;
   searchCompanyInfo: (jobOffer: JobOffer) => Promise<void>;
-  checkExistingQuestions: (jobOffer: JobOffer) => Promise<void>;
-  generateJobSpecificQuestions: (jobOffer: JobOffer) => Promise<void>;
+  checkExistingQuestions: (jobOffer: JobOffer, selectedCV?: SavedCV) => Promise<void>;
+  generateJobSpecificQuestions: (jobOffer: JobOffer, selectedCV?: SavedCV) => Promise<void>;
 }
 
 const TrainingDataContext = createContext<TrainingDataContextType | null>(null);
@@ -215,7 +215,7 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
   };
 
   // Sprawdzanie istniejących pytań
-  const checkExistingQuestions = async (jobOffer: JobOffer) => {
+  const checkExistingQuestions = async (jobOffer: JobOffer, selectedCV?: SavedCV) => {
     if (!jobOffer) return;
     
     setIsGeneratingQuestions(true);
@@ -235,90 +235,113 @@ export function TrainingDataProvider({ children }: { children: React.ReactNode }
       if (data && data.questions && data.questions.length > 0) {
         setQuestions(data.questions);
       } else {
-        await generateJobSpecificQuestions(jobOffer);
+        await generateJobSpecificQuestions(jobOffer, selectedCV);
       }
     } catch (error) {
       console.error("Błąd podczas sprawdzania pytań w bazie:", error);
-      await generateJobSpecificQuestions(jobOffer);
+      await generateJobSpecificQuestions(jobOffer, selectedCV);
     } finally {
       setIsGeneratingQuestions(false);
     }
   };
 
   // Generowanie pytań
-  const generateJobSpecificQuestions = async (jobOffer: JobOffer) => {
+  const generateJobSpecificQuestions = async (jobOffer: JobOffer, selectedCV?: SavedCV) => {
     if (!jobOffer) return;
     
     setIsGeneratingQuestions(true);
-    console.log("Generowanie pytań dla oferty:", jobOffer.id);
+    setQuestions([]);
+    console.log("Generowanie pytań dla oferty:", jobOffer.id, selectedCV ? `z CV: ${selectedCV.id}` : '');
     
     const allQuestions: Question[] = [];
-    const totalGroups = 3;
+    let totalInputTokensOverall = 0;
+    let totalOutputTokensOverall = 0;
+    const totalGroups = selectedCV ? 4 : 3;
     
     try {
-      // Generowanie pytań w 3 grupach po 5 pytań
       for (let groupNum = 1; groupNum <= totalGroups; groupNum++) {
         console.log(`Rozpoczynam generowanie grupy ${groupNum}/${totalGroups}`);
         
         try {
+          const requestData: any = {
+            company: jobOffer.company,
+            title: jobOffer.title,
+            full_description: jobOffer.full_description,
+            group: groupNum
+          };
+          
+          if (groupNum === 4 && selectedCV) {
+            const { data: cvDataRecord, error: cvError } = await supabase
+              .from('user_cvs')
+              .select('cv_data')
+              .eq('id', selectedCV.id)
+              .single();
+            
+            if (cvError) {
+              console.error("Błąd podczas pobierania danych CV dla grupy 4:", cvError);
+              continue; 
+            }
+            if (cvDataRecord && cvDataRecord.cv_data) {
+              requestData.cv_data = cvDataRecord.cv_data;
+            } else {
+              console.warn("Brak danych CV (cv_data) dla grupy 4, mimo że selectedCV istnieje.");
+              continue;
+            }
+          }
+          
           const response = await fetch('/api/interview-questions', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              company: jobOffer.company,
-              title: jobOffer.title,
-              full_description: jobOffer.full_description,
-              group: groupNum
-            })
+            body: JSON.stringify(requestData)
           });
           
+          const data = await response.json();
+
           if (!response.ok) {
-            console.warn(`Odpowiedź API ze statusem błędu (grupa ${groupNum}): ${response.status}`);
-            continue; // kontynuuj z następną grupą nawet jeśli obecna się nie powiodła
+            console.warn(`Odpowiedź API ze statusem błędu (grupa ${groupNum}): ${response.status}. Treść:`, data?.error || 'Brak dodatkowych informacji o błędzie.');
+            continue; 
           }
           
-          const data = await response.json();
           console.log(`Odpowiedź API dla grupy ${groupNum}:`, data);
           
           if (data.success && data.questions && data.questions.length > 0) {
-            // Dodaj pytania z tej grupy do całkowitej kolekcji
             allQuestions.push(...data.questions);
-            
-            // Aktualizuj stan pytań po każdej grupie, aby użytkownik widział postęp
             setQuestions([...allQuestions]);
+
+            // Agregacja tokenów
+            if (data.inputTokens) totalInputTokensOverall += data.inputTokens;
+            if (data.outputTokens) totalOutputTokensOverall += data.outputTokens;
+            console.log(`Tokeny dla grupy ${groupNum}: IN=${data.inputTokens || 0}, OUT=${data.outputTokens || 0}. Suma dotychczasowa: IN=${totalInputTokensOverall}, OUT=${totalOutputTokensOverall}`);
+
           } else if (data.error) {
             console.error(`Błąd API (grupa ${groupNum}):`, data.error);
           } else {
-            console.warn(`Brak pytań w odpowiedzi API (grupa ${groupNum})`);
+            console.warn(`Brak pytań w odpowiedzi API lub odpowiedź nie zawiera sukcesu (grupa ${groupNum})`, data);
           }
           
         } catch (groupError) {
-          console.error(`Błąd podczas generowania pytań grupy ${groupNum}:`, groupError);
-          // Kontynuuj z następną grupą nawet jeśli obecna się nie powiodła
+          console.error(`Błąd krytyczny podczas generowania pytań grupy ${groupNum}:`, groupError);
         }
       }
       
-      console.log(`Wygenerowano łącznie ${allQuestions.length} pytań`);
-      
-      // Sortuj pytania według id, aby zapewnić poprawną kolejność
+      console.log(`Wygenerowano łącznie ${allQuestions.length} pytań.`);
       allQuestions.sort((a, b) => a.id - b.id);
-      
-      // Ustaw finalną listę pytań
       setQuestions(allQuestions);
       
-      // Zapisz wszystkie wygenerowane pytania
       if (allQuestions.length > 0) {
         await saveQuestions(allQuestions, jobOffer);
-      } else {
-        console.error("Nie udało się wygenerować żadnych pytań po wszystkich próbach");
       }
+
+      // Logowanie sumarycznego zużycia tokenów
+      console.log("--- PODSUMOWANIE ZUŻYCIA TOKENÓW (CAŁY PROCES) ---");
+      console.log(`Całkowite tokeny wejściowe: ${totalInputTokensOverall}`);
+      console.log(`Całkowite tokeny wyjściowe: ${totalOutputTokensOverall}`);
+      console.log(`SUMA TOKENÓW (IN + OUT): ${totalInputTokensOverall + totalOutputTokensOverall}`);
+      console.log("-----------------------------------------------------");
       
     } catch (error) {
-      console.error("Błąd podczas procesu generowania pytań:", error);
-      // Używamy już zebranych pytań (jeśli jakieś są) lub pustej tablicy
-      if (allQuestions.length === 0) {
-        setQuestions([]);
-      }
+      console.error("Błąd krytyczny podczas całego procesu generowania pytań:", error);
+      if (allQuestions.length === 0) setQuestions([]);
     } finally {
       setIsGeneratingQuestions(false);
     }

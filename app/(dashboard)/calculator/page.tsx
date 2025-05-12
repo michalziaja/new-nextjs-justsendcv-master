@@ -59,8 +59,8 @@ export default function CalculatorPage() {
                     mb-6 ml-2 mr-2 mt-6 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6 md:mt-7 
                     lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-15 xl:mr-15 xl:mt-12">
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="bg-transparent lg:col-span-2 space-y-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+        <div className="bg-transparent lg:col-span-2 space-y-4 ">
           <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4">
             <IntegratedCalculator 
               onResultsUpdate={handleResultsUpdate} 
@@ -80,7 +80,7 @@ export default function CalculatorPage() {
         </div>
         
         <div className="lg:col-span-1">
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 min-h-[60vh] md:min-h-[70vh] lg:min-h-[82vh] sticky top-4">
+          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 max-h-[80vh] sticky top-4">
             {/* <h2 className="text-lg font-semibold mb-4 bg-gradient-to-r from-[#00B2FF] to-blue-600 bg-clip-text text-transparent">Narzędzia płacowe</h2> */}
             
             <Tabs value={toolsTab} onValueChange={setToolsTab} className="w-full mb-4">

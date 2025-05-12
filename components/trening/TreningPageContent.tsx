@@ -46,7 +46,7 @@ export default function TreningPageContent() {
     
     // W zależności od typu treningu, wywołujemy odpowiednią funkcję
     if (selectedTraining === 'questions') {
-      checkExistingQuestions(jobOffer);
+      checkExistingQuestions(jobOffer, cv);
     } else if (selectedTraining === 'preparation') {
       checkExistingCompanyData(jobOffer);
     }
