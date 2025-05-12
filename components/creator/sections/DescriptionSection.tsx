@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Sparkles } from "lucide-react";
 import { CVData, useCV } from '../CVContext';
+import { Loader2 } from "lucide-react";
 
 interface DescriptionSectionProps {
   cvData: CVData;
@@ -15,7 +16,51 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({
   onBack,
   onNext
 }) => {
-  const { saveCV, isSaving } = useCV();
+  const { saveCV, isSaving, selectedJob } = useCV();
+  // Stan dla generowania opisu przez AI
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generationError, setGenerationError] = useState<string | null>(null);
+  
+  // Funkcja do generowania opisu przez AI
+  const generateDescription = async () => {
+    setIsGenerating(true);
+    setGenerationError(null);
+    
+    try {
+      // Przygotowanie danych do wysłania do API
+      const requestData = {
+        jobTitle: selectedJob?.title || "",
+        userDescription: cvData.description || "",
+        experience: cvData.experience || [],
+        skills: cvData.skills || {}
+      };
+      
+      // Wywołanie API
+      const response = await fetch('/api/generate-description', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Błąd generowania opisu");
+      }
+      
+      const data = await response.json();
+      
+      // Zaktualizuj opis w CV
+      updateDescription(data.description);
+      
+    } catch (error) {
+      console.error("Błąd generowania opisu:", error);
+      setGenerationError(error instanceof Error ? error.message : "Nieznany błąd");
+    } finally {
+      setIsGenerating(false);
+    }
+  };
   
   return (
     <div className="flex flex-col h-full ">
@@ -33,15 +78,36 @@ const DescriptionSection: React.FC<DescriptionSectionProps> = ({
             onChange={(e) => updateDescription(e.target.value)}
           ></textarea>
           <button 
-            className="absolute right-2 top-2 text-blue-500 hover:text-blue-700 p-1"
+            className={`absolute right-2 top-2 p-1 rounded-md transition-colors ${
+              isGenerating ? 'bg-blue-100' : 'text-blue-500 hover:text-blue-700 hover:bg-blue-50'
+            }`}
             title="Użyj AI do wygenerowania opisu profilu"
+            onClick={generateDescription}
+            disabled={isGenerating}
           >
-            <Sparkles className="w-5 h-5" />
+            {isGenerating ? (
+              <Loader2 className="w-5 h-5 animate-spin text-blue-500" />
+            ) : (
+              <Sparkles className="w-5 h-5" />
+            )}
           </button>
         </div>
         <p className="text-xs text-gray-500 mt-1">
           Dobry opis powinien zawierać 3-5 zdań podsumowujących Twoje kluczowe kompetencje i doświadczenie.
         </p>
+        
+        {/* Informacja o asystencie AI */}
+        <div className="mt-2 text-xs text-blue-600 flex items-center">
+          <Sparkles className="w-3 h-3 mr-1" />
+          <span>Kliknij ikonę iskierek, aby użyć AI do wygenerowania profesjonalnego opisu profilu</span>
+        </div>
+        
+        {/* Wyświetlanie błędu */}
+        {generationError && (
+          <div className="mt-2 text-xs text-red-600">
+            Błąd: {generationError}
+          </div>
+        )}
       </div>
       </div>
       {/* Kontener przycisków - zawsze na dole */}

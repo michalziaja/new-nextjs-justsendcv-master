@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoClose } from "react-icons/io5";
 import { CVData, useCV } from '../CVContext';
 import { LuList } from 'react-icons/lu';
 import { FaIndent } from 'react-icons/fa';
+import { Sparkles, Loader2 } from "lucide-react";
 
 interface ExperienceSectionProps {
   cvData: CVData;
@@ -12,6 +13,97 @@ interface ExperienceSectionProps {
   onBack: () => void;
   onNext: () => void;
 }
+
+// Komponent asystenta AI do generowania opisu doświadczenia
+const AIAssistant = ({ 
+  experienceIndex, 
+  position, 
+  company,
+  jobTitle,
+  description,
+  onUpdate 
+}: { 
+  experienceIndex: number; 
+  position: string; 
+  company: string;
+  jobTitle: string | undefined;
+  description: string; 
+  onUpdate: (index: number, field: string, value: string) => void;
+}) => {
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Funkcja do generowania opisu doświadczenia
+  const generateDescription = async () => {
+    // Sprawdź czy mamy minimalny opis do pracy
+    if (!description || description.trim().length < 10) {
+      setError("Wprowadź przynajmniej kilka słów opisu, aby AI mogło go ulepszyć");
+      setTimeout(() => setError(null), 5000);
+      return;
+    }
+
+    setIsGenerating(true);
+    setError(null);
+
+    try {
+      // Dane do zapytania
+      const requestData = {
+        jobTitle: jobTitle || "",
+        position,
+        company,
+        description
+      };
+
+      // Zapytanie do API
+      const response = await fetch('/api/generate-experience-description', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Błąd generowania opisu");
+      }
+
+      const data = await response.json();
+      
+      // Aktualizacja opisu doświadczenia
+      onUpdate(experienceIndex, 'description', data.description);
+    } catch (error) {
+      console.error("Błąd generowania opisu doświadczenia:", error);
+      setError(error instanceof Error ? error.message : "Nieznany błąd");
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  return (
+    <div className="absolute top-2 right-10">
+      <button
+        onClick={generateDescription}
+        disabled={isGenerating}
+        className={`text-gray-500 hover:text-blue-500 p-1 rounded-full hover:bg-gray-100 transition-colors ${
+          isGenerating ? 'bg-blue-50' : ''
+        }`}
+        title="Użyj AI do ulepszenia opisu doświadczenia"
+      >
+        {isGenerating ? (
+          <Loader2 className="w-5 h-5 animate-spin text-blue-500" />
+        ) : (
+          <Sparkles className="w-5 h-5" />
+        )}
+      </button>
+      {error && (
+        <div className="absolute right-0 top-8 w-48 bg-red-50 border border-red-200 text-red-600 text-xs p-1 rounded-md">
+          {error}
+        </div>
+      )}
+    </div>
+  );
+};
 
 // Komponent paska narzędzi formatowania tekstu
 const TextFormatToolbar = ({ 
@@ -163,7 +255,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   onBack,
   onNext
 }) => {
-  const { saveCV, isSaving } = useCV();
+  const { saveCV, isSaving, selectedJob } = useCV();
   // Sprawdzamy, czy mamy przynajmniej jedno doświadczenie zawodowe
   const hasJobExperience = cvData.experience.some(exp => !exp.type || exp.type === 'job');
   
@@ -201,6 +293,17 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                     <IoClose className="w-5 h-5" />
                   </button>
                 </div>
+                
+                {/* Asystent AI do generowania opisu doświadczenia */}
+                <AIAssistant 
+                  experienceIndex={actualIndex}
+                  position={exp.position}
+                  company={exp.company}
+                  jobTitle={selectedJob?.title}
+                  description={exp.description}
+                  onUpdate={updateExperience}
+                />
+                
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Stanowisko</label>
                   <input 
@@ -263,7 +366,12 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Opis obowiązków i osiągnięć</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Opis obowiązków i osiągnięć
+                    <span className="ml-1 text-xs text-blue-500">
+                      <Sparkles className="w-3 h-3 inline-block" /> Dostępny asystent AI
+                    </span>
+                  </label>
                   <TextFormatToolbar 
                     value={exp.description} 
                     onChange={(newValue) => updateExperience(actualIndex, 'description', newValue)} 
@@ -275,7 +383,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                     onChange={(e) => updateExperience(actualIndex, 'description', e.target.value)}
                   ></textarea>
                   <p className="text-xs text-gray-500 mt-1">
-                    Użyj przycisków powyżej, aby dodać podpunkty i formatowanie.
+                    Użyj przycisków powyżej, aby dodać podpunkty i formatowanie. Ikona iskierek pozwala wygenerować opis na podstawie wprowadzonych danych.
                   </p>
                 </div>
               </div>

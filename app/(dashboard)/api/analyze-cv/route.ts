@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     
     // Konfiguracja modelu - używamy nowszego modelu gemini-1.5-pro, który jest bardziej zaawansowany
     const model = genAI.getGenerativeModel({
-      model: 'gemini-1.5-pro',
+      model: 'gemini-2.0-flash',
       // Ustawiamy niską temperaturę dla bardziej przewidywalnych wyników i zwiększamy limit tokenów
       generationConfig: {
         temperature: 0.2,
