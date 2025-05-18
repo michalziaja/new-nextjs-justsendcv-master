@@ -151,7 +151,7 @@ export const spacing = {
     margin: '4px',                // Margines między elementami w sekcji
     itemMargin: '16px',           // Odstęp między większymi elementami (np. doświadczenia)
     contentSpacing: '8px',        // Odstęp między nagłówkiem a zawartością
-    tagGap: '4px',                // Odstęp między tagami
+    tagGap: '8px',                // Odstęp między tagami
     tagGapHorizontal: '4px',      // Poziomy odstęp między tagami
     tagPadding: '3px 8px',        // Padding wewnętrzny tagów
     skillsColumnGap: '12px',

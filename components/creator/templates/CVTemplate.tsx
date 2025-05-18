@@ -315,7 +315,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
                 // Jeśli są linki - układ dwukolumnowy
                 <div style={{ 
-                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  marginTop: effectiveSpacing.header.nameToContactSpacing,
                   display: 'grid',
                   gridTemplateColumns: 'repeat(2, 1fr)',
                   gap: effectiveSpacing.elements.margin,
@@ -368,7 +368,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? (
                   // Jeśli jest zdjęcie, ale nie ma linków - dane kontaktowe w jednej pionowej kolumnie
                   <div style={{ 
-                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    marginTop: effectiveSpacing.header.nameToContactSpacing,
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '6px',
@@ -399,7 +399,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 ) : (
                   // Jeśli nie ma ani zdjęcia, ani linków - dane kontaktowe w jednym rzędzie poziomym
                   <div style={{ 
-                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    marginTop: effectiveSpacing.header.nameToContactSpacing,
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
@@ -425,7 +425,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych i nie ma zdjęcia */}
                {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && 
                 !(String(data.personalData.includePhotoInCV).toLowerCase() === 'true' && data.personalData.photoUrl) && (
-                 <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                 <div style={{ marginTop: effectiveSpacing.header.nameToContactSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
                    {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
                    {selectedJob.company && (
                      <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
@@ -605,7 +605,8 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
 
   // Style dla kontenera głównego
   const containerStyle = {
-    paddingTop: pageIndex === 0 ? effectiveSpacing.document.paddingTop : '0px', // Górny margines tylko dla pierwszej strony
+    paddingTop: pageIndex === 0 ? effectiveSpacing.document.paddingTop : 
+               pageIndex === 1 ? '20px' : '0px', // Górny margines: 1 strona - wg ustawień, 2 strona - 20px, pozostałe - 0px
     paddingBottom: effectiveSpacing.document.paddingBottom,
     paddingLeft: effectiveSpacing.document.paddingSides,
     paddingRight: effectiveSpacing.document.paddingSides,
@@ -753,7 +754,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                  data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
                   // Jeśli są linki - układ dwukolumnowy
                   <div style={{ 
-                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    marginTop: effectiveSpacing.header.nameToContactSpacing,
                     display: 'grid',
                     gridTemplateColumns: 'repeat(2, 1fr)',
                     gap: effectiveSpacing.elements.margin,
@@ -806,7 +807,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                   (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? (
                     // Jeśli jest zdjęcie, ale nie ma linków - dane kontaktowe w jednej pionowej kolumnie
                     <div style={{ 
-                      marginTop: effectiveSpacing.elements.contentSpacing,
+                      marginTop: effectiveSpacing.header.nameToContactSpacing,
                       display: 'flex',
                       flexDirection: 'column',
                       gap: '6px',
@@ -837,7 +838,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                   ) : (
                     // Jeśli nie ma ani zdjęcia, ani linków - dane kontaktowe w jednym rzędzie poziomym
                     <div style={{ 
-                      marginTop: effectiveSpacing.elements.contentSpacing,
+                      marginTop: effectiveSpacing.header.nameToContactSpacing,
                       display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center',
@@ -863,7 +864,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych i nie ma zdjęcia */}
                 {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && 
                  !(String(data.personalData.includePhotoInCV).toLowerCase() === 'true' && data.personalData.photoUrl) && (
-                  <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                  <div style={{ marginTop: effectiveSpacing.header.nameToContactSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
                     {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
                     {selectedJob.company && (
                       <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
@@ -943,8 +944,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                       marginTop: data.skills.technicalSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
                       display: 'flex', 
                       flexWrap: 'wrap', 
-                      columnGap: effectiveSpacing.elements.tagGapHorizontal,
-                      rowGap: '5px'
+                      gap: effectiveSpacing.elements.tagGapHorizontal
                     }}>
                       {data.skills.technical.map((skill, index) => (
                         <span key={index} style={{ 
@@ -974,8 +974,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                       marginTop: data.skills.softSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
                       display: 'flex', 
                       flexWrap: 'wrap', 
-                      columnGap: effectiveSpacing.elements.tagGapHorizontal,
-                      rowGap: '5px'
+                      gap: effectiveSpacing.elements.tagGapHorizontal
                     }}>
                       {data.skills.soft.map((skill, index) => (
                         <span key={index} style={{ 
@@ -1084,7 +1083,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
                 // Jeśli są linki - układ dwukolumnowy
                 <div style={{ 
-                  marginTop: effectiveSpacing.elements.contentSpacing,
+                  marginTop: effectiveSpacing.header.nameToContactSpacing,
                   display: 'grid',
                   gridTemplateColumns: 'repeat(2, 1fr)',
                   gap: effectiveSpacing.elements.margin,
@@ -1137,7 +1136,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? (
                   // Jeśli jest zdjęcie, ale nie ma linków - dane kontaktowe w jednej pionowej kolumnie
                   <div style={{ 
-                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    marginTop: effectiveSpacing.header.nameToContactSpacing,
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '6px',
@@ -1168,7 +1167,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 ) : (
                   // Jeśli nie ma ani zdjęcia, ani linków - dane kontaktowe w jednym rzędzie poziomym
                   <div style={{ 
-                    marginTop: effectiveSpacing.elements.contentSpacing,
+                    marginTop: effectiveSpacing.header.nameToContactSpacing,
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
@@ -1194,7 +1193,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych i nie ma zdjęcia */}
                {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && 
                 !(String(data.personalData.includePhotoInCV).toLowerCase() === 'true' && data.personalData.photoUrl) && (
-                 <div style={{ marginTop: effectiveSpacing.elements.contentSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
+                 <div style={{ marginTop: effectiveSpacing.header.nameToContactSpacing, color: colorPalette.primary, fontWeight: 400, fontSize: effectiveFontSizes.contactInfo }}>
                    {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
                    {selectedJob.company && (
                      <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
@@ -1274,8 +1273,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     marginTop: data.skills.technicalSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
                     display: 'flex', 
                     flexWrap: 'wrap', 
-                    columnGap: effectiveSpacing.elements.tagGapHorizontal,
-                    rowGap: '5px'
+                    gap: effectiveSpacing.elements.tagGapHorizontal
                   }}>
                     {data.skills.technical.map((skill, index) => (
                       <span key={index} style={{ 
@@ -1305,8 +1303,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     marginTop: data.skills.softSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
                     display: 'flex', 
                     flexWrap: 'wrap', 
-                    columnGap: effectiveSpacing.elements.tagGapHorizontal,
-                    rowGap: '5px'
+                    gap: effectiveSpacing.elements.tagGapHorizontal
                   }}>
                     {data.skills.soft.map((skill, index) => (
                       <span key={index} style={{ 
