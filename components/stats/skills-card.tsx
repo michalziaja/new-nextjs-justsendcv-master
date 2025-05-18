@@ -39,7 +39,7 @@ export function SkillsCard({ skills, isLoading }: { skills: SkillItem[], isLoadi
                 style={{ 
                   backgroundColor: `${skill.color}20`, 
                   borderColor: skill.color,
-                  fontSize: `${Math.min(8 + skill.count * 2, (skill.count >= 4 ? 17 : 15))}px`,
+                  fontSize: `${Math.min(6 + skill.count * 1.5, (skill.count >= 4 ? 17 : 15))}px`,
                   padding: '0.25rem 0.4rem'
                 }}
                 className="text-foreground font-medium"

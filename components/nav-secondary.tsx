@@ -68,32 +68,7 @@ export function NavSecondary({
           
           
           {/* Baner wtyczek */}
-          <SidebarMenuItem className="mb-2 pt-6">
-            <Collapsible>
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg border border-gray-300 dark:border-slate-700 bg-transparent dark:bg-transparent p-3 hover:bg-gray-50 hover:scale-103 dark:hover:bg-slate-700 transition-colors text-xs shadow-md dark:shadow-xs">
-                <div className="flex items-center gap-2">
-                  <Download className="h-6 w-6" />
-                  <span className="font-medium">Pobierz wtyczkę</span>
-                </div>
-                <ChevronDown className="h-5 w-5 transition-transform duration-200 [&[data-state=open]]:rotate-90" />
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <div className="mt-2 ml-2 mr-2 space-y-1 border-2 bg-transparent dark:bg-transparent border-gray-300/50 dark:border-slate-700/50 rounded-lg p-2">
-                  {browsers.map((browser) => (
-                    <a
-                      key={browser.name}
-                      href={browser.url}
-                      className="flex items-center gap-2 rounded-md px-3 py-2 text-md hover:bg-gray-100 dark:hover:bg-slate-800"
-                    >
-                      <browser.icon className="h-5 w-5 text-slate-600 dark:text-slate-400" />
-                      {browser.name}
-                    </a>
-                  ))}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
-          </SidebarMenuItem>
-
+          
           {/* Standardowe elementy menu */}
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>

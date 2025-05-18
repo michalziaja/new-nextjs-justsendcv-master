@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Target, TrendingUp, Settings, Save } from "lucide-react"
+import { Target, TrendingUp, Settings, Save, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { createClient } from "@/utils/supabase/client"
 import {
@@ -249,7 +249,7 @@ export function WeeklyGoals() {
       </CardHeader>
       <CardContent className="flex-1">
         {isLoadingGoal || isLoadingApplications ? (
-        <div className="space-y-4">
+          <div className="space-y-4">
             {/* Skeleton dla paska postępu */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
@@ -273,17 +273,6 @@ export function WeeklyGoals() {
                 <Skeleton className="h-8 w-12 mt-1" />
               </div>
             </div>
-
-            {/* Skeleton dla dni tygodnia */}
-            <div className="grid grid-cols-7 gap-1 pt-2">
-              {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'Sb', 'Nd'].map((day, index) => (
-                <div key={day} className="text-center">
-                  <div className="text-xs text-muted-foreground">{day}</div>
-                  <Skeleton className="h-1.5 mt-1 rounded-full mx-auto w-full" />
-                  <Skeleton className="h-4 w-4 mt-1 mx-auto" />
-                </div>
-              ))}
-            </div>
           </div>
         ) : !weeklyGoal ? (
           <div className="flex justify-center items-center h-40 text-muted-foreground flex-col">
@@ -292,53 +281,49 @@ export function WeeklyGoals() {
           </div>
         ) : (
           <div className="space-y-4">
-          {/* Pasek postępu */}
-          <div className="space-y-2">
-            <div className="flex justify-between text-sm">
+            {/* Pasek postępu */}
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
                 <span className="font-medium">{weeklyApplications} z {weeklyGoal} wysłanych aplikacji</span>
-              <span className="text-muted-foreground">{Math.round(progress)}%</span>
-            </div>
-            <div className="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full">
-              <div 
-                className={`h-full rounded-full transition-all duration-300 ${getProgressColor(progress)}`}
+                <span className="text-muted-foreground">{Math.round(progress)}%</span>
+              </div>
+              <div className="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full">
+                <div 
+                  className={`h-full rounded-full transition-all duration-300 ${getProgressColor(progress)}`}
                   style={{ width: `${Math.min(100, progress)}%` }}
-              />
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Statystyki */}
-          <div className="grid grid-cols-2 gap-4 pt-2">
-            <div>
-              <p className="text-sm font-medium flex items-center gap-1">
-                <TrendingUp className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />
+            
+
+            {/* Statystyki */}
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <p className="text-sm font-medium flex items-center gap-1">
+                  <TrendingUp className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />
                   Średnio dziennie
-              </p>
-                <p className="text-2xl font-bold">{dailyAverage}</p>
-            </div>
-            <div>
-              <p className="text-sm font-medium">Pozostało</p>
+                </p>
+                <p className="text-2xl px-5 font-bold">{dailyAverage}</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Pozostało</p>
                 <p className="text-2xl font-bold">{Math.max(0, weeklyGoal - weeklyApplications)}</p>
               </div>
-          </div>
-
-          {/* Dni tygodnia */}
-          <div className="grid grid-cols-7 gap-1 pt-2">
-              {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'Sb', 'Nd'].map((day, index) => {
-                const appCount = getApplicationsForDay(index);
-                return (
-              <div key={day} className="text-center">
-                <div className="text-xs text-muted-foreground">{day}</div>
-                <div className={`h-1.5 mt-1 rounded-full ${
-                  index <= adjustedCurrentDay 
-                    ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-500' 
-                    : 'bg-gray-200 dark:bg-gray-800'
-                }`} />
-                <div className="text-xs font-medium mt-1">
-                      {index <= adjustedCurrentDay ? appCount : '-'}
+            </div>
+            {/* Wskazówki motywacyjne */}
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-100 dark:border-blue-800">
+              <div className="flex items-start gap-2">
+                <Info className="h-5 w-5 text-[#00B2FF] flex-shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-blue-800 dark:text-blue-200">
+                    Pamiętaj o regularności!
+                  </p>
+                  <p className="text-xs text-blue-600 dark:text-blue-300">
+                    Nawet kilka aplikacji wysłanych każdego dnia przybliża Cię do sukcesu. Utrzymuj dobre tempo!
+                  </p>
                 </div>
               </div>
-                );
-              })}
             </div>
           </div>
         )}

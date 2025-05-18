@@ -1,131 +1,140 @@
 "use client"
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckSquare, Download, FileText, Settings, User, Send, BookOpen, Target, Star, RefreshCw } from "lucide-react"
+import { useState } from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Download, ArrowRight, Globe, Search, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import Image from "next/image"
 
-// Lista zadań z ikonami i statusem
-const tasks = [
-  // Kolumna 1
-  {
-    column: 1,
-    tasks: [
-      {
-        title: "Zainstaluj wtyczkę",
-        icon: <Download className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-[#00B2FF] to-blue-600" />,
-        completed: true
-      },
-      {
-        title: "Uzupełnij profil",
-        icon: <User className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600" />,
-        completed: false
-      },
-      {
-        title: "Ustaw cel",
-        icon: <Target className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600" />,
-        completed: false
-      },
-      {
-        title: "Trenuj do rozmowy",
-        icon: <BookOpen className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600" />,
-        completed: false
-      }
-    ]
-  },
-  // Kolumna 2
-  {
-    column: 2,
-    tasks: [
-      {
-        title: "Zapisz 5 ofert",
-        icon: <FileText className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600" />,
-        completed: false,
-        progress: "2/5"
-      },
-      {
-        title: "Stwórz CV",
-        icon: <Settings className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />,
-        completed: false
-      },
-      {
-        title: "Wyślij 2 oferty",
-        icon: <Send className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600" />,
-        completed: false,
-        progress: "0/2"
-      },
-      {
-        title: "Oceń wtyczkę",
-        icon: <Star className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600" />,
-        completed: false
-      }
-    ]
-  }
+// Lista serwisów z ofertami pracy
+const jobSites = [
+  { name: "pracuj.pl", logo: "/sites/pracuj.pl.png", url: "https://pracuj.pl", description: "Największy polski portal z ofertami pracy. Tysiące ofert z różnych branż." },
+  { name: "praca.pl", logo: "/sites/praca.png", url: "https://praca.pl", description: "Popularny serwis z ogłoszeniami o pracę, aktualizowany codziennie." },
+  { name: "linkedin.com", logo: "/sites/linkedin.png", logoDark: "/sites/linkedin-dark.png", url: "https://linkedin.com", description: "Międzynarodowy serwis społecznościowy dla profesjonalistów." },
+  { name: "nofluffjobs.com", logo: "/sites/NoFluffJobs.png", url: "https://nofluffjobs.com", description: "Portal z ofertami pracy w branży IT, z transparentnymi widełkami płacowymi." },
+  { name: "justjoin.it", logo: "/sites/justjoinit.png", logoDark: "/sites/justjoinit-dark.png", url: "https://justjoin.it", description: "Portal specjalizujący się w ofertach pracy dla programistów i specjalistów IT." },
+  { name: "indeed.com", logo: "/sites/indeed.png", logoDark: "/sites/indeed-dark.png", url: "https://indeed.com", description: "Globalny agregator ofert pracy z różnych źródeł." },
+  { name: "gowork.pl", logo: "/sites/gowork.png", url: "https://gowork.pl", description: "Polski portal z ofertami pracy i opiniami o pracodawcach." },
+  { name: "aplikuj.pl", logo: "/sites/aplikuj.png", logoDark: "/sites/aplikuj-dark.png", url: "https://aplikuj.pl", description: "Serwis z ofertami pracy i narzędziami do zarządzania aplikacjami." },
+  { name: "rocketjobs.pl", logo: "/sites/rocketjobs.png", url: "https://rocketjobs.pl", description: "Nowoczesny portal z ofertami pracy głównie w branży IT." },
+  { name: "kwf.pl", logo: "/sites/kwf.png", logoDark: "/sites/kwf-dark.png", url: "https://karierawfinansach.pl", description: "Specjalistyczny portal z ofertami pracy w sektorze finansowym." },
+  { name: "solid.jobs", logo: "/sites/solid.png", logoDark: "/sites/solid-dark.png", url: "https://solid.jobs", description: "Portal rekrutacyjny dla programistów i specjalistów IT." },
+  { name: "olx.pl", logo: "/sites/olx.png", logoDark: "/sites/olx-dark.png", url: "https://olx.pl/praca", description: "Popularny serwis ogłoszeniowy z sekcją ofert pracy." },
+  { name: "nuzle.pl", logo: "/sites/nuzle.png", url: "https://nuzle.pl", description: "Platforma z ofertami pracy różnego typu." },
+  { name: "infopraca.pl", logo: "/sites/infopraca.png", url: "https://infopraca.pl", description: "Polski portal rekrutacyjny z długą historią na rynku." },
+  { name: "jober.pl", logo: "/sites/jober.png", url: "https://jober.pl", description: "Serwis z ogłoszeniami o pracę w różnych branżach." },
 ]
 
 export function Checklist() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <Card className="col-span-1 rounded-sm border-1 border-gray-100 dark:border-gray-800
-    shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-    dark:shadow-slate-900/20
-    bg-white dark:bg-slate-900">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0">
-        <div className="flex items-center gap-2">
-          <CheckSquare className="h-5 w-5 text-[#00B2FF] stroke-2 transform transition-transform hover:scale-110" />
-          <CardTitle>Checklista</CardTitle>
-        </div>
-        <Button 
-          variant="link" 
-          size="icon" 
-          className="h-8 w-8 transition-transform duration-200 hover:scale-155 active:scale-90">
-          <RefreshCw className="h-4 w-4 text-[#00B2FF]" />
-        </Button>
-      </CardHeader>
-      <CardContent>
-        <div className="grid grid-cols-2 gap-4">
-          {tasks.map((column, columnIndex) => (
-            <div key={columnIndex} className="space-y-1">
-              {column.tasks.map((task, taskIndex) => (
-                <div 
-                  key={taskIndex} 
-                  className={`
-                    flex items-center gap-3 p-2 rounded-sm
-                    hover:bg-gray-50 dark:hover:bg-gray-800/50
-                    transition-colors duration-200
-                    ${task.completed ? 'opacity-50' : ''}
-                  `}
-                >
-                  <div className={`
-                    h-5 w-5 rounded border-2 
-                    ${task.completed 
-                      ? 'border-gradient-to-r border-blue-500 dark:border-gradient-to-r dark:border-blue-500 bg-gradient-to-r from-blue-500 to-blue-600 dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600' 
-                      : 'border-gray-300 dark:border-gray-600'
-                    }
-                    flex items-center justify-center
-                    transition-colors duration-200
-                  `}>
-                    {task.completed && (
-                      <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-2 flex-1">
-                    {task.icon}
-                    <span className={`text-sm ${task.completed ? 'line-through text-muted-foreground' : 'font-medium'}`}>
-                      {task.title}
-                    </span>
-                  </div>
-                  {task.progress && (
-                    <span className="text-xs text-muted-foreground">
-                      {task.progress}
-                    </span>
-                  )}
-                </div>
-              ))}
+    <>
+      <Card className="col-span-1 rounded-sm border-1 border-gray-100 dark:border-gray-800
+      shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
+      dark:shadow-slate-900/20
+      bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-700">
+        <CardContent className="p-2">
+          <div className="flex flex-col items-center text-center space-y-4">
+            {/* Ikona */}
+            <div className="rounded-full bg-white/20 p-3 backdrop-blur-sm">
+              <Globe className="h-8 w-8 text-white" />
             </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+
+            {/* Tekst */}
+            <div className="space-y-2">
+              <h2 className="text-xl font-semibold text-white">
+                Przeglądaj oferty i zapisuj jednym kliknięciem
+              </h2>
+              <p className="text-sm text-white/80">
+                Odwiedź popularne portale z ofertami i zainstaluj wtyczkę do szybkiego zapisywania
+              </p>
+            </div>
+
+            {/* Przyciski */}
+            <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              {/* Przycisk otwierający modal */}
+              <Button 
+                variant="secondary"
+                className="bg-white text-blue-600 hover:bg-white/90 transition-all duration-200 
+                  hover:scale-105 active:scale-95 font-medium flex items-center gap-2"
+                onClick={() => setIsOpen(true)}
+              >
+                Zobacz serwisy
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              
+              {/* Przycisk do pobrania wtyczki - zmieniony na bardziej widoczny */}
+              <Button 
+                variant="default"
+                className="bg-yellow-400 hover:bg-yellow-300 border-2 border-white text-blue-700 
+                  shadow-md transition-all duration-200 
+                  hover:scale-105 active:scale-95 font-medium flex items-center gap-2"
+              >
+                <Download className="h-4 w-4" />
+                Pobierz wtyczkę
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Modal z listą serwisów */}
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="sm:max-w-[700px] max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Największe serwisy z ofertami pracy</DialogTitle>
+          </DialogHeader>
+          
+          <div className="grid gap-4 py-4">
+            {jobSites.map((site) => (
+              <div key={site.name} className="flex items-center p-3 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                <div className="relative w-12 h-12 mr-4 flex-shrink-0">
+                  <Image
+                    src={site.logo}
+                    alt={`${site.name} logo`}
+                    fill
+                    className="object-contain block dark:hidden"
+                  />
+                  <Image
+                    src={site.logoDark || site.logo}
+                    alt={`${site.name} logo`}
+                    fill
+                    className="object-contain hidden dark:block"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-medium text-lg mb-1">{site.name}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{site.description}</p>
+                </div>
+                <Button 
+                  size="sm" 
+                  variant="outline"
+                  className="ml-2 flex-shrink-0"
+                  asChild
+                >
+                  <a href={site.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                    <span className="hidden sm:inline">Odwiedź</span>
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">
+            <p>Zapisuj oferty z tych serwisów bezpośrednio do swojego konta za pomocą wtyczki JustSend.cv</p>
+            <p className="mt-1">Wszystkie oferty w jednym miejscu!</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
   )
 } 

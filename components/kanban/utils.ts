@@ -4,16 +4,16 @@ import { TaskStatus } from "./types";
 export const getColumnHeaderColor = (status: TaskStatus) => {
   switch (status) {
     case "todo":
-      return "bg-blue-50/20 dark:bg-blue-950/20 border-blue-500 dark:border-blue-800"
+      return "bg-blue-50/50 dark:bg-blue-950/20 border-blue-500 dark:border-blue-800"
     case "in-progress":
-      return "bg-amber-50/20 dark:bg-amber-950/20 border-amber-500 dark:border-amber-800"
+      return "bg-amber-50/50 dark:bg-amber-950/20 border-amber-500 dark:border-amber-800"
     case "review":
-      return "bg-purple-50/20 dark:bg-purple-950/10 border-purple-500 dark:border-purple-800"
+      return "bg-purple-50/50 dark:bg-purple-950/10 border-purple-500 dark:border-purple-800"
     case "waiting":
-      return "bg-cyan-50/20 dark:bg-cyan-950/20 border-cyan-500 dark:border-cyan-800"
+      return "bg-cyan-50/50 dark:bg-cyan-950/20 border-cyan-500 dark:border-cyan-800"
     case "done":
-      return "bg-green-50/20 dark:bg-green-950/20 border-green-500 dark:border-green-800"
+      return "bg-green-50/50 dark:bg-green-950/20 border-green-500 dark:border-green-800"
     default:
-      return "bg-gray-50/20 dark:bg-gray-800/20 border-gray-500 dark:border-gray-700"
+      return "bg-gray-50/50 dark:bg-gray-800/20 border-gray-500 dark:border-gray-700"
   }
 } 

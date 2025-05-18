@@ -483,6 +483,72 @@ export function SavedTable() {
     }
   };
 
+  // Funkcja do usuwania aplikacji
+  const handleDeleteApplication = async () => {
+    if (!selectedApplication) return;
+    
+    console.log("Usuwanie aplikacji:", selectedApplication.id);
+    
+    try {
+      const supabase = createClient();
+      
+      // Usunięcie oferty z bazy danych
+      const { error } = await supabase
+        .from('job_offers')
+        .delete()
+        .eq('id', selectedApplication.id);
+        
+      if (error) {
+        console.error("Błąd podczas usuwania oferty:", error);
+        return;
+      }
+      
+      console.log("Oferta usunięta pomyślnie");
+      
+      // Aktualizacja stanu po usunięciu
+      setApplications(prevApps => prevApps.filter(app => app.id !== selectedApplication.id));
+      setSelectedApplication(null);
+      setIsDrawerOpen(false);
+      
+    } catch (error) {
+      console.error("Wystąpił błąd podczas usuwania oferty:", error);
+    }
+  };
+
+  // Funkcje do nawigacji między ofertami
+  const handleNextApplication = () => {
+    if (!selectedApplication) return;
+    
+    // Znajdź indeks bieżącej aplikacji w posortowanej liście
+    const currentIndex = sortedApplications.findIndex(app => app.id === selectedApplication.id);
+    
+    // Jeśli istnieje następna aplikacja, ustaw ją jako wybraną
+    if (currentIndex !== -1 && currentIndex < sortedApplications.length - 1) {
+      setSelectedApplication(sortedApplications[currentIndex + 1]);
+    }
+  };
+  
+  const handlePreviousApplication = () => {
+    if (!selectedApplication) return;
+    
+    // Znajdź indeks bieżącej aplikacji w posortowanej liście
+    const currentIndex = sortedApplications.findIndex(app => app.id === selectedApplication.id);
+    
+    // Jeśli istnieje poprzednia aplikacja, ustaw ją jako wybraną
+    if (currentIndex > 0) {
+      setSelectedApplication(sortedApplications[currentIndex - 1]);
+    }
+  };
+  
+  // Sprawdź, czy istnieją poprzednie/następne aplikacje
+  const hasNextApplication = selectedApplication 
+    ? sortedApplications.findIndex(app => app.id === selectedApplication.id) < sortedApplications.length - 1
+    : false;
+    
+  const hasPreviousApplication = selectedApplication
+    ? sortedApplications.findIndex(app => app.id === selectedApplication.id) > 0
+    : false;
+
   return (
     <div className="flex flex-col space-y-4">
       {/* Sekcja wyszukiwania i odświeżania - bez zmian */}
@@ -643,7 +709,7 @@ export function SavedTable() {
         />
       </div>
 
-      {/* Drawer i Dialog - bez zmian */}
+      {/* Drawer i Dialog */}
       <ApplicationDetailsDrawer
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
@@ -665,6 +731,7 @@ export function SavedTable() {
             priority: selectedApplication.priority
         } : null}
         onEdit={() => {}}
+        onDelete={handleDeleteApplication}
         onStatusChange={(newStatus) => {
           if (selectedApplication) {
               setApplications(prevApps =>
@@ -680,6 +747,10 @@ export function SavedTable() {
             handlePriorityChange(newPriority, selectedApplication.id);
           }
         }}
+        onNextApplication={handleNextApplication}
+        onPreviousApplication={handlePreviousApplication}
+        hasNextApplication={hasNextApplication}
+        hasPreviousApplication={hasPreviousApplication}
       />
 
       <AlertDialog open={isConfirmDialogOpen} onOpenChange={setIsConfirmDialogOpen}>

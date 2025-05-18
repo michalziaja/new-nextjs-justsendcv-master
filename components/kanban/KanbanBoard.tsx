@@ -52,6 +52,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
   const [activeTask, setActiveTask] = useState<Task | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [firstLoad, setFirstLoad] = useState(true)
   
   // Dodajemy stan dla tymczasowych zadań
   const [tempTasks, setTempTasks] = useState<Record<string, Task>>({})
@@ -79,6 +80,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
         setIsLoading(true)
         const board = await getOrCreateKanbanBoard()
         setBoardData(board)
+        setFirstLoad(false)
       } catch (err) {
         console.error("Błąd podczas ładowania tablicy Kanban:", err)
         setError("Nie udało się załadować tablicy Kanban")
@@ -93,8 +95,8 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
   // Aktualizacja tablicy Kanban w bazie danych po zmianach
   useEffect(() => {
     const saveKanbanBoard = async () => {
-      // Nie zapisujemy pustej tablicy (np. podczas inicjalizacji)
-      if (isLoading || Object.keys(boardData.tasks).length === 0) return
+      // Nie zapisujemy pustej tablicy lub przy pierwszym załadowaniu
+      if (isLoading || Object.keys(boardData.tasks).length === 0 || firstLoad) return
       
       try {
         await updateKanbanBoard(boardData)
@@ -107,7 +109,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
     // Używamy debounce aby ograniczyć liczbę zapisów
     const debounceTimeout = setTimeout(saveKanbanBoard, 2000)
     return () => clearTimeout(debounceTimeout)
-  }, [boardData, isLoading])
+  }, [boardData, isLoading, firstLoad])
   
   // Funkcja do filtrowania zadań na podstawie wyszukiwania
   const filterTasks = useMemo(() => {
@@ -164,7 +166,14 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
     }
     
     // Tworzymy nowe prawdziwe zadanie z danymi z tymczasowego
-    const newTaskId = `task-${uuidv4()}`
+    // Generujemy nowe ID i upewniamy się, że jest unikalne
+    let newTaskId = `task-${uuidv4()}`
+    
+    // Sprawdź czy ID nie jest już używane (bardzo mało prawdopodobne, ale możliwe)
+    while (boardData.tasks[newTaskId]) {
+      newTaskId = `task-${uuidv4()}`
+    }
+    
     const newTask: Task = {
       ...tempTask,
       ...updatedTask,
@@ -176,7 +185,11 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
     // Dodajemy zadanie do stanu tablicy
     setBoardData(prev => {
       const updatedColumns = { ...prev.columns }
-      updatedColumns[tempTask.status].taskIds.push(newTaskId)
+      
+      // Upewnij się, że zadanie nie zostało już dodane do kolumny
+      if (!updatedColumns[tempTask.status].taskIds.includes(newTaskId)) {
+        updatedColumns[tempTask.status].taskIds.push(newTaskId)
+      }
       
       return {
         ...prev,
@@ -518,13 +531,13 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({ searchQuery = "" }) => {
   // Funkcja pomagająca obliczyć szerokość kolumny
   const getColumnWidth = (currentColumnCount: number, isAddButton: boolean = false) => {
     // Przycisk dodaj kolumnę zawsze ma 20%
-    if (isAddButton) return 'w-[20%]'
+    if (isAddButton) return 'w-[18%]'
     
     // Jeśli mamy 3 kolumny, każda ma (100% - 20% - 2 * gap) / 3
-    if (currentColumnCount === 3) return 'w-[25%]' // ~(100% - 20% - 2*2.5%) / 3
+    if (currentColumnCount === 3) return 'w-[27%]' // ~(100% - 20% - 2*2.5%) / 3
     
     // Jeśli mamy 4 kolumny, każda ma (100% - 20% - 3 * gap) / 4
-    if (currentColumnCount === 4) return 'w-[18.75%]' // ~(100% - 20% - 3*2.5%) / 4
+    if (currentColumnCount === 4) return 'w-[25%]' // ~(100% - 20% - 3*2.5%) / 4
     
     // Jeśli mamy 5 kolumn, każda ma 20% - tu nie będzie przycisku dodaj
     return 'w-[20%]'

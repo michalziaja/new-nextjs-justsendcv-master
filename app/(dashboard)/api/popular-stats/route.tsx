@@ -1,6 +1,111 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createModel, logTokenUsage } from '@/lib/gemini-client'; // Klient Gemini
 
+// Funkcja do czyszczenia i naprawy JSON
+function sanitizeJSON(text: string): string {
+  try {
+    // Najpierw sprawdzmy, czy to już jest poprawny JSON
+    JSON.parse(text);
+    return text; // Jeśli parsowanie przeszło, zwracamy bez zmian
+  } catch (e) {
+    // Jeśli tekst nie jest poprawnym JSON, próbujemy go naprawić
+    
+    // Usuwanie znaków kontrolnych
+    text = text.replace(/[\u{0000}-\u{0008}\u{000B}-\u{000C}\u{000E}-\u{001F}\u{007F}-\u{009F}]/gu, "");
+    
+    // Czyszczenie z markdown code blocks
+    if (text.startsWith("```json")) {
+      text = text.substring(7);
+    }
+    if (text.endsWith("```")) {
+      text = text.substring(0, text.length - 3);
+    }
+    
+    // Usuwanie komentarzy
+    text = text.replace(/\/\/.*?(\r\n|\n|$)/g, "");
+    text = text.replace(/\/\*[\s\S]*?\*\//g, "");
+    
+    // Próba naprawy json dla skills/tech
+    if (text.includes('"skills"') && text.includes('"technologies"')) {
+      // Poprawiamy formatowanie dla struktury skills/technologies
+      if (!text.startsWith('{')) {
+        const startIdx = text.indexOf('{');
+        if (startIdx >= 0) {
+          text = text.substring(startIdx);
+        } else {
+          text = '{' + text;
+        }
+      }
+      
+      if (!text.endsWith('}')) {
+        const endIdx = text.lastIndexOf('}');
+        if (endIdx >= 0 && endIdx < text.length - 1) {
+          text = text.substring(0, endIdx + 1);
+        } else {
+          text = text + '}';
+        }
+      }
+      
+      // Dodatkowa próba regeneracji JSON na podstawie zawartości
+      try {
+        // Jeśli nie możemy sparsować, spróbujemy przebudować strukturę
+        JSON.parse(text);
+      } catch (err) {
+        // Próbujemy wyodrębnić skills i technologies z tekstu
+        const skillsMatch = text.match(/"skills"\s*:\s*\[.*?\]/);
+        const techMatch = text.match(/"technologies"\s*:\s*\[.*?\]/);
+        
+        if (skillsMatch || techMatch) {
+          let newJson = '{';
+          if (skillsMatch) {
+            newJson += skillsMatch[0];
+            if (techMatch) newJson += ',';
+          }
+          if (techMatch) {
+            newJson += techMatch[0];
+          }
+          newJson += '}';
+          text = newJson;
+        }
+      }
+    } 
+    // Próba naprawy json dla positions (tablica)
+    else if (text.includes('"title"') && text.includes('"count"')) {
+      // Poprawiamy formatowanie dla struktury positions (tablica)
+      if (!text.startsWith('[')) {
+        const startIdx = text.indexOf('[');
+        if (startIdx >= 0) {
+          text = text.substring(startIdx);
+        } else {
+          text = '[' + text;
+        }
+      }
+      
+      if (!text.endsWith(']')) {
+        const endIdx = text.lastIndexOf(']');
+        if (endIdx >= 0 && endIdx < text.length - 1) {
+          text = text.substring(0, endIdx + 1);
+        } else {
+          text = text + ']';
+        }
+      }
+    }
+    
+    // Zapewniamy poprawne przecinki w tablicach i obiektach
+    text = text.replace(/,(\s*[\]}])/g, '$1');
+    
+    // Weryfikujemy wynik
+    try {
+      JSON.parse(text);
+      return text;
+    } catch (finalError) {
+      console.error("Nie udało się naprawić JSON:", finalError);
+      // Zwracamy oryginalny tekst w przypadku niepowodzenia naprawy
+      return text;
+    }
+  }
+}
+
 // Definicje typów (takie same jak w StatsContext)
 interface SkillItem {
   name: string;
@@ -107,9 +212,42 @@ export async function POST(req: NextRequest) {
             text = text.substring(0, text.length - 3);
           }
           text = text.trim(); // Dodatkowe przycięcie po usunięciu znaczników
-          //console.log("🧹 API popular-stats (skills/tech) - Odpowiedź Gemini po czyszczeniu:", text);
+
+          // Dodatkowe czyszczenie odpowiedzi z niestandardowych znaków
+          text = text.replace(/[\u{0000}-\u{0008}\u{000B}-\u{000C}\u{000E}-\u{001F}\u{007F}-\u{009F}]/gu, ""); // Usuwanie znaków kontrolnych
+          
+          // Rozszerzona obsługa znaków specjalnych i formatowania
+          text = text.replace(/^[^[{]/, ""); // Usuń wszystkie znaki przed początkiem JSON ([ lub {)
+          
+          // Próba naprawy najpopularniejszych problemów z JSON
+          if (!text.startsWith('[') && !text.startsWith('{')) {
+            // Jeśli tekst nie zaczyna się od [ lub {, próbujemy znaleźć początek JSON
+            const jsonStart = text.indexOf('{') >= 0 ? text.indexOf('{') : text.indexOf('[');
+            if (jsonStart >= 0) {
+              text = text.substring(jsonStart);
+            }
+          }
+          
+          console.log("🧹 API popular-stats (skills/tech) - Odpowiedź Gemini po czyszczeniu:", text);
+
+          // Zastosowanie zaawansowanego czyszczenia i naprawy JSON
+          text = sanitizeJSON(text);
+          console.log("🔧 API popular-stats (skills/tech) - Odpowiedź Gemini po sanityzacji JSON:", text);
 
           const parsedResult = JSON.parse(text);
+          
+          // Weryfikacja struktury danych po parsowaniu
+          if (!parsedResult || typeof parsedResult !== 'object') {
+            throw new Error("Nieprawidłowa struktura JSON - oczekiwano obiektu");
+          }
+          
+          // Dla skills/tech sprawdzamy czy mamy obie wymagane tablice
+          if (!Array.isArray(parsedResult.skills) && !Array.isArray(parsedResult.technologies)) {
+            console.warn("Nieprawidłowa struktura JSON - brak tablic skills i technologies");
+            // Tworzymy prawidłową strukturę z pustymi tablicami
+            parsedResult.skills = parsedResult.skills || [];
+            parsedResult.technologies = parsedResult.technologies || [];
+          }
 
           skills = (parsedResult.skills || []).map((item: any, index: number) => {
             const colorPair = getColorPair(index);
@@ -206,7 +344,7 @@ export async function POST(req: NextRequest) {
         // Próba naprawy najpopularniejszych problemów z JSON
         if (!text.startsWith('[') && !text.startsWith('{')) {
           // Jeśli tekst nie zaczyna się od [ lub {, próbujemy znaleźć początek JSON
-          const jsonStart = text.indexOf('[') >= 0 ? text.indexOf('[') : text.indexOf('{');
+          const jsonStart = text.indexOf('{') >= 0 ? text.indexOf('{') : text.indexOf('[');
           if (jsonStart >= 0) {
             text = text.substring(jsonStart);
           }
@@ -214,9 +352,19 @@ export async function POST(req: NextRequest) {
         
         console.log("🧹 API popular-stats (positions) - Odpowiedź Gemini po czyszczeniu:", text);
 
+        // Zastosowanie zaawansowanego czyszczenia i naprawy JSON
+        text = sanitizeJSON(text);
+        console.log("🔧 API popular-stats (positions) - Odpowiedź Gemini po sanityzacji JSON:", text);
+
         try {
           const parsedResult = JSON.parse(text);
           
+          // Weryfikacja struktury danych
+          if (!parsedResult) {
+            throw new Error("Pusty wynik parsowania JSON");
+          }
+          
+          // Sprawdzamy czy mamy tablicę lub obiekt, który można przekształcić w tablicę
           if (Array.isArray(parsedResult)) {
             positions = parsedResult.map((item: any, index: number) => ({
               title: item.title,
