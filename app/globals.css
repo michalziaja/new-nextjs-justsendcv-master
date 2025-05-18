@@ -137,7 +137,7 @@
 .animate-bell {
   animation: bell-shake 1s ease-in-out;
 } */
- 
+
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -255,6 +255,7 @@
   --sidebar-border: oklch(0.278 0.033 256.848);
   --sidebar-ring: oklch(0.446 0.03 256.802);
 }
+
 
 @layer base {
   * {

@@ -4,10 +4,60 @@ import React, { useState, useRef, useCallback } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { AlertCircle, Upload, Camera, UserCircle, X, Check } from 'lucide-react';
+import { AlertCircle, Upload, Camera, UserCircle, X, Check, CropIcon } from 'lucide-react';
 import { createClient } from '@/utils/supabase/client';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import imageCompression from 'browser-image-compression';
+import Cropper from 'react-easy-crop';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
+
+// Funkcja do generowania przyciętego obrazu
+const createImage = (url: string): Promise<HTMLImageElement> =>
+  new Promise((resolve, reject) => {
+    const image = new Image();
+    image.addEventListener('load', () => resolve(image));
+    image.addEventListener('error', (error) => reject(error));
+    image.src = url;
+  });
+
+// Funkcja do przycinania zdjęcia
+const getCroppedImg = async (
+  imageSrc: string,
+  pixelCrop: { x: number; y: number; width: number; height: number }
+): Promise<Blob> => {
+  const image = await createImage(imageSrc);
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+
+  if (!ctx) {
+    throw new Error('Could not get canvas context');
+  }
+
+  // Ustawienie wymiarów płótna
+  canvas.width = pixelCrop.width;
+  canvas.height = pixelCrop.height;
+
+  // Rysowanie przyciętego obrazu na płótnie
+  ctx.drawImage(
+    image,
+    pixelCrop.x,
+    pixelCrop.y,
+    pixelCrop.width,
+    pixelCrop.height,
+    0,
+    0,
+    pixelCrop.width,
+    pixelCrop.height
+  );
+
+  // Konwersja płótna na Blob
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => {
+      if (!blob) throw new Error('Canvas is empty');
+      resolve(blob);
+    }, 'image/jpeg', 0.95);
+  });
+};
 
 export default function ProfileAvatar() {
   // Stan dla błędów, uploadu itp.
@@ -17,6 +67,13 @@ export default function ProfileAvatar() {
   const [success, setSuccess] = useState<string | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  
+  // Stan dla przycinania zdjęcia
+  const [cropDialogOpen, setCropDialogOpen] = useState(false);
+  const [imageToCrop, setImageToCrop] = useState<string | null>(null);
+  const [crop, setCrop] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState<{ x: number; y: number; width: number; height: number } | null>(null);
   
   // Funkcja do pobierania avatara użytkownika
   const fetchUserAvatar = async () => {
@@ -347,13 +404,66 @@ export default function ProfileAvatar() {
     }
   };
   
+  // Funkcja do otwierania croppera po wybraniu pliku
+  const showCropper = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      setImageToCrop(reader.result as string);
+      setCropDialogOpen(true);
+    };
+    reader.readAsDataURL(file);
+  };
+  
   // Funkcja do przygotowania pliku do uploadu
   const prepareFileForUpload = (file: File) => {
-    setUploading(true);
-    // Bezpośrednio prześlij plik bez przycinania
-    uploadAvatar(file).finally(() => {
+    // Zamiast bezpośredniego wysyłania, najpierw pokazujemy narzędzie do przycinania
+    showCropper(file);
+  };
+  
+  // Obsługa zakończenia przycinania
+  const onCropComplete = useCallback((croppedArea: any, croppedAreaPixels: any) => {
+    setCroppedAreaPixels(croppedAreaPixels);
+  }, []);
+  
+  // Funkcja do zatwierdzenia przyciętego zdjęcia
+  const handleCropConfirm = async () => {
+    try {
+      setUploading(true);
+      
+      if (!imageToCrop || !croppedAreaPixels) {
+        console.error('Brak danych do przycinania');
+        return;
+      }
+      
+      // Przycinanie zdjęcia
+      const croppedImage = await getCroppedImg(imageToCrop, croppedAreaPixels);
+      
+      // Konwersja Blob na File
+      const croppedFile = new File([croppedImage], 'cropped-image.jpg', { 
+        type: 'image/jpeg',
+        lastModified: new Date().getTime()
+      });
+      
+      // Zamknięcie okna przycinania
+      setCropDialogOpen(false);
+      setImageToCrop(null);
+      
+      // Wysłanie przyciętego zdjęcia
+      await uploadAvatar(croppedFile);
+      
+    } catch (error) {
+      console.error('Błąd podczas przycinania zdjęcia:', error);
+      setError('Wystąpił błąd podczas przycinania zdjęcia.');
+    } finally {
       setUploading(false);
-    });
+    }
+  };
+  
+  // Funkcja do anulowania przycinania
+  const handleCropCancel = () => {
+    setCropDialogOpen(false);
+    setImageToCrop(null);
+    setUploading(false);
   };
   
   // Otwieranie okna wyboru pliku
@@ -500,6 +610,67 @@ export default function ProfileAvatar() {
           </div>
         </div>
       </CardContent>
+      
+      {/* Dialog z narzędziem do przycinania zdjęcia */}
+      <Dialog open={cropDialogOpen} onOpenChange={setCropDialogOpen}>
+        <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Przytnij zdjęcie profilowe</DialogTitle>
+          </DialogHeader>
+          
+          <div className="relative w-full h-[400px] my-4">
+            {imageToCrop && (
+              <Cropper
+                image={imageToCrop}
+                crop={crop}
+                zoom={zoom}
+                aspect={1} // Proporcja 1:1 dla kwadratu
+                onCropChange={setCrop}
+                onCropComplete={onCropComplete}
+                onZoomChange={setZoom}
+                objectFit="contain"
+                cropSize={{ width: 300, height: 300 }}
+                showGrid={true}
+                minZoom={0.5}
+                maxZoom={5}
+                restrictPosition={false}
+              />
+            )}
+          </div>
+          
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center">
+              <span className="text-sm mr-2">Przybliżenie:</span>
+              <input
+                type="range"
+                value={zoom}
+                min={0.5}
+                max={5}
+                step={0.05}
+                aria-labelledby="Poziom przybliżenia"
+                onChange={(e) => setZoom(Number(e.target.value))}
+                className="w-48"
+              />
+            </div>
+          </div>
+          
+          <DialogFooter>
+            <Button 
+              variant="outline" 
+              onClick={handleCropCancel}
+              disabled={uploading}
+            >
+              Anuluj
+            </Button>
+            <Button 
+              onClick={handleCropConfirm}
+              disabled={uploading}
+            >
+              {uploading ? 'Przetwarzanie...' : 'Zatwierdź'}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 } 

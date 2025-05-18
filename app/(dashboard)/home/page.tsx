@@ -11,7 +11,7 @@ import { WeeklyGoals } from "@/components/home/weekly-goals"
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col gap-2 p-2 transition-all duration-200">
+    <div className="flex flex-1 flex-col gap-2 transition-all duration-200">
       {/* Rząd 1: Statystyki */}
       <div className="mb-14 ml-2 mr-2 mt-6 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6 md:mt-7 
       lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-15 xl:mr-15 xl:mt-12">
