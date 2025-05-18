@@ -33,21 +33,50 @@ const getCroppedImg = async (
     throw new Error('Could not get canvas context');
   }
 
-  // Ustawienie wymiarów płótna
-  canvas.width = pixelCrop.width;
-  canvas.height = pixelCrop.height;
+  // Stały rozmiar wyniku - 500x500 pikseli
+  const targetSize = 500;
+  
+  // Sprawdzamy czy obszar przycinania jest idealnym kwadratem
+  // Jeśli nie, to będziemy musieli dostosować rysowanie
+  const isSquare = Math.abs(pixelCrop.width - pixelCrop.height) < 2; // Margines błędu 2px
+  
+  // Ustawiamy rozmiar canvas na docelowe 500x500
+  canvas.width = targetSize;
+  canvas.height = targetSize;
+  
+  // Wypełnienie tła przezroczystym kolorem (usunięcie czarnych ramek)
+  ctx.clearRect(0, 0, targetSize, targetSize);
 
-  // Rysowanie przyciętego obrazu na płótnie
+  // Obliczamy współczynniki skalowania, aby zachować proporcje wybranego obszaru
+  const scaleX = targetSize / pixelCrop.width;
+  const scaleY = targetSize / pixelCrop.height;
+  
+  // Używamy mniejszego współczynnika, aby uniknąć rozciągania
+  const scale = Math.min(scaleX, scaleY);
+  
+  // Obliczamy wymiary przeskalowanego obrazu
+  const scaledWidth = pixelCrop.width * scale;
+  const scaledHeight = pixelCrop.height * scale;
+  
+  // Obliczamy środek canvas
+  const centerX = targetSize / 2;
+  const centerY = targetSize / 2;
+  
+  // Obliczamy początek rysowania, aby obraz był wyśrodkowany
+  const drawX = centerX - (scaledWidth / 2);
+  const drawY = centerY - (scaledHeight / 2);
+
+  // Dokładne rysowanie przyciętego obrazu na płótnie
   ctx.drawImage(
     image,
     pixelCrop.x,
     pixelCrop.y,
     pixelCrop.width,
     pixelCrop.height,
-    0,
-    0,
-    pixelCrop.width,
-    pixelCrop.height
+    drawX,
+    drawY,
+    scaledWidth,
+    scaledHeight
   );
 
   // Konwersja płótna na Blob
@@ -55,7 +84,7 @@ const getCroppedImg = async (
     canvas.toBlob((blob) => {
       if (!blob) throw new Error('Canvas is empty');
       resolve(blob);
-    }, 'image/jpeg', 0.95);
+    }, 'image/jpeg', 1.0); // Maksymalna jakość
   });
 };
 
@@ -422,6 +451,8 @@ export default function ProfileAvatar() {
   
   // Obsługa zakończenia przycinania
   const onCropComplete = useCallback((croppedArea: any, croppedAreaPixels: any) => {
+    console.log('Obszar przycinania:', croppedAreaPixels);
+    // Upewniamy się, że zapamiętamy dokładne wymiary przyciętego obszaru
     setCroppedAreaPixels(croppedAreaPixels);
   }, []);
   
@@ -436,6 +467,7 @@ export default function ProfileAvatar() {
       }
       
       // Przycinanie zdjęcia
+      console.log('Przycinanie z obszaru:', croppedAreaPixels);
       const croppedImage = await getCroppedImg(imageToCrop, croppedAreaPixels);
       
       // Konwersja Blob na File
@@ -527,15 +559,20 @@ export default function ProfileAvatar() {
             onDrop={handleDrop}
             onClick={handleSelectFile}
           >
-            <div className="h-52 w-52 sm:h-64 sm:w-64 rounded-md border-2 border-primary/20 overflow-hidden transition-all duration-200 group-hover:border-primary/50">
+            <div className="h-52 w-52 rounded-md border-2 border-primary/20 overflow-hidden transition-all duration-200 group-hover:border-primary/50">
               {avatar ? (
                 <div className="relative w-full h-full">
                   <img 
                     src={avatar} 
                     alt="Zdjęcie profilowe" 
-                    className="w-full h-full object-cover"
-                    style={{ aspectRatio: '1/1' }}
-                    onError={(e) => {
+                    className="w-full h-full"
+                    style={{ 
+                      objectFit: 'cover',
+                      width: '100%',
+                      height: '100%',
+                      display: 'block'
+                    }}
+                    onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                       console.error("Błąd ładowania zdjęcia:", avatar);
                       e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIiPjxwYXRoIGQ9Ik0yMCA2LjVhMi41IDIuNSAwIDAgMS01IDAgMi41IDIuNSAwIDAgMSA1IDB6Ii8+PHBhdGggZD0iTTE0IDExYTYgNiAwIDAgMC0xMiAwIE00IDE1aDFhMSAxIDAgMCAxIDEgMXY0YTEgMSAwIDAgMS0xIDFINCIvPjxwYXRoIGQ9Ik0yMiAxOWgtNiIvPjxwYXRoIGQ9Ik0yNCAxNWgtMyIvPjwvc3ZnPg==';
                       setTimeout(fetchUserAvatar, 3000);
@@ -632,8 +669,9 @@ export default function ProfileAvatar() {
                 cropSize={{ width: 300, height: 300 }}
                 showGrid={true}
                 minZoom={0.5}
-                maxZoom={5}
+                maxZoom={3}
                 restrictPosition={false}
+                cropShape="rect" // Prostokątny kształt przycinania (kwadrat wymuszony przez aspect)
               />
             )}
           </div>
@@ -645,7 +683,7 @@ export default function ProfileAvatar() {
                 type="range"
                 value={zoom}
                 min={0.5}
-                max={5}
+                max={3}
                 step={0.05}
                 aria-labelledby="Poziom przybliżenia"
                 onChange={(e) => setZoom(Number(e.target.value))}

@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CVData, useCV } from './CVContext'; // Zakładamy, że typ CVData jest zdefiniowany w CVContext
+import { IoMdCheckboxOutline, IoMdSquareOutline } from 'react-icons/io';
 
 // Definicja typów dla structury formatowania
 type SpacingItem = Record<string, string>;
@@ -27,11 +28,22 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
   const currentSpacing = { ...defaultSpacing, ...(cvData.customStyles?.spacing || {}) };
   const currentFontSizes = { ...defaultFontSizes, ...(cvData.customStyles?.fontSizes || {}) };
   
+  // Stan do przechowywania zaznaczonych czcionek do grupowej edycji
+  const [selectedFonts, setSelectedFonts] = useState<Record<string, boolean>>({});
+  // Stan do przechowywania wartości jednoczesnego zwiększenia/zmniejszenia
+  const [bulkAdjustment, setBulkAdjustment] = useState<number>(0);
+  
   // Mapowanie kluczy na bardziej przyjazne nazwy dla UI (przykładowe)
   const spacingLabels: Record<string, Record<string, string>> = {
     document: { paddingTop: 'Margines górny (dokument)', paddingSides: 'Marginesy boczne (dokument)' },
-    header: { bottomMargin: 'Odstęp pod nagłówkiem (dane osobowe)'},
+    header: { 
+      bottomMargin: 'Odstęp pod nagłówkiem (dane osobowe)',
+      nameToContactSpacing: 'Odstęp między imieniem a danymi kontaktowymi'
+    },
     sections: { margin: 'Odstęp między sekcjami' },
+    elements: { 
+      tagGapHorizontal: 'Odstęp poziomy między umiejętnościami'
+    }
   };
   
   // Rozszerzony obiekt nazw dla wszystkich dostępnych czcionek
@@ -43,17 +55,14 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
     // Nagłówki sekcji
     sectionHeader: 'Nagłówki sekcji',
     
-    
     // Bazowe czcionki
     
     // Doświadczenie i edukacja
-    position: 'Stanowisko/Pozycja/Projekt',
+    position: 'Stanowisko/Pozycja/Projekt (i Daty)',
     company: 'Nazwa firmy/organizacji',
-    dates: 'Daty (od-do)',
     description: 'Opisy doświadczeń/edukacji',
     
     // Różne elementy
-    subSectionHeader: 'Nagłówki umiejętności',
     tagText: 'Umiejętności, języki',
     rodoText: 'Klauzula RODO',
   };
@@ -61,8 +70,8 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
   // Funkcja pomocnicza do usuwania jednostek i zwracania tylko liczb
   const stripUnits = (value: string): number => {
     if (!value) return 0;
-    const numMatch = value.match(/^(\d+)/);
-    return numMatch ? parseInt(numMatch[1], 10) : 0;
+    const numMatch = value.match(/^(\d+(\.\d+)?)/);
+    return numMatch ? parseFloat(numMatch[1]) : 0;
   };
 
   // Funkcja pomocnicza do aktualizacji niestandardowych stylów dla 'spacing'
@@ -119,38 +128,91 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
     // Dodaj jednostkę 'px' jeśli wartość jest liczbą
     const formattedValue = typeof value === 'number' ? `${value}px` : value;
 
-    setCvData(prevCvData => ({
-      ...prevCvData,
-      customStyles: {
-        ...prevCvData.customStyles,
-        fontSizes: {
-          ...(prevCvData.customStyles?.fontSizes || {}),
-          [key]: formattedValue,
+    setCvData(prevCvData => {
+      const newFontSizes = {
+        ...(prevCvData.customStyles?.fontSizes || {}),
+        [key]: formattedValue,
+      };
+      
+      // Jeśli aktualizujemy position lub dates, synchronizujemy ich wartości
+      if (key === 'position' || key === 'dates') {
+        newFontSizes['position'] = formattedValue;
+        newFontSizes['dates'] = formattedValue;
+      }
+      
+      return {
+        ...prevCvData,
+        customStyles: {
+          ...prevCvData.customStyles,
+          fontSizes: newFontSizes,
         },
-      },
-    }));
+      };
+    });
   };
 
-  // Funkcja do zwiększania wartości o 1
+  // Funkcja do zwiększania wartości o 0.5 dla fontSizes i o 1 dla spacing
   const incrementValue = (type: 'spacing' | 'fontSize', group: string, key: string, currentValue: string) => {
     const numericValue = stripUnits(currentValue);
     if (type === 'spacing') {
       updateSpacingStyle(group, key, numericValue + 1);
     } else {
-      updateFontSize(key, numericValue + 1);
+      updateFontSize(key, numericValue + 0.5);
     }
   };
 
-  // Funkcja do zmniejszania wartości o 1 (minimum 0)
+  // Funkcja do zmniejszania wartości o 0.5 dla fontSizes i o 1 dla spacing (minimum 0)
   const decrementValue = (type: 'spacing' | 'fontSize', group: string, key: string, currentValue: string) => {
     const numericValue = stripUnits(currentValue);
     if (numericValue > 0) {
       if (type === 'spacing') {
         updateSpacingStyle(group, key, numericValue - 1);
       } else {
-        updateFontSize(key, numericValue - 1);
+        // Zapobiegamy zmniejszeniu poniżej 0
+        const newValue = Math.max(0, numericValue - 0.5);
+        updateFontSize(key, newValue);
       }
     }
+  };
+
+  // Funkcja do przełączania zaznaczenia czcionki
+  const toggleFontSelection = (key: string) => {
+    setSelectedFonts(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  // Funkcja do zaznaczania/odznaczania wszystkich czcionek
+  const toggleAllFonts = () => {
+    const currentlyAllSelected = Object.keys(fontLabels).every(key => selectedFonts[key]);
+    
+    const newSelectedState = !currentlyAllSelected;
+    const newSelectedFonts = Object.keys(fontLabels).reduce((acc, key) => {
+      acc[key] = newSelectedState;
+      return acc;
+    }, {} as Record<string, boolean>);
+    
+    setSelectedFonts(newSelectedFonts);
+  };
+
+  // Funkcja do grupowej zmiany rozmiarów zaznaczonych czcionek
+  const applyBulkAdjustment = (adjustment: number) => {
+    // Dla każdej zaznaczonej czcionki
+    Object.entries(selectedFonts).forEach(([key, isSelected]) => {
+      if (isSelected) {
+        // Pobierz aktualną wartość
+        const defaultValue = defaultFontSizes[key as keyof typeof defaultFontSizes] ?? '';
+        const customValue = cvData.customStyles?.fontSizes?.[key as keyof typeof cvData.customStyles.fontSizes];
+        const currentValue = customValue !== undefined && customValue !== '' ? customValue : defaultValue;
+        
+        // Oblicz nową wartość
+        const numericValue = stripUnits(currentValue);
+        const newValue = Math.max(0, numericValue + adjustment);
+        
+        // Aktualizuj wartość
+        updateFontSize(key, newValue);
+      }
+    });
   };
 
   // Komponent kontrolki bez przycisków +/-
@@ -173,14 +235,30 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
     
     return (
       <div className="flex items-center justify-between">
-        <label className="text-xs font-medium text-gray-600 w-1/2">{label}</label>
+        {type === 'fontSize' && (
+          <div className="mr-2">
+            <button 
+              onClick={() => toggleFontSelection(propKey)}
+              className="focus:outline-none"
+              title={selectedFonts[propKey] ? "Odznacz" : "Zaznacz do grupowej edycji"}
+            >
+              {selectedFonts[propKey] ? (
+                <IoMdCheckboxOutline className="w-4 h-4 text-blue-500" />
+              ) : (
+                <IoMdSquareOutline className="w-4 h-4 text-gray-400" />
+              )}
+            </button>
+          </div>
+        )}
+        <label className="text-xs font-medium text-gray-600 flex-1">{label}</label>
         <input
-          type="number"
-          className="w-1/2 border rounded-md px-3 py-1.5 text-sm text-center"
+          type={type === 'fontSize' ? "number" : "number"}
+          className="w-1/3 border rounded-md px-3 py-1.5 text-sm text-center"
           min="0"
+          step={type === 'fontSize' ? "0.5" : "1"}
           value={numericValue}
           onChange={(e) => {
-            const val = parseInt(e.target.value, 10);
+            const val = parseFloat(e.target.value);
             if (!isNaN(val) && val >= 0) {
               if (type === 'spacing') {
                 updateSpacingStyle(group, propKey, val);
@@ -269,13 +347,13 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
     <div className="flex flex-col h-full">
       <div className="flex-grow p-0">
         <h4 className="text-lg font-semibold text-gray-800 mb-4">Zaawansowane opcje formatowania</h4>
-        <p className="text-xs text-gray-500 mb-4 bg-blue-50 p-2 rounded border border-blue-100">
+        <p className="text-xs text-gray-500 mb-4 bg-blue-50 p-2 -ml-2 rounded border border-blue-100">
           <span className="font-medium">Wskazówka:</span> Dostosuj marginesy i odstępy aby zniwelować problemy z wyswietlaniem.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
           {/* Pola dla marginesów */}
-          <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-2">Marginesy i odstępy</h5>
+          {/* <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-2">Marginesy i odstępy</h5> */}
           {Object.entries(spacingLabels).map(([group, keys]) => (
             Object.entries(keys).map(([key, label]) => {
               // Pobierz wartość niestandardową lub domyślną
@@ -298,12 +376,60 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
           ))}
 
           {/* Pola dla rozmiarów czcionek */}
-          <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-4">Rozmiary czcionek</h5>
+          {/* <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-4">Rozmiary czcionek</h5> */}
+          
+          {/* Panel grupowej edycji rozmiarów czcionek */}
+          <div className="col-span-1 md:col-span-2 bg-gray-50 p-3 rounded-md mb-2 mt-8 -ml-2  border border-gray-200">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center">
+                <button 
+                  onClick={toggleAllFonts}
+                  className="focus:outline-none mr-2"
+                  title="Zaznacz/Odznacz wszystkie"
+                >
+                  {Object.keys(fontLabels).every(key => selectedFonts[key]) ? (
+                    <IoMdCheckboxOutline className="w-5 h-5 text-blue-500" />
+                  ) : (
+                    <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
+                  )}
+                </button>
+                <span className="text-sm font-medium text-gray-700">Grupowa edycja zaznaczonych czcionek</span>
+              </div>
+              <div className="flex space-x-1">
+                <button
+                  onClick={() => applyBulkAdjustment(-0.5)}
+                  className="px-2 py-0.5 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                  disabled={Object.values(selectedFonts).every(v => !v)}
+                >
+                  -0.5
+                </button>
+                <button
+                  onClick={() => applyBulkAdjustment(0.5)}
+                  className="px-2 py-0.5 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                  disabled={Object.values(selectedFonts).every(v => !v)}
+                >
+                  +0.5
+                </button>
+                <button
+                  onClick={() => applyBulkAdjustment(1)}
+                  className="px-2 py-0.5 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm"
+                  disabled={Object.values(selectedFonts).every(v => !v)}
+                >
+                  +1
+                </button>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500">Zaznacz elementy, które chcesz zmodyfikować jednocześnie, a następnie użyj przycisków do zmiany rozmiaru.</p>
+          </div>
+          
           {Object.entries(fontLabels).map(([key, label]) => {
             // Pobierz wartość niestandardową lub domyślną
             const defaultValue = defaultFontSizes[key as keyof typeof defaultFontSizes] ?? '';
             const customValue = cvData.customStyles?.fontSizes?.[key as keyof typeof cvData.customStyles.fontSizes];
             const currentValue = customValue !== undefined && customValue !== '' ? customValue : defaultValue;
+
+            // Pomijamy rendering kontrolki dla "dates", ponieważ teraz używa tej samej wartości co "position"
+            if (key === 'dates') return null;
 
             return (
               <NumberControl 
@@ -320,7 +446,7 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
         </div>
 
         {/* Sekcja Zdjęcie Profilowe */}
-        <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-4">Zdjęcie Profilowe</h5>
+        <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-8">Zdjęcie Profilowe</h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"> {/* Utrzymujemy układ siatki dla spójności */}
           <div className="flex items-center justify-between">
             <label htmlFor="photoScaleAdvanced" className="text-xs font-medium text-gray-600 w-1/2">Skala zdjęcia (%)</label>
@@ -343,6 +469,33 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
                         firstName: '', lastName: '', email: '', phone: '', address: '' 
                       }), 
                       photoScalePercent: val,
+                    },
+                  }));
+                }
+              }}
+            />
+          </div>
+          
+          <div className="flex items-center justify-between">
+            <label htmlFor="photoBorderRadius" className="text-xs font-medium text-gray-600 w-1/2">Zaokrąglenie rogów (px)</label>
+            <input
+              id="photoBorderRadius"
+              type="number"
+              className="w-1/2 border rounded-md px-3 py-1.5 text-sm text-center"
+              min="0"
+              max="50"
+              step="1"
+              value={parseInt(cvData.personalData?.photoBorderRadius || '0', 10)} // Odczyt z personalData, domyślnie 0
+              onChange={(e) => {
+                const val = parseInt(e.target.value, 10);
+                if (!isNaN(val) && val >= 0 && val <= 50) {
+                  setCvData(prevCvData => ({
+                    ...prevCvData,
+                    personalData: {
+                      ...(prevCvData.personalData || { 
+                        firstName: '', lastName: '', email: '', phone: '', address: '' 
+                      }), 
+                      photoBorderRadius: `${val}px`,
                     },
                   }));
                 }

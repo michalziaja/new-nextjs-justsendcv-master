@@ -220,8 +220,8 @@ export const StatsProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             saved: 0, send: 0, contact: 0, interview: 0, offer: 0, rejected: 0
           };
           const salaryProcessed: Record<string, number> = {
-            "Poniżej 5k": 0, "5k - 10k": 0, "10k - 15k": 0, 
-            "15k - 20k": 0, "Powyżej 20k": 0
+            "< 5k": 0, "5k - 10k": 0, "10k - 15k": 0, 
+            "15k - 20k": 0, "> 20k": 0
           };
           const trendDataSaved: Record<string, number> = {};
           const trendDataSent: Record<string, number> = {};

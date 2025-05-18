@@ -276,7 +276,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             key={`${key}-${index ?? ''}`}
             style={{
               display: 'flex', 
-              alignItems: 'flex-start',
+              alignItems: 'center',
               borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
               paddingBottom: effectiveSpacing.header.bottomMargin,
               marginBottom: effectiveSpacing.header.bottomSpacing
@@ -286,6 +286,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
               <div style={{
                 marginRight: '20px', 
+                
                 width: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
                 height: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
                 overflow: 'hidden',
@@ -302,7 +303,12 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             
             {/* Kontener na dane tekstowe */}
             <div style={{ flex: 1 }}> 
-              <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+              <h1 style={{ 
+                fontSize: effectiveFontSizes.nameHeader, 
+                fontWeight: 700,
+                margin: 0,
+                padding: 0
+              }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
               
               {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
               {data.personalData.socialLinks && 
@@ -710,7 +716,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
           {renderSection('header', (
             <div style={{ // Główny kontener dla całego nagłówka (zdjęcie + tekst)
               display: 'flex', 
-              alignItems: 'flex-start',
+              alignItems: 'center',
               borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
               paddingBottom: effectiveSpacing.header.bottomMargin,
               marginBottom: effectiveSpacing.header.bottomSpacing
@@ -735,7 +741,12 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
               
               {/* Kontener na dane tekstowe */}
               <div style={{ flex: 1 }}> 
-                <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+                <h1 style={{ 
+                  fontSize: effectiveFontSizes.nameHeader, 
+                  fontWeight: 700,
+                  margin: 0,
+                  padding: 0
+                }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
                 
                 {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
                 {data.personalData.socialLinks && 
@@ -913,61 +924,81 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             <div>
               {renderSectionHeader(t.skills, 'skills')}
               <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
+                display: 'flex',
+                flexDirection: 'column',
                 gap: effectiveSpacing.elements.skillsColumnGap,
                 marginTop: effectiveSpacing.elements.contentSpacing
               }}>
-                <div>
-                  <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.technical}</h3>
-                  <div style={{ 
-                    marginTop: effectiveSpacing.elements.margin,
-                    display: 'flex', 
-                    flexWrap: 'wrap', 
-                    gap: effectiveSpacing.elements.tagGap
-                  }}>
-                    {data.skills.technical.map((skill, index) => (
-                      <span key={index} style={{ 
-                        backgroundColor: colorPalette.primaryLight, 
-                        color: colorPalette.primaryText, 
-                        padding: effectiveSpacing.elements.tagPadding,
-                        borderRadius: effectiveSpacing.elements.skillsBorderRadius,
-                        fontSize: effectiveFontSizes.tagText
-                      }}>
-                        {skill}
-                      </span>
-                    ))}
+                {data.skills.showTechnicalSkills && (
+                  <div>
+                    <h3 style={{ 
+                      color: colorPalette.text, 
+                      fontWeight: 400, 
+                      fontSize: effectiveFontSizes.position,
+                      display: data.skills.technicalSectionTitle === '' ? 'none' : 'block'
+                    }}>
+                      {data.skills.technicalSectionTitle || t.technical}
+                    </h3>
+                    <div style={{ 
+                      marginTop: data.skills.technicalSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
+                      display: 'flex', 
+                      flexWrap: 'wrap', 
+                      columnGap: effectiveSpacing.elements.tagGapHorizontal,
+                      rowGap: '5px'
+                    }}>
+                      {data.skills.technical.map((skill, index) => (
+                        <span key={index} style={{ 
+                          backgroundColor: colorPalette.primaryLight, 
+                          color: colorPalette.primaryText, 
+                          padding: effectiveSpacing.elements.tagPadding,
+                          borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                          fontSize: effectiveFontSizes.tagText
+                        }}>
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.soft}</h3>
-                  <div style={{ 
-                    marginTop: effectiveSpacing.elements.margin,
-                    display: 'flex', 
-                    flexWrap: 'wrap', 
-                    gap: effectiveSpacing.elements.tagGap
-                  }}>
-                    {data.skills.soft.map((skill, index) => (
-                      <span key={index} style={{ 
-                        backgroundColor: colorPalette.secondaryLight, 
-                        color: colorPalette.secondaryText, 
-                        padding: effectiveSpacing.elements.tagPadding,
-                        borderRadius: effectiveSpacing.elements.skillsBorderRadius,
-                        fontSize: effectiveFontSizes.tagText
-                      }}>
-                        {skill}
-                      </span>
-                    ))}
+                )}
+                {data.skills.showSoftSkills && (
+                  <div style={{ marginTop: data.skills.showTechnicalSkills ? effectiveSpacing.elements.itemMargin : 0 }}>
+                    <h3 style={{ 
+                      color: colorPalette.text, 
+                      fontWeight: 400, 
+                      fontSize: effectiveFontSizes.position,
+                      display: data.skills.softSectionTitle === '' ? 'none' : 'block'
+                    }}>
+                      {data.skills.softSectionTitle || t.soft}
+                    </h3>
+                    <div style={{ 
+                      marginTop: data.skills.softSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
+                      display: 'flex', 
+                      flexWrap: 'wrap', 
+                      columnGap: effectiveSpacing.elements.tagGapHorizontal,
+                      rowGap: '5px'
+                    }}>
+                      {data.skills.soft.map((skill, index) => (
+                        <span key={index} style={{ 
+                          backgroundColor: colorPalette.secondaryLight, 
+                          color: colorPalette.secondaryText, 
+                          padding: effectiveSpacing.elements.tagPadding,
+                          borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                          fontSize: effectiveFontSizes.tagText
+                        }}>
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               
               <div style={{ marginTop: effectiveSpacing.elements.itemMargin }}>
-                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.languages}</h3>
+                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.position }}>{t.languages}</h3>
                 <div style={{ 
                   marginTop: effectiveSpacing.elements.margin,
-                  display: 'flex', 
-                  flexWrap: 'wrap', 
+                  display: 'grid', 
+                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
                   gap: effectiveSpacing.elements.languagesItemGap
                 }}>
                   {data.skills.languages.filter(lang => lang.language && lang.level).map((lang, index) => (
@@ -1016,7 +1047,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
         {renderSection('header', (
           <div style={{ // Główny kontener dla całego nagłówka (zdjęcie + tekst)
             display: 'flex', 
-            alignItems: 'flex-start',
+            alignItems: 'center',
             borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
             paddingBottom: effectiveSpacing.header.bottomMargin,
             marginBottom: effectiveSpacing.header.bottomSpacing
@@ -1041,7 +1072,12 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             
             {/* Kontener na dane tekstowe */}
             <div style={{ flex: 1 }}> 
-              <h1 style={{ fontSize: effectiveFontSizes.nameHeader, fontWeight: 700 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
+              <h1 style={{ 
+                fontSize: effectiveFontSizes.nameHeader, 
+                fontWeight: 700,
+                margin: 0,
+                padding: 0
+              }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
               
               {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
               {data.personalData.socialLinks && 
@@ -1219,61 +1255,81 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
           <div>
             {renderSectionHeader(t.skills, 'skills')}
             <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', 
+              display: 'flex',
+              flexDirection: 'column',
               gap: effectiveSpacing.elements.skillsColumnGap,
               marginTop: effectiveSpacing.elements.contentSpacing
             }}>
-              <div>
-                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.technical}</h3>
-                <div style={{ 
-                  marginTop: effectiveSpacing.elements.margin,
-                  display: 'flex', 
-                  flexWrap: 'wrap', 
-                  gap: effectiveSpacing.elements.tagGap
-                }}>
-                  {data.skills.technical.map((skill, index) => (
-                    <span key={index} style={{ 
-                      backgroundColor: colorPalette.primaryLight, 
-                      color: colorPalette.primaryText, 
-                      padding: effectiveSpacing.elements.tagPadding,
-                      borderRadius: effectiveSpacing.elements.skillsBorderRadius,
-                      fontSize: effectiveFontSizes.tagText
-                    }}>
-                      {skill}
-                    </span>
-                  ))}
+              {data.skills.showTechnicalSkills && (
+                <div>
+                  <h3 style={{ 
+                    color: colorPalette.text, 
+                    fontWeight: 400, 
+                    fontSize: effectiveFontSizes.position,
+                    display: data.skills.technicalSectionTitle === '' ? 'none' : 'block'
+                  }}>
+                    {data.skills.technicalSectionTitle || t.technical}
+                  </h3>
+                  <div style={{ 
+                    marginTop: data.skills.technicalSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
+                    display: 'flex', 
+                    flexWrap: 'wrap', 
+                    columnGap: effectiveSpacing.elements.tagGapHorizontal,
+                    rowGap: '5px'
+                  }}>
+                    {data.skills.technical.map((skill, index) => (
+                      <span key={index} style={{ 
+                        backgroundColor: colorPalette.primaryLight, 
+                        color: colorPalette.primaryText, 
+                        padding: effectiveSpacing.elements.tagPadding,
+                        borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                        fontSize: effectiveFontSizes.tagText
+                      }}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.soft}</h3>
-                <div style={{ 
-                  marginTop: effectiveSpacing.elements.margin,
-                  display: 'flex', 
-                  flexWrap: 'wrap', 
-                  gap: effectiveSpacing.elements.tagGap
-                }}>
-                  {data.skills.soft.map((skill, index) => (
-                    <span key={index} style={{ 
-                      backgroundColor: colorPalette.secondaryLight, 
-                      color: colorPalette.secondaryText, 
-                      padding: effectiveSpacing.elements.tagPadding,
-                      borderRadius: effectiveSpacing.elements.skillsBorderRadius,
-                      fontSize: effectiveFontSizes.tagText
-                    }}>
-                      {skill}
-                    </span>
-                  ))}
+              )}
+              {data.skills.showSoftSkills && (
+                <div style={{ marginTop: data.skills.showTechnicalSkills ? effectiveSpacing.elements.itemMargin : 0 }}>
+                  <h3 style={{ 
+                    color: colorPalette.text, 
+                    fontWeight: 400, 
+                    fontSize: effectiveFontSizes.position,
+                    display: data.skills.softSectionTitle === '' ? 'none' : 'block'
+                  }}>
+                    {data.skills.softSectionTitle || t.soft}
+                  </h3>
+                  <div style={{ 
+                    marginTop: data.skills.softSectionTitle === '' ? 0 : effectiveSpacing.elements.margin,
+                    display: 'flex', 
+                    flexWrap: 'wrap', 
+                    columnGap: effectiveSpacing.elements.tagGapHorizontal,
+                    rowGap: '5px'
+                  }}>
+                    {data.skills.soft.map((skill, index) => (
+                      <span key={index} style={{ 
+                        backgroundColor: colorPalette.secondaryLight, 
+                        color: colorPalette.secondaryText, 
+                        padding: effectiveSpacing.elements.tagPadding,
+                        borderRadius: effectiveSpacing.elements.skillsBorderRadius,
+                        fontSize: effectiveFontSizes.tagText
+                      }}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
             
             <div style={{ marginTop: effectiveSpacing.elements.itemMargin }}>
-              <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.subSectionHeader }}>{t.languages}</h3>
+              <h3 style={{ color: colorPalette.text, fontWeight: 400, fontSize: effectiveFontSizes.position }}>{t.languages}</h3>
               <div style={{ 
                 marginTop: effectiveSpacing.elements.margin,
-                display: 'flex', 
-                flexWrap: 'wrap', 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
                 gap: effectiveSpacing.elements.languagesItemGap
               }}>
                 {data.skills.languages.filter(lang => lang.language && lang.level).map((lang, index) => (

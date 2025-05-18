@@ -71,6 +71,9 @@ const StartSection: React.FC<StartSectionProps> = ({
   const [selectedCVId, setSelectedCVId] = useState<string>('');
   const [selectedCVInfo, setSelectedCVInfo] = useState<SavedCV | null>(null);
   const [selectedCVJobOffer, setSelectedCVJobOffer] = useState<any | null>(null);
+  
+  // Stan dla CV bazowego przy tworzeniu CV dla oferty
+  const [selectedBaseCVId, setSelectedBaseCVId] = useState<string>('');
 
   // Style dla statusów
   const getStatusStyles = (status: string) => {
@@ -149,14 +152,25 @@ const StartSection: React.FC<StartSectionProps> = ({
     }
   };
   
-  // Tworzenie nowego CV dla wybranej oferty
+  // Tworzenie nowego CV dla wybranej oferty z opcjonalnym bazowym CV
   const handleCreateCVForJob = () => {
     if (!selectedOffer) return;
     
-    createNewCV();
-    setCVName(`CV - ${selectedOffer.title} w ${selectedOffer.company}`);
-    setSelectedJob(selectedOffer);
-    setActiveSection('personalData');
+    if (selectedBaseCVId) {
+      // Jeśli wybrano bazowe CV, najpierw załaduj jego dane
+      loadCV(selectedBaseCVId).then(() => {
+        // Po załadowaniu, aktualizujemy powiązanie z nową ofertą pracy
+        setSelectedJob(selectedOffer);
+        setCVName(`CV - ${selectedOffer.title} w ${selectedOffer.company}`);
+        setActiveSection('personalData');
+      });
+    } else {
+      // Jeśli nie wybrano bazowego CV, twórz nowe CV od podstaw
+      createNewCV();
+      setCVName(`CV - ${selectedOffer.title} w ${selectedOffer.company}`);
+      setSelectedJob(selectedOffer);
+      setActiveSection('personalData');
+    }
   };
 
   // Funkcja do pobierania informacji o ofercie pracy powiązanej z CV
@@ -364,15 +378,49 @@ const StartSection: React.FC<StartSectionProps> = ({
                   <p className="text-xs text-gray-600 mb-4">
                     Tworzenie CV dopasowanego do konkretnej oferty pracy znacząco zwiększa szanse na sukces w procesie rekrutacji:
                   </p>
-                  <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 mb-4">
+                  <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 mb-2">
                     <li>Podkreślasz dokładnie te umiejętności, których szuka pracodawca</li>
                     <li>Używasz słów kluczowych, które mogą być wyszukiwane przez systemy ATS</li>
                     <li>Pokazujesz, że zależy Ci właśnie na tym stanowisku</li>
                   </ul>
-                  <p className="text-xs text-gray-600">
+                  {/* <p className="text-xs text-gray-600">
                     Wybierz ofertę z listy zapisanych ofert pracy, aby stworzyć CV idealnie dopasowane do wymagań rekrutera.
-                  </p>
+                  </p> */}
                   </div>
+                  
+                  {/* Wybór bazowego CV */}
+                  {savedCVs.length > 0 && (
+                    <div className="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+                      <h4 className="text-sm font-medium mb-2">Użyj zapisanego CV jako podstawy</h4>
+                      <p className="text-xs text-gray-600 mb-3">
+                        Możesz wykorzystać dane z jednego z Twoich istniejących CV, aby nie wprowadzać ich ponownie.
+                      </p>
+                      
+                      <div className="flex flex-col">
+                        
+                        <select 
+                          className="border border-gray-300 rounded-md px-3 py-2 text-sm w-full"
+                          value={selectedBaseCVId}
+                          onChange={(e) => setSelectedBaseCVId(e.target.value)}
+                        >
+                          <option value="">Nie używaj (stwórz nowe CV od podstaw)</option>
+                          {savedCVs.map(cv => (
+                            <option key={cv.id} value={cv.id}>
+                              {cv.name} {cv.job_offer_id ? '(dopasowane do oferty)' : '(ogólne)'}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      
+                      {selectedBaseCVId && (
+                        <div className="mt-3 p-3 bg-blue-50 border border-blue-100 rounded-md">
+                          <p className="text-xs text-blue-700">
+                            <span className="font-medium">Uwaga:</span> Dane z wybranego CV zostaną załadowane, ale CV zostanie powiązane z nowo wybraną ofertą pracy.
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                   
                   {/* Wybór oferty - w formie listy zamiast select */}
                   <div className="bg-white mt-2">
@@ -381,7 +429,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                     ) : savedJobs.length === 0 ? (
                       <div className="p-4 text-gray-500 text-center">Nie masz żadnych zapisanych ofert pracy.</div>
                     ) : (
-                      <div className="overflow-y-auto" style={{ maxHeight: 'calc(38vh)' }}>
+                      <div className="overflow-y-auto" style={{ maxHeight: 'calc(30vh)' }}>
                         {savedJobs.map(offer => (
                           <div 
                             key={offer.id} 
@@ -418,11 +466,8 @@ const StartSection: React.FC<StartSectionProps> = ({
                                   <button
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      createNewCV();
-                                      setCVName(`CV - ${offer.title} w ${offer.company}`);
-                                      setSelectedJob(offer);
+                                      handleCreateCVForJob();
                                       setSelectedTemplate(templates[0]?.id || ""); // Automatycznie wybierz pierwszy szablon
-                                      setActiveSection('personalData');
                                     }}
                                     className="px-4 py-1 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-md hover:from-green-600 hover:to-green-800 transition-all shadow-sm"
                                   >

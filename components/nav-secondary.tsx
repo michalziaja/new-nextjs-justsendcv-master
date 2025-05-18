@@ -52,7 +52,7 @@ export function NavSecondary({
             {!userData.isSubscribed ? (
               <a
                 href="/upgrade"
-                className="flex w-full items-center gap-2 rounded-lg p-3 hover:scale-103 text-white hover:opacity-90 transition-opacity text-xs shadow-[5px_5px_5px_rgba(0,0,0,0.3)] dark:shadow-xs bg-gradient-to-r from-violet-500 to-purple-500"
+                className="flex w-full items-center gap-2 rounded-sm shadow-sm p-2 hover:scale-103 text-white hover:opacity-90 transition-opacity text-xs  dark:shadow-xs bg-gradient-to-r from-violet-500 to-purple-500"
               >
                 <Crown className="h-6 w-6" />
                 <span className="font-medium">Przejdź na Premium</span>

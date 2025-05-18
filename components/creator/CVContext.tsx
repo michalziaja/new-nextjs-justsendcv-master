@@ -98,6 +98,10 @@ export interface CVData {
       language: string;
       level: string;
     }>;
+    showTechnicalSkills?: boolean; // Czy pokazywać umiejętności techniczne
+    showSoftSkills?: boolean; // Czy pokazywać umiejętności miękkie
+    technicalSectionTitle?: string; // Niestandardowa nazwa sekcji umiejętności technicznych
+    softSectionTitle?: string; // Niestandardowa nazwa sekcji umiejętności miękkich
   };
   rodoClause?: string;
   showRodoClause?: boolean;
@@ -194,6 +198,10 @@ const initialCVData: CVData = {
     languages: [
       { language: '', level: '' },
     ],
+    showTechnicalSkills: true, // Domyślnie pokazujemy techniczne
+    showSoftSkills: true, // Domyślnie pokazujemy miękkie
+    technicalSectionTitle: 'Techniczne', // Domyślnie używamy polskiego tłumaczenia
+    softSectionTitle: 'Miękkie', // Domyślnie używamy polskiego tłumaczenia
   },
   rodoClause: 'Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z Ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych oraz Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r.).',
   showRodoClause: false, // Domyślnie pokazujemy RODO

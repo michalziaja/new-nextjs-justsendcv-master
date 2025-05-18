@@ -42,6 +42,8 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   const [lastToggledLinkIndex, setLastToggledLinkIndex] = useState<number | null>(null);
   // Stan do kontrolowania widoczności adnotacji o stanowisku w CV
   const [showJobTitle, setShowJobTitle] = useState(cvData.showJobTitleInCV || false);
+  // Stan do kontrolowania modalu potwierdzającego
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
   
   const profileLoadedRef = useRef(false);
 
@@ -133,8 +135,54 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     }
   };
   
+  // Funkcja obsługująca przycisk Wstecz
+  const handleBack = () => {
+    // Pokaż modal potwierdzający zamiast bezpośredniego powrotu
+    setShowConfirmModal(true);
+  };
+  
+  // Funkcja obsługująca potwierdzenie w modalu
+  const handleConfirm = () => {
+    // Ukryj modal i wywołaj funkcję powrotu
+    setShowConfirmModal(false);
+    onBack();
+  };
+  
+  // Funkcja obsługująca anulowanie w modalu
+  const handleCancel = () => {
+    // Ukryj modal
+    setShowConfirmModal(false);
+  };
+
   return (
     <div className="flex flex-col h-full ">
+      {/* Modal potwierdzający zakończenie kreatora - wyświetlany, gdy showConfirmModal jest true */}
+      {showConfirmModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/30 backdrop-blur-sm">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl">
+            <h3 className="text-lg font-semibold mb-3">Czy na pewno chcesz zakończyć kreator?</h3>
+            <p className="text-gray-600 mb-4">
+              Powrót do ekranu startowego spowoduje utratę wszystkich niezapisanych zmian. 
+              Czy chcesz kontynuować?
+            </p>
+            <div className="flex justify-end space-x-3">
+              <button
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md transition"
+                onClick={handleCancel}
+              >
+                Anuluj
+              </button>
+              <button
+                className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition"
+                onClick={handleConfirm}
+              >
+                Zakończ kreator
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="p-4 ml-6 -mt-2">
         <h3 className="text-lg font-semibold mb-0 flex items-center">
           <FaUser className="mr-2 text-blue-500" /> Dane osobowe
@@ -373,7 +421,7 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
         <div>
           <button 
             className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-sm transition"
-            onClick={onBack}
+            onClick={handleBack}
           >
             Wstecz
           </button>

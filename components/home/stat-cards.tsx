@@ -123,7 +123,7 @@ export function StatCards() {
   }, []);
 
   return (
-    <div className="grid gap-2 sm:gap-2 md:gap-2 lg:gap-2 xl:gap-2 grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
+    <div className="grid gap-2 sm:gap-2 md:gap-2 lg:gap-2 xl:gap-6 grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
       <StatCard 
         title="Zapisane" 
         value={statusCounts.saved}

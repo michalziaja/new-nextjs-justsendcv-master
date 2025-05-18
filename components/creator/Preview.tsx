@@ -20,7 +20,7 @@ import {
 
 // Komponent dla prawej strony - podgląd
 export default function Preview({ switchMode }: { switchMode?: () => void }) {
-  const { cvData, selectedJob, selectedTemplate, activeSection, showProjectsInPreview } = useCV();
+  const { cvData, selectedJob, selectedTemplate, activeSection, showProjectsInPreview, setCvData } = useCV();
   const [zoom, setZoom] = useState(100); // Startowa wartość 100%
   const [scrollNeeded, setScrollNeeded] = useState(true);
   const [autoZoom, setAutoZoom] = useState(100);
@@ -54,7 +54,38 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
 
   // Funkcja przełączająca język
   const toggleLanguage = () => {
-    setLanguage(prevLang => prevLang === 'pl' ? 'en' : 'pl');
+    const newLanguage = language === 'pl' ? 'en' : 'pl';
+    setLanguage(newLanguage);
+    
+    // Aktualizacja tytułów sekcji umiejętności przy zmianie języka
+    // Sprawdzamy, czy użytkownik nie zmienił domyślnych wartości
+    const defaultTitles = {
+      pl: { technical: 'Techniczne', soft: 'Miękkie' },
+      en: { technical: 'Technical', soft: 'Soft' }
+    };
+    
+    const { technicalSectionTitle, softSectionTitle } = cvData.skills;
+    
+    // Tworzymy kopię aktualnych danych CV
+    const updatedCvData = { ...cvData };
+    
+    // Sprawdzamy, czy technicalSectionTitle ma domyślną wartość dla aktualnego języka
+    if (technicalSectionTitle === defaultTitles[language].technical) {
+      // Jeśli tak, zmieniamy ją na domyślną wartość dla nowego języka
+      updatedCvData.skills.technicalSectionTitle = defaultTitles[newLanguage].technical;
+    }
+    
+    // Sprawdzamy, czy softSectionTitle ma domyślną wartość dla aktualnego języka
+    if (softSectionTitle === defaultTitles[language].soft) {
+      // Jeśli tak, zmieniamy ją na domyślną wartość dla nowego języka
+      updatedCvData.skills.softSectionTitle = defaultTitles[newLanguage].soft;
+    }
+    
+    // Aktualizujemy dane CV tylko jeśli były jakieś zmiany
+    if (updatedCvData.skills.technicalSectionTitle !== cvData.skills.technicalSectionTitle || 
+        updatedCvData.skills.softSectionTitle !== cvData.skills.softSectionTitle) {
+      setCvData(updatedCvData);
+    }
   };
 
   // Funkcja skalowania - przelicza wyświetlany % na rzeczywisty współczynnik skalowania

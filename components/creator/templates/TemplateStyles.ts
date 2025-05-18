@@ -99,15 +99,13 @@ export const fontSizes = {
   base: '11px',          // Podstawowy rozmiar dokumentu
   nameHeader: '28px',    // Imię i nazwisko
   sectionHeader: '18px', // Nagłówki sekcji
-  subSectionHeader: '12px', // Nagłówki podsekcji
   contactInfo: '12px',   // Informacje kontaktowe
   dates: '13px',         // Daty
-  position: '13px',      // Stanowisko
+  position: '13px',      // Stanowisko i nagłówki umiejętności
   company: '12px',       // Nazwa firmy
   description: '11px',   // Opisy
   profileText: '12px',   // Tekst profilu
   tagText: '12px',       // Tagi umiejętności, jezyki
-  // languageText: '12px',  // Języki
   rodoText: '9px'        // Klauzula RODO
 };
 
@@ -123,9 +121,10 @@ export const spacing = {
   
   // Nagłówek z danymi osobowymi
   header: {
-    bottomMargin: '16px',         // Dolny margines dla nagłówka dokumentu do niebieskiej linii
+    bottomMargin: '10px',         // Dolny margines dla nagłówka dokumentu do niebieskiej linii
     bottomSpacing: '0px',        // Odstęp po niebieskiej linii nagłówka
-    contentSpacing: '8px',        // Odstęp między nazwiskiem a danymi kontaktowymi
+    contentSpacing: '5px',        // Odstęp między nazwiskiem a danymi kontaktowymi
+    nameToContactSpacing: '5px', // Odstęp między imieniem/nazwiskiem a danymi kontaktowymi
     borderWidth: '2px',           // Szerokość obramowania nagłówka
   },
   
@@ -153,9 +152,10 @@ export const spacing = {
     itemMargin: '16px',           // Odstęp między większymi elementami (np. doświadczenia)
     contentSpacing: '8px',        // Odstęp między nagłówkiem a zawartością
     tagGap: '4px',                // Odstęp między tagami
-    tagPadding: '2px 8px',        // Padding wewnętrzny tagów
+    tagGapHorizontal: '4px',      // Poziomy odstęp między tagami
+    tagPadding: '3px 8px',        // Padding wewnętrzny tagów
     skillsColumnGap: '12px',
-    skillsBorderRadius: '4px',      // Odstęp między kolumnami umiejętności
+    skillsBorderRadius: '8px',      // Odstęp między kolumnami umiejętności
     languagesItemGap: '8px',      // Odstęp między elementami językowymi
   },
   

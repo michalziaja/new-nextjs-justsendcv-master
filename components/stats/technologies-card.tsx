@@ -39,7 +39,7 @@ export function TechnologiesCard({ technologies, isLoading }: { technologies: Sk
                 style={{ 
                   backgroundColor: `${tech.color}20`, 
                   borderColor: tech.color,
-                  fontSize: `${Math.min(9 + tech.count * 2, (tech.count >= 4 ? 17 : 15))}px`,
+                  fontSize: `${Math.min(8 + tech.count * 2, (tech.count >= 4 ? 17 : 15))}px`,
                   padding: '0.25rem 0.4rem'
                 }}
                 className="text-foreground font-medium"
