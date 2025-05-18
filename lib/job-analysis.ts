@@ -5,10 +5,14 @@ import { createModel, logTokenUsage } from "./gemini-client";
 const SYSTEM_INSTRUCTION = 
   "Jesteś doświadczonym rekruterem HR z wieloletnim doświadczeniem w różnych branżach. " +
   "Twoim zadaniem jest analizowanie ofert pracy i wyodrębnianie kluczowych informacji: " +
-  "umiejętności, technologii/narzędzi, doświadczenia, wykształcenia, języków i innych wymagań. " +
+  "obowiązki i zadania, umiejętności, technologie/narzędzia, doświadczenie, wykształcenie, języki i inne wymagania. " +
   "Każdą umiejętność którą opisujesz staraj sie opisać w maksymalnie 3 słowach. " +
-  "Każdą technologię i umiejętność wydziel jako osobną pozycję, zamiast wypisywać po przecinku. " +
-  "Zwracaj wyniki zawsze w określonym formacie. Nie dodawaj nic od siebie.";
+  "Jeśli nic nie pasuje do wymaganych umiejętności, pozostaw puste. " +
+  "Każdą technologię i umiejętność wydziel jako osobną pozycję, zamiast wypisywać po przecinku, nie używaj też 'i' w połączeniu. " +
+  "Zwracaj wyniki zawsze w określonym formacie. Nie dodawaj nic od siebie." +
+  "Nie powtarzaj tej samej umiejętności wiele razy np. excel, arkusz kalkulacyjny - wystarczy jedna pozycja" +
+  "Jeśli oferta dotyczy branży nietechnicznej, dostosuj kategorie tak, aby były odpowiednie dla danej branży." 
+
 
 // Funkcja do analizy oferty pracy
 export async function analyzeJobOffer(jobDescription: string) {
@@ -23,23 +27,26 @@ export async function analyzeJobOffer(jobDescription: string) {
   try {
     // Utworzenie modelu
     console.log("🤖 JobAnalysis: Tworzenie modelu Gemini");
-    const model = createModel("gemini-2.0-flash-lite", SYSTEM_INSTRUCTION);
+    const model = createModel("gemini-1.5-flash", SYSTEM_INSTRUCTION);
     
     // Prompt użytkownika
     const userPrompt = `
-Zanalizuj poniższą ofertę pracy i wypisz w osobnych sekcjach:
 
-1. Wymagane umiejętności (zarówno twarde jak i miękkie)
-2. Technologie i narzędzia (np. języki programowania, oprogramowanie, frameworki, urządzenia, maszyny)
-3. Doświadczenie zawodowe (np. lata, typ pracy, branża)
-4. Wykształcenie i certyfikaty (jeśli są wymienione)
-5. Języki obce (oraz ich poziom jeśli jest wymieniony)
-6. Inne wymagania (np. prawo jazdy, gotowość do podróży, dyspozycyjność)
 
-Jeśli oferta dotyczy branży nietechnicznej, dostosuj kategorie tak, aby były odpowiednie dla danej branży.
-W przypadku kategorii, dla których nie ma informacji w ofercie, napisz tylko "- Brak informacji".
+    Zanalizuj poniższą ofertę pracy i wypisz w osobnych sekcjach:
+1. Obowiązki i zadania
+2. Wymagane umiejętności (zarówno twarde jak i miękkie)
+3. Technologie i narzędzia (np. języki programowania, spawanie, elektronika, maszyny)
+4. Doświadczenie zawodowe (np. lata, typ pracy, branża)
+5. Wykształcenie i certyfikaty (jeśli są wymienione)
+6. Języki obce (oraz ich poziom jeśli jest wymieniony)
+7. Inne wymagania (np. prawo jazdy, gotowość do podróży, dyspozycyjność)
+
 
 Zwróć wynik DOKŁADNIE w poniższym formacie (nie dodawaj nic od siebie):
+
+OBOWIĄZKI I ZADANIA:
+- ...
 
 UMIEJĘTNOŚCI:
 - ...
@@ -75,12 +82,14 @@ ${jobDescription}
       console.log(`✅ JobAnalysis: Otrzymano odpowiedź z Gemini (czas: ${elapsedTime}s)`);
       
       const result = response.response.text();
+      console.log(result);
       if (!result || result.trim().length === 0) {
         console.error("❌ JobAnalysis: Otrzymano pustą odpowiedź od modelu");
         throw new Error("Model zwrócił pustą odpowiedź");
       }
       
-      if (!result.includes("UMIEJĘTNOŚCI:") || 
+      if (!result.includes("OBOWIĄZKI I ZADANIA:") || 
+          !result.includes("UMIEJĘTNOŚCI:") || 
           !result.includes("TECHNOLOGIE / NARZĘDZIA:") || 
           !result.includes("DOŚWIADCZENIE:")) {
         console.error("❌ JobAnalysis: Odpowiedź nie zawiera wymaganych sekcji");
@@ -122,6 +131,7 @@ export function parseAnalysisResult(analysisText: string) {
   console.log("🔍 JobAnalysis: Parsowanie wyników analizy");
   
   const sections = {
+    responsibilities: [] as string[],
     skills: [] as string[],
     technologies: [] as string[],
     experience: [] as string[],
@@ -149,6 +159,7 @@ export function parseAnalysisResult(analysisText: string) {
     const result: Record<string, string> = {};
     
     // Znajdujemy indeksy rozpoczęcia każdej sekcji
+    const respIndex = text.indexOf('OBOWIĄZKI I ZADANIA:');
     const skillsIndex = text.indexOf('UMIEJĘTNOŚCI:');
     const techIndex = text.indexOf('TECHNOLOGIE / NARZĘDZIA:');
     const expIndex = text.indexOf('DOŚWIADCZENIE:');
@@ -157,6 +168,7 @@ export function parseAnalysisResult(analysisText: string) {
     const otherIndex = text.indexOf('INNE WYMAGANIA:');
 
     console.log(`🔍 JobAnalysis: Znaleziono sekcje w tekście: 
+      OBOWIĄZKI: ${respIndex !== -1 ? 'tak' : 'nie'}, 
       UMIEJĘTNOŚCI: ${skillsIndex !== -1 ? 'tak' : 'nie'}, 
       TECHNOLOGIE: ${techIndex !== -1 ? 'tak' : 'nie'}, 
       DOŚWIADCZENIE: ${expIndex !== -1 ? 'tak' : 'nie'}, 
@@ -165,6 +177,11 @@ export function parseAnalysisResult(analysisText: string) {
       INNE: ${otherIndex !== -1 ? 'tak' : 'nie'}`);
     
     // Wycinamy sekcje na podstawie indeksów
+    if (respIndex !== -1) {
+      const endIndex = skillsIndex !== -1 ? skillsIndex : text.length;
+      result.responsibilities = text.substring(respIndex + 'OBOWIĄZKI I ZADANIA:'.length, endIndex);
+    }
+    
     if (skillsIndex !== -1) {
       const endIndex = techIndex !== -1 ? techIndex : text.length;
       result.skills = text.substring(skillsIndex + 'UMIEJĘTNOŚCI:'.length, endIndex);
@@ -201,6 +218,7 @@ export function parseAnalysisResult(analysisText: string) {
     // Podziel tekst na sekcje i ekstrahuj elementy listy
     const sectionsText = splitBySection(analysisText);
     
+    if (sectionsText.responsibilities) sections.responsibilities = extractListItems(sectionsText.responsibilities);
     if (sectionsText.skills) sections.skills = extractListItems(sectionsText.skills);
     if (sectionsText.technologies) sections.technologies = extractListItems(sectionsText.technologies);
     if (sectionsText.experience) sections.experience = extractListItems(sectionsText.experience);
@@ -209,6 +227,7 @@ export function parseAnalysisResult(analysisText: string) {
     if (sectionsText.other_requirements) sections.other_requirements = extractListItems(sectionsText.other_requirements);
 
     // Zapewniamy, że każda sekcja ma przynajmniej "brak informacji"
+    if (sections.responsibilities.length === 0) sections.responsibilities = ["Brak informacji"];
     if (sections.skills.length === 0) sections.skills = ["Brak informacji"];
     if (sections.technologies.length === 0) sections.technologies = ["Brak informacji"];
     if (sections.experience.length === 0) sections.experience = ["Brak informacji"];
@@ -217,6 +236,7 @@ export function parseAnalysisResult(analysisText: string) {
     if (sections.other_requirements.length === 0) sections.other_requirements = ["Brak informacji"];
 
     console.log("✅ JobAnalysis: Zakończono parsowanie wyników");
+    console.log(`   - Obowiązki: ${sections.responsibilities.length} elementów`);
     console.log(`   - Umiejętności: ${sections.skills.length} elementów`);
     console.log(`   - Technologie: ${sections.technologies.length} elementów`);
     console.log(`   - Doświadczenie: ${sections.experience.length} elementów`);
@@ -229,6 +249,7 @@ export function parseAnalysisResult(analysisText: string) {
     console.error("❌ JobAnalysis: Błąd podczas parsowania rezultatu analizy:", error);
     // Zwróć domyślne sekcje z informacją o błędzie
     return {
+      responsibilities: ["Błąd analizy - spróbuj ponownie"],
       skills: ["Błąd analizy - spróbuj ponownie"],
       technologies: ["Błąd analizy - spróbuj ponownie"],
       experience: ["Błąd analizy - spróbuj ponownie"],

@@ -59,11 +59,11 @@ export function JobDescription({ application, isDesktop, keywords = [] }: JobDes
   }, [application, keywords])
 
   return (
-    <div className="h-full">
+    <div className="h-full px-4">
       {/* <h3 className="font-medium text-sm text-muted-foreground mb-2">Opis stanowiska</h3> */}
-      <div className="rounded-lg h-[calc(100%-2rem)] w-[calc(95%+2.5rem)]">
+      <div className="rounded-lg h-[calc(80vh-10rem)] w-[calc(95%+2.5rem)] ">
         <div 
-          className="p-1 h-full overflow-y-auto whitespace-pre-line text-sm"
+          className="p-1 h-full whitespace-pre-line text-xs overflow-y-auto "
           style={{
             scrollbarWidth: 'thin',
             scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',

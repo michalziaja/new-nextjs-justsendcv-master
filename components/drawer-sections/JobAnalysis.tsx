@@ -31,6 +31,7 @@ interface JobAnalysisResult {
   education: string[]
   languages: string[]
   other_requirements: string[]
+  responsibilities: string[]
   analyzed_at: string
 }
 
@@ -370,19 +371,27 @@ export function JobAnalysis({ application, isDesktop, onKeywordsFound }: JobAnal
 
           {/* Renderowanie wyników analizy */}
           {analysisResult && (
-            <div className="space-y-4 p-2 w-full max-h-[calc(100vh-200px)] overflow-y-auto"
-                 style={{
-                   scrollbarWidth: 'thin',
-                   scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
-                   WebkitOverflowScrolling: 'touch'
-                 }}>
-              {/* <h3 className="font-medium text-md mb-4">Wyniki analizy AI:</h3> */}
-              {renderAnalysisSection("UMIEJĘTNOŚCI", analysisResult.skills)}
-              {renderAnalysisSection("TECHNOLOGIE / NARZĘDZIA", analysisResult.technologies)}
-              {renderAnalysisSection("DOŚWIADCZENIE", analysisResult.experience)}
-              {renderAnalysisSection("WYKSZTAŁCENIE / CERTYFIKATY", analysisResult.education)}
-              {renderAnalysisSection("JĘZYKI OBCE", analysisResult.languages)}
-              {renderAnalysisSection("INNE WYMAGANIA", analysisResult.other_requirements)}
+            <div 
+              className="p-2 w-full max-h-[calc(100vh-200px)] h-full overflow-y-auto grid md:grid-cols-2 gap-x-10"
+              style={{
+                scrollbarWidth: 'thin',
+                scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
+                WebkitOverflowScrolling: 'touch'
+              }}
+            >
+              {/* Lewa kolumna: Obowiązki, Doświadczenie, Wykształcenie */} 
+              <div className="h-full flex flex-col">
+                {renderAnalysisSection("OBOWIĄZKI I ZADANIA", analysisResult.responsibilities)}
+                {renderAnalysisSection("DOŚWIADCZENIE", analysisResult.experience)}
+                {renderAnalysisSection("WYKSZTAŁCENIE / CERTYFIKATY", analysisResult.education)}
+              </div>
+              {/* Prawa kolumna: Umiejętności, Technologie, Języki, Inne */} 
+              <div className="h-full flex flex-col">
+                {renderAnalysisSection("UMIEJĘTNOŚCI", analysisResult.skills)}
+                {renderAnalysisSection("TECHNOLOGIE / NARZĘDZIA", analysisResult.technologies)}
+                {renderAnalysisSection("JĘZYKI OBCE", analysisResult.languages)}
+                {renderAnalysisSection("INNE WYMAGANIA", analysisResult.other_requirements)}
+              </div>
             </div>
           )}
         </div>

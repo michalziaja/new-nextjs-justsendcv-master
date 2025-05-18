@@ -113,9 +113,9 @@ export default function TrainingQuestions({
 
   return (
     <div
-      className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden flex flex-col"
+      className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-5 h-full overflow-hidden flex flex-col"
     >
-      <h2 className="text-xl font-semibold mb-4">Pytania i wskazówki</h2>
+      {/* <h2 className="text-xl font-semibold mb-4">Pytania i wskazówki</h2> */}
       
       {selectedJobOffer && selectedCV && (
         <div className="bg-blue-50 text-blue-800 rounded-lg p-3 mb-4 text-sm">
@@ -128,7 +128,7 @@ export default function TrainingQuestions({
         </div>
       )}
       
-      <div className="p-4 flex-grow flex flex-col overflow-hidden">
+      <div className="p-4 mt-4 flex-grow flex flex-col overflow-hidden">
         {/* Nagłówek pytania */}
         <div className="mb-5">
           <h3 className="text-md font-medium text-gray-600 mb-2">Pytanie {currentQuestionIndex + 1} z {questions.length}</h3>
@@ -138,7 +138,7 @@ export default function TrainingQuestions({
         </div>
 
         {/* Wskazówki */}
-        <div className="bg-purple-50 border border-purple-100 rounded-lg p-4 mb-6">
+        <div className="bg-purple-50 border border-purple-100 rounded-lg p-4 mt-4 mb-6">
           <h4 className="font-medium text-purple-800 mb-2 text-sm">Wskazówki do odpowiedzi:</h4>
           <ul className="list-disc list-inside text-purple-700 text-sm space-y-2 ml-1">
             {currentQuestion?.tips.map((tip: string, index: number) => (

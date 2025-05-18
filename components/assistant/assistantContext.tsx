@@ -12,17 +12,39 @@ type TemplateType = {
   color?: string;
 };
 
+// Typ CVProfileData (zgodny z app/api/generate-message/route.ts)
+interface CVProfileData {
+  personalData?: {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: string;
+  };
+  description?: string;
+  experience?: Array<{
+    position?: string;
+    company?: string;
+    description?: string;
+  }>;
+  skills?: {
+    technical?: string[];
+    soft?: string[];
+  };
+}
+
 type JobOffer = {
   id: string;
   title: string;
   company: string;
   status?: string;
+  full_description?: string; // Dodane dla potencjalnego użycia
 };
 
 type UserCV = {
   id: string;
   name: string;
   job_offer_id?: string;
+  cv_data?: CVProfileData | any; // Przechowuje przeanalizowane dane CV (JSON)
 };
 
 type SavedTemplate = {
@@ -31,18 +53,9 @@ type SavedTemplate = {
   content: string;
 };
 
-// Przykładowe dane do testowania
-const exampleJobOffers: JobOffer[] = [
-  { id: 'job-1', title: 'Programista Frontend', company: 'Tech Solutions' },
-  { id: 'job-2', title: 'UX/UI Designer', company: 'Creative Studio' },
-  { id: 'job-3', title: 'DevOps Engineer', company: 'Cloud Systems' },
-];
-
-const exampleUserCVs: UserCV[] = [
-  { id: 'cv-1', name: 'CV Techniczne' },
-  { id: 'cv-2', name: 'CV Kreatywne', job_offer_id: 'job-1' },
-  { id: 'cv-3', name: 'CV Ogólne' },
-];
+// Przykładowe dane do testowania (usunięte, bo dane będą z Supabase)
+// const exampleJobOffers: JobOffer[] = [...];
+// const exampleUserCVs: UserCV[] = [...];
 
 type AssistantContextType = {
   isGenerating: boolean;
@@ -54,6 +67,7 @@ type AssistantContextType = {
   selectedJobOffer: string | null;
   selectedUserCV: string | null;
   additionalInfo: string;
+  error: string | null; // Dodane pole do obsługi błędów
   setIsGenerating: (value: boolean) => void;
   setGeneratedText: (text: string) => void;
   setSelectedTemplate: (templateId: string) => void;
@@ -64,6 +78,7 @@ type AssistantContextType = {
   setSelectedUserCV: (cvId: string | null) => void;
   setAdditionalInfo: (value: string) => void;
   generateText: () => void;
+  setError: (message: string | null) => void; // Dodane
 };
 
 const AssistantContext = createContext<AssistantContextType | undefined>(undefined);
@@ -71,60 +86,62 @@ const AssistantContext = createContext<AssistantContextType | undefined>(undefin
 export function AssistantProvider({ children }: { children: ReactNode }) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedText, setGeneratedText] = useState('');
-  const [selectedTemplate, setSelectedTemplate] = useState('greeting');
+  const [selectedTemplate, setSelectedTemplate] = useState('greeting'); // Domyślny typ wiadomości
   const [savedTemplates, setSavedTemplates] = useState<SavedTemplate[]>([]);
-  const [jobOffers, setJobOffers] = useState<JobOffer[]>(exampleJobOffers);
-  const [userCVs, setUserCVs] = useState<UserCV[]>(exampleUserCVs);
+  const [jobOffers, setJobOffers] = useState<JobOffer[]>([]); // Inicjalizacja pustą tablicą
+  const [userCVs, setUserCVs] = useState<UserCV[]>([]); // Inicjalizacja pustą tablicą
   const [selectedJobOffer, setSelectedJobOffer] = useState<string | null>(null);
   const [selectedUserCV, setSelectedUserCV] = useState<string | null>(null);
   const [additionalInfo, setAdditionalInfo] = useState('');
+  const [error, setError] = useState<string | null>(null); // Stan dla błędów
 
   // Pobieranie ofert pracy i CV z Supabase
   useEffect(() => {
     const fetchUserData = async () => {
+      setError(null); // Resetuj błąd przy nowym pobieraniu
       try {
         const supabase = createClient();
         
-        // Pobieranie ofert pracy - wszystkie oferty, nie tylko zapisane
+        // Pobieranie ofert pracy - w tym full_description
         const { data: jobOffersData, error: jobOffersError } = await supabase
           .from('job_offers')
-          .select('id, title, company, status')
+          .select('id, title, company, status, full_description') // Dodano full_description
           .order('created_at', { ascending: false });
           
-        if (!jobOffersError && jobOffersData && jobOffersData.length > 0) {
+        if (jobOffersError) throw jobOffersError;
+        if (jobOffersData) {
           setJobOffers(jobOffersData);
         }
         
-        // Pobieranie CV użytkownika
+        // Pobieranie CV użytkownika - w tym cv_data
         const { data: userCVsData, error: userCVsError } = await supabase
           .from('user_cvs')
-          .select('id, name, job_offer_id');
+          .select('id, name, job_offer_id, cv_data'); // Dodano cv_data
           
-        if (!userCVsError && userCVsData && userCVsData.length > 0) {
+        if (userCVsError) throw userCVsError;
+        if (userCVsData) {
           setUserCVs(userCVsData);
         }
-      } catch (error) {
-        console.log('Błąd pobierania danych z Supabase, używanie przykładowych danych');
+      } catch (err: any) {
+        console.error('Błąd pobierania danych z Supabase:', err);
+        setError('Nie udało się załadować danych. Spróbuj odświeżyć stronę.');
+        // Można zostawić przykładowe dane w razie błędu, jeśli jest taka potrzeba
+        // setJobOffers(exampleJobOffers); 
+        // setUserCVs(exampleUserCVs);
       }
     };
     
     fetchUserData();
   }, []);
 
-  // Funkcja do zapisywania szablonu
+  // Funkcja do zapisywania szablonu (jeśli nadal potrzebna)
   const saveTemplate = (name: string, content: string) => {
     if (!name.trim()) return;
-    
-    const newTemplate: SavedTemplate = {
-      id: `template-${Date.now()}`,
-      name: name.trim(),
-      content
-    };
-    
+    const newTemplate: SavedTemplate = { id: `template-${Date.now()}`, name: name.trim(), content };
     setSavedTemplates(prev => [...prev, newTemplate]);
   };
 
-  // Funkcja do ładowania szablonu
+  // Funkcja do ładowania szablonu (jeśli nadal potrzebna, np. do ręcznego wklejania)
   const loadTemplate = (templateId: string) => {
     const template = savedTemplates.find(t => t.id === templateId);
     if (template) {
@@ -137,50 +154,75 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
     setSavedTemplates(prev => prev.filter(t => t.id !== templateId));
   };
 
-  // Funkcja do generowania tekstu na podstawie wybranego szablonu
-  const generateText = () => {
+  // Nowa funkcja generowania tekstu z użyciem API
+  const generateText = async () => {
+    if (!selectedJobOffer || !selectedUserCV || !selectedTemplate) {
+      setError("Proszę wybrać ofertę pracy, CV oraz typ wiadomości.");
+      return;
+    }
+    
     setIsGenerating(true);
-    
-    // Pobieranie szczegółów wybranej oferty i CV
-    const selectedOffer = jobOffers.find(offer => offer.id === selectedJobOffer);
-    const selectedCV = userCVs.find(cv => cv.id === selectedUserCV);
-    
-    // Symulacja generowania - w rzeczywistej aplikacji tutaj byłoby API call do LLM
-    setTimeout(() => {
-      const templateType = documentTemplates.find(t => t.id === selectedTemplate)?.name || '';
-      
-      let baseText = '';
-      
-      switch(selectedTemplate) {
-        case 'greeting':
-          baseText = `Szanowni Państwo,\n\nW nawiązaniu do ogłoszenia o pracę na stanowisko ${selectedOffer?.title || '[stanowisko]'} w ${selectedOffer?.company || '[nazwa firmy]'}, chciałbym wyrazić moje zainteresowanie tą pozycją.\n\nMoje doświadczenie w ${additionalInfo || '[branża/technologia]'} sprawia, że jestem idealnym kandydatem dla Państwa firmy.\n\nZ poważaniem,\n[Twoje imię i nazwisko]`;
-          break;
-        case 'followup':
-          baseText = `Szanowni Państwo,\n\nChciałbym zapytać o status mojej aplikacji na stanowisko ${selectedOffer?.title || '[stanowisko]'} w ${selectedOffer?.company || '[nazwa firmy]'}.\n\nAplikację złożyłem [data] i jestem nadal bardzo zainteresowany dołączeniem do Państwa zespołu.\n\n${additionalInfo ? additionalInfo + '\n\n' : ''}Z poważaniem,\n[Twoje imię i nazwisko]`;
-          break;
-        case 'thank-you':
-          baseText = `Szanowni Państwo,\n\nDziękuję za możliwość rozmowy na temat stanowiska ${selectedOffer?.title || '[stanowisko]'} w ${selectedOffer?.company || '[nazwa firmy]'}.\n\nRozmowa była dla mnie bardzo cenna i utwierdziła mnie w przekonaniu, że moje umiejętności i doświadczenie doskonale pasują do Państwa oczekiwań.\n\n${additionalInfo ? additionalInfo + '\n\n' : ''}Z poważaniem,\n[Twoje imię i nazwisko]`;
-          break;
-        case 'feedback':
-          baseText = `Szanowni Państwo,\n\nW związku z zakończeniem procesu rekrutacji na stanowisko ${selectedOffer?.title || '[stanowisko]'} w ${selectedOffer?.company || '[nazwa firmy]'}, chciałbym poprosić o krótki feedback dotyczący mojej aplikacji i rozmowy kwalifikacyjnej.\n\nZależy mi na rozwoju zawodowym, dlatego będę wdzięczny za wskazówki, co mogę poprawić w przyszłości.\n\n${additionalInfo ? additionalInfo + '\n\n' : ''}Z poważaniem,\n[Twoje imię i nazwisko]`;
-          break;
-        case 'clarification':
-          baseText = `Szanowni Państwo,\n\nW związku z ogłoszeniem na stanowisko ${selectedOffer?.title || '[stanowisko]'}, chciałbym prosić o dodatkowe informacje dotyczące wymagań i zakresu obowiązków.\n\n${additionalInfo ? 'Interesują mnie szczególnie: ' + additionalInfo + '\n\n' : ''}Będę wdzięczny za doprecyzowanie tych kwestii, co pozwoli mi lepiej przygotować moją aplikację.\n\nZ poważaniem,\n[Twoje imię i nazwisko]`;
-          break;
-        case 'welcome':
-          baseText = `Drodzy Przyszli Współpracownicy,\n\nZ radością przyjąłem ofertę pracy na stanowisko ${selectedOffer?.title || '[stanowisko]'} w ${selectedOffer?.company || '[nazwa firmy]'}.\n\nNie mogę się doczekać rozpoczęcia współpracy z Państwem i wniesienia mojego wkładu w rozwój firmy.\n\n${additionalInfo ? additionalInfo + '\n\n' : ''}Z wyrazami szacunku,\n[Twoje imię i nazwisko]`;
-          break;
-        case 'linkedin-footer':
-          baseText = `🔹 ${additionalInfo || 'Specjalista w dziedzinie [Twoja dziedzina]'}\n🔹 ${selectedOffer?.title || '[Twoje stanowisko]'} w ${selectedOffer?.company || '[Twoja firma]'}\n🔹 [Twoje osiągnięcia/certyfikaty]\n\n💼 Otwarty na nowe możliwości zawodowe\n📧 [Twój email]\n🔗 [Link do portfolio/CV]\n\n#kariera #rozwój #${additionalInfo ? additionalInfo.toLowerCase().replace(/\s+/g, '') : 'praca'}`;
-          break;
-        case 'direct-recruiter':
-          baseText = `Cześć [Imię rekrutera],\n\nZnalazłem/am ogłoszenie na stanowisko ${selectedOffer?.title || '[stanowisko]'} w ${selectedOffer?.company || '[nazwa firmy]'} i jestem tym bardzo zainteresowany/a.\n\nMam ${additionalInfo || '[X lat] doświadczenia'} w branży i mój profil doskonale pasuje do wymagań tej roli. Szczególnie moje umiejętności w zakresie [kluczowe umiejętności] mogą być wartościowe dla Waszego zespołu.\n\nCzy możemy porozmawiać o tej możliwości? Jestem dostępny/a [terminy dostępności].\n\nPozdrawiam,\n[Twoje imię i nazwisko]\n[Numer telefonu]`;
-          break;
-      }
-      
-      setGeneratedText(baseText);
+    setError(null);
+    setGeneratedText(''); // Wyczyść poprzedni tekst
+
+    const currentOffer = jobOffers.find(offer => offer.id === selectedJobOffer);
+    const currentCV = userCVs.find(cv => cv.id === selectedUserCV);
+
+    if (!currentOffer) {
+      setError("Nie znaleziono wybranej oferty pracy.");
       setIsGenerating(false);
-    }, 1500);
+      return;
+    }
+     if (!currentCV) {
+      setError("Nie znaleziono wybranego CV.");
+      setIsGenerating(false);
+      return;
+    }
+
+    const requestBody = {
+      jobOffer: {
+        id: currentOffer.id,
+        title: currentOffer.title,
+        company: currentOffer.company,
+        full_description: currentOffer.full_description || undefined,
+      },
+      // Przekazuj cvData tylko jeśli jest dostępne i relevantne dla typu wiadomości
+      // Endpoint API sam decyduje czy go użyć na podstawie messageType, ale możemy tu wstępnie filtrować
+      cvData: currentCV.cv_data || undefined, 
+      additionalInfo: additionalInfo,
+      messageType: selectedTemplate, // selectedTemplate to teraz typ wiadomości, np. 'greeting'
+    };
+
+    try {
+      console.log("Wysyłanie żądania do /api/generate-message z danymi:", requestBody);
+      const response = await fetch('/api/generate-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error("Błąd odpowiedzi API:", data);
+        throw new Error(data.error || `HTTP error! status: ${response.status}`);
+      }
+
+      if (data.success && data.message) {
+        setGeneratedText(data.message);
+      } else {
+        console.error("Odpowiedź API nie zawiera sukcesu lub wiadomości:", data);
+        throw new Error(data.error || "Nie udało się wygenerować wiadomości. Odpowiedź API była niekompletna.");
+      }
+    } catch (err: any) {
+      console.error('Błąd podczas generowania tekstu przez API:', err);
+      setError(err.message || 'Wystąpił nieoczekiwany błąd podczas generowania wiadomości.');
+      setGeneratedText(''); // Wyczyść tekst w razie błędu
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   return (
@@ -195,6 +237,7 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
         selectedJobOffer,
         selectedUserCV,
         additionalInfo,
+        error, // Udostępnij błąd
         setIsGenerating,
         setGeneratedText,
         setSelectedTemplate,
@@ -204,7 +247,8 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
         setSelectedJobOffer,
         setSelectedUserCV,
         setAdditionalInfo,
-        generateText
+        generateText,
+        setError, // Udostępnij funkcję ustawiania błędu
       }}
     >
       {children}
@@ -221,7 +265,8 @@ export function useAssistant() {
   return context;
 }
 
-// Dane szablonów dokumentów
+// Dane szablonów dokumentów (typy wiadomości)
+// Należy upewnić się, że ID szablonów odpowiadają wartościom 'messageType' oczekiwanym przez API
 export const documentTemplates: TemplateType[] = [
   { 
     id: 'greeting', 
@@ -260,8 +305,8 @@ export const documentTemplates: TemplateType[] = [
   },
   { 
     id: 'welcome', 
-    name: 'Do zespołu', 
-    description: 'Wiadomość powitalna do przyszłych współpracowników',
+    name: 'Do zespołu', // Poprzednio: "Wiadomość po otrzymaniu oferty"
+    description: 'Wiadomość powitalna do przyszłych współpracowników lub potwierdzenie przyjęcia oferty.',
     icon: '👋',
     color: 'border-teal-400'
   },

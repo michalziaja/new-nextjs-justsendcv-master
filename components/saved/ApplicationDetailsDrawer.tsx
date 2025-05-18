@@ -117,10 +117,7 @@ export function ApplicationDetailsDrawer({
                 />
               </div>
 
-              {/* Notatki - 30% wysokości */}
-              <div style={{ height: '30%' }}>
-                <Notes application={application} isDesktop={isDesktop} />
-              </div>
+              
             </div>
           </div>
         </div>

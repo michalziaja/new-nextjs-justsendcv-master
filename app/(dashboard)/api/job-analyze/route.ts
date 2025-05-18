@@ -100,7 +100,8 @@ export async function POST(req: NextRequest) {
         experience: parsedAnalysis.experience,
         education: parsedAnalysis.education,
         languages: parsedAnalysis.languages,
-        other_requirements: parsedAnalysis.other_requirements
+        other_requirements: parsedAnalysis.other_requirements,
+        responsibilities: parsedAnalysis.responsibilities
       })
       .select()
       .single();
