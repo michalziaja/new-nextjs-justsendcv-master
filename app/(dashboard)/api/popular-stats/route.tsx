@@ -196,20 +196,41 @@ export async function POST(req: NextRequest) {
           text = text.substring(0, text.length - 3);
         }
         text = text.trim(); // Dodatkowe przycięcie po usunięciu znaczników
-        //console.log("🧹 API popular-stats (positions) - Odpowiedź Gemini po czyszczeniu:", text);
+        
+        // Dodatkowe czyszczenie odpowiedzi z niestandardowych znaków
+        text = text.replace(/[\u{0000}-\u{0008}\u{000B}-\u{000C}\u{000E}-\u{001F}\u{007F}-\u{009F}]/gu, ""); // Usuwanie znaków kontrolnych
+        
+        // Rozszerzona obsługa znaków specjalnych i formatowania
+        text = text.replace(/^[^[{]/, ""); // Usuń wszystkie znaki przed początkiem JSON ([ lub {)
+        
+        // Próba naprawy najpopularniejszych problemów z JSON
+        if (!text.startsWith('[') && !text.startsWith('{')) {
+          // Jeśli tekst nie zaczyna się od [ lub {, próbujemy znaleźć początek JSON
+          const jsonStart = text.indexOf('[') >= 0 ? text.indexOf('[') : text.indexOf('{');
+          if (jsonStart >= 0) {
+            text = text.substring(jsonStart);
+          }
+        }
+        
+        console.log("🧹 API popular-stats (positions) - Odpowiedź Gemini po czyszczeniu:", text);
 
-        const parsedResult = JSON.parse(text);
-
-        if (Array.isArray(parsedResult)) {
-          positions = parsedResult.map((item: any, index: number) => ({
-            title: item.title,
-            count: item.count,
-            color: getPositionColor(index),
-          })).sort((a: JobPosition, b: JobPosition) => b.count - a.count).slice(0, 10);
-          console.log(`💡 API popular-stats: Przetworzono ${positions.length} stanowisk.`);
-        } else {
-          console.error("Odpowiedź Gemini (positions) nie jest tablicą:", parsedResult);
-          positions = []; // Zerowanie w przypadku złego formatu
+        try {
+          const parsedResult = JSON.parse(text);
+          
+          if (Array.isArray(parsedResult)) {
+            positions = parsedResult.map((item: any, index: number) => ({
+              title: item.title,
+              count: item.count,
+              color: getPositionColor(index),
+            })).sort((a: JobPosition, b: JobPosition) => b.count - a.count).slice(0, 10);
+            console.log(`💡 API popular-stats: Przetworzono ${positions.length} stanowisk.`);
+          } else {
+            console.error("Odpowiedź Gemini (positions) nie jest tablicą:", parsedResult);
+            positions = []; // Zerowanie w przypadku złego formatu
+          }
+        } catch (e) {
+          console.error("Błąd API (Gemini - positions):", e);
+          positions = []; // Zerowanie w przypadku błędu
         }
       } catch (e) {
         console.error("Błąd API (Gemini - positions):", e);
