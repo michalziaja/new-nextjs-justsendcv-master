@@ -58,7 +58,7 @@ export function NavSecondary({
                 <span className="font-medium">Przejdź na Premium</span>
               </a>
             ) : (
-              <div className="flex w-full items-center gap-2 rounded-md p-3 text-white text-xs shadow-sm dark:shadow-xs bg-gradient-to-r from-green-500 to-emerald-500">
+              <div className="flex w-full items-center gap-2 rounded-md p-2 text-white text-xs shadow-sm dark:shadow-xs bg-gradient-to-r from-green-500 to-emerald-500">
                 <Crown className="h-6 w-6" />
                 <span className="font-medium">Używasz Premium</span>
               </div>
