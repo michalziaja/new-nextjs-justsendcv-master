@@ -6,12 +6,11 @@ import Creator from "@/components/creator/Creator";
 import Preview from '@/components/creator/Preview';
 import { CVProvider } from '@/components/creator/CVContext';
 
-
-
 // Główny komponent strony
 export default function CreatorPage() {
   const [showPreview, setShowPreview] = useState(true);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const [currentLanguage, setCurrentLanguage] = useState<'pl' | 'en'>('pl'); // Stan języka
   const isSmallScreen = windowWidth < 1175;
 
   // Nasłuchiwanie na zmiany rozmiaru okna
@@ -39,13 +38,27 @@ export default function CreatorPage() {
           {/* Na małych ekranach pokazujemy albo kreator albo podgląd wraz z przyciskiem przełączania */}
           {isSmallScreen ? (
             <>
-              {showPreview ? <Preview switchMode={() => setShowPreview(false)} /> : <Creator switchMode={() => setShowPreview(true)} />}
+              {showPreview ? (
+                <Preview 
+                  switchMode={() => setShowPreview(false)} 
+                  currentLanguage={currentLanguage}
+                  setCurrentLanguage={setCurrentLanguage}
+                />
+              ) : (
+                <Creator 
+                  switchMode={() => setShowPreview(true)} 
+                  currentLanguage={currentLanguage}
+                />
+              )}
             </>
           ) : (
             // Na dużych ekranach pokazujemy oba bez przycisku przełączania
             <>
-              <Creator />
-              <Preview />
+              <Creator currentLanguage={currentLanguage} />
+              <Preview 
+                currentLanguage={currentLanguage}
+                setCurrentLanguage={setCurrentLanguage}
+              />
             </>
           )}
         </div>

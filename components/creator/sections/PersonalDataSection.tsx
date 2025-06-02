@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { CVData, useCV } from '../CVContext';
 import { FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
-import { FaUser, FaShareAlt } from "react-icons/fa";
+import { FaUser, FaShareAlt, FaEdit, FaCheck, FaTimes } from "react-icons/fa";
 
 interface PersonalDataSectionProps {
   cvData: CVData;
@@ -44,6 +44,11 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   const [showJobTitle, setShowJobTitle] = useState(cvData.showJobTitleInCV || false);
   // Stan do kontrolowania modalu potwierdzającego
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  
+  // Nowe stany do obsługi edycji linków społecznościowych
+  const [editingLinkIndex, setEditingLinkIndex] = useState<number | null>(null);
+  const [editType, setEditType] = useState('');
+  const [editUrl, setEditUrl] = useState('');
   
   const profileLoadedRef = useRef(false);
 
@@ -90,6 +95,44 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     }
   }, [cvData.personalData, cvData.showJobTitleInCV]);
   
+  // Funkcja rozpoczynająca edycję linku
+  const startEditingLink = (index: number) => {
+    const link = socialLinks[index];
+    setEditingLinkIndex(index);
+    setEditType(link.type);
+    setEditUrl(link.url);
+  };
+
+  // Funkcja zapisująca zmiany w linku
+  const saveEditedLink = () => {
+    if (editingLinkIndex === null) return;
+    
+    const updatedLinks = [...socialLinks];
+    updatedLinks[editingLinkIndex] = {
+      ...updatedLinks[editingLinkIndex],
+      type: editType.trim(),
+      url: editUrl.trim()
+    };
+    
+    setSocialLinks(updatedLinks);
+    updatePersonalData('socialLinks', JSON.stringify(updatedLinks));
+    
+    // Resetuj stan edycji
+    setEditingLinkIndex(null);
+    setEditType('');
+    setEditUrl('');
+    
+    // Automatyczny zapis CV
+    saveCV(true);
+  };
+
+  // Funkcja anulująca edycję
+  const cancelEditingLink = () => {
+    setEditingLinkIndex(null);
+    setEditType('');
+    setEditUrl('');
+  };
+
   // Funkcja do zmiany stanu "include" dla linku społecznościowego
   const toggleSocialLinkInclude = (index: number) => {
     const updatedLinks = [...socialLinks];
@@ -310,11 +353,11 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
             <h4 className="text-lg font-semibold mb-0 flex items-center">
               <FaShareAlt className="mr-2 text-blue-500" /> Linki społecznościowe
             </h4>
-            <p className="text-gray-600 mb-4 text-sm">Wybierz, które linki chcesz uwzględnić w swoim CV</p>
+            <p className="text-gray-600 mb-4 text-sm">Wybierz, które linki chcesz uwzględnić w swoim CV i edytuj je według potrzeb</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {socialLinks.map((link, index) => (
-                <div key={index} className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all ${
+                <div key={index} className={`flex items-center border rounded-md p-3 hover:bg-gray-50 transition-all ${
                   lastToggledLinkIndex === index ? 'bg-blue-50 border-blue-300' : ''
                 }`}>
                   {/* Checkbox do uwzględnienia linku w CV */}
@@ -330,16 +373,90 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
                       <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
                     )}
                   </button>
-                  
+
                   {/* Ikona typu linku */}
-                  <div className="mr-2">
-                    {getSocialIcon(link.type)}
+                  <div className="mr-3">
+                    {getSocialIcon(editingLinkIndex === index ? editType : link.type)}
                   </div>
                   
-                  {/* Informacje o linku */}
+                  {/* Informacje o linku lub formularz edycji */}
                   <div className="flex-1">
-                    <div className="text-sm font-medium">{link.type}</div>
-                    <div className="text-xs text-gray-500 truncate">{link.url}</div>
+                    {editingLinkIndex === index ? (
+                      <div className="space-y-2">
+                        {/* Dla standardowych linków z profilu pokazujemy tylko pole URL */}
+                        {['linkedin', 'github', 'portfolio', 'website', 'twitter', 'facebook', 'instagram'].includes(link.type.toLowerCase()) ? (
+                          <input
+                            type="url"
+                            value={editUrl}
+                            onChange={(e) => setEditUrl(e.target.value)}
+                            placeholder="URL (np. https://linkedin.com/in/twojprofil)"
+                            className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          />
+                        ) : (
+                          <>
+                            <input
+                              type="text"
+                              value={editType}
+                              onChange={(e) => setEditType(e.target.value)}
+                              placeholder="Typ linku (np. LinkedIn, GitHub)"
+                              className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                            <input
+                              type="url"
+                              value={editUrl}
+                              onChange={(e) => setEditUrl(e.target.value)}
+                              placeholder="URL (np. https://linkedin.com/in/twojprofil)"
+                              className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                          </>
+                        )}
+                      </div>
+                    ) : (
+                      <div>
+                        {/* Sprawdzamy czy to standardowy link z profilu - jeśli tak, pokazujemy tylko URL */}
+                        {['linkedin', 'github', 'portfolio', 'website', 'twitter', 'facebook', 'instagram'].includes(link.type.toLowerCase()) ? (
+                          <div className="text-xs text-gray-500 truncate">{link.url}</div>
+                        ) : (
+                          <div>
+                            <div className="text-sm font-medium">{link.type}</div>
+                            <div className="text-xs text-gray-500 truncate">{link.url}</div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Ikonka edycji po prawej stronie */}
+                  <div className="ml-2">
+                    {editingLinkIndex === index ? (
+                      <div className="flex">
+                        <button 
+                          type="button"
+                          onClick={saveEditedLink}
+                          className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                          title="Zapisz zmiany"
+                        >
+                          <FaCheck className="w-4 h-4" />
+                        </button>
+                        <button 
+                          type="button"
+                          onClick={cancelEditingLink}
+                          className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                          title="Anuluj edycję"
+                        >
+                          <FaTimes className="w-4 h-4" />
+                        </button>
+                      </div>
+                    ) : (
+                      <button 
+                        type="button"
+                        onClick={() => startEditingLink(index)}
+                        className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                        title="Edytuj link"
+                      >
+                        <FaEdit className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}

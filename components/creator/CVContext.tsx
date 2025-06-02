@@ -129,6 +129,10 @@ interface CVContextProps {
   showProjectsInPreview: boolean;
   setShowProjectsInPreview: React.Dispatch<React.SetStateAction<boolean>>;
   
+  // Nowy stan dla pełnego podglądu CV
+  fullPreviewMode: boolean;
+  setFullPreviewMode: React.Dispatch<React.SetStateAction<boolean>>;
+  
   // Nowe funkcje do zarządzania CV
   currentCVId: string | null;
   setCurrentCVId: React.Dispatch<React.SetStateAction<string | null>>;
@@ -218,6 +222,9 @@ export function CVProvider({ children }: { children: ReactNode }) {
   const [selectedTemplate, setSelectedTemplate] = useState<string>('nowoczesny');
   const [activeSection, setActiveSection] = useState<string>('start');
   const [showProjectsInPreview, setShowProjectsInPreview] = useState<boolean>(false);
+  
+  // Nowy stan dla pełnego podglądu CV
+  const [fullPreviewMode, setFullPreviewMode] = useState<boolean>(false);
   
   // Nowe stany
   const [currentCVId, setCurrentCVId] = useState<string | null>(null);
@@ -778,6 +785,8 @@ export function CVProvider({ children }: { children: ReactNode }) {
         setActiveSection,
         showProjectsInPreview,
         setShowProjectsInPreview,
+        fullPreviewMode,
+        setFullPreviewMode,
         currentCVId,
         setCurrentCVId,
         cvName,
@@ -792,10 +801,9 @@ export function CVProvider({ children }: { children: ReactNode }) {
         lastSaved,
         isSaving,
         jobAnalysis,
-        // Dodajemy nowe wartości do kontekstu, ale bez powiadomień
         savedJobs,
         isLoadingJobs,
-        loadUserProfile,
+        loadUserProfile
       }}
     >
       {children}

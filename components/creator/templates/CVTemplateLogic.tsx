@@ -45,6 +45,7 @@ export interface CVTemplateProps {
   onSectionsUpdate?: (sections: {[key: string]: EnhancedSectionInfo}) => void;
   activeSection?: string;
   showProjectsInPreview?: boolean; // Flaga kontrolująca widoczność sekcji projektów
+  fullPreviewMode?: boolean; // Flaga kontrolująca tryb pełnego podglądu CV
   showJobTitle?: boolean; // Flaga kontrolująca widoczność adnotacji o aplikowanym stanowisku
 }
 
@@ -577,7 +578,12 @@ function parseStyleValue(value: string): number {
 }
 
 // Nowa funkcja do określania, które sekcje powinny być widoczne
-export const getVisibleSections = (activeSection: string, showProjectsInPreview: boolean = true) => {
+export const getVisibleSections = (activeSection: string, showProjectsInPreview: boolean = true, fullPreviewMode: boolean = false) => {
+  // Jeśli jesteśmy w trybie pełnego podglądu, pokaż wszystkie sekcje
+  if (fullPreviewMode) {
+    return ['header', 'profile', 'experience', 'projects', 'education', 'courses', 'skills', 'rodo'];
+  }
+  
   // Określamy kolejność sekcji w kreatorze
   const creatorsOrder = ['start', 'personalData', 'description', 'experience', 'projects', 'education', 'courses', 'skills', 'summary'];
   

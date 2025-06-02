@@ -32,14 +32,14 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-3 right-3 z-50 shadow-lg rounded-lg border-1 border-gray-200 dark:bg-slate-900 dark:border-slate-800",
+        "fixed top-0 left-3 right-3 z-50 shadow-sm rounded-sm border-1 border-gray-200 dark:bg-slate-900 dark:border-slate-800",
         isScrolled 
-          ? "bg-white/70 dark:bg-[#0A0F1C]/80 backdrop-blur-sm shadow-xl" 
-          : "bg-white/70 dark:bg-[#0A0F1C]/80 mt-3 shadow-xl",
+          ? "bg-white/70 dark:bg-[#0A0F1C]/80 backdrop-blur-sm shadow-md" 
+          : "bg-white/70 dark:bg-[#0A0F1C]/80 mt-3 shadow-md",
       )}
     >
       <motion.div 
-        className="container mx-auto px-2 py-2"
+        className="container mx-auto px-2 py-0.5"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -51,7 +51,7 @@ export function Header() {
               <img 
                 src="/logo.png" 
                 alt="JustSend.cv Logo" 
-                className="h-8 w-auto mr-4 sm:h-10 lg:h-12 max-w-[30px] sm:max-w-[40px] lg:max-w-none transition-all" 
+                className="h-8 w-auto mr-4 sm:h-8 lg:h-10 max-w-[30px] sm:max-w-[40px] lg:max-w-none transition-all" 
               />
               <div className="flex items-center">
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all text-gray-900 dark:text-white">JustSend</span>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IoClose } from "react-icons/io5";
 import AdvancedFormatting from '../AdvancedFormatting';
 import { CVData, useCV } from '../CVContext'; // Zakładamy, że typ CVData jest zdefiniowany w CVContext
+import { fontSizes, spacing } from '../templates/TemplateStyles'; // Importujemy domyślne style
 
 interface SummarySectionProps {
   cvData: CVData;
@@ -25,7 +26,183 @@ const SummarySection: React.FC<SummarySectionProps> = ({
   onBack
 }) => {
   const [showAdvancedOptions, setShowAdvancedOptions] = useState(false);
+  const [isAutoFormatting, setIsAutoFormatting] = useState(false);
   const { saveCV, isSaving } = useCV();
+
+  /**
+   * Funkcja do automatycznego formatowania CV - dostosowuje czcionki i marginesy
+   * aby optymalnie wypełnić przestrzeń na stronach
+   */
+  const handleAutoFormat = async () => {
+    setIsAutoFormatting(true);
+    
+    try {
+      // Szacowanie ilości treści na podstawie długości tekstów
+      const estimateContentLength = () => {
+        let totalContent = 0;
+        
+        // Dane osobowe i opis
+        totalContent += cvData.personalData.firstName.length + cvData.personalData.lastName.length;
+        totalContent += cvData.description.length * 1.2; // Opis ma większą wagę
+        
+        // Doświadczenie zawodowe
+        cvData.experience.forEach(exp => {
+          totalContent += exp.position.length + exp.company.length + exp.description.length;
+        });
+        
+        // Wykształcenie
+        cvData.education.forEach(edu => {
+          totalContent += edu.school.length + edu.degree.length + edu.description.length;
+        });
+        
+        // Kursy
+        if (cvData.courses) {
+          cvData.courses.forEach(course => {
+            totalContent += course.name.length + course.organizer.length + (course.description?.length || 0);
+          });
+        }
+        
+        // Umiejętności
+        totalContent += cvData.skills.technical.join('').length;
+        totalContent += cvData.skills.soft.join('').length;
+        totalContent += cvData.skills.languages.reduce((acc, lang) => acc + lang.language.length + lang.level.length, 0);
+        
+        return totalContent;
+      };
+
+      const contentLength = estimateContentLength();
+      
+      // Określenie czy treść zmieści się na jednej stronie (próg ~2000 znaków)
+      const shouldOptimizeForOnePage = contentLength < 2000;
+      const shouldOptimizeForTwoPages = contentLength >= 2000 && contentLength < 4000;
+      
+      // Bazowe style do modyfikacji
+      const currentFontSizes = cvData.customStyles?.fontSizes || {};
+      const currentSpacing = cvData.customStyles?.spacing || {};
+      
+      let optimizedFontSizes = { ...fontSizes };
+      let optimizedSpacing = { ...spacing };
+      
+      if (shouldOptimizeForOnePage) {
+        // Zwiększenie czcionek aby lepiej wypełnić jedną stronę
+        optimizedFontSizes = {
+          ...optimizedFontSizes,
+          base: '12px',          // +1px
+          nameHeader: '32px',    // +4px
+          sectionHeader: '20px', // +2px
+          contactInfo: '13px',   // +1px
+          dates: '14px',         // +1px
+          position: '14px',      // +1px
+          company: '13px',       // +1px
+          description: '12px',   // +1px
+          profileText: '13px',   // +1px
+          tagText: '13px',       // +1px
+          rodoText: '10px'       // +1px
+        };
+        
+        // Zwiększenie odstępów dla lepszego rozmieszczenia
+        optimizedSpacing = {
+          ...optimizedSpacing,
+          sections: {
+            ...optimizedSpacing.sections,
+            margin: '28px', // +4px
+          },
+          sectionSpacing: {
+            ...optimizedSpacing.sectionSpacing,
+            profile: '28px',    // +4px
+            experience: '28px', // +4px
+            education: '28px',  // +4px
+            courses: '28px',    // +4px
+            skills: '28px',     // +4px
+          },
+          elements: {
+            ...optimizedSpacing.elements,
+            itemMargin: '20px', // +4px
+          }
+        };
+        
+      } else if (shouldOptimizeForTwoPages) {
+        // Lekkie zmniejszenie czcionek aby lepiej rozłożyć treść na dwie strony
+        optimizedFontSizes = {
+          ...optimizedFontSizes,
+          base: '10.5px',        // -0.5px
+          sectionHeader: '17px', // -1px
+          description: '10.5px', // -0.5px
+          profileText: '11.5px', // -0.5px
+        };
+        
+        // Zmniejszenie odstępów aby pomieścić więcej treści
+        optimizedSpacing = {
+          ...optimizedSpacing,
+          sections: {
+            ...optimizedSpacing.sections,
+            margin: '20px', // -4px
+          },
+          sectionSpacing: {
+            ...optimizedSpacing.sectionSpacing,
+            profile: '20px',    // -4px
+            experience: '20px', // -4px
+            education: '20px',  // -4px
+            courses: '20px',    // -4px
+            skills: '20px',     // -4px
+          },
+          elements: {
+            ...optimizedSpacing.elements,
+            itemMargin: '12px', // -4px
+          }
+        };
+        
+      } else {
+        // Dla bardzo długich CV - agresywne zmniejszenie
+        optimizedFontSizes = {
+          ...optimizedFontSizes,
+          base: '10px',          // -1px
+          sectionHeader: '16px', // -2px
+          description: '10px',   // -1px
+          profileText: '11px',   // -1px
+          tagText: '11px',       // -1px
+        };
+        
+        optimizedSpacing = {
+          ...optimizedSpacing,
+          sections: {
+            ...optimizedSpacing.sections,
+            margin: '16px', // -8px
+          },
+          sectionSpacing: {
+            ...optimizedSpacing.sectionSpacing,
+            profile: '16px',    // -8px
+            experience: '16px', // -8px
+            education: '16px',  // -8px
+            courses: '16px',    // -8px
+            skills: '16px',     // -8px
+          },
+          elements: {
+            ...optimizedSpacing.elements,
+            itemMargin: '10px', // -6px
+          }
+        };
+      }
+      
+      // Zastosowanie nowych stylów
+      setCvData({
+        ...cvData,
+        customStyles: {
+          ...cvData.customStyles,
+          fontSizes: optimizedFontSizes,
+          spacing: optimizedSpacing
+        }
+      });
+      
+      // Krótkie opóźnienie dla lepszego UX
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+    } catch (error) {
+      console.error('Błąd podczas auto-formatowania:', error);
+    } finally {
+      setIsAutoFormatting(false);
+    }
+  };
 
   return (
     <div className="flex flex-col h-full">
@@ -47,6 +224,29 @@ const SummarySection: React.FC<SummarySectionProps> = ({
             <div className="p-3 bg-green-50 rounded-lg border border-green-200 mb-4">
               <p className="font-medium">Wybrany szablon:</p>
               <p>{templates.find(t => t.id === selectedTemplate)?.name}</p>
+            </div>
+
+            {/* Sekcja Auto-formatowania */}
+            <div className="mt-6 border rounded-lg p-4 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
+              <h4 className="font-medium text-purple-800 mb-3">✨ Inteligentne formatowanie</h4>
+              <p className="text-sm text-purple-700 mb-3">
+                Automatycznie dostosuj czcionki i marginesy aby optymalnie wypełnić strony CV. 
+                Funkcja analizuje ilość treści i inteligentnie formatuje dokument.
+              </p>
+              <button 
+                className="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white rounded-md transition text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={handleAutoFormat}
+                disabled={isAutoFormatting}
+              >
+                {isAutoFormatting ? (
+                  <>
+                    <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
+                    Formatowanie...
+                  </>
+                ) : (
+                  '🎯 Auto-formatuj CV'
+                )}
+              </button>
             </div>
 
             {/* Sekcja Klauzuli RODO */}

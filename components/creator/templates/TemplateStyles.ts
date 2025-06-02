@@ -97,7 +97,7 @@ export const colorPalette = {
 // Rozmiary czcionek - centralne miejsce do konfiguracji
 export const fontSizes = {
   base: '11px',          // Podstawowy rozmiar dokumentu
-  nameHeader: '28px',    // Imię i nazwisko
+  nameHeader: '35px',    // Imię i nazwisko
   sectionHeader: '18px', // Nagłówki sekcji
   contactInfo: '12px',   // Informacje kontaktowe
   dates: '13px',         // Daty

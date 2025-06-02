@@ -18,13 +18,24 @@ import {
   optimizePageLayout
 } from './templates/CVTemplateLogic';
 
+// Importujemy funkcję do tłumaczenia języków i poziomów
+import { translateLanguagesAndLevels } from './sections/SkillsSection';
+
 // Komponent dla prawej strony - podgląd
-export default function Preview({ switchMode }: { switchMode?: () => void }) {
-  const { cvData, selectedJob, selectedTemplate, activeSection, showProjectsInPreview, setCvData } = useCV();
+export default function Preview({ 
+  switchMode, 
+  currentLanguage, 
+  setCurrentLanguage 
+}: { 
+  switchMode?: () => void; 
+  currentLanguage?: 'pl' | 'en';
+  setCurrentLanguage?: (lang: 'pl' | 'en') => void;
+}) {
+  const { cvData, selectedJob, selectedTemplate, activeSection, showProjectsInPreview, setCvData, fullPreviewMode, setFullPreviewMode } = useCV();
   const [zoom, setZoom] = useState(100); // Startowa wartość 100%
   const [scrollNeeded, setScrollNeeded] = useState(true);
   const [autoZoom, setAutoZoom] = useState(100);
-  const [language, setLanguage] = useState<'pl' | 'en'>('pl'); // Stan do przechowywania języka
+  const language = currentLanguage || 'pl'; // Używamy przekazywanego języka
   const [totalPages, setTotalPages] = useState(1); // Całkowita liczba stron
   const [measurementDone, setMeasurementDone] = useState(false); // Stan określający, czy pomiar został wykonany
   const [sectionsMap, setSectionsMap] = useState<{[key: string]: {
@@ -55,7 +66,9 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
   // Funkcja przełączająca język
   const toggleLanguage = () => {
     const newLanguage = language === 'pl' ? 'en' : 'pl';
-    setLanguage(newLanguage);
+    if (setCurrentLanguage) {
+      setCurrentLanguage(newLanguage);
+    }
     
     // Aktualizacja tytułów sekcji umiejętności przy zmianie języka
     // Sprawdzamy, czy użytkownik nie zmienił domyślnych wartości
@@ -67,7 +80,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
     const { technicalSectionTitle, softSectionTitle } = cvData.skills;
     
     // Tworzymy kopię aktualnych danych CV
-    const updatedCvData = { ...cvData };
+    let updatedCvData = { ...cvData };
     
     // Sprawdzamy, czy technicalSectionTitle ma domyślną wartość dla aktualnego języka
     if (technicalSectionTitle === defaultTitles[language].technical) {
@@ -81,9 +94,13 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
       updatedCvData.skills.softSectionTitle = defaultTitles[newLanguage].soft;
     }
     
+    // Tłumaczymy języki i poziomy
+    updatedCvData = translateLanguagesAndLevels(updatedCvData, language, newLanguage);
+    
     // Aktualizujemy dane CV tylko jeśli były jakieś zmiany
     if (updatedCvData.skills.technicalSectionTitle !== cvData.skills.technicalSectionTitle || 
-        updatedCvData.skills.softSectionTitle !== cvData.skills.softSectionTitle) {
+        updatedCvData.skills.softSectionTitle !== cvData.skills.softSectionTitle ||
+        JSON.stringify(updatedCvData.skills.languages) !== JSON.stringify(cvData.skills.languages)) {
       setCvData(updatedCvData);
     }
   };
@@ -507,6 +524,8 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
         switchMode={switchMode}
         printRef={printRef}
         cvData={cvData}
+        fullPreviewMode={fullPreviewMode}
+        setFullPreviewMode={setFullPreviewMode}
       />
 
       {/* Kontener główny ze scrollowaniem */}
@@ -568,6 +587,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
                   activeSection={activeSection}
                   showProjectsInPreview={showProjectsInPreview}
                   showJobTitle={cvData.showJobTitleInCV || false}
+                  fullPreviewMode={fullPreviewMode}
                 />
               </div>
             ))}
@@ -599,6 +619,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
             activeSection={activeSection}
             showProjectsInPreview={showProjectsInPreview}
             showJobTitle={cvData.showJobTitleInCV || false}
+            fullPreviewMode={fullPreviewMode}
           />
         </div>
       </div>
@@ -644,6 +665,7 @@ export default function Preview({ switchMode }: { switchMode?: () => void }) {
                 activeSection="summary" // Zawsze pokazuj wszystko dla wersji do druku
                 showProjectsInPreview={true} // Zawsze pokazuj projekty w wersji do druku
                 showJobTitle={cvData.showJobTitleInCV || false}
+                fullPreviewMode={fullPreviewMode}
               />
             </div>
           ))}

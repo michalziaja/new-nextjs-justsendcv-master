@@ -18,6 +18,8 @@ interface PreviewHeaderProps {
   switchMode?: () => void;
   printRef?: React.RefObject<HTMLDivElement | null>; // Akceptuje null
   cvData?: any; // Dodajemy dane CV
+  fullPreviewMode: boolean; // Dodajemy stan pełnego podglądu
+  setFullPreviewMode: (mode: boolean) => void; // Dodajemy funkcję do zmiany stanu
 }
 
 // Komponent nagłówka dla podglądu CV
@@ -32,7 +34,9 @@ const PreviewHeader: React.FC<PreviewHeaderProps> = ({
   isGeneratingPdf,
   switchMode,
   printRef,
-  cvData
+  cvData,
+  fullPreviewMode,
+  setFullPreviewMode
 }) => {
   // Stan do obsługi wysyłania emaila
   const [isSending, setIsSending] = useState(false);
@@ -251,6 +255,24 @@ const PreviewHeader: React.FC<PreviewHeaderProps> = ({
             <span className="hidden sm:inline">{language.toUpperCase()}</span>
             <span className="sm:hidden">{language.toUpperCase()}</span>
           </button>
+          
+          {/* Przycisk pełnego podglądu CV */}
+          <button
+            className={`flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center px-2 md:px-3 py-1 rounded-sm text-sm md:text-sm whitespace-nowrap transition-all duration-200 ${
+              fullPreviewMode 
+                ? 'bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white' 
+                : 'bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 hover:from-gray-300 hover:to-gray-400 dark:hover:from-gray-700 dark:hover:to-gray-800'
+            }`}
+            onClick={() => setFullPreviewMode(!fullPreviewMode)}
+            title={fullPreviewMode ? "Wróć do podglądu krok po kroku" : "Pokaż całe CV"}
+          >
+            <svg className="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={fullPreviewMode ? "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" : "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"} />
+            </svg>
+            <span className="hidden sm:inline">{fullPreviewMode ? 'Krok po kroku' : 'Pełny podgląd'}</span>
+            <span className="sm:hidden">{fullPreviewMode ? 'Krok' : 'Pełny'}</span>
+          </button>
+          
           {/* <div className="flex shadow-[2px_4px_10px_rgba(0,0,0,0.3)] items-center bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 rounded-sm px-3 py-1 text-sm">
             <span>{totalPages} {totalPages === 1 }</span> 
           </div> */}

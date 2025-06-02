@@ -4,6 +4,143 @@ import { Sparkles } from "lucide-react";
 import { CVData, useCV } from '../CVContext';
 import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
 
+// Mapy tłumaczeń dla języków i poziomów
+const languageTranslations: Record<'pl' | 'en', Record<string, string>> = {
+  pl: {
+    // Najpopularniejsze języki
+    'Polski': 'Polish',
+    'Angielski': 'English', 
+    'Niemiecki': 'German',
+    'Francuski': 'French',
+    'Hiszpański': 'Spanish',
+    'Włoski': 'Italian',
+    'Rosyjski': 'Russian',
+    'Chiński': 'Chinese',
+    'Japoński': 'Japanese',
+    'Koreański': 'Korean',
+    'Portugalski': 'Portuguese',
+    'Holenderski': 'Dutch',
+    'Szwedzki': 'Swedish',
+    'Norweski': 'Norwegian',
+    'Duński': 'Danish',
+    'Fiński': 'Finnish',
+    'Czeski': 'Czech',
+    'Słowacki': 'Slovak',
+    'Węgierski': 'Hungarian',
+    'Rumuński': 'Romanian',
+    'Bułgarski': 'Bulgarian',
+    'Chorwacki': 'Croatian',
+    'Serbski': 'Serbian',
+    'Ukraiński': 'Ukrainian',
+    'Turecki': 'Turkish',
+    'Arabski': 'Arabic',
+    'Hindi': 'Hindi',
+    'Tajski': 'Thai',
+    'Wietnamski': 'Vietnamese'
+  },
+  en: {
+    // Odwrotne mapowanie
+    'Polish': 'Polski',
+    'English': 'Angielski',
+    'German': 'Niemiecki', 
+    'French': 'Francuski',
+    'Spanish': 'Hiszpański',
+    'Italian': 'Włoski',
+    'Russian': 'Rosyjski',
+    'Chinese': 'Chiński',
+    'Japanese': 'Japoński',
+    'Korean': 'Koreański',
+    'Portuguese': 'Portugalski',
+    'Dutch': 'Holenderski',
+    'Swedish': 'Szwedzki',
+    'Norwegian': 'Norweski',
+    'Danish': 'Duński',
+    'Finnish': 'Fiński',
+    'Czech': 'Czeski',
+    'Slovak': 'Słowacki',
+    'Hungarian': 'Węgierski',
+    'Romanian': 'Rumuński',
+    'Bulgarian': 'Bułgarski',
+    'Croatian': 'Chorwacki',
+    'Serbian': 'Serbski',
+    'Ukrainian': 'Ukraiński',
+    'Turkish': 'Turecki',
+    'Arabic': 'Arabski',
+    'Hindi': 'Hindi',
+    'Thai': 'Tajski',
+    'Vietnamese': 'Wietnamski'
+  }
+};
+
+const levelTranslations: Record<'pl' | 'en', Record<string, string>> = {
+  pl: {
+    'A1 - Początkujący': 'A1 - Beginner',
+    'A2 - Podstawowy': 'A2 - Elementary',
+    'B1 - Średniozaawansowany': 'B1 - Intermediate',
+    'B2 - Wyższy średniozaawansowany': 'B2 - Upper-Intermediate',
+    'C1 - Zaawansowany': 'C1 - Advanced',
+    'C2 - Biegły': 'C2 - Proficient'
+  },
+  en: {
+    'A1 - Beginner': 'A1 - Początkujący',
+    'A2 - Elementary': 'A2 - Podstawowy',
+    'B1 - Intermediate': 'B1 - Średniozaawansowany',
+    'B2 - Upper-Intermediate': 'B2 - Wyższy średniozaawansowany',
+    'C1 - Advanced': 'C1 - Zaawansowany',
+    'C2 - Proficient': 'C2 - Biegły'
+  }
+};
+
+// Lista języków do wyboru (po polsku i angielsku)
+const availableLanguagesPL = [
+  'Angielski', 'Niemiecki', 'Francuski', 'Hiszpański', 'Włoski', 'Rosyjski',
+  'Chiński', 'Japoński', 'Koreański', 'Portugalski', 'Holenderski', 'Szwedzki',
+  'Norweski', 'Duński', 'Fiński', 'Czeski', 'Słowacki', 'Węgierski', 'Rumuński',
+  'Bułgarski', 'Chorwacki', 'Serbski', 'Ukraiński', 'Turecki', 'Arabski', 'Hindi',
+  'Tajski', 'Wietnamski'
+];
+
+const availableLanguagesEN = [
+  'English', 'German', 'French', 'Spanish', 'Italian', 'Russian',
+  'Chinese', 'Japanese', 'Korean', 'Portuguese', 'Dutch', 'Swedish',
+  'Norwegian', 'Danish', 'Finnish', 'Czech', 'Slovak', 'Hungarian', 'Romanian',
+  'Bulgarian', 'Croatian', 'Serbian', 'Ukrainian', 'Turkish', 'Arabic', 'Hindi',
+  'Thai', 'Vietnamese'
+];
+
+// Eksportujemy funkcję do tłumaczenia języków i poziomów
+export const translateLanguagesAndLevels = (cvData: CVData, fromLang: 'pl' | 'en', toLang: 'pl' | 'en'): CVData => {
+  if (fromLang === toLang) return cvData;
+  
+  const updatedLanguages = cvData.skills.languages.map(lang => {
+    let translatedLanguage = lang.language;
+    let translatedLevel = lang.level;
+    
+    // Tłumacz język
+    if (languageTranslations[fromLang][lang.language]) {
+      translatedLanguage = languageTranslations[fromLang][lang.language];
+    }
+    
+    // Tłumacz poziom
+    if (levelTranslations[fromLang][lang.level]) {
+      translatedLevel = levelTranslations[fromLang][lang.level];
+    }
+    
+    return {
+      language: translatedLanguage,
+      level: translatedLevel
+    };
+  });
+  
+  return {
+    ...cvData,
+    skills: {
+      ...cvData.skills,
+      languages: updatedLanguages
+    }
+  };
+};
+
 interface SkillsSectionProps {
   cvData: CVData;
   setCvData: React.Dispatch<React.SetStateAction<CVData>>;
@@ -13,6 +150,7 @@ interface SkillsSectionProps {
   addLanguage: () => void;
   onBack: () => void;
   onNext: () => void;
+  currentLanguage?: 'pl' | 'en'; // Dodajemy informację o aktualnym języku interfejsu
 }
 
 const SkillsSection: React.FC<SkillsSectionProps> = ({
@@ -23,7 +161,8 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
   updateLanguage,
   addLanguage,
   onBack,
-  onNext
+  onNext,
+  currentLanguage
 }) => {
   const { jobAnalysis, selectedJob } = useCV();
   
@@ -573,13 +712,18 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
             <div className="border rounded-lg p-3 space-y-2">
               {cvData.skills.languages.map((lang, index) => (
                 <div key={index} className="grid grid-cols-2 gap-2 mb-2">
-                  <input 
-                    type="text" 
+                  <select 
                     className="border rounded-md px-3 py-2" 
-                    placeholder="Język"
                     value={lang.language}
                     onChange={(e) => updateLanguage(index, 'language', e.target.value)}
-                  />
+                  >
+                    <option value="">Wybierz język</option>
+                    {currentLanguage === 'pl' ? availableLanguagesPL.map((language) => (
+                      <option key={language} value={language}>{language}</option>
+                    )) : availableLanguagesEN.map((language) => (
+                      <option key={language} value={language}>{language}</option>
+                    ))}
+                  </select>
                   <select 
                     className="border rounded-md px-3 py-2"
                     value={lang.level}
@@ -592,6 +736,13 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                     <option value="B2 - Wyższy średniozaawansowany">B2 - Wyższy średniozaawansowany</option>
                     <option value="C1 - Zaawansowany">C1 - Zaawansowany</option>
                     <option value="C2 - Biegły">C2 - Biegły</option>
+                    {/* Opcje w języku angielskim */}
+                    <option value="A1 - Beginner">A1 - Beginner</option>
+                    <option value="A2 - Elementary">A2 - Elementary</option>
+                    <option value="B1 - Intermediate">B1 - Intermediate</option>
+                    <option value="B2 - Upper-Intermediate">B2 - Upper-Intermediate</option>
+                    <option value="C1 - Advanced">C1 - Advanced</option>
+                    <option value="C2 - Proficient">C2 - Proficient</option>
                   </select>
                 </div>
               ))}

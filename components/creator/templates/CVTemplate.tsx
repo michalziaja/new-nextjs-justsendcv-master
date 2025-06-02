@@ -40,6 +40,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
   onSectionsUpdate,
   activeSection = 'summary', // Domyślnie ustawiamy "summary", aby pokazać wszystkie sekcje
   showProjectsInPreview = false,
+  fullPreviewMode = false, // Nowy parametr dla trybu pełnego podglądu
   showJobTitle = false // Domyślnie nie pokazujemy adnotacji o stanowisku
 }) => {
   const t = translations[language];
@@ -49,7 +50,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
   // Pobierz listę sekcji, które powinny być widoczne
   const visibleSections = isMeasurement ? 
     ['header', 'profile', 'experience', 'projects', 'education', 'courses', 'skills', 'rodo'] : // Podczas pomiaru pokazujemy wszystkie
-    getVisibleSections(activeSection, isPrintVersion || (activeSection !== 'experience' || showProjectsInPreview));
+    getVisibleSections(activeSection, isPrintVersion || (activeSection !== 'experience' || showProjectsInPreview), fullPreviewMode);
 
   // Obliczanie podstawowych rozmiarów czcionek
   const baseFontSizes = {

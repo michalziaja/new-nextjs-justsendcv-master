@@ -21,7 +21,7 @@ import SummarySection from './sections/SummarySection';
 import ProjectsSection from './sections/ProjectsSection';
 
 // Komponent dla lewej strony - kreator
-export default function Creator({ switchMode }: { switchMode?: () => void }) {
+export default function Creator({ switchMode, currentLanguage = 'pl' }: { switchMode?: () => void; currentLanguage?: 'pl' | 'en' }) {
   // Używamy kontekstu CV
   const {
     cvData,
@@ -418,6 +418,7 @@ export default function Creator({ switchMode }: { switchMode?: () => void }) {
             addLanguage={addLanguage}
             onBack={() => setActiveSection('courses')}
             onNext={() => setActiveSection('summary')}
+            currentLanguage={currentLanguage}
           />
         );
         
