@@ -94,90 +94,10 @@ export const colorPalette = {
   textLight: 'rgb(107, 114, 128)' // gray-500
 };
 
-// Stałe wymiary i konwersje - poprawione dla lepszej synchronizacji
-export const A4_WIDTH_MM = 210;
-export const A4_HEIGHT_MM = 297;
-export const MM_TO_PX = 3.779527559; // Dokładna konwersja przy 96 DPI
-export const PX_TO_MM = 0.26458333; // Odwrotna konwersja
-export const BASE_FONT_SIZE_PX = 16; // Bazowy rozmiar czcionki w pikselach
-
-// Funkcja do normalizacji jednostek CSS dla lepszej zgodności PDF
-export const normalizeUnit = (value: string | number, targetUnit: 'px' | 'mm' | 'pt' = 'px'): string => {
-  if (typeof value === 'number') {
-    return `${value}px`;
-  }
-  
-  if (!value || typeof value !== 'string') {
-    return '0px';
-  }
-  
-  const numericValue = parseFloat(value);
-  if (isNaN(numericValue)) {
-    return '0px';
-  }
-  
-  // Rozpoznanie jednostki
-  if (value.includes('mm')) {
-    if (targetUnit === 'px') return `${numericValue * MM_TO_PX}px`;
-    if (targetUnit === 'mm') return value;
-    if (targetUnit === 'pt') return `${numericValue * 2.834645669}pt`;
-  } else if (value.includes('px')) {
-    if (targetUnit === 'px') return value;
-    if (targetUnit === 'mm') return `${numericValue * PX_TO_MM}mm`;
-    if (targetUnit === 'pt') return `${numericValue * 0.75}pt`;
-  } else if (value.includes('rem')) {
-    const pxValue = numericValue * BASE_FONT_SIZE_PX;
-    if (targetUnit === 'px') return `${pxValue}px`;
-    if (targetUnit === 'mm') return `${pxValue * PX_TO_MM}mm`;
-    if (targetUnit === 'pt') return `${pxValue * 0.75}pt`;
-  } else if (value.includes('em')) {
-    const pxValue = numericValue * BASE_FONT_SIZE_PX;
-    if (targetUnit === 'px') return `${pxValue}px`;
-    if (targetUnit === 'mm') return `${pxValue * PX_TO_MM}mm`;
-    if (targetUnit === 'pt') return `${pxValue * 0.75}pt`;
-  } else if (value.includes('pt')) {
-    if (targetUnit === 'px') return `${numericValue * 1.333333}px`;
-    if (targetUnit === 'mm') return `${numericValue * 0.352777778}mm`;
-    if (targetUnit === 'pt') return value;
-  }
-  
-  // Jeśli nie rozpoznano jednostki, zakładamy px
-  return `${numericValue}px`;
-};
-
-// Funkcja do optymalizacji stylów dla PDF
-export const optimizeStylesForPDF = (styles: Record<string, any>): Record<string, any> => {
-  const optimizedStyles: Record<string, any> = {};
-  
-  for (const [key, value] of Object.entries(styles)) {
-    if (typeof value === 'string') {
-      // Normalizacja jednostek dla marginesów i paddingów
-      if (key.includes('margin') || key.includes('padding') || key.includes('width') || key.includes('height')) {
-        optimizedStyles[key] = normalizeUnit(value, 'px');
-      }
-      // Normalizacja fontSizes
-      else if (key.includes('fontSize') || key === 'fontSize') {
-        optimizedStyles[key] = normalizeUnit(value, 'px');
-      }
-      // Pozostałe wartości bez zmian
-      else {
-        optimizedStyles[key] = value;
-      }
-    } else if (typeof value === 'object' && value !== null) {
-      // Rekurencyjne przetwarzanie zagnieżdżonych obiektów
-      optimizedStyles[key] = optimizeStylesForPDF(value);
-    } else {
-      optimizedStyles[key] = value;
-    }
-  }
-  
-  return optimizedStyles;
-};
-
-// Rozmiary czcionek - z normalizacją jednostek dla lepszej zgodności
+// Rozmiary czcionek - centralne miejsce do konfiguracji
 export const fontSizes = {
   base: '11px',          // Podstawowy rozmiar dokumentu
-  nameHeader: '28px',    // Imię i nazwisko
+  nameHeader: '35px',    // Imię i nazwisko
   sectionHeader: '18px', // Nagłówki sekcji
   contactInfo: '12px',   // Informacje kontaktowe
   dates: '13px',         // Daty
@@ -189,7 +109,7 @@ export const fontSizes = {
   rodoText: '9px'        // Klauzula RODO
 };
 
-// Marginesy i odstępy - z normalizacją jednostek
+// Marginesy i odstępy - centralne miejsce do konfiguracji
 export const spacing = {
   // Marginesy dla całego dokumentu
   document: {
@@ -245,6 +165,11 @@ export const spacing = {
     borderWidth: '1px',           // Szerokość obramowania RODO
   }
 };
+
+// Stałe wymiary i konwersje
+export const A4_WIDTH_MM = 210;
+export const A4_HEIGHT_MM = 297;
+export const MM_TO_PX = 3.779;
 
 // Funkcja pomocnicza do formatowania daty
 export const formatDate = (dateString: string, language: 'pl' | 'en' = 'pl') => {
