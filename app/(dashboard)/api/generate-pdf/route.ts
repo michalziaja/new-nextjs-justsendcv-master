@@ -193,7 +193,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Przygotuj pełną treść HTML dokumentu
+    // Przygotuj pełną treść HTML dokumentu z ulepszonymi stylami dla PDF
     const fullHtml = `
       <!DOCTYPE html>
       <html>
@@ -204,39 +204,85 @@ export async function POST(request: NextRequest) {
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
           <style>
             ${cssStyles}
+            
+            /* Dodatkowe style dla poprawy zgodności PDF */
             @page {
               size: A4;
               margin: 0;
               padding: 0;
             }
+            
             html {
               margin: 0;
               padding: 0;
               height: 100%;
+              font-size: 16px; /* Bazowy rozmiar czcionki dla jednostek rem/em */
             }
+            
             body {
               margin: 0;
               padding: 0;
               -webkit-print-color-adjust: exact;
               print-color-adjust: exact;
+              color-adjust: exact;
               font-family: 'Roboto', sans-serif;
               line-height: 1.5;
               min-height: 100%;
               position: relative;
+              width: 210mm; /* Explicite ustawiamy szerokość A4 */
+              background-color: white;
             }
+            
             * {
               box-sizing: border-box;
               margin: 0;
               padding: 0;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
             }
+            
             #cv-container {
               position: relative;
               min-height: 100%;
-              
+              width: 100%;
             }
+            
             p {
               margin: 0;
               padding: 0;
+              line-height: inherit;
+            }
+            
+            /* Poprawa renderowania flexbox w PDF */
+            [style*="display: flex"] {
+              display: -webkit-flex !important;
+              display: flex !important;
+            }
+            
+            /* Poprawa renderowania kolorów tła */
+            [style*="background"] {
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+              color-adjust: exact !important;
+            }
+            
+            /* Stabilizacja borderów */
+            [style*="border"] {
+              border-collapse: separate;
+              border-spacing: 0;
+            }
+            
+            /* Poprawa renderowania obrazów */
+            img {
+              max-width: 100%;
+              height: auto;
+              display: block;
+            }
+            
+            /* Zapobieganie łamaniu wierszy w niewłaściwych miejscach */
+            .no-break {
+              page-break-inside: avoid;
+              break-inside: avoid;
             }
           </style>
         </head>
@@ -255,12 +301,25 @@ export async function POST(request: NextRequest) {
     // W środowisku produkcyjnym używamy wersji serverless, lokalnie używamy normalnej instalacji
     const executablePath = await chromium.executablePath();
     
-    // Uruchom Puppeteer z odpowiednimi opcjami dla środowisk serverless
+    // Uruchom Puppeteer z ulepszonymi opcjami dla lepszej zgodności
     const browser = await puppeteer.launch({ 
-      args: chromium.args,
-      defaultViewport: chromium.defaultViewport,
+      args: [
+        ...chromium.args,
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-web-security',
+        '--font-render-hinting=none', // Lepsze renderowanie czcionek
+        '--force-color-profile=srgb', // Stabilny profil kolorów
+        '--disable-font-subpixel-positioning' // Stabilne pozycjonowanie czcionek
+      ],
+      defaultViewport: {
+        width: 794, // A4 width w pikselach (210mm * 3.779)
+        height: 1123, // A4 height w pikselach (297mm * 3.779)
+        deviceScaleFactor: 1, // Stały współczynnik skali
+      },
       executablePath: executablePath,
-      headless: true, // lub chromium.headless
+      headless: true,
     }).catch(err => {
       console.error("Błąd podczas uruchamiania przeglądarki:", err);
       throw err;
@@ -274,23 +333,48 @@ export async function POST(request: NextRequest) {
       throw err;
     });
     
+    // Ustawienia strony dla lepszej zgodności
+    await page.setViewport({
+      width: 794,
+      height: 1123,
+      deviceScaleFactor: 1,
+    });
+    
+    // Emulacja mediów druku
+    await page.emulateMediaType('print');
+    
     console.log("Strona utworzona, ustawianie zawartości HTML...");
     
-    // Ustaw zawartość strony
-    await page.setContent(fullHtml, { waitUntil: 'networkidle0' }).catch(err => {
+    // Ustaw zawartość strony z dłuższym timeout
+    await page.setContent(fullHtml, { 
+      waitUntil: ['networkidle0', 'domcontentloaded'],
+      timeout: 30000 
+    }).catch(err => {
       console.error("Błąd podczas ustawiania zawartości strony:", err);
       browser.close();
       throw err;
     });
     
+    // Dodaj krótkie opóźnienie dla stabilizacji renderowania
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
     console.log("Zawartość HTML ustawiona, generowanie PDF...");
     
-    // Konfiguracja PDF
+    // Ulepszona konfiguracja PDF z lepszymi marginami
     const pdfConfig = {
-      format: 'A4',
+      format: 'A4' as const,
       printBackground: true,
-      margin: { top: spacing.document.paddingTop, right: '0', bottom: '0', left: '0' },
+      margin: { 
+        top: '0mm', 
+        right: '0mm', 
+        bottom: '0mm', 
+        left: '0mm' 
+      },
       preferCSSPageSize: true,
+      displayHeaderFooter: false,
+      scale: 1, // Stała skala 1:1
+      width: '210mm', // Explicite ustawiamy wymiary A4
+      height: '297mm',
       ...options
     };
     
@@ -318,6 +402,7 @@ export async function POST(request: NextRequest) {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="CV_${sanitizedFilename}.pdf"`,
+        'Cache-Control': 'no-cache', // Zapobiegamy cache'owaniu
       },
     });
   } catch (error) {

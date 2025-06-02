@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IoClose } from "react-icons/io5";
 import AdvancedFormatting from '../AdvancedFormatting';
 import { CVData, useCV } from '../CVContext'; // Zakładamy, że typ CVData jest zdefiniowany w CVContext
-import { fontSizes, spacing } from '../templates/TemplateStyles'; // Importujemy domyślne style
+import { fontSizes, spacing, optimizeStylesForPDF, normalizeUnit } from '../templates/TemplateStyles'; // Importujemy domyślne style i funkcje
 
 interface SummarySectionProps {
   cvData: CVData;
@@ -76,10 +76,7 @@ const SummarySection: React.FC<SummarySectionProps> = ({
       const shouldOptimizeForOnePage = contentLength < 2000;
       const shouldOptimizeForTwoPages = contentLength >= 2000 && contentLength < 4000;
       
-      // Bazowe style do modyfikacji
-      const currentFontSizes = cvData.customStyles?.fontSizes || {};
-      const currentSpacing = cvData.customStyles?.spacing || {};
-      
+      // Bazowe style do modyfikacji - z normalizacją jednostek
       let optimizedFontSizes = { ...fontSizes };
       let optimizedSpacing = { ...spacing };
       
@@ -87,17 +84,17 @@ const SummarySection: React.FC<SummarySectionProps> = ({
         // Zwiększenie czcionek aby lepiej wypełnić jedną stronę
         optimizedFontSizes = {
           ...optimizedFontSizes,
-          base: '12px',          // +1px
-          nameHeader: '32px',    // +4px
-          sectionHeader: '20px', // +2px
-          contactInfo: '13px',   // +1px
-          dates: '14px',         // +1px
-          position: '14px',      // +1px
-          company: '13px',       // +1px
-          description: '12px',   // +1px
-          profileText: '13px',   // +1px
-          tagText: '13px',       // +1px
-          rodoText: '10px'       // +1px
+          base: normalizeUnit('12px'),          // +1px
+          nameHeader: normalizeUnit('32px'),    // +4px
+          sectionHeader: normalizeUnit('20px'), // +2px
+          contactInfo: normalizeUnit('13px'),   // +1px
+          dates: normalizeUnit('14px'),         // +1px
+          position: normalizeUnit('14px'),      // +1px
+          company: normalizeUnit('13px'),       // +1px
+          description: normalizeUnit('12px'),   // +1px
+          profileText: normalizeUnit('13px'),   // +1px
+          tagText: normalizeUnit('13px'),       // +1px
+          rodoText: normalizeUnit('10px')       // +1px
         };
         
         // Zwiększenie odstępów dla lepszego rozmieszczenia
@@ -105,19 +102,19 @@ const SummarySection: React.FC<SummarySectionProps> = ({
           ...optimizedSpacing,
           sections: {
             ...optimizedSpacing.sections,
-            margin: '28px', // +4px
+            margin: normalizeUnit('28px'), // +4px
           },
           sectionSpacing: {
             ...optimizedSpacing.sectionSpacing,
-            profile: '28px',    // +4px
-            experience: '28px', // +4px
-            education: '28px',  // +4px
-            courses: '28px',    // +4px
-            skills: '28px',     // +4px
+            profile: normalizeUnit('28px'),    // +4px
+            experience: normalizeUnit('28px'), // +4px
+            education: normalizeUnit('28px'),  // +4px
+            courses: normalizeUnit('28px'),    // +4px
+            skills: normalizeUnit('28px'),     // +4px
           },
           elements: {
             ...optimizedSpacing.elements,
-            itemMargin: '20px', // +4px
+            itemMargin: normalizeUnit('20px'), // +4px
           }
         };
         
@@ -125,10 +122,10 @@ const SummarySection: React.FC<SummarySectionProps> = ({
         // Lekkie zmniejszenie czcionek aby lepiej rozłożyć treść na dwie strony
         optimizedFontSizes = {
           ...optimizedFontSizes,
-          base: '10.5px',        // -0.5px
-          sectionHeader: '17px', // -1px
-          description: '10.5px', // -0.5px
-          profileText: '11.5px', // -0.5px
+          base: normalizeUnit('10.5px'),        // -0.5px
+          sectionHeader: normalizeUnit('17px'), // -1px
+          description: normalizeUnit('10.5px'), // -0.5px
+          profileText: normalizeUnit('11.5px'), // -0.5px
         };
         
         // Zmniejszenie odstępów aby pomieścić więcej treści
@@ -136,19 +133,19 @@ const SummarySection: React.FC<SummarySectionProps> = ({
           ...optimizedSpacing,
           sections: {
             ...optimizedSpacing.sections,
-            margin: '20px', // -4px
+            margin: normalizeUnit('20px'), // -4px
           },
           sectionSpacing: {
             ...optimizedSpacing.sectionSpacing,
-            profile: '20px',    // -4px
-            experience: '20px', // -4px
-            education: '20px',  // -4px
-            courses: '20px',    // -4px
-            skills: '20px',     // -4px
+            profile: normalizeUnit('20px'),    // -4px
+            experience: normalizeUnit('20px'), // -4px
+            education: normalizeUnit('20px'),  // -4px
+            courses: normalizeUnit('20px'),    // -4px
+            skills: normalizeUnit('20px'),     // -4px
           },
           elements: {
             ...optimizedSpacing.elements,
-            itemMargin: '12px', // -4px
+            itemMargin: normalizeUnit('12px'), // -4px
           }
         };
         
@@ -156,41 +153,46 @@ const SummarySection: React.FC<SummarySectionProps> = ({
         // Dla bardzo długich CV - agresywne zmniejszenie
         optimizedFontSizes = {
           ...optimizedFontSizes,
-          base: '10px',          // -1px
-          sectionHeader: '16px', // -2px
-          description: '10px',   // -1px
-          profileText: '11px',   // -1px
-          tagText: '11px',       // -1px
+          base: normalizeUnit('10px'),          // -1px
+          sectionHeader: normalizeUnit('16px'), // -2px
+          description: normalizeUnit('10px'),   // -1px
+          profileText: normalizeUnit('11px'),   // -1px
+          tagText: normalizeUnit('11px'),       // -1px
         };
         
         optimizedSpacing = {
           ...optimizedSpacing,
           sections: {
             ...optimizedSpacing.sections,
-            margin: '16px', // -8px
+            margin: normalizeUnit('16px'), // -8px
           },
           sectionSpacing: {
             ...optimizedSpacing.sectionSpacing,
-            profile: '16px',    // -8px
-            experience: '16px', // -8px
-            education: '16px',  // -8px
-            courses: '16px',    // -8px
-            skills: '16px',     // -8px
+            profile: normalizeUnit('16px'),    // -8px
+            experience: normalizeUnit('16px'), // -8px
+            education: normalizeUnit('16px'),  // -8px
+            courses: normalizeUnit('16px'),    // -8px
+            skills: normalizeUnit('16px'),     // -8px
           },
           elements: {
             ...optimizedSpacing.elements,
-            itemMargin: '10px', // -6px
+            itemMargin: normalizeUnit('10px'), // -6px
           }
         };
       }
+      
+      // Optymalizacja stylów dla lepszej zgodności z PDF
+      const optimizedCustomStyles = {
+        fontSizes: optimizeStylesForPDF(optimizedFontSizes),
+        spacing: optimizeStylesForPDF(optimizedSpacing)
+      };
       
       // Zastosowanie nowych stylów
       setCvData({
         ...cvData,
         customStyles: {
           ...cvData.customStyles,
-          fontSizes: optimizedFontSizes,
-          spacing: optimizedSpacing
+          ...optimizedCustomStyles
         }
       });
       
@@ -231,8 +233,11 @@ const SummarySection: React.FC<SummarySectionProps> = ({
               <h4 className="font-medium text-purple-800 mb-3">✨ Inteligentne formatowanie</h4>
               <p className="text-sm text-purple-700 mb-3">
                 Automatycznie dostosuj czcionki i marginesy aby optymalnie wypełnić strony CV. 
-                Funkcja analizuje ilość treści i inteligentnie formatuje dokument.
+                Funkcja analizuje ilość treści, inteligentnie formatuje dokument i synchronizuje wygląd między podglądem a PDF.
               </p>
+              <div className="text-xs text-purple-600 mb-3 bg-purple-100 p-2 rounded border border-purple-200">
+                <strong>✅ Nowe ulepszenia:</strong> Poprawiona zgodność formatowania między podglądem aplikacji a wygenerowanym PDF!
+              </div>
               <button 
                 className="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white rounded-md transition text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 onClick={handleAutoFormat}
