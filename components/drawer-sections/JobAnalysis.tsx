@@ -232,10 +232,34 @@ export function JobAnalysis({ application, isDesktop, onKeywordsFound }: JobAnal
   const renderAnalysisSection = (title: string, items: string[]) => {
     if (!items || items.length === 0) return null;
     
+    // Funkcja zwracająca kolor plakietki w zależności od tytułu sekcji
+    const getBadgeColor = (sectionTitle: string) => {
+      switch(sectionTitle) {
+        case "OBOWIĄZKI I ZADANIA":
+          return "bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800";
+        case "UMIEJĘTNOŚCI":
+          return "bg-green-100 text-green-800 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800";
+        case "TECHNOLOGIE / NARZĘDZIA":
+          return "bg-purple-100 text-purple-800 border-purple-200 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800";
+        case "DOŚWIADCZENIE":
+          return "bg-orange-100 text-orange-800 border-orange-200 dark:bg-orange-900/20 dark:text-orange-300 dark:border-orange-800";
+        case "WYKSZTAŁCENIE / CERTYFIKATY":
+          return "bg-cyan-100 text-cyan-800 border-cyan-200 dark:bg-cyan-900/20 dark:text-cyan-300 dark:border-cyan-800";
+        case "JĘZYKI OBCE":
+          return "bg-pink-100 text-pink-800 border-pink-200 dark:bg-pink-900/20 dark:text-pink-300 dark:border-pink-800";
+        case "INNE WYMAGANIA":
+          return "bg-gray-100 text-gray-800 border-gray-200 dark:bg-gray-900/20 dark:text-gray-300 dark:border-gray-800";
+        default:
+          return "bg-gray-100 text-gray-800 border-gray-200 dark:bg-gray-900/20 dark:text-gray-300 dark:border-gray-800";
+      }
+    };
+    
     if (items.length === 1 && (items[0].toLowerCase().includes("brak informacji") || items[0].toLowerCase().includes("błąd analizy"))) {
       return (
         <div className="space-y-2 mb-4">
-          <h4 className="font-medium text-sm">{title}:</h4>
+          <span className={`inline-flex items-center px-3 py-1 rounded-md text-xs font-medium border ${getBadgeColor(title)}`}>
+            {title}
+          </span>
           <p className="text-sm text-muted-foreground pl-3 italic">{items[0]}</p>
         </div>
       );
@@ -243,7 +267,9 @@ export function JobAnalysis({ application, isDesktop, onKeywordsFound }: JobAnal
     
     return (
       <div className="space-y-2 mb-4">
-        <h4 className="font-medium text-sm">{title}:</h4>
+        <span className={`inline-flex items-center px-3 py-1 rounded-md text-xs font-medium border ${getBadgeColor(title)}`}>
+          {title}
+        </span>
         <ul className="list-disc pl-5 space-y-1">
           {items.map((item, index) => (
             <li key={index} className="text-sm">{item}</li>

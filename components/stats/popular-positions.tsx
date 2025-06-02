@@ -27,7 +27,7 @@ export function PopularPositions() {
             </div>
           </div>
         ) : positions.length > 0 ? (
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap justify-center items-center p-2">
             {positions.map((position, index) => (
               <Badge 
                 key={index} 
@@ -36,11 +36,12 @@ export function PopularPositions() {
                   backgroundColor: `${position.color}20`, 
                   borderColor: position.color,
                   fontSize: `${Math.min(9 + position.count * 2, (position.count >= 4 ? 17 : 15))}px`,
-                  padding: '0.25rem 0.4rem'
+                  padding: '0.25rem 0.4rem',
+                  margin: '0.25rem'
                 }}
                 className="text-foreground font-medium capitalize"
               >
-                {position.title} ({position.count})
+                {position.title}
               </Badge>
             ))}
           </div>

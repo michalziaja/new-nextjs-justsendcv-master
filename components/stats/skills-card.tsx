@@ -31,7 +31,7 @@ export function SkillsCard({ skills, isLoading }: { skills: SkillItem[], isLoadi
             </div>
           </div>
         ) : skills.length > 0 ? (
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap justify-center items-center p-2">
             {skills.map((skill, index) => (
               <Badge 
                 key={index} 
@@ -40,11 +40,12 @@ export function SkillsCard({ skills, isLoading }: { skills: SkillItem[], isLoadi
                   backgroundColor: `${skill.color}20`, 
                   borderColor: skill.color,
                   fontSize: `${Math.min(6 + skill.count * 1.5, (skill.count >= 4 ? 17 : 15))}px`,
-                  padding: '0.25rem 0.4rem'
+                  padding: '0.25rem 0.4rem',
+                  margin: '0.25rem'
                 }}
                 className="text-foreground font-medium"
               >
-                {skill.name} ({skill.count})
+                {skill.name}
               </Badge>
             ))}
           </div>

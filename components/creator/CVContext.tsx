@@ -16,7 +16,7 @@ interface UserProfile {
   email?: string;
   phone?: string;
   address?: string;
-  birth_year?: string;
+  age?: string;
   about_me?: string;
   social_links?: string;
   avatar?: string; // Dodajemy pole avatar, aby pobrać URL zdjęcia
@@ -55,12 +55,18 @@ export interface SocialLink {
 
 // Definicja interfejsu danych CV
 export interface CVData {
+  cvName?: string; // Nazwa CV
   personalData: {
     firstName: string;
     lastName: string;
     email: string;
     phone: string;
     address: string;
+    age?: string; // Rok urodzenia do obliczania wieku
+    showAgeInCV?: boolean; // Czy pokazywać wiek w CV
+    showEmailInCV?: boolean; // Czy pokazywać email w CV
+    showPhoneInCV?: boolean; // Czy pokazywać telefon w CV  
+    showAddressInCV?: boolean; // Czy pokazywać adres w CV
     socialLinks?: SocialLink[]; // Dodajemy pole na linki społecznościowe
     photoUrl?: string; // URL do zdjęcia profilowego
     includePhotoInCV?: boolean; // Czy dołączyć zdjęcie do CV
@@ -163,6 +169,11 @@ const initialCVData: CVData = {
     email: mockUserProfile.email,
     phone: mockUserProfile.phone,
     address: mockUserProfile.address,
+    age: undefined, // Domyślnie brak roku urodzenia
+    showAgeInCV: false, // Domyślnie nie pokazujemy wieku w CV
+    showEmailInCV: true, // Domyślnie pokazujemy email w CV
+    showPhoneInCV: true, // Domyślnie pokazujemy telefon w CV
+    showAddressInCV: true, // Domyślnie pokazujemy adres w CV
     socialLinks: [], // Inicjalizacja pustą tablicą
     photoUrl: undefined, // Inicjalizacja URL zdjęcia
     includePhotoInCV: false, // Domyślnie nie dołączamy zdjęcia
@@ -761,6 +772,7 @@ export function CVProvider({ children }: { children: ReactNode }) {
               email: profileData.email || prevCvData.personalData.email,
               phone: profileData.phone || prevCvData.personalData.phone,
               address: profileData.address || prevCvData.personalData.address,
+              age: profileData.age || prevCvData.personalData.age,
               socialLinks: newSocialLinks,
               photoUrl: profileData.avatar || prevCvData.personalData.photoUrl,
             }

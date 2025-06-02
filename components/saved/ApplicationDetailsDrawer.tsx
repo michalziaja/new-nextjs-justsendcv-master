@@ -111,7 +111,7 @@ export function ApplicationDetailsDrawer({
       <div className="flex-1 min-h-0">
         <div className={`${isDesktop ? 'px-4' : 'px-2'} py-2 h-full`}>
           {/* Górna sekcja - podstawowe informacje */}
-          <div className="mb-6">
+          <div className="mb-8">
             <BasicInfo 
               application={application} 
               isDesktop={isDesktop} 
@@ -119,15 +119,15 @@ export function ApplicationDetailsDrawer({
             />
           </div>
           {/* Separator */}
-          <div className="w-full h-px bg-border mb-6"></div>
+          {/* <div className="w-full h-px bg-gray-400 dark:bg-gray-700 mb-6"></div> */}
           {/* Status aplikacji */}
-          <div className="mb-6">
+          <div className="mb-4">
             <ApplicationStatus 
               application={application} 
               onStatusChange={onStatusChange}
             />
           </div>
-          <div className="w-full h-px bg-border mb-6"></div>
+          <div className="w-full h-px bg-gray-400 dark:bg-gray-700 mb-6"></div>
           
 
           {/* Dolna sekcja - analiza i opis */}
@@ -183,7 +183,7 @@ export function ApplicationDetailsDrawer({
       <>
         <Drawer open={isOpen} onOpenChange={onClose} direction="right">
           <DrawerContent className="w-[1100px] !max-w-[1100px] bg-white dark:bg-background ml-auto h-full overflow-hidden flex flex-col">
-            <DrawerHeader className="border-b pb-4 z-10 flex flex-row items-center justify-between">
+            <DrawerHeader className="pb-4 z-10 flex flex-row items-center justify-between">
               <div className="flex items-center">
                 {/* Przycisk poprzednia oferta */}
                 {hasPreviousApplication && (

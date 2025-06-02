@@ -49,6 +49,21 @@ const SummarySection: React.FC<SummarySectionProps> = ({
               <p>{templates.find(t => t.id === selectedTemplate)?.name}</p>
             </div>
 
+            {/* Sekcja nazwy CV */}
+            <div className="mt-6 border rounded-lg p-4">
+              <h4 className="font-medium text-gray-800 mb-3">Nazwa CV</h4>
+              <input
+                type="text"
+                className="w-full border rounded-md px-3 py-2"
+                placeholder="Wpisz nazwę swojego CV..."
+                value={cvData.cvName || ''}
+                onChange={(e) => setCvData({...cvData, cvName: e.target.value})}
+              />
+              <p className="text-sm text-gray-500 mt-1">
+                Ta nazwa będzie widoczna w panelu podglądu i przy pobieraniu CV.
+              </p>
+            </div>
+
             {/* Sekcja Klauzuli RODO */}
             <div className="mt-6 border rounded-lg p-4">
               <h4 className="font-medium text-gray-800 mb-3">Klauzula RODO</h4>

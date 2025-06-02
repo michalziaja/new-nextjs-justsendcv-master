@@ -65,7 +65,7 @@ export default function DokumentEditor() {
   };
   
   const getTextAreaClassName = () => {
-    let className = "min-h-[400px] border-0 ";
+    let className = "h-[265px] border-0 ";
     
     if (isBold) className += "font-bold ";
     if (isItalic) className += "italic ";
@@ -78,7 +78,7 @@ export default function DokumentEditor() {
   };
   
   return (
-    <Card className="p-4 shadow-[2px_4px_10px_rgba(0,0,0,0.3)] rounded-sm">
+    <Card className="p-4 h-[55vh] shadow-[2px_4px_10px_rgba(0,0,0,0.3)] rounded-sm">
       <div className="mb-4 flex justify-between items-center">
         <h2 className="text-xl font-semibold">Wygenerowana wiadomość</h2>
         <div className="flex gap-2">
@@ -228,7 +228,7 @@ export default function DokumentEditor() {
       
       {/* Wskazówka na dole */}
       {generatedText && (
-        <div className="mt-4 p-3 bg-blue-50 border border-blue-100 rounded">
+        <div className="mt-0 p-3 bg-blue-50 border border-blue-100 rounded">
           <p className="text-xs text-blue-700">
             <strong>Wskazówka:</strong> Możesz edytować tekst wiadomości, dostosowując go do swoich potrzeb. Nie zapomnij personalizować wiadomości przed wysłaniem!
           </p>

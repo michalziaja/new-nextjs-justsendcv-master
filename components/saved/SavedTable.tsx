@@ -558,13 +558,15 @@ export function SavedTable() {
           onSearchChange={handleSearchChange}
         />
         <Button 
-          variant="ghost" 
-          className="mt-0 mr-1 border-1 text-sm md:text-sm rounded-md bg-white dark:bg-slate-900 border-gray-200 dark:border-gray-700 transition-all duration-200 hover:scale-105 hover:bg-white dark:hover:bg-slate-900 shadow-[2px_4px_10px_rgba(0,0,0,0.3)]"
+          className="bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-700 
+            text-white border-0 hover:from-blue-500 hover:to-blue-700 
+            transition-all duration-200 hover:scale-102 active:scale-100 
+            shadow-md rounded-md text-sm md:text-sm mt-0 mr-1 h-8 w-32"
           onClick={handleRefresh}
         >
           <RefreshCw 
             className={cn(
-              "ml-1 mr-1 h-4 w-4 transition-transform duration-700",
+              " mr-1 h-4 w-4 text-white transition-transform duration-700",
               isRefreshing && "animate-spin"
             )} 
           />
@@ -578,7 +580,7 @@ export function SavedTable() {
       </div>
 
       {/* Tabela */}
-      <div className="rounded-md border-2 bg-white border-gray-300 ml-0 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
+      <div className="rounded-b-md -mt-2 border-1 bg-white border-gray-300 ml-0 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
         <Table>
           <TableHeader className="sticky top-0 bg-gray-50 dark:bg-background z-10">
             <TableRow>

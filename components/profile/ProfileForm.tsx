@@ -29,8 +29,7 @@ interface UserProfile {
   prefix?: string;
   first_name?: string;
   last_name?: string;
-  birth_date?: string;
-  birth_year?: string;
+  age?: string;
   email?: string;
   about_me?: string;
   address?: string;
@@ -379,17 +378,17 @@ export default function ProfileForm({
             
             {/* Rocznik */}
             <div className="flex items-center gap-4">
-              <Label htmlFor="birth_year" className="w-16">Rocznik</Label>
+              <Label htmlFor="age" className="w-16">Wiek</Label>
               <div className="relative flex-1">
                 <AlertCircle className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input 
-                  id="birth_year"
+                  id="age"
                   type="number"
-                  min="1900"
+                  
                   max={new Date().getFullYear()}
-                  value={profile.birth_year || ''}
-                  onChange={(e) => setProfile({...profile, birth_year: e.target.value})}
-                  placeholder="Rok urodzenia"
+                  value={profile.age || ''}
+                  onChange={(e) => setProfile({...profile, age: e.target.value})}
+                  placeholder="Wiek"
                   className="pl-9"
                 />
               </div>

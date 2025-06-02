@@ -468,17 +468,17 @@ export default function Creator({ switchMode, currentLanguage = 'pl' }: { switch
   }
 
   return (
-    <div className="flex flex-col -ml-1 gap-1 mb-1">
-      {/* Nagłówek kreatora z paskiem postępu */}
-      <CreatorHeader 
-        activeSection={activeSection}
-        badgeContainerRef={badgeContainerRef}
-        isScrolling={isScrolling}
-        switchMode={switchMode}
-      />
-      
+    <div className="flex flex-col -ml-1 gap-0 mb-2 mt-3">
       {/* Główny kontener */}
       <div className="bg-white dark:bg-sidebar border-1 border-gray-300 dark:border-gray-800 mr-2 ml-3 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] flex-1 overflow-hidden flex flex-col">
+        {/* Nagłówek kreatora z paskiem postępu */}
+        <CreatorHeader 
+          activeSection={activeSection}
+          badgeContainerRef={badgeContainerRef}
+          isScrolling={isScrolling}
+          switchMode={switchMode}
+        />
+        
         {/* Wskaźnik auto-save i przycisk zapisu - jeśli nie jesteśmy na ekranie startowym */}
         {activeSection !== 'start' && (
           <div className="px-1 py-1">

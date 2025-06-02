@@ -9,6 +9,27 @@ import { InfoIcon, SearchIcon } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useAssistant } from './assistantContext';
 
+// Style dla scrollbara
+const scrollbarStyles = {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  '&::WebkitScrollbar': {
+    width: '4px',
+  },
+  '&::WebkitScrollbarTrack': {
+    background: 'transparent',
+  },
+  '&::WebkitScrollbarThumb': {
+    background: '#d1d5db',
+    borderRadius: '2px',
+  },
+  '&::WebkitScrollbarThumb:hover': {
+    background: '#9ca3af',
+  },
+  /* Firefox */
+  scrollbarWidth: 'thin',
+  scrollbarColor: '#d1d5db transparent',
+} as React.CSSProperties;
+
 export default function InputForm() {
   const { 
     isGenerating, 
@@ -80,12 +101,18 @@ export default function InputForm() {
   }
 
   return (
-    <Card className="p-4 space-y-4 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
+    <Card className="p-4 h-[calc(55vh)] space-y-4 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
       <div className="grid grid-cols-2 gap-4">
         {/* Wybór CV - lewa kolumna */}
         <div>
-          <h3 className="text-sm font-medium mb-2">Twoje CV</h3>
-          <div className="overflow-y-auto" style={{ maxHeight: 'calc(27vh)' }}>
+          {/* <h3 className="text-sm font-medium mb-2">Twoje CV</h3> */}
+          <div 
+            className="overflow-y-auto mt-2" 
+            style={{ 
+              maxHeight: 'calc(27vh)',
+              ...scrollbarStyles
+            }}
+          >
             {userCVs.length === 0 ? (
               <div className="p-4 text-gray-500 text-center text-xs border border-gray-200 rounded-md">
                 Nie masz żadnych zapisanych CV.
@@ -123,10 +150,10 @@ export default function InputForm() {
 
         {/* Wybór oferty - prawa kolumna */}
         <div>
-          <h3 className="text-sm font-medium mb-2">Oferty pracy</h3>
+          {/* <h3 className="text-sm font-medium mb-2">Oferty pracy</h3> */}
           
           {/* Pole wyszukiwania ofert */}
-          <div className="relative mb-2">
+          <div className="relative mb-2 mt-2">
             <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
             <Input 
               type="text" 
@@ -137,7 +164,13 @@ export default function InputForm() {
             />
           </div>
           
-          <div className="overflow-y-auto" style={{ maxHeight: 'calc(23vh)' }}>
+          <div 
+            className="overflow-y-auto" 
+            style={{ 
+              maxHeight: 'calc(23vh)',
+              ...scrollbarStyles
+            }}
+          >
             {filteredOffers.length === 0 ? (
               <div className="p-4 text-gray-500 text-center text-xs border border-gray-200 rounded-md">
                 {searchQuery.trim() !== '' ? 'Nie znaleziono ofert pasujących do wyszukiwania' : 'Nie znaleziono ofert pracy'}
@@ -174,7 +207,7 @@ export default function InputForm() {
       
       {/* Dodatkowe informacje */}
       <div>
-        <Label htmlFor="additional-info" className="flex items-center gap-2 mb-2">
+        <Label htmlFor="additional-info" className="flex items-center gap-2 mb-2 -mt-4">
           <InfoIcon size={16} />
           Dodatkowe informacje
         </Label>
@@ -190,7 +223,7 @@ export default function InputForm() {
       {/* Przycisk generowania */}
       <Button 
         onClick={generateText} 
-        className={`w-full px-4 py-2 rounded-md transition ${
+        className={`w-full px-4 py-2 -mt-2 rounded-md transition ${
           selectedJobOffer && selectedUserCV && !isGenerating
             ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white hover:from-purple-600 hover:to-purple-800'
             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -209,7 +242,7 @@ export default function InputForm() {
       
       {/* Zapisane szablony */}
       {savedTemplates.length > 0 && (
-        <div className="mt-4 p-3 bg-blue-50 border border-blue-100 rounded">
+        <div className="mt-0 p-3 bg-blue-50 border border-blue-100 rounded">
           <p className="text-xs text-blue-700 mb-2 font-medium">
             Zapisane szablony
           </p>

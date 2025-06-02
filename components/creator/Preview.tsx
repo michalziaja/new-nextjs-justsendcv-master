@@ -531,7 +531,7 @@ export default function Preview({
       {/* Kontener główny ze scrollowaniem */}
       <div
         ref={containerRef}
-        className="flex-1 -mt-1 bg-transparent flex justify-center px-0 pb-0 pt-0 relative"
+        className="flex-1 mt-1 bg-transparent flex justify-center px-0 mb-1 pt-0 relative"
         style={{
           overflowY: scrollNeeded ? 'auto' : 'hidden',
           overflowX: 'hidden',
@@ -568,7 +568,7 @@ export default function Preview({
             {Array.from({ length: totalPages }).map((_, index) => (
               <div
                 key={`page-${index}`}
-                className="bg-white border-1 border-gray-400 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] transition-transform duration-200"
+                className="bg-white border-0 border-gray-400 rounded-xs shadow-[2px_4px_10px_rgba(0,0,0,0.3)] transition-transform duration-200"
                 style={{
                   width: `${A4_WIDTH_MM}mm`,
                   height: `${A4_HEIGHT_MM}mm`,

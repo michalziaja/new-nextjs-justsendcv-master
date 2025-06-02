@@ -31,7 +31,7 @@ export function TechnologiesCard({ technologies, isLoading }: { technologies: Sk
             </div>
           </div>
         ) : technologies.length > 0 ? (
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="mt-2 flex flex-wrap  justify-center items-center p-2">
             {technologies.map((tech, index) => (
               <Badge 
                 key={index} 
@@ -40,11 +40,12 @@ export function TechnologiesCard({ technologies, isLoading }: { technologies: Sk
                   backgroundColor: `${tech.color}20`, 
                   borderColor: tech.color,
                   fontSize: `${Math.min(8 + tech.count * 2, (tech.count >= 4 ? 17 : 15))}px`,
-                  padding: '0.25rem 0.4rem'
+                  padding: '0.25rem 0.4rem',
+                  margin: '0.25rem'
                 }}
                 className="text-foreground font-medium"
               >
-                {tech.name} ({tech.count})
+                {tech.name}
               </Badge>
             ))}
           </div>

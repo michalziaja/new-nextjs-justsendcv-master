@@ -37,7 +37,7 @@ export function Checklist() {
 
   return (
     <>
-      <Card className="col-span-1 rounded-sm border-1 border-gray-100 dark:border-gray-800
+      <Card className="col-span-1 rounded-sm border-0
       shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
       dark:shadow-slate-900/20
       bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-700">

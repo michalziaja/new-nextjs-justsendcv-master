@@ -175,11 +175,67 @@ export function WeeklyGoals() {
   const activeDays = Math.max(1, adjustedCurrentDay + 1); // Dodaj 1, aby uwzględnić dzisiejszy dzień
   const dailyAverage = weeklyGoal ? (weeklyApplications / activeDays).toFixed(1) : '-';
 
-  // Funkcja zwracająca kolor paska postępu w zależności od procentu
+  // Funkcja zwracająca kolor kołowego paska postępu w zależności od procentu
   const getProgressColor = (percent: number) => {
-    if (percent <= 25) return 'bg-gradient-to-r from-red-400 to-red-600 dark:from-red-400 dark:to-red-500';
-    if (percent <= 60) return 'bg-gradient-to-r from-yellow-400 to-yellow-600 dark:from-yellow-400 dark:to-yellow-500';
-    return 'bg-gradient-to-r from-green-400 to-green-600 dark:from-green-400 dark:to-green-500';
+    if (percent <= 25) return '#ef4444'; // czerwony
+    if (percent <= 60) return '#eab308'; // żółty
+    return '#22c55e'; // zielony
+  };
+
+  // Komponent kołowego paska postępu
+  const CircularProgress = ({ progress, size = 120, strokeWidth = 8 }: { 
+    progress: number; 
+    size?: number; 
+    strokeWidth?: number; 
+  }) => {
+    const radius = (size - strokeWidth) / 2;
+    const circumference = radius * 2 * Math.PI;
+    const strokeDasharray = `${circumference} ${circumference}`;
+    const strokeDashoffset = circumference - (progress / 100) * circumference;
+    const progressColor = getProgressColor(progress);
+
+    return (
+      <div className="relative flex items-center justify-center">
+        <svg
+          className="transform -rotate-90"
+          width={size}
+          height={size}
+        >
+          {/* Tło koła */}
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            fill="transparent"
+            className="text-gray-200 dark:text-gray-700"
+          />
+          {/* Postęp */}
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            stroke={progressColor}
+            strokeWidth={strokeWidth}
+            fill="transparent"
+            strokeDasharray={strokeDasharray}
+            strokeDashoffset={strokeDashoffset}
+            strokeLinecap="round"
+            className="transition-all duration-500 ease-in-out"
+          />
+        </svg>
+        {/* Tekst w środku */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="text-2xl font-bold" style={{ color: progressColor }}>
+            {Math.round(progress)}%
+          </span>
+          <span className="text-xs text-muted-foreground">
+            {weeklyApplications}/{weeklyGoal}
+          </span>
+        </div>
+      </div>
+    );
   };
 
   // Pobierz liczbę aplikacji dla danego dnia
@@ -201,35 +257,41 @@ export function WeeklyGoals() {
         <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
           <PopoverTrigger asChild>
             <Button 
-              variant="outline" 
-              className="gap-2 transition-all duration-200 hover:scale-105 active:scale-95">
+              className="bg-gradient-to-r from-[#00B2FF] to-blue-600 dark:from-[#00B2FF] dark:to-blue-700 
+                text-white border-0 hover:from-blue-500 hover:to-blue-700 
+                transition-all duration-200 hover:scale-105 active:scale-95 gap-2 h-8 w-24"
+            >
               <Settings className="h-4 w-4" />
               Ustaw
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-60">
+          <PopoverContent className="w-80 bg-white dark:bg-slate-900 border border-gray-200 dark:border-gray-700 
+            shadow-xl rounded-lg">
             <div className="grid gap-4">
               <div className="space-y-2">
-                <h4 className="font-medium leading-none">Cel tygodniowy</h4>
+                <h4 className="font-semibold text-lg leading-none">Cel tygodniowy</h4>
                 <p className="text-sm text-muted-foreground">
                   Ustaw liczbę aplikacji, które chcesz wysłać w tym tygodniu.
                 </p>
               </div>
-              <div className="grid gap-2">
-                <Label htmlFor="goal">Liczba aplikacji</Label>
+              <div className="grid gap-3">
+                <Label htmlFor="goal" className="font-medium">Liczba aplikacji</Label>
                 <Input
                   id="goal"
                   type="number"
                   min="0"
+                  max="100"
                   placeholder="Np. 10"
                   value={newGoalValue}
                   onChange={(e) => setNewGoalValue(e.target.value)}
+                  className="w-32 text-center font-medium"
                 />
         </div>
         <Button 
                 onClick={saveNewGoal} 
                 disabled={isSavingGoal} 
-                className="w-full"
+                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 
+                  text-white border-0 transition-all duration-200 hover:scale-105 active:scale-95"
               >
                 {isSavingGoal ? (
                   <span className="flex items-center">
@@ -280,48 +342,41 @@ export function WeeklyGoals() {
             <p className="text-sm mt-2">Kliknij "Ustaw", aby zdefiniować swój cel</p>
           </div>
         ) : (
-          <div className="space-y-4">
-            {/* Pasek postępu */}
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span className="font-medium">{weeklyApplications} z {weeklyGoal} wysłanych aplikacji</span>
-                <span className="text-muted-foreground">{Math.round(progress)}%</span>
-              </div>
-              <div className="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full">
-                <div 
-                  className={`h-full rounded-full transition-all duration-300 ${getProgressColor(progress)}`}
-                  style={{ width: `${Math.min(100, progress)}%` }}
-                />
-              </div>
+          <div className="grid grid-cols-5 gap-4 h-full">
+            {/* Lewa strona - Kołowy pasek postępu */}
+            <div className="col-span-2 flex items-center justify-center">
+              <CircularProgress progress={progress} />
             </div>
 
-            
-
-            {/* Statystyki */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <p className="text-sm font-medium flex items-center gap-1">
-                  <TrendingUp className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />
-                  Średnio dziennie
-                </p>
-                <p className="text-2xl px-5 font-bold">{dailyAverage}</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium">Pozostało</p>
-                <p className="text-2xl font-bold">{Math.max(0, weeklyGoal - weeklyApplications)}</p>
-              </div>
-            </div>
-            {/* Wskazówki motywacyjne */}
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-100 dark:border-blue-800">
-              <div className="flex items-start gap-2">
-                <Info className="h-5 w-5 text-[#00B2FF] flex-shrink-0 mt-0.5" />
-                <div className="space-y-1">
-                  <p className="text-sm font-medium text-blue-800 dark:text-blue-200">
-                    Pamiętaj o regularności!
+            {/* Prawa strona - Statystyki i wskazówki */}
+            <div className="col-span-3 flex flex-col justify-center space-y-4">
+              {/* Statystyki */}
+              <div className="grid grid-cols-2 gap-8 ml-2">
+                <div>
+                  <p className="-ml-5 text-sm font-medium flex items-center gap-1">
+                    <TrendingUp className="h-4 w-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600" />
+                    Średnio dziennie
                   </p>
-                  <p className="text-xs text-blue-600 dark:text-blue-300">
-                    Nawet kilka aplikacji wysłanych każdego dnia przybliża Cię do sukcesu. Utrzymuj dobre tempo!
-                  </p>
+                  <p className="text-2xl font-bold">{dailyAverage}</p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium">Pozostało</p>
+                  <p className="text-2xl font-bold">{Math.max(0, weeklyGoal - weeklyApplications)}</p>
+                </div>
+              </div>
+              
+              {/* Wskazówki motywacyjne */}
+              <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-sm border border-blue-100 dark:border-blue-800">
+                <div className="flex items-start gap-2">
+                  <Info className="h-5 w-5 text-[#00B2FF] flex-shrink-0 mt-0.5" />
+                  <div className="space-y-1">
+                    <p className="text-sm font-medium text-blue-800 dark:text-blue-200">
+                      Pamiętaj o regularności!
+                    </p>
+                    <p className="text-xs text-blue-600 dark:text-blue-300">
+                      Nawet kilka aplikacji wysłanych każdego dnia przybliża Cię do sukcesu.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

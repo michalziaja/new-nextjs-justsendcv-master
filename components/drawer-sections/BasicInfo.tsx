@@ -1,6 +1,6 @@
 // components/drawer-sections/BasicInfo.tsx
 import { Button } from "@/components/ui/button"
-import { Building2, ExternalLink, Timer, ArrowUpCircle, Circle } from "lucide-react"
+import { Building2, ExternalLink, Timer, ArrowUpCircle, Circle, Star } from "lucide-react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import * as React from "react"
@@ -78,11 +78,11 @@ export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInf
   }
 
   return (
-    <div className="grid grid-cols-2 gap-x-6 gap-y-6">
+    <div className="grid ml-2 grid-cols-2 gap-x-6 gap-y-6">
       {/* Firma */}
       <div className="space-y-0">
         <h3 className="font-medium text-md text-foreground flex items-center gap-2">
-          <Building2 className="h-4 w-4 text-gray-600 dark:text-gray-200" />
+          <Building2 className="h-4 w-4 text-blue-500" />
           <span className="text-gray-600 dark:text-gray-200">Firma:</span> 
           <p className="text-md font-medium truncate">{application.company}</p>
         </h3>
@@ -91,7 +91,7 @@ export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInf
       {/* Link */}
       <div className="space-y-2 mt-1">
         <h3 className="font-medium text-md text-foreground flex items-center gap-2">
-          <ExternalLink className="h-4 w-4 text-gray-600 dark:text-gray-200" />
+          <ExternalLink className="h-4 w-4 text-green-500" />
           <span className="text-gray-600 dark:text-gray-200">Link:</span>
           <Button 
             variant="ghost" 
@@ -106,7 +106,7 @@ export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInf
       {/* Ważna do */}
       <div className="space-y-1">
         <h3 className="font-medium text-md flex items-center gap-1">
-          <Timer className="h-4 w-4 text-gray-600 dark:text-gray-200" />
+          <Timer className="h-4 w-4 text-orange-500" />
           <span className="text-gray-600 dark:text-gray-200">Ważna do:</span>
           <p className="text-sm">{application.expire ? application.expire.substring(0, 10) : "-"}</p>
         </h3>
@@ -115,7 +115,7 @@ export function BasicInfo({ application, isDesktop, onPriorityChange }: BasicInf
       {/* Priorytet */}
       <div className="space-y-1">
         <h3 className="font-medium text-md flex items-center gap-2">
-          {/* <Circle className="h-4 w-4" /> */}
+          <Star className="h-4 w-4 text-yellow-500" />
           <span className="text-gray-600 dark:text-gray-200">Priorytet:</span>
         
         <div className="flex items-center gap-1">

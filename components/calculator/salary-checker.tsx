@@ -177,14 +177,14 @@ const BenefitTagsDisplay = ({ title, items, placeholder, limit = 6 }: { title: s
 
 /**
  * Displays responsibilities. Always renders the header.
- * List content scrolls if it exceeds max-height.
+ * Content expands to accommodate all items.
  */
 const ResponsibilitiesList = ({ title, items, placeholder }: { title: string, items: string[] | undefined, placeholder: string }) => (
     <div className="mt-4 bg-gradient-to-r from-gray-50 to-blue-50/30 p-3 rounded-sm border border-gray-200 shadow-sm">
         <h3 className="text-base font-semibold text-gray-800 mb-2">{title}</h3>
-        {/* Conditionally render scrollable list or placeholder */}
+        {/* Conditionally render full list or placeholder */}
         {items && items.length > 0 ? (
-            <div className="max-h-50 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 pr-2"> 
+            <div className="pr-2"> 
                 <ul className="list-disc list-inside space-y-1.5 pl-2">
                     {items.map((item, index) => (
                         <li key={index} className="text-sm text-gray-700">
@@ -445,7 +445,11 @@ export function SalaryChecker({ embedded = false }: { embedded?: boolean }) {
 
     // Main Content
     return (
-        <div className="w-full p-4  h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
+        <div className="w-full p-4 h-full overflow-y-auto" 
+             style={{
+                 scrollbarWidth: 'thin',
+                 scrollbarColor: 'rgba(156, 163, 175, 0.3) transparent',
+             }}>
             <div className="space-y-4">
                 {/* Search Section */}
                 <div className="relative">

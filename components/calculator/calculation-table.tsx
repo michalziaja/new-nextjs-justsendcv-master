@@ -7,41 +7,64 @@ import { useState } from "react";
 
 interface CalculationTableProps {
   results: CalculationResults;
+  isB2B?: boolean;
 }
 
 export const CalculationTable: React.FC<CalculationTableProps> = ({ 
-  results
+  results,
+  isB2B = false
 }) => {
-  const [activeTab, setActiveTab] = useState<"components" | "employer" | "yearly">("components");
+  const [activeTab, setActiveTab] = useState<"components" | "employer" | "yearly" | "monthly">(
+    isB2B ? "monthly" : "components"
+  );
 
   const showPlaceholder = results.grossAmount <= 0;
 
   return (
     <div className="w-full">
       <Tabs 
-        defaultValue="components" 
+        defaultValue={isB2B ? "monthly" : "components"} 
         className="w-full"
-        onValueChange={(value) => setActiveTab(value as "components" | "employer" | "yearly")}
+        onValueChange={(value) => setActiveTab(value as "components" | "employer" | "yearly" | "monthly")}
       >
-        <TabsList className="w-full grid grid-cols-3 mb-6">
-          <TabsTrigger 
-            value="components"
-            className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
-          >
-            Składowe wynagrodzenia
-          </TabsTrigger>
-          <TabsTrigger 
-            value="employer"
-            className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
-          >
-            Koszty pracodawcy
-          </TabsTrigger>
-          <TabsTrigger 
-            value="yearly"
-            className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
-          >
-            Podsumowanie roczne
-          </TabsTrigger>
+        <TabsList className={`w-full mb-6 ${isB2B ? 'grid-cols-2' : 'grid-cols-3'} grid`}>
+          {isB2B ? (
+            <>
+              <TabsTrigger 
+                value="monthly"
+                className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+              >
+                Podsumowanie miesięczne
+              </TabsTrigger>
+              <TabsTrigger 
+                value="yearly"
+                className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+              >
+                Podsumowanie roczne
+              </TabsTrigger>
+            </>
+          ) : (
+            <>
+              <TabsTrigger 
+                value="components"
+                className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+              >
+                Składowe wynagrodzenia
+              </TabsTrigger>
+              <TabsTrigger 
+                value="employer"
+                className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+              >
+                Koszty pracodawcy
+              </TabsTrigger>
+              <TabsTrigger 
+                value="yearly"
+                className="text-xs sm:text-sm data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+              >
+                Podsumowanie roczne
+              </TabsTrigger>
+            </>
+          )}
         </TabsList>
 
         <div className="w-full min-h-[300px] max-h-[40vh] overflow-y-auto">
@@ -61,6 +84,7 @@ export const CalculationTable: React.FC<CalculationTableProps> = ({
             <PieChart 
               results={results} 
               activeTab={activeTab}
+              isB2B={isB2B}
             />
           )}
         </div>

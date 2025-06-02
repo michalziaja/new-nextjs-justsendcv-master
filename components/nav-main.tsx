@@ -54,10 +54,10 @@ export function NavMain({
                     >
                       <Link 
                         href={item.url}
-                        className="w-full flex items-center gap-4 px-4 py-3 rounded-sm  bg-gradient-to-tr from-[#3879DA] to-[#24D1DA]  text-white shadow-sm hover:opacity-95"
+                        className="w-full flex items-center gap-4 px-4 py-3 rounded-sm bg-white dark:bg-gray-800 border-1 border-blue-500 shadow-md"
                       >
-                        <item.icon className="w-8 h-8 text-white" />
-                        <span className="text-white text-base font-medium">{item.title}</span>
+                        <item.icon className="w-6 h-6 text-gray-900 dark:text-gray-100" />
+                        <span className="text-gray-900 dark:text-gray-100 text-base font-semibold">{item.title}</span>
                       </Link>
                     </SidebarMenuButton>
                   </div>
@@ -68,7 +68,7 @@ export function NavMain({
                   >
                     <Link
                       href={item.url}
-                      className="w-full flex items-center gap-4 px-4 py-3 rounded-md hover:bg-gray-50 transition-all duration-200 hover:scale-[1.03]"
+                      className="w-full flex items-center gap-4 px-4 py-3 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:scale-[1.03]"
                     >
                       <item.icon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
                       <span className="text-slate-800 dark:text-slate-200 text-sm font-medium">{item.title}</span>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CalculatorInput } from "@/components/calculator/calculator-input";
+
 import { CalculationTable } from "@/components/calculator/calculation-table";
 import { SalaryTools } from "@/components/calculator/job-goal";
 import { SalaryChecker } from "@/components/calculator/salary-checker";
@@ -59,9 +59,9 @@ export default function CalculatorPage() {
                     mb-6 ml-2 mr-2 mt-6 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6 md:mt-7 
                     lg:ml-8 lg:mr-6 lg:mt-8 xl:ml-15 xl:mr-15 xl:mt-12">
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
-        <div className="bg-transparent lg:col-span-2 space-y-4 ">
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:items-start">
+        <div className="bg-transparent lg:col-span-2 space-y-5">
+          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] minh-[38vh] max-h-[38vh] p-4">
             <IntegratedCalculator 
               onResultsUpdate={handleResultsUpdate} 
               initialContractType={subType as UopContractType}
@@ -72,18 +72,19 @@ export default function CalculatorPage() {
             />
           </div>
           
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 min-h-[42vh]">
+          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 h-[42vh]">
             <CalculationTable 
               results={calculatorResults}
+              isB2B={contractType === "b2b"}
             />
           </div>
         </div>
         
-        <div className="lg:col-span-1">
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 max-h-[80vh] sticky top-4">
+        <div className="lg:col-span-1 w-full min-w-0">
+          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 h-[82vh] sticky top-4 overflow-hidden w-full flex flex-col">
             {/* <h2 className="text-lg font-semibold mb-4 bg-gradient-to-r from-[#00B2FF] to-blue-600 bg-clip-text text-transparent">Narzędzia płacowe</h2> */}
             
-            <Tabs value={toolsTab} onValueChange={setToolsTab} className="w-full mb-4">
+            <Tabs value={toolsTab} onValueChange={setToolsTab} className="w-full mb-4 flex-shrink-0">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger 
                   value="wyszukaj"
@@ -100,11 +101,13 @@ export default function CalculatorPage() {
               </TabsList>
             </Tabs>
             
-            {toolsTab === "wyszukaj" ? (
-              <JobGoalContent embedded={true} />
-            ) : (
-              <SalaryChecker />
-            )}
+            <div className="w-full min-w-0 overflow-hidden flex-1 min-h-0">
+              {toolsTab === "wyszukaj" ? (
+                <JobGoalContent embedded={true} />
+              ) : (
+                <SalaryChecker />
+              )}
+            </div>
           </div>
         </div>
       </div>

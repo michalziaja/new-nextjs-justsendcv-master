@@ -18,6 +18,7 @@ import {
 import { 
   FaLinkedin, 
   FaGithub, 
+  FaBirthdayCake,
   FaGlobe, 
   FaTwitter, 
   FaFacebook, 
@@ -46,6 +47,13 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
   const t = translations[language];
   const isLastPage = pageIndex === totalPages - 1;
   const { cvData } = useCV();
+
+  // // Funkcja obliczająca wiek na podstawie roku urodzenia
+  // const calculateAge = (birthYear: string): number => {
+  //   const currentYear = new Date().getFullYear();
+  //   const birth = parseInt(birthYear);
+  //   return isNaN(birth) ? 0 : currentYear - birth;
+  // };
 
   // Pobierz listę sekcji, które powinny być widoczne
   const visibleSections = isMeasurement ? 
@@ -273,16 +281,13 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
     if (key === 'header') {
       if (pageIndex === 0) {
         return (
-          <div
-            key={`${key}-${index ?? ''}`}
-            style={{
-              display: 'flex', 
-              alignItems: 'center',
-              borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
-              paddingBottom: effectiveSpacing.header.bottomMargin,
-              marginBottom: effectiveSpacing.header.bottomSpacing
-            }}
-          >
+          <div style={{ // Główny kontener dla całego nagłówka (zdjęcie + tekst)
+            display: 'flex', 
+            alignItems: 'center',
+            borderBottom: `${effectiveSpacing.header.borderWidth} solid ${colorPalette.primary}`,
+            paddingBottom: effectiveSpacing.header.bottomMargin,
+            marginBottom: effectiveSpacing.header.bottomSpacing
+          }}>
             {/* Zdjęcie profilowe - jeśli włączone i dostępne */}
             {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
               <div style={{
@@ -311,117 +316,215 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 padding: 0
               }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
               
-              {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
-              {data.personalData.socialLinks && 
-               data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
-                // Jeśli są linki - układ dwukolumnowy
-                <div style={{ 
-                  marginTop: effectiveSpacing.header.nameToContactSpacing,
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: effectiveSpacing.elements.margin,
-                  color: colorPalette.grayDark,
-                  fontSize: effectiveFontSizes.contactInfo
-                }}>
-                  {/* Lewa kolumna - dane kontaktowe */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              {(() => {
+                // Obliczamy liczbę wyświetlanych informacji kontaktowych
+                const contactInfoCount = [
+                  String(data.personalData.showEmailInCV).toLowerCase() !== 'false',
+                  String(data.personalData.showPhoneInCV).toLowerCase() !== 'false', 
+                  String(data.personalData.showAddressInCV).toLowerCase() !== 'false',
+                  String(data.personalData.showAgeInCV).toLowerCase() === 'true' && data.personalData.age
+                ].filter(Boolean).length;
+
+                // Obliczamy liczbę wyświetlanych linków społecznościowych
+                const socialLinksCount = data.personalData.socialLinks ? 
+                  data.personalData.socialLinks.filter(link => link.include).length : 0;
+
+                // Komponenty z informacjami kontaktowymi
+                const contactElements = [];
+                
+                if (String(data.personalData.showEmailInCV).toLowerCase() !== 'false') {
+                  contactElements.push(
+                    <div key="email" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.email}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  );
+                }
+                
+                if (String(data.personalData.showPhoneInCV).toLowerCase() !== 'false') {
+                  contactElements.push(
+                    <div key="phone" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.phone}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  );
+                }
+                
+                if (String(data.personalData.showAgeInCV).toLowerCase() === 'true' && data.personalData.age) {
+                  contactElements.push(
+                    <div key="age" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaBirthdayCake style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.age} lat
+                    </div>
+                  );
+                }
+                
+                if (String(data.personalData.showAddressInCV).toLowerCase() !== 'false') {
+                  contactElements.push(
+                    <div key="address" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.address}
                     </div>
-                    {selectedJob && showJobTitle && (
-                      <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
-                        {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
-                        {selectedJob.company && (
-                          <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
-                        )}
+                  );
+                }
+
+                // Komponenty z linkami społecznościowymi
+                const socialElements = data.personalData.socialLinks ?
+                  data.personalData.socialLinks
+                    .filter(link => link.include)
+                    .map((link, index) => (
+                      <div key={index} style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '6px',
+                        color: colorPalette.primary
+                      }}>
+                        {getSocialIcon(link.type)}
+                        <span>{link.url}</span>
                       </div>
-                    )}
-                  </div>
-                  
-                  {/* Prawa kolumna - linki społecznościowe */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    {data.personalData.socialLinks
-                      .filter(link => link.include)
-                      .map((link, index) => (
-                        <div key={index} style={{ 
-                          display: 'flex', 
-                          alignItems: 'center', 
+                    )) : [];
+
+                // Nowa logika układu
+                if (socialLinksCount === 0) {
+                  // Brak linków społecznościowych
+                  if (contactInfoCount <= 1) {
+                    // 0-1 informacja kontaktowa - wyświetl w jednej linii
+                    return (
+                      <div style={{ 
+                        marginTop: effectiveSpacing.header.nameToContactSpacing,
+                        display: 'flex',
+                        gap: '20px',
+                        color: colorPalette.grayDark,
+                        fontSize: effectiveFontSizes.contactInfo
+                      }}>
+                        {contactElements}
+                      </div>
+                    );
+                  } else if (contactInfoCount === 2) {
+                    // 2 informacje kontaktowe - wyświetl w kolumnach
+                    return (
+                      <div style={{ 
+                        marginTop: effectiveSpacing.header.nameToContactSpacing,
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gap: effectiveSpacing.elements.margin,
+                        color: colorPalette.grayDark,
+                        fontSize: effectiveFontSizes.contactInfo
+                      }}>
+                        {contactElements}
+                      </div>
+                    );
+                  } else {
+                    // 3+ informacje kontaktowe - sprawdzamy czy jest zdjęcie
+                    if ((String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl) {
+                      // Jeśli jest zdjęcie - dane kontaktowe w jednej pionowej kolumnie
+                      return (
+                        <div style={{ 
+                          marginTop: effectiveSpacing.header.nameToContactSpacing,
+                          display: 'flex',
+                          flexDirection: 'column',
                           gap: '6px',
-                          color: colorPalette.primary
+                          color: colorPalette.grayDark,
+                          fontSize: effectiveFontSizes.contactInfo
                         }}>
-                          {getSocialIcon(link.type)}
-                          <span>{link.url}</span>
+                          {contactElements}
                         </div>
-                      ))}
-                  </div>
-                </div>
-               ) : (
-                // Jeśli nie ma linków - sprawdzamy czy jest zdjęcie, aby dostosować układ
-                (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? (
-                  // Jeśli jest zdjęcie, ale nie ma linków - dane kontaktowe w jednej pionowej kolumnie
-                  <div style={{ 
-                    marginTop: effectiveSpacing.header.nameToContactSpacing,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '6px',
-                    color: colorPalette.grayDark,
-                    fontSize: effectiveFontSizes.contactInfo
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.email}
+                      );
+                    } else {
+                      // Jeśli nie ma zdjęcia - dane kontaktowe w jednym rzędzie poziomym
+                      return (
+                        <div style={{ 
+                          marginTop: effectiveSpacing.header.nameToContactSpacing,
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          color: colorPalette.grayDark,
+                          fontSize: effectiveFontSizes.contactInfo
+                        }}>
+                          {contactElements}
+                        </div>
+                      );
+                    }
+                  }
+                } else if (socialLinksCount === 1) {
+                  // 1 link społecznościowy
+                  return (
+                    <div style={{ 
+                      marginTop: effectiveSpacing.header.nameToContactSpacing,
+                      color: colorPalette.grayDark,
+                      fontSize: effectiveFontSizes.contactInfo
+                    }}>
+                      {/* Informacje kontaktowe */}
+                      {contactInfoCount === 1 ? (
+                        // 1 informacja + 1 link - wszystko w jednej linii
+                        <div style={{ 
+                          display: 'flex',
+                          gap: '20px',
+                          alignItems: 'center'
+                        }}>
+                          {contactElements}
+                          <div style={{ color: colorPalette.primary }}>
+                            {socialElements}
+                          </div>
+                        </div>
+                      ) : contactInfoCount === 2 ? (
+                        // 2 informacje + 1 link - informacje zostają, link w nowej linijce
+                        <div>
+                          <div style={{ 
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: effectiveSpacing.elements.margin,
+                            marginBottom: '6px'
+                          }}>
+                            {contactElements}
+                          </div>
+                          <div style={{ color: colorPalette.primary }}>
+                            {socialElements}
+                          </div>
+                        </div>
+                      ) : (
+                        // 3+ informacje + 1 link - sprawdzamy układ zależnie od zdjęcia
+                        <div>
+                          <div style={{ 
+                            display: 'flex',
+                            flexDirection: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? 'column' : 'row',
+                            gap: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? '6px' : '20px',
+                            justifyContent: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? 'flex-start' : 'space-between',
+                            marginBottom: '6px'
+                          }}>
+                            {contactElements}
+                          </div>
+                          <div style={{ color: colorPalette.primary }}>
+                            {socialElements}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.phone}
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.address}
-                    </div>
-                    {selectedJob && showJobTitle && (
-                      <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
-                        {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
-                        {selectedJob.company && (
-                          <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
-                        )}
+                  );
+                } else {
+                  // 2+ linki społecznościowe - układ dwukolumnowy (obecna logika)
+                  return (
+                    <div style={{ 
+                      marginTop: effectiveSpacing.header.nameToContactSpacing,
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                      gap: effectiveSpacing.elements.margin,
+                      color: colorPalette.grayDark,
+                      fontSize: effectiveFontSizes.contactInfo
+                    }}>
+                      {/* Lewa kolumna - dane kontaktowe */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                        {contactElements}
                       </div>
-                    )}
-                  </div>
-                ) : (
-                  // Jeśli nie ma ani zdjęcia, ani linków - dane kontaktowe w jednym rzędzie poziomym
-                  <div style={{ 
-                    marginTop: effectiveSpacing.header.nameToContactSpacing,
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    color: colorPalette.grayDark,
-                    fontSize: effectiveFontSizes.contactInfo
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px',  }}>
-                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.email}
+                      
+                      {/* Prawa kolumna - linki społecznościowe */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', color: colorPalette.primary }}>
+                        {socialElements}
+                      </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.phone}
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginRight: '10px' }}>
-                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.address}
-                    </div>
-                  </div>
-                )
-               )}
+                  );
+                }
+              })()}
                
                {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych i nie ma zdjęcia */}
                {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && 
@@ -750,117 +853,215 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                   padding: 0
                 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
                 
-                {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
-                {data.personalData.socialLinks && 
-                 data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
-                  // Jeśli są linki - układ dwukolumnowy
-                  <div style={{ 
-                    marginTop: effectiveSpacing.header.nameToContactSpacing,
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: effectiveSpacing.elements.margin,
-                    color: colorPalette.grayDark,
-                    fontSize: effectiveFontSizes.contactInfo
-                  }}>
-                    {/* Lewa kolumna - dane kontaktowe */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                {(() => {
+                  // Obliczamy liczbę wyświetlanych informacji kontaktowych
+                  const contactInfoCount = [
+                    String(data.personalData.showEmailInCV).toLowerCase() !== 'false',
+                    String(data.personalData.showPhoneInCV).toLowerCase() !== 'false', 
+                    String(data.personalData.showAddressInCV).toLowerCase() !== 'false',
+                    String(data.personalData.showAgeInCV).toLowerCase() === 'true' && data.personalData.age
+                  ].filter(Boolean).length;
+
+                  // Obliczamy liczbę wyświetlanych linków społecznościowych
+                  const socialLinksCount = data.personalData.socialLinks ? 
+                    data.personalData.socialLinks.filter(link => link.include).length : 0;
+
+                  // Komponenty z informacjami kontaktowymi
+                  const contactElements = [];
+                  
+                  if (String(data.personalData.showEmailInCV).toLowerCase() !== 'false') {
+                    contactElements.push(
+                      <div key="email" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
                         {data.personalData.email}
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    );
+                  }
+                  
+                  if (String(data.personalData.showPhoneInCV).toLowerCase() !== 'false') {
+                    contactElements.push(
+                      <div key="phone" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
                         {data.personalData.phone}
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    );
+                  }
+                  
+                  if (String(data.personalData.showAgeInCV).toLowerCase() === 'true' && data.personalData.age) {
+                    contactElements.push(
+                      <div key="age" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <FaBirthdayCake style={{ fontSize: '14px', color: colorPalette.primary }} />
+                        {data.personalData.age} lat
+                      </div>
+                    );
+                  }
+                  
+                  if (String(data.personalData.showAddressInCV).toLowerCase() !== 'false') {
+                    contactElements.push(
+                      <div key="address" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                         {data.personalData.address}
                       </div>
-                      {selectedJob && showJobTitle && (
-                        <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
-                          {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
-                          {selectedJob.company && (
-                            <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
-                          )}
+                    );
+                  }
+
+                  // Komponenty z linkami społecznościowymi
+                  const socialElements = data.personalData.socialLinks ?
+                    data.personalData.socialLinks
+                      .filter(link => link.include)
+                      .map((link, index) => (
+                        <div key={index} style={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '6px',
+                          color: colorPalette.primary
+                        }}>
+                          {getSocialIcon(link.type)}
+                          <span>{link.url}</span>
                         </div>
-                      )}
-                    </div>
-                    
-                    {/* Prawa kolumna - linki społecznościowe */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      {data.personalData.socialLinks
-                        .filter(link => link.include)
-                        .map((link, index) => (
-                          <div key={index} style={{ 
-                            display: 'flex', 
-                            alignItems: 'center', 
+                      )) : [];
+
+                  // Nowa logika układu
+                  if (socialLinksCount === 0) {
+                    // Brak linków społecznościowych
+                    if (contactInfoCount <= 1) {
+                      // 0-1 informacja kontaktowa - wyświetl w jednej linii
+                      return (
+                        <div style={{ 
+                          marginTop: effectiveSpacing.header.nameToContactSpacing,
+                          display: 'flex',
+                          gap: '20px',
+                          color: colorPalette.grayDark,
+                          fontSize: effectiveFontSizes.contactInfo
+                        }}>
+                          {contactElements}
+                        </div>
+                      );
+                    } else if (contactInfoCount === 2) {
+                      // 2 informacje kontaktowe - wyświetl w kolumnach
+                      return (
+                        <div style={{ 
+                          marginTop: effectiveSpacing.header.nameToContactSpacing,
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(2, 1fr)',
+                          gap: effectiveSpacing.elements.margin,
+                          color: colorPalette.grayDark,
+                          fontSize: effectiveFontSizes.contactInfo
+                        }}>
+                          {contactElements}
+                        </div>
+                      );
+                    } else {
+                      // 3+ informacje kontaktowe - sprawdzamy czy jest zdjęcie
+                      if ((String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl) {
+                        // Jeśli jest zdjęcie - dane kontaktowe w jednej pionowej kolumnie
+                        return (
+                          <div style={{ 
+                            marginTop: effectiveSpacing.header.nameToContactSpacing,
+                            display: 'flex',
+                            flexDirection: 'column',
                             gap: '6px',
-                            color: colorPalette.primary
+                            color: colorPalette.grayDark,
+                            fontSize: effectiveFontSizes.contactInfo
                           }}>
-                            {getSocialIcon(link.type)}
-                            <span>{link.url}</span>
+                            {contactElements}
                           </div>
-                        ))}
-                    </div>
-                  </div>
-                 ) : (
-                  // Jeśli nie ma linków - sprawdzamy czy jest zdjęcie, aby dostosować układ
-                  (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? (
-                    // Jeśli jest zdjęcie, ale nie ma linków - dane kontaktowe w jednej pionowej kolumnie
-                    <div style={{ 
-                      marginTop: effectiveSpacing.header.nameToContactSpacing,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '6px',
-                      color: colorPalette.grayDark,
-                      fontSize: effectiveFontSizes.contactInfo
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.email}
+                        );
+                      } else {
+                        // Jeśli nie ma zdjęcia - dane kontaktowe w jednym rzędzie poziomym
+                        return (
+                          <div style={{ 
+                            marginTop: effectiveSpacing.header.nameToContactSpacing,
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            color: colorPalette.grayDark,
+                            fontSize: effectiveFontSizes.contactInfo
+                          }}>
+                            {contactElements}
+                          </div>
+                        );
+                      }
+                    }
+                  } else if (socialLinksCount === 1) {
+                    // 1 link społecznościowy
+                    return (
+                      <div style={{ 
+                        marginTop: effectiveSpacing.header.nameToContactSpacing,
+                        color: colorPalette.grayDark,
+                        fontSize: effectiveFontSizes.contactInfo
+                      }}>
+                        {/* Informacje kontaktowe */}
+                        {contactInfoCount === 1 ? (
+                          // 1 informacja + 1 link - wszystko w jednej linii
+                          <div style={{ 
+                            display: 'flex',
+                            gap: '20px',
+                            alignItems: 'center'
+                          }}>
+                            {contactElements}
+                            <div style={{ color: colorPalette.primary }}>
+                              {socialElements}
+                            </div>
+                          </div>
+                        ) : contactInfoCount === 2 ? (
+                          // 2 informacje + 1 link - informacje zostają, link w nowej linijce
+                          <div>
+                            <div style={{ 
+                              display: 'grid',
+                              gridTemplateColumns: 'repeat(2, 1fr)',
+                              gap: effectiveSpacing.elements.margin,
+                              marginBottom: '6px'
+                            }}>
+                              {contactElements}
+                            </div>
+                            <div style={{ color: colorPalette.primary }}>
+                              {socialElements}
+                            </div>
+                          </div>
+                        ) : (
+                          // 3+ informacje + 1 link - sprawdzamy układ zależnie od zdjęcia
+                          <div>
+                            <div style={{ 
+                              display: 'flex',
+                              flexDirection: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? 'column' : 'row',
+                              gap: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? '6px' : '20px',
+                              justifyContent: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? 'flex-start' : 'space-between',
+                              marginBottom: '6px'
+                            }}>
+                              {contactElements}
+                            </div>
+                            <div style={{ color: colorPalette.primary }}>
+                              {socialElements}
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.phone}
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.address}
-                      </div>
-                      {selectedJob && showJobTitle && (
-                        <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
-                          {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
-                          {selectedJob.company && (
-                            <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
-                          )}
+                    );
+                  } else {
+                    // 2+ linki społecznościowe - układ dwukolumnowy (obecna logika)
+                    return (
+                      <div style={{ 
+                        marginTop: effectiveSpacing.header.nameToContactSpacing,
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gap: effectiveSpacing.elements.margin,
+                        color: colorPalette.grayDark,
+                        fontSize: effectiveFontSizes.contactInfo
+                      }}>
+                        {/* Lewa kolumna - dane kontaktowe */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                          {contactElements}
                         </div>
-                      )}
-                    </div>
-                  ) : (
-                    // Jeśli nie ma ani zdjęcia, ani linków - dane kontaktowe w jednym rzędzie poziomym
-                    <div style={{ 
-                      marginTop: effectiveSpacing.header.nameToContactSpacing,
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      color: colorPalette.grayDark,
-                      fontSize: effectiveFontSizes.contactInfo
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px',  }}>
-                        <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.email}
+                        
+                        {/* Prawa kolumna - linki społecznościowe */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', color: colorPalette.primary }}>
+                          {socialElements}
+                        </div>
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.phone}
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginRight: '10px' }}>
-                        <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.address}
-                      </div>
-                    </div>
-                  )
-                 )}
+                    );
+                  }
+                })()}
                 
                 {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych i nie ma zdjęcia */}
                 {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && 
@@ -1056,6 +1257,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
             {(String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl && (
               <div style={{
                 marginRight: '20px', 
+                
                 width: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
                 height: `${data.personalData.photoScalePercent || 100}px`, // Używamy skali jako wartości w px
                 overflow: 'hidden',
@@ -1079,117 +1281,215 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                 padding: 0
               }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
               
-              {/* Sprawdzamy czy są jakieś linki społecznościowe do wyświetlenia */}
-              {data.personalData.socialLinks && 
-               data.personalData.socialLinks.filter(link => link.include).length > 0 ? (
-                // Jeśli są linki - układ dwukolumnowy
-                <div style={{ 
-                  marginTop: effectiveSpacing.header.nameToContactSpacing,
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: effectiveSpacing.elements.margin,
-                  color: colorPalette.grayDark,
-                  fontSize: effectiveFontSizes.contactInfo
-                }}>
-                  {/* Lewa kolumna - dane kontaktowe */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              {(() => {
+                // Obliczamy liczbę wyświetlanych informacji kontaktowych
+                const contactInfoCount = [
+                  String(data.personalData.showEmailInCV).toLowerCase() !== 'false',
+                  String(data.personalData.showPhoneInCV).toLowerCase() !== 'false', 
+                  String(data.personalData.showAddressInCV).toLowerCase() !== 'false',
+                  String(data.personalData.showAgeInCV).toLowerCase() === 'true' && data.personalData.age
+                ].filter(Boolean).length;
+
+                // Obliczamy liczbę wyświetlanych linków społecznościowych
+                const socialLinksCount = data.personalData.socialLinks ? 
+                  data.personalData.socialLinks.filter(link => link.include).length : 0;
+
+                // Komponenty z informacjami kontaktowymi
+                const contactElements = [];
+                
+                if (String(data.personalData.showEmailInCV).toLowerCase() !== 'false') {
+                  contactElements.push(
+                    <div key="email" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.email}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  );
+                }
+                
+                if (String(data.personalData.showPhoneInCV).toLowerCase() !== 'false') {
+                  contactElements.push(
+                    <div key="phone" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.phone}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  );
+                }
+                
+                if (String(data.personalData.showAgeInCV).toLowerCase() === 'true' && data.personalData.age) {
+                  contactElements.push(
+                    <div key="age" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <FaBirthdayCake style={{ fontSize: '14px', color: colorPalette.primary }} />
+                      {data.personalData.age} lat
+                    </div>
+                  );
+                }
+                
+                if (String(data.personalData.showAddressInCV).toLowerCase() !== 'false') {
+                  contactElements.push(
+                    <div key="address" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
                       {data.personalData.address}
                     </div>
-                    {selectedJob && showJobTitle && (
-                      <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
-                        {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
-                        {selectedJob.company && (
-                          <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
-                        )}
+                  );
+                }
+
+                // Komponenty z linkami społecznościowymi
+                const socialElements = data.personalData.socialLinks ?
+                  data.personalData.socialLinks
+                    .filter(link => link.include)
+                    .map((link, index) => (
+                      <div key={index} style={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '6px',
+                        color: colorPalette.primary
+                      }}>
+                        {getSocialIcon(link.type)}
+                        <span>{link.url}</span>
                       </div>
-                    )}
-                  </div>
-                  
-                  {/* Prawa kolumna - linki społecznościowe */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    {data.personalData.socialLinks
-                      .filter(link => link.include)
-                      .map((link, index) => (
-                        <div key={index} style={{ 
-                          display: 'flex', 
-                          alignItems: 'center', 
+                    )) : [];
+
+                // Nowa logika układu
+                if (socialLinksCount === 0) {
+                  // Brak linków społecznościowych
+                  if (contactInfoCount <= 1) {
+                    // 0-1 informacja kontaktowa - wyświetl w jednej linii
+                    return (
+                      <div style={{ 
+                        marginTop: effectiveSpacing.header.nameToContactSpacing,
+                        display: 'flex',
+                        gap: '20px',
+                        color: colorPalette.grayDark,
+                        fontSize: effectiveFontSizes.contactInfo
+                      }}>
+                        {contactElements}
+                      </div>
+                    );
+                  } else if (contactInfoCount === 2) {
+                    // 2 informacje kontaktowe - wyświetl w kolumnach
+                    return (
+                      <div style={{ 
+                        marginTop: effectiveSpacing.header.nameToContactSpacing,
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gap: effectiveSpacing.elements.margin,
+                        color: colorPalette.grayDark,
+                        fontSize: effectiveFontSizes.contactInfo
+                      }}>
+                        {contactElements}
+                      </div>
+                    );
+                  } else {
+                    // 3+ informacje kontaktowe - sprawdzamy czy jest zdjęcie
+                    if ((String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl) {
+                      // Jeśli jest zdjęcie - dane kontaktowe w jednej pionowej kolumnie
+                      return (
+                        <div style={{ 
+                          marginTop: effectiveSpacing.header.nameToContactSpacing,
+                          display: 'flex',
+                          flexDirection: 'column',
                           gap: '6px',
-                          color: colorPalette.primary
+                          color: colorPalette.grayDark,
+                          fontSize: effectiveFontSizes.contactInfo
                         }}>
-                          {getSocialIcon(link.type)}
-                          <span>{link.url}</span>
+                          {contactElements}
                         </div>
-                      ))}
-                  </div>
-                </div>
-               ) : (
-                // Jeśli nie ma linków - sprawdzamy czy jest zdjęcie, aby dostosować układ
-                (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? (
-                  // Jeśli jest zdjęcie, ale nie ma linków - dane kontaktowe w jednej pionowej kolumnie
-                  <div style={{ 
-                    marginTop: effectiveSpacing.header.nameToContactSpacing,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '6px',
-                    color: colorPalette.grayDark,
-                    fontSize: effectiveFontSizes.contactInfo
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.email}
+                      );
+                    } else {
+                      // Jeśli nie ma zdjęcia - dane kontaktowe w jednym rzędzie poziomym
+                      return (
+                        <div style={{ 
+                          marginTop: effectiveSpacing.header.nameToContactSpacing,
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          color: colorPalette.grayDark,
+                          fontSize: effectiveFontSizes.contactInfo
+                        }}>
+                          {contactElements}
+                        </div>
+                      );
+                    }
+                  }
+                } else if (socialLinksCount === 1) {
+                  // 1 link społecznościowy
+                  return (
+                    <div style={{ 
+                      marginTop: effectiveSpacing.header.nameToContactSpacing,
+                      color: colorPalette.grayDark,
+                      fontSize: effectiveFontSizes.contactInfo
+                    }}>
+                      {/* Informacje kontaktowe */}
+                      {contactInfoCount === 1 ? (
+                        // 1 informacja + 1 link - wszystko w jednej linii
+                        <div style={{ 
+                          display: 'flex',
+                          gap: '20px',
+                          alignItems: 'center'
+                        }}>
+                          {contactElements}
+                          <div style={{ color: colorPalette.primary }}>
+                            {socialElements}
+                          </div>
+                        </div>
+                      ) : contactInfoCount === 2 ? (
+                        // 2 informacje + 1 link - informacje zostają, link w nowej linijce
+                        <div>
+                          <div style={{ 
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                            gap: effectiveSpacing.elements.margin,
+                            marginBottom: '6px'
+                          }}>
+                            {contactElements}
+                          </div>
+                          <div style={{ color: colorPalette.primary }}>
+                            {socialElements}
+                          </div>
+                        </div>
+                      ) : (
+                        // 3+ informacje + 1 link - sprawdzamy układ zależnie od zdjęcia
+                        <div>
+                          <div style={{ 
+                            display: 'flex',
+                            flexDirection: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? 'column' : 'row',
+                            gap: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? '6px' : '20px',
+                            justifyContent: (String(data.personalData.includePhotoInCV).toLowerCase() === 'true') && data.personalData.photoUrl ? 'flex-start' : 'space-between',
+                            marginBottom: '6px'
+                          }}>
+                            {contactElements}
+                          </div>
+                          <div style={{ color: colorPalette.primary }}>
+                            {socialElements}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.phone}
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.address}
-                    </div>
-                    {selectedJob && showJobTitle && (
-                      <div style={{ display: 'flex', alignItems: 'center', marginTop: '2px', color: colorPalette.primary, fontWeight: 400 }}>
-                        {language === 'pl' ? 'Rekrutacja:' : 'Recruitment:'} {selectedJob.title} 
-                        {selectedJob.company && (
-                          <>{language === 'pl' ? ' w ' : ' at '}{selectedJob.company}</>
-                        )}
+                  );
+                } else {
+                  // 2+ linki społecznościowe - układ dwukolumnowy (obecna logika)
+                  return (
+                    <div style={{ 
+                      marginTop: effectiveSpacing.header.nameToContactSpacing,
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                      gap: effectiveSpacing.elements.margin,
+                      color: colorPalette.grayDark,
+                      fontSize: effectiveFontSizes.contactInfo
+                    }}>
+                      {/* Lewa kolumna - dane kontaktowe */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                        {contactElements}
                       </div>
-                    )}
-                  </div>
-                ) : (
-                  // Jeśli nie ma ani zdjęcia, ani linków - dane kontaktowe w jednym rzędzie poziomym
-                  <div style={{ 
-                    marginTop: effectiveSpacing.header.nameToContactSpacing,
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    color: colorPalette.grayDark,
-                    fontSize: effectiveFontSizes.contactInfo
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px',  }}>
-                      <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.email}
+                      
+                      {/* Prawa kolumna - linki społecznościowe */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', color: colorPalette.primary }}>
+                        {socialElements}
+                      </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.phone}
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginRight: '10px' }}>
-                      <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                      {data.personalData.address}
-                    </div>
-                  </div>
-                )
-               )}
+                  );
+                }
+              })()}
                
                {/* Dodajemy wyświetlanie informacji o stanowisku tutaj, gdy nie ma linków społecznościowych i nie ma zdjęcia */}
                {selectedJob && showJobTitle && !data.personalData.socialLinks?.filter(link => link.include).length && 

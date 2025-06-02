@@ -39,11 +39,19 @@ export function SiteHeader() {
       case "/creator":
         return "Kreator CV"
       case "/saved":
-        return "Zapisane"
+        return "Zapisane oferty"
       case "/scheduler":
-        return "Terminarz"
+        return "Tabela kanban"
       case "/calculator":
         return "Kalkulator wynagrodzeń"
+      case "/training":
+        return "Trening przed rozmową"
+      case "/profile":
+        return "Profil"
+      case "/assistant":
+        return "Asystent" 
+      case "/stats":
+        return "Statystyki"
       default:
         return "Home"
     }

@@ -97,15 +97,15 @@ export const colorPalette = {
 // Rozmiary czcionek - centralne miejsce do konfiguracji
 export const fontSizes = {
   base: '11px',          // Podstawowy rozmiar dokumentu
-  nameHeader: '35px',    // Imię i nazwisko
-  sectionHeader: '18px', // Nagłówki sekcji
+  nameHeader: '40px',    // Imię i nazwisko
+  sectionHeader: '20px', // Nagłówki sekcji
   contactInfo: '12px',   // Informacje kontaktowe
   dates: '13px',         // Daty
-  position: '13px',      // Stanowisko i nagłówki umiejętności
-  company: '12px',       // Nazwa firmy
+  position: '14px',      // Stanowisko i nagłówki umiejętności
+  company: '13px',       // Nazwa firmy
   description: '11px',   // Opisy
   profileText: '12px',   // Tekst profilu
-  tagText: '12px',       // Tagi umiejętności, jezyki
+  tagText: '13px',       // Tagi umiejętności, jezyki
   rodoText: '9px'        // Klauzula RODO
 };
 
@@ -113,7 +113,7 @@ export const fontSizes = {
 export const spacing = {
   // Marginesy dla całego dokumentu
   document: {
-    paddingTop: '25px',            // Padding górny dokumentu
+    paddingTop: '20px',            // Padding górny dokumentu
     paddingBottom: '10px',        // Padding dolny dokumentu
     paddingSides: '28px',         // Padding boczny dokumentu (lewy i prawy)
     borderWidth: '1px',           // Szerokość standardowego obramowania
@@ -121,7 +121,7 @@ export const spacing = {
   
   // Nagłówek z danymi osobowymi
   header: {
-    bottomMargin: '10px',         // Dolny margines dla nagłówka dokumentu do niebieskiej linii
+    bottomMargin: '15px',         // Dolny margines dla nagłówka dokumentu do niebieskiej linii
     bottomSpacing: '0px',        // Odstęp po niebieskiej linii nagłówka
     contentSpacing: '5px',        // Odstęp między nazwiskiem a danymi kontaktowymi
     nameToContactSpacing: '5px', // Odstęp między imieniem/nazwiskiem a danymi kontaktowymi
@@ -130,7 +130,7 @@ export const spacing = {
   
   // Sekcje zawartości (doświadczenie, edukacja, itd.)
   sections: {
-    margin: '24px',               // Odstęp między sekcjami
+    margin: '20px',               // Odstęp między sekcjami
     headerPadding: '4px',         // Padding dolny nagłówków sekcji a linia
     bottomBorder: '2px',          // Dolna krawędź sekcji
   },
@@ -148,7 +148,7 @@ export const spacing = {
   
   // Elementy wewnątrz sekcji
   elements: {
-    margin: '4px',                // Margines między elementami w sekcji
+    margin: '5px',                // Margines między elementami w sekcji
     itemMargin: '16px',           // Odstęp między większymi elementami (np. doświadczenia)
     contentSpacing: '8px',        // Odstęp między nagłówkiem a zawartością
     tagGap: '8px',                // Odstęp między tagami

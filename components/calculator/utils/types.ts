@@ -50,6 +50,12 @@ export interface CalculationResults {
         healthContributionBasis: number;
         taxBasis: number;
     };
+    // Opcjonalne pola specyficzne dla B2B
+    vatAmount?: number;           // Kwota VAT
+    businessCosts?: number;       // Koszty uzyskania przychodu
+    accidentInsurance?: number;   // Ubezpieczenie wypadkowe
+    workFund?: number;           // Fundusz pracy
+    totalSocialSecurityContributions?: number; // Nowe pole dla sumy składek społecznych B2B (bez zdrowotnej)
 }
 
 // Interfejs opcji dla umowy o pracę
@@ -97,5 +103,11 @@ export const defaultResults: CalculationResults = {
         socialContributionsBasis: 0,
         healthContributionBasis: 0,
         taxBasis: 0
-    }
+    },
+    // Pola B2B
+    vatAmount: 0,
+    businessCosts: 0,
+    accidentInsurance: 0,
+    workFund: 0,
+    totalSocialSecurityContributions: 0
 };

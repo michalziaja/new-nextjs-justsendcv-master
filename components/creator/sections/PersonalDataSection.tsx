@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { IoClose } from "react-icons/io5";
 import { CVData, useCV } from '../CVContext';
-import { FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaGlobe, FaTwitter, FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaBirthdayCake } from "react-icons/fa";
 import { IoMdCheckboxOutline, IoMdSquareOutline } from "react-icons/io";
 import { FaUser, FaShareAlt, FaEdit, FaCheck, FaTimes } from "react-icons/fa";
 
@@ -44,11 +44,26 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
   const [showJobTitle, setShowJobTitle] = useState(cvData.showJobTitleInCV || false);
   // Stan do kontrolowania modalu potwierdzającego
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  // Stan do kontrolowania widoczności wieku w CV
+  const [showAge, setShowAge] = useState(cvData.personalData.showAgeInCV || false);
+  // Stany do kontrolowania widoczności danych kontaktowych w CV
+  const [showEmail, setShowEmail] = useState(cvData.personalData.showEmailInCV !== false); // Domyślnie true
+  const [showPhone, setShowPhone] = useState(cvData.personalData.showPhoneInCV !== false); // Domyślnie true
+  const [showAddress, setShowAddress] = useState(cvData.personalData.showAddressInCV !== false); // Domyślnie true
   
   // Nowe stany do obsługi edycji linków społecznościowych
   const [editingLinkIndex, setEditingLinkIndex] = useState<number | null>(null);
   const [editType, setEditType] = useState('');
   const [editUrl, setEditUrl] = useState('');
+  
+  // Stany do obsługi edycji danych kontaktowych
+  const [editingField, setEditingField] = useState<string | null>(null);
+  const [editFirstName, setEditFirstName] = useState('');
+  const [editLastName, setEditLastName] = useState('');
+  const [editEmail, setEditEmail] = useState('');
+  const [editPhone, setEditPhone] = useState('');
+  const [editAge, setEditAge] = useState('');
+  const [editAddress, setEditAddress] = useState('');
   
   const profileLoadedRef = useRef(false);
 
@@ -93,7 +108,30 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     if (cvData.showJobTitleInCV !== undefined) {
       setShowJobTitle(cvData.showJobTitleInCV);
     }
+    // Synchronizuj stan widoczności wieku w CV - konwertuj string na boolean
+    if (cvData.personalData.showAgeInCV !== undefined) {
+      setShowAge(String(cvData.personalData.showAgeInCV).toLowerCase() === 'true');
+    }
+    // Synchronizuj stan widoczności email w CV - konwertuj string na boolean
+    if (cvData.personalData.showEmailInCV !== undefined) {
+      setShowEmail(String(cvData.personalData.showEmailInCV).toLowerCase() !== 'false');
+    }
+    // Synchronizuj stan widoczności telefonu w CV - konwertuj string na boolean  
+    if (cvData.personalData.showPhoneInCV !== undefined) {
+      setShowPhone(String(cvData.personalData.showPhoneInCV).toLowerCase() !== 'false');
+    }
+    // Synchronizuj stan widoczności adresu w CV - konwertuj string na boolean
+    if (cvData.personalData.showAddressInCV !== undefined) {
+      setShowAddress(String(cvData.personalData.showAddressInCV).toLowerCase() !== 'false');
+    }
   }, [cvData.personalData, cvData.showJobTitleInCV]);
+
+  // Funkcja obliczająca wiek na podstawie roku urodzenia
+  const calculateAge = (birthYear: string): number => {
+    const currentYear = new Date().getFullYear();
+    const birth = parseInt(birthYear);
+    return isNaN(birth) ? 0 : currentYear - birth;
+  };
   
   // Funkcja rozpoczynająca edycję linku
   const startEditingLink = (index: number) => {
@@ -197,6 +235,81 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
     setShowConfirmModal(false);
   };
 
+  // Funkcje do obsługi edycji danych kontaktowych
+  const startEditingField = (field: string) => {
+    setEditingField(field);
+    switch (field) {
+      case 'firstName':
+        setEditFirstName(cvData.personalData.firstName);
+        break;
+      case 'lastName':
+        setEditLastName(cvData.personalData.lastName);
+        break;
+      case 'email':
+        setEditEmail(cvData.personalData.email);
+        break;
+      case 'phone':
+        setEditPhone(cvData.personalData.phone);
+        break;
+      case 'age':
+        setEditAge(cvData.personalData.age || '');
+        break;
+      case 'address':
+        setEditAddress(cvData.personalData.address);
+        break;
+    }
+  };
+
+  const saveEditedField = () => {
+    if (editingField === null) return;
+    
+    let newValue = '';
+    switch (editingField) {
+      case 'firstName':
+        newValue = editFirstName.trim();
+        break;
+      case 'lastName':
+        newValue = editLastName.trim();
+        break;
+      case 'email':
+        newValue = editEmail.trim();
+        break;
+      case 'phone':
+        newValue = editPhone.trim();
+        break;
+      case 'age':
+        newValue = editAge.trim();
+        break;
+      case 'address':
+        newValue = editAddress.trim();
+        break;
+    }
+    
+    updatePersonalData(editingField, newValue);
+    
+    // Resetuj stan edycji
+    setEditingField(null);
+    setEditFirstName('');
+    setEditLastName('');
+    setEditEmail('');
+    setEditPhone('');
+    setEditAge('');
+    setEditAddress('');
+    
+    // Automatyczny zapis CV
+    saveCV(true);
+  };
+
+  const cancelEditingField = () => {
+    setEditingField(null);
+    setEditFirstName('');
+    setEditLastName('');
+    setEditEmail('');
+    setEditPhone('');
+    setEditAge('');
+    setEditAddress('');
+  };
+
   return (
     <div className="flex flex-col h-full ">
       {/* Modal potwierdzający zakończenie kreatora - wyświetlany, gdy showConfirmModal jest true */}
@@ -226,7 +339,7 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
         </div>
       )}
 
-      <div className="p-4 ml-6 -mt-2">
+      <div className="p-3 ml-6 -mt-2">
         <h3 className="text-lg font-semibold mb-0 flex items-center">
           <FaUser className="mr-2 text-blue-500" /> Dane osobowe
         </h3>
@@ -272,7 +385,7 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
               <input
                 type="checkbox"
                 id="showJobTitle"
-                className="mr-2 h-3 w-3 text-blue-600 border-gray-300 rounded"
+                className="mr-2 h-2 w-2 text-blue-600 border-gray-300 rounded"
                 checked={showJobTitle}
                 onChange={(e) => {
                   const newValue = e.target.checked;
@@ -294,59 +407,438 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
           </div>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="flex items-baseline">
-            <label className="text-md font-medium text-gray-900 mr-3 whitespace-nowrap w-10">Imię</label>
-            <input 
-              type="text" 
-              className="w-3/4 border text-sm rounded-md px-3 py-2" 
-              placeholder="Wprowadź imię"
-              value={cvData.personalData.firstName}
-              onChange={(e) => updatePersonalData('firstName', e.target.value)}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mr-6">
+          {/* Imię */}
+          <div className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all`}>
+            {/* Checkbox nieaktywny - imię jest zawsze wyświetlane */}
+            <button
+              type="button"
+              className="mr-2 focus:outline-none cursor-not-allowed opacity-50"
+              title="Imię jest zawsze wyświetlane w CV"
+              disabled
+            >
+              <IoMdCheckboxOutline className="w-6 h-6 text-gray-400" />
+            </button>
+            
+            {/* Zawartość lub formularz edycji */}
+            <div className="flex-1">
+              {editingField === 'firstName' ? (
+                <input
+                  type="text"
+                  value={editFirstName}
+                  onChange={(e) => setEditFirstName(e.target.value)}
+                  placeholder="Wprowadź imię"
+                  className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              ) : (
+                <div className="text-sm font-medium">{cvData.personalData.firstName || 'Wprowadź imię'}</div>
+              )}
+            </div>
+
+            {/* Ikonka edycji po prawej stronie */}
+            <div className="ml-2">
+              {editingField === 'firstName' ? (
+                <div className="flex">
+                  <button 
+                    type="button"
+                    onClick={saveEditedField}
+                    className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                    title="Zapisz zmiany"
+                  >
+                    <FaCheck className="w-4 h-4" />
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={cancelEditingField}
+                    className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                    title="Anuluj edycję"
+                  >
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button 
+                  type="button"
+                  onClick={() => startEditingField('firstName')}
+                  className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                  title="Edytuj imię"
+                >
+                  <FaEdit className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
-          <div className="flex items-baseline">
-            <label className="text-md font-medium text-gray-900 mr-10 whitespace-nowrap w-10">Nazwisko</label>
-            <input 
-              type="text" 
-              className="w-4/6 border text-sm rounded-md px-3 py-2" 
-              placeholder="Wprowadź nazwisko"
-              value={cvData.personalData.lastName}
-              onChange={(e) => updatePersonalData('lastName', e.target.value)}
-            />
+
+          {/* Nazwisko */}
+          <div className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all`}>
+            {/* Checkbox nieaktywny - nazwisko jest zawsze wyświetlane */}
+            <button
+              type="button"
+              className="mr-2 focus:outline-none cursor-not-allowed opacity-50"
+              title="Nazwisko jest zawsze wyświetlane w CV"
+              disabled
+            >
+              <IoMdCheckboxOutline className="w-6 h-6 text-gray-400" />
+            </button>
+            
+            {/* Zawartość lub formularz edycji */}
+            <div className="flex-1">
+              {editingField === 'lastName' ? (
+                <input
+                  type="text"
+                  value={editLastName}
+                  onChange={(e) => setEditLastName(e.target.value)}
+                  placeholder="Wprowadź nazwisko"
+                  className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              ) : (
+                <div className="text-sm font-medium">{cvData.personalData.lastName || 'Wprowadź nazwisko'}</div>
+              )}
+            </div>
+
+            {/* Ikonka edycji po prawej stronie */}
+            <div className="ml-2">
+              {editingField === 'lastName' ? (
+                <div className="flex">
+                  <button 
+                    type="button"
+                    onClick={saveEditedField}
+                    className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                    title="Zapisz zmiany"
+                  >
+                    <FaCheck className="w-4 h-4" />
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={cancelEditingField}
+                    className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                    title="Anuluj edycję"
+                  >
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button 
+                  type="button"
+                  onClick={() => startEditingField('lastName')}
+                  className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                  title="Edytuj nazwisko"
+                >
+                  <FaEdit className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
-          <div className="flex items-baseline">
-            <label className="text-md font-medium text-gray-900 mr-3 whitespace-nowrap w-10">Email</label>
-            <input 
-              type="email" 
-              className="w-3/4 border text-sm rounded-md px-3 py-2" 
-              placeholder="Wprowadź email"
-              value={cvData.personalData.email}
-              onChange={(e) => updatePersonalData('email', e.target.value)}
-            />
+
+          {/* Email */}
+          <div className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all`}>
+            {/* Checkbox do wyświetlania email w CV */}
+            <button
+              type="button"
+              onClick={() => {
+                const newValue = !showEmail;
+                setShowEmail(newValue);
+                updatePersonalData('showEmailInCV', newValue.toString());
+                // Automatyczny zapis CV po zmianie
+                saveCV(true);
+              }}
+              className="mr-2 focus:outline-none"
+              title={showEmail ? "Ukryj email w CV" : "Pokaż email w CV"}
+            >
+              {showEmail ? (
+                <IoMdCheckboxOutline className="w-6 h-6 text-blue-500" />
+              ) : (
+                <IoMdSquareOutline className="w-6 h-6 text-gray-400" />
+              )}
+            </button>
+
+            {/* Ikona email */}
+            <div className="mr-3">
+              <FaEnvelope className="text-blue-600" />
+            </div>
+            
+            {/* Zawartość lub formularz edycji */}
+            <div className="flex-1">
+              {editingField === 'email' ? (
+                <input
+                  type="email"
+                  value={editEmail}
+                  onChange={(e) => setEditEmail(e.target.value)}
+                  placeholder="Wprowadź email"
+                  className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              ) : (
+                <div className="text-xs text-gray-500 truncate">{cvData.personalData.email || 'Wprowadź email'}</div>
+              )}
+            </div>
+
+            {/* Ikonka edycji po prawej stronie */}
+            <div className="ml-2">
+              {editingField === 'email' ? (
+                <div className="flex">
+                  <button 
+                    type="button"
+                    onClick={saveEditedField}
+                    className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                    title="Zapisz zmiany"
+                  >
+                    <FaCheck className="w-4 h-4" />
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={cancelEditingField}
+                    className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                    title="Anuluj edycję"
+                  >
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button 
+                  type="button"
+                  onClick={() => startEditingField('email')}
+                  className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                  title="Edytuj email"
+                >
+                  <FaEdit className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
-          <div className="flex items-baseline">
-            <label className="text-md font-medium text-gray-900 mr-10 whitespace-nowrap w-10">Telefon</label>
-            <input 
-              type="tel" 
-              className="w-4/6 border text-sm rounded-md px-3 py-2" 
-              placeholder="Wprowadź numer telefonu"
-              value={cvData.personalData.phone}
-              onChange={(e) => updatePersonalData('phone', e.target.value)}
-            />
+
+          {/* Telefon */}
+          <div className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all`}>
+            {/* Checkbox do wyświetlania telefonu w CV */}
+            <button
+              type="button"
+              onClick={() => {
+                const newValue = !showPhone;
+                setShowPhone(newValue);
+                updatePersonalData('showPhoneInCV', newValue.toString());
+                // Automatyczny zapis CV po zmianie
+                saveCV(true);
+              }}
+              className="mr-2 focus:outline-none"
+              title={showPhone ? "Ukryj telefon w CV" : "Pokaż telefon w CV"}
+            >
+              {showPhone ? (
+                <IoMdCheckboxOutline className="w-6 h-6 text-blue-500" />
+              ) : (
+                <IoMdSquareOutline className="w-6 h-6 text-gray-400" />
+              )}
+            </button>
+
+            {/* Ikona telefonu */}
+            <div className="mr-3">
+              <FaPhone className="text-green-600" />
+            </div>
+            
+            {/* Zawartość lub formularz edycji */}
+            <div className="flex-1">
+              {editingField === 'phone' ? (
+                <input
+                  type="tel"
+                  value={editPhone}
+                  onChange={(e) => setEditPhone(e.target.value)}
+                  placeholder="Wprowadź numer telefonu"
+                  className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              ) : (
+                <div className="text-xs text-gray-500 truncate">{cvData.personalData.phone || 'Wprowadź numer telefonu'}</div>
+              )}
+            </div>
+
+            {/* Ikonka edycji po prawej stronie */}
+            <div className="ml-2">
+              {editingField === 'phone' ? (
+                <div className="flex">
+                  <button 
+                    type="button"
+                    onClick={saveEditedField}
+                    className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                    title="Zapisz zmiany"
+                  >
+                    <FaCheck className="w-4 h-4" />
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={cancelEditingField}
+                    className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                    title="Anuluj edycję"
+                  >
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button 
+                  type="button"
+                  onClick={() => startEditingField('phone')}
+                  className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                  title="Edytuj telefon"
+                >
+                  <FaEdit className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
-          <div className="flex items-baseline">
-            <label className="text-md font-medium text-gray-900 mr-3 whitespace-nowrap w-10">Adres</label>
-            <input 
-              type="text" 
-              className="w-3/4 border text-sm rounded-md px-3 py-2" 
-              placeholder="Wprowadź adres"
-              value={cvData.personalData.address}
-              onChange={(e) => updatePersonalData('address', e.target.value)}
-            />
+
+          {/* Wiek */}
+          <div className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all`}>
+            {/* Checkbox do wyświetlania wieku w CV - wyświetlany tylko gdy jest wprowadzony rok */}
+            {cvData.personalData.age ? (
+              <button
+                type="button"
+                onClick={() => {
+                  const newValue = !showAge;
+                  setShowAge(newValue);
+                  updatePersonalData('showAgeInCV', newValue.toString());
+                  // Automatyczny zapis CV po zmianie
+                  saveCV(true);
+                }}
+                className="mr-2 focus:outline-none"
+                title={showAge ? "Ukryj wiek w CV" : "Pokaż wiek w CV"}
+              >
+                {showAge ? (
+                  <IoMdCheckboxOutline className="w-6 h-6 text-blue-500" />
+                ) : (
+                  <IoMdSquareOutline className="w-6 h-6 text-gray-400" />
+                )}
+              </button>
+            ) : (
+              <div className="mr-2 w-6 h-6"></div>
+            )}
+
+            {/* Ikona wieku */}
+            <div className="mr-3">
+              <FaBirthdayCake className="text-pink-600" />
+            </div>
+            
+            {/* Zawartość lub formularz edycji */}
+            <div className="flex-1">
+              {editingField === 'age' ? (
+                <input
+                  type="number"
+                  value={editAge}
+                  onChange={(e) => setEditAge(e.target.value)}
+                  placeholder="np. 1990"
+                  className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              ) : (
+                <div className="text-xs text-gray-500 truncate">{cvData.personalData.age || 'np. 1990'}</div>
+              )}
+            </div>
+
+            {/* Ikonka edycji po prawej stronie */}
+            <div className="ml-2">
+              {editingField === 'age' ? (
+                <div className="flex">
+                  <button 
+                    type="button"
+                    onClick={saveEditedField}
+                    className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                    title="Zapisz zmiany"
+                  >
+                    <FaCheck className="w-4 h-4" />
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={cancelEditingField}
+                    className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                    title="Anuluj edycję"
+                  >
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button 
+                  type="button"
+                  onClick={() => startEditingField('age')}
+                  className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                  title="Edytuj wiek"
+                >
+                  <FaEdit className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Adres */}
+          <div className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all`}>
+            {/* Checkbox do wyświetlania adresu w CV */}
+            <button
+              type="button"
+              onClick={() => {
+                const newValue = !showAddress;
+                setShowAddress(newValue);
+                updatePersonalData('showAddressInCV', newValue.toString());
+                // Automatyczny zapis CV po zmianie
+                saveCV(true);
+              }}
+              className="mr-2 focus:outline-none"
+              title={showAddress ? "Ukryj adres w CV" : "Pokaż adres w CV"}
+            >
+              {showAddress ? (
+                <IoMdCheckboxOutline className="w-6 h-6 text-blue-500" />
+              ) : (
+                <IoMdSquareOutline className="w-6 h-6 text-gray-400" />
+              )}
+            </button>
+
+            {/* Ikona adresu */}
+            <div className="mr-3">
+              <FaMapMarkerAlt className="text-red-600" />
+            </div>
+            
+            {/* Zawartość lub formularz edycji */}
+            <div className="flex-1">
+              {editingField === 'address' ? (
+                <input
+                  type="text"
+                  value={editAddress}
+                  onChange={(e) => setEditAddress(e.target.value)}
+                  placeholder="Wprowadź adres"
+                  className="w-full text-sm border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              ) : (
+                <div className="text-xs text-gray-500 truncate">{cvData.personalData.address || 'Wprowadź adres'}</div>
+              )}
+            </div>
+
+            {/* Ikonka edycji po prawej stronie */}
+            <div className="ml-2">
+              {editingField === 'address' ? (
+                <div className="flex">
+                  <button 
+                    type="button"
+                    onClick={saveEditedField}
+                    className="mr-1 p-1 text-green-600 hover:text-green-800 focus:outline-none"
+                    title="Zapisz zmiany"
+                  >
+                    <FaCheck className="w-4 h-4" />
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={cancelEditingField}
+                    className="p-1 text-red-600 hover:text-red-800 focus:outline-none"
+                    title="Anuluj edycję"
+                  >
+                    <FaTimes className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button 
+                  type="button"
+                  onClick={() => startEditingField('address')}
+                  className="p-1 text-gray-500 hover:text-blue-600 focus:outline-none"
+                  title="Edytuj adres"
+                >
+                  <FaEdit className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
-        
+
         {/* Sekcja linków społecznościowych */}
         {socialLinks.length > 0 && (
           <div className="mt-10">
@@ -355,9 +847,9 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
             </h4>
             <p className="text-gray-600 mb-4 text-sm">Wybierz, które linki chcesz uwzględnić w swoim CV i edytuj je według potrzeb</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mr-6">
               {socialLinks.map((link, index) => (
-                <div key={index} className={`flex items-center border rounded-md p-3 hover:bg-gray-50 transition-all ${
+                <div key={index} className={`flex items-center border rounded-md p-2 hover:bg-gray-50 transition-all ${
                   lastToggledLinkIndex === index ? 'bg-blue-50 border-blue-300' : ''
                 }`}>
                   {/* Checkbox do uwzględnienia linku w CV */}
@@ -368,9 +860,9 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
                     title={link.include ? "Kliknij, aby usunąć z CV" : "Kliknij, aby dodać do CV"}
                   >
                     {link.include ? (
-                      <IoMdCheckboxOutline className="w-5 h-5 text-blue-500" />
+                      <IoMdCheckboxOutline className="w-6 h-6 text-blue-500" />
                     ) : (
-                      <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
+                      <IoMdSquareOutline className="w-6 h-6 text-gray-400" />
                     )}
                   </button>
 
@@ -384,7 +876,7 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
                     {editingLinkIndex === index ? (
                       <div className="space-y-2">
                         {/* Dla standardowych linków z profilu pokazujemy tylko pole URL */}
-                        {['linkedin', 'github', 'portfolio', 'website', 'twitter', 'facebook', 'instagram'].includes(link.type.toLowerCase()) ? (
+                        {['linkedin', 'github', 'portfolio', 'website', 'twitter', 'facebook', 'instagram'].includes(editType.toLowerCase()) ? (
                           <input
                             type="url"
                             value={editUrl}
@@ -480,9 +972,9 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
               title={includePhoto ? "Ukryj opcje zdjęcia" : "Pokaż opcje zdjęcia"}
             >
               {includePhoto ? (
-                <IoMdCheckboxOutline className="w-5 h-5 text-blue-500" />
+                <IoMdCheckboxOutline className="w-6 h-6 text-blue-500" />
               ) : (
-                <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
+                <IoMdSquareOutline className="w-6 h-6 text-gray-400" />
               )}
               <span className="ml-2 text-lg font-semibold ">Dołącz zdjęcie do CV</span>
 
@@ -492,8 +984,8 @@ const PersonalDataSection: React.FC<PersonalDataSectionProps> = ({
               Zaznacz checkboxy aby dodać zdjęcie do CV.
             </p>
           {includePhoto && (
-            <div className="p-4 border rounded-md ">
-              <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+            <div className="p-4 border rounded-md mr-6">
+              <div className="grid grid-cols-2 gap-x-12 gap-y-2">
                 <div>
                   <label htmlFor="photoScaleRange" className="block text-sm text-gray-600 mb-1">Rozmiar ({currentPhotoScale}%):</label>
                   <input 

@@ -16,28 +16,27 @@ interface StatusCounts {
   rejected: number;
 }
 
-// Komponent karty statystyk
+// Komponent karty statystyk z kolorowym tłem
 interface StatCardProps {
   title: string;
   value: string | number;
   description: string;
   icon: React.ReactNode;
-  borderColor: string;
-  darkBorderColor: string;
+  bgColor: string; // Kolor tła dla całej karty
+  textColor: string; // Kolor tekstu dla kontrastu
   isLoading?: boolean;
 }
 
-function StatCard({ title, value, description, icon, borderColor, darkBorderColor, isLoading = false }: StatCardProps) {
+function StatCard({ title, value, description, icon, bgColor, textColor, isLoading = false }: StatCardProps) {
   return (
     <Card className={`
-      border border-gray-200 dark:border-gray-800
-      ${borderColor} ${darkBorderColor}
-      shadow-[2px_4px_10px_rgba(0,0,0,0.3)] 
+      border-0
+      ${bgColor}
+      shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
       dark:shadow-slate-900/20
-      bg-white dark:bg-sidebar
       transition-all duration-200
       rounded-sm
-      border-t-[4px]
+      ${textColor}
     `}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-0">
         <CardTitle className="-mt-6 text-sm font-sm md:text-base lg:text-base xl:text-base">{title}</CardTitle>
@@ -51,7 +50,7 @@ function StatCard({ title, value, description, icon, borderColor, darkBorderColo
             value
           )}
         </div>
-        <p className="text-xs text-muted-foreground hidden min-[700px]:block -mb-3">{description}</p>
+        <p className="text-xs opacity-80 hidden min-[700px]:block -mb-3">{description}</p>
       </CardContent>
     </Card>
   )
@@ -123,59 +122,65 @@ export function StatCards() {
   }, []);
 
   return (
-    <div className="grid gap-2 sm:gap-2 md:gap-2 lg:gap-2 xl:gap-6 grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
+    <div className="grid gap-2 sm:gap-2 md:gap-2 lg:gap-2 xl:gap-3 grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
+      {/* Karta "Zapisane" - niebieskie tło */}
       <StatCard 
         title="Zapisane" 
         value={statusCounts.saved}
         description="Zapisane oferty"
-        icon={<FileText className="h-6 w-6 text-blue-500 dark:text-blue-400" />}
-        borderColor="border-t-blue-600"
-        darkBorderColor="dark:border-t-blue-600"
+        icon={<FileText className="h-6 w-6 text-white" />}
+        bgColor="bg-blue-500 dark:bg-blue-600"
+        textColor="text-white"
         isLoading={isLoading}
       />
+      {/* Karta "Wysłane" - fioletowe tło */}
       <StatCard 
         title="Wysłane" 
         value={statusCounts.send}
         description="Aplikacje wysłane"
-        icon={<Send className="h-6 w-6 text-purple-500 dark:text-purple-400" />}
-        borderColor="border-t-purple-600"
-        darkBorderColor="dark:border-t-purple-600"
+        icon={<Send className="h-6 w-6 text-white" />}
+        bgColor="bg-purple-500 dark:bg-purple-600"
+        textColor="text-white"
         isLoading={isLoading}
       />
+      {/* Karta "Kontakt" - żółte tło */}
       <StatCard 
         title="Kontakt" 
         value={statusCounts.contact}
         description="Kontakt od HR"
-        icon={<Mail className="h-6 w-6 text-yellow-500 dark:text-yellow-400" />}
-        borderColor="border-t-yellow-600"
-        darkBorderColor="dark:border-t-yellow-600"
+        icon={<Mail className="h-6 w-6 text-white" />}
+        bgColor="bg-yellow-400 dark:bg-yellow-500"
+        textColor="text-white dark:text-gray-900"
         isLoading={isLoading}
       />
+      {/* Karta "Rozmowa" - błękitne tło */}
       <StatCard 
         title="Rozmowa" 
         value={statusCounts.interview}
         description="Umówione rozmowy"
-        icon={<PhoneCall className="h-6 w-6 text-cyan-500 dark:text-cyan-400" />}
-        borderColor="border-t-cyan-600"
-        darkBorderColor="dark:border-t-cyan-600"
+        icon={<PhoneCall className="h-6 w-6 text-white" />}
+        bgColor="bg-cyan-500 dark:bg-cyan-600"
+        textColor="text-white"
         isLoading={isLoading}
       />
+      {/* Karta "Oferta" - zielone tło */}
       <StatCard 
         title="Oferta" 
         value={statusCounts.offer}
         description="Otrzymane oferty"
-        icon={<ClipboardList className="h-6 w-6 text-green-500 dark:text-green-400" />}
-        borderColor="border-t-green-600"
-        darkBorderColor="dark:border-t-green-600"
+        icon={<ClipboardList className="h-6 w-6 text-white" />}
+        bgColor="bg-green-500 dark:bg-green-600"
+        textColor="text-white"
         isLoading={isLoading}
       />
+      {/* Karta "Odmowa" - czerwone tło */}
       <StatCard 
         title="Odmowa" 
         value={statusCounts.rejected}
         description="Odmowy"
-        icon={<X className="h-6 w-6 text-red-500 dark:text-red-400" />}
-        borderColor="border-t-red-600"
-        darkBorderColor="dark:border-t-red-600"
+        icon={<X className="h-6 w-6 text-white" />}
+        bgColor="bg-red-500 dark:bg-red-600"
+        textColor="text-white"
         isLoading={isLoading}
       />
     </div>

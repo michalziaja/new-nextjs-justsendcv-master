@@ -1,5 +1,17 @@
 import React from 'react';
 import { IoMdEye } from "react-icons/io";
+// Dodajemy importy ikon dla każdej sekcji
+import { 
+  FaPlay, 
+  FaUser, 
+  FaFileAlt, 
+  FaBriefcase, 
+  FaProjectDiagram, 
+  FaGraduationCap, 
+  FaCertificate, 
+  FaLightbulb, 
+  FaFlag 
+} from "react-icons/fa";
 
 interface CreatorHeaderProps {
   activeSection: string;
@@ -14,13 +26,23 @@ const CreatorHeader: React.FC<CreatorHeaderProps> = ({
   isScrolling,
   switchMode
 }) => {
-  // Definiujemy kolejność sekcji
-  const sections = ['start', 'personalData', 'description', 'experience', 'projects', 'education', 'courses', 'skills', 'summary'];
+  // Definiujemy kolejność sekcji z ikonami
+  const sections = [
+    { id: 'start', name: 'Start', icon: FaPlay },
+    { id: 'personalData', name: 'Dane', icon: FaUser },
+    { id: 'description', name: 'Opis', icon: FaFileAlt },
+    { id: 'experience', name: 'Doświad.', icon: FaBriefcase },
+    { id: 'projects', name: 'Projekty', icon: FaProjectDiagram },
+    { id: 'education', name: 'Edukacja', icon: FaGraduationCap },
+    { id: 'courses', name: 'Kursy', icon: FaCertificate },
+    { id: 'skills', name: 'Umiejęt.', icon: FaLightbulb },
+    { id: 'summary', name: 'Podsum.', icon: FaFlag }
+  ];
   
   // Funkcja pomocnicza do sprawdzania, czy sekcja powinna być oznaczona jako ukończona
   const isSectionCompleted = (sectionName: string): boolean => {
-    const currentIndex = sections.indexOf(activeSection);
-    const sectionIndex = sections.indexOf(sectionName);
+    const currentIndex = sections.findIndex(s => s.id === activeSection);
+    const sectionIndex = sections.findIndex(s => s.id === sectionName);
     return sectionIndex < currentIndex;
   };
   
@@ -31,119 +53,61 @@ const CreatorHeader: React.FC<CreatorHeaderProps> = ({
   
   return (
     <div className="flex items-center gap-0">
-      {/* Pasek postępu z plakietkami */}
-      <div className="ml-1 relative w-full">
-        {/* Responsywne plakietki postępu */}
+      {/* Pasek postępu z nowoczesnymi kartami */}
+      <div className="relative w-full">
+        {/* Responsywne karty postępu */}
         <div 
           ref={badgeContainerRef}
-          className="flex justify-between items-center gap-x-1 w-full overflow-visible mb-0 relative z-10 py-2 px-2"
+          className="flex w-full overflow-visible mb-0 relative z-10 py-0"
           style={{
             overflowY: 'hidden',
             scrollbarWidth: 'thin',
             scrollbarColor: 'rgba(156, 163, 175, 0.5) transparent',
             WebkitOverflowScrolling: 'touch',
-            margin: '4px 0'
+            margin: '0',
+            gap: '0'
           }}
         >
-          {/* Badge: Start */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('start') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('start') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Start
-          </div>
-          
-          {/* Badge: Dane osobowe */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('personalData') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('personalData') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Dane
-          </div>
-          
-          {/* Badge: Opis */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('description') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('description') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Opis
-          </div>
-          
-          {/* Badge: Doświadczenie */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('experience') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('experience') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Doświad.
-          </div>
-          
-          {/* Badge: Projekty */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('projects') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('projects') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Projekty
-          </div>
-          
-          {/* Badge: Edukacja */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('education') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('education') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Edukacja
-          </div>
-          
-          {/* Badge: Kursy */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('courses') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('courses') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Kursy
-          </div>
-          
-          {/* Badge: Umiejętności */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('skills') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 
-                isSectionCompleted('skills') ? 
-                'bg-gradient-to-r from-green-400 to-green-600 text-white' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Umiejęt.
-          </div>
-          
-          {/* Badge: Podsumowanie */}
-          <div 
-            className={`px-0.5 xs:px-1 sm:px-1.5 md:px-2 py-0.5 sm:py-1 rounded-sm text-[10px] xs:text-[10px] sm:text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 flex-1 text-center shadow-[2px_4px_10px_rgba(0,0,0,0.2)] lg:shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
-              ${isSectionActive('summary') ? 'bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white shadow-md' : 'bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-600 dark:to-gray-700'}`}
-          >
-            Podsum.
-          </div>
+          {sections.map((section, index) => {
+            const IconComponent = section.icon;
+            const isActive = isSectionActive(section.id);
+            const isCompleted = isSectionCompleted(section.id);
+            
+            return (
+              <div 
+                key={section.id}
+                className={`relative flex flex-col items-center justify-center py-3 transition-all duration-300 transform flex-1 min-w-0 -ml-px first:ml-0 first:rounded-tl-sm last:rounded-tr-sm
+                  ${isActive ? 
+                    'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg border-blue-600' : 
+                    isCompleted ? 
+                    'bg-gradient-to-br from-green-400 to-green-500 text-white shadow-md border-green-500' : 
+                    'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300 border-b border-gray-200 dark:border-gray-600'
+                  }`}
+                style={{ marginLeft: index > 0 ? '-1px' : '0' }}
+              >
+                {/* Nazwa sekcji */}
+                <span className={`text-[10px] xs:text-[10px] sm:text-xs font-medium text-center leading-tight whitespace-nowrap overflow-hidden text-ellipsis w-full px-1
+                  ${isActive || isCompleted ? 'text-white' : 'text-gray-600 dark:text-gray-300'}
+                `}>
+                  {section.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
       
       {/* Przycisk przełączania - widoczny tylko gdy prop switchMode jest dostępny */}
       {switchMode && (
-        <button
-          onClick={switchMode}
-          className="h-12 w-12 bg-transparent dark:bg-sidebar rounded-sm flex items-center justify-center mr-2 mb-1"
-          title="Przełącz na podgląd"
-        >
-          <IoMdEye className="w-8 h-8 text-blue-600" />
-        </button>
+        <div className="relative flex flex-col items-center justify-center py-2 transition-all duration-300 transform min-w-0 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300 border-b border-gray-200 dark:border-gray-600 rounded-tr-sm mr-2">
+          <button
+            onClick={switchMode}
+            className="flex items-center justify-center rounded-sm transition-all duration-200"
+            title="Przełącz na podgląd"
+          >
+            <IoMdEye className="w-6 h-6 text-blue-600" />
+          </button>
+        </div>
       )}
     </div>
   );
