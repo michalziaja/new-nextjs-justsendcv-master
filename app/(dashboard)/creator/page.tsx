@@ -34,7 +34,7 @@ export default function CreatorPage() {
     <CVProvider>
       <div className="pb-4 lg:mt-8 xl:mt-11 md:mt-6 mt-6 mr-1 ml-0 sm:mr-4 sm:ml-3.5 md:mr-8 md:ml-7 xl:mr-15 xl:ml-15 max-h-[calc(88vh)] xl:max-h-[calc(88vh)] overflow-hidden">
         {/* Układ siatki z responsywnością */}
-        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-10 max-w-[1800px] mx-auto h-full relative overflow-hidden`}>
+        <div className={`grid ${isSmallScreen ? 'grid-cols-1' : 'grid-cols-2'} gap-4 max-w-[1800px] mx-auto h-full relative overflow-hidden`}>
           {/* Na małych ekranach pokazujemy albo kreator albo podgląd wraz z przyciskiem przełączania */}
           {isSmallScreen ? (
             <>

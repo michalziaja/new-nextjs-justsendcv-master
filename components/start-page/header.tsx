@@ -90,19 +90,19 @@ export function Header() {
             <Link href="/sign-in">
               <Button
                 size="sm"
-                className="bg-black rounded-sm dark:bg-white text-white dark:text-black hover:scale-105 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
+                className="bg-gradient-to-br from-[#00B2FF] to-blue-600 rounded-sm dark:bg-white text-white dark:text-black hover:scale-103 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
               >
                 Zaloguj się
               </Button>
             </Link>
-            <Link href="/sign-up">
+            {/* <Link href="/sign-up">
               <Button
                 size="sm"
                 className="bg-gradient-to-r from-[#00B2FF] to-blue-600 rounded-sm hover:bg-[#00B2FF] text-white dark:text-black hover:scale-105 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
               >
                 <span className="relative z-10">Zarejestruj się</span>
               </Button>
-            </Link>
+            </Link> */}
             <ThemeToggle />
           </div>
 

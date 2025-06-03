@@ -54,7 +54,7 @@ export function NavMain({
                     >
                       <Link 
                         href={item.url}
-                        className="w-full flex items-center gap-4 -ml-1 px-6 py-3 rounded-xs bg-white dark:bg-sidebar border-t-1 border-b-1 border-gray-500 shadow-md"
+                        className="w-full flex items-center gap-4 -ml-1 px-4 py-3 rounded-sm bg-white dark:bg-sidebar border-1 border-gray-500 shadow-md"
                       >
                         <item.icon className="w-6 h-6 text-gray-900 dark:text-gray-100" />
                         <span className="text-gray-900 dark:text-gray-100 text-base font-semibold">{item.title}</span>

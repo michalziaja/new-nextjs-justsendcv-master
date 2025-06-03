@@ -48,13 +48,13 @@ export function NavSecondary({
       <SidebarGroupContent>
         <SidebarMenu className="mt-auto">
           {/* Baner subskrypcji */}
-          <SidebarMenuItem className="mt-auto pt-20">
+          <SidebarMenuItem className="mt-auto">
             {!userData.isSubscribed ? (
               <a
                 href="/upgrade"
-                className="flex -ml-2 w-[109%] items-center gap-2 rounded-xs shadow-sm p-2 hover:scale-103 text-white hover:opacity-90 transition-opacity text-xs  dark:shadow-xs bg-gradient-to-r from-violet-500 to-purple-500"
+                className="flex h-10 -ml-1.5 w-[108%] items-center gap-2 rounded-xs shadow-sm p-2 hover:scale-103 text-white hover:opacity-90 transition-opacity text-xs  dark:shadow-xs bg-gradient-to-r from-violet-500 to-purple-500"
               >
-                <Crown className="h-6 w-6" />
+                <Crown className="h-6 w-6 ml-2" />
                 <span className="font-medium">Przejdź na Premium</span>
               </a>
             ) : (

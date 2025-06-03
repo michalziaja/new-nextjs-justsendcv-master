@@ -99,7 +99,7 @@ export default function TreningPageContent() {
   return (
     <div className="flex flex-1 flex-col gap-2 p-2 transition-all duration-200">
       {/* Główna zawartość - dwie kolumny */}
-      <div className="grid h-[calc(84vh)] grid-cols-1 mt-12 md:grid-cols-2 gap-6
+      <div className="grid h-[calc(84vh)] grid-cols-1 mt-12 md:grid-cols-2 gap-10
       ml-2 mr-2 sm:ml-1 sm:mr-1 md:ml-6 md:mr-6  
       lg:ml-8 lg:mr-6 xl:ml-15 xl:mr-15">
         {/* Lewa kolumna - wybór zagadnień */}

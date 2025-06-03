@@ -59,7 +59,7 @@ export function SiteHeader() {
 
   // Common header layout to avoid duplication
   const headerContent = (
-    <div className="flex h-12 w-full items-center justify-between px-3 ">
+    <div className="flex h-12 w-full items-center justify-between px-3  ">
       <div className="flex items-center">
         {/* Logo jako przycisk zwijania menu */}
         <div 
