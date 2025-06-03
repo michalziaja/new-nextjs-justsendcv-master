@@ -67,7 +67,7 @@ export function SavedTableTabs({ activeStatus, onStatusChange }: SavedTableTabsP
               "hover:bg-gray-100 dark:hover:bg-gray-800/50",
               "border-t-1",
               `${tab.color}`,
-              "data-[state=active]:border-t-5",
+              "data-[state=active]:border-t-7",
               "data-[state=active]:bg-white dark:data-[state=active]:bg-sidebar",
               "shadow-sm dark:shadow-slate-900/20",
               "data-[state=active]:shadow-md dark:data-[state=active]:shadow-slate-900/20",

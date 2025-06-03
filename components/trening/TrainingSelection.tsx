@@ -416,7 +416,7 @@ export default function TrainingSelection({
   };
 
   return (
-    <div className="flex flex-col h-[calc(84vh)]">
+    <div className="flex flex-col h-[calc(85vh)]">
       {/* Kontener dla kart z ustaloną wysokością */}
       <div className="h-[90px] min-h-[90px]">
         {/* Karty typów treningu w poziomie */}

@@ -35,7 +35,11 @@ export function CalendarSection() {
         // Bierzemy tylko 3 najnowsze zadania
         setTasks(sortedTasks.slice(0, 3))
       } catch (err) {
-        console.error("Błąd podczas ładowania zadań:", err)
+        console.error("Błąd podczas ładowania zadań:", {
+          message: err instanceof Error ? err.message : String(err),
+          stack: err instanceof Error ? err.stack : undefined,
+          error: err
+        })
         setError("Nie udało się załadować zadań")
       } finally {
         setIsLoading(false)

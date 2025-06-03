@@ -3,8 +3,8 @@
 import { useAnimationFrame, useInView, motion } from "framer-motion"
 import { Header } from "@/components/start-page/header"
 import { Footer } from "@/components/start-page/footer"
-import { FileText, Brain, Target, BarChart3, Clock, Shield, Sparkles, Bot, Chrome, ListTodo, Check } from "lucide-react"
-import { useRef } from "react"
+import { FileText, Brain, Target, BarChart3, Clock, Shield, Sparkles, Bot, Chrome, ListTodo, Check, ChevronLeft, ChevronRight } from "lucide-react"
+import { useRef, useState, useEffect } from "react"
 import CountUp from "react-countup"
 import Image from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -144,18 +144,18 @@ const appFeatures: AppFeature[] = [
       "Feedback i sugestie usprawnień"
     ]
   },
-  {
-    id: "browser-plugin",
-    title: "Wtyczka",
-    icon: <Chrome className="h-5 w-5" />,
-    description: "Zapisuj oferty jednym kliknięciem.",
-    image: "/placeholder.svg?height=600&width=800",
-    bulletPoints: [
-      "Szybki zapis ofert z portali pracy",
-      "Automatyczne dodawanie do Twojego konta",
-      "Powiadomienia o nowych ofertach"
-    ]
-  },
+  // {
+  //   id: "browser-plugin",
+  //   title: "Wtyczka",
+  //   icon: <Chrome className="h-5 w-5" />,
+  //   description: "Zapisuj oferty jednym kliknięciem.",
+  //   image: "/placeholder.svg?height=600&width=800",
+  //   bulletPoints: [
+  //     "Szybki zapis ofert z portali pracy",
+  //     "Automatyczne dodawanie do Twojego konta",
+  //     "Powiadomienia o nowych ofertach"
+  //   ]
+  // },
 ]
 
 const sites: Site[] = [
@@ -282,6 +282,30 @@ const articles: Article[] = [
   }
 ];
 
+// Obrazy dashboardu dla carousel
+const dashboardImages = [
+  {
+    light: "/dashboard1.png",
+    dark: "/dashboard1-dark.png", // Zakładając, że masz też wersje ciemne
+    alt: "JustSend.cv Dashboard - Śledzenie aplikacji"
+  },
+  {
+    light: "/dashboard2.png", 
+    dark: "/dashboard2-dark.png",
+    alt: "JustSend.cv Dashboard - Kreator CV"
+  },
+  {
+    light: "/dashboard3.png",
+    dark: "/dashboard3-dark.png", 
+    alt: "JustSend.cv Dashboard - Statystyki"
+  },
+  {
+    light: "/dashboard.png",
+    dark: "/dashboard4-dark.png",
+    alt: "JustSend.cv Dashboard - Asystent AI"
+  }
+];
+
 export default function StartPage() {
   const statsRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLDivElement>(null)
@@ -292,6 +316,10 @@ export default function StartPage() {
   const faqRef = useRef<HTMLDivElement>(null)
   const articlesRef = useRef<HTMLDivElement>(null)
 
+  // Stan dla carousel
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+
   const isStatsInView = useInView(statsRef, { once: true, amount: 0.2 })
   const isHeroInView = useInView(heroRef, { once: true, amount: 0.1 })
   const isFeaturesInView = useInView(featuresRef, { once: true, amount: 0.2 })
@@ -300,6 +328,34 @@ export default function StartPage() {
   const isPricingInView = useInView(pricingRef, { once: true, amount: 0.2 })
   const isFaqInView = useInView(faqRef, { once: true, amount: 0.2 })
   const isArticlesInView = useInView(articlesRef, { once: true, amount: 0.2 })
+
+  // Funkcje do obsługi carousel
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % dashboardImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + dashboardImages.length) % dashboardImages.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Auto-play carousel co 2 sekundy
+  useEffect(() => {
+    if (!isAutoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % dashboardImages.length);
+    }, 4000); // 2 sekundy
+
+    return () => clearInterval(interval);
+  }, [isAutoPlay]);
+
+  // Funkcje do kontroli auto-play
+  const pauseAutoPlay = () => setIsAutoPlay(false);
+  const resumeAutoPlay = () => setIsAutoPlay(true);
 
   // Animacje
   const fadeInUp = {
@@ -405,39 +461,119 @@ export default function StartPage() {
                 </Button>
               </motion.div>
 
-              {/* Podgląd dashboardu z cieniem i gradientem w tle */}
+              {/* Carousel z podglądem dashboardu */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="relative w-full max-w-5xl mx-auto"
+                onMouseEnter={pauseAutoPlay}
+                onMouseLeave={resumeAutoPlay}
               >
                 {/* Gradient w tle dla efektu głębi */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-2xl transform translate-y-4" />
-                {/* Kontener z efektem rozmycia i cieniem */}
-                <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden shadow-2xl">
-                  <div className="absolute top-0 left-0 right-0 h-8 bg-muted/90 flex items-center px-4">
-                    {/* Dekoracyjne kropki przypominające okno aplikacji */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-sm blur-2xl transform translate-y-4" />
+                
+                {/* Kontener carousel z efektem rozmycia i cieniem */}
+                <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-sm overflow-hidden shadow-2xl">
+                  {/* Górny pasek z kropkami (jak okno aplikacji) */}
+                  <div className="absolute top-0 left-0 right-0 h-8 bg-muted/90 flex items-center px-4 z-20">
                     <div className="flex space-x-2">
                       <div className="w-3 h-3 rounded-full bg-red-500" />
                       <div className="w-3 h-3 rounded-full bg-yellow-500" />
                       <div className="w-3 h-3 rounded-full bg-green-500" />
                     </div>
+                    
+                    {/* Wskaźniki slajdów */}
+                    <div className="flex space-x-2 ml-auto">
+                      {dashboardImages.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            goToSlide(index);
+                            pauseAutoPlay();
+                            // Wznów auto-play po 5 sekundach nieaktywności
+                            setTimeout(resumeAutoPlay, 5000);
+                          }}
+                          className={cn(
+                            "w-2 h-2 rounded-sm transition-all duration-300",
+                            index === currentSlide 
+                              ? "bg-[#00B2FF] w-6" 
+                              : "bg-gray-400 hover:bg-gray-300"
+                          )}
+                        />
+                      ))}
+                    </div>
                   </div>
-                  <Image
-                    src="/dashboard.png"
-                    alt="JustSend.cv Dashboard Preview"
-                    width={1920}
-                    height={1080}
-                    className="w-full h-auto rounded-b-xl mt-8 block dark:hidden"
-                  />
-                  <Image
-                    src="/dashboard-dark.png"
-                    alt="JustSend.cv Dashboard Preview"
-                    width={1920}
-                    height={1080}
-                    className="w-full h-auto rounded-b-xl mt-8 hidden dark:block"
-                  />
+
+                  {/* Kontener obrazów carousel */}
+                  <div className="relative mt-8 overflow-hidden">
+                    <motion.div
+                      className="flex"
+                      animate={{ x: `${-currentSlide * 100}%` }}
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    >
+                      {dashboardImages.map((image, index) => (
+                        <div key={index} className="w-full flex-shrink-0 relative">
+                          {/* Obraz w trybie jasnym */}
+                          <Image
+                            src={image.light}
+                            alt={image.alt}
+                            width={1920}
+                            height={900}
+                            className="w-full h-auto rounded-sm block dark:hidden"
+                          />
+                          {/* Obraz w trybie ciemnym */}
+                          <Image
+                            src={image.dark}
+                            alt={image.alt}
+                            width={1920}
+                            height={1080}
+                            className="w-full h-auto rounded-sm hidden dark:block"
+                          />
+                        </div>
+                      ))}
+                    </motion.div>
+
+                    {/* Przyciski nawigacji */}
+                    <button
+                      onClick={() => {
+                        prevSlide();
+                        pauseAutoPlay();
+                        // Wznów auto-play po 5 sekundach nieaktywności
+                        setTimeout(resumeAutoPlay, 5000);
+                      }}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 rounded-full p-2 shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
+                    >
+                      <ChevronLeft className="w-6 h-6 text-gray-800 dark:text-gray-200" />
+                    </button>
+                    
+                    <button
+                      onClick={() => {
+                        nextSlide();
+                        pauseAutoPlay();
+                        // Wznów auto-play po 5 sekundach nieaktywności
+                        setTimeout(resumeAutoPlay, 5000);
+                      }}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 rounded-full p-2 shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
+                    >
+                      <ChevronRight className="w-6 h-6 text-gray-800 dark:text-gray-200" />
+                    </button>
+                  </div>
+
+                  {/* Tytuł aktualnego slajdu */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
+                    <div className="bg-black/70 text-white px-4 py-2 rounded-sm text-sm font-medium">
+                      {dashboardImages[currentSlide].alt}
+                    </div>
+                  </div>
+
+                  {/* Wskaźnik auto-play */}
+                  <div className="absolute top-10 right-4 z-10">
+                    <div className={cn(
+                      "w-2 h-2 rounded-full transition-all duration-300",
+                      isAutoPlay ? "bg-green-500" : "bg-gray-400"
+                    )} />
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -570,7 +706,7 @@ export default function StartPage() {
 
               <motion.div variants={fadeInUp}>
               <Tabs defaultValue="job-tracker" className="w-full max-w-5xl mx-auto">
-                <TabsList className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-10 w-full justify-between">
+                <TabsList className="grid grid-cols-3 md:grid-cols-5 gap-2 mb-10 w-full justify-between">
                   {appFeatures.map((feature) => (
                     <TabsTrigger
                       key={feature.id}

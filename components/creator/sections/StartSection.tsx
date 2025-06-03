@@ -227,14 +227,14 @@ const StartSection: React.FC<StartSectionProps> = ({
   return (
     <div className="p-1 overflow-visible">
       {/* Główne zakładki */}
-      <div className="mb-2 px-6">
-        <div className="flex justify-center mt-2 mb-0">
+      <div className="mb-2 px-16">
+        <div className="flex justify-center mt-8 mb-0">
           <div className="bg-gray-100 p-0 rounded-sm flex w-full">
             <button
               onClick={() => setActiveMainTab('new')}
-              className={`py-0 px-4 rounded-sm text-lg h-10 font-semibold flex-1 transition-all duration-200 ${
+              className={`py-0 px-4 rounded-sm text-lg h-9 font-semibold flex-1 transition-all duration-200 ${
                 activeMainTab === 'new'
-                  ? 'bg-gradient-to-r from-green-400 to-green-600 text-white shadow-lg border-0 border-blue-600'
+                  ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg border-1 border-gray-300'
                   : 'text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -242,10 +242,10 @@ const StartSection: React.FC<StartSectionProps> = ({
             </button>
             <button
               onClick={() => setActiveMainTab('saved')}
-              className={`py-0 px-4 rounded-sm text-lg h-10 font-semibold flex-1 transition-all duration-200 ${
+              className={`py-0 px-4 rounded-sm text-lg h-9 font-semibold flex-1 transition-all duration-200 ${
                 activeMainTab === 'saved'
-                  ? 'bg-gradient-to-r from-green-400 to-green-600 text-white shadow-lg border-0 border-blue-600'
-                  : 'text-gray-600 hover:bg-gray-200'
+                  ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg border-0 border-blue-600'
+                  : 'text-gray-600 hover:bg-gray-200/50'
               }`}
             >
               Twoje zapisane CV

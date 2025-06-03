@@ -88,9 +88,47 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
     
     const supabase = createClient();
     
+    // Sprawdź czy Supabase jest poprawnie skonfigurowane
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      throw new Error("Konfiguracja Supabase nie jest poprawna - brakuje zmiennych środowiskowych");
+    }
+    
     // Pobierz dane użytkownika
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error("Nie znaleziono użytkownika");
+    const { data: { user }, error: userError } = await supabase.auth.getUser();
+    
+    if (userError) {
+      console.error("Błąd podczas pobierania danych użytkownika:", {
+        message: userError.message,
+        code: userError.status || userError.name
+      });
+      throw userError;
+    }
+    
+    if (!user) {
+      console.warn("Użytkownik nie jest zalogowany - zwracam pustą tablicę");
+      // Zwróć pustą tablicę, zamiast błędu
+      return {
+        tasks: {},
+        columns: {
+          todo: {
+            id: "todo",
+            title: "Do zrobienia", 
+            taskIds: [],
+          },
+          "in-progress": {
+            id: "in-progress",
+            title: "W trakcie",
+            taskIds: [],
+          },
+          done: {
+            id: "done",
+            title: "Ukończone",
+            taskIds: [],
+          }
+        },
+        columnOrder: ["todo", "in-progress", "done"],
+      };
+    }
     
     // Sprawdź czy istnieje tablica dla użytkownika
     const { data: boards, error } = await supabase
@@ -99,7 +137,12 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
       .eq("user_id", user.id);
     
     if (error) {
-      console.error("Błąd podczas pobierania tablicy Kanban:", error);
+      console.error("Błąd podczas pobierania tablicy Kanban:", {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code
+      });
       throw error;
     }
     
@@ -121,7 +164,12 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
             .in("id", boardsToDelete);
           
           if (deleteError) {
-            console.error("Błąd podczas usuwania duplikatów tablic:", deleteError);
+            console.error("Błąd podczas usuwania duplikatów tablic:", {
+              message: deleteError.message,
+              details: deleteError.details,
+              hint: deleteError.hint,
+              code: deleteError.code
+            });
           }
         }
         
@@ -191,7 +239,12 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
       .eq("user_id", user.id);
       
     if (checkError) {
-      console.error("Błąd podczas sprawdzania tablic:", checkError);
+      console.error("Błąd podczas sprawdzania tablic:", {
+        message: checkError.message,
+        details: checkError.details,
+        hint: checkError.hint,
+        code: checkError.code
+      });
       throw checkError;
     }
     
@@ -207,7 +260,12 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
         .single();
         
       if (fetchError || !existingBoard) {
-        console.error("Błąd podczas pobierania istniejącej tablicy:", fetchError);
+        console.error("Błąd podczas pobierania istniejącej tablicy:", {
+          message: fetchError?.message || "Brak danych tablicy",
+          details: fetchError?.details || "Nie udało się pobrać istniejącej tablicy",
+          hint: fetchError?.hint,
+          code: fetchError?.code
+        });
         throw fetchError || new Error("Nie udało się pobrać istniejącej tablicy");
       }
       
@@ -228,7 +286,12 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
       .single();
     
     if (createError) {
-      console.error("Błąd podczas tworzenia tablicy Kanban:", createError);
+      console.error("Błąd podczas tworzenia tablicy Kanban:", {
+        message: createError.message,
+        details: createError.details,
+        hint: createError.hint,
+        code: createError.code
+      });
       throw createError;
     }
     
@@ -238,6 +301,13 @@ export const getOrCreateKanbanBoard = async (): Promise<KanbanBoard> => {
     
     // Zwróć zmapowaną tablicę z danych z bazy, a nie initialBoard
     return mapSupabaseToKanbanBoard(newBoard as KanbanBoardData);
+  } catch (err) {
+    console.error("Błąd podczas tworzenia tablicy Kanban:", {
+      message: err instanceof Error ? err.message : String(err),
+      stack: err instanceof Error ? err.stack : undefined,
+      error: err
+    });
+    throw err;
   } finally {
     // Zawsze zwalniamy blokadę, nawet w przypadku błędu
     isCreatingBoard = false;

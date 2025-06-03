@@ -580,7 +580,7 @@ export function SavedTable() {
       </div>
 
       {/* Tabela */}
-      <div className="rounded-b-md -mt-2 border-1 bg-white border-gray-300 ml-0 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
+      <div className="rounded-b-md -mt-4 border-1 bg-white border-gray-300 ml-0 mr-1 overflow-x-auto shadow-[2px_4px_10px_rgba(0,0,0,0.3)] dark:bg-gray-900 dark:border-gray-800">
         <Table>
           <TableHeader className="sticky top-0 bg-gray-50 dark:bg-background z-10">
             <TableRow>

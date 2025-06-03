@@ -51,7 +51,7 @@ export function Header() {
               <img 
                 src="/logo.png" 
                 alt="JustSend.cv Logo" 
-                className="h-8 w-auto mr-4 sm:h-8 lg:h-10 max-w-[30px] sm:max-w-[40px] lg:max-w-none transition-all" 
+                className="h-8 w-auto mr-4 sm:h-8 lg:h-12 max-w-[30px] sm:max-w-[40px] lg:max-w-none transition-all" 
               />
               <div className="flex items-center">
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold transition-all text-gray-900 dark:text-white">JustSend</span>
@@ -90,7 +90,7 @@ export function Header() {
             <Link href="/sign-in">
               <Button
                 size="sm"
-                className="bg-black rounded-lg dark:bg-white text-white dark:text-black hover:scale-110 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
+                className="bg-black rounded-sm dark:bg-white text-white dark:text-black hover:scale-105 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
               >
                 Zaloguj się
               </Button>
@@ -98,7 +98,7 @@ export function Header() {
             <Link href="/sign-up">
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-[#00B2FF] to-blue-600 rounded-lg hover:bg-[#00B2FF] text-white dark:text-black hover:scale-110 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
+                className="bg-gradient-to-r from-[#00B2FF] to-blue-600 rounded-sm hover:bg-[#00B2FF] text-white dark:text-black hover:scale-105 transition-transform text-xs md:text-sm lg:text-base px-2 md:px-4 lg:px-6"
               >
                 <span className="relative z-10">Zarejestruj się</span>
               </Button>

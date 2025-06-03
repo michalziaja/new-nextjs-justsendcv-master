@@ -20,6 +20,7 @@ import {
   PieChart,
   Calendar,
   Calculator,
+  TrendingUp,
 } from "lucide-react";
 
 // Definicja typu UserData z createdAt
@@ -38,6 +39,7 @@ const data = {
     { title: "Zapisane", url: "/saved", icon: BookmarkCheck },
     { title: "Kreator CV", url: "/creator", icon: FileText },
     { title: "Asystent AI", url: "/ai-assistant", icon: Brain },
+    { title: "Kariera", url: "/roadmap", icon: TrendingUp },
     { title: "Zadania", url: "/scheduler", icon: Calendar },
     { title: "Kalkulator", url: "/calculator", icon: Calculator },
     { title: "Statystyki", url: "/stats", icon: PieChart },
@@ -53,7 +55,7 @@ export function AppSidebar({
 }: React.ComponentProps<typeof Sidebar> & { userData: UserData }) {
   return (
     <Sidebar
-      className="text-lg top-10.5 h-[calc(99vh-4.5rem)] mt-4 border-1 border-gray-200 rounded-sm bg-white dark:bg-slate-900 dark:border-slate-800 shadow-[2px_4px_8px_rgba(0,0,0,0.2)] dark:shadow-background"
+      className="text-lg top-11.5 h-[calc(99vh-4.5rem)] mt-4.5 border-0 border-gray-200 rounded-sm bg-white dark:bg-slate-900 dark:border-slate-800 shadow-[2px_4px_8px_rgba(0,0,0,0.2)] dark:shadow-background"
       {...props}
     >
       <SidebarContent className="p-0 mt-4 bg-white dark:bg-slate-900">

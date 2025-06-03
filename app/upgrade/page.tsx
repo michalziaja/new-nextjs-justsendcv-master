@@ -257,7 +257,7 @@ export default function UpgradePage() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-cyan-50/30 via-gray-100 to-cyan-50/30 dark:from-[#0A0F1C] dark:via-[#1A2338] dark:to-gray-900">
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808011_1px,transparent_1px),linear-gradient(to_bottom,#80808011_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)]" />
-          <div className="absolute top-30 right-20 w-40 h-40 rounded-full bg-gray-100 dark:bg-blue-500/10 blur-3xl" />
+          <div className="absolute top-30 right-20 w-40 h-40 rounded-sm bg-gray-100 dark:bg-blue-500/10 blur-3xl" />
         </div>
         <div className="fixed top-4 right-4 z-50">
           <ThemeToggle />
@@ -275,12 +275,12 @@ export default function UpgradePage() {
       <div className="min-h-screen bg-gradient-to-r from-cyan-50/30 via-gray-100 to-cyan-50/30 dark:from-[#0A0F1C] dark:via-[#1A2338] dark:to-gray-900 flex flex-col items-center justify-center p-4 relative">
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808011_1px,transparent_1px),linear-gradient(to_bottom,#80808011_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)]" />
-          <div className="absolute top-30 right-20 w-40 h-40 rounded-full bg-gray-100 dark:bg-blue-500/10 blur-3xl" />
+          <div className="absolute top-30 right-20 w-40 h-40 rounded-sm bg-gray-100 dark:bg-blue-500/10 blur-3xl" />
         </div>
         <div className="fixed top-4 right-4 z-50">
           <ThemeToggle />
         </div>
-        <div className="relative z-10 text-center max-w-md bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 rounded-xl shadow-xl">
+        <div className="relative z-10 text-center max-w-md bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 rounded-sm shadow-xl">
           <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Brak uprawnień</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             Posiadasz już plan Premium lub nie masz uprawnień do uaktualnienia. Skontaktuj się z pomocą techniczną, jeśli potrzebujesz pomocy.
@@ -309,7 +309,7 @@ export default function UpgradePage() {
         {/* Siatka w tle - subtelny wzór linii dla tekstury */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808011_1px,transparent_1px),linear-gradient(to_bottom,#80808011_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)]" />
         {/* Subtelne koło w prawym dolnym rogu - dekoracyjny akcent */}
-        <div className="absolute top-30 right-20 w-40 h-40 rounded-full bg-gray-100 dark:bg-blue-500/10 blur-3xl" />
+        <div className="absolute top-30 right-20 w-40 h-40 rounded-sm bg-gray-100 dark:bg-blue-500/10 blur-3xl" />
         {/* Linia pozioma w górnej części - subtelny separator */}
         <div className="absolute top-48 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-600/80 to-transparent dark:via-cyan-500/30" />
         {/* Linia pozioma w dolnej części - subtelny separator */}
@@ -338,7 +338,7 @@ export default function UpgradePage() {
               <div
                 key={index}
                 className={cn(
-                  "relative bg-white dark:bg-[#0A0F1C] rounded-3xl shadow-lg transition-all duration-300 border h-full flex flex-col hover:-translate-y-2",
+                  "relative bg-white dark:bg-[#0A0F1C] rounded-lg shadow-lg transition-all duration-300 border h-full flex flex-col hover:-translate-y-2",
                   plan.popular
                     ? "border-[#00B2FF] md:scale-105 z-10 shadow-xl shadow-[#00B2FF]/20 hover:shadow-2xl hover:shadow-[#00B2FF]/30 hover:border-2"
                     : "border-gray-200 dark:border-gray-800 hover:shadow-xl hover:shadow-blue-500/10 hover:border-gray-300 dark:hover:border-gray-700"
@@ -346,7 +346,7 @@ export default function UpgradePage() {
               >
                 {/* Wyróżnienie planu popularnego */}
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-4 py-1 rounded-full text-xs font-medium shadow-md">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white px-4 py-1 rounded-sm text-xs font-medium shadow-md">
                     Polecany
                   </div>
                 )}
@@ -375,7 +375,7 @@ export default function UpgradePage() {
                       <li key={i} className="flex items-start gap-2">
                         <div
                           className={cn(
-                            "h-4 w-4 rounded-full flex items-center justify-center mt-0.5",
+                            "h-4 w-4 rounded-sm flex items-center justify-center mt-0.5",
                             plan.popular
                               ? "bg-[#00B2FF] text-white"
                               : "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
@@ -391,7 +391,7 @@ export default function UpgradePage() {
                   {/* Przycisk CTA */}
                   <Button
                     className={cn(
-                      "w-full mt-auto rounded-full py-4 text-sm font-medium transition-all duration-300",
+                      "w-full mt-auto rounded-md py-4 text-sm font-medium transition-all duration-300",
                       plan.popular
                         ? "bg-gradient-to-r from-[#00B2FF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg hover:shadow-[#00B2FF]/50"
                         : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gradient-to-r hover:from-[#00B2FF] hover:to-blue-600 hover:text-white dark:hover:text-white"
@@ -414,7 +414,7 @@ export default function UpgradePage() {
           </div>
 
           <div className="mt-12 mx-auto max-w-3xl pt-6">
-            <div className="bg-white/50 dark:bg-[#0A0F1C]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-xl p-4 shadow-md">
+            <div className="bg-white/50 dark:bg-[#0A0F1C]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-sm p-4 shadow-md">
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="rounded-full bg-blue-100 dark:bg-blue-900/30 p-3">
                   <Shield className="h-6 w-6 text-[#00B2FF]" />

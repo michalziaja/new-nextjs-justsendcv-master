@@ -129,7 +129,7 @@ export function StatCards() {
         value={statusCounts.saved}
         description="Zapisane oferty"
         icon={<FileText className="h-6 w-6 text-white" />}
-        bgColor="bg-blue-500 dark:bg-blue-600"
+        bgColor="bg-gradient-to-bl from-blue-500 to-blue-600"
         textColor="text-white"
         isLoading={isLoading}
       />
@@ -139,7 +139,7 @@ export function StatCards() {
         value={statusCounts.send}
         description="Aplikacje wysłane"
         icon={<Send className="h-6 w-6 text-white" />}
-        bgColor="bg-purple-500 dark:bg-purple-600"
+        bgColor="bg-gradient-to-br from-purple-500 to-purple-700 "
         textColor="text-white"
         isLoading={isLoading}
       />
@@ -149,8 +149,8 @@ export function StatCards() {
         value={statusCounts.contact}
         description="Kontakt od HR"
         icon={<Mail className="h-6 w-6 text-white" />}
-        bgColor="bg-yellow-400 dark:bg-yellow-500"
-        textColor="text-white dark:text-gray-900"
+        bgColor="bg-gradient-to-br from-yellow-500 to-yellow-700"
+        textColor="text-white "
         isLoading={isLoading}
       />
       {/* Karta "Rozmowa" - błękitne tło */}
@@ -159,7 +159,7 @@ export function StatCards() {
         value={statusCounts.interview}
         description="Umówione rozmowy"
         icon={<PhoneCall className="h-6 w-6 text-white" />}
-        bgColor="bg-cyan-500 dark:bg-cyan-600"
+        bgColor="bg-gradient-to-br from-cyan-500 to-cyan-700"
         textColor="text-white"
         isLoading={isLoading}
       />
@@ -169,7 +169,7 @@ export function StatCards() {
         value={statusCounts.offer}
         description="Otrzymane oferty"
         icon={<ClipboardList className="h-6 w-6 text-white" />}
-        bgColor="bg-green-500 dark:bg-green-600"
+        bgColor="bg-gradient-to-br from-green-500 to-green-700"
         textColor="text-white"
         isLoading={isLoading}
       />
@@ -179,7 +179,7 @@ export function StatCards() {
         value={statusCounts.rejected}
         description="Odmowy"
         icon={<X className="h-6 w-6 text-white" />}
-        bgColor="bg-red-500 dark:bg-red-600"
+        bgColor="bg-gradient-to-br from-red-500 to-red-700"
         textColor="text-white"
         isLoading={isLoading}
       />

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, Loader2 } from "lucide-react"
+import { FileText, Loader2, Download, Info } from "lucide-react"
 import { createClient } from "@/utils/supabase/client"
 import { useRouter } from "next/navigation"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -115,8 +115,15 @@ export function RecentJobs() {
             </div>
           </div>
         ) : recentJobs.length === 0 ? (
-          <div className="text-center py-10 text-muted-foreground">
-            Brak zapisanych ofert
+          // Komunikat gdy brak zapisanych ofert - wyrównany z weekly-goals wysokością
+          <div className="flex justify-center items-center h-40 text-muted-foreground flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <Download className="h-5 w-5 text-[#00B2FF]" />
+              <p className="font-medium">Pobierz wtyczkę JustSend.cv</p>
+            </div>
+            <p className="text-sm text-center">i zapisz swoją pierwszą ofertę</p>
+            
+            
           </div>
         ) : (
           <div className="space-y-2 pt-2">
