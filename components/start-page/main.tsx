@@ -476,7 +476,7 @@ export default function StartPage() {
                   </div> */}
 
                   {/* Rolling Gallery */}
-                  <div className="mt-6 pb-6">
+                  <div className="mt-6 pb-6 transform scale-135">
                     <RollingGallery 
                       images={dashboardImages}
                       autoPlay={true}
