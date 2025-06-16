@@ -226,7 +226,7 @@ const TextFormatToolbar = ({
   };
 
   return (
-    <div className="flex mb-1 border border-gray-300 rounded-t-md border-b-0 bg-gray-50 p-1">
+    <div className="flex mb-1 border border-gray-300 dark:border-gray-600 rounded-t-md border-b-0 bg-gray-50 dark:bg-slate-800 p-1">
       <button
         type="button"
         onClick={addBulletPoint}
@@ -263,7 +263,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
     <div className="flex flex-col h-full ">
       <div className="p-4 ml-6">
       <h3 className="text-lg font-semibold mb-2">Doświadczenie zawodowe</h3>
-      <p className="text-gray-600 mb-4">
+      <p className="text-gray-600 dark:text-gray-400 mb-4">
         Opisz swoje doświadczenie zawodowe, zaczynając od najnowszych stanowisk.
       </p>
       
@@ -287,7 +287,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 <div className="absolute top-2 right-2">
                   <button 
                     onClick={() => removeExperience(actualIndex)}
-                    className="text-gray-500 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
+                    className="text-gray-500 dark:text-gray-400 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
                     title="Usuń doświadczenie"
                   >
                     <IoClose className="w-5 h-5" />
@@ -305,7 +305,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 />
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Stanowisko</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Stanowisko</label>
                   <input 
                     type="text" 
                     className="w-full border rounded-md px-3 py-2" 
@@ -315,7 +315,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Firma</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Firma</label>
                   <input 
                     type="text" 
                     className="w-full border rounded-md px-3 py-2" 
@@ -326,7 +326,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Data rozpoczęcia</label>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Data rozpoczęcia</label>
                     <input 
                       type="month" 
                       className="w-full border rounded-md px-3 py-2"
@@ -335,7 +335,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Data zakończenia</label>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Data zakończenia</label>
                     <div className="space-y-2">
                       <input 
                         type="month" 
@@ -358,7 +358,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                             );
                           }}
                         />
-                        <label htmlFor={`current-job-${index}`} className="ml-2 text-sm text-gray-700">
+                        <label htmlFor={`current-job-${index}`} className="ml-2 text-sm text-gray-700 dark:text-gray-400">
                           Obecnie pracuję
                         </label>
                       </div>
@@ -366,7 +366,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">
                     Opis obowiązków i osiągnięć
                     <span className="ml-1 text-xs text-blue-500">
                       <Sparkles className="w-3 h-3 inline-block" /> Dostępny asystent AI
@@ -382,7 +382,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                     value={exp.description}
                     onChange={(e) => updateExperience(actualIndex, 'description', e.target.value)}
                   ></textarea>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     Użyj przycisków powyżej, aby dodać podpunkty i formatowanie. Ikona iskierek pozwala wygenerować opis na podstawie wprowadzonych danych.
                   </p>
                 </div>
@@ -393,7 +393,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
       
       <div className="flex space-x-2 mt-10">
         <button 
-          className="w-full border-dashed border-2 border-gray-300 rounded-lg py-3 text-gray-500 hover:bg-gray-50 transition"
+          className="w-full border-dashed border-2 border-gray-300 dark:border-gray-600 rounded-lg py-3 text-gray-500 dark:text-gray-400 hover:bg-gray-50 transition"
           onClick={() => addExperience('job')}
         >
           + Dodaj doświadczenie zawodowe
@@ -405,7 +405,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
       <div className="mt-auto flex justify-between border-t-2 p-4 w-full">
         <div>
           <button 
-            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-sm transition"
+            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white dark:text-gray-400 rounded-sm transition"
             onClick={onBack}
           >
             Wstecz
@@ -414,7 +414,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         
         <div className="flex space-x-2">
           <button 
-            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white rounded-sm  transition"
+            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white dark:text-gray-400 rounded-sm  transition"
             onClick={() => saveCV(false)}
             disabled={isSaving}
           >

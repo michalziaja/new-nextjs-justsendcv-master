@@ -152,13 +152,13 @@ const GenderDistributionDisplay = ({ male, female }: { male: number | undefined,
  * Includes min-height to stabilize layout when data appears/disappears.
  */
 const BenefitTagsDisplay = ({ title, items, placeholder, limit = 6 }: { title: string, items: string[] | undefined, placeholder: string, limit?: number }) => (
-    <div className="mt-5 min-h-[70px] bg-gradient-to-r from-gray-50 to-blue-50/30 p-3 rounded-sm border border-gray-200 shadow-sm">
-        <h3 className="text-base font-semibold text-gray-800 mb-2">{title}</h3>
+    <div className="mt-5 min-h-[70px] bg-gradient-to-r from-gray-50 dark:from-slate-700 to-blue-50/30 dark:to-blue-950/20 p-3 rounded-sm border border-gray-200 dark:border-gray-600 shadow-sm">
+        <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-2">{title}</h3>
         {/* Conditionally render tags or placeholder */}
         {items && items.length > 0 ? (
             <div className="flex flex-wrap gap-2">
                 {items.slice(0, limit).map((benefit, index) => (
-                    <Badge key={index} variant="secondary" className="bg-gradient-to-r from-[#00B2FF]/20 to-blue-600/20 text-blue-800 hover:from-[#00B2FF]/30 hover:to-blue-600/30 text-sm font-normal px-2.5 py-0.5 border border-blue-200">
+                    <Badge key={index} variant="secondary" className="bg-gradient-to-r from-[#00B2FF]/20 dark:from-[#00B2FF]/30 to-blue-600/20 dark:to-blue-600/30 text-blue-800 dark:text-blue-200 hover:from-[#00B2FF]/30 hover:to-blue-600/30 text-sm font-normal px-2.5 py-0.5 border border-blue-200 dark:border-blue-500">
                         {benefit}
                     </Badge>
                 ))}
@@ -169,7 +169,7 @@ const BenefitTagsDisplay = ({ title, items, placeholder, limit = 6 }: { title: s
                 )}
             </div>
         ) : (
-            <p className="text-sm text-gray-500 italic">{placeholder}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic">{placeholder}</p>
         )}
     </div>
 );
@@ -180,21 +180,21 @@ const BenefitTagsDisplay = ({ title, items, placeholder, limit = 6 }: { title: s
  * Content expands to accommodate all items.
  */
 const ResponsibilitiesList = ({ title, items, placeholder }: { title: string, items: string[] | undefined, placeholder: string }) => (
-    <div className="mt-4 bg-gradient-to-r from-gray-50 to-blue-50/30 p-3 rounded-sm border border-gray-200 shadow-sm">
-        <h3 className="text-base font-semibold text-gray-800 mb-2">{title}</h3>
+    <div className="mt-4 bg-gradient-to-r from-gray-50 dark:from-slate-700 to-blue-50/30 dark:to-blue-950/20 p-3 rounded-sm border border-gray-200 dark:border-gray-600 shadow-sm">
+        <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-2">{title}</h3>
         {/* Conditionally render full list or placeholder */}
         {items && items.length > 0 ? (
             <div className="pr-2"> 
                 <ul className="list-disc list-inside space-y-1.5 pl-2">
                     {items.map((item, index) => (
-                        <li key={index} className="text-sm text-gray-700">
+                        <li key={index} className="text-sm text-gray-700 dark:text-gray-300">
                             {item}
                         </li>
                     ))}
                 </ul>
             </div>
         ) : (
-            <p className="text-sm text-gray-500 italic">{placeholder}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic">{placeholder}</p>
         )}
     </div>
 );
@@ -465,11 +465,11 @@ export function SalaryChecker({ embedded = false }: { embedded?: boolean }) {
                                 onKeyDown={(e) => { if (e.key === 'Enter') handleSearchClick(); if (e.key === 'Escape') setShowSuggestions(false); }}
                             />
                             {showSuggestions && suggestions.length > 0 && (
-                                <div ref={suggestionRef} className="absolute left-0 right-0 mt-1 max-h-48 overflow-y-auto z-20 bg-white border rounded-sm shadow-lg">
+                                <div ref={suggestionRef} className="absolute left-0 right-0 mt-1 max-h-48 overflow-y-auto z-20 bg-white dark:bg-sidebar border rounded-sm shadow-lg">
                                     {suggestions.map((suggestion) => ( 
                                       <div 
                                         key={suggestion} 
-                                        className="px-3 py-2 hover:bg-blue-50 cursor-pointer text-sm border-b border-gray-100" 
+                                        className="px-3 py-2 hover:bg-blue-50 dark:hover:bg-slate-700 cursor-pointer text-sm border-b border-gray-100 dark:border-gray-600" 
                                         onClick={() => handleSuggestionClick(suggestion)}
                                       >
                                         {suggestion}
@@ -485,7 +485,7 @@ export function SalaryChecker({ embedded = false }: { embedded?: boolean }) {
                 <div className="space-y-3 pt-1">
                     {/* Level Tabs */}
                     <Tabs value={selectedLevelIndex.toString()} onValueChange={(value) => handleLevelChange(parseInt(value, 10))} className="w-full">
-                        <TabsList className="grid w-full grid-cols-3 bg-gray-100 h-8 rounded-sm">
+                        <TabsList className="grid w-full grid-cols-3 bg-gray-100 dark:bg-gray-700 h-8 rounded-sm">
                             {LEVEL_LABELS.map((label, index) => {
                                 let isDisabled = true;
                                 if (jobData?.hasLevels && jobData.levels) { isDisabled = index >= jobData.levels.length; }
@@ -495,7 +495,7 @@ export function SalaryChecker({ embedded = false }: { embedded?: boolean }) {
                                 
                                 // Określamy styl dla zakładki - szary dla stanowisk bez podziału na poziomy
                                 const activeClass = (jobData && !jobData.hasLevels && index === 1) 
-                                  ? "data-[state=active]:bg-gray-400 data-[state=active]:text-white" 
+                                  ? "data-[state=active]:bg-gray-400  data-[state=active]:text-white" 
                                   : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white";
         
                                 return (
@@ -503,7 +503,7 @@ export function SalaryChecker({ embedded = false }: { embedded?: boolean }) {
                                     key={label} 
                                     value={index.toString()} 
                                     disabled={isDisabled} 
-                                    className={`${activeClass} disabled:opacity-50 disabled:cursor-not-allowed h-full text-xs sm:text-xs px-1 transition-colors`}
+                                    className={`${activeClass} disabled:opacity-50 disabled:cursor-not-allowed h-full text-xs sm:text-xs px-1 transition-colors dark:text-gray-300`}
                                   >
                                     {label}
                                   </TabsTrigger> 
@@ -516,7 +516,7 @@ export function SalaryChecker({ embedded = false }: { embedded?: boolean }) {
                     <div className="space-y-4">
                         {/* "Not Found" Message */}
                         {hasSearched && !jobData && !isLoading && (
-                            <div className="text-center text-gray-500 py-10 px-4 rounded-sm bg-gradient-to-r from-gray-50 to-blue-50/10 border border-gray-200 shadow-sm">
+                            <div className="text-center text-gray-500 dark:text-gray-400 py-10 px-4 rounded-sm bg-gradient-to-r from-gray-50 dark:from-slate-800 to-blue-50/10 dark:to-blue-950/10 border border-gray-200 dark:border-gray-600 shadow-sm">
                                 <p className="font-medium">Nie znaleziono danych dla stanowiska:</p>
                                 <p className="italic bg-gradient-to-r from-[#00B2FF] to-blue-600 bg-clip-text text-transparent mt-1">"{jobTitle}"</p>
                                 <p className="text-sm text-gray-400 mt-2">Spróbuj wpisać inną nazwę.</p>

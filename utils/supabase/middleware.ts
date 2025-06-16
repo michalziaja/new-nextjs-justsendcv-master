@@ -53,7 +53,34 @@ export const updateSession = async (request: NextRequest) => {
       }
     );
 
-    const { data: { user }, error } = await supabase.auth.getUser();
+    // Próba pobrania użytkownika z lepszą obsługą błędów
+    let user = null;
+    let authError = null;
+    
+    try {
+      const { data: { user: currentUser }, error } = await supabase.auth.getUser();
+      user = currentUser;
+      authError = error;
+    } catch (error) {
+      console.error("Błąd podczas pobierania użytkownika:", error);
+      // Jeśli błąd związany z refresh tokenem, wyczyść wszystkie cookies auth
+      if (error instanceof Error && error.message.includes('refresh_token_not_found')) {
+        // Usuń wszystkie cookies związane z auth
+        const authCookies = ['sb-access-token', 'sb-refresh-token', 'supabase-auth-token'];
+        authCookies.forEach(cookieName => {
+          response.cookies.delete(cookieName);
+        });
+        
+        // Przekieruj na stronę logowania jeśli nie jest to publiczna ścieżka
+        const publicRoutes = ["/", "/sign-in", "/sign-up", "/forgot-password", "/unauthorized", "/auth/callback"];
+        const isArticlePage = request.nextUrl.pathname.startsWith('/article/');
+        const isPublicRoute = publicRoutes.includes(request.nextUrl.pathname) || isArticlePage;
+        
+        if (!isPublicRoute) {
+          return NextResponse.redirect(new URL("/sign-in?error=session_expired", request.url));
+        }
+      }
+    }
 
     const publicRoutes = ["/", "/sign-in", "/sign-up", "/forgot-password", "/unauthorized", "/auth/callback"];
     // Sprawdzanie czy ścieżka zaczyna się od /article/
@@ -73,6 +100,20 @@ export const updateSession = async (request: NextRequest) => {
     return response;
   } catch (e) {
     console.error("Middleware error:", e);
+    
+    // Jeśli błąd związany z refresh tokenem, wyczyść cookies i przekieruj
+    if (e instanceof Error && e.message.includes('refresh_token_not_found')) {
+      const response = NextResponse.redirect(new URL("/sign-in?error=session_expired", request.url));
+      
+      // Usuń wszystkie cookies związane z auth
+      const authCookies = ['sb-access-token', 'sb-refresh-token', 'supabase-auth-token'];
+      authCookies.forEach(cookieName => {
+        response.cookies.delete(cookieName);
+      });
+      
+      return response;
+    }
+    
     return NextResponse.next({
       request: { headers: request.headers },
     });

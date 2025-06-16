@@ -52,13 +52,13 @@ export function NavSecondary({
             {!userData.isSubscribed ? (
               <a
                 href="/upgrade"
-                className="flex h-10 -ml-1.5 w-[108%] items-center gap-2 rounded-xs shadow-sm p-2 hover:scale-103 text-white hover:opacity-90 transition-opacity text-xs  dark:shadow-xs bg-gradient-to-r from-violet-500 to-purple-500"
+                className="flex h-10 -ml-1 w-[105.5%] items-center gap-2 rounded-sm shadow-sm p-2 hover:scale-103 text-white hover:opacity-90 transition-opacity text-xs  dark:shadow-xs bg-gradient-to-r from-violet-500 to-purple-500"
               >
                 <Crown className="h-6 w-6 ml-2" />
                 <span className="font-medium">Przejdź na Premium</span>
               </a>
             ) : (
-              <div className="flex -ml-2 px-5 items-center gap-2 w-[109%] rounded-xs p-2 text-white text-xs shadow-sm dark:shadow-xs bg-gradient-to-r from-green-500 to-emerald-500">
+              <div className="flex -ml-1 px-5 items-center gap-2 w-[105.5%] rounded-sm p-2 text-white text-xs hover:scale-103 shadow-sm dark:shadow-xs bg-gradient-to-r from-green-500 to-emerald-500">
                 <Crown className="h-6 w-6" />
                 <span className="font-medium">Używasz Premium</span>
               </div>

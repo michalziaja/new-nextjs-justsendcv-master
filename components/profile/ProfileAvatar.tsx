@@ -535,7 +535,7 @@ export default function ProfileAvatar() {
   
   return (
     <div className="w-full">
-      <CardHeader className="pb-2">
+      <CardHeader className="pb-2 ">
         <CardTitle className="flex items-center text-lg">
           <Camera className="h-5 w-5 mr-2 text-blue-500" />
           Zdjęcie profilowe
@@ -639,9 +639,9 @@ export default function ProfileAvatar() {
             )}
             
             {success && (
-              <Alert variant="default" className="py-2 bg-green-50 border-green-200 text-green-800">
-                <Check className="h-4 w-4 text-green-600" />
-                <AlertDescription>{success}</AlertDescription>
+              <Alert variant="default" className="py-2 bg-green-50 border-green-200 text-green-800 dark:bg-slate-800 dark:border-green-600 dark:text-green-600">
+                <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
+                <AlertDescription className="dark:text-gray-200">{success}</AlertDescription>
               </Alert>
             )}
           </div>

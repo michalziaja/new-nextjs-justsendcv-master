@@ -134,7 +134,7 @@ const TextFormatToolbar = ({
   };
 
   return (
-    <div className="flex mb-1 border border-gray-300 rounded-t-md border-b-0 bg-gray-50 p-1">
+    <div className="flex mb-1 border border-gray-300 dark:border-gray-600 rounded-t-md border-b-0 bg-gray-50 dark:bg-slate-800 p-1">
       <button
         type="button"
         onClick={addBulletPoint}
@@ -182,7 +182,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
               <div className="absolute top-2 right-2">
                 <button 
                   onClick={() => removeCourse(index)}
-                  className="text-gray-500 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
+                  className="text-gray-500 dark:text-gray-400 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
                   title="Usuń kurs"
                 >
                   <IoClose className="w-5 h-5" />
@@ -192,7 +192,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
               {/* Pierwszy wiersz: Nazwa kursu i data */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Nazwa kursu/certyfikatu</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Nazwa kursu/certyfikatu</label>
                   <input 
                     type="text" 
                     className="w-full border rounded-md px-3 py-2" 
@@ -202,7 +202,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Data uzyskania</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Data uzyskania</label>
                   <input 
                     type="month" 
                     className="w-full border rounded-md px-3 py-2"
@@ -215,7 +215,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
               {/* Drugi wiersz: Organizator i nr certyfikatu */}
               <div className="grid grid-cols-2 gap-4 mt-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Organizator</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Organizator</label>
                   <input 
                     type="text" 
                     className="w-full border rounded-md px-3 py-2" 
@@ -225,7 +225,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Numer certyfikatu (opcjonalnie)</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Numer certyfikatu (opcjonalnie)</label>
                   <input 
                     type="text" 
                     className="w-full border rounded-md px-3 py-2"
@@ -238,7 +238,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
               
               {/* Trzeci wiersz: Opis */}
               <div className="mt-3">
-                <label className="block text-sm font-medium text-gray-700 mb-1">Opis kursu (opcjonalnie)</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Opis kursu (opcjonalnie)</label>
                 <TextFormatToolbar 
                   value={course.description || ''} 
                   onChange={(newValue) => updateCourse(index, 'description', newValue)} 
@@ -250,7 +250,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
                   value={course.description || ''}
                   onChange={(e) => updateCourse(index, 'description', e.target.value)}
                 />
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                   Użyj przycisków powyżej, aby dodać podpunkty i formatowanie.
                 </p>
               </div>
@@ -259,7 +259,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
         </div>
         
         <button 
-          className="w-full border-dashed border-2 border-gray-300 rounded-lg py-3 text-gray-500 hover:bg-gray-50 transition"
+          className="w-full border-dashed border-2 border-gray-300 dark:border-gray-600 rounded-lg py-3 text-gray-500 dark:text-gray-400 hover:bg-gray-50 transition"
           onClick={addCourse}
         >
           + Dodaj kolejny kurs
@@ -270,7 +270,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
       <div className="mt-auto flex justify-between border-t-2 p-4 w-full">
         <div>
           <button 
-            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-sm transition"
+            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white dark:text-gray-400 rounded-sm transition"
             onClick={onBack}
           >
             Wstecz
@@ -279,7 +279,7 @@ const CoursesSection: React.FC<CoursesSectionProps> = ({
         
         <div className="flex space-x-2">
           <button 
-            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white rounded-sm  transition"
+            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white dark:text-gray-400 rounded-sm  transition"
             onClick={() => saveCV(false)}
             disabled={isSaving}
           >

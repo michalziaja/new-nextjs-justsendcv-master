@@ -64,7 +64,7 @@ export default function TemplateSelector() {
               className={`
                 p-4 
                 ${roundedClasses}
-                bg-white 
+                bg-white dark:bg-sidebar 
                 shadow-[2px_4px_10px_rgba(0,0,0,0.3)]
                 cursor-pointer transition-all
                 border-t-[6px]

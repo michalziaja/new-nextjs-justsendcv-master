@@ -703,7 +703,8 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
       borderBottom: `${effectiveSpacing.sections.bottomBorder} solid ${colorPalette.grayMedium}`, 
       fontSize: effectiveFontSizes.sectionHeader,
       fontWeight: 700,
-      marginTop: effectiveSpacing.sectionSpacing[sectionType]
+      marginTop: effectiveSpacing.sectionSpacing[sectionType],
+      color: colorPalette.text
     }}>{title}</h2>
   );
 
@@ -723,7 +724,8 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
     position: 'relative' as const,
     minHeight: '297mm',
     margin: '0',
-    overflow: isMeasurement ? 'visible' : 'hidden'
+    overflow: isMeasurement ? 'visible' : 'hidden',
+    color: colorPalette.text
   };
 
   // Style dla głównej treści CV
@@ -741,13 +743,13 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
     .map((exp, index) => renderSection(`experience-${index}`, (
       <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <div style={{ fontWeight: 700, fontSize: effectiveFontSizes.position }}>{exp.position}</div>
+          <div style={{ fontWeight: 700, fontSize: effectiveFontSizes.position, color: colorPalette.text }}>{exp.position}</div>
           <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
             {exp.startDate && formatDate(exp.startDate, language)} - {exp.endDate && formatDate(exp.endDate, language)}
           </div>
         </div>
         <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{exp.company}</div>
-        <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>{exp.description}</div>
+        <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap', color: colorPalette.text }}>{exp.description}</div>
       </div>
     ), index));
 
@@ -757,13 +759,13 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
     .map((exp, index) => renderSection(`projects-${index}`, (
       <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position }}>{exp.position}</div>
+          <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position, color: colorPalette.text }}>{exp.position}</div>
           <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
             {exp.startDate && formatDate(exp.startDate, language)} - {exp.endDate && formatDate(exp.endDate, language)}
           </div>
         </div>
         <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{exp.company}</div>
-        <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>{exp.description}</div>
+        <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap', color: colorPalette.text }}>{exp.description}</div>
       </div>
     ), index));
 
@@ -771,13 +773,13 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
   const educationItems = data.education.map((edu, index) => renderSection(`education-${index}`, (
     <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position }}>{edu.school}</div>
+        <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position, color: colorPalette.text }}>{edu.school}</div>
         <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
           {edu.startDate && formatDate(edu.startDate, language)} - {edu.endDate && formatDate(edu.endDate, language)}
         </div>
       </div>
       <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.company }}>{edu.degree}</div>
-      <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>{edu.description}</div>
+      <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap', color: colorPalette.text }}>{edu.description}</div>
     </div>
   ), index));
 
@@ -787,7 +789,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
         <div key={index} style={{ marginTop: index === 0 ? effectiveSpacing.elements.contentSpacing : effectiveSpacing.elements.itemMargin }}>
           {/* Pierwszy wiersz: Nazwa kursu i data */}
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position }}>{course.name}</div>
+            <div style={{ fontWeight: 400, fontSize: effectiveFontSizes.position, color: colorPalette.text }}>{course.name}</div>
             <div style={{ color: colorPalette.grayDark, fontSize: effectiveFontSizes.dates }}>
               {course.date && formatDate(course.date, language)}
             </div>
@@ -805,7 +807,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
           
           {/* Trzeci wiersz: Opis */}
           {course.description && (
-            <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap' }}>
+            <div style={{ marginTop: effectiveSpacing.elements.margin, fontSize: effectiveFontSizes.description, whiteSpace: 'pre-wrap', color: colorPalette.text }}>
               {course.description}
             </div>
           )}
@@ -850,7 +852,8 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                   fontSize: effectiveFontSizes.nameHeader, 
                   fontWeight: 700,
                   margin: 0,
-                  padding: 0
+                  padding: 0,
+                  color: colorPalette.text
                 }}>{data.personalData.firstName} {data.personalData.lastName}</h1>
                 
                 {(() => {
@@ -873,7 +876,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     contactElements.push(
                       <div key="email" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaEnvelope style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.email}
+                        <span style={{ color: colorPalette.grayDark }}>{data.personalData.email}</span>
                       </div>
                     );
                   }
@@ -882,7 +885,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     contactElements.push(
                       <div key="phone" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaPhone style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.phone}
+                        <span style={{ color: colorPalette.grayDark }}>{data.personalData.phone}</span>
                       </div>
                     );
                   }
@@ -891,7 +894,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     contactElements.push(
                       <div key="age" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaBirthdayCake style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.age} lat
+                        <span style={{ color: colorPalette.grayDark }}>{data.personalData.age} lat</span>
                       </div>
                     );
                   }
@@ -900,7 +903,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     contactElements.push(
                       <div key="address" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <FaMapMarkerAlt style={{ fontSize: '14px', color: colorPalette.primary }} />
-                        {data.personalData.address}
+                        <span style={{ color: colorPalette.grayDark }}>{data.personalData.address}</span>
                       </div>
                     );
                   }
@@ -917,7 +920,7 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                           color: colorPalette.primary
                         }}>
                           {getSocialIcon(link.type)}
-                          <span>{link.url}</span>
+                          <span style={{ color: colorPalette.primary }}>{link.url}</span>
                         </div>
                       )) : [];
 
@@ -1637,8 +1640,8 @@ export const ModernCVTemplate: React.FC<CVTemplateProps> = ({
                     gap: effectiveSpacing.elements.margin,
                     fontSize: effectiveFontSizes.tagText
                   }}>
-                    <span style={{ fontWeight: 400 }}>{lang.language}:</span>
-                    <span style={{ backgroundColor: colorPalette.grayLight, padding: '0 4px', borderRadius: '4px' }}>{lang.level}</span>
+                    <span style={{ fontWeight: 400, color: colorPalette.text }}>{lang.language}:</span>
+                    <span style={{ backgroundColor: colorPalette.grayLight, padding: '0 4px', borderRadius: '4px', color: colorPalette.text }}>{lang.level}</span>
                   </div>
                 ))}
               </div>

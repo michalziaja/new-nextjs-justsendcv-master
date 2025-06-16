@@ -401,14 +401,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                   <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
                 )}
               </button>
-              <label className="ml-2 text-sm font-medium text-gray-700">Umiejętności techniczne</label>
+              <label className="ml-2 text-sm font-medium text-gray-700 dark:text-gray-400">Umiejętności techniczne</label>
               
               {/* Przycisk sugestii AI dla umiejętności technicznych */}
               {selectedJob && jobAnalysis && suggestedSkills.technical.length > 0 && (
                 <div className="relative ml-auto">
                   <button
                     onClick={() => setShowTechnicalSuggestions(!showTechnicalSuggestions)}
-                    className="flex items-center px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded hover:bg-blue-200"
+                    className="flex items-center px-2 py-1 text-xs bg-blue-100 text-blue-800 dark:text-gray-400 rounded hover:bg-blue-200"
                     title="Sugestie AI"
                   >
                     <Sparkles className="w-3 h-3 mr-1" />
@@ -419,14 +419,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                   {showTechnicalSuggestions && (
                     <div 
                       ref={technicalPopoverRef}
-                      className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10"
+                      className="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-600 rounded-md shadow-lg z-10"
                     >
                       <div className="p-3">
                         <div className="flex justify-between items-center mb-2">
                           <h5 className="text-sm font-medium">Sugerowane umiejętności</h5>
                           <button
                             onClick={() => setShowTechnicalSuggestions(false)}
-                            className="text-gray-400 hover:text-gray-600"
+                            className="text-gray-400 dark:text-gray-400 hover:text-gray-600"
                           >
                             <IoClose className="w-4 h-4" />
                           </button>
@@ -458,7 +458,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
             {cvData.skills.showTechnicalSkills && (
               <div className="ml-7 mb-2 space-y-2">
                 <div className="flex items-center">
-                  <label className="text-xs text-gray-500 mr-2 w-12">Sekcja:</label>
+                  <label className="text-xs text-gray-500 dark:text-gray-400 mr-2 w-12">Sekcja:</label>
                   <input 
                     type="text" 
                     className="border rounded-md px-3 py-1 text-sm w-1/4"
@@ -474,7 +474,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                       });
                     }}
                   />
-                  <span className="ml-2 text-xs text-gray-500">Usuń aby pozostawić bez nagłówka</span>
+                  <span className="ml-2 text-xs text-gray-500 dark:text-gray-400">Usuń aby pozostawić bez nagłówka</span>
                 </div>
               </div>
             )}
@@ -491,7 +491,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                       addTechnicalSkill();
                     }
                   }}
-                  className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   placeholder="Dodaj umiejętność techniczną (np. JavaScript, React, itp.)"
                 />
               </div>
@@ -507,11 +507,11 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
               {cvData.skills.technical.map((skill, index) => (
                 <div 
                   key={index} 
-                  className="bg-gradient-to-r from-[#00B2FF]/20 to-blue-600/20 border border-blue-200 rounded-full px-3 py-1 flex items-center"
+                  className="bg-gradient-to-r from-[#00B2FF]/20 to-blue-600/20 border border-blue-200 dark:border-blue-600 rounded-full px-3 py-1 flex items-center"
                 >
-                  <span className="text-sm text-gray-800">{skill}</span>
+                  <span className="text-sm text-gray-800 dark:text-gray-400">{skill}</span>
                   <button 
-                    className="ml-2 text-gray-500 hover:text-red-500"
+                    className="ml-2 text-gray-500 dark:text-gray-400 hover:text-red-500"
                     onClick={() => removeTechnicalSkill(index)}
                   >
                     <IoClose className="w-4 h-4" />
@@ -534,14 +534,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                   <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
                 )}
               </button>
-              <label className="ml-2 text-sm font-medium text-gray-700">Umiejętności miękkie</label>
+              <label className="ml-2 text-sm font-medium text-gray-700 dark:text-gray-400">Umiejętności miękkie</label>
               
               {/* Przycisk sugestii AI dla umiejętności miękkich */}
               {selectedJob && jobAnalysis && suggestedSkills.skills.length > 0 && (
                 <div className="relative ml-auto">
                   <button
                     onClick={() => setShowSoftSuggestions(!showSoftSuggestions)}
-                    className="flex items-center px-2 py-1 text-xs bg-green-100 text-green-800 rounded hover:bg-green-200"
+                    className="flex items-center px-2 py-1 text-xs bg-green-100 text-green-800 dark:text-gray-400 rounded hover:bg-green-200"
                     title="Sugestie AI"
                   >
                     <Sparkles className="w-3 h-3 mr-1" />
@@ -552,14 +552,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                   {showSoftSuggestions && (
                     <div 
                       ref={softPopoverRef}
-                      className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10"
+                      className="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-600 rounded-md shadow-lg z-10"
                     >
                       <div className="p-3">
                         <div className="flex justify-between items-center mb-2">
                           <h5 className="text-sm font-medium">Sugerowane umiejętności</h5>
                           <button
                             onClick={() => setShowSoftSuggestions(false)}
-                            className="text-gray-400 hover:text-gray-600"
+                            className="text-gray-400 dark:text-gray-400 hover:text-gray-600"
                           >
                             <IoClose className="w-4 h-4" />
                           </button>
@@ -591,7 +591,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
             {cvData.skills.showSoftSkills && (
               <div className="ml-7 mb-2 space-y-2">
                 <div className="flex items-center">
-                  <label className="text-xs text-gray-500 mr-2 w-12">Sekcja:</label>
+                  <label className="text-xs text-gray-500 dark:text-gray-400 mr-2 w-12">Sekcja:</label>
                   <input 
                     type="text" 
                     className="border rounded-md px-3 py-1 text-sm w-1/4"
@@ -607,7 +607,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                       });
                     }}
                   />
-                  <span className="ml-2 text-xs text-gray-500">Usuń aby pozostawić bez nagłówka</span>
+                  <span className="ml-2 text-xs text-gray-500 dark:text-gray-400">Usuń aby pozostawić bez nagłówka</span>
                 </div>
               </div>
             )}
@@ -624,7 +624,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                       addSoftSkill();
                     }
                   }}
-                  className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   placeholder="Dodaj umiejętność miękką (np. komunikatywność, praca zespołowa, itp.)"
                 />
               </div>
@@ -640,11 +640,11 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
               {cvData.skills.soft.map((skill, index) => (
                 <div 
                   key={index} 
-                  className="bg-gradient-to-r from-green-100 to-green-200 border border-green-200 rounded-full px-3 py-1 flex items-center"
+                  className="bg-gradient-to-r from-green-100 to-green-200 border border-green-200 dark:border-green-600 rounded-full px-3 py-1 flex items-center"
                 >
-                  <span className="text-sm text-gray-800">{skill}</span>
+                  <span className="text-sm text-gray-800 dark:text-gray-400">{skill}</span>
                   <button 
-                    className="ml-2 text-gray-500 hover:text-red-500"
+                    className="ml-2 text-gray-500 dark:text-gray-400 hover:text-red-500"
                     onClick={() => removeSoftSkill(index)}
                   >
                     <IoClose className="w-4 h-4" />
@@ -656,14 +656,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
           
           <div>
             <div className="flex items-center mb-1">
-              <label className="block text-sm font-medium text-gray-700">Języki obce</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-400">Języki obce</label>
               
               {/* Przycisk sugestii AI dla języków */}
               {selectedJob && jobAnalysis && suggestedSkills.languages.length > 0 && (
                 <div className="relative ml-auto">
                   <button
                     onClick={() => setShowLanguageSuggestions(!showLanguageSuggestions)}
-                    className="flex items-center px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded hover:bg-purple-200"
+                    className="flex items-center px-2 py-1 text-xs bg-purple-100 text-purple-800 dark:text-gray-400 rounded hover:bg-purple-200"
                     title="Sugestie AI"
                   >
                     <Sparkles className="w-3 h-3 mr-1" />
@@ -674,14 +674,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                   {showLanguageSuggestions && (
                     <div 
                       ref={languagePopoverRef}
-                      className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10"
+                      className="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-600 rounded-md shadow-lg z-10"
                     >
                       <div className="p-3">
                         <div className="flex justify-between items-center mb-2">
                           <h5 className="text-sm font-medium">Sugerowane języki</h5>
                           <button
                             onClick={() => setShowLanguageSuggestions(false)}
-                            className="text-gray-400 hover:text-gray-600"
+                            className="text-gray-400 dark:text-gray-400 hover:text-gray-600"
                           >
                             <IoClose className="w-4 h-4" />
                           </button>
@@ -747,7 +747,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
                 </div>
               ))}
               <button 
-                className="w-full border-dashed border border-gray-300 rounded py-1 text-sm text-gray-500 hover:bg-gray-50 transition"
+                className="w-full border-dashed border border-gray-300 dark:border-gray-600 rounded py-1 text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 transition"
                 onClick={addLanguage}
               >
                 + Dodaj kolejny język
@@ -761,7 +761,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({
       <div className="mt-auto flex justify-between border-t-2 p-4 w-full">
         <div>
           <button 
-            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-sm transition"
+            className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white dark:text-gray-400 rounded-sm transition"
             onClick={onBack}
           >
             Wstecz

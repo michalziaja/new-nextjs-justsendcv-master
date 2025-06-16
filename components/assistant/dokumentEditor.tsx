@@ -78,7 +78,7 @@ export default function DokumentEditor() {
   };
   
   return (
-    <Card className="p-4 h-[55vh] shadow-[2px_4px_10px_rgba(0,0,0,0.3)] rounded-sm">
+    <Card className="p-4 h-[55vh] shadow-[2px_4px_10px_rgba(0,0,0,0.3)] bg-gray-50 dark:bg-sidebar rounded-sm">
       <div className="mb-4 flex justify-between items-center">
         <h2 className="text-xl font-semibold">Wygenerowana wiadomość</h2>
         <div className="flex gap-2">
@@ -87,7 +87,7 @@ export default function DokumentEditor() {
             size="sm" 
             onClick={() => setGeneratedText('')}
             disabled={!generatedText}
-            className="border-gray-200 hover:border-gray-300 rounded-sm"
+            className="border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600 rounded-sm"
           >
             <TrashIcon size={16} className="mr-1" />
             Wyczyść
@@ -97,7 +97,7 @@ export default function DokumentEditor() {
             size="sm" 
             onClick={handleCopyToClipboard}
             disabled={!generatedText}
-            className="border-gray-200 hover:border-gray-300 rounded-sm"
+            className="border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600 rounded-sm"
           >
             {copied ? <CheckIcon size={16} className="mr-1" /> : <CopyIcon size={16} className="mr-1" />}
             {copied ? 'Skopiowano' : 'Kopiuj'}
@@ -107,7 +107,7 @@ export default function DokumentEditor() {
             size="sm" 
             onClick={() => setShowSaveDialog(!showSaveDialog)}
             disabled={!generatedText}
-            className="border-gray-200 hover:border-gray-300 rounded-sm"
+            className="border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600 rounded-sm"
           >
             <SaveIcon size={16} className="mr-1" />
             Zapisz
@@ -121,7 +121,7 @@ export default function DokumentEditor() {
           size="sm" 
           onClick={() => applyFormatting('bold')}
           title="Pogrubienie"
-          className={`${!isBold && 'border-gray-200 hover:border-gray-300'} rounded-sm`}
+          className={`${!isBold && 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} rounded-sm`}
         >
           <BoldIcon size={16} />
         </Button>
@@ -130,7 +130,7 @@ export default function DokumentEditor() {
           size="sm" 
           onClick={() => applyFormatting('italic')}
           title="Kursywa"
-          className={`${!isItalic && 'border-gray-200 hover:border-gray-300'} rounded-sm`}
+          className={`${!isItalic && 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} rounded-sm`}
         >
           <ItalicIcon size={16} />
         </Button>
@@ -139,7 +139,7 @@ export default function DokumentEditor() {
           size="sm" 
           onClick={() => applyFormatting('underline')}
           title="Podkreślenie"
-          className={`${!isUnderline && 'border-gray-200 hover:border-gray-300'} rounded-sm`}
+          className={`${!isUnderline && 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} rounded-sm`}
         >
           <UnderlineIcon size={16} />
         </Button>
@@ -147,7 +147,7 @@ export default function DokumentEditor() {
           variant="outline" 
           size="sm" 
           title="Lista punktowana"
-          className="border-gray-200 hover:border-gray-300 rounded-sm"
+          className="border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600 rounded-sm"
         >
           <ListIcon size={16} />
         </Button>
@@ -157,7 +157,7 @@ export default function DokumentEditor() {
             size="sm" 
             onClick={() => setAlignment('left')}
             title="Wyrównaj do lewej"
-            className={`${textAlign !== 'left' && 'border-gray-200 hover:border-gray-300'} rounded-sm`}
+            className={`${textAlign !== 'left' && 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} rounded-sm`}
           >
             <AlignLeftIcon size={16} />
           </Button>
@@ -166,7 +166,7 @@ export default function DokumentEditor() {
             size="sm" 
             onClick={() => setAlignment('center')}
             title="Wyśrodkuj"
-            className={`${textAlign !== 'center' && 'border-gray-200 hover:border-gray-300'} rounded-sm`}
+            className={`${textAlign !== 'center' && 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} rounded-sm`}
           >
             <AlignCenterIcon size={16} />
           </Button>
@@ -175,7 +175,7 @@ export default function DokumentEditor() {
             size="sm" 
             onClick={() => setAlignment('right')}
             title="Wyrównaj do prawej"
-            className={`${textAlign !== 'right' && 'border-gray-200 hover:border-gray-300'} rounded-sm`}
+            className={`${textAlign !== 'right' && 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} rounded-sm`}
           >
             <AlignRightIcon size={16} />
           </Button>
@@ -183,7 +183,7 @@ export default function DokumentEditor() {
       </div>
       
       {showSaveDialog && (
-        <div className="mb-4 p-3 border border-gray-200 rounded-sm bg-gray-50">
+        <div className="mb-4 p-3 border border-gray-200 rounded-sm bg-gray-50 dark:bg-sidebar">
           <Label htmlFor="template-name" className="mb-2 block text-sm font-medium">Nazwa szablonu</Label>
           <div className="flex gap-2">
             <Input 
@@ -191,7 +191,7 @@ export default function DokumentEditor() {
               value={newTemplateName} 
               onChange={(e) => setNewTemplateName(e.target.value)}
               placeholder="Podaj nazwę szablonu..."
-              className="rounded-sm border-gray-200"
+              className="rounded-sm border-gray-200 dark:border-gray-600"
             />
             <Button 
               onClick={handleSaveTemplate}
@@ -208,7 +208,7 @@ export default function DokumentEditor() {
         </div>
       )}
       
-      <div className="relative rounded-sm border border-gray-200">
+      <div className="relative rounded-sm border border-gray-200 dark:border-gray-600">
         {isGenerating && (
           <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-10 rounded-sm">
             <div className="flex flex-col items-center">

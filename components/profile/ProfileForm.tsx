@@ -284,7 +284,7 @@ export default function ProfileForm({
   }
 
   const renderPersonalData = () => (
-    <div className="p-2 -mt-1 bg-gray-50/50 rounded-sm border border-gray-200">
+    <div className="p-2 -mt-1 bg-gray-50/50 dark:bg-slate-800 rounded-sm border border-gray-200 dark:border-gray-600">
       <div className="p-2  ">
         <h3 className="flex items-center text-lg font-semibold mb-4">
           <div className="relative mr-2">
@@ -307,7 +307,7 @@ export default function ProfileForm({
                   value={profile.first_name || ''}
                   onChange={(e) => setProfile({...profile, first_name: e.target.value})}
                   placeholder="Twoje imię"
-                  className="pl-9"
+                  className="pl-9 border-gray-200 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function ProfileForm({
                   value={profile.last_name || ''}
                   onChange={(e) => setProfile({...profile, last_name: e.target.value})}
                   placeholder="Twoje nazwisko"
-                  className="pl-9"
+                  className="pl-9 border-gray-200 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -338,7 +338,7 @@ export default function ProfileForm({
                   value={profile.email || ''}
                   onChange={(e) => setProfile({...profile, email: e.target.value})}
                   placeholder="Twój adres email"
-                  className="pl-9"
+                  className="pl-9 border-gray-200 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -356,7 +356,7 @@ export default function ProfileForm({
                   value={profile.address || ''}
                   onChange={(e) => setProfile({...profile, address: e.target.value})}
                   placeholder="Twój adres"
-                  className="pl-9"
+                  className="pl-9 border-gray-200 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -371,7 +371,7 @@ export default function ProfileForm({
                   value={profile.phone || ''}
                   onChange={(e) => setProfile({...profile, phone: e.target.value})}
                   placeholder="Twój numer telefonu"
-                  className="pl-9"
+                  className="pl-9 border-gray-200 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -389,7 +389,7 @@ export default function ProfileForm({
                   value={profile.age || ''}
                   onChange={(e) => setProfile({...profile, age: e.target.value})}
                   placeholder="Wiek"
-                  className="pl-9"
+                  className="pl-9 border-gray-200 dark:border-gray-600"
                 />
               </div>
             </div>
@@ -400,7 +400,7 @@ export default function ProfileForm({
   );
 
   const renderAboutMe = () => (
-    <div className="p-2 -mt-2 bg-gray-50/50 rounded-sm border border-gray-200">
+    <div className="p-2 -mt-2 bg-gray-50/50 dark:bg-slate-800 rounded-sm border border-gray-200 dark:border-gray-600">
       <div className="p-2">
         <h3 className="flex items-center text-lg font-semibold mb-4">
           <div className="relative mr-2">
@@ -415,7 +415,7 @@ export default function ProfileForm({
           value={profile.about_me || ''}
           onChange={(e) => setProfile({...profile, about_me: e.target.value})}
           placeholder="Napisz kilka zdań o sobie..."
-          className="min-h-[120px]"
+          className="min-h-[120px] border-gray-200 dark:border-gray-600"
         />
       </div>
     </div>
@@ -446,7 +446,7 @@ export default function ProfileForm({
   };
 
   const renderSocialLinks = () => (
-    <div className="p-2 -mt-2 bg-gray-50/50 rounded-sm border border-gray-200">
+    <div className="p-2 -mt-2 bg-gray-50/50 dark:bg-slate-800 rounded-sm border border-gray-200 dark:border-gray-600">
       <div className="p-2">
         <h3 className="flex items-center text-lg font-semibold mb-4">
           <div className="relative mr-2">
@@ -501,6 +501,7 @@ export default function ProfileForm({
                   value={link.url}
                   onChange={(e) => updateSocialLinkUrl(index, e.target.value)}
                   placeholder="https://..."
+                  className="border-gray-200 dark:border-gray-600"
                 />
               </div>
               
@@ -551,16 +552,16 @@ export default function ProfileForm({
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="w-full md:w-auto">
           {error && (
-            <Alert variant="destructive" className="mb-0 py-2">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{error}</AlertDescription>
+            <Alert variant="destructive" className="mb-0 py-2 dark:bg-slate-800 dark:border-red-600 dark:text-red-600">
+              <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400" />
+              <AlertDescription className="dark:text-gray-200">{error}</AlertDescription>
             </Alert>
           )}
           
           {success && (
-            <Alert variant="default" className="mb-0 py-2 bg-green-50 border-green-200 text-green-800">
-              <CheckCircle className="h-4 w-4 text-green-600" />
-              <AlertDescription>{success}</AlertDescription>
+            <Alert variant="default" className="mb-0 py-2 bg-green-50 border-green-200 text-green-800 dark:bg-slate-800 dark:border-green-600 dark:text-green-600">
+              <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
+              <AlertDescription className="dark:text-gray-200">{success}</AlertDescription>
             </Alert>
           )}
         </div>

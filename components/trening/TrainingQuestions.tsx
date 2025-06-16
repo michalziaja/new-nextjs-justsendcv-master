@@ -38,15 +38,15 @@ export default function TrainingQuestions({
   if (!trainingStarted) {
     return (
       <div
-        className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
+        className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
       >
-        <div className="bg-white rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
+        <div className="bg-white dark:bg-sidebar rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
           <div className="text-5xl mb-6">🎓</div>
           <h2 className="text-xl font-semibold mb-4">Przygotuj się do rozmowy rekrutacyjnej</h2>
-          <p className="text-gray-600 mb-6">
+          <p className="dark:text-gray-400 text-gray-600 mb-6">
             Wybierz CV i ofertę pracy, aby rozpocząć przygotowania do rozmowy.
           </p>
-          <div className="text-sm text-gray-500">
+          <div className="dark:text-gray-400 text-sm text-gray-500">
             <p>Dzięki naszemu treningowi:</p>
             <ul className="list-disc list-inside text-left mt-2 space-y-1">
               <li>Poznasz informacje o firmie przed rozmową</li>
@@ -73,7 +73,7 @@ export default function TrainingQuestions({
 
     return (
       <div
-        className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden flex flex-col"
+        className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden flex flex-col"
       >
         <div className="rounded-lg p-6 flex-grow flex flex-col items-center justify-center">
           <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500 mb-3"></div>
@@ -96,12 +96,12 @@ export default function TrainingQuestions({
   if (!trainingType || !questions.length) {
     return (
       <div
-        className="bg-white rounded-lg shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
+        className="bg-white dark:bg-sidebar rounded-lg shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
       >
-        <div className="bg-white rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
+        <div className="bg-white dark:bg-sidebar rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
           <div className="text-5xl mb-6">🎯</div>
           <h2 className="text-xl font-semibold mb-4">Wybierz ofertę pracy</h2>
-          <p className="text-gray-600 mb-6">
+          <p className="dark:text-gray-400 text-gray-600 mb-6">
             Wybierz ofertę pracy, aby rozpocząć przygotowania do rozmowy.
           </p>
         </div>
@@ -113,14 +113,14 @@ export default function TrainingQuestions({
 
   return (
     <div
-      className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-5 h-full overflow-hidden flex flex-col"
+      className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-5 h-full overflow-hidden flex flex-col"
     >
       {/* <h2 className="text-xl font-semibold mb-4">Pytania i wskazówki</h2> */}
       
       {selectedJobOffer && selectedCV && (
-        <div className="bg-blue-50 text-blue-800 rounded-lg p-3 mb-4 text-sm">
+        <div className="bg-blue-50 dark:bg-sidebar text-blue-800 rounded-lg p-3 mb-4 text-sm">
           <div className="flex justify-between items-center">
-            <div>
+            <div> 
               <p><strong>CV:</strong> {selectedCV.name}</p>
               <p><strong>Oferta:</strong> {selectedJobOffer.title} - {selectedJobOffer.company}</p>
             </div>
@@ -132,13 +132,13 @@ export default function TrainingQuestions({
         {/* Nagłówek pytania */}
         <div className="mb-5">
           <h3 className="text-md font-medium text-gray-600 mb-2">Pytanie {currentQuestionIndex + 1} z {questions.length}</h3>
-          <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+          <div className="bg-white dark:bg-sidebar border border-gray-200 dark:border-gray-600 rounded-lg p-4 shadow-sm">
             <p className="text-gray-800 text-lg font-medium">{currentQuestion?.question}</p>
           </div>
         </div>
 
         {/* Wskazówki */}
-        <div className="bg-purple-50 border border-purple-100 rounded-lg p-4 mt-4 mb-6">
+        <div className="bg-purple-50 dark:bg-sidebar border border-purple-100 dark:border-purple-600 rounded-lg p-4 mt-4 mb-6">
           <h4 className="font-medium text-purple-800 mb-2 text-sm">Wskazówki do odpowiedzi:</h4>
           <ul className="list-disc list-inside text-purple-700 text-sm space-y-2 ml-1">
             {currentQuestion?.tips.map((tip: string, index: number) => (

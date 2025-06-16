@@ -134,7 +134,7 @@ const TextFormatToolbar = ({
   };
 
   return (
-    <div className="flex mb-1 border border-gray-300 rounded-t-md border-b-0 bg-gray-50 p-1">
+    <div className="flex mb-1 border border-gray-300 dark:border-gray-600 rounded-t-md border-b-0 bg-gray-50 dark:bg-slate-800 p-1">
       <button
         type="button"
         onClick={addBulletPoint}
@@ -182,14 +182,14 @@ const EducationSection: React.FC<EducationSectionProps> = ({
               <div className="absolute top-2 right-2">
                 <button 
                   onClick={() => removeEducation(index)}
-                  className="text-gray-500 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
+                  className="text-gray-500 dark:text-gray-400 hover:text-red-500 p-1 rounded-full hover:bg-gray-100"
                   title="Usuń wpis"
                 >
                   <IoClose className="w-5 h-5" />
                 </button>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Uczelnia/Szkoła</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Uczelnia/Szkoła</label>
                 <input 
                   type="text" 
                   className="w-full border rounded-md px-3 py-2" 
@@ -199,7 +199,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Kierunek/Specjalizacja</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Kierunek/Specjalizacja</label>
                 <input 
                   type="text" 
                   className="w-full border rounded-md px-3 py-2" 
@@ -210,7 +210,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Data rozpoczęcia</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Data rozpoczęcia</label>
                   <input 
                     type="month" 
                     className="w-full border rounded-md px-3 py-2"
@@ -219,7 +219,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Data zakończenia</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">Data zakończenia</label>
                   <div className="space-y-2">
                     <input 
                       type="month" 
@@ -242,7 +242,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({
                           );
                         }}
                       />
-                      <label htmlFor={`current-education-${index}`} className="ml-2 text-sm text-gray-700">
+                        <label htmlFor={`current-education-${index}`} className="ml-2 text-sm text-gray-700 dark:text-gray-400">
                         Obecnie się uczę
                       </label>
                     </div>

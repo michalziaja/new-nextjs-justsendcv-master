@@ -61,7 +61,7 @@ export default function CalculatorPage() {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:items-start">
         <div className="bg-transparent lg:col-span-2 space-y-5">
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] minh-[38vh] max-h-[38vh] p-4">
+          <div className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] minh-[38vh] max-h-[38vh] p-4">
             <IntegratedCalculator 
               onResultsUpdate={handleResultsUpdate} 
               initialContractType={subType as UopContractType}
@@ -72,7 +72,7 @@ export default function CalculatorPage() {
             />
           </div>
           
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 h-[42vh]">
+          <div className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 h-[42vh]">
             <CalculationTable 
               results={calculatorResults}
               isB2B={contractType === "b2b"}
@@ -81,7 +81,7 @@ export default function CalculatorPage() {
         </div>
         
         <div className="lg:col-span-1 w-full min-w-0">
-          <div className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 h-[82vh] sticky top-4 overflow-hidden w-full flex flex-col">
+          <div className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-4 h-[82vh] sticky top-4 overflow-hidden w-full flex flex-col">
             {/* <h2 className="text-lg font-semibold mb-4 bg-gradient-to-r from-[#00B2FF] to-blue-600 bg-clip-text text-transparent">Narzędzia płacowe</h2> */}
             
             <Tabs value={toolsTab} onValueChange={setToolsTab} className="w-full mb-4 flex-shrink-0">

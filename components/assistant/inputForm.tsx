@@ -101,7 +101,7 @@ export default function InputForm() {
   }
 
   return (
-    <Card className="p-4 h-[calc(55vh)] space-y-4 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)]">
+    <Card className="p-4 h-[calc(55vh)] space-y-4 rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] bg-gray-50 dark:bg-sidebar">
       <div className="grid grid-cols-2 gap-4">
         {/* Wybór CV - lewa kolumna */}
         <div>
@@ -123,7 +123,7 @@ export default function InputForm() {
                   key={cv.id} 
                   className={`border ${selectedUserCV === cv.id 
                     ? 'border-purple-500 bg-purple-50' 
-                    : 'border-gray-200 hover:border-gray-300'} 
+                    : 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} 
                     rounded-md p-2 mb-2 cursor-pointer transition-all`}
                   onClick={() => setSelectedUserCV(cv.id)}
                 >
@@ -181,7 +181,7 @@ export default function InputForm() {
                   key={offer.id} 
                   className={`border ${selectedJobOffer === offer.id 
                     ? 'border-purple-500 bg-purple-50' 
-                    : 'border-gray-200 hover:border-gray-300'} 
+                    : 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'} 
                     rounded-md p-2 mb-2 cursor-pointer transition-all`}
                   onClick={() => setSelectedJobOffer(offer.id)}
                 >
@@ -214,7 +214,7 @@ export default function InputForm() {
         <Textarea 
           id="additional-info" 
           placeholder="Podaj dodatkowe informacje, które powinny zostać uwzględnione w wiadomości..." 
-          className="min-h-[85px]"
+          className="min-h-[85px] border-gray-200 dark:border-gray-600"
           value={additionalInfo}
           onChange={(e) => setAdditionalInfo(e.target.value)}
         />

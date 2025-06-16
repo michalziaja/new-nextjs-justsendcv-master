@@ -243,9 +243,9 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
               title={selectedFonts[propKey] ? "Odznacz" : "Zaznacz do grupowej edycji"}
             >
               {selectedFonts[propKey] ? (
-                <IoMdCheckboxOutline className="w-4 h-4 text-blue-500" />
+                <IoMdCheckboxOutline className="w-4 h-4 text-blue-500 dark:text-blue-600" />
               ) : (
-                <IoMdSquareOutline className="w-4 h-4 text-gray-400" />
+                <IoMdSquareOutline className="w-4 h-4 text-gray-400 dark:text-gray-400" />
               )}
             </button>
           </div>
@@ -346,14 +346,14 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
   return (
     <div className="flex flex-col h-full">
       <div className="flex-grow p-0">
-        <h4 className="text-lg font-semibold text-gray-800 mb-4">Zaawansowane opcje formatowania</h4>
-        <p className="text-xs text-gray-500 mb-4 bg-blue-50 p-2 -ml-2 rounded border border-blue-100">
+        <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-400 mb-4">Zaawansowane opcje formatowania</h4>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 bg-blue-50 dark:bg-slate-800 p-2 -ml-2 rounded border border-blue-100 dark:border-blue-600">
           <span className="font-medium">Wskazówka:</span> Dostosuj marginesy i odstępy aby zniwelować problemy z wyswietlaniem.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
           {/* Pola dla marginesów */}
-          {/* <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-2">Marginesy i odstępy</h5> */}
+          {/* <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-400 col-span-1 md:col-span-2 mt-2">Marginesy i odstępy</h5> */}
           {Object.entries(spacingLabels).map(([group, keys]) => (
             Object.entries(keys).map(([key, label]) => {
               // Pobierz wartość niestandardową lub domyślną
@@ -379,7 +379,7 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
           {/* <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-4">Rozmiary czcionek</h5> */}
           
           {/* Panel grupowej edycji rozmiarów czcionek */}
-          <div className="col-span-1 md:col-span-2 bg-gray-50 p-3 rounded-md mb-2 mt-8 -ml-2  border border-gray-200">
+          <div className="col-span-1 md:col-span-2 bg-gray-50 dark:bg-slate-800 p-3 rounded-md mb-2 mt-8 -ml-2  border border-gray-200 dark:border-gray-600">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center">
                 <button 
@@ -388,38 +388,38 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
                   title="Zaznacz/Odznacz wszystkie"
                 >
                   {Object.keys(fontLabels).every(key => selectedFonts[key]) ? (
-                    <IoMdCheckboxOutline className="w-5 h-5 text-blue-500" />
+                    <IoMdCheckboxOutline className="w-5 h-5 text-blue-500 dark:text-blue-600" />
                   ) : (
-                    <IoMdSquareOutline className="w-5 h-5 text-gray-400" />
+                    <IoMdSquareOutline className="w-5 h-5 text-gray-400 dark:text-gray-400" />
                   )}
                 </button>
-                <span className="text-sm font-medium text-gray-700">Grupowa edycja zaznaczonych czcionek</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-400">Grupowa edycja zaznaczonych czcionek</span>
               </div>
               <div className="flex space-x-1">
                 <button
                   onClick={() => applyBulkAdjustment(-0.5)}
-                  className="px-2 py-0.5 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                  className="px-2 py-0.5 bg-gray-200 dark:bg-slate-800 hover:bg-gray-300 dark:hover:bg-slate-700 rounded text-sm"
                   disabled={Object.values(selectedFonts).every(v => !v)}
                 >
                   -0.5
                 </button>
                 <button
                   onClick={() => applyBulkAdjustment(0.5)}
-                  className="px-2 py-0.5 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                  className="px-2 py-0.5 bg-gray-200 dark:bg-slate-800 hover:bg-gray-300 dark:hover:bg-slate-700 rounded text-sm"
                   disabled={Object.values(selectedFonts).every(v => !v)}
                 >
                   +0.5
                 </button>
                 <button
                   onClick={() => applyBulkAdjustment(1)}
-                  className="px-2 py-0.5 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm"
+                  className="px-2 py-0.5 bg-blue-500 hover:bg-blue-600 text-white dark:text-gray-400 rounded text-sm"
                   disabled={Object.values(selectedFonts).every(v => !v)}
                 >
                   +1
                 </button>
               </div>
             </div>
-            <p className="text-xs text-gray-500">Zaznacz elementy, które chcesz zmodyfikować jednocześnie, a następnie użyj przycisków do zmiany rozmiaru.</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Zaznacz elementy, które chcesz zmodyfikować jednocześnie, a następnie użyj przycisków do zmiany rozmiaru.</p>
           </div>
           
           {Object.entries(fontLabels).map(([key, label]) => {
@@ -446,10 +446,10 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
         </div>
 
         {/* Sekcja Zdjęcie Profilowe */}
-        <h5 className="text-sm font-semibold text-gray-700 col-span-1 md:col-span-2 mt-8">Zdjęcie Profilowe</h5>
+        <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-400 col-span-1 md:col-span-2 mt-8">Zdjęcie Profilowe</h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"> {/* Utrzymujemy układ siatki dla spójności */}
           <div className="flex items-center justify-between">
-            <label htmlFor="photoScaleAdvanced" className="text-xs font-medium text-gray-600 w-1/2">Skala zdjęcia (%)</label>
+            <label htmlFor="photoScaleAdvanced" className="text-xs font-medium text-gray-600 dark:text-gray-400 w-1/2">Skala zdjęcia (%)</label>
             <input
               id="photoScaleAdvanced"
               type="number"
@@ -477,7 +477,7 @@ const AdvancedFormatting: React.FC<AdvancedFormattingProps> = ({
           </div>
           
           <div className="flex items-center justify-between">
-            <label htmlFor="photoBorderRadius" className="text-xs font-medium text-gray-600 w-1/2">Zaokrąglenie rogów (px)</label>
+            <label htmlFor="photoBorderRadius" className="text-xs font-medium text-gray-600 dark:text-gray-400 w-1/2">Zaokrąglenie rogów (px)</label>
             <input
               id="photoBorderRadius"
               type="number"

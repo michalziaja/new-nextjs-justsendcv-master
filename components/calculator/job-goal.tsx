@@ -120,7 +120,7 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
   };
   
   return (
-    <div className="h-full flex flex-col space-y-4">
+    <div className="h-full flex flex-col space-y-4 bg-white dark:bg-sidebar">
       {/* Pole wyszukiwania z przyciskiem w jednej linii - stała wysokość */}
       <div className="flex gap-2 items-center flex-shrink-0">
         <div className="flex-1">
@@ -153,13 +153,13 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
 
       {/* Kontener dla błędów - stała wysokość gdy występuje błąd */}
       {error && (
-        <div className="text-red-500 text-sm bg-red-50 p-2 rounded-sm border border-red-200 flex-shrink-0">
+        <div className="text-red-500 dark:text-red-400 text-sm bg-red-50 dark:bg-red-950/30 p-2 rounded-sm border border-red-200 dark:border-red-800 flex-shrink-0">
           {error}
         </div>
       )}
       
       {/* Główny kontener wyników - zajmuje pozostałą przestrzeń z overflow */}
-      <div className="flex-1 min-h-0 border border-gray-200 rounded-sm bg-white">
+      <div className="flex-1 min-h-0 border border-gray-200 dark:border-gray-600 rounded-sm bg-white dark:bg-sidebar">
         <div 
           className="h-full overflow-y-auto p-4"
           style={{
@@ -170,7 +170,7 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
           {searchResults.length > 0 ? (
             <div className="space-y-3">
               {/* Nagłówek z liczbą wyników - sticky */}
-              <div className="sticky top-0 bg-white py-2 border-b border-gray-100 mb-3 z-10">
+              <div className="sticky top-0 bg-white dark:bg-sidebar py-2 border-b border-gray-100 dark:border-gray-600 mb-3 z-10">
                 <p className="text-sm bg-gradient-to-r from-[#00B2FF] to-blue-600 bg-clip-text text-transparent font-medium">
                   Znaleziono {searchResults.length} ofert spełniających kryteria:
                 </p>
@@ -181,12 +181,12 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
                 {searchResults.map((offer) => (
                   <div 
                     key={offer.id} 
-                    className="border border-gray-200 rounded-sm p-4 bg-gradient-to-r from-white to-blue-50/30 hover:from-white hover:to-blue-100/40 transition-colors shadow-sm"
+                    className="border border-gray-200 dark:border-gray-600 rounded-sm p-4 bg-gradient-to-r from-white dark:from-sidebar to-blue-50/30 dark:to-blue-950/30 hover:from-white dark:hover:from-sidebar hover:to-blue-100/40 dark:hover:to-blue-950/40 transition-colors shadow-sm"
                   >
-                    <div className="font-semibold text-gray-800 text-base leading-tight">
+                    <div className="font-semibold text-gray-800 dark:text-gray-200 text-base leading-tight">
                       {offer.title}
                     </div>
-                    <div className="text-sm text-gray-600 mt-1">
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                       {offer.company}
                     </div>
                     {offer.salary && (
@@ -195,7 +195,7 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
                       </div>
                     )}
                     <div className="flex justify-between items-center mt-3 gap-2">
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
                         Dodano: {new Date(offer.created_at).toLocaleDateString('pl-PL')}
                       </div>
                       <Badge className="bg-gradient-to-r from-[#00B2FF]/20 to-blue-600/20 text-blue-800 hover:from-[#00B2FF]/30 hover:to-blue-600/30 text-xs border border-blue-200 whitespace-nowrap">
@@ -214,15 +214,15 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.137 0-4.146-.832-5.657-2.343m0 0L3 10.5v.5a6 6 0 006.5 6H18A7.5 7.5 0 0012 15z" />
                   </svg>
                 </div>
-                <p className="text-gray-500 text-sm">Nie znaleziono ofert spełniających kryteria</p>
-                <p className="text-gray-400 text-xs mt-1">Spróbuj obniżyć minimalną kwotę wynagrodzenia</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Nie znaleziono ofert spełniających kryteria</p>
+                <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">Spróbuj obniżyć minimalną kwotę wynagrodzenia</p>
               </div>
             </div>
           ) : isLoading ? (
             <div className="h-full flex items-center justify-center">
               <div className="text-center py-8 px-4">
                 <div className="w-8 h-8 mx-auto mb-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                <p className="text-gray-500 text-sm">Wyszukiwanie ofert...</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Wyszukiwanie ofert...</p>
               </div>
             </div>
           ) : (
@@ -233,7 +233,7 @@ export function JobGoalContent({ embedded = false }: JobGoalContentProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-                <p className="text-gray-500 text-sm">Wpisz minimalną kwotę zarobków i kliknij "Szukaj ofert"</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Wpisz minimalną kwotę zarobków i kliknij "Szukaj ofert"</p>
               </div>
             </div>
           )}

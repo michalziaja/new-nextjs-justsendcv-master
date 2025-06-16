@@ -33,25 +33,25 @@ const SummarySection: React.FC<SummarySectionProps> = ({
         {!showAdvancedOptions && (
           <>
             <h3 className="text-lg font-semibold mb-2">Podsumowanie</h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               Sprawdź wszystkie wprowadzone informacje i przejdź do opcji zaawansowanych.
             </p>
             
             {selectedJob && (
-              <div className="p-3 bg-blue-50 rounded-lg border border-blue-200 mb-4">
+              <div className="p-3 bg-blue-50 dark:bg-slate-800 rounded-lg border border-blue-200 dark:border-blue-600 mb-4">
                 <p className="font-medium">Wybrana oferta pracy:</p>
                 <p><span className="font-medium">{selectedJob.title}</span> - {selectedJob.company}</p>
               </div>
             )}
             
-            <div className="p-3 bg-green-50 rounded-lg border border-green-200 mb-4">
+            <div className="p-3 bg-green-50 dark:bg-slate-800 rounded-lg border border-green-200 dark:border-green-600 mb-4">
               <p className="font-medium">Wybrany szablon:</p>
               <p>{templates.find(t => t.id === selectedTemplate)?.name}</p>
             </div>
 
             {/* Sekcja nazwy CV */}
             <div className="mt-6 border rounded-lg p-4">
-              <h4 className="font-medium text-gray-800 mb-3">Nazwa CV</h4>
+              <h4 className="font-medium text-gray-800 dark:text-gray-400 mb-3">Nazwa CV</h4>
               <input
                 type="text"
                 className="w-full border rounded-md px-3 py-2"
@@ -59,30 +59,30 @@ const SummarySection: React.FC<SummarySectionProps> = ({
                 value={cvData.cvName || ''}
                 onChange={(e) => setCvData({...cvData, cvName: e.target.value})}
               />
-              <p className="text-sm text-gray-500 mt-1">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                 Ta nazwa będzie widoczna w panelu podglądu i przy pobieraniu CV.
               </p>
             </div>
 
             {/* Sekcja Klauzuli RODO */}
             <div className="mt-6 border rounded-lg p-4">
-              <h4 className="font-medium text-gray-800 mb-3">Klauzula RODO</h4>
+              <h4 className="font-medium text-gray-800 dark:text-gray-400 mb-3">Klauzula RODO</h4>
               
               <div className="flex items-center mb-3">
                 <input
                   type="checkbox"
                   id="showRodoClause"
-                  className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500"
                   checked={cvData.showRodoClause ?? true}
                   onChange={(e) => setCvData({...cvData, showRodoClause: e.target.checked})}
                 />
-                <label htmlFor="showRodoClause" className="ml-2 text-sm text-gray-700">
+                <label htmlFor="showRodoClause" className="ml-2 text-sm text-gray-700 dark:text-gray-400">
                   Wyświetl klauzulę RODO na CV (na dole ostatniej strony)
                 </label>
               </div>
               
               <textarea 
-                className={`w-full border rounded-md px-3 py-2 h-32 text-xs ${!cvData.showRodoClause ? 'bg-gray-100' : ''}`}
+                className={`w-full border rounded-md px-3 py-2 h-32 text-xs ${!cvData.showRodoClause ? 'bg-gray-100 dark:bg-slate-800' : ''}`}
                 placeholder="Wpisz swoją klauzulę RODO..."
                 value={cvData.rodoClause || ''}
                 onChange={(e) => setCvData({...cvData, rodoClause: e.target.value})}
@@ -92,7 +92,7 @@ const SummarySection: React.FC<SummarySectionProps> = ({
 
             {/* Informacja o możliwości pobrania CV */}
             <div className="flex justify-center mt-6">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
                 Możesz pobrać lub wysłać swoje CV z panelu podglądu po prawej stronie.
               </p>
             </div>
@@ -116,7 +116,7 @@ const SummarySection: React.FC<SummarySectionProps> = ({
         <>
           <div>
             <button 
-              className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-sm transition"
+              className="px-4 py-1 h-8 w-24 bg-gradient-to-r from-gray-500/80 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white dark:text-gray-400 rounded-sm transition"
               onClick={onBack}
             >
               Wstecz
@@ -133,7 +133,7 @@ const SummarySection: React.FC<SummarySectionProps> = ({
             </button>
             
             <button 
-              className="px-4 py-1 h-8 w-52 bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-sm  transition"
+              className="px-4 py-1 h-8 w-52 bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white dark:text-gray-400 rounded-sm  transition"
               onClick={() => setShowAdvancedOptions(true)}
             >
               Opcje formatowania
@@ -143,7 +143,7 @@ const SummarySection: React.FC<SummarySectionProps> = ({
       ) : (
         <div className="ml-auto">
           <button 
-            className="px-4 py-1 h-8 bg-gradient-to-r w-52 from-gray-500 to-gray-600 text-white rounded-sm hover:from-gray-600 hover:to-gray-700 transition"
+            className="px-4 py-1 h-8 bg-gradient-to-r w-52 from-gray-500 to-gray-600 text-white dark:text-gray-400 dark:hover:from-gray-600 dark:hover:to-gray-700 rounded-sm hover:from-gray-600 hover:to-gray-700 transition"
             onClick={() => setShowAdvancedOptions(false)}
           >
             Wróć do podsumowania

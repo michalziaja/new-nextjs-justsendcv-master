@@ -627,8 +627,8 @@ export default function Preview({
       {/* Wskaźnik gdy nie ma danych */}
       {!hasMinimumData() && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="bg-white/80 dark:bg-black/80 p-6 rounded-lg shadow-lg text-center">
-            <p className="text-gray-600 dark:text-gray-300">
+          <div className="bg-white/80 p-6 rounded-lg shadow-lg text-center">
+            <p className="text-gray-600">
               Wypełnij podstawowe dane w formularzu edycji, aby wygenerować CV
             </p>
           </div>

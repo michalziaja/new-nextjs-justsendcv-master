@@ -30,14 +30,14 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
   // Renderowanie zakładek
   const renderTabs = () => {
     return (
-      <div className="border-b border-gray-200 mb-2">
+      <div className="border-b border-gray-200 dark:border-gray-600 mb-2">
         <ul className="flex flex-wrap -mb-px text-sm font-medium text-center w-full">
           <li className="flex-1">
             <button
               className={`inline-block p-2 w-full ${
                 activeTab === 'company'
                   ? 'text-blue-600 border-b-2 border-blue-600 active'
-                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300'
+                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'
               }`}
               onClick={() => setActiveTab('company')}
             >
@@ -49,7 +49,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
               className={`inline-block p-2 w-full ${
                 activeTab === 'reviews'
                   ? 'text-blue-600 border-b-2 border-blue-600 active'
-                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300'
+                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'
               }`}
               onClick={() => setActiveTab('reviews')}
             >
@@ -61,7 +61,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
               className={`inline-block p-2 w-full ${
                 activeTab === 'salary'
                   ? 'text-blue-600 border-b-2 border-blue-600 active'
-                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300'
+                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'
               }`}
               onClick={() => setActiveTab('salary')}
             >
@@ -73,7 +73,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
               className={`inline-block p-2 w-full ${
                 activeTab === 'competitors'
                   ? 'text-blue-600 border-b-2 border-blue-600 active'
-                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300'
+                  : 'text-gray-500 hover:text-gray-600 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-600'
               }`}
               onClick={() => setActiveTab('competitors')}
             >
@@ -154,7 +154,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
     switch (activeTab) {
       case 'company':
         return (
-          <div className="bg-gray-50 rounded-lg mt-2 p-3 border border-gray-200 max-h-[calc(40vh)] overflow-y-auto">
+          <div className="bg-gray-50 dark:bg-sidebar rounded-lg mt-2 p-3 border border-gray-200 dark:border-gray-600 max-h-[calc(40vh)] overflow-y-auto">
             <div className="text-gray-700 text-md">
               {formatText(searchResults.companyInfo)}
             </div>
@@ -162,7 +162,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
         );
       case 'reviews':
         return (
-          <div className="bg-gray-50 rounded-lg mt-2 p-3 border border-gray-200 max-h-[calc(40vh)] overflow-y-auto">
+          <div className="bg-gray-50 dark:bg-sidebar rounded-lg mt-2 p-3 border border-gray-200 dark:border-gray-600 max-h-[calc(40vh)] overflow-y-auto">
             <div className="text-gray-700 text-md">
               {formatText(searchResults.employeeReviews)}
             </div>
@@ -170,7 +170,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
         );
       case 'salary':
         return (
-          <div className="bg-gray-50 rounded-lg mt-2 p-3 border border-gray-200 max-h-[calc(50vh)] overflow-y-auto">
+          <div className="bg-gray-50 dark:bg-sidebar rounded-lg mt-2 p-3 border border-gray-200 dark:border-gray-600 max-h-[calc(50vh)] overflow-y-auto">
             <div className="text-gray-700 text-md">
               {formatText(searchResults.salaryInfo)}
             </div>
@@ -178,7 +178,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
         );
       case 'competitors':
         return (
-          <div className="bg-gray-50 rounded-lg mt-2 p-3 border border-gray-200 max-h-[calc(40vh)] overflow-y-auto">
+          <div className="bg-gray-50 dark:bg-sidebar rounded-lg mt-2 p-3 border border-gray-200 dark:border-gray-600 max-h-[calc(40vh)] overflow-y-auto">
             <div className="text-gray-700 text-md">
               {formatText(searchResults.competitorsSimilarities || "Brak informacji o konkurencji i podobnych firmach.")}
             </div>
@@ -193,15 +193,15 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
   if (!trainingStarted) {
     return (
       <div
-        className="bg-white rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
+        className="bg-white dark:bg-sidebar rounded-sm shadow-[2px_4px_10px_rgba(0,0,0,0.3)] p-6 h-full overflow-hidden"
       >
-        <div className="bg-white rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
+        <div className="bg-white dark:bg-sidebar rounded-lg p-6 h-full flex flex-col items-center justify-center text-center">
           <div className="text-5xl mb-6">🎓</div>
           <h2 className="text-xl font-semibold mb-4">Przygotuj się do rozmowy rekrutacyjnej</h2>
-          <p className="text-gray-600 mb-6">
+          <p className="dark:text-gray-400 text-gray-600 mb-6">
             Wybierz ofertę pracy, aby rozpocząć przygotowania do rozmowy.
           </p>
-          <div className="text-sm text-gray-500">
+          <div className="dark:text-gray-400 text-sm text-gray-500">
             <p>Dzięki naszemu treningowi:</p>
             <ul className="list-disc list-inside text-left mt-2 space-y-1">
               <li>Poznasz informacje o firmie przed rozmową</li>
@@ -217,7 +217,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
 
   return (
     <div
-      className="bg-white rounded-sm shadow-md p-5 h-full overflow-hidden flex flex-col"
+      className="bg-white dark:bg-sidebar rounded-sm shadow-md p-5 h-full overflow-hidden flex flex-col"
     >
       {/* <h2 className="text-xl font-semibold mb-2">Poznaj firmę przed rozmową</h2> */}
       
@@ -241,7 +241,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
         {/* Linki do źródeł i wskazówki */}
         <div className="mt-1">
           {searchResults.groundingLinks && searchResults.groundingLinks.length > 0 && (
-            <div className="bg-white rounded-lg p-2 border border-gray-200 mb-2">
+            <div className="bg-white dark:bg-sidebar rounded-lg p-2 border border-gray-200 dark:border-gray-600 mb-2">
               <h4 className="font-medium text-gray-700 text-xs mb-1">Źródła:</h4>
               <div className="flex flex-wrap gap-1">
                 {searchResults.groundingLinks.map((link, index) => (
@@ -259,7 +259,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
             </div>
           )}
           
-          <div className="bg-yellow-50 rounded-lg p-2 border border-yellow-200">
+          <div className="bg-yellow-50 dark:bg-sidebar rounded-lg p-2 border border-yellow-200 dark:border-yellow-600">
             <h4 className="font-medium text-yellow-800 mb-1 text-xs">Wskazówki:</h4>
             <ul className="list-disc text-xs list-inside text-yellow-700 space-y-0.5">
               <li>Zapoznaj się dokładnie z informacjami o firmie przed rozmową</li>
@@ -270,7 +270,7 @@ export default function TrainingPreparation({ trainingStarted, selectedCV, selec
             </ul>
           </div>
           
-          <div className="text-xs text-gray-500 italic mt-1 text-center">
+          <div className="text-xs dark:text-gray-400 text-gray-500 italic mt-1 text-center">
             <p>Informacje wygenerowane przez Gemini AI na podstawie publicznie dostępnych danych.</p>
           </div>
         </div>

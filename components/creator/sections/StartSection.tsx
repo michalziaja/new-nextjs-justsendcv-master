@@ -229,13 +229,13 @@ const StartSection: React.FC<StartSectionProps> = ({
       {/* Główne zakładki */}
       <div className="mb-2 px-16">
         <div className="flex justify-center mt-8 mb-0">
-          <div className="bg-gray-100 p-0 rounded-sm flex w-full">
+          <div className="bg-gray-100 dark:bg-slate-800 p-0 rounded-sm flex w-full">
             <button
               onClick={() => setActiveMainTab('new')}
               className={`py-0 px-4 rounded-sm text-lg h-9 font-semibold flex-1 transition-all duration-200 ${
                 activeMainTab === 'new'
-                  ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg border-1 border-gray-300'
-                  : 'text-gray-600 hover:bg-gray-200'
+                  ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white dark:text-gray-200 shadow-lg border-0 border-gray-300'
+                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
               Stwórz nowe CV
@@ -244,8 +244,8 @@ const StartSection: React.FC<StartSectionProps> = ({
               onClick={() => setActiveMainTab('saved')}
               className={`py-0 px-4 rounded-sm text-lg h-9 font-semibold flex-1 transition-all duration-200 ${
                 activeMainTab === 'saved'
-                  ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg border-0 border-blue-600'
-                  : 'text-gray-600 hover:bg-gray-200/50'
+                  ? 'bg-gradient-to-br from-blue-400 to-blue-600 text-white dark:text-gray-200 shadow-lg border-0 border-blue-600'
+                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200/50'
               }`}
             >
               Twoje zapisane CV
@@ -270,7 +270,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                 className={`py-2 px-4 text-sm font-medium ${
                   activeTab === 'general'
                     ? 'border-b-2 border-blue-500 text-blue-600'
-                    : 'text-gray-500 hover:text-gray-700'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700'
                 }`}
                 onClick={() => setActiveTab('general')}
               >
@@ -282,7 +282,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                 className={`py-2 px-4 text-sm font-medium ${
                   activeTab === 'import'
                     ? 'border-b-2 border-blue-500 text-blue-600'
-                    : 'text-gray-500 hover:text-gray-700'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700'
                 }`}
                 onClick={() => setActiveTab('import')}
               >
@@ -294,7 +294,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                 className={`py-2 px-4 text-sm font-medium ${
                   activeTab === 'jobOffer'
                     ? 'border-b-2 border-blue-500 text-blue-600'
-                    : 'text-gray-500 hover:text-gray-700'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700'
                 }`}
                 onClick={() => setActiveTab('jobOffer')}
               >
@@ -307,12 +307,12 @@ const StartSection: React.FC<StartSectionProps> = ({
           {activeTab === 'general' && (
                 <div className="rounded-lg ">
                   {/* Wskazówki na całej szerokości */}
-                  <div className="flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-50 mb-4">
+                  <div className="flex flex-col p-4 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-sidebar mb-4">
                   <h4 className="text-sm font-medium mb-2">Kiedy wybrać to rozwiązanie?</h4>
-                  <p className="text-xs text-gray-600 mb-4">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
                     Stwórz uniwersalne CV do wykorzystania w różnych aplikacjach. Ta opcja jest idealna, gdy:
                   </p>
-                  <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4">
+                  <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-2 list-disc pl-4">
                     <li>Planujesz aplikować na różne stanowiska</li>
                     <li>Chcesz stworzyć CV od podstaw</li>
                     <li>Potrzebujesz elastycznego dokumentu, który łatwo dostosujesz</li>
@@ -339,9 +339,9 @@ const StartSection: React.FC<StartSectionProps> = ({
           {activeTab === 'import' && (
             <div className="rounded-lg">
                   {/* Wskazówki na całej szerokości */}
-                  <div className="flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-50 mb-4">
+                  <div className="flex flex-col p-4 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-sidebar mb-4">
                   <h4 className="text-sm font-medium mb-2">Jak działa import CV?</h4>
-                  <p className="text-xs text-gray-600 mb-4">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
                     Załaduj swoje istniejące CV w formacie PDF lub DOCX. Nasze narzędzie przeanalizuje jego zawartość bez zapisywania pliku.
                   </p>
                   <div className="mb-4">
@@ -352,14 +352,14 @@ const StartSection: React.FC<StartSectionProps> = ({
                       <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">DOC</span>
                     </div>
                   </div>
-                  <p className="text-xs text-gray-600">
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
                       Po przesłaniu pliku, tekst zostanie wyekstrahowany i wyświetlony w konsoli przeglądarki (naciśnij F12, aby zobaczyć). 
                       Plik nie będzie nigdzie zapisywany i zostanie usunięty z pamięci po zakończeniu analizy.
                     </p>
                   </div>
                   
                   {/* Uploader plików CV na całej szerokości - bez obramowania */}
-                  <div className="flex flex-col items-center p-4 bg-white">
+                  <div className="flex flex-col items-center p-4 bg-white dark:bg-sidebar">
                     <CVFileUploader 
                       onFileProcessed={handleFileProcessed}
                       className="w-full max-w-md"
@@ -373,12 +373,12 @@ const StartSection: React.FC<StartSectionProps> = ({
           {activeTab === 'jobOffer' && (
             <div className="rounded-lg flex flex-col overflow-visible">
                   {/* Wskazówki na całej szerokości */}
-                  <div className="flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-50 mb-4">
+                  <div className="flex flex-col p-4 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-sidebar mb-4">
                   <h4 className="text-sm font-medium mb-2">Dlaczego warto dopasować CV do oferty?</h4>
-                  <p className="text-xs text-gray-600 mb-4">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
                     Tworzenie CV dopasowanego do konkretnej oferty pracy znacząco zwiększa szanse na sukces w procesie rekrutacji:
                   </p>
-                  <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 mb-2">
+                  <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-2 list-disc pl-4 mb-2">
                     <li>Podkreślasz dokładnie te umiejętności, których szuka pracodawca</li>
                     <li>Używasz słów kluczowych, które mogą być wyszukiwane przez systemy ATS</li>
                     <li>Pokazujesz, że zależy Ci właśnie na tym stanowisku</li>
@@ -390,16 +390,16 @@ const StartSection: React.FC<StartSectionProps> = ({
                   
                   {/* Wybór bazowego CV */}
                   {savedCVs.length > 0 && (
-                    <div className="bg-white border border-gray-200 rounded-lg p-4 mb-4">
+                    <div className="bg-white dark:bg-sidebar border border-gray-200 dark:border-gray-600 rounded-lg p-4 mb-4">
                       <h4 className="text-sm font-medium mb-2">Użyj zapisanego CV jako podstawy</h4>
-                      <p className="text-xs text-gray-600 mb-3">
+                      <p className="text-xs text-gray-600 dark:text-gray-400 mb-3">
                         Możesz wykorzystać dane z jednego z Twoich istniejących CV, aby nie wprowadzać ich ponownie.
                       </p>
                       
                       <div className="flex flex-col">
                         
                         <select 
-                          className="border border-gray-300 rounded-md px-3 py-2 text-sm w-full"
+                          className="border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2 text-sm w-full"
                           value={selectedBaseCVId}
                           onChange={(e) => setSelectedBaseCVId(e.target.value)}
                         >
@@ -413,8 +413,8 @@ const StartSection: React.FC<StartSectionProps> = ({
                       </div>
                       
                       {selectedBaseCVId && (
-                        <div className="mt-3 p-3 bg-blue-50 border border-blue-100 rounded-md">
-                          <p className="text-xs text-blue-700">
+                        <div className="mt-3 p-3 bg-blue-50 dark:bg-sidebar border border-blue-100 dark:border-blue-600 rounded-md">
+                          <p className="text-xs text-blue-700 dark:text-blue-400">
                             <span className="font-medium">Uwaga:</span> Dane z wybranego CV zostaną załadowane, ale CV zostanie powiązane z nowo wybraną ofertą pracy.
                           </p>
                         </div>
@@ -423,11 +423,11 @@ const StartSection: React.FC<StartSectionProps> = ({
                   )}
                   
                   {/* Wybór oferty - w formie listy zamiast select */}
-                  <div className="bg-white mt-2">
+                  <div className="bg-white dark:bg-sidebar mt-2">
                     {isLoadingJobs ? (
-                      <div className="p-4 text-gray-500 text-center">Ładowanie ofert pracy...</div>
+                      <div className="p-4 text-gray-500 dark:text-gray-400 text-center">Ładowanie ofert pracy...</div>
                     ) : savedJobs.length === 0 ? (
-                      <div className="p-4 text-gray-500 text-center">Nie masz żadnych zapisanych ofert pracy.</div>
+                      <div className="p-4 text-gray-500 dark:text-gray-400 text-center">Nie masz żadnych zapisanych ofert pracy.</div>
                     ) : (
                       <div className="overflow-y-auto" style={{ maxHeight: 'calc(30vh)' }}>
                         {savedJobs.map(offer => (
@@ -435,7 +435,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                             key={offer.id} 
                             className={`border ${selectedOffer?.id === offer.id 
                               ? 'border-green-500 bg-green-50' 
-                              : 'border-gray-200 hover:border-gray-300'} 
+                              : 'border-gray-200 dark:border-gray-600 hover:border-gray-300'} 
                               rounded-md p-3 mb-2 cursor-pointer transition-all`}
                             onClick={() => setSelectedOffer(offer)}
                           >
@@ -443,7 +443,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                               <div className="flex justify-between items-start mb-2">
                                 <div>
                                   <h3 className="font-medium text-sm">{offer.title}</h3>
-                                  <p className="text-xs text-gray-600">{offer.company}</p>
+                                  <p className="text-xs text-gray-600 dark:text-gray-400">{offer.company}</p>
                                 </div>
                                 <div className="flex items-center">
                                   <span className={`text-xs px-2 py-0.5 rounded text-white ${getStatusStyles(offer.status)}`}>
@@ -456,7 +456,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                               </div>
                               
                               {offer.salary && (
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs text-gray-600 dark:text-gray-400">
                                   <span className="font-medium">Wynagrodzenie:</span> {offer.salary}
                                 </p>
                               )}
@@ -499,8 +499,8 @@ const StartSection: React.FC<StartSectionProps> = ({
           </div>
           
           {savedCVs.length === 0 ? (
-            <div className="p-6 bg-gray-50 rounded-lg border border-gray-200 text-center">
-              <div className="text-gray-600 mb-2">
+            <div className="p-6 bg-gray-50 dark:bg-sidebar rounded-lg border border-gray-200 dark:border-gray-600 text-center">
+              <div className="text-gray-600 dark:text-gray-400 mb-2">
                 Nie masz jeszcze żadnych zapisanych CV.
               </div>
               <button
@@ -514,19 +514,19 @@ const StartSection: React.FC<StartSectionProps> = ({
             <div className="overflow-visible">
               <div className="grid grid-cols-1 gap-1 overflow-visible">
                 {/* Wskazówki i objaśnienia na całej szerokości */}
-                <div className="flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-50 mb-4">
+                <div className="flex flex-col p-4 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-sidebar mb-4">
                   <h4 className="text-sm font-medium mb-2">Zarządzanie zapisanymi CV</h4>
-                  <p className="text-xs text-gray-600 mb-4">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
                     Tutaj znajdziesz wszystkie zapisane przez Ciebie CV. Możesz je edytować, zmieniać ich nazwy lub usunąć.
                   </p>
-                  <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4 mb-4">
+                  <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-2 list-disc pl-4 mb-4">
                     <li>Wybierz CV, aby zobaczyć jego szczegóły</li>
                     <li>Kliknij "Kontynuuj", aby kontynuować pracę nad wybranym CV</li>
                     <li>Użyj ikonek edycji i usuwania, aby zarządzać swoimi CV</li>
                   </ul>
-                  <div className="p-3 bg-blue-50 border border-blue-100 rounded">
-                    <h5 className="text-xs font-medium text-blue-700 mb-1">Wskazówka</h5>
-                    <p className="text-xs text-blue-700">
+                  <div className="p-3 bg-blue-50 dark:bg-sidebar border border-blue-100 dark:border-blue-600 rounded">
+                    <h5 className="text-xs font-medium text-blue-700 dark:text-blue-400 mb-1">Wskazówka</h5>
+                    <p className="text-xs text-blue-700 dark:text-blue-400">
                       Dobrą praktyką jest tworzenie dedykowanych CV dla różnych branż lub stanowisk. 
                       To znacznie zwiększa Twoje szanse podczas rekrutacji.
                     </p>
@@ -534,7 +534,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                 </div>
                 
                 {/* Lista zapisanych CV */}
-                <div className="bg-white overflow-y-auto" style={{ maxHeight: 'calc(38vh)' }}>
+                <div className="bg-white dark:bg-sidebar overflow-y-auto" style={{ maxHeight: 'calc(38vh)' }}>
                   {savedCVs.map((cv) => {
                     const isSelected = cv.id === selectedCVId;
                     const cvType = cv.job_offer_id 
@@ -546,7 +546,7 @@ const StartSection: React.FC<StartSectionProps> = ({
                         key={cv.id} 
                         className={`border ${isSelected 
                           ? 'border-green-500 bg-green-50' 
-                          : 'border-gray-200 hover:border-gray-300'} 
+                          : 'border-gray-200 dark:border-gray-600 hover:border-gray-300'} 
                           rounded-md p-3 mb-2 cursor-pointer transition-all`}
                         onClick={() => {
                           setSelectedCVId(cv.id);
