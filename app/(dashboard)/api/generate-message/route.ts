@@ -62,17 +62,18 @@ Wiadomość powinna być profesjonalna i wyrażać chęć rozwoju.`;
     case 'clarification':
       return `Cel: Poproś o doprecyzowanie pewnych kwestii dotyczących oferty pracy lub zakresu obowiązków przed formalnym aplikowaniem.
 Sformułuj pytania jasno i zwięźle.`;
-    case 'welcome': // Wiadomość po otrzymaniu oferty
-      return `Cel: Napisz wiadomość z podziękowaniem za otrzymaną ofertę pracy i potwierdzeniem jej przyjęcia (lub prośbą o czas do namysłu).
-Wyraź entuzjazm związany z dołączeniem do zespołu.`;
+    case 'welcome': // Wniosek urlopowy
+      return `Cel: Napisz formalny wniosek o udzielenie urlopu na żądanie.
+Wiadomość powinna być skierowana do bezpośredniego przełożonego i zawierać: datę planowanego urlopu, liczbę dni, powód wniosku (jeśli podano), oraz prośbę o zatwierdzenie.
+Zachowaj profesjonalny i oficjalny ton pisma służbowego.`;
     case 'linkedin-footer':
       return `Cel: Stwórz krótki, profesjonalny opis do sekcji "O mnie" lub stopki na profilu LinkedIn.
 ${cvAvailable ? 'Powinien bazować na danych z CV (np. aktualne stanowisko, kluczowe umiejętności, podsumowanie zawodowe). ' : ''}
 Skup się na zwięzłym przedstawieniu profilu zawodowego. Dodaj odpowiednie hashtagi, jeśli uznasz to za stosowne.`;
     case 'direct-recruiter':
-      return `Cel: Napisz krótką, bezpośrednią wiadomość do rekrutera wyrażającą zainteresowanie konkretną ofertą pracy lub nawiązaniem kontaktu.
+      return `Cel: Napisz krótką, bezpośrednią wiadomość do rekrutera wyrażającą zainteresowanie nawiązaniem kontaktu lub omówieniem możliwości współpracy.
 ${cvAvailable ? 'Przedstaw się zwięźle, wykorzystując kluczowe informacje z CV (np. główne obszary specjalizacji, lata doświadczenia). ' : ''}
-Wiadomość powinna być spersonalizowana i zachęcająca do odpowiedzi.`;
+Wiadomość powinna być profesjonalna, otwarta na rozmowę o różnych możliwościach kariery i zachęcająca do odpowiedzi.`;
     default:
       return 'Cel: Wygeneruj profesjonalną wiadomość związaną z procesem rekrutacyjnym, zgodnie z podanymi informacjami.';
   }
@@ -94,20 +95,33 @@ export async function POST(req: NextRequest) {
     const requestData = (await req.json()) as GenerateMessageRequest;
     const { jobOffer, cvData, additionalInfo, messageType } = requestData;
 
+    // Typy wiadomości, które nie wymagają rzeczywistych danych oferty pracy
+    const independentMessageTypes = ['welcome', 'direct-recruiter']; // wniosek urlopowy, wiadomość bezpośrednia
+    const requiresJobOffer = !independentMessageTypes.includes(messageType);
+    
     // Walidacja podstawowych danych
-    if (!jobOffer || !jobOffer.title || !jobOffer.company || !messageType) {
-      console.error("❌ API /generate-message: Brak wymaganych pól w żądaniu (jobOffer.title, jobOffer.company, messageType)");
+    if (!messageType) {
+      console.error("❌ API /generate-message: Brak typu wiadomości w żądaniu");
       return NextResponse.json(
-        { error: "Brak wymaganych pól: jobOffer (z title i company) oraz messageType." },
+        { error: "Brak wymaganego pola: messageType." },
         { status: 400 }
       );
     }
     
-    console.log(`📄 API /generate-message: Typ wiadomości: ${messageType}, Oferta: ${jobOffer.title} w ${jobOffer.company}`);
+    // Walidacja danych oferty tylko dla typów, które tego wymagają
+    if (requiresJobOffer && (!jobOffer || !jobOffer.title || !jobOffer.company)) {
+      console.error("❌ API /generate-message: Brak wymaganych pól oferty pracy dla tego typu wiadomości");
+      return NextResponse.json(
+        { error: "Dla tego typu wiadomości wymagane są dane oferty pracy (title i company)." },
+        { status: 400 }
+      );
+    }
+    
+    console.log(`📄 API /generate-message: Typ wiadomości: ${messageType}${requiresJobOffer && jobOffer ? `, Oferta: ${jobOffer.title} w ${jobOffer.company}` : ' (bez oferty pracy)'}`);
 
     // Przygotowanie fragmentu promptu z danymi CV (jeśli typ wiadomości tego wymaga i dane są dostępne)
     let cvInfoText = "";
-    const cvRelevantMessageTypes = ['greeting', 'linkedin-footer', 'direct-recruiter'];
+    const cvRelevantMessageTypes = ['greeting', 'linkedin-footer', 'direct-recruiter']; // Usunięto 'welcome' - wniosek urlopowy nie potrzebuje danych CV
     const cvAvailable = !!cvData && Object.keys(cvData).length > 0;
 
     if (cvAvailable && cvRelevantMessageTypes.includes(messageType)) {
@@ -146,10 +160,13 @@ export async function POST(req: NextRequest) {
     const promptLines = [
       `Wygeneruj wiadomość zgodnie z poniższymi wytycznymi.`,
       `TYP WIADOMOŚCI DO WYGENEROWANIA: "${messageType}"`,
-      `\nSZCZEGÓŁY OFERTY PRACY:`,
-      `- Stanowisko: ${jobOffer.title}`,
-      `- Firma: ${jobOffer.company}`,
-      jobOffer.full_description ? `- Pełny opis stanowiska: ${jobOffer.full_description}` : '',
+      // Dodaj sekcję z danymi oferty tylko jeśli są dostępne i potrzebne
+      ...(requiresJobOffer && jobOffer ? [
+        `\nSZCZEGÓŁY OFERTY PRACY:`,
+        `- Stanowisko: ${jobOffer.title}`,
+        `- Firma: ${jobOffer.company}`,
+        jobOffer.full_description ? `- Pełny opis stanowiska: ${jobOffer.full_description}` : '',
+      ] : []),
       cvInfoText ? `\n${cvInfoText}` : '',
       additionalInfo ? `\nDODATKOWE INFORMACJE OD UŻYTKOWNIKA (uwzględnij je w treści wiadomości):\n- ${additionalInfo}` : '\nDodatkowe informacje od użytkownika: Brak.',
       `\nINSTRUKCJE SPECYFICZNE DLA TYPU WIADOMOŚCI "${messageType}":`,

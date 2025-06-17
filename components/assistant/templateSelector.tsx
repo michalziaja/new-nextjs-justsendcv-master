@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useAssistant, documentTemplates } from './assistantContext';
-import { FileText, Clock, ThumbsUp, MessageSquare, FileQuestion, UserCheck, FileEdit, Send } from "lucide-react";
+import { FileText, Clock, ThumbsUp, MessageSquare, FileQuestion, Calendar, FileEdit, Send } from "lucide-react";
 
 export default function TemplateSelector() {
   const { selectedTemplate, setSelectedTemplate } = useAssistant();
@@ -21,7 +21,7 @@ export default function TemplateSelector() {
       case 'clarification':
         return <FileQuestion className="h-6 w-6 text-purple-500" />;
       case 'welcome':
-        return <UserCheck className="h-6 w-6 text-cyan-500" />;
+        return <Calendar className="h-6 w-6 text-cyan-500" />;
       case 'linkedin-footer':
         return <FileEdit className="h-6 w-6 text-indigo-500" />;
       case 'direct-recruiter':

@@ -156,8 +156,25 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
 
   // Nowa funkcja generowania tekstu z użyciem API
   const generateText = async () => {
-    if (!selectedJobOffer || !selectedUserCV || !selectedTemplate) {
-      setError("Proszę wybrać ofertę pracy, CV oraz typ wiadomości.");
+    // Typy wiadomości, które nie wymagają zaznaczonej oferty pracy
+    const independentMessageTypes = ['welcome', 'direct-recruiter']; // wniosek urlopowy, wiadomość bezpośrednia
+    const requiresJobOffer = !independentMessageTypes.includes(selectedTemplate);
+    
+    // Walidacja podstawowa - zawsze wymagany typ wiadomości
+    if (!selectedTemplate) {
+      setError("Proszę wybrać typ wiadomości.");
+      return;
+    }
+    
+    // Walidacja dla typów wymagających oferty pracy
+    if (requiresJobOffer && !selectedJobOffer) {
+      setError("Proszę wybrać ofertę pracy dla tego typu wiadomości.");
+      return;
+    }
+    
+    // Walidacja CV - zawsze wymagane (może zawierać dane osobowe użytkownika)
+    if (!selectedUserCV) {
+      setError("Proszę wybrać CV.");
       return;
     }
     
@@ -165,30 +182,38 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
     setError(null);
     setGeneratedText(''); // Wyczyść poprzedni tekst
 
-    const currentOffer = jobOffers.find(offer => offer.id === selectedJobOffer);
+    // Pobierz dane oferty (jeśli wymagane)
+    const currentOffer = requiresJobOffer ? jobOffers.find(offer => offer.id === selectedJobOffer) : null;
     const currentCV = userCVs.find(cv => cv.id === selectedUserCV);
 
-    if (!currentOffer) {
+    // Sprawdź czy oferta została znaleziona (jeśli jest wymagana)
+    if (requiresJobOffer && !currentOffer) {
       setError("Nie znaleziono wybranej oferty pracy.");
       setIsGenerating(false);
       return;
     }
-     if (!currentCV) {
+    
+    if (!currentCV) {
       setError("Nie znaleziono wybranego CV.");
       setIsGenerating(false);
       return;
     }
 
     const requestBody = {
-      jobOffer: {
+      // Przekazuj dane oferty tylko jeśli są dostępne i wymagane
+      jobOffer: currentOffer ? {
         id: currentOffer.id,
         title: currentOffer.title,
         company: currentOffer.company,
         full_description: currentOffer.full_description || undefined,
+      } : {
+        id: 'no-offer',
+        title: 'Brak określonego stanowiska',
+        company: 'Brak określonej firmy',
       },
       // Przekazuj cvData tylko jeśli jest dostępne i relevantne dla typu wiadomości
       // Endpoint API sam decyduje czy go użyć na podstawie messageType, ale możemy tu wstępnie filtrować
-      cvData: currentCV.cv_data || undefined, 
+      cvData: currentCV?.cv_data || undefined, 
       additionalInfo: additionalInfo,
       messageType: selectedTemplate, // selectedTemplate to teraz typ wiadomości, np. 'greeting'
     };
@@ -305,9 +330,9 @@ export const documentTemplates: TemplateType[] = [
   },
   { 
     id: 'welcome', 
-    name: 'Do zespołu', // Poprzednio: "Wiadomość po otrzymaniu oferty"
-    description: 'Wiadomość powitalna do przyszłych współpracowników lub potwierdzenie przyjęcia oferty.',
-    icon: '👋',
+    name: 'Wniosek urlopowy', // Zmieniono z "Do zespołu"
+    description: 'Formalny wniosek o udzielenie urlopu na żądanie skierowany do przełożonego. Nie wymaga wybrania oferty pracy.',
+    icon: '🏖️',
     color: 'border-teal-400'
   },
   { 
@@ -320,7 +345,7 @@ export const documentTemplates: TemplateType[] = [
   { 
     id: 'direct-recruiter', 
     name: 'Wiadomość bezpośrednia', 
-    description: 'Bezpośrednia wiadomość do rekrutera',
+    description: 'Bezpośrednia wiadomość do rekrutera. Nie wymaga wybrania konkretnej oferty pracy.',
     icon: '✉️',
     color: 'border-rose-500'
   },

@@ -37,6 +37,7 @@ export default function InputForm() {
     userCVs,
     selectedJobOffer,
     selectedUserCV,
+    selectedTemplate,
     additionalInfo, 
     savedTemplates,
     setSelectedJobOffer, 
@@ -50,6 +51,10 @@ export default function InputForm() {
   // Stan dla wyszukiwania ofert
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredOffers, setFilteredOffers] = useState(jobOffers);
+
+  // Typy wiadomości, które nie wymagają zaznaczonej oferty pracy
+  const independentMessageTypes = ['welcome', 'direct-recruiter']; // wniosek urlopowy, wiadomość bezpośrednia
+  const requiresJobOffer = !independentMessageTypes.includes(selectedTemplate);
 
   // Efekt filtrowania ofert przy zmianie wyszukiwania lub listy ofert
   useEffect(() => {
@@ -224,11 +229,12 @@ export default function InputForm() {
       <Button 
         onClick={generateText} 
         className={`w-full px-4 py-2 -mt-2 rounded-md transition ${
-          selectedJobOffer && selectedUserCV && !isGenerating
+          // Walidacja: zawsze wymagane CV i typ wiadomości, oferta tylko dla niektórych typów
+          selectedUserCV && selectedTemplate && (!requiresJobOffer || selectedJobOffer) && !isGenerating
             ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white hover:from-purple-600 hover:to-purple-800'
             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
         }`}
-        disabled={isGenerating || !selectedJobOffer || !selectedUserCV}
+        disabled={isGenerating || !selectedUserCV || !selectedTemplate || (requiresJobOffer && !selectedJobOffer)}
       >
         {isGenerating ? (
           <div className="flex items-center justify-center">

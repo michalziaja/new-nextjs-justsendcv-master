@@ -432,9 +432,9 @@ export default function StartPage() {
                 transition={{ duration: 0.8 }}
                 className="flex items-center justify-center gap-3 mb-8"
               >
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                  <span className="text-gray-900 dark:text-white">Zmień sposób, w jaki </span>
-                  <span className="text-[#00B2FF] drop-shadow-md">szukasz pracy</span>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl">
+                  <span className="text-gray-900 font-extrabold dark:text-white">Zmień sposób, w jaki </span>
+                  <span className="text-[#00B2FF] font-bold drop-shadow-md">szukasz pracy</span>
                 </h1>
               </motion.div>
 
@@ -442,7 +442,7 @@ export default function StartPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8"
+                className="text-lg md:text-2xl font-medium text-gray-600 dark:text-gray-400 mb-8"
               >
                 Uprość swoje poszukiwanie pracy dzięki inteligentnym narzędziom do śledzenia aplikacji, tworzenia CV i
                 wsparcia AI.
@@ -451,14 +451,14 @@ export default function StartPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+                className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
               >
-                <Button className="bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white dark:text-black px-8 py-6 text-lg hover:opacity-90">
+                {/* <Button className="bg-gradient-to-r from-[#00B2FF] to-blue-600 text-white dark:text-black px-8 py-6 text-lg hover:opacity-90">
                   Rozpocznij za darmo
-                </Button>
-                <Button className="bg-black dark:bg-white text-white dark:text-black px-8 py-6 text-lg hover:bg-black/90 dark:hover:bg-white/90 !duration-0 !transition-none">
+                </Button> */}
+                {/* <Button className="bg-black dark:bg-white text-white dark:text-black px-8 py-6 mt-2 text-lg hover:bg-black/90 dark:hover:bg-white/90 !duration-0 !transition-none">
                   Zobacz demo
-                </Button>
+                </Button> */}
               </motion.div>
 
               {/* Rolling Gallery z podglądem dashboardu */}
@@ -483,7 +483,7 @@ export default function StartPage() {
                   </div> */}
 
                   {/* Rolling Gallery */}
-                  <div className="mt-6 pb-6 transform scale-135">
+                  <div className="mt-6 pb-6 transform scale-75 sm:scale-90 md:scale-100 lg:scale-110 xl:scale-125">
                     <RollingGallery 
                       images={dashboardImages}
                       autoPlay={true}
@@ -508,7 +508,7 @@ export default function StartPage() {
               <div className="text-center mb-16">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-5xl md:text-6xl lg:text-6xl font-bold mb-2 text-gray-900 dark:text-white"
+                  className="text-5xl md:text-6xl lg:text-6xl font-extrabold mb-2 text-gray-900 dark:text-white"
                 >
                   Wszystko, czego potrzebujesz, aby
                 </motion.h2>
@@ -521,7 +521,7 @@ export default function StartPage() {
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
+                  className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
                 >
                   Narzędzia, które ułatwią Ci proces poszukiwania pracy
                 </motion.p>
@@ -566,13 +566,13 @@ export default function StartPage() {
               <div className="text-center mb-16">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight"
+                  className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight"
                 >
                   Realne efekty i liczby
                 </motion.h2>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
+                  className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
                 >
                   Przekonaj się, jakie korzyści przynosi korzystanie z <span className="text-[#00B2FF]">JustSend</span><span className="text-gray-900 dark:text-white">.</span><span className="text-[#00B2FF]">cv</span>
                 </motion.p>
@@ -611,7 +611,7 @@ export default function StartPage() {
             <div className="container mx-auto px-4 mt-16 mb-10">
               <div className="text-center mb-10">
                 <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-7xl font-bold mb-1">
-                  <span className="text-gray-900 dark:text-white">Kompleksowa platforma</span>
+                  <span className="text-gray-900 dark:text-white font-extrabold">Kompleksowa platforma</span>
                   <br />
                   {/* Tekst z cieniem dla efektu */}
                   <span className="text-[#00B2FF] drop-shadow-md">do poszukiwania pracy</span>
@@ -658,16 +658,16 @@ export default function StartPage() {
                           <Image 
                             src={feature.image} 
                             alt={feature.title} 
-                            width={800} 
-                            height={600} 
+                            width={1200} 
+                            height={1000} 
                             className="rounded-xl shadow-lg relative z-10 block dark:hidden" 
                           />
                           {/* Obraz w trybie ciemnym - pokazywany tylko w ciemnym motywie */}
                           <Image 
                             src={feature.imageDark || feature.image} 
                             alt={feature.title} 
-                            width={800} 
-                            height={600} 
+                            width={1200} 
+                            height={1000} 
                             className="rounded-xl shadow-lg relative z-10 hidden dark:block" 
                           />
                       </div>

@@ -313,83 +313,123 @@ export function JobAnalysis({ application, isDesktop, onKeywordsFound }: JobAnal
         <div className={`min-h-full flex flex-col ml-2 ${!analysisResult ? 'items-center justify-center' : ''}`}> 
           {/* Renderowanie stanu ładowania lub przycisku analizy */}
           {!analysisResult && (
-            // Zmieniono główny kontener, aby umożliwić precyzyjne pozycjonowanie spinnera
-            <div className="flex flex-col items-center justify-center w-full px-4 min-h-full">
+            // Zmieniony główny kontener z lepszym designem
+            <div className="flex flex-col items-center justify-center w-full px-6 min-h-full">
               {isAnalyzing ? (
-                // Stan ładowania z placeholderami dla precyzyjnego pozycjonowania
+                // Stan ładowania z nowoczesnym spinnerem
                 <div className="flex flex-col items-center text-center w-full">
-                  {/* Placeholder dla tekstu nad przyciskiem */}
-                  <p className="text-sm text-muted-foreground text-center mt-40 mb-6 invisible" aria-hidden="true">
-                    Kliknij przycisk poniżej, aby przeprowadzić analizę AI
-                  </p>
+                  {/* Nowoczesny spinner jak w komponencie treningu */}
+                  <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-500 border-t-transparent mb-4 mt-10"></div>
                   
-                  {/* Ewentualne alerty (placeholder) - zakładamy, że nie ma ich podczas ładowania, ale można dodać jeśli trzeba */}
-
-                  {/* Kontener spinnera - rozmiar jak przycisk */}
-                  <div className="flex flex-col items-center justify-center gap-2 w-16 h-16">
-                     <Loader2 className="h-16 w-16 animate-spin text-purple-500" /> {/* Spinner w centrum */}
-                  </div>
+                  {/* Tekst postępu */}
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                    Analizuję ofertę pracy
+                  </h3>
                   
-                  {/* Tekst postępu pod spinnerem */}
-                  <p className="text-sm text-muted-foreground mt-2 min-h-[1.5em]"> {/* Dodano min-h dla stabilności layoutu */} 
+                  <p className="text-sm text-muted-foreground mb-4"> 
                      {stageMessages[analysisStage]}
                   </p>
 
-                  {/* Placeholder dla wskazówki pod przyciskiem */}
-                  <div className="mt-6 text-xs text-gray-500 mb-4 bg-blue-50 p-2 rounded border border-blue-100 invisible w-full max-w-md max-h-[calc(100vh-200px)]" aria-hidden="true">
-                    <span className="font-medium">Wskazówka:</span> Placeholder dla zachowania miejsca.
+                  {/* Pasek postępu */}
+                  <div className="w-64 bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+                    <div 
+                      className="bg-blue-600 h-2 rounded-full transition-all duration-500" 
+                      style={{ width: analysisStage === 'sending' ? '25%' : analysisStage === 'analyzing' ? '70%' : '95%' }}
+                    ></div>
+                  </div>
+
+                  {/* Lista tego co AI analizuje */}
+                  <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 max-w-md">
+                    <h4 className="font-medium text-blue-800 dark:text-blue-300 mb-2 text-sm">AI analizuje:</h4>
+                    <ul className="list-disc list-inside text-blue-700 dark:text-blue-400 text-sm space-y-1">
+                      <li>Wymagane umiejętności techniczne</li>
+                      <li>Potrzebne doświadczenie zawodowe</li>
+                      <li>Obowiązki i zadania na stanowisku</li>
+                      <li>Wymagania językowe i certyfikaty</li>
+                      <li>Dodatkowe kwalifikacje</li>
+                    </ul>
                   </div>
                 </div>
               ) : (
-                // Stan spoczynku (przycisk analizy)
-                // Używamy diva aby objąć wszystkie elementy i zapewnić spójne centrowanie
-                <div className="flex flex-col items-center text-center w-full">
-                  <p className="text-sm text-muted-foreground text-center mt-40 mb-10">
-                    Kliknij przycisk poniżej, aby przeprowadzić analizę AI
+                // Stan spoczynku z lepszym designem
+                <div className="flex flex-col items-center text-center w-full max-w-lg mt-10">
+                  {/* Ikona i nagłówek */}
+                  {/* <div className="bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-full p-6 mb-6">
+                    <Sparkles className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                  </div> */}
+                  
+                  <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-1">
+                    Analiza AI
+                  </h2>
+                  
+                  <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                    Skorzystaj z zaawansowanej analizy AI, aby dokładnie poznać wymagania tej oferty pracy
                   </p>
+
+                  {/* Błędy */}
                   {errorMessage && (
-                    <Alert variant="destructive" className="mb-4">
+                    <Alert variant="destructive" className="mb-4 w-full">
                       <AlertTriangle className="h-4 w-4 mr-2" />
                       <AlertDescription className="text-sm">
                         {errorMessage}
                       </AlertDescription>
                     </Alert>
                   )}
+                  
                   {!application?.full_description && (
-                    <Alert className="mb-4 bg-amber-50 border-amber-200">
+                    <Alert className="mb-6 w-full bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800">
                       <AlertTriangle className="h-4 w-4 mr-2 text-amber-500" />
                       <AlertDescription className="text-sm">
                         Ta oferta nie zawiera pełnego opisu do analizy.
                       </AlertDescription>
                     </Alert>
                   )}
+
+                  {/* Korzyści z analizy */}
+                  <div className="bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-6 w-full">
+                    <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-3 flex items-center">
+                      <Search className="h-4 w-4 mr-2 text-purple-600" />
+                      Co otrzymasz z analizy:
+                    </h3>
+                    <ul className="list-disc list-inside text-left text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                      <li>Szczegółową listę wymaganych umiejętności technicznych</li>
+                      <li>Analizę potrzebnego doświadczenia zawodowego</li>
+                      <li>Zestawienie obowiązków i zadań na stanowisku</li>
+                      <li>Wymagania dotyczące wykształcenia i certyfikatów</li>
+                      <li>Dodatkowe kwalifikacje i wymagania językowe</li>
+                    </ul>
+                  </div>
+
+                  {/* Przycisk analizy */}
                   <TooltipProvider delayDuration={300}>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Button 
                           onClick={handleAnalyzeJob} 
-                          disabled={!application?.full_description} // Tylko sprawdzamy czy jest opis
-                          // Dodajemy gradient, efekt cienia i skalowanie na hover
-                          className="rounded-full p-4 w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl 
-                                     bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 
-                                     text-white 
-                                     transition-all duration-300 ease-in-out hover:scale-110 focus:scale-110 active:scale-105"
-                          aria-label="Analizuj ofertę pracy"
+                          disabled={!application?.full_description}
+                          size="lg"
+                          className="relative bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 
+                                     text-white border-0 shadow-lg hover:shadow-xl
+                                     transition-all duration-300 ease-in-out hover:scale-105 focus:scale-105 active:scale-95
+                                     px-8 py-4 rounded-xl text-base font-semibold"
                         >
-                          <Sparkles className="h-8 w-8" />
+                          <Sparkles className="h-5 w-5 mr-2" />
+                          Rozpocznij analizę AI
                         </Button>
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Analizuj ofertę za pomocą AI</p>
+                        <p>Analizuj ofertę za pomocą sztucznej inteligencji</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                  {/* <p className="text-xs text-muted-foreground text-center mt-3 px-4">
-                    Wynik analizy pomoże nam stworzyć CV idealnie dopasowane do tej oferty.
-                  </p> */}
-                  <p className="mt-10 text-xs text-gray-500 mb-4 bg-blue-50 p-2 rounded border border-blue-100 w-full max-w-md"> {/* Dodano w-full max-w-md dla spójności */} 
-                    <span className="font-medium">Wskazówka:</span> Wynik analizy pomoże nam stworzyć CV idealnie dopasowane do tej oferty.
-                  </p>
+
+                  {/* Dodatkowe info */}
+                  <div className="mt-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3 w-full">
+                    <p className="text-xs text-blue-700 dark:text-blue-400">
+                      <span className="font-medium">💡 Wskazówka:</span> 
+                      Wyniki analizy pomogą Ci stworzyć CV idealnie dopasowane do tej oferty oraz przygotować się do rozmowy rekrutacyjnej.
+                    </p>
+                  </div>
                 </div>
               )}
             </div>
