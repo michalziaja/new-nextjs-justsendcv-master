@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS public.waitlist;
 ## Obecna konfiguracja
 
 ### 🏠 Strona główna (Landing Page)
-- **Opóźnienie**: 10 sekund
+- **Opóźnienie**: 8 sekund (konfiguracja w `hooks/use-waitlist-popup.ts`)
 - **Lokalizacja**: `components/start-page/main.tsx`
 - **Typ**: `pageType="landing"`
 
@@ -57,10 +57,21 @@ DROP TABLE IF EXISTS public.waitlist;
 - **Lokalizacja**: `app/(auth-pages)/layout.tsx`
 - **Typ**: `pageType="auth"`
 
+### 🎨 Wygląd popup-a
+- **Rozmiar**: Powiększony (sm:max-w-lg md:max-w-xl lg:max-w-2xl)
+- **Logo**: `/logo.png` wyświetlane w centrum (24x24 na mobile)
+- **Licznik**: Przygotowany (obecnie ukryty) - gotowy do aktywacji
+- **Animacje**: Framer Motion z płynnymi przejściami
+
 ### 💾 Przechowywanie danych
 - **Baza danych**: Tabela `waitlist` w Supabase
 - **Kolumny**: `id`, `email`, `created_at`, `source`, `is_notified`
 - **Dostęp**: Supabase Dashboard → Table Editor → waitlist
+
+### ⏰ Licznik czasu (opcjonalny)
+- **Hook**: `hooks/use-countdown.ts` 
+- **Status**: Przygotowany, obecnie nieaktywny
+- **Aktywacja**: Usuń klasę "hidden" z `#countdown-container` w `WaitlistPopup.tsx`
 
 ## ⚡ Najszybszy sposób wyłączenia
 

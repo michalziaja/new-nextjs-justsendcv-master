@@ -8,9 +8,9 @@ const WAITLIST_CONFIG = {
   // Czy popup ma być aktywny na stronach autoryzacji (login/register)
   enableOnAuthPages: true,
   // Opóźnienie w milisekundach
-  delayMs: 10000,
+  delayMs: 8000,
   // Czy tylko raz na sesję
-  oncePerSession: true,
+  oncePerSession: false,
 }
 
 interface UseWaitlistPopupProps {
