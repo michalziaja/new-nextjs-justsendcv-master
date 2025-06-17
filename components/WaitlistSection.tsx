@@ -129,7 +129,7 @@ export function WaitlistSection() {
             </div>
             
             <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto text-lg leading-relaxed mb-8">
-              Nasza platforma wkrótce zostanie uruchomiona! 
+              Platforma wkrótce zostanie uruchomiona! 
               Dołącz do listy oczekujących i otrzymaj powiadomienie email w dniu startu aplikacji.
             </p>
           </div>
@@ -197,8 +197,7 @@ export function WaitlistSection() {
           {/* Dodatkowe informacje */}
           {status !== 'success' && (
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 text-center max-w-lg mx-auto">
-              Nie wysyłamy spamu. Otrzymasz tylko powiadomienie o starcie aplikacji oraz 
-              okazjonalne informacje o nowych funkcjach.
+              Nie wysyłamy spamu. Otrzymasz tylko powiadomienie o starcie aplikacji.
             </p>
           )}
         </div>
