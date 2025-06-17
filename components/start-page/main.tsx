@@ -34,6 +34,7 @@ interface AppFeature {
   icon: React.ReactNode
   description: string
   image: string
+  imageDark?: string
   bulletPoints: string[]
 }
 
@@ -91,7 +92,8 @@ const appFeatures: AppFeature[] = [
     title: "Śledzenie aplikacji",
     icon: <ListTodo className="h-5 w-5" />,
     description: "Śledź aplikacje w jednym miejscu.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/table.png",
+    imageDark: "/table_dark.png",
     bulletPoints: [
       "Przejrzysty widok wszystkich aplikacji",
       "Statusy poszczególnych etapów rekrutacji",
@@ -103,7 +105,8 @@ const appFeatures: AppFeature[] = [
     title: "Kreator CV",
     icon: <FileText className="h-5 w-5" />,
     description: "Twórz CV z AI.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/creator.png",
+    imageDark: "/creator_dark.png",
     bulletPoints: [
       "Szablony CV zoptymalizowane pod ATS",
       "Sugestie treści generowane przez AI",
@@ -115,7 +118,8 @@ const appFeatures: AppFeature[] = [
     title: "Statystyki",
     icon: <BarChart3 className="h-5 w-5" />,
     description: "Analizuj proces poszukiwania pracy.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/stats.png",
+    imageDark: "/stats_dark.png",
     bulletPoints: [
       "Analiza skuteczności Twoich aplikacji",
       "Porównanie z innymi kandydatami",
@@ -127,7 +131,8 @@ const appFeatures: AppFeature[] = [
     title: "Asystent AI",
     icon: <Bot className="h-5 w-5" />,
     description: "Generuj wiadomości i dokumenty.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/assist.png",
+    imageDark: "/assist_dark.png",
     bulletPoints: [
       "Automatyczne tworzenie listów motywacyjnych",
       "Profesjonalne wiadomości do rekruterów",
@@ -139,7 +144,8 @@ const appFeatures: AppFeature[] = [
     title: "Trening rozmowy",
     icon: <Target className="h-5 w-5" />,
     description: "Przygotuj się do rozmowy kwalifikacyjnej z AI.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/trening.png",
+    imageDark: "/trening_dark.png",
     bulletPoints: [
       "Pytania dopasowane do konkretnej oferty",
       "Symulacja rozmowy kwalifikacyjnej",
@@ -648,8 +654,22 @@ export default function StartPage() {
                       <div className="relative">
                           {/* Gradient w tle obrazu dla efektu głębi */}
                           <div className="absolute inset-0 bg-gradient-to-r from-[#00B2FF]/20 to-blue-500/20 rounded-xl blur-xl" />
-                          {/* Obraz z cieniem */}
-                          <Image src={feature.image} alt={feature.title} width={800} height={600} className="rounded-xl shadow-lg relative z-10" />
+                          {/* Obraz w trybie jasnym - pokazywany tylko w jasnym motywie */}
+                          <Image 
+                            src={feature.image} 
+                            alt={feature.title} 
+                            width={800} 
+                            height={600} 
+                            className="rounded-xl shadow-lg relative z-10 block dark:hidden" 
+                          />
+                          {/* Obraz w trybie ciemnym - pokazywany tylko w ciemnym motywie */}
+                          <Image 
+                            src={feature.imageDark || feature.image} 
+                            alt={feature.title} 
+                            width={800} 
+                            height={600} 
+                            className="rounded-xl shadow-lg relative z-10 hidden dark:block" 
+                          />
                       </div>
                     </div>
                   </TabsContent>
