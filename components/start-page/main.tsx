@@ -3,7 +3,7 @@
 import { useAnimationFrame, useInView, motion } from "framer-motion"
 import { Header } from "@/components/start-page/header"
 import { Footer } from "@/components/start-page/footer"
-import { WaitlistPopupWrapper } from "@/components/WaitlistPopupWrapper"
+import { WaitlistSection } from "@/components/WaitlistSection"
 import { FileText, Brain, Target, BarChart3, Clock, Shield, Sparkles, Bot, Chrome, ListTodo, Check, ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef, useState, useEffect } from "react"
 import CountUp from "react-countup"
@@ -417,6 +417,9 @@ export default function StartPage() {
         <Header />
 
         <main className="flex flex-col items-center">
+          {/* Waitlist Section - Stała sekcja z listą oczekujących */}
+          <WaitlistSection />
+
           {/* Hero Section - Główna sekcja powitalna z logo, nagłówkiem i przyciskami */}
           <motion.section
             ref={heroRef}
@@ -430,7 +433,7 @@ export default function StartPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="flex items-center justify-center gap-3 mb-8"
+                className="flex items-center justify-center gap-3 mb-6"
               >
                 <h1 className="text-5xl md:text-6xl lg:text-7xl">
                   <span className="text-gray-900 font-extrabold dark:text-white">Zmień sposób, w jaki </span>
@@ -964,19 +967,6 @@ export default function StartPage() {
 
         <Footer />
       </div>
-
-      {/* 
-        POPUP LISTY OCZEKUJĄCYCH NA STRONIE GŁÓWNEJ
-        
-        COFNIĘCIE ZMIAN:
-        1. Usuń komponent WaitlistPopupWrapper poniżej
-        2. Lub ustaw enableOnLandingPage: false w hooks/use-waitlist-popup.ts
-        3. Lub usuń import WaitlistPopupWrapper z górnej części pliku
-      */}
-      <WaitlistPopupWrapper 
-        pageType="landing"
-        delayMs={10000} // Popup pojawi się po 10 sekundach
-      />
     </div>
   )
 }
