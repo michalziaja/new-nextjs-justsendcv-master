@@ -628,7 +628,7 @@ export default function StartPage() {
                     <TabsTrigger
                       key={feature.id}
                       value={feature.id}
-                      className="flex items-center justify-center gap-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
+                      className="flex items-center text-sm md:text-base justify-center gap-2 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00B2FF] data-[state=active]:to-blue-600 data-[state=active]:text-white"
                     >
                       {feature.icon}
                       <span className="hidden md:inline">{feature.title}</span>
@@ -653,21 +653,21 @@ export default function StartPage() {
                       </div>
                       <div className="relative">
                           {/* Gradient w tle obrazu dla efektu głębi */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-[#00B2FF]/20 to-blue-500/20 rounded-xl blur-xl" />
+                          {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00B2FF]/20 to-blue-500/20 rounded-xl blur-xl" /> */}
                           {/* Obraz w trybie jasnym - pokazywany tylko w jasnym motywie */}
                           <Image 
                             src={feature.image} 
                             alt={feature.title} 
-                            width={800} 
-                            height={600} 
+                            width={500} 
+                            height={300} 
                             className="rounded-xl shadow-lg relative z-10 block dark:hidden" 
                           />
                           {/* Obraz w trybie ciemnym - pokazywany tylko w ciemnym motywie */}
                           <Image 
                             src={feature.imageDark || feature.image} 
                             alt={feature.title} 
-                            width={800} 
-                            height={600} 
+                            width={500} 
+                            height={300} 
                             className="rounded-xl shadow-lg relative z-10 hidden dark:block" 
                           />
                       </div>
