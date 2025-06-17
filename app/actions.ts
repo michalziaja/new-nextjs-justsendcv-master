@@ -238,6 +238,46 @@ export async function deleteAccountAction(userId: string) {
   return { success: true };
 }
 
+// Action do zapisywania emaila na liście oczekujących
+export const addToWaitlistAction = async (formData: FormData) => {
+  const email = formData.get("email")?.toString();
+  
+  if (!email) {
+    return { error: "Email jest wymagany" };
+  }
+
+  // Walidacja formatu email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return { error: "Proszę podać prawidłowy adres email" };
+  }
+
+  const supabase = await createClient();
+
+  try {
+    const { error } = await supabase
+      .from('waitlist')
+      .insert({
+        email: email.toLowerCase().trim(),
+        source: 'landing_form'
+      });
+
+    if (error) {
+      if (error.code === '23505') {
+        return { error: "Ten adres email jest już na liście oczekujących!" };
+      }
+      console.error('Waitlist error:', error);
+      return { error: "Wystąpił błąd podczas zapisywania. Spróbuj ponownie." };
+    }
+
+    return { success: true };
+    
+  } catch (error) {
+    console.error('Unexpected error:', error);
+    return { error: "Wystąpił nieoczekiwany błąd" };
+  }
+};
+
 export async function updateUserProfileAction(userId: string, profileData: ProfileData) {
   const supabase = await createClient();
   

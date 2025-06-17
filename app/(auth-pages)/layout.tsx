@@ -1,6 +1,7 @@
 "use client"
 
 import { ThemeToggle } from "@/components/theme-toggle"
+import { WaitlistPopupWrapper } from "@/components/WaitlistPopupWrapper"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Image from "next/image"
@@ -123,6 +124,19 @@ export default function AuthLayout({
           {children}
         </div>
       </div>
+
+      {/* 
+        POPUP LISTY OCZEKUJĄCYCH NA STRONACH AUTORYZACJI
+        
+        COFNIĘCIE ZMIAN:
+        1. Usuń komponent WaitlistPopupWrapper poniżej
+        2. Lub ustaw enableOnAuthPages: false w hooks/use-waitlist-popup.ts
+        3. Lub usuń import WaitlistPopupWrapper z górnej części pliku
+      */}
+      <WaitlistPopupWrapper 
+        pageType="auth"
+        delayMs={12000} // Popup pojawi się po 12 sekundach na stronach logowania
+      />
     </div>
   )
 }

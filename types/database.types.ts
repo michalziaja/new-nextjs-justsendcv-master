@@ -43,4 +43,13 @@ export interface Question {
   id: number;
   question: string;
   tips: string[];
+}
+
+// Interfejs dla listy oczekujących
+export interface WaitlistEntry {
+  id: string;
+  email: string;
+  created_at: string;
+  source: string;
+  is_notified: boolean;
 } 

@@ -3,6 +3,7 @@
 import { useAnimationFrame, useInView, motion } from "framer-motion"
 import { Header } from "@/components/start-page/header"
 import { Footer } from "@/components/start-page/footer"
+import { WaitlistPopupWrapper } from "@/components/WaitlistPopupWrapper"
 import { FileText, Brain, Target, BarChart3, Clock, Shield, Sparkles, Bot, Chrome, ListTodo, Check, ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef, useState, useEffect } from "react"
 import CountUp from "react-countup"
@@ -943,6 +944,19 @@ export default function StartPage() {
 
         <Footer />
       </div>
+
+      {/* 
+        POPUP LISTY OCZEKUJĄCYCH NA STRONIE GŁÓWNEJ
+        
+        COFNIĘCIE ZMIAN:
+        1. Usuń komponent WaitlistPopupWrapper poniżej
+        2. Lub ustaw enableOnLandingPage: false w hooks/use-waitlist-popup.ts
+        3. Lub usuń import WaitlistPopupWrapper z górnej części pliku
+      */}
+      <WaitlistPopupWrapper 
+        pageType="landing"
+        delayMs={10000} // Popup pojawi się po 10 sekundach
+      />
     </div>
   )
 }
