@@ -658,16 +658,16 @@ export default function StartPage() {
                           <Image 
                             src={feature.image} 
                             alt={feature.title} 
-                            width={1200} 
-                            height={1000} 
+                            width={800} 
+                            height={600} 
                             className="rounded-xl shadow-lg relative z-10 block dark:hidden" 
                           />
                           {/* Obraz w trybie ciemnym - pokazywany tylko w ciemnym motywie */}
                           <Image 
                             src={feature.imageDark || feature.image} 
                             alt={feature.title} 
-                            width={1200} 
-                            height={1000} 
+                            width={800} 
+                            height={600} 
                             className="rounded-xl shadow-lg relative z-10 hidden dark:block" 
                           />
                       </div>
